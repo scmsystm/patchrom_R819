@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1070
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     iput-object p2, p0, Lcom/android/server/display/WifiDisplayController$20;->val$oldDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 1073
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mDesiredDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -67,14 +65,12 @@
 
     if-lez v0, :cond_0
 
-    .line 1074
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/android/server/display/WifiDisplayController;->access$3720(Lcom/android/server/display/WifiDisplayController;I)I
 
-    .line 1075
     const-string v0, "WifiDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -104,13 +100,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$20;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #calls: Lcom/android/server/display/WifiDisplayController;->retryConnection()V
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->access$3800(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 1079
     :cond_0
     return-void
 .end method

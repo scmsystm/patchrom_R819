@@ -36,7 +36,6 @@
     .parameter
 
     .prologue
-    .line 670
     iput-object p1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
     iput-boolean p2, p0, Lcom/android/internal/widget/SlidingTab$2;->val$holdAfter:Z
@@ -57,12 +56,10 @@
     .parameter "animation"
 
     .prologue
-    .line 673
     iget-boolean v1, p0, Lcom/android/internal/widget/SlidingTab$2;->val$holdAfter:Z
 
     if-eqz v1, :cond_0
 
-    .line 674
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
     iget v1, p0, Lcom/android/internal/widget/SlidingTab$2;->val$dx:I
@@ -83,13 +80,11 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    .line 675
     .local v0, anim:Landroid/view/animation/Animation;
     const-wide/16 v1, 0x3e8
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 676
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
     const/4 v2, 0x0
@@ -97,7 +92,6 @@
     #setter for: Lcom/android/internal/widget/SlidingTab;->mAnimating:Z
     invoke-static {v1, v2}, Lcom/android/internal/widget/SlidingTab;->access$202(Lcom/android/internal/widget/SlidingTab;Z)Z
 
-    .line 682
     :goto_0
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
@@ -108,7 +102,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 685
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
     #getter for: Lcom/android/internal/widget/SlidingTab;->mLeftSlider:Lcom/android/internal/widget/SlidingTab$Slider;
@@ -118,7 +111,6 @@
 
     invoke-virtual {v1, v0, v0}, Lcom/android/internal/widget/SlidingTab$Slider;->startAnimation(Landroid/view/animation/Animation;Landroid/view/animation/Animation;)V
 
-    .line 686
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
     #getter for: Lcom/android/internal/widget/SlidingTab;->mRightSlider:Lcom/android/internal/widget/SlidingTab$Slider;
@@ -128,10 +120,8 @@
 
     invoke-virtual {v1, v0, v0}, Lcom/android/internal/widget/SlidingTab$Slider;->startAnimation(Landroid/view/animation/Animation;Landroid/view/animation/Animation;)V
 
-    .line 687
     return-void
 
-    .line 678
     .end local v0           #anim:Landroid/view/animation/Animation;
     :cond_0
     new-instance v0, Landroid/view/animation/AlphaAnimation;
@@ -142,13 +132,11 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 679
     .restart local v0       #anim:Landroid/view/animation/Animation;
     const-wide/16 v1, 0xfa
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 680
     iget-object v1, p0, Lcom/android/internal/widget/SlidingTab$2;->this$0:Lcom/android/internal/widget/SlidingTab;
 
     #calls: Lcom/android/internal/widget/SlidingTab;->resetView()V
@@ -162,7 +150,6 @@
     .parameter "animation"
 
     .prologue
-    .line 691
     return-void
 .end method
 
@@ -171,6 +158,5 @@
     .parameter "animation"
 
     .prologue
-    .line 695
     return-void
 .end method

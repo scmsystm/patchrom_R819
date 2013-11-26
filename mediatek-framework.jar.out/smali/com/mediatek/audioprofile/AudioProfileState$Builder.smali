@@ -50,57 +50,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 108
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     sget-object v0, Lcom/mediatek/audioprofile/AudioProfileManager;->DEFAULT_RINGER_STREAM_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerStream:Landroid/net/Uri;
 
-    .line 90
     sget-object v0, Lcom/mediatek/audioprofile/AudioProfileManager;->DEFAULT_NOTIFICATION_STREAM_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationStream:Landroid/net/Uri;
 
-    .line 91
     sget-object v0, Lcom/mediatek/audioprofile/AudioProfileManager;->DEFAULT_VIDEO_STREAM_URI:Landroid/net/Uri;
 
     iput-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVideoCallStream:Landroid/net/Uri;
 
-    .line 92
     iput v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerVolume:I
 
-    .line 93
     iput v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationVolume:I
 
-    .line 94
     iput v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mAlarmVolume:I
 
-    .line 95
     iput-boolean v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVibrationEnabled:Z
 
-    .line 96
     iput-boolean v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mDtmfToneEnabled:Z
 
-    .line 97
     iput-boolean v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mSoundEffectEnbled:Z
 
-    .line 98
     iput-boolean v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mLockScreenSoundEnabled:Z
 
-    .line 99
     iput-boolean v1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mHapticFeedbackEnabled:Z
 
-    .line 100
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNoficationUseRingVolume:Z
 
-    .line 109
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mProfileKey:Ljava/lang/String;
 
-    .line 110
     return-void
 .end method
 
@@ -109,7 +94,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mProfileKey:Ljava/lang/String;
 
     return-object v0
@@ -120,7 +104,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mDtmfToneEnabled:Z
 
     return v0
@@ -131,7 +114,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mHapticFeedbackEnabled:Z
 
     return v0
@@ -142,7 +124,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mLockScreenSoundEnabled:Z
 
     return v0
@@ -153,7 +134,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNoficationUseRingVolume:Z
 
     return v0
@@ -164,7 +144,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerStream:Landroid/net/Uri;
 
     return-object v0
@@ -175,7 +154,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationStream:Landroid/net/Uri;
 
     return-object v0
@@ -186,7 +164,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVideoCallStream:Landroid/net/Uri;
 
     return-object v0
@@ -197,7 +174,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerVolume:I
 
     return v0
@@ -208,7 +184,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mAlarmVolume:I
 
     return v0
@@ -219,7 +194,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationVolume:I
 
     return v0
@@ -230,7 +204,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVibrationEnabled:Z
 
     return v0
@@ -241,7 +214,6 @@
     .parameter "x0"
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mSoundEffectEnbled:Z
 
     return v0
@@ -253,7 +225,6 @@
     .locals 2
 
     .prologue
-    .line 214
     new-instance v0, Lcom/mediatek/audioprofile/AudioProfileState;
 
     const/4 v1, 0x0
@@ -268,10 +239,8 @@
     .parameter "enable"
 
     .prologue
-    .line 168
     iput-boolean p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mDtmfToneEnabled:Z
 
-    .line 169
     return-object p0
 .end method
 
@@ -280,10 +249,8 @@
     .parameter "enable"
 
     .prologue
-    .line 204
     iput-boolean p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mHapticFeedbackEnabled:Z
 
-    .line 205
     return-object p0
 .end method
 
@@ -292,10 +259,8 @@
     .parameter "enable"
 
     .prologue
-    .line 192
     iput-boolean p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mLockScreenSoundEnabled:Z
 
-    .line 193
     return-object p0
 .end method
 
@@ -306,16 +271,12 @@
     .parameter "videoCallUri"
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerStream:Landroid/net/Uri;
 
-    .line 125
     iput-object p2, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationStream:Landroid/net/Uri;
 
-    .line 126
     iput-object p3, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVideoCallStream:Landroid/net/Uri;
 
-    .line 127
     return-object p0
 .end method
 
@@ -324,10 +285,8 @@
     .parameter "enable"
 
     .prologue
-    .line 180
     iput-boolean p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mSoundEffectEnbled:Z
 
-    .line 181
     return-object p0
 .end method
 
@@ -336,10 +295,8 @@
     .parameter "enable"
 
     .prologue
-    .line 156
     iput-boolean p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mVibrationEnabled:Z
 
-    .line 157
     return-object p0
 .end method
 
@@ -350,15 +307,11 @@
     .parameter "alarmVolume"
 
     .prologue
-    .line 142
     iput p1, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mRingerVolume:I
 
-    .line 143
     iput p2, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mNotificationVolume:I
 
-    .line 144
     iput p3, p0, Lcom/mediatek/audioprofile/AudioProfileState$Builder;->mAlarmVolume:I
 
-    .line 145
     return-object p0
 .end method

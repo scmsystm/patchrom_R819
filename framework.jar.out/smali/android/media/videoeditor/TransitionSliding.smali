@@ -26,7 +26,6 @@
 
     const/4 v1, 0x0
 
-    .line 43
     const-wide/16 v4, 0x0
 
     move-object v0, p0
@@ -39,7 +38,6 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/media/videoeditor/TransitionSliding;-><init>(Ljava/lang/String;Landroid/media/videoeditor/MediaItem;Landroid/media/videoeditor/MediaItem;JII)V
 
-    .line 44
     return-void
 .end method
 
@@ -53,13 +51,10 @@
     .parameter "direction"
 
     .prologue
-    .line 65
     invoke-direct/range {p0 .. p6}, Landroid/media/videoeditor/Transition;-><init>(Ljava/lang/String;Landroid/media/videoeditor/MediaItem;Landroid/media/videoeditor/MediaItem;JI)V
 
-    .line 66
     packed-switch p7, :pswitch_data_0
 
-    .line 74
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Invalid direction"
@@ -68,14 +63,11 @@
 
     throw v0
 
-    .line 76
     :pswitch_0
     iput p7, p0, Landroid/media/videoeditor/TransitionSliding;->mSlidingDirection:I
 
-    .line 77
     return-void
 
-    .line 66
     nop
 
     :pswitch_data_0
@@ -93,10 +85,8 @@
     .locals 0
 
     .prologue
-    .line 93
     invoke-super {p0}, Landroid/media/videoeditor/Transition;->generate()V
 
-    .line 94
     return-void
 .end method
 
@@ -104,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget v0, p0, Landroid/media/videoeditor/TransitionSliding;->mSlidingDirection:I
 
     return v0

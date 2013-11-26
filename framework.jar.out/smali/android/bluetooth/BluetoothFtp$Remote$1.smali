@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 156
     iput-object p1, p0, Landroid/bluetooth/BluetoothFtp$Remote$1;->this$0:Landroid/bluetooth/BluetoothFtp$Remote;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "service"
 
     .prologue
-    .line 158
     iget-object v0, p0, Landroid/bluetooth/BluetoothFtp$Remote$1;->this$0:Landroid/bluetooth/BluetoothFtp$Remote;
 
     invoke-static {p2}, Landroid/bluetooth/IBluetoothFtpCtrl$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothFtpCtrl;
@@ -52,7 +50,6 @@
 
     iput-object v1, v0, Landroid/bluetooth/BluetoothFtp$Remote;->mService:Landroid/bluetooth/IBluetoothFtpCtrl;
 
-    .line 159
     return-void
 .end method
 
@@ -61,13 +58,11 @@
     .parameter "className"
 
     .prologue
-    .line 162
     iget-object v0, p0, Landroid/bluetooth/BluetoothFtp$Remote$1;->this$0:Landroid/bluetooth/BluetoothFtp$Remote;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/bluetooth/BluetoothFtp$Remote;->mService:Landroid/bluetooth/IBluetoothFtpCtrl;
 
-    .line 163
     return-void
 .end method

@@ -35,7 +35,6 @@
     .parameter
 
     .prologue
-    .line 43
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -50,7 +49,6 @@
     .parameter "params"
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver;->mNewEventView:Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;
@@ -103,15 +101,12 @@
 
     move-result-object v7
 
-    .line 50
     .local v7, cursor:Landroid/database/Cursor;
     const/4 v6, 0x0
 
-    .line 51
     .local v6, count:I
     if-eqz v7, :cond_0
 
-    .line 53
     :try_start_0
     invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
     :try_end_0
@@ -119,10 +114,8 @@
 
     move-result v6
 
-    .line 55
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 58
     :cond_0
     const-string v0, "CalendarUnReadObserver"
 
@@ -146,14 +139,12 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
     return-object v0
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -167,7 +158,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -183,7 +173,6 @@
     .parameter "result"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -192,7 +181,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/CalendarUnReadObserver;->upateNewEventNumber(I)V
 
-    .line 65
     return-void
 .end method
 
@@ -201,7 +189,6 @@
     .parameter "x0"
 
     .prologue
-    .line 43
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1

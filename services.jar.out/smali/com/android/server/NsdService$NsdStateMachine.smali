@@ -39,53 +39,44 @@
     .parameter "name"
 
     .prologue
-    .line 138
     iput-object p1, p0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
 
-    .line 139
     invoke-direct {p0, p2}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;)V
 
-    .line 109
     new-instance v0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;
 
     invoke-direct {v0, p0}, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;-><init>(Lcom/android/server/NsdService$NsdStateMachine;)V
 
     iput-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDefaultState:Lcom/android/server/NsdService$NsdStateMachine$DefaultState;
 
-    .line 110
     new-instance v0, Lcom/android/server/NsdService$NsdStateMachine$DisabledState;
 
     invoke-direct {v0, p0}, Lcom/android/server/NsdService$NsdStateMachine$DisabledState;-><init>(Lcom/android/server/NsdService$NsdStateMachine;)V
 
     iput-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDisabledState:Lcom/android/server/NsdService$NsdStateMachine$DisabledState;
 
-    .line 111
     new-instance v0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;
 
     invoke-direct {v0, p0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;-><init>(Lcom/android/server/NsdService$NsdStateMachine;)V
 
     iput-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mEnabledState:Lcom/android/server/NsdService$NsdStateMachine$EnabledState;
 
-    .line 140
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDefaultState:Lcom/android/server/NsdService$NsdStateMachine$DefaultState;
 
     invoke-virtual {p0, v0}, Lcom/android/server/NsdService$NsdStateMachine;->addState(Lcom/android/internal/util/State;)V
 
-    .line 141
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDisabledState:Lcom/android/server/NsdService$NsdStateMachine$DisabledState;
 
     iget-object v1, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDefaultState:Lcom/android/server/NsdService$NsdStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/NsdService$NsdStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 142
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mEnabledState:Lcom/android/server/NsdService$NsdStateMachine$EnabledState;
 
     iget-object v1, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDefaultState:Lcom/android/server/NsdService$NsdStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/NsdService$NsdStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 143
     #calls: Lcom/android/server/NsdService;->isNsdEnabled()Z
     invoke-static {p1}, Lcom/android/server/NsdService;->access$100(Lcom/android/server/NsdService;)Z
 
@@ -93,24 +84,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mEnabledState:Lcom/android/server/NsdService$NsdStateMachine$EnabledState;
 
     invoke-virtual {p0, v0}, Lcom/android/server/NsdService$NsdStateMachine;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 148
     :goto_0
     const/16 v0, 0x19
 
     invoke-virtual {p0, v0}, Lcom/android/server/NsdService$NsdStateMachine;->setLogRecSize(I)V
 
-    .line 149
     invoke-direct {p0}, Lcom/android/server/NsdService$NsdStateMachine;->registerForNsdSetting()V
 
-    .line 150
     return-void
 
-    .line 146
     :cond_0
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDisabledState:Lcom/android/server/NsdService$NsdStateMachine$DisabledState;
 
@@ -124,7 +110,6 @@
     .parameter "x0"
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mDisabledState:Lcom/android/server/NsdService$NsdStateMachine$DisabledState;
 
     return-object v0
@@ -136,7 +121,6 @@
     .parameter "x1"
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Lcom/android/server/NsdService$NsdStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -147,7 +131,6 @@
     .parameter "x0"
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine;->mEnabledState:Lcom/android/server/NsdService$NsdStateMachine$EnabledState;
 
     return-object v0
@@ -159,7 +142,6 @@
     .parameter "x1"
 
     .prologue
-    .line 107
     invoke-virtual {p0, p1}, Lcom/android/server/NsdService$NsdStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -169,7 +151,6 @@
     .locals 4
 
     .prologue
-    .line 122
     new-instance v0, Lcom/android/server/NsdService$NsdStateMachine$1;
 
     invoke-virtual {p0}, Lcom/android/server/NsdService$NsdStateMachine;->getHandler()Landroid/os/Handler;
@@ -178,7 +159,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/NsdService$NsdStateMachine$1;-><init>(Lcom/android/server/NsdService$NsdStateMachine;Landroid/os/Handler;)V
 
-    .line 133
     .local v0, contentObserver:Landroid/database/ContentObserver;
     iget-object v1, p0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
 
@@ -201,7 +181,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 136
     return-void
 .end method
 
@@ -212,7 +191,6 @@
     .parameter "what"
 
     .prologue
-    .line 115
     #calls: Lcom/android/server/NsdService;->cmdToString(I)Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/NsdService;->access$000(I)Ljava/lang/String;
 

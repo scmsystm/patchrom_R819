@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     #getter for: Lcom/android/server/WiredAccessoryManager;->toast:Landroid/widget/Toast;
@@ -48,6 +46,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 183
     return-void
 .end method

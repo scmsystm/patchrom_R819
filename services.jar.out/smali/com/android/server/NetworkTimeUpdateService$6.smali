@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 485
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$6;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "location"
 
     .prologue
-    .line 488
     iget-object v0, p0, Lcom/android/server/NetworkTimeUpdateService$6;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     #getter for: Lcom/android/server/NetworkTimeUpdateService;->mGpsTimerThread:Ljava/lang/Thread;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 489
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .parameter "provider"
 
     .prologue
-    .line 492
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .parameter "provider"
 
     .prologue
-    .line 495
     return-void
 .end method
 
@@ -81,6 +76,5 @@
     .parameter "extras"
 
     .prologue
-    .line 498
     return-void
 .end method

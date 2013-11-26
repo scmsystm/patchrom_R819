@@ -50,21 +50,18 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 2641
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/provider/Telephony;->SIMBackgroundRes:[I
 
-    .line 2649
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/provider/Telephony;->SIMBackgroundDarkRes:[I
 
-    .line 2656
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
@@ -73,7 +70,6 @@
 
     return-void
 
-    .line 2641
     nop
 
     :array_0
@@ -84,7 +80,6 @@
         0xebt 0x0t 0x2t 0x2t
     .end array-data
 
-    .line 2649
     :array_1
     .array-data 0x4
         0xf6t 0x0t 0x2t 0x2t
@@ -93,7 +88,6 @@
         0xf9t 0x0t 0x2t 0x2t
     .end array-data
 
-    .line 2656
     :array_2
     .array-data 0x4
         0xfft 0x0t 0x2t 0x2t
@@ -107,9 +101,7 @@
     .locals 0
 
     .prologue
-    .line 62
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     return-void
 .end method

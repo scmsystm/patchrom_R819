@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 770
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$5;->this$0:Lcom/android/server/input/InputManagerService;
 
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$5;->val$list:Ljava/util/ArrayList;
@@ -51,7 +50,6 @@
     .parameter "keyboardLayoutResId"
 
     .prologue
-    .line 774
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$5;->val$list:Ljava/util/ArrayList;
 
     new-instance v1, Landroid/hardware/input/KeyboardLayout;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 775
     return-void
 .end method

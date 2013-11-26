@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 455
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 457
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 458
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -55,14 +52,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 459
     const-string v2, "ss"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 460
     .local v1, simState:Ljava/lang/String;
     const-string v2, "LOADED"
 
@@ -80,7 +75,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 462
     :cond_0
     const-string v2, "NetworkPolicy"
 
@@ -88,25 +82,21 @@
 
     invoke-static {v2, v3}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 463
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->updateDataUsageSimInsert()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$000(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 464
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->updateDataUsageSimIMSI()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$100(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 465
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     #calls: Lcom/android/server/net/NetworkPolicyManagerService;->updateMobileDataEnableStatus()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$200(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 471
     .end local v1           #simState:Ljava/lang/String;
     :cond_1
     return-void

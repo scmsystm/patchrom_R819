@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 196
     iput-object p1, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 196
     invoke-direct {p0, p1}, Landroid/net/CaptivePortalTracker$ActiveNetworkState;-><init>(Landroid/net/CaptivePortalTracker;)V
 
     return-void
@@ -50,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +73,6 @@
     #calls: Landroid/net/CaptivePortalTracker;->log(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/net/CaptivePortalTracker;->access$400(Ljava/lang/String;)V
 
-    .line 200
     return-void
 .end method
 
@@ -85,25 +81,20 @@
     .parameter "message"
 
     .prologue
-    .line 205
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 221
     const/4 v1, 0x0
 
-    .line 223
     :goto_0
     return v1
 
-    .line 207
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/net/NetworkInfo;
 
-    .line 208
     .local v0, info:Landroid/net/NetworkInfo;
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
@@ -128,7 +119,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 210
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -150,7 +140,6 @@
     #calls: Landroid/net/CaptivePortalTracker;->log(Ljava/lang/String;)V
     invoke-static {v1}, Landroid/net/CaptivePortalTracker;->access$400(Ljava/lang/String;)V
 
-    .line 211
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
 
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -163,14 +152,12 @@
     #calls: Landroid/net/CaptivePortalTracker;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Landroid/net/CaptivePortalTracker;->access$1300(Landroid/net/CaptivePortalTracker;Lcom/android/internal/util/IState;)V
 
-    .line 223
     :cond_0
     :goto_1
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 212
     :cond_1
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
 
@@ -204,7 +191,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 215
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,13 +212,11 @@
     #calls: Landroid/net/CaptivePortalTracker;->log(Ljava/lang/String;)V
     invoke-static {v1}, Landroid/net/CaptivePortalTracker;->access$400(Ljava/lang/String;)V
 
-    .line 216
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
 
     #calls: Landroid/net/CaptivePortalTracker;->deferMessage(Landroid/os/Message;)V
     invoke-static {v1, p1}, Landroid/net/CaptivePortalTracker;->access$1400(Landroid/net/CaptivePortalTracker;Landroid/os/Message;)V
 
-    .line 217
     iget-object v1, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
 
     iget-object v2, p0, Landroid/net/CaptivePortalTracker$ActiveNetworkState;->this$0:Landroid/net/CaptivePortalTracker;
@@ -247,7 +231,6 @@
 
     goto :goto_1
 
-    .line 205
     nop
 
     :pswitch_data_0

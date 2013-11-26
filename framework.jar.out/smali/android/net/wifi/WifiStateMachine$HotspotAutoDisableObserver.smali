@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 4951
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
-    .line 4952
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 4953
     #getter for: Landroid/net/wifi/WifiStateMachine;->mContext:Landroid/content/Context;
     invoke-static {p1}, Landroid/net/wifi/WifiStateMachine;->access$100(Landroid/net/wifi/WifiStateMachine;)Landroid/content/Context;
 
@@ -41,7 +38,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "wifi_hotspot_auto_disable"
+    const-string v1, "wifi_hotspot_auto_disable"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -51,7 +48,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 4955
     return-void
 .end method
 
@@ -62,10 +58,8 @@
     .parameter "selfChange"
 
     .prologue
-    .line 4959
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 4960
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -79,7 +73,7 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "wifi_hotspot_auto_disable"
+    const-string v2, "wifi_hotspot_auto_disable"
 
     const/4 v3, 0x1
 
@@ -90,7 +84,6 @@
     #setter for: Landroid/net/wifi/WifiStateMachine;->mDuration:I
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$20502(Landroid/net/wifi/WifiStateMachine;I)I
 
-    .line 4962
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mDuration:I
@@ -100,7 +93,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4963
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mClientNum:I
@@ -126,7 +118,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 4964
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mAlarmManager:Landroid/app/AlarmManager;
@@ -143,7 +134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 4965
     const-string v0, "WifiStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -173,7 +163,6 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4966
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mAlarmManager:Landroid/app/AlarmManager;
@@ -211,12 +200,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 4972
     :cond_0
     :goto_0
     return-void
 
-    .line 4970
     :cond_1
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$HotspotAutoDisableObserver;->this$0:Landroid/net/wifi/WifiStateMachine;
 

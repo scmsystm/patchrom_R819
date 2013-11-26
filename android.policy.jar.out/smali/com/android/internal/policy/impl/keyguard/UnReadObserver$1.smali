@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadObserver;
 
     iput p2, p0, Lcom/android/internal/policy/impl/keyguard/UnReadObserver$1;->val$unreadNumber:I
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadObserver;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/UnReadObserver;->mNewEventView:Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->setNumber(I)V
 
-    .line 43
     return-void
 .end method

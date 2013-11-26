@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 286
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerPlus$1$1;->this$1:Lcom/android/server/am/ActivityManagerPlus$1;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerPlus$1$1;->val$stMgr:Lcom/android/internal/app/ShutdownManager;
@@ -48,16 +47,13 @@
     .prologue
     const-wide/16 v7, 0x1388
 
-    .line 288
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 289
     .local v2, start_time:J
     move-wide v0, v2
 
-    .line 291
     .local v0, current_time:J
     const-string v4, "ActivityManagerPlus"
 
@@ -65,7 +61,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     :cond_0
     const-string v4, "0"
 
@@ -83,14 +78,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 294
     const-string v4, "ActivityManagerPlus"
 
     const-string v5, "ril.ipo.radiooff == 0, break"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     :goto_0
     add-long v4, v2, v7
 
@@ -98,14 +91,12 @@
 
     if-gtz v4, :cond_1
 
-    .line 306
     const-string v4, "ActivityManagerPlus"
 
     const-string v5, "wait ril.ipo.radiooff timeout..."
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     :cond_1
     const-string v4, "ActivityManagerPlus"
 
@@ -113,7 +104,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerPlus$1$1;->val$stMgr:Lcom/android/internal/app/ShutdownManager;
 
     iget-object v5, p0, Lcom/android/server/am/ActivityManagerPlus$1$1;->this$1:Lcom/android/server/am/ActivityManagerPlus$1;
@@ -127,10 +117,8 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/app/ShutdownManager;->prebootKillProcess(Landroid/content/Context;)V
 
-    .line 311
     return-void
 
-    .line 297
     :cond_2
     const-string v4, "ActivityManagerPlus"
 
@@ -138,7 +126,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 299
     const-wide/16 v4, 0x64
 
     :try_start_0
@@ -146,13 +133,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 302
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 303
     add-long v4, v2, v7
 
     cmp-long v4, v0, v4
@@ -161,7 +146,6 @@
 
     goto :goto_0
 
-    .line 300
     :catch_0
     move-exception v4
 

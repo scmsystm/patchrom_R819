@@ -10,7 +10,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 33
     const-wide/16 v4, 0x0
 
     const/4 v6, 0x0
@@ -23,7 +22,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/media/videoeditor/TransitionFadeBlack;-><init>(Ljava/lang/String;Landroid/media/videoeditor/MediaItem;Landroid/media/videoeditor/MediaItem;JI)V
 
-    .line 34
     return-void
 .end method
 
@@ -36,10 +34,8 @@
     .parameter "behavior"
 
     .prologue
-    .line 52
     invoke-direct/range {p0 .. p6}, Landroid/media/videoeditor/Transition;-><init>(Ljava/lang/String;Landroid/media/videoeditor/MediaItem;Landroid/media/videoeditor/MediaItem;JI)V
 
-    .line 53
     return-void
 .end method
 
@@ -49,9 +45,7 @@
     .locals 0
 
     .prologue
-    .line 60
     invoke-super {p0}, Landroid/media/videoeditor/Transition;->generate()V
 
-    .line 61
     return-void
 .end method

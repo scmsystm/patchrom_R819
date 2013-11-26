@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/mediatek/lowstorage/LowStorageHandle$1;->this$0:Lcom/mediatek/lowstorage/LowStorageHandle;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 148
     const-string v3, "android.intent.action.DEVICE_STORAGE_LOW"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,10 +51,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 149
     const-wide/16 v1, 0x0
 
-    .line 150
     .local v1, freeKBStorage:J
     new-instance v0, Landroid/os/StatFs;
 
@@ -70,7 +66,6 @@
 
     invoke-direct {v0, v3}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
 
-    .line 151
     .local v0, dataFileStats:Landroid/os/StatFs;
     const-string v3, "LowStorageHandle"
 
@@ -78,7 +73,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     :try_start_0
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
 
@@ -90,7 +84,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/StatFs;->restat(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {v0}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v3
@@ -111,7 +104,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 158
     :goto_0
     const-wide/16 v3, 0x600
 
@@ -119,21 +111,18 @@
 
     if-gez v3, :cond_0
 
-    .line 159
     const-string v3, "sys.lowstorage_flag"
 
     const-string v4, "1"
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
     .end local v0           #dataFileStats:Landroid/os/StatFs;
     .end local v1           #freeKBStorage:J
     :cond_0
     :goto_1
     return-void
 
-    .line 161
     :cond_1
     const-string v3, "android.intent.action.DEVICE_STORAGE_FULL"
 
@@ -147,14 +136,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 162
     const-string v3, "LowStorageHandle"
 
     const-string v4, "get storage full intent "
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     const-string v3, "sys.lowstorage_flag"
 
     const-string v4, "1"
@@ -163,7 +150,6 @@
 
     goto :goto_1
 
-    .line 164
     :cond_2
     const-string v3, "android.intent.action.DEVICE_STORAGE_NOT_FULL"
 
@@ -177,14 +163,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 165
     const-string v3, "LowStorageHandle"
 
     const-string v4, "get storage not full intent"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     const-string v3, "sys.lowstorage_flag"
 
     const-string v4, "0"
@@ -193,7 +177,6 @@
 
     goto :goto_1
 
-    .line 167
     :cond_3
     const-string v3, "android.intent.action.DEVICE_STORAGE_OK"
 
@@ -207,14 +190,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 168
     const-string v3, "LowStorageHandle"
 
     const-string v4, "receive the storage ok intent"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     const-string v3, "sys.lowstorage_flag"
 
     const-string v4, "0"
@@ -223,7 +204,6 @@
 
     goto :goto_1
 
-    .line 156
     .restart local v0       #dataFileStats:Landroid/os/StatFs;
     .restart local v1       #freeKBStorage:J
     :catch_0

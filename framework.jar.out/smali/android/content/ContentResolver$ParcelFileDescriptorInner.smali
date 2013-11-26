@@ -30,21 +30,16 @@
     .parameter "icp"
 
     .prologue
-    .line 1919
     iput-object p1, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->this$0:Landroid/content/ContentResolver;
 
-    .line 1920
     invoke-direct {p0, p2}, Landroid/os/ParcelFileDescriptor;-><init>(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 1917
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mReleaseProviderFlag:Z
 
-    .line 1921
     iput-object p3, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mContentProvider:Landroid/content/IContentProvider;
 
-    .line 1922
     return-void
 .end method
 
@@ -59,27 +54,22 @@
     .end annotation
 
     .prologue
-    .line 1926
     iget-boolean v0, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mReleaseProviderFlag:Z
 
     if-nez v0, :cond_0
 
-    .line 1927
     invoke-super {p0}, Landroid/os/ParcelFileDescriptor;->close()V
 
-    .line 1928
     iget-object v0, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->this$0:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mContentProvider:Landroid/content/IContentProvider;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->releaseProvider(Landroid/content/IContentProvider;)Z
 
-    .line 1929
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mReleaseProviderFlag:Z
 
-    .line 1931
     :cond_0
     return-void
 .end method
@@ -93,15 +83,12 @@
     .end annotation
 
     .prologue
-    .line 1935
     iget-boolean v0, p0, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->mReleaseProviderFlag:Z
 
     if-nez v0, :cond_0
 
-    .line 1936
     invoke-virtual {p0}, Landroid/content/ContentResolver$ParcelFileDescriptorInner;->close()V
 
-    .line 1938
     :cond_0
     return-void
 .end method

@@ -116,7 +116,6 @@
     .locals 3
 
     .prologue
-    .line 71
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -150,61 +149,48 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 183
     const-string v0, "watchdog"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 81
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/Watchdog;->mMonitors:Ljava/util/ArrayList;
 
-    .line 93
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/Watchdog;->mCalendar:Ljava/util/Calendar;
 
-    .line 94
     const/16 v0, 0x12c
 
     iput v0, p0, Lcom/android/server/Watchdog;->mMinScreenOff:I
 
-    .line 95
     const/16 v0, 0xb4
 
     iput v0, p0, Lcom/android/server/Watchdog;->mMinAlarm:I
 
-    .line 104
     iput v1, p0, Lcom/android/server/Watchdog;->mReqRebootInterval:I
 
-    .line 105
     iput v1, p0, Lcom/android/server/Watchdog;->mReqRebootStartTime:I
 
-    .line 106
     iput v1, p0, Lcom/android/server/Watchdog;->mReqRebootWindow:I
 
-    .line 107
     iput v1, p0, Lcom/android/server/Watchdog;->mReqMinScreenOff:I
 
-    .line 108
     iput v1, p0, Lcom/android/server/Watchdog;->mReqMinNextAlarm:I
 
-    .line 109
     iput v1, p0, Lcom/android/server/Watchdog;->mReqRecheckInterval:I
 
-    .line 184
     new-instance v0, Lcom/android/server/Watchdog$HeartbeatHandler;
 
     invoke-direct {v0, p0}, Lcom/android/server/Watchdog$HeartbeatHandler;-><init>(Lcom/android/server/Watchdog;)V
 
     iput-object v0, p0, Lcom/android/server/Watchdog;->mHandler:Landroid/os/Handler;
 
-    .line 185
     return-void
 .end method
 
@@ -215,38 +201,31 @@
     .parameter "secondsSinceMidnight"
 
     .prologue
-    .line 354
     invoke-virtual {p0, p1, p2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 356
     long-to-int v3, p3
 
     div-int/lit16 v2, v3, 0xe10
 
-    .line 357
     .local v2, val:I
     const/16 v3, 0xb
 
     invoke-virtual {p0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 358
     mul-int/lit16 v3, v2, 0xe10
 
     int-to-long v3, v3
 
     sub-long/2addr p3, v3
 
-    .line 359
     long-to-int v3, p3
 
     div-int/lit8 v2, v3, 0x3c
 
-    .line 360
     const/16 v3, 0xc
 
     invoke-virtual {p0, v3, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 361
     const/16 v3, 0xd
 
     long-to-int v4, p3
@@ -257,37 +236,31 @@
 
     invoke-virtual {p0, v3, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 362
     const/16 v3, 0xe
 
     const/4 v4, 0x0
 
     invoke-virtual {p0, v3, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 364
     invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
 
-    .line 365
     .local v0, newTime:J
     cmp-long v3, v0, p1
 
     if-gez v3, :cond_0
 
-    .line 368
     const/4 v3, 0x5
 
     const/4 v4, 0x1
 
     invoke-virtual {p0, v3, v4}, Ljava/util/Calendar;->add(II)V
 
-    .line 369
     invoke-virtual {p0}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
 
-    .line 372
     :cond_0
     return-wide v0
 .end method
@@ -310,7 +283,6 @@
     .local p1, pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
-    .line 512
     const/4 v1, 0x1
 
     sget-object v2, Lcom/android/server/Watchdog;->NATIVE_STACKS_OF_INTEREST:[Ljava/lang/String;
@@ -319,7 +291,6 @@
 
     move-result-object v0
 
-    .line 514
     .local v0, stack:Ljava/io/File;
     return-object v0
 .end method
@@ -330,14 +301,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 495
     const-string v2, "dalvik.vm.stack-trace-file"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 496
     .local v0, tracesPath:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -347,16 +316,13 @@
 
     if-nez v2, :cond_1
 
-    .line 501
     :cond_0
     :goto_0
     return-object v1
 
-    .line 500
     :cond_1
     invoke-direct {p0, v0}, Lcom/android/server/Watchdog;->native_dumpKernelStacks(Ljava/lang/String;)V
 
-    .line 501
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -368,19 +334,16 @@
     .locals 1
 
     .prologue
-    .line 175
     sget-object v0, Lcom/android/server/Watchdog;->sWatchdog:Lcom/android/server/Watchdog;
 
     if-nez v0, :cond_0
 
-    .line 176
     new-instance v0, Lcom/android/server/Watchdog;
 
     invoke-direct {v0}, Lcom/android/server/Watchdog;-><init>()V
 
     sput-object v0, Lcom/android/server/Watchdog;->sWatchdog:Lcom/android/server/Watchdog;
 
-    .line 179
     :cond_0
     sget-object v0, Lcom/android/server/Watchdog;->sWatchdog:Lcom/android/server/Watchdog;
 
@@ -397,10 +360,8 @@
     .parameter "monitor"
 
     .prologue
-    .line 217
     monitor-enter p0
 
-    .line 218
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/Watchdog;->isAlive()Z
 
@@ -408,7 +369,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 219
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Monitors can\'t be added while the Watchdog is running"
@@ -417,7 +377,6 @@
 
     throw v0
 
-    .line 222
     :catchall_0
     move-exception v0
 
@@ -427,19 +386,16 @@
 
     throw v0
 
-    .line 221
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/Watchdog;->mMonitors:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 222
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 223
     return-void
 .end method
 
@@ -448,7 +404,6 @@
     .parameter "fromAlarm"
 
     .prologue
-    .line 226
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/Watchdog;->mReqRebootInterval:I
@@ -461,17 +416,14 @@
 
     iget v8, v0, Lcom/android/server/Watchdog;->mReqRebootInterval:I
 
-    .line 228
     .local v8, rebootInterval:I
     :goto_0
     move-object/from16 v0, p0
 
     iput v8, v0, Lcom/android/server/Watchdog;->mRebootInterval:I
 
-    .line 229
     if-gtz v8, :cond_1
 
-    .line 232
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/Watchdog;->mAlarm:Lcom/android/server/AlarmManagerService;
@@ -486,18 +438,15 @@
 
     invoke-virtual/range {v17 .. v18}, Lcom/android/server/AlarmManagerService;->remove(Landroid/app/PendingIntent;)V
 
-    .line 300
     :goto_1
     return-void
 
-    .line 226
     .end local v8           #rebootInterval:I
     :cond_0
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 236
     .restart local v8       #rebootInterval:I
     :cond_1
     move-object/from16 v0, p0
@@ -518,7 +467,6 @@
 
     int-to-long v11, v0
 
-    .line 238
     .local v11, rebootStartTime:J
     :goto_2
     move-object/from16 v0, p0
@@ -546,7 +494,6 @@
 
     int-to-long v13, v0
 
-    .line 240
     .local v13, rebootWindowMillis:J
     move-object/from16 v0, p0
 
@@ -573,20 +520,16 @@
 
     int-to-long v15, v0
 
-    .line 243
     .local v15, recheckInterval:J
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/Watchdog;->retrieveBrutalityAmount()V
 
-    .line 248
     monitor-enter p0
 
-    .line 249
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 250
     .local v4, now:J
     move-object/from16 v0, p0
 
@@ -600,7 +543,6 @@
 
     move-result-wide v6
 
-    .line 253
     .local v6, realStartTime:J
     mul-int/lit8 v17, v8, 0x18
 
@@ -618,7 +560,6 @@
 
     int-to-long v9, v0
 
-    .line 254
     .local v9, rebootIntervalMillis:J
     move-object/from16 v0, p0
 
@@ -642,7 +583,6 @@
 
     if-ltz v17, :cond_7
 
-    .line 256
     :cond_2
     if-eqz p1, :cond_6
 
@@ -652,7 +592,6 @@
 
     if-gtz v17, :cond_6
 
-    .line 258
     const/16 v17, 0xaf8
 
     const/16 v18, 0x5
@@ -721,7 +660,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 261
     const-string v17, "Checkin scheduled forced"
 
     move-object/from16 v0, p0
@@ -730,12 +668,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/Watchdog;->rebootSystem(Ljava/lang/String;)V
 
-    .line 262
     monitor-exit p0
 
     goto/16 :goto_1
 
-    .line 294
     .end local v4           #now:J
     .end local v6           #realStartTime:J
     .end local v9           #rebootIntervalMillis:J
@@ -748,7 +684,6 @@
 
     throw v17
 
-    .line 236
     .end local v11           #rebootStartTime:J
     .end local v13           #rebootWindowMillis:J
     .end local v15           #recheckInterval:J
@@ -757,21 +692,18 @@
 
     goto/16 :goto_2
 
-    .line 238
     .restart local v11       #rebootStartTime:J
     :cond_4
     const/16 v17, 0xe10
 
     goto/16 :goto_3
 
-    .line 240
     .restart local v13       #rebootWindowMillis:J
     :cond_5
     const/16 v17, 0x12c
 
     goto/16 :goto_4
 
-    .line 266
     .restart local v4       #now:J
     .restart local v6       #realStartTime:J
     .restart local v9       #rebootIntervalMillis:J
@@ -781,7 +713,6 @@
 
     if-gez v17, :cond_8
 
-    .line 268
     :try_start_1
     move-object/from16 v0, p0
 
@@ -795,14 +726,12 @@
 
     move-result-wide v6
 
-    .line 294
     :cond_7
     :goto_5
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 298
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/Watchdog;->mAlarm:Lcom/android/server/AlarmManagerService;
@@ -817,7 +746,6 @@
 
     invoke-virtual/range {v17 .. v18}, Lcom/android/server/AlarmManagerService;->remove(Landroid/app/PendingIntent;)V
 
-    .line 299
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/Watchdog;->mAlarm:Lcom/android/server/AlarmManagerService;
@@ -842,7 +770,6 @@
 
     goto/16 :goto_1
 
-    .line 270
     :cond_8
     add-long v17, v6, v13
 
@@ -850,7 +777,6 @@
 
     if-gez v17, :cond_c
 
-    .line 271
     :try_start_2
     move-object/from16 v0, p0
 
@@ -858,7 +784,6 @@
 
     move-result-object v3
 
-    .line 272
     .local v3, doit:Ljava/lang/String;
     const/16 v18, 0xaf8
 
@@ -927,10 +852,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 275
     if-nez v3, :cond_a
 
-    .line 276
     const-string v17, "Checked scheduled range"
 
     move-object/from16 v0, p0
@@ -939,18 +862,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/Watchdog;->rebootSystem(Ljava/lang/String;)V
 
-    .line 277
     monitor-exit p0
 
     goto/16 :goto_1
 
-    .line 272
     :cond_9
     const-string v17, ""
 
     goto :goto_6
 
-    .line 282
     :cond_a
     add-long v17, v4, v15
 
@@ -960,7 +880,6 @@
 
     if-ltz v17, :cond_b
 
-    .line 283
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/Watchdog;->mCalendar:Ljava/util/Calendar;
@@ -979,13 +898,11 @@
 
     goto/16 :goto_5
 
-    .line 286
     :cond_b
     add-long v6, v4, v15
 
     goto/16 :goto_5
 
-    .line 290
     .end local v3           #doit:Ljava/lang/String;
     :cond_c
     move-object/from16 v0, p0
@@ -1020,26 +937,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 190
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/Watchdog;->mResolver:Landroid/content/ContentResolver;
 
-    .line 191
     iput-object p2, p0, Lcom/android/server/Watchdog;->mBattery:Lcom/android/server/BatteryService;
 
-    .line 192
     iput-object p3, p0, Lcom/android/server/Watchdog;->mPower:Lcom/android/server/power/PowerManagerService;
 
-    .line 193
     iput-object p4, p0, Lcom/android/server/Watchdog;->mAlarm:Lcom/android/server/AlarmManagerService;
 
-    .line 194
     iput-object p5, p0, Lcom/android/server/Watchdog;->mActivity:Lcom/android/server/am/ActivityManagerService;
 
-    .line 196
     new-instance v0, Lcom/android/server/Watchdog$RebootReceiver;
 
     invoke-direct {v0, p0}, Lcom/android/server/Watchdog$RebootReceiver;-><init>(Lcom/android/server/Watchdog;)V
@@ -1052,7 +963,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 198
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.service.Watchdog.REBOOT"
@@ -1065,7 +975,6 @@
 
     iput-object v0, p0, Lcom/android/server/Watchdog;->mRebootIntent:Landroid/app/PendingIntent;
 
-    .line 201
     new-instance v0, Lcom/android/server/Watchdog$RebootRequestReceiver;
 
     invoke-direct {v0, p0}, Lcom/android/server/Watchdog$RebootRequestReceiver;-><init>(Lcom/android/server/Watchdog;)V
@@ -1082,14 +991,12 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 205
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/Watchdog;->mBootTime:J
 
-    .line 206
     return-void
 .end method
 
@@ -1099,10 +1006,8 @@
     .parameter "pid"
 
     .prologue
-    .line 209
     monitor-enter p0
 
-    .line 210
     :try_start_0
     const-string v0, "com.android.phone"
 
@@ -1112,17 +1017,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 211
     iput p2, p0, Lcom/android/server/Watchdog;->mPhonePid:I
 
-    .line 213
     :cond_0
     monitor-exit p0
 
-    .line 214
     return-void
 
-    .line 213
     :catchall_0
     move-exception v0
 
@@ -1140,7 +1041,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 306
     const-string v1, "Watchdog"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1163,7 +1063,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     const-string v1, "power"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1172,11 +1071,9 @@
 
     check-cast v0, Lcom/android/server/power/PowerManagerService;
 
-    .line 308
     .local v0, pms:Lcom/android/server/power/PowerManagerService;
     invoke-virtual {v0, v4, p1, v4}, Lcom/android/server/power/PowerManagerService;->reboot(ZLjava/lang/String;Z)V
 
-    .line 309
     return-void
 .end method
 
@@ -1184,7 +1081,6 @@
     .locals 1
 
     .prologue
-    .line 317
     iget v0, p0, Lcom/android/server/Watchdog;->mReqMinScreenOff:I
 
     if-ltz v0, :cond_0
@@ -1196,7 +1092,6 @@
 
     iput v0, p0, Lcom/android/server/Watchdog;->mMinScreenOff:I
 
-    .line 319
     iget v0, p0, Lcom/android/server/Watchdog;->mReqMinNextAlarm:I
 
     if-ltz v0, :cond_1
@@ -1208,16 +1103,13 @@
 
     iput v0, p0, Lcom/android/server/Watchdog;->mMinAlarm:I
 
-    .line 321
     return-void
 
-    .line 317
     :cond_0
     const/16 v0, 0x12c
 
     goto :goto_0
 
-    .line 319
     :cond_1
     const/16 v0, 0xb4
 
@@ -1228,10 +1120,8 @@
     .locals 21
 
     .prologue
-    .line 377
     const/16 v20, 0x0
 
-    .line 379
     .local v20, waitedHalf:Z
     :goto_0
     const/4 v3, 0x0
@@ -1240,7 +1130,6 @@
 
     iput-boolean v3, v0, Lcom/android/server/Watchdog;->mCompleted:Z
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/Watchdog;->mHandler:Landroid/os/Handler;
@@ -1249,20 +1138,16 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 382
     monitor-enter p0
 
-    .line 383
     const-wide/16 v18, 0x7530
 
-    .line 389
     .local v18, timeout:J
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v16
 
-    .line 390
     .local v16, start:J
     :goto_1
     const-wide/16 v3, 0x0
@@ -1279,7 +1164,6 @@
 
     if-nez v3, :cond_0
 
-    .line 392
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1290,7 +1174,6 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 396
     :goto_2
     const-wide/16 v3, 0x7530
 
@@ -1305,11 +1188,9 @@
 
     goto :goto_1
 
-    .line 393
     :catch_0
     move-exception v13
 
-    .line 394
     .local v13, e:Ljava/lang/InterruptedException;
     const-string v3, "Watchdog"
 
@@ -1317,7 +1198,6 @@
 
     goto :goto_2
 
-    .line 422
     .end local v13           #e:Ljava/lang/InterruptedException;
     .end local v16           #start:J
     :catchall_0
@@ -1329,7 +1209,6 @@
 
     throw v3
 
-    .line 399
     .restart local v16       #start:J
     :cond_0
     :try_start_3
@@ -1345,24 +1224,19 @@
 
     if-nez v3, :cond_1
 
-    .line 401
     const/16 v20, 0x0
 
-    .line 402
     monitor-exit p0
 
     goto :goto_0
 
-    .line 405
     :cond_1
     if-nez v20, :cond_2
 
-    .line 408
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 413
     .local v14, pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -1370,7 +1244,6 @@
 
     invoke-virtual {v3, v14}, Lcom/android/server/am/ActivityManagerService;->getRunningProcessPids(Ljava/util/ArrayList;)V
 
-    .line 416
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -1381,7 +1254,6 @@
 
     invoke-virtual {v14, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 417
     const/4 v3, 0x1
 
     const/4 v4, 0x0
@@ -1392,22 +1264,18 @@
 
     invoke-static {v3, v14, v4, v5, v6}, Lcom/android/server/am/ActivityManagerService;->dumpStackTraces(ZLjava/util/ArrayList;Lcom/android/internal/os/ProcessStats;Landroid/util/SparseArray;[Ljava/lang/String;)Ljava/io/File;
 
-    .line 419
     const/16 v20, 0x1
 
-    .line 420
     monitor-exit p0
 
     goto :goto_0
 
-    .line 422
     .end local v14           #pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :cond_2
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 428
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/Watchdog;->mCurrentMonitor:Lcom/android/server/Watchdog$Monitor;
@@ -1426,19 +1294,16 @@
 
     move-result-object v9
 
-    .line 430
     .local v9, name:Ljava/lang/String;
     :goto_3
     const/16 v3, 0xaf2
 
     invoke-static {v3, v9}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 432
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 445
     .restart local v14       #pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -1446,30 +1311,25 @@
 
     invoke-virtual {v3, v14}, Lcom/android/server/am/ActivityManagerService;->getRunningProcessPids(Ljava/util/ArrayList;)V
 
-    .line 446
     move-object/from16 v0, p0
 
     invoke-direct {v0, v14}, Lcom/android/server/Watchdog;->dumpAllBackTraces(Ljava/util/ArrayList;)Ljava/io/File;
 
     move-result-object v15
 
-    .line 451
     .local v15, stack:Ljava/io/File;
     const-wide/16 v3, 0x7d0
 
     invoke-static {v3, v4}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 455
     invoke-direct/range {p0 .. p0}, Lcom/android/server/Watchdog;->dumpKernelStackTraces()Ljava/io/File;
 
-    .line 476
     const-string v3, "Watchdog"
 
     const-string v4, "** save all info before killnig system server **"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/Watchdog;->mActivity:Lcom/android/server/am/ActivityManagerService;
@@ -1492,19 +1352,16 @@
 
     invoke-virtual/range {v3 .. v12}, Lcom/android/server/am/ActivityManagerService;->addErrorToDropBox(Ljava/lang/String;Lcom/android/server/am/ProcessRecord;Ljava/lang/String;Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityRecord;Ljava/lang/String;Ljava/lang/String;Ljava/io/File;Landroid/app/ApplicationErrorReport$CrashInfo;)V
 
-    .line 478
     const-wide/16 v3, 0x61a8
 
     invoke-static {v3, v4}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 482
     invoke-static {}, Landroid/os/Debug;->isDebuggerConnected()Z
 
     move-result v3
 
     if-nez v3, :cond_4
 
-    .line 483
     const-string v3, "Watchdog"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1527,26 +1384,21 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
 
     invoke-static {v3}, Landroid/os/Process;->killProcess(I)V
 
-    .line 485
     const/16 v3, 0xa
 
     invoke-static {v3}, Ljava/lang/System;->exit(I)V
 
-    .line 490
     :goto_4
     const/16 v20, 0x0
 
-    .line 491
     goto/16 :goto_0
 
-    .line 428
     .end local v9           #name:Ljava/lang/String;
     .end local v14           #pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v15           #stack:Ljava/io/File;
@@ -1555,7 +1407,6 @@
 
     goto :goto_3
 
-    .line 487
     .restart local v9       #name:Ljava/lang/String;
     .restart local v14       #pids:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .restart local v15       #stack:Ljava/io/File;
@@ -1574,7 +1425,6 @@
     .parameter "curTime"
 
     .prologue
-    .line 333
     iget-object v0, p0, Lcom/android/server/Watchdog;->mBattery:Lcom/android/server/BatteryService;
 
     if-eqz v0, :cond_0
@@ -1589,15 +1439,12 @@
 
     if-nez v0, :cond_1
 
-    .line 334
     :cond_0
     const-string v0, "battery"
 
-    .line 347
     :goto_0
     return-object v0
 
-    .line 337
     :cond_1
     iget v0, p0, Lcom/android/server/Watchdog;->mMinScreenOff:I
 
@@ -1621,13 +1468,11 @@
 
     if-gez v0, :cond_3
 
-    .line 339
     :cond_2
     const-string v0, "screen"
 
     goto :goto_0
 
-    .line 342
     :cond_3
     iget v0, p0, Lcom/android/server/Watchdog;->mMinAlarm:I
 
@@ -1651,13 +1496,11 @@
 
     if-gez v0, :cond_5
 
-    .line 344
     :cond_4
     const-string v0, "alarm"
 
     goto :goto_0
 
-    .line 347
     :cond_5
     const/4 v0, 0x0
 

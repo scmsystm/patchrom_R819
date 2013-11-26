@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "service"
 
     .prologue
-    .line 96
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mLock:[B
@@ -53,7 +51,6 @@
 
     monitor-enter v4
 
-    .line 97
     :try_start_0
     const-string v3, "VoiceCommandManager"
 
@@ -61,7 +58,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     invoke-static {p2}, Lcom/mediatek/common/voicecommand/IVoiceCommandManagerService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mediatek/common/voicecommand/IVoiceCommandManagerService;
@@ -71,14 +67,12 @@
     #setter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mVCmdMgrService:Lcom/mediatek/common/voicecommand/IVoiceCommandManagerService;
     invoke-static {v3, v5}, Lcom/mediatek/voicecommand/app/VoiceCommandManager;->access$202(Lcom/mediatek/voicecommand/app/VoiceCommandManager;Lcom/mediatek/common/voicecommand/IVoiceCommandManagerService;)Lcom/mediatek/common/voicecommand/IVoiceCommandManagerService;
 
-    .line 100
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     const/4 v5, 0x0
 
     iput-boolean v5, v3, Lcom/mediatek/voicecommand/app/VoiceCommandManager;->isServiceConnecting:Z
 
-    .line 101
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mRegisterListeners:Ljava/util/ArrayList;
@@ -94,7 +88,6 @@
 
     if-nez v3, :cond_1
 
-    .line 104
     :try_start_1
     iget-object v5, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
@@ -130,7 +123,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 118
     :goto_0
     :try_start_2
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
@@ -139,14 +131,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 119
     const-string v3, "VoiceCommandManager"
 
     const-string v5, "Send CacheCommand"
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mCommandCaches:Ljava/util/ArrayList;
@@ -174,7 +164,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 122
     .local v0, command:Lcom/mediatek/voicecommand/app/VoiceCommandManager$CacheCommand;
     :try_start_3
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
@@ -200,11 +189,9 @@
 
     goto :goto_1
 
-    .line 124
     :catch_0
     move-exception v1
 
-    .line 126
     .local v1, e:Landroid/os/RemoteException;
     :try_start_4
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
@@ -216,7 +203,6 @@
 
     goto :goto_1
 
-    .line 139
     .end local v0           #command:Lcom/mediatek/voicecommand/app/VoiceCommandManager$CacheCommand;
     .end local v1           #e:Landroid/os/RemoteException;
     .end local v2           #i$:Ljava/util/Iterator;
@@ -229,11 +215,9 @@
 
     throw v3
 
-    .line 106
     :catch_1
     move-exception v1
 
-    .line 108
     .restart local v1       #e:Landroid/os/RemoteException;
     :try_start_5
     iget-object v3, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
@@ -245,12 +229,10 @@
 
     goto :goto_0
 
-    .line 109
     .end local v1           #e:Landroid/os/RemoteException;
     :catch_2
     move-exception v1
 
-    .line 111
     .local v1, e:Ljava/lang/IllegalAccessException;
     const-string v3, "VoiceCommandManager"
 
@@ -260,14 +242,12 @@
 
     goto :goto_0
 
-    .line 127
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     .restart local v0       #command:Lcom/mediatek/voicecommand/app/VoiceCommandManager$CacheCommand;
     .restart local v2       #i$:Ljava/util/Iterator;
     :catch_3
     move-exception v1
 
-    .line 131
     .restart local v1       #e:Ljava/lang/IllegalAccessException;
     const-string v3, "VoiceCommandManager"
 
@@ -277,7 +257,6 @@
 
     goto :goto_1
 
-    .line 136
     .end local v0           #command:Lcom/mediatek/voicecommand/app/VoiceCommandManager$CacheCommand;
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     :cond_0
@@ -290,14 +269,12 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 139
     .end local v2           #i$:Ljava/util/Iterator;
     :cond_1
     monitor-exit v4
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 140
     return-void
 .end method
 
@@ -306,7 +283,6 @@
     .parameter "name"
 
     .prologue
-    .line 145
     iget-object v0, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$2;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     const/4 v1, 0x1
@@ -314,6 +290,5 @@
     #calls: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->handleServiceDisconnected(Z)V
     invoke-static {v0, v1}, Lcom/mediatek/voicecommand/app/VoiceCommandManager;->access$400(Lcom/mediatek/voicecommand/app/VoiceCommandManager;Z)V
 
-    .line 147
     return-void
 .end method

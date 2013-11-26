@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 552
     iput-object p1, p0, Lcom/android/server/location/ComprehensiveCountryDetector$3;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -38,21 +37,18 @@
     .locals 3
 
     .prologue
-    .line 556
     const-string v0, "CountryDetector"
 
     const-string v1, "periodic location refresh event. Starts detecting Country code"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$3;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/android/server/location/ComprehensiveCountryDetector;->mLocationRefreshTimer:Ljava/util/Timer;
 
-    .line 559
     iget-object v0, p0, Lcom/android/server/location/ComprehensiveCountryDetector$3;->this$0:Lcom/android/server/location/ComprehensiveCountryDetector;
 
     const/4 v1, 0x0
@@ -62,6 +58,5 @@
     #calls: Lcom/android/server/location/ComprehensiveCountryDetector;->detectCountry(ZZ)Landroid/location/Country;
     invoke-static {v0, v1, v2}, Lcom/android/server/location/ComprehensiveCountryDetector;->access$100(Lcom/android/server/location/ComprehensiveCountryDetector;ZZ)Landroid/location/Country;
 
-    .line 560
     return-void
 .end method

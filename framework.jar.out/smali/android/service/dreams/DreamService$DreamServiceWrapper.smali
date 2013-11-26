@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 758
     iput-object p1, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper;->this$0:Landroid/service/dreams/DreamService;
 
     invoke-direct {p0}, Landroid/service/dreams/IDreamService$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 758
     invoke-direct {p0, p1}, Landroid/service/dreams/DreamService$DreamServiceWrapper;-><init>(Landroid/service/dreams/DreamService;)V
 
     return-void
@@ -51,7 +49,6 @@
     .parameter "windowToken"
 
     .prologue
-    .line 760
     iget-object v0, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper;->this$0:Landroid/service/dreams/DreamService;
 
     #getter for: Landroid/service/dreams/DreamService;->mHandler:Landroid/os/Handler;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 766
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 768
     iget-object v0, p0, Landroid/service/dreams/DreamService$DreamServiceWrapper;->this$0:Landroid/service/dreams/DreamService;
 
     #getter for: Landroid/service/dreams/DreamService;->mHandler:Landroid/os/Handler;
@@ -87,6 +82,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 774
     return-void
 .end method

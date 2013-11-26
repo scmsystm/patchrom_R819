@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1566
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$24;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +41,18 @@
     .parameter "arg0"
 
     .prologue
-    .line 1569
     invoke-static {}, Lcom/android/server/display/WifiDisplayController;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1570
     const-string v0, "WifiDisplayController"
 
     const-string v1, "WifiDisplay on, user DON\'T turn off BT -> turn off WifiDisplay"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1572
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$24;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -75,12 +71,10 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1573
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$24;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #calls: Lcom/android/server/display/WifiDisplayController;->updateWfdEnableState()V
     invoke-static {v0}, Lcom/android/server/display/WifiDisplayController;->access$4700(Lcom/android/server/display/WifiDisplayController;)V
 
-    .line 1574
     return-void
 .end method

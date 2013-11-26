@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 1052
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,28 +35,24 @@
     .parameter "service"
 
     .prologue
-    .line 1055
     const-string v0, "ShutdownThread"
 
     const-string v1, "onServiceConnected() entry"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1056
     invoke-static {p2}, Lcom/android/server/power/IPreShutdown$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/server/power/IPreShutdown;
 
     move-result-object v0
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$802(Lcom/android/server/power/IPreShutdown;)Lcom/android/server/power/IPreShutdown;
 
-    .line 1057
     const-string v0, "ShutdownThread"
 
     const-string v1, "onServiceConnected() exit"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1058
     return-void
 .end method
 
@@ -66,25 +61,21 @@
     .parameter "className"
 
     .prologue
-    .line 1062
     const-string v0, "ShutdownThread"
 
     const-string v1, "onServiceDisconnected() entry"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1063
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$802(Lcom/android/server/power/IPreShutdown;)Lcom/android/server/power/IPreShutdown;
 
-    .line 1064
     const-string v0, "ShutdownThread"
 
     const-string v1, "onServiceDisconnected() exit"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1065
     return-void
 .end method

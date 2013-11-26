@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 705
     iput-object p1, p0, Landroid/os/Handler$MessengerImpl;->this$0:Landroid/os/Handler;
 
     invoke-direct {p0}, Landroid/os/IMessenger$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 705
     invoke-direct {p0, p1}, Landroid/os/Handler$MessengerImpl;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -51,11 +49,9 @@
     .parameter "msg"
 
     .prologue
-    .line 707
     iget-object v0, p0, Landroid/os/Handler$MessengerImpl;->this$0:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 708
     return-void
 .end method

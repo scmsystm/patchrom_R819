@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 226
     iput-object p1, p0, Landroid/net/wifi/SupplicantStateTracker$InactiveState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 230
     iget-object v0, p0, Landroid/net/wifi/SupplicantStateTracker$InactiveState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     #getter for: Landroid/net/wifi/SupplicantStateTracker;->mDoingWps:Z
@@ -48,7 +46,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 231
     iget-object v0, p0, Landroid/net/wifi/SupplicantStateTracker$InactiveState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     #getter for: Landroid/net/wifi/SupplicantStateTracker;->mWifiConfigStore:Landroid/net/wifi/WifiConfigStore;
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiConfigStore;->enableAllNetworks()V
 
-    .line 232
     iget-object v0, p0, Landroid/net/wifi/SupplicantStateTracker$InactiveState;->this$0:Landroid/net/wifi/SupplicantStateTracker;
 
     const/4 v1, 0x0
@@ -66,7 +62,6 @@
     #setter for: Landroid/net/wifi/SupplicantStateTracker;->mDoingWps:Z
     invoke-static {v0, v1}, Landroid/net/wifi/SupplicantStateTracker;->access$902(Landroid/net/wifi/SupplicantStateTracker;Z)Z
 
-    .line 234
     :cond_0
     return-void
 .end method

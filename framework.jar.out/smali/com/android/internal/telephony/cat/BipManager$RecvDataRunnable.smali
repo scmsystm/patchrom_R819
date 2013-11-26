@@ -39,24 +39,18 @@
     .parameter "response"
 
     .prologue
-    .line 711
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 712
     iput p2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->requestDataSize:I
 
-    .line 713
     iput-object p3, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->result:Lcom/android/internal/telephony/cat/ReceiveDataResult;
 
-    .line 714
     iput-object p4, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 715
     iput-object p5, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->response:Landroid/os/Message;
 
-    .line 716
     return-void
 .end method
 
@@ -66,14 +60,12 @@
     .locals 4
 
     .prologue
-    .line 719
     const-string v1, "[BIP]"
 
     const-string v2, "BM-receiveData: start to receive data"
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 720
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     #getter for: Lcom/android/internal/telephony/cat/BipManager;->mChannel:Lcom/android/internal/telephony/cat/Channel;
@@ -89,7 +81,6 @@
 
     move-result v0
 
-    .line 721
     .local v0, errCode:I
     const-string v1, "[BIP]"
 
@@ -113,7 +104,6 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 722
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
     iget-object v2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->result:Lcom/android/internal/telephony/cat/ReceiveDataResult;
@@ -122,7 +112,6 @@
 
     iput-object v2, v1, Lcom/android/internal/telephony/cat/CatCmdMessage;->mChannelData:[B
 
-    .line 723
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
     iget-object v2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->result:Lcom/android/internal/telephony/cat/ReceiveDataResult;
@@ -131,19 +120,16 @@
 
     iput v2, v1, Lcom/android/internal/telephony/cat/CatCmdMessage;->mRemainingDataLength:I
 
-    .line 724
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->response:Landroid/os/Message;
 
     iput v0, v1, Landroid/os/Message;->arg1:I
 
-    .line 725
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->response:Landroid/os/Message;
 
     iget-object v2, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 726
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$RecvDataRunnable;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     #getter for: Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
@@ -155,13 +141,11 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
 
-    .line 727
     const-string v1, "[BIP]"
 
     const-string v2, "BM-receiveData: end to receive data"
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 728
     return-void
 .end method

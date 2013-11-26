@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 648
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/app/IUserSwitchObserver$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 656
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .parameter "reply"
 
     .prologue
-    .line 651
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->mHandler:Landroid/os/Handler;
@@ -79,6 +76,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 653
     return-void
 .end method

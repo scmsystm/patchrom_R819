@@ -38,7 +38,6 @@
     .parameter
 
     .prologue
-    .line 766
     iput-object p1, p0, Landroid/media/videoeditor/MediaArtistNativeHelper$VideoFormat;->this$0:Landroid/media/videoeditor/MediaArtistNativeHelper;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 58
     iput-object p1, p0, Landroid/webkit/AutoCompletePopup$1;->this$0:Landroid/webkit/AutoCompletePopup;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,16 +38,13 @@
     .parameter "msg"
 
     .prologue
-    .line 61
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 66
     :goto_0
     return-void
 
-    .line 63
     :pswitch_0
     iget-object v0, p0, Landroid/webkit/AutoCompletePopup$1;->this$0:Landroid/webkit/AutoCompletePopup;
 
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 61
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

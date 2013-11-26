@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 163
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .parameter "in"
 
     .prologue
-    .line 165
     new-instance v0, Landroid/nfc/wps/WpsCredential;
 
     invoke-direct {v0, p1}, Landroid/nfc/wps/WpsCredential;-><init>(Landroid/os/Parcel;)V
@@ -48,7 +46,6 @@
     .parameter "x0"
 
     .prologue
-    .line 163
     invoke-virtual {p0, p1}, Landroid/nfc/wps/WpsCredential$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/wps/WpsCredential;
 
     move-result-object v0
@@ -61,7 +58,6 @@
     .parameter "size"
 
     .prologue
-    .line 169
     new-array v0, p1, [Landroid/nfc/wps/WpsCredential;
 
     return-object v0
@@ -72,7 +68,6 @@
     .parameter "x0"
 
     .prologue
-    .line 163
     invoke-virtual {p0, p1}, Landroid/nfc/wps/WpsCredential$1;->newArray(I)[Landroid/nfc/wps/WpsCredential;
 
     move-result-object v0

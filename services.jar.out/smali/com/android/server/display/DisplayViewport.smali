@@ -24,17 +24,14 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayViewport;->logicalFrame:Landroid/graphics/Rect;
 
-    .line 45
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -51,46 +48,38 @@
     .parameter "viewport"
 
     .prologue
-    .line 54
     iget-boolean v0, p1, Lcom/android/server/display/DisplayViewport;->valid:Z
 
     iput-boolean v0, p0, Lcom/android/server/display/DisplayViewport;->valid:Z
 
-    .line 55
     iget v0, p1, Lcom/android/server/display/DisplayViewport;->displayId:I
 
     iput v0, p0, Lcom/android/server/display/DisplayViewport;->displayId:I
 
-    .line 56
     iget v0, p1, Lcom/android/server/display/DisplayViewport;->orientation:I
 
     iput v0, p0, Lcom/android/server/display/DisplayViewport;->orientation:I
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/display/DisplayViewport;->logicalFrame:Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/android/server/display/DisplayViewport;->logicalFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 58
     iget-object v0, p0, Lcom/android/server/display/DisplayViewport;->physicalFrame:Landroid/graphics/Rect;
 
     iget-object v1, p1, Lcom/android/server/display/DisplayViewport;->physicalFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 59
     iget v0, p1, Lcom/android/server/display/DisplayViewport;->deviceWidth:I
 
     iput v0, p0, Lcom/android/server/display/DisplayViewport;->deviceWidth:I
 
-    .line 60
     iget v0, p1, Lcom/android/server/display/DisplayViewport;->deviceHeight:I
 
     iput v0, p0, Lcom/android/server/display/DisplayViewport;->deviceHeight:I
 
-    .line 61
     return-void
 .end method
 
@@ -98,7 +87,6 @@
     .locals 2
 
     .prologue
-    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

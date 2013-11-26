@@ -38,18 +38,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 2848
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$EfRecord;->this$0:Lcom/android/internal/telephony/gsm/UsimPhoneBookManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2855
     iput-byte v0, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$EfRecord;->mSfi:B
 
-    .line 2856
     iput v0, p0, Lcom/android/internal/telephony/gsm/UsimPhoneBookManager$EfRecord;->mType2Record:I
 
-    .line 2849
     return-void
 .end method
 
@@ -59,12 +55,11 @@
     .locals 2
 
     .prologue
-    .line 2859
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "mTAG:"
+    const-string v1, "mTAG:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -76,7 +71,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "mPbrRecord:"
+    const-string v1, "mPbrRecord:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

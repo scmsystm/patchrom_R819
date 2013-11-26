@@ -26,7 +26,6 @@
     .parameter "x1"
 
     .prologue
-    .line 629
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$7;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;Ljava/lang/String;I)V
@@ -41,7 +40,6 @@
     .parameter "success"
 
     .prologue
-    .line 631
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$7;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$7$1;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->post(Ljava/lang/Runnable;)Z
 
-    .line 674
     return-void
 .end method

@@ -33,18 +33,14 @@
     .parameter "delay"
 
     .prologue
-    .line 1572
     iput-object p1, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->this$0:Lcom/android/server/accessibility/TouchExplorer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1573
     iput p2, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->mEventType:I
 
-    .line 1574
     iput p3, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->mDelay:I
 
-    .line 1575
     return-void
 .end method
 
@@ -54,20 +50,16 @@
     .locals 1
 
     .prologue
-    .line 1590
     invoke-virtual {p0}, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->isPending()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1591
     invoke-virtual {p0}, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->run()V
 
-    .line 1592
     invoke-virtual {p0}, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->remove()V
 
-    .line 1594
     :cond_0
     return-void
 .end method
@@ -76,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 1586
     iget-object v0, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->this$0:Lcom/android/server/accessibility/TouchExplorer;
 
     #getter for: Lcom/android/server/accessibility/TouchExplorer;->mHandler:Landroid/os/Handler;
@@ -95,7 +86,6 @@
     .locals 3
 
     .prologue
-    .line 1582
     iget-object v0, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->this$0:Lcom/android/server/accessibility/TouchExplorer;
 
     #getter for: Lcom/android/server/accessibility/TouchExplorer;->mHandler:Landroid/os/Handler;
@@ -109,7 +99,6 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1583
     return-void
 .end method
 
@@ -117,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 1578
     iget-object v0, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->this$0:Lcom/android/server/accessibility/TouchExplorer;
 
     #getter for: Lcom/android/server/accessibility/TouchExplorer;->mHandler:Landroid/os/Handler;
@@ -127,7 +115,6 @@
 
     invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1579
     return-void
 .end method
 
@@ -135,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 1598
     iget-object v0, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->this$0:Lcom/android/server/accessibility/TouchExplorer;
 
     iget v1, p0, Lcom/android/server/accessibility/TouchExplorer$SendAccessibilityEventDelayed;->mEventType:I
@@ -143,6 +129,5 @@
     #calls: Lcom/android/server/accessibility/TouchExplorer;->sendAccessibilityEvent(I)V
     invoke-static {v0, v1}, Lcom/android/server/accessibility/TouchExplorer;->access$2000(Lcom/android/server/accessibility/TouchExplorer;I)V
 
-    .line 1599
     return-void
 .end method

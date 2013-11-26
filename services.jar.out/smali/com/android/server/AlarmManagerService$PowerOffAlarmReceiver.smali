@@ -24,23 +24,19 @@
     .parameter
 
     .prologue
-    .line 1377
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1378
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1379
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.LAUNCH_POWEROFF_ALARM"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1380
     #getter for: Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/AlarmManagerService;->access$500(Lcom/android/server/AlarmManagerService;)Landroid/content/Context;
 
@@ -48,7 +44,6 @@
 
     invoke-virtual {v1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1381
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .parameter "intent"
 
     .prologue
-    .line 1385
     const-string v1, "AlarmManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -83,7 +77,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1386
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/AlarmManagerService;->bootFromPoweroffAlarm()Z
@@ -92,7 +85,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1387
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mBootPackage:Ljava/lang/String;
@@ -102,7 +94,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1388
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
@@ -125,7 +116,6 @@
     #setter for: Lcom/android/server/AlarmManagerService;->mBootPackage:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/server/AlarmManagerService;->access$402(Lcom/android/server/AlarmManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1391
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -133,7 +123,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1392
     .local v0, in:Landroid/content/Intent;
     const-string v1, "packageName"
 
@@ -146,7 +135,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1393
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$PowerOffAlarmReceiver;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
@@ -156,7 +144,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1395
     .end local v0           #in:Landroid/content/Intent;
     :cond_1
     return-void

@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 41
     invoke-static {}, Landroid/webkit/WebViewFactory;->getProvider()Landroid/webkit/WebViewFactoryProvider;
 
     move-result-object v0
@@ -45,6 +42,5 @@
     .locals 0
 
     .prologue
-    .line 49
     return-void
 .end method

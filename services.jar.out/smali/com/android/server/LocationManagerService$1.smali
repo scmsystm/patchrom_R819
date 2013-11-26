@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 234
     iput-object p1, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 237
     iget-object v0, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;
 
     #getter for: Lcom/android/server/LocationManagerService;->mLock:Ljava/lang/Object;
@@ -50,20 +48,16 @@
 
     monitor-enter v1
 
-    .line 238
     :try_start_0
     iget-object v0, p0, Lcom/android/server/LocationManagerService$1;->this$0:Lcom/android/server/LocationManagerService;
 
     #calls: Lcom/android/server/LocationManagerService;->updateProvidersLocked()V
     invoke-static {v0}, Lcom/android/server/LocationManagerService;->access$200(Lcom/android/server/LocationManagerService;)V
 
-    .line 239
     monitor-exit v1
 
-    .line 240
     return-void
 
-    .line 239
     :catchall_0
     move-exception v0
 

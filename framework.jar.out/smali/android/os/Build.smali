@@ -72,8 +72,7 @@
 
     const/4 v1, 0x0
 
-    .line 29
-    const-string/jumbo v2, "ro.build.id"
+    const-string v2, "ro.build.id"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -81,8 +80,7 @@
 
     sput-object v2, Landroid/os/Build;->ID:Ljava/lang/String;
 
-    .line 32
-    const-string/jumbo v2, "ro.build.display.id"
+    const-string v2, "ro.build.display.id"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -90,8 +88,7 @@
 
     sput-object v2, Landroid/os/Build;->DISPLAY:Ljava/lang/String;
 
-    .line 35
-    const-string/jumbo v2, "ro.product.name"
+    const-string v2, "ro.product.name"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -99,8 +96,7 @@
 
     sput-object v2, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
-    .line 38
-    const-string/jumbo v2, "ro.product.device"
+    const-string v2, "ro.product.device"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -108,8 +104,7 @@
 
     sput-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 41
-    const-string/jumbo v2, "ro.product.board"
+    const-string v2, "ro.product.board"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -117,8 +112,7 @@
 
     sput-object v2, Landroid/os/Build;->BOARD:Ljava/lang/String;
 
-    .line 44
-    const-string/jumbo v2, "ro.product.cpu.abi"
+    const-string v2, "ro.product.cpu.abi"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -126,8 +120,7 @@
 
     sput-object v2, Landroid/os/Build;->CPU_ABI:Ljava/lang/String;
 
-    .line 47
-    const-string/jumbo v2, "ro.product.cpu.abi2"
+    const-string v2, "ro.product.cpu.abi2"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -135,8 +128,7 @@
 
     sput-object v2, Landroid/os/Build;->CPU_ABI2:Ljava/lang/String;
 
-    .line 50
-    const-string/jumbo v2, "ro.product.manufacturer"
+    const-string v2, "ro.product.manufacturer"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -144,8 +136,7 @@
 
     sput-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    .line 53
-    const-string/jumbo v2, "ro.product.brand"
+    const-string v2, "ro.product.brand"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -153,8 +144,7 @@
 
     sput-object v2, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    .line 56
-    const-string/jumbo v2, "ro.product.model"
+    const-string v2, "ro.product.model"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -162,8 +152,7 @@
 
     sput-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    .line 59
-    const-string/jumbo v2, "ro.bootloader"
+    const-string v2, "ro.bootloader"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -171,7 +160,6 @@
 
     sput-object v2, Landroid/os/Build;->BOOTLOADER:Ljava/lang/String;
 
-    .line 70
     const-string v2, "gsm.version.baseband"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -180,8 +168,7 @@
 
     sput-object v2, Landroid/os/Build;->RADIO:Ljava/lang/String;
 
-    .line 73
-    const-string/jumbo v2, "ro.hardware"
+    const-string v2, "ro.hardware"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -189,8 +176,7 @@
 
     sput-object v2, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
 
-    .line 76
-    const-string/jumbo v2, "ro.serialno"
+    const-string v2, "ro.serialno"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -198,8 +184,7 @@
 
     sput-object v2, Landroid/os/Build;->SERIAL:Ljava/lang/String;
 
-    .line 437
-    const-string/jumbo v2, "ro.build.type"
+    const-string v2, "ro.build.type"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -207,8 +192,7 @@
 
     sput-object v2, Landroid/os/Build;->TYPE:Ljava/lang/String;
 
-    .line 440
-    const-string/jumbo v2, "ro.build.tags"
+    const-string v2, "ro.build.tags"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -216,8 +200,7 @@
 
     sput-object v2, Landroid/os/Build;->TAGS:Ljava/lang/String;
 
-    .line 443
-    const-string/jumbo v2, "ro.build.fingerprint"
+    const-string v2, "ro.build.fingerprint"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -225,8 +208,7 @@
 
     sput-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    .line 446
-    const-string/jumbo v2, "ro.build.date.utc"
+    const-string v2, "ro.build.date.utc"
 
     invoke-static {v2}, Landroid/os/Build;->getLong(Ljava/lang/String;)J
 
@@ -238,8 +220,7 @@
 
     sput-wide v2, Landroid/os/Build;->TIME:J
 
-    .line 447
-    const-string/jumbo v2, "ro.build.user"
+    const-string v2, "ro.build.user"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -247,8 +228,7 @@
 
     sput-object v2, Landroid/os/Build;->USER:Ljava/lang/String;
 
-    .line 448
-    const-string/jumbo v2, "ro.build.host"
+    const-string v2, "ro.build.host"
 
     invoke-static {v2}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -256,8 +236,7 @@
 
     sput-object v2, Landroid/os/Build;->HOST:Ljava/lang/String;
 
-    .line 454
-    const-string/jumbo v2, "ro.debuggable"
+    const-string v2, "ro.debuggable"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -280,10 +259,8 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 129
     return-void
 .end method
 
@@ -292,7 +269,6 @@
     .parameter "x0"
 
     .prologue
-    .line 24
     invoke-static {p0}, Landroid/os/Build;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -305,7 +281,6 @@
     .parameter "property"
 
     .prologue
-    .line 471
     :try_start_0
     invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -317,15 +292,12 @@
 
     move-result-wide v1
 
-    .line 473
     :goto_0
     return-wide v1
 
-    .line 472
     :catch_0
     move-exception v0
 
-    .line 473
     .local v0, e:Ljava/lang/NumberFormatException;
     const-wide/16 v1, -0x1
 
@@ -336,7 +308,6 @@
     .locals 2
 
     .prologue
-    .line 462
     const-string v0, "gsm.version.baseband"
 
     const/4 v1, 0x0
@@ -353,8 +324,7 @@
     .parameter "property"
 
     .prologue
-    .line 466
-    const-string/jumbo v0, "unknown"
+    const-string v0, "unknown"
 
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

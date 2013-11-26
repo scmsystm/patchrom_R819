@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 51
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     const-string v1, "NONE"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->NONE:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 52
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     const-string v1, "DATAIN"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAIN:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 53
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     const-string v1, "DATAOUT"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAOUT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 54
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     const-string v1, "DATAINANDOUT"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DATAINANDOUT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 55
     new-instance v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     const-string v1, "DORMANT"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->DORMANT:Lcom/android/internal/telephony/DctConstants$Activity;
 
-    .line 50
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/DctConstants$Activity;
@@ -138,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -149,7 +142,6 @@
     .parameter "name"
 
     .prologue
-    .line 50
     const-class v0, Lcom/android/internal/telephony/DctConstants$Activity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -165,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 50
     sget-object v0, Lcom/android/internal/telephony/DctConstants$Activity;->$VALUES:[Lcom/android/internal/telephony/DctConstants$Activity;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/DctConstants$Activity;->clone()Ljava/lang/Object;

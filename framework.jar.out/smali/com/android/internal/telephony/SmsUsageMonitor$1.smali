@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 585
     iput-object p1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 588
     iget-object v0, p0, Lcom/android/internal/telephony/SmsUsageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsUsageMonitor;
 
     #calls: Lcom/android/internal/telephony/SmsUsageMonitor;->writePremiumSmsPolicyDb()V
     invoke-static {v0}, Lcom/android/internal/telephony/SmsUsageMonitor;->access$000(Lcom/android/internal/telephony/SmsUsageMonitor;)V
 
-    .line 589
     return-void
 .end method

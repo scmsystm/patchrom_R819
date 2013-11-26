@@ -271,7 +271,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -300,41 +299,32 @@
     .parameter "error"
 
     .prologue
-    .line 188
     const/4 v0, 0x0
 
-    .line 189
     .local v0, errorCallback:Landroid/media/AudioSystem$ErrorCallback;
     const-class v2, Landroid/media/AudioSystem;
 
     monitor-enter v2
 
-    .line 190
     :try_start_0
     sget-object v1, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
     if-eqz v1, :cond_0
 
-    .line 191
     sget-object v0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
-    .line 193
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 194
     if-eqz v0, :cond_1
 
-    .line 195
     invoke-interface {v0, p0}, Landroid/media/AudioSystem$ErrorCallback;->onError(I)V
 
-    .line 197
     :cond_1
     return-void
 
-    .line 193
     :catchall_0
     move-exception v1
 
@@ -354,112 +344,93 @@
     .parameter "device"
 
     .prologue
-    .line 312
     sparse-switch p0, :sswitch_data_0
 
-    .line 347
     const-string v0, ""
 
     :goto_0
     return-object v0
 
-    .line 314
     :sswitch_0
     const-string v0, "earpiece"
 
     goto :goto_0
 
-    .line 316
     :sswitch_1
-    const-string/jumbo v0, "speaker"
+    const-string v0, "speaker"
 
     goto :goto_0
 
-    .line 318
     :sswitch_2
     const-string v0, "headset"
 
     goto :goto_0
 
-    .line 320
     :sswitch_3
     const-string v0, "headphone"
 
     goto :goto_0
 
-    .line 322
     :sswitch_4
     const-string v0, "bt_sco"
 
     goto :goto_0
 
-    .line 324
     :sswitch_5
     const-string v0, "bt_sco_hs"
 
     goto :goto_0
 
-    .line 326
     :sswitch_6
     const-string v0, "bt_sco_carkit"
 
     goto :goto_0
 
-    .line 328
     :sswitch_7
     const-string v0, "bt_a2dp"
 
     goto :goto_0
 
-    .line 330
     :sswitch_8
     const-string v0, "bt_a2dp_hp"
 
     goto :goto_0
 
-    .line 332
     :sswitch_9
     const-string v0, "bt_a2dp_spk"
 
     goto :goto_0
 
-    .line 334
     :sswitch_a
     const-string v0, "aux_digital"
 
     goto :goto_0
 
-    .line 336
     :sswitch_b
     const-string v0, "analog_dock"
 
     goto :goto_0
 
-    .line 338
     :sswitch_c
     const-string v0, "digital_dock"
 
     goto :goto_0
 
-    .line 340
     :sswitch_d
-    const-string/jumbo v0, "usb_accessory"
+    const-string v0, "usb_accessory"
 
     goto :goto_0
 
-    .line 342
     :sswitch_e
-    const-string/jumbo v0, "usb_device"
+    const-string v0, "usb_device"
 
     goto :goto_0
 
-    .line 344
     :sswitch_f
-    const-string/jumbo v0, "remote_submix"
+    const-string v0, "remote_submix"
 
     goto :goto_0
 
-    .line 312
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -497,7 +468,6 @@
     .locals 1
 
     .prologue
-    .line 68
     const/16 v0, 0xc
 
     return v0
@@ -538,27 +508,21 @@
     .parameter "cb"
 
     .prologue
-    .line 176
     const-class v1, Landroid/media/AudioSystem;
 
     monitor-enter v1
 
-    .line 177
     :try_start_0
     sput-object p0, Landroid/media/AudioSystem;->mErrorCallback:Landroid/media/AudioSystem$ErrorCallback;
 
-    .line 178
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 183
     invoke-static {}, Landroid/media/AudioSystem;->isMicrophoneMuted()Z
 
-    .line 184
     return-void
 
-    .line 178
     :catchall_0
     move-exception v0
 

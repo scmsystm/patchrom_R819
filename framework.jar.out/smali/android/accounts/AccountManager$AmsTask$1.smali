@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 1366
     iput-object p1, p0, Landroid/accounts/AccountManager$AmsTask$1;->val$this$0:Landroid/accounts/AccountManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -56,10 +55,9 @@
     .end annotation
 
     .prologue
-    .line 1368
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "this should never be called"
+    const-string v1, "this should never be called"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -75,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 1366
     invoke-virtual {p0}, Landroid/accounts/AccountManager$AmsTask$1;->call()Landroid/os/Bundle;
 
     move-result-object v0

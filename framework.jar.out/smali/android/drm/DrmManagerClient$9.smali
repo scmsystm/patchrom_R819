@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 2099
     iput-object p1, p0, Landroid/drm/DrmManagerClient$9;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,26 +41,22 @@
     .parameter "dialog"
 
     .prologue
-    .line 2101
     iget-object v0, p0, Landroid/drm/DrmManagerClient$9;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     if-eqz v0, :cond_0
 
-    .line 2102
     const-string v0, "DrmManagerClient"
 
-    const-string/jumbo v1, "showSecureTimerInvalid(): drm operation listener to operate STOP."
+    const-string v1, "showSecureTimerInvalid(): drm operation listener to operate STOP."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2103
     iget-object v0, p0, Landroid/drm/DrmManagerClient$9;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     const/4 v1, 0x2
 
     invoke-interface {v0, v1}, Landroid/drm/DrmManagerClient$DrmOperationListener;->onOperated(I)V
 
-    .line 2105
     :cond_0
     return-void
 .end method

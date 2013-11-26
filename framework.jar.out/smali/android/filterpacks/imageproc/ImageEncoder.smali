@@ -24,15 +24,12 @@
     .parameter "name"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 44
     const/16 v0, 0x50
 
     iput v0, p0, Landroid/filterpacks/imageproc/ImageEncoder;->mQuality:I
 
-    .line 49
     return-void
 .end method
 
@@ -43,20 +40,17 @@
     .parameter "env"
 
     .prologue
-    .line 59
     const-string v2, "image"
 
     invoke-virtual {p0, v2}, Landroid/filterpacks/imageproc/ImageEncoder;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v1
 
-    .line 60
     .local v1, input:Landroid/filterfw/core/Frame;
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 61
     .local v0, bitmap:Landroid/graphics/Bitmap;
     sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -66,7 +60,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 62
     return-void
 .end method
 
@@ -74,7 +67,6 @@
     .locals 3
 
     .prologue
-    .line 53
     const-string v0, "image"
 
     const/4 v1, 0x3
@@ -87,6 +79,5 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/ImageEncoder;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 55
     return-void
 .end method

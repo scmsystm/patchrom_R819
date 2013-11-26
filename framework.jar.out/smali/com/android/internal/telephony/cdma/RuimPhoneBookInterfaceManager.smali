@@ -13,10 +13,8 @@
     .parameter "phone"
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
 
-    .line 39
     return-void
 .end method
 
@@ -26,10 +24,8 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-super {p0}, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->dispose()V
 
-    .line 43
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .parameter "efid"
 
     .prologue
-    .line 48
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,30 +54,25 @@
 
     invoke-virtual {p0, v3}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->logd(Ljava/lang/String;)V
 
-    .line 50
     iget-object v4, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 51
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->checkThread()V
 
-    .line 52
     const/4 v3, 0x3
 
     new-array v3, v3, [I
 
     iput-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecordSize:[I
 
-    .line 55
     new-instance v2, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v3, 0x0
 
     invoke-direct {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 56
     .local v2, status:Ljava/util/concurrent/atomic/AtomicBoolean;
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mBaseHandler:Landroid/os/Handler;
 
@@ -92,7 +82,6 @@
 
     move-result-object v1
 
-    .line 58
     .local v1, response:Landroid/os/Message;
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mPhone:Lcom/android/internal/telephony/PhoneBase;
 
@@ -100,28 +89,22 @@
 
     move-result-object v0
 
-    .line 60
     .local v0, fh:Lcom/android/internal/telephony/IccFileHandler;
     if-eqz v0, :cond_0
 
-    .line 61
     invoke-virtual {v0, p1, v1}, Lcom/android/internal/telephony/IccFileHandler;->getEFLinearRecordSize(ILandroid/os/Message;)V
 
-    .line 62
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;->waitForResult(Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
-    .line 64
     :cond_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 66
     iget-object v3, p0, Lcom/android/internal/telephony/IccPhoneBookInterfaceManager;->mRecordSize:[I
 
     return-object v3
 
-    .line 64
     .end local v0           #fh:Lcom/android/internal/telephony/IccFileHandler;
     .end local v1           #response:Landroid/os/Message;
     .end local v2           #status:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -141,7 +124,6 @@
     .parameter "msg"
 
     .prologue
-    .line 70
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -164,7 +146,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     return-void
 .end method
 
@@ -173,7 +154,6 @@
     .parameter "msg"
 
     .prologue
-    .line 74
     const-string v0, "CDMA"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -196,6 +176,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     return-void
 .end method

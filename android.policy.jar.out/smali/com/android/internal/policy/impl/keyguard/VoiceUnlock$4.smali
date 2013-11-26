@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 188
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock$4;->this$0:Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "v"
 
     .prologue
-    .line 191
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock$4;->this$0:Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;->mHandler:Landroid/os/Handler;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 192
     return-void
 .end method

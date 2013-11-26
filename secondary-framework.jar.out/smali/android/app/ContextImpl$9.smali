@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 348
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 350
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0

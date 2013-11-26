@@ -30,15 +30,12 @@
     .parameter "label"
 
     .prologue
-    .line 590
     iput-object p1, p0, Landroid/widget/TabHost$LabelIndicatorStrategy;->this$0:Landroid/widget/TabHost;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 591
     iput-object p2, p0, Landroid/widget/TabHost$LabelIndicatorStrategy;->mLabel:Ljava/lang/CharSequence;
 
-    .line 592
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .parameter "x2"
 
     .prologue
-    .line 586
     invoke-direct {p0, p1, p2}, Landroid/widget/TabHost$LabelIndicatorStrategy;-><init>(Landroid/widget/TabHost;Ljava/lang/CharSequence;)V
 
     return-void
@@ -61,14 +57,12 @@
     .locals 7
 
     .prologue
-    .line 595
     iget-object v4, p0, Landroid/widget/TabHost$LabelIndicatorStrategy;->this$0:Landroid/widget/TabHost;
 
     invoke-virtual {v4}, Landroid/widget/TabHost;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 596
     .local v0, context:Landroid/content/Context;
     const-string v4, "layout_inflater"
 
@@ -78,7 +72,6 @@
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    .line 598
     .local v1, inflater:Landroid/view/LayoutInflater;
     iget-object v4, p0, Landroid/widget/TabHost$LabelIndicatorStrategy;->this$0:Landroid/widget/TabHost;
 
@@ -100,7 +93,6 @@
 
     move-result-object v2
 
-    .line 602
     .local v2, tabIndicator:Landroid/view/View;
     const v4, 0x1020016
 
@@ -110,13 +102,11 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 603
     .local v3, tv:Landroid/widget/TextView;
     iget-object v4, p0, Landroid/widget/TabHost$LabelIndicatorStrategy;->mLabel:Ljava/lang/CharSequence;
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 605
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v4
@@ -127,12 +117,10 @@
 
     if-gt v4, v5, :cond_0
 
-    .line 607
     const v4, 0x10805ad
 
     invoke-virtual {v2, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 608
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -145,7 +133,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 611
     :cond_0
     return-object v2
 .end method

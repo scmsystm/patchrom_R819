@@ -28,17 +28,14 @@
     .parameter
 
     .prologue
-    .line 1671
     iput-object p1, p0, Landroid/content/SyncManager$SyncHandler$SyncNotificationInfo;->this$1:Landroid/content/SyncManager$SyncHandler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1673
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/SyncManager$SyncHandler$SyncNotificationInfo;->isActive:Z
 
-    .line 1677
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/SyncManager$SyncHandler$SyncNotificationInfo;->startTime:Ljava/lang/Long;
@@ -52,16 +49,13 @@
     .locals 2
 
     .prologue
-    .line 1685
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1686
     .local v0, sb:Ljava/lang/StringBuilder;
     invoke-virtual {p0, v0}, Landroid/content/SyncManager$SyncHandler$SyncNotificationInfo;->toString(Ljava/lang/StringBuilder;)V
 
-    .line 1687
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -74,7 +68,6 @@
     .parameter "sb"
 
     .prologue
-    .line 1680
     const-string v0, "isActive "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -97,6 +90,5 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 1681
     return-void
 .end method

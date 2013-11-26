@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 3943
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$15;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 3945
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3947
     .local v0, action:Ljava/lang/String;
     const-string v2, "WindowManager"
 
@@ -53,7 +50,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3949
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$15;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mStkLock:Ljava/lang/Object;
@@ -63,7 +59,6 @@
 
     monitor-enter v3
 
-    .line 3950
     :try_start_0
     const-string v2, "android.intent.action.stk.USER_ACTIVITY.enable"
 
@@ -73,19 +68,16 @@
 
     if-eqz v2, :cond_3
 
-    .line 3951
     sget-boolean v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_INPUT:Z
 
     if-eqz v2, :cond_0
 
-    .line 3952
     const-string v2, "WindowManager"
 
     const-string v4, "Receive STK_ENABLE"
 
     invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3954
     :cond_0
     const-string v2, "state"
 
@@ -95,7 +87,6 @@
 
     move-result v1
 
-    .line 3955
     .local v1, enabled:Z
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$15;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -103,12 +94,10 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 3956
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$15;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v1, v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->mIsStkUserActivityEnabled:Z
 
-    .line 3963
     .end local v1           #enabled:Z
     :cond_1
     :goto_0
@@ -116,12 +105,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3964
     sget-boolean v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_INPUT:Z
 
     if-eqz v2, :cond_2
 
-    .line 3965
     const-string v2, "WindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -148,18 +135,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3968
     :cond_2
     return-void
 
-    .line 3959
     :cond_3
     :try_start_1
     sget-boolean v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->DEBUG_INPUT:Z
 
     if-eqz v2, :cond_1
 
-    .line 3960
     const-string v2, "WindowManager"
 
     const-string v4, "Receive Fake Intent"
@@ -168,7 +152,6 @@
 
     goto :goto_0
 
-    .line 3963
     :catchall_0
     move-exception v2
 

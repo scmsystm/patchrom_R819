@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 356
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 359
     new-instance v0, Landroid/net/NetworkTemplate;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .parameter "x0"
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1}, Landroid/net/NetworkTemplate$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/NetworkTemplate;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .parameter "size"
 
     .prologue
-    .line 364
     new-array v0, p1, [Landroid/net/NetworkTemplate;
 
     return-object v0
@@ -84,7 +80,6 @@
     .parameter "x0"
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1}, Landroid/net/NetworkTemplate$1;->newArray(I)[Landroid/net/NetworkTemplate;
 
     move-result-object v0

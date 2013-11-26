@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1492
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "animation"
 
     .prologue
-    .line 1506
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .parameter "animation"
 
     .prologue
-    .line 1495
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$Viewport;->mShowHideFrameAnimator:Landroid/animation/ValueAnimator;
@@ -75,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1496
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$Viewport;->mViewportFrame:Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow;
@@ -85,7 +81,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow;->hide()V
 
-    .line 1498
     :cond_0
     return-void
 .end method
@@ -95,7 +90,6 @@
     .parameter "animation"
 
     .prologue
-    .line 1510
     return-void
 .end method
 
@@ -104,6 +98,5 @@
     .parameter "animation"
 
     .prologue
-    .line 1502
     return-void
 .end method

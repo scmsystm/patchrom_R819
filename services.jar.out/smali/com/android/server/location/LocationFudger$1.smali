@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 147
     iput-object p1, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 150
     iget-object v0, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
 
     iget-object v1, p0, Lcom/android/server/location/LocationFudger$1;->this$0:Lcom/android/server/location/LocationFudger;
@@ -53,6 +51,5 @@
     #calls: Lcom/android/server/location/LocationFudger;->setAccuracyInMeters(F)V
     invoke-static {v0, v1}, Lcom/android/server/location/LocationFudger;->access$100(Lcom/android/server/location/LocationFudger;F)V
 
-    .line 151
     return-void
 .end method

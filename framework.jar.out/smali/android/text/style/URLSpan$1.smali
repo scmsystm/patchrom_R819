@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/text/style/URLSpan$1;->this$0:Landroid/text/style/URLSpan;
 
     iput-object p2, p0, Landroid/text/style/URLSpan$1;->val$context:Landroid/content/Context;
@@ -53,16 +52,13 @@
     .parameter "which"
 
     .prologue
-    .line 86
     iget-object v0, p0, Landroid/text/style/URLSpan$1;->val$context:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/text/style/URLSpan$1;->val$intent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 87
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 88
     return-void
 .end method

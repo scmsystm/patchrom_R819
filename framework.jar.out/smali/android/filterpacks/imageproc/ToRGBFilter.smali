@@ -17,15 +17,12 @@
     .parameter "name"
 
     .prologue
-    .line 44
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 41
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mLastFormat:Landroid/filterfw/core/FrameFormat;
 
-    .line 45
     return-void
 .end method
 
@@ -37,14 +34,12 @@
     .parameter "format"
 
     .prologue
-    .line 69
     invoke-virtual {p2}, Landroid/filterfw/core/FrameFormat;->getBytesPerSample()I
 
     move-result v0
 
     iput v0, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mInputBPP:I
 
-    .line 70
     iget-object v0, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mLastFormat:Landroid/filterfw/core/FrameFormat;
 
     if-eqz v0, :cond_0
@@ -59,20 +54,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 82
     :goto_0
     return-void
 
-    .line 71
     :cond_0
     iput-object p2, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mLastFormat:Landroid/filterfw/core/FrameFormat;
 
-    .line 72
     iget v0, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mInputBPP:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 80
     :pswitch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -106,7 +97,6 @@
 
     throw v0
 
-    .line 74
     :pswitch_1
     new-instance v0, Landroid/filterfw/core/NativeProgram;
 
@@ -120,13 +110,12 @@
 
     goto :goto_0
 
-    .line 77
     :pswitch_2
     new-instance v0, Landroid/filterfw/core/NativeProgram;
 
     const-string v1, "filterpack_imageproc"
 
-    const-string/jumbo v2, "rgba_to_rgb"
+    const-string v2, "rgba_to_rgb"
 
     invoke-direct {v0, v1, v2}, Landroid/filterfw/core/NativeProgram;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -134,7 +123,6 @@
 
     goto :goto_0
 
-    .line 72
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -149,12 +137,10 @@
     .parameter "format"
 
     .prologue
-    .line 62
     invoke-virtual {p1}, Landroid/filterfw/core/FrameFormat;->mutableCopy()Landroid/filterfw/core/MutableFrameFormat;
 
     move-result-object v0
 
-    .line 63
     .local v0, result:Landroid/filterfw/core/MutableFrameFormat;
     const-string v1, "colorspace"
 
@@ -166,12 +152,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/filterfw/core/MutableFrameFormat;->setMetaValue(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 64
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setBytesPerSample(I)V
 
-    .line 65
     return-object v0
 .end method
 
@@ -181,7 +165,6 @@
     .parameter "inputFormat"
 
     .prologue
-    .line 58
     invoke-virtual {p0, p2}, Landroid/filterpacks/imageproc/ToRGBFilter;->getConvertedFormat(Landroid/filterfw/core/FrameFormat;)Landroid/filterfw/core/FrameFormat;
 
     move-result-object v0
@@ -194,14 +177,12 @@
     .parameter "context"
 
     .prologue
-    .line 87
     const-string v2, "image"
 
     invoke-virtual {p0, v2}, Landroid/filterpacks/imageproc/ToRGBFilter;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v0
 
-    .line 88
     .local v0, input:Landroid/filterfw/core/Frame;
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
@@ -209,7 +190,6 @@
 
     invoke-virtual {p0, p1, v2}, Landroid/filterpacks/imageproc/ToRGBFilter;->createProgram(Landroid/filterfw/core/FilterContext;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 91
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
     move-result-object v2
@@ -226,21 +206,17 @@
 
     move-result-object v1
 
-    .line 94
     .local v1, output:Landroid/filterfw/core/Frame;
     iget-object v2, p0, Landroid/filterpacks/imageproc/ToRGBFilter;->mProgram:Landroid/filterfw/core/Program;
 
     invoke-virtual {v2, v0, v1}, Landroid/filterfw/core/Program;->process(Landroid/filterfw/core/Frame;Landroid/filterfw/core/Frame;)V
 
-    .line 97
     const-string v2, "image"
 
     invoke-virtual {p0, v2, v1}, Landroid/filterpacks/imageproc/ToRGBFilter;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 100
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 101
     return-void
 .end method
 
@@ -250,27 +226,22 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 49
     new-instance v0, Landroid/filterfw/core/MutableFrameFormat;
 
     invoke-direct {v0, v1, v1}, Landroid/filterfw/core/MutableFrameFormat;-><init>(II)V
 
-    .line 51
     .local v0, mask:Landroid/filterfw/core/MutableFrameFormat;
     invoke-virtual {v0, v1}, Landroid/filterfw/core/MutableFrameFormat;->setDimensionCount(I)V
 
-    .line 52
     const-string v1, "image"
 
     invoke-virtual {p0, v1, v0}, Landroid/filterpacks/imageproc/ToRGBFilter;->addMaskedInputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 53
     const-string v1, "image"
 
     const-string v2, "image"
 
     invoke-virtual {p0, v1, v2}, Landroid/filterpacks/imageproc/ToRGBFilter;->addOutputBasedOnInput(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method

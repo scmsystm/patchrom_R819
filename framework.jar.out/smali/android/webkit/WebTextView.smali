@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,10 +40,8 @@
     .parameter "urlString"
 
     .prologue
-    .line 43
     const/4 v1, 0x0
 
-    .line 45
     .local v1, url:Ljava/net/URL;
     :try_start_0
     new-instance v2, Ljava/net/URL;
@@ -57,7 +54,6 @@
     .local v2, url:Ljava/net/URL;
     move-object v1, v2
 
-    .line 50
     .end local v2           #url:Ljava/net/URL;
     .restart local v1       #url:Ljava/net/URL;
     :goto_0
@@ -104,11 +100,9 @@
     :goto_1
     return-object v3
 
-    .line 46
     :catch_0
     move-exception v0
 
-    .line 47
     .local v0, e:Ljava/net/MalformedURLException;
     const-string v3, "WebTextView"
 
@@ -134,7 +128,6 @@
 
     goto :goto_0
 
-    .line 50
     .end local v0           #e:Ljava/net/MalformedURLException;
     :cond_0
     const/4 v3, 0x0

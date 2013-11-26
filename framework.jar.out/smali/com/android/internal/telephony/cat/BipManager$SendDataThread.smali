@@ -33,25 +33,20 @@
     .parameter "resp"
 
     .prologue
-    .line 377
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 378
     const-string v0, "[BIP]"
 
     const-string v1, "SendDataThread Init"
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 379
     iput-object p2, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 380
     iput-object p3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->response:Landroid/os/Message;
 
-    .line 381
     return-void
 .end method
 
@@ -61,23 +56,19 @@
     .locals 5
 
     .prologue
-    .line 386
     const-string v3, "[BIP]"
 
     const-string v4, "SendDataThread Run Enter"
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 387
     const/4 v2, 0x0
 
-    .line 389
     .local v2, ret:I
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
     iget-object v0, v3, Lcom/android/internal/telephony/cat/CatCmdMessage;->mChannelData:[B
 
-    .line 390
     .local v0, buffer:[B
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
@@ -87,7 +78,6 @@
 
     and-int/lit8 v1, v3, 0x1
 
-    .line 392
     .local v1, mode:I
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
@@ -102,37 +92,31 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 394
     const-string v3, "[BIP]"
 
     const-string v4, "SendDataThread Run mChannelId != cmdMsg.mSendDataCid"
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 395
     const/4 v2, 0x7
 
-    .line 409
     :goto_0
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->response:Landroid/os/Message;
 
     iput v2, v3, Landroid/os/Message;->arg1:I
 
-    .line 410
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->response:Landroid/os/Message;
 
     iget-object v4, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->cmdMsg:Lcom/android/internal/telephony/cat/CatCmdMessage;
 
     iput-object v4, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 411
     const-string v3, "[BIP]"
 
     const-string v4, "SendDataThread Run mHandler.sendMessage(response);"
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     #getter for: Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
@@ -144,10 +128,8 @@
 
     invoke-virtual {v3, v4}, Lcom/android/internal/telephony/cat/CatService;->sendMessage(Landroid/os/Message;)Z
 
-    .line 413
     return-void
 
-    .line 397
     :cond_0
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
@@ -160,14 +142,12 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 399
     const-string v3, "[BIP]"
 
     const-string v4, "SendDataThread Run mChannel.sendData"
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 400
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     #getter for: Lcom/android/internal/telephony/cat/BipManager;->mChannel:Lcom/android/internal/telephony/cat/Channel;
@@ -179,7 +159,6 @@
 
     move-result v2
 
-    .line 401
     iget-object v3, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->response:Landroid/os/Message;
 
     iget-object v4, p0, Lcom/android/internal/telephony/cat/BipManager$SendDataThread;->this$0:Lcom/android/internal/telephony/cat/BipManager;
@@ -197,7 +176,6 @@
 
     goto :goto_0
 
-    .line 405
     :cond_1
     const-string v3, "[BIP]"
 
@@ -205,7 +183,6 @@
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 406
     const/4 v2, 0x7
 
     goto :goto_0

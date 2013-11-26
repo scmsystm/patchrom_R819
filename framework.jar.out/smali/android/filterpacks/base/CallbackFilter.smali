@@ -42,15 +42,12 @@
     .parameter "name"
 
     .prologue
-    .line 71
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 46
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/filterpacks/base/CallbackFilter;->mCallbacksOnUiThread:Z
 
-    .line 72
     return-void
 .end method
 
@@ -61,12 +58,10 @@
     .parameter "context"
 
     .prologue
-    .line 80
     iget-boolean v0, p0, Landroid/filterpacks/base/CallbackFilter;->mCallbacksOnUiThread:Z
 
     if-eqz v0, :cond_0
 
-    .line 81
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -77,7 +72,6 @@
 
     iput-object v0, p0, Landroid/filterpacks/base/CallbackFilter;->mUiThreadHandler:Landroid/os/Handler;
 
-    .line 83
     :cond_0
     return-void
 .end method
@@ -87,28 +81,23 @@
     .parameter "context"
 
     .prologue
-    .line 87
     const-string v1, "frame"
 
     invoke-virtual {p0, v1}, Landroid/filterpacks/base/CallbackFilter;->pullInput(Ljava/lang/String;)Landroid/filterfw/core/Frame;
 
     move-result-object v4
 
-    .line 88
     .local v4, input:Landroid/filterfw/core/Frame;
     iget-object v1, p0, Landroid/filterpacks/base/CallbackFilter;->mListener:Landroid/filterfw/core/FilterContext$OnFrameReceivedListener;
 
     if-eqz v1, :cond_2
 
-    .line 89
     iget-boolean v1, p0, Landroid/filterpacks/base/CallbackFilter;->mCallbacksOnUiThread:Z
 
     if-eqz v1, :cond_0
 
-    .line 90
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->retain()Landroid/filterfw/core/Frame;
 
-    .line 91
     new-instance v0, Landroid/filterpacks/base/CallbackFilter$CallbackRunnable;
 
     iget-object v2, p0, Landroid/filterpacks/base/CallbackFilter;->mListener:Landroid/filterfw/core/FilterContext$OnFrameReceivedListener;
@@ -121,7 +110,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/filterpacks/base/CallbackFilter$CallbackRunnable;-><init>(Landroid/filterpacks/base/CallbackFilter;Landroid/filterfw/core/FilterContext$OnFrameReceivedListener;Landroid/filterfw/core/Filter;Landroid/filterfw/core/Frame;Ljava/lang/Object;)V
 
-    .line 92
     .local v0, uiRunnable:Landroid/filterpacks/base/CallbackFilter$CallbackRunnable;
     iget-object v1, p0, Landroid/filterpacks/base/CallbackFilter;->mUiThreadHandler:Landroid/os/Handler;
 
@@ -131,7 +119,6 @@
 
     if-nez v1, :cond_1
 
-    .line 93
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Unable to send callback to UI thread!"
@@ -140,7 +127,6 @@
 
     throw v1
 
-    .line 96
     .end local v0           #uiRunnable:Landroid/filterpacks/base/CallbackFilter$CallbackRunnable;
     :cond_0
     iget-object v1, p0, Landroid/filterpacks/base/CallbackFilter;->mListener:Landroid/filterfw/core/FilterContext$OnFrameReceivedListener;
@@ -149,11 +135,9 @@
 
     invoke-interface {v1, p0, v4, v2}, Landroid/filterfw/core/FilterContext$OnFrameReceivedListener;->onFrameReceived(Landroid/filterfw/core/Filter;Landroid/filterfw/core/Frame;Ljava/lang/Object;)V
 
-    .line 101
     :cond_1
     return-void
 
-    .line 99
     :cond_2
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -168,11 +152,9 @@
     .locals 1
 
     .prologue
-    .line 76
     const-string v0, "frame"
 
     invoke-virtual {p0, v0}, Landroid/filterpacks/base/CallbackFilter;->addInputPort(Ljava/lang/String;)V
 
-    .line 77
     return-void
 .end method

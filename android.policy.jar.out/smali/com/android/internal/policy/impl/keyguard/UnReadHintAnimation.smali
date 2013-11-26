@@ -29,10 +29,8 @@
     .prologue
     const/high16 v1, 0x3f00
 
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->getMeasuredHeight()I
 
     move-result v0
@@ -43,7 +41,6 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->setPivotY(F)V
 
-    .line 27
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->getMeasuredWidth()I
 
     move-result v0
@@ -54,10 +51,8 @@
 
     invoke-virtual {p1, v0}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->setPivotX(F)V
 
-    .line 28
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->child:Landroid/view/View;
 
-    .line 29
     return-void
 .end method
 
@@ -65,17 +60,14 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     if-eqz v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -88,7 +80,6 @@
     .prologue
     const/4 v8, 0x2
 
-    .line 32
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$DoubleEvaluator;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$DoubleEvaluator;-><init>(Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;)V
@@ -131,36 +122,29 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, va:Landroid/animation/ValueAnimator;
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
-    .line 34
     invoke-virtual {v0, v8}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    .line 35
     const-wide/16 v1, 0xdc
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 36
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$1;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$1;-><init>(Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 45
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$2;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$2;-><init>(Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 51
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 52
     return-void
 .end method
 
@@ -168,17 +152,14 @@
     .locals 5
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     if-eqz v0, :cond_0
 
-    .line 62
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->child:Landroid/view/View;
 
@@ -200,14 +181,12 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
-    .line 65
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     const-wide/16 v1, 0xdc
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
-    .line 66
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
@@ -218,11 +197,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 67
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->a:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 68
     return-void
 .end method

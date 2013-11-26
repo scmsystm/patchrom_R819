@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 167
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,16 +38,13 @@
     .parameter "msg"
 
     .prologue
-    .line 170
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 252
     :goto_0
     return-void
 
-    .line 172
     :sswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -57,7 +53,6 @@
 
     goto :goto_0
 
-    .line 175
     :sswitch_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -70,7 +65,6 @@
 
     goto :goto_0
 
-    .line 178
     :sswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -83,7 +77,6 @@
 
     goto :goto_0
 
-    .line 181
     :sswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 184
     :sswitch_4
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -106,7 +98,6 @@
 
     goto :goto_0
 
-    .line 187
     :sswitch_5
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -118,7 +109,6 @@
 
     goto :goto_0
 
-    .line 190
     :sswitch_6
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -127,7 +117,6 @@
 
     goto :goto_0
 
-    .line 193
     :sswitch_7
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -135,7 +124,6 @@
 
     goto :goto_0
 
-    .line 196
     :sswitch_8
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -143,7 +131,6 @@
 
     goto :goto_0
 
-    .line 199
     :sswitch_9
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -157,7 +144,6 @@
 
     goto :goto_0
 
-    .line 202
     :sswitch_a
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -167,7 +153,6 @@
 
     goto :goto_0
 
-    .line 205
     :sswitch_b
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -178,7 +163,6 @@
 
     goto :goto_0
 
-    .line 208
     :sswitch_c
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -186,7 +170,6 @@
 
     goto :goto_0
 
-    .line 212
     :sswitch_d
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -194,7 +177,6 @@
 
     goto :goto_0
 
-    .line 216
     :sswitch_e
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -203,7 +185,6 @@
 
     goto :goto_0
 
-    .line 219
     :sswitch_f
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -214,7 +195,6 @@
 
     goto :goto_0
 
-    .line 222
     :sswitch_10
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -225,7 +205,6 @@
 
     goto/16 :goto_0
 
-    .line 225
     :sswitch_11
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -234,7 +213,6 @@
 
     goto/16 :goto_0
 
-    .line 228
     :sswitch_12
     const-string v0, "KeyguardUpdateMonitor"
 
@@ -260,7 +238,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -269,7 +246,6 @@
 
     goto/16 :goto_0
 
-    .line 233
     :sswitch_13
     const-string v0, "KeyguardUpdateMonitor"
 
@@ -295,7 +271,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -305,7 +280,6 @@
 
     goto/16 :goto_0
 
-    .line 237
     :sswitch_14
     const-string v0, "KeyguardUpdateMonitor"
 
@@ -331,7 +305,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 238
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -341,7 +314,6 @@
 
     goto/16 :goto_0
 
-    .line 241
     :sswitch_15
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -350,7 +322,6 @@
 
     goto/16 :goto_0
 
-    .line 244
     :sswitch_16
     const-string v0, "KeyguardUpdateMonitor"
 
@@ -376,7 +347,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -386,7 +356,6 @@
 
     goto/16 :goto_0
 
-    .line 248
     :sswitch_17
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
 
@@ -395,7 +364,6 @@
 
     goto/16 :goto_0
 
-    .line 170
     nop
 
     :sswitch_data_0

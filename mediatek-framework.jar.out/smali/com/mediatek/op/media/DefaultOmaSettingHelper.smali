@@ -53,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 54
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 237
     .local p1, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz p3, :cond_0
 
@@ -95,14 +93,11 @@
 
     if-nez v0, :cond_0
 
-    .line 238
     invoke-interface {p1, p2, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     :goto_0
     return-void
 
-    .line 240
     :cond_0
     const-string v0, "DefaultOmaSettingHelper"
 
@@ -144,7 +139,6 @@
     .parameter "uri"
 
     .prologue
-    .line 123
     const-string v3, "DefaultOmaSettingHelper"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -177,14 +171,11 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     const/4 v1, -0x1
 
-    .line 125
     .local v1, streamingType:I
     if-nez p1, :cond_0
 
-    .line 126
     const-string v3, "DefaultOmaSettingHelper"
 
     const-string v4, "judgeStreamingType: uri is null, cannot judge streaming type."
@@ -193,13 +184,11 @@
 
     move v2, v1
 
-    .line 138
     .end local v1           #streamingType:I
     .local v2, streamingType:I
     :goto_0
     return v2
 
-    .line 129
     .end local v2           #streamingType:I
     .restart local v1       #streamingType:I
     :cond_0
@@ -207,7 +196,6 @@
 
     move-result-object v0
 
-    .line 130
     .local v0, scheme:Ljava/lang/String;
     const-string v3, "rtsp"
 
@@ -217,10 +205,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 131
     const/4 v1, 0x2
 
-    .line 137
     :goto_1
     const-string v3, "DefaultOmaSettingHelper"
 
@@ -246,12 +232,10 @@
 
     move v2, v1
 
-    .line 138
     .end local v1           #streamingType:I
     .restart local v2       #streamingType:I
     goto :goto_0
 
-    .line 132
     .end local v2           #streamingType:I
     .restart local v1       #streamingType:I
     :cond_1
@@ -263,12 +247,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 133
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 135
     :cond_2
     const/4 v1, 0x0
 
@@ -297,7 +279,6 @@
     .end annotation
 
     .prologue
-    .line 150
     .local p2, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v14, "DefaultOmaSettingHelper"
 
@@ -341,76 +322,60 @@
 
     invoke-static {v14, v15}, Lcom/mediatek/xlog/Xlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     if-nez p1, :cond_0
 
-    .line 152
     const-string v14, "DefaultOmaSettingHelper"
 
     const-string v15, "setOmaSettingHeader: Null context!"
 
     invoke-static {v14, v15}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     .end local p2           #headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_0
     return-object p2
 
-    .line 158
     .restart local p2       #headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 159
     .local v1, cr:Landroid/content/ContentResolver;
     move-object/from16 v13, p2
 
-    .line 160
     .local v13, tempHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v13, :cond_1
 
-    .line 161
     new-instance v13, Ljava/util/HashMap;
 
     .end local v13           #tempHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {v13}, Ljava/util/HashMap;-><init>()V
 
-    .line 164
     .restart local v13       #tempHeaders:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     const/4 v7, -0x1
 
-    .line 165
     .local v7, minUdpPort:I
     const/4 v6, -0x1
 
-    .line 166
     .local v6, maxUdpPort:I
     const/4 v9, 0x0
 
-    .line 167
     .local v9, rtspProxyEnable:I
     const/4 v10, 0x0
 
-    .line 168
     .local v10, rtspProxyHost:Ljava/lang/String;
     const/4 v11, -0x1
 
-    .line 169
     .local v11, rtspProxyPort:I
     const/4 v3, 0x0
 
-    .line 170
     .local v3, httpProxyEnable:I
     const/4 v4, 0x0
 
-    .line 171
     .local v4, httpProxyHost:Ljava/lang/String;
     const/4 v5, -0x1
 
-    .line 174
     .local v5, httpProxyPort:I
     const-string v14, "MTK-HTTP-CACHE-SIZE"
 
@@ -420,7 +385,6 @@
 
     move-result v2
 
-    .line 175
     .local v2, httpBufferSize:I
     const-string v14, "MTK-HTTP-CACHE-SIZE"
 
@@ -432,7 +396,6 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     const-string v14, "MTK-RTSP-CACHE-SIZE"
 
     invoke-virtual/range {p0 .. p0}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->getRtspDefaultBufferSize()I
@@ -443,7 +406,6 @@
 
     move-result v8
 
-    .line 177
     .local v8, rtspBufferSize:I
     const-string v14, "MTK-RTSP-CACHE-SIZE"
 
@@ -455,7 +417,6 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     const-string v14, "mtk_rtsp_min_udp_port"
 
     const/4 v15, -0x1
@@ -464,7 +425,6 @@
 
     move-result v7
 
-    .line 181
     const-string v14, "mtk_rtsp_max_udp_port"
 
     const/4 v15, -0x1
@@ -473,7 +433,6 @@
 
     move-result v6
 
-    .line 182
     const/4 v14, -0x1
 
     if-eq v7, v14, :cond_2
@@ -482,7 +441,6 @@
 
     if-eq v6, v14, :cond_2
 
-    .line 183
     const-string v14, "MIN-UDP-PORT"
 
     invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -493,7 +451,6 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
     const-string v14, "MAX-UDP-PORT"
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -504,7 +461,6 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 187
     :cond_2
     const-string v14, "mtk_rtsp_proxy_enabled"
 
@@ -514,19 +470,16 @@
 
     move-result v9
 
-    .line 188
     const/4 v14, 0x1
 
     if-ne v9, v14, :cond_3
 
-    .line 189
     const-string v14, "mtk_rtsp_proxy_host"
 
     invoke-static {v1, v14}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 190
     const-string v14, "mtk_rtsp_proxy_port"
 
     const/4 v15, -0x1
@@ -535,21 +488,18 @@
 
     move-result v11
 
-    .line 191
     if-eqz v10, :cond_3
 
     const/4 v14, -0x1
 
     if-eq v11, v14, :cond_3
 
-    .line 192
     const-string v14, "MTK-RTSP-PROXY-HOST"
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13, v14, v10}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 193
     const-string v14, "MTK-RTSP-PROXY-PORT"
 
     invoke-static {v11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -560,7 +510,6 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
     :cond_3
     const-string v14, "mtk_http_proxy_enabled"
 
@@ -570,19 +519,16 @@
 
     move-result v3
 
-    .line 199
     const/4 v14, 0x1
 
     if-ne v3, v14, :cond_4
 
-    .line 200
     const-string v14, "mtk_http_proxy_host"
 
     invoke-static {v1, v14}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 201
     const-string v14, "mtk_http_proxy_port"
 
     const/4 v15, -0x1
@@ -591,7 +537,6 @@
 
     move-result v5
 
-    .line 206
     :cond_4
     const/4 v14, 0x1
 
@@ -601,18 +546,15 @@
 
     if-ne v5, v14, :cond_6
 
-    .line 209
     :cond_5
     invoke-static/range {p1 .. p1}, Landroid/net/Proxy;->getHost(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 210
     invoke-static/range {p1 .. p1}, Landroid/net/Proxy;->getPort(Landroid/content/Context;)I
 
     move-result v5
 
-    .line 213
     :cond_6
     if-eqz v4, :cond_7
 
@@ -620,14 +562,12 @@
 
     if-eq v5, v14, :cond_7
 
-    .line 214
     const-string v14, "MTK-HTTP-PROXY-HOST"
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13, v14, v4}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 215
     const-string v14, "MTK-HTTP-PROXY-PORT"
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -638,13 +578,11 @@
 
     invoke-direct {v0, v13, v14, v15}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->fillHeader(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     :cond_7
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 220
     .local v12, sb:Ljava/lang/StringBuilder;
     const-string v14, "minUdpPort="
 
@@ -654,7 +592,6 @@
 
     invoke-virtual {v14, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 221
     const-string v14, "minUdpPort="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -663,7 +600,6 @@
 
     invoke-virtual {v14, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 222
     const-string v14, "maxUdpPort="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -672,7 +608,6 @@
 
     invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 223
     const-string v14, "rtspProxyEnable="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -681,7 +616,6 @@
 
     invoke-virtual {v14, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 224
     const-string v14, "rtspProxyHost="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -690,7 +624,6 @@
 
     invoke-virtual {v14, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 225
     const-string v14, "rtspProxyPort="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -699,7 +632,6 @@
 
     invoke-virtual {v14, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 226
     const-string v14, "httpProxyEnable="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -708,7 +640,6 @@
 
     invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 227
     const-string v14, "httpProxyHost="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -717,7 +648,6 @@
 
     invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 228
     const-string v14, "httpProxyPort="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -726,7 +656,6 @@
 
     invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 229
     const-string v14, "httpBufferSize="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -735,7 +664,6 @@
 
     invoke-virtual {v14, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 230
     const-string v14, "rtspBufferSize="
 
     invoke-virtual {v12, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -744,7 +672,6 @@
 
     invoke-virtual {v14, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 231
     const-string v14, "DefaultOmaSettingHelper"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -773,7 +700,6 @@
 
     move-object/from16 p2, v13
 
-    .line 233
     goto/16 :goto_0
 .end method
 
@@ -783,7 +709,6 @@
     .locals 1
 
     .prologue
-    .line 114
     const/4 v0, 0x4
 
     return v0
@@ -793,10 +718,8 @@
     .locals 4
 
     .prologue
-    .line 104
     const/4 v0, 0x1
 
-    .line 105
     .local v0, enabled:Z
     const-string v1, "DefaultOmaSettingHelper"
 
@@ -820,7 +743,6 @@
 
     invoke-static {v1, v2}, Lcom/mediatek/xlog/Xlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     return v0
 .end method
 
@@ -848,7 +770,6 @@
     .end annotation
 
     .prologue
-    .line 89
     .local p3, headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p0}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->isOMAEnabled()Z
 
@@ -856,12 +777,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 90
     invoke-direct {p0, p2}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->judgeStreamingType(Landroid/net/Uri;)I
 
     move-result v0
 
-    .line 91
     .local v0, type:I
     const/4 v1, 0x2
 
@@ -871,19 +790,16 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 92
     :cond_0
     invoke-direct {p0, p1, p3}, Lcom/mediatek/op/media/DefaultOmaSettingHelper;->setOmaSettingHeader(Landroid/content/Context;Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object p3
 
-    .line 96
     .end local v0           #type:I
     .end local p3           #headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :goto_0
     return-object p3
 
-    .line 95
     .restart local p3       #headers:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_1
     const-string v1, "DefaultOmaSettingHelper"

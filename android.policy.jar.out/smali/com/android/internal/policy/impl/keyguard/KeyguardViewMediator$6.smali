@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1852
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$6;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "which"
 
     .prologue
-    .line 1854
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$6;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
@@ -53,13 +51,11 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->reportDialogClose()V
 
-    .line 1855
     const-string v0, "KeyguardViewMediator"
 
     const-string v1, "invalid sim card ,reportCloseDialog"
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1857
     return-void
 .end method

@@ -9,10 +9,8 @@
     .parameter "handle"
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Landroid/opengl/EGLObjectHandle;-><init>(I)V
 
-    .line 27
     return-void
 .end method
 
@@ -27,15 +25,12 @@
 
     const/4 v2, 0x0
 
-    .line 31
     if-ne p0, p1, :cond_1
 
-    .line 35
     :cond_0
     :goto_0
     return v1
 
-    .line 32
     :cond_1
     if-eqz p1, :cond_2
 
@@ -57,10 +52,8 @@
     :cond_3
     move-object v0, p1
 
-    .line 34
     check-cast v0, Landroid/opengl/EGLContext;
 
-    .line 35
     .local v0, that:Landroid/opengl/EGLContext;
     invoke-virtual {p0}, Landroid/opengl/EGLContext;->getHandle()I
 

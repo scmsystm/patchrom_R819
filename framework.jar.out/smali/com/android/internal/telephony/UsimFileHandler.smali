@@ -18,10 +18,8 @@
     .parameter "ci"
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 35
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .parameter "efid"
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/UsimFileHandler;->getEFPath(IZ)Ljava/lang/String;
@@ -48,10 +45,8 @@
     .parameter "is7FFF"
 
     .prologue
-    .line 44
     const-string v0, "7F20"
 
-    .line 46
     .local v0, DF_APP:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/IccFileHandler;->mParentApp:Lcom/android/internal/telephony/UiccCardApplication;
 
@@ -67,44 +62,35 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 47
     const-string v0, "7FFF"
 
-    .line 49
     :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 78
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/UsimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 79
     .local v1, path:Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 83
     const-string v1, "7F105F3A"
 
-    .line 85
     .end local v1           #path:Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v1
 
-    .line 72
     :sswitch_0
     const-string v1, "7FFF"
 
     goto :goto_0
 
-    .line 76
     :sswitch_1
     const-string v1, "7F105F3A"
 
     goto :goto_0
 
-    .line 49
     :sswitch_data_0
     .sparse-switch
         0x4f30 -> :sswitch_1
@@ -138,12 +124,10 @@
     .parameter "msg"
 
     .prologue
-    .line 90
     const-string v0, "RIL_UsimFH"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     return-void
 .end method
 
@@ -152,11 +136,9 @@
     .parameter "msg"
 
     .prologue
-    .line 95
     const-string v0, "RIL_UsimFH"
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     return-void
 .end method

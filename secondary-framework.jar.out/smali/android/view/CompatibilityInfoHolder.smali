@@ -12,10 +12,8 @@
     .locals 1
 
     .prologue
-    .line 22
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     sget-object v0, Landroid/content/res/CompatibilityInfo;->DEFAULT_COMPATIBILITY_INFO:Landroid/content/res/CompatibilityInfo;
 
     iput-object v0, p0, Landroid/view/CompatibilityInfoHolder;->mCompatInfo:Landroid/content/res/CompatibilityInfo;
@@ -29,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Landroid/view/CompatibilityInfoHolder;->mCompatInfo:Landroid/content/res/CompatibilityInfo;
 
     return-object v0
@@ -39,10 +36,8 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-object v0, p0, Landroid/view/CompatibilityInfoHolder;->mCompatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 40
     .local v0, ci:Landroid/content/res/CompatibilityInfo;
     if-eqz v0, :cond_0
 
@@ -50,11 +45,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 41
     :cond_0
     const/4 v0, 0x0
 
-    .line 43
     .end local v0           #ci:Landroid/content/res/CompatibilityInfo;
     :cond_1
     return-object v0
@@ -65,7 +58,6 @@
     .parameter "compatInfo"
 
     .prologue
-    .line 26
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroid/content/res/CompatibilityInfo;->isScalingRequired()Z
@@ -80,15 +72,12 @@
 
     if-nez v0, :cond_1
 
-    .line 28
     :cond_0
     iput-object p1, p0, Landroid/view/CompatibilityInfoHolder;->mCompatInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 32
     :goto_0
     return-void
 
-    .line 30
     :cond_1
     sget-object v0, Landroid/content/res/CompatibilityInfo;->DEFAULT_COMPATIBILITY_INFO:Landroid/content/res/CompatibilityInfo;
 

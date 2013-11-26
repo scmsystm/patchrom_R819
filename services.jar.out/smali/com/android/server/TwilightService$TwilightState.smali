@@ -36,25 +36,18 @@
     .parameter "tomorrowSunrise"
 
     .prologue
-    .line 179
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 180
     iput-boolean p1, p0, Lcom/android/server/TwilightService$TwilightState;->mIsNight:Z
 
-    .line 181
     iput-wide p2, p0, Lcom/android/server/TwilightService$TwilightState;->mYesterdaySunset:J
 
-    .line 182
     iput-wide p4, p0, Lcom/android/server/TwilightService$TwilightState;->mTodaySunrise:J
 
-    .line 183
     iput-wide p6, p0, Lcom/android/server/TwilightService$TwilightState;->mTodaySunset:J
 
-    .line 184
     iput-wide p8, p0, Lcom/android/server/TwilightService$TwilightState;->mTomorrowSunrise:J
 
-    .line 185
     return-void
 .end method
 
@@ -65,7 +58,6 @@
     .parameter "other"
 
     .prologue
-    .line 232
     if-eqz p1, :cond_0
 
     iget-boolean v0, p0, Lcom/android/server/TwilightService$TwilightState;->mIsNight:Z
@@ -122,7 +114,6 @@
     .parameter "o"
 
     .prologue
-    .line 228
     instance-of v0, p1, Lcom/android/server/TwilightService$TwilightState;
 
     if-eqz v0, :cond_0
@@ -151,7 +142,6 @@
     .locals 2
 
     .prologue
-    .line 207
     iget-wide v0, p0, Lcom/android/server/TwilightService$TwilightState;->mTodaySunrise:J
 
     return-wide v0
@@ -161,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 215
     iget-wide v0, p0, Lcom/android/server/TwilightService$TwilightState;->mTodaySunset:J
 
     return-wide v0
@@ -171,7 +160,6 @@
     .locals 2
 
     .prologue
-    .line 223
     iget-wide v0, p0, Lcom/android/server/TwilightService$TwilightState;->mTomorrowSunrise:J
 
     return-wide v0
@@ -181,7 +169,6 @@
     .locals 2
 
     .prologue
-    .line 199
     iget-wide v0, p0, Lcom/android/server/TwilightService$TwilightState;->mYesterdaySunset:J
 
     return-wide v0
@@ -191,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 242
     const/4 v0, 0x0
 
     return v0
@@ -201,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-boolean v0, p0, Lcom/android/server/TwilightService$TwilightState;->mIsNight:Z
 
     return v0
@@ -211,12 +196,10 @@
     .locals 5
 
     .prologue
-    .line 247
     invoke-static {}, Ljava/text/DateFormat;->getDateTimeInstance()Ljava/text/DateFormat;
 
     move-result-object v0
 
-    .line 248
     .local v0, f:Ljava/text/DateFormat;
     new-instance v1, Ljava/lang/StringBuilder;
 

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2628
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 2628
     invoke-direct {p0, p1}, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;-><init>(Lcom/android/server/power/PowerManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .parameter "intent"
 
     .prologue
-    .line 2631
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #getter for: Lcom/android/server/power/PowerManagerService;->mLock:Ljava/lang/Object;
@@ -62,7 +59,6 @@
 
     monitor-enter v6
 
-    .line 2633
     :try_start_0
     const-string v0, "PowerManagerService"
 
@@ -90,7 +86,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2635
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -103,14 +98,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2636
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/16 v1, 0x2000
 
     invoke-static {v0, v1}, Lcom/android/server/power/PowerManagerService;->access$1376(Lcom/android/server/power/PowerManagerService;I)I
 
-    .line 2637
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #getter for: Lcom/android/server/power/PowerManagerService;->mIPOFlag:Z
@@ -120,7 +113,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2638
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #getter for: Lcom/android/server/power/PowerManagerService;->mWakefulness:I
@@ -132,7 +124,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 2639
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -142,21 +133,17 @@
     #calls: Lcom/android/server/power/PowerManagerService;->wakeUpNoUpdateLocked(J)Z
     invoke-static {v0, v1, v2}, Lcom/android/server/power/PowerManagerService;->access$1000(Lcom/android/server/power/PowerManagerService;J)Z
 
-    .line 2644
     :goto_0
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #calls: Lcom/android/server/power/PowerManagerService;->updatePowerStateLocked()V
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$1900(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 2647
     :cond_0
     monitor-exit v6
 
-    .line 2648
     return-void
 
-    .line 2641
     :cond_1
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$SDHotPlugReceiver;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -175,7 +162,6 @@
 
     goto :goto_0
 
-    .line 2647
     :catchall_0
     move-exception v0
 

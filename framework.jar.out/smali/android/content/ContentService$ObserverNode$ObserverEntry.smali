@@ -45,30 +45,22 @@
     .parameter "_userHandle"
 
     .prologue
-    .line 615
     iput-object p1, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->this$0:Landroid/content/ContentService$ObserverNode;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 616
     iput-object p4, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->observersLock:Ljava/lang/Object;
 
-    .line 617
     iput-object p2, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->observer:Landroid/database/IContentObserver;
 
-    .line 618
     iput p5, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->uid:I
 
-    .line 619
     iput p6, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->pid:I
 
-    .line 620
     iput p7, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->userHandle:I
 
-    .line 621
     iput-boolean p3, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->notifyForDescendants:Z
 
-    .line 623
     :try_start_0
     iget-object v1, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->observer:Landroid/database/IContentObserver;
 
@@ -82,15 +74,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 627
     :goto_0
     return-void
 
-    .line 624
     :catch_0
     move-exception v0
 
-    .line 625
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {p0}, Landroid/content/ContentService$ObserverNode$ObserverEntry;->binderDied()V
 
@@ -102,7 +91,6 @@
     .parameter "x0"
 
     .prologue
-    .line 606
     iget v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->userHandle:I
 
     return v0
@@ -114,12 +102,10 @@
     .locals 3
 
     .prologue
-    .line 630
     iget-object v1, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->observersLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 631
     :try_start_0
     iget-object v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->this$0:Landroid/content/ContentService$ObserverNode;
 
@@ -127,13 +113,10 @@
 
     invoke-virtual {v0, v2}, Landroid/content/ContentService$ObserverNode;->removeObserverLocked(Landroid/database/IContentObserver;)Z
 
-    .line 632
     monitor-exit v1
 
-    .line 633
     return-void
 
-    .line 632
     :catchall_0
     move-exception v0
 
@@ -154,7 +137,6 @@
     .parameter "pidCounts"
 
     .prologue
-    .line 637
     iget v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->pid:I
 
     iget v1, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->pid:I
@@ -167,7 +149,6 @@
 
     invoke-virtual {p6, v0, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 638
     invoke-virtual {p2, p5}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     invoke-virtual {p2, p4}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -176,7 +157,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 639
     iget v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->pid:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
@@ -185,7 +165,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 640
     iget v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->uid:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
@@ -194,7 +173,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 641
     iget v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->userHandle:I
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(I)V
@@ -203,7 +181,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 642
     iget-object v0, p0, Landroid/content/ContentService$ObserverNode$ObserverEntry;->observer:Landroid/database/IContentObserver;
 
     if-eqz v0, :cond_0
@@ -225,10 +202,8 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 644
     return-void
 
-    .line 642
     :cond_0
     const/4 v0, 0x0
 

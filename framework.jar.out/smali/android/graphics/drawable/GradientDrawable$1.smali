@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 708
     invoke-static {}, Landroid/graphics/drawable/GradientDrawable$Orientation;->values()[Landroid/graphics/drawable/GradientDrawable$Orientation;
 
     move-result-object v0

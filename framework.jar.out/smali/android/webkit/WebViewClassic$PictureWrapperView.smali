@@ -28,21 +28,16 @@
     .parameter "parent"
 
     .prologue
-    .line 9305
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 9306
     iput-object p2, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mPicture:Landroid/graphics/Picture;
 
-    .line 9307
     iput-object p3, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mWebView:Landroid/webkit/WebView;
 
-    .line 9308
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebViewClassic$PictureWrapperView;->setWillNotDraw(Z)V
 
-    .line 9309
     iget-object v0, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mPicture:Landroid/graphics/Picture;
 
     invoke-virtual {v0}, Landroid/graphics/Picture;->getWidth()I
@@ -51,7 +46,6 @@
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebViewClassic$PictureWrapperView;->setRight(I)V
 
-    .line 9310
     iget-object v0, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mPicture:Landroid/graphics/Picture;
 
     invoke-virtual {v0}, Landroid/graphics/Picture;->getHeight()I
@@ -60,7 +54,6 @@
 
     invoke-virtual {p0, v0}, Landroid/webkit/WebViewClassic$PictureWrapperView;->setBottom(I)V
 
-    .line 9311
     return-void
 .end method
 
@@ -71,12 +64,10 @@
     .parameter "canvas"
 
     .prologue
-    .line 9315
     iget-object v0, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mPicture:Landroid/graphics/Picture;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawPicture(Landroid/graphics/Picture;)V
 
-    .line 9316
     return-void
 .end method
 
@@ -85,7 +76,6 @@
     .parameter "action"
 
     .prologue
-    .line 9320
     iget-object v0, p0, Landroid/webkit/WebViewClassic$PictureWrapperView;->mWebView:Landroid/webkit/WebView;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebView;->post(Ljava/lang/Runnable;)Z

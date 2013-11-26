@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 98
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 100
     new-instance v0, Landroid/telephony/CellBroadcastMessage;
 
     const/4 v1, 0x0
@@ -68,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 98
     invoke-virtual {p0, p1}, Landroid/telephony/CellBroadcastMessage$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/CellBroadcastMessage;
 
     move-result-object v0
@@ -81,7 +78,6 @@
     .parameter "size"
 
     .prologue
-    .line 104
     new-array v0, p1, [Landroid/telephony/CellBroadcastMessage;
 
     return-object v0
@@ -92,7 +88,6 @@
     .parameter "x0"
 
     .prologue
-    .line 98
     invoke-virtual {p0, p1}, Landroid/telephony/CellBroadcastMessage$1;->newArray(I)[Landroid/telephony/CellBroadcastMessage;
 
     move-result-object v0

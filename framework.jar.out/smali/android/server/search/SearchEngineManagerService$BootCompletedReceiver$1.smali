@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 111
     iput-object p1, p0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;->this$1:Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,12 +37,10 @@
     .locals 4
 
     .prologue
-    .line 114
     const/16 v0, 0xa
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 115
     iget-object v0, p0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;->this$1:Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;
 
     iget-object v0, v0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;->this$0:Landroid/server/search/SearchEngineManagerService;
@@ -57,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 116
     iget-object v0, p0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;->this$1:Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;
 
     iget-object v0, v0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;->this$0:Landroid/server/search/SearchEngineManagerService;
@@ -65,7 +61,6 @@
     #calls: Landroid/server/search/SearchEngineManagerService;->initSearchEngineInfos()V
     invoke-static {v0}, Landroid/server/search/SearchEngineManagerService;->access$200(Landroid/server/search/SearchEngineManagerService;)V
 
-    .line 117
     iget-object v0, p0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver$1;->this$1:Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;
 
     iget-object v0, v0, Landroid/server/search/SearchEngineManagerService$BootCompletedReceiver;->this$0:Landroid/server/search/SearchEngineManagerService;
@@ -93,6 +88,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 119
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2346
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$2;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,14 +39,12 @@
     .parameter "intent"
 
     .prologue
-    .line 2348
     const-string v0, "SMS"
 
     const-string v1, "[DM-Lock receive lock/unlock intent"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2349
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -60,24 +57,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 2350
     const-string v0, "SMS"
 
     const-string v1, "[DM-Lock DM is locked now"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2351
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/internal/telephony/SMSDispatcher;->isDmLock:Z
 
-    .line 2356
     :cond_0
     :goto_0
     return-void
 
-    .line 2352
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -91,14 +84,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2353
     const-string v0, "SMS"
 
     const-string v1, "[DM-Lock DM is unlocked now"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2354
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/internal/telephony/SMSDispatcher;->isDmLock:Z

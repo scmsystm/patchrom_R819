@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1711
     iput-object p1, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1714
     const-string v3, "BounceGallery"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -128,7 +126,6 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1719
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     #getter for: Landroid/widget/BounceGallery;->mTouchMode:I
@@ -138,7 +135,6 @@
 
     if-nez v3, :cond_1
 
-    .line 1720
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     iget-object v4, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
@@ -158,7 +154,6 @@
 
     move-result-object v0
 
-    .line 1722
     .local v0, child:Landroid/view/View;
     const-string v3, "BounceGallery"
 
@@ -192,7 +187,6 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1725
     if-eqz v0, :cond_1
 
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
@@ -201,20 +195,16 @@
 
     if-nez v3, :cond_1
 
-    .line 1726
     invoke-virtual {v0, v6}, Landroid/view/View;->setPressed(Z)V
 
-    .line 1727
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     invoke-virtual {v3, v6}, Landroid/widget/BounceGallery;->setPressed(Z)V
 
-    .line 1729
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result v2
 
-    .line 1730
     .local v2, longPressTimeout:I
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
@@ -222,7 +212,6 @@
 
     move-result v1
 
-    .line 1732
     .local v1, longClickable:Z
     const-string v3, "BounceGallery"
 
@@ -287,10 +276,8 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1737
     if-eqz v1, :cond_1
 
-    .line 1738
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     #getter for: Landroid/widget/BounceGallery;->mPendingCheckForLongPress:Landroid/widget/BounceGallery$CheckForLongPress;
@@ -300,7 +287,6 @@
 
     if-nez v3, :cond_0
 
-    .line 1739
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     new-instance v4, Landroid/widget/BounceGallery$CheckForLongPress;
@@ -314,7 +300,6 @@
     #setter for: Landroid/widget/BounceGallery;->mPendingCheckForLongPress:Landroid/widget/BounceGallery$CheckForLongPress;
     invoke-static {v3, v4}, Landroid/widget/BounceGallery;->access$502(Landroid/widget/BounceGallery;Landroid/widget/BounceGallery$CheckForLongPress;)Landroid/widget/BounceGallery$CheckForLongPress;
 
-    .line 1741
     :cond_0
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
@@ -325,7 +310,6 @@
 
     invoke-virtual {v3}, Landroid/widget/BounceGallery$CheckForLongPress;->rememberWindowAttachCount()V
 
-    .line 1742
     iget-object v3, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
 
     iget-object v4, p0, Landroid/widget/BounceGallery$CheckForTap;->this$0:Landroid/widget/BounceGallery;
@@ -339,7 +323,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/widget/BounceGallery;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1746
     .end local v0           #child:Landroid/view/View;
     .end local v1           #longClickable:Z
     .end local v2           #longPressTimeout:I

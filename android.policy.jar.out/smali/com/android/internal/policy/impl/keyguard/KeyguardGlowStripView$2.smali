@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "animation"
 
     .prologue
-    .line 133
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -58,11 +56,9 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;->mAnimationProgress:F
     invoke-static {v1, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;->access$102(Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;F)F
 
-    .line 134
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardGlowStripView;->invalidate()V
 
-    .line 135
     return-void
 .end method

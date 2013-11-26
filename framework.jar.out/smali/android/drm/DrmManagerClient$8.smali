@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 2088
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +35,5 @@
     .parameter "which"
 
     .prologue
-    .line 2091
     return-void
 .end method

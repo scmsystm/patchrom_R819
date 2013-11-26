@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 313
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$3;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,18 +42,15 @@
     .parameter "event"
 
     .prologue
-    .line 317
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    .line 318
     .local v0, oldX:F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    .line 319
     .local v1, oldY:F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -66,7 +62,6 @@
 
     invoke-virtual {p2, v2, v3}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 321
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayWindow$3;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     #getter for: Lcom/android/server/display/OverlayDisplayWindow;->mGestureDetector:Landroid/view/GestureDetector;
@@ -76,7 +71,6 @@
 
     invoke-virtual {v2, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 322
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayWindow$3;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     #getter for: Lcom/android/server/display/OverlayDisplayWindow;->mScaleGestureDetector:Landroid/view/ScaleGestureDetector;
@@ -86,24 +80,20 @@
 
     invoke-virtual {v2, p2}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 324
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
 
     packed-switch v2, :pswitch_data_0
 
-    .line 332
     :goto_0
     :pswitch_0
     invoke-virtual {p2, v0, v1}, Landroid/view/MotionEvent;->setLocation(FF)V
 
-    .line 333
     const/4 v2, 0x1
 
     return v2
 
-    .line 327
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/display/OverlayDisplayWindow$3;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
@@ -112,7 +102,6 @@
 
     goto :goto_0
 
-    .line 324
     nop
 
     :pswitch_data_0

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 332
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 335
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 336
     .local v0, action:Ljava/lang/String;
     const-string v3, "PowerOffAlarm"
 
@@ -69,7 +66,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     const-string v3, "update.power.off.alarm.label"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,23 +74,19 @@
 
     if-eqz v3, :cond_1
 
-    .line 338
     new-instance v2, Landroid/os/Message;
 
     invoke-direct {v2}, Landroid/os/Message;-><init>()V
 
-    .line 339
     .local v2, msg:Landroid/os/Message;
     const/16 v3, 0x63
 
     iput v3, v2, Landroid/os/Message;->what:I
 
-    .line 340
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 341
     .local v1, data:Landroid/os/Bundle;
     const-string v3, "label"
 
@@ -106,10 +98,8 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
     invoke-virtual {v2, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 343
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;->mHandler:Landroid/os/Handler;
@@ -119,17 +109,14 @@
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 344
     invoke-virtual {p1, p2}, Landroid/content/Context;->removeStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 348
     .end local v1           #data:Landroid/os/Bundle;
     .end local v2           #msg:Landroid/os/Message;
     :cond_0
     :goto_0
     return-void
 
-    .line 345
     :cond_1
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->isAlarmBoot()Z
 
@@ -137,7 +124,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 346
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;->snooze()V

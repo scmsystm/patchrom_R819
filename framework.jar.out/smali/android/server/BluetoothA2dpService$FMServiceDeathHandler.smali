@@ -30,15 +30,12 @@
     .parameter "cb"
 
     .prologue
-    .line 911
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 912
     iput-object p2, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->mCb:Landroid/os/IBinder;
 
-    .line 913
     return-void
 .end method
 
@@ -48,13 +45,11 @@
     .locals 2
 
     .prologue
-    .line 916
     const-string v0, "FMServiceDeathHandler::binderDied"
 
     #calls: Landroid/server/BluetoothA2dpService;->debugLog(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/server/BluetoothA2dpService;->access$1100(Ljava/lang/String;)V
 
-    .line 918
     iget-object v0, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
     #getter for: Landroid/server/BluetoothA2dpService;->mFmOverBtOn:Z
@@ -64,7 +59,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 919
     iget-object v0, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
     const/4 v1, 0x0
@@ -72,7 +66,6 @@
     #setter for: Landroid/server/BluetoothA2dpService;->mFmOverBtOn:Z
     invoke-static {v0, v1}, Landroid/server/BluetoothA2dpService;->access$1202(Landroid/server/BluetoothA2dpService;Z)Z
 
-    .line 921
     iget-object v0, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
     #getter for: Landroid/server/BluetoothA2dpService;->mFmOverBtMode:Z
@@ -82,18 +75,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 922
     iget-object v0, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->this$0:Landroid/server/BluetoothA2dpService;
 
     #calls: Landroid/server/BluetoothA2dpService;->stopFm()V
     invoke-static {v0}, Landroid/server/BluetoothA2dpService;->access$1400(Landroid/server/BluetoothA2dpService;)V
 
-    .line 927
     :cond_0
     :goto_0
     return-void
 
-    .line 925
     :cond_1
     const-string v0, "FM was Power down,ignore."
 
@@ -107,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 930
     iget-object v0, p0, Landroid/server/BluetoothA2dpService$FMServiceDeathHandler;->mCb:Landroid/os/IBinder;
 
     return-object v0

@@ -27,13 +27,10 @@
     .parameter "context"
 
     .prologue
-    .line 1797
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow;
 
-    .line 1798
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 1799
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -46,7 +43,6 @@
 
     iput-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->mHighlightFrame:Landroid/graphics/drawable/Drawable;
 
-    .line 1801
     return-void
 .end method
 
@@ -57,14 +53,12 @@
     .parameter "canvas"
 
     .prologue
-    .line 1805
     const/4 v0, 0x0
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 1806
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->mHighlightFrame:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow;
@@ -76,7 +70,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1807
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->mHighlightFrame:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow;
@@ -88,11 +81,9 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1808
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$ViewportWindow$ContentView;->mHighlightFrame:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1809
     return-void
 .end method

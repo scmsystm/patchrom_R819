@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1036
     iput-object p1, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 1036
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;-><init>(Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;)V
 
     return-void
@@ -52,10 +50,8 @@
     .parameter
 
     .prologue
-    .line 1038
     monitor-enter p0
 
-    .line 1039
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -69,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1040
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -78,8 +73,7 @@
 
     move-result-object v0
 
-    .line 1041
-    const-string/jumbo v1, "simId"
+    const-string v1, "simId"
 
     const/4 v2, 0x0
 
@@ -87,31 +81,24 @@
 
     move-result v1
 
-    .line 1042
     if-eqz v0, :cond_0
 
-    .line 1043
     invoke-virtual {v0}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v0
 
-    .line 1044
     packed-switch v0, :pswitch_data_0
 
-    .line 1066
     const-string v0, "Recv SERVICE_STATE_CHANGED invalid state"
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->a(Ljava/lang/String;)V
 
-    .line 1071
     :cond_0
     :goto_0
     monitor-exit p0
 
-    .line 1072
     return-void
 
-    .line 1046
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
 
@@ -123,7 +110,6 @@
 
     aput-boolean v2, v0, v1
 
-    .line 1047
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -144,14 +130,12 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->a(Ljava/lang/String;)V
 
-    .line 1050
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->resetGprsRelatedContext(I)V
 
     goto :goto_0
 
-    .line 1071
     :catchall_0
     move-exception v0
 
@@ -161,7 +145,6 @@
 
     throw v0
 
-    .line 1053
     :pswitch_1
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
@@ -174,7 +157,6 @@
 
     aput-boolean v2, v0, v1
 
-    .line 1054
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -197,7 +179,6 @@
 
     goto :goto_0
 
-    .line 1057
     :pswitch_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -219,7 +200,6 @@
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->a(Ljava/lang/String;)V
 
-    .line 1058
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->a(Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;)[Z
@@ -230,7 +210,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1059
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$c;->a:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;->a(Lcom/android/internal/telephony/gemini/GeminiDataSubUtil;)[Z
@@ -243,7 +222,6 @@
 
     goto :goto_0
 
-    .line 1063
     :pswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -269,7 +247,6 @@
 
     goto/16 :goto_0
 
-    .line 1044
     nop
 
     :pswitch_data_0

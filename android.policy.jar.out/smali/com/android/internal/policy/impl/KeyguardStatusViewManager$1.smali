@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 621
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitorCallback;-><init>()V
@@ -39,18 +38,15 @@
     .parameter "phoneState"
 
     .prologue
-    .line 647
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     iput p1, v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mPhoneState:I
 
-    .line 648
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateEmergencyCallButtonState(I)V
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$1100(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;I)V
 
-    .line 649
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 624
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;->isPluggedIn()Z
@@ -83,7 +78,6 @@
     #setter for: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mShowingBatteryInfo:Z
     invoke-static {v3, v1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$402(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Z)Z
 
-    .line 625
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;->isPluggedIn()Z
@@ -93,7 +87,6 @@
     #setter for: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mPluggedIn:Z
     invoke-static {v1, v3}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$502(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Z)Z
 
-    .line 626
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     iget v3, p1, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;->level:I
@@ -101,7 +94,6 @@
     #setter for: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mBatteryLevel:I
     invoke-static {v1, v3}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$602(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;I)I
 
-    .line 627
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;->isCharged()Z
@@ -110,7 +102,6 @@
 
     iput-boolean v3, v1, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mBatteryCharged:Z
 
-    .line 628
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;->isBatteryLow()Z
@@ -119,12 +110,10 @@
 
     iput-boolean v3, v1, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mBatteryIsLow:Z
 
-    .line 629
     new-instance v0, Llibcore/util/MutableInt;
 
     invoke-direct {v0, v2}, Llibcore/util/MutableInt;-><init>(I)V
 
-    .line 630
     .local v0, tmpIcon:Llibcore/util/MutableInt;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
@@ -140,14 +129,12 @@
     #calls: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->update(ILjava/lang/CharSequence;)V
     invoke-static {v1, v2, v3}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$700(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;ILjava/lang/CharSequence;)V
 
-    .line 631
     return-void
 
     .end local v0           #tmpIcon:Llibcore/util/MutableInt;
     :cond_1
     move v1, v2
 
-    .line 624
     goto :goto_0
 .end method
 
@@ -157,19 +144,16 @@
     .parameter "spn"
 
     .prologue
-    .line 640
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mPlmn:Ljava/lang/CharSequence;
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$802(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 641
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     #setter for: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mSpn:Ljava/lang/CharSequence;
     invoke-static {v0, p2}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$902(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    .line 642
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
@@ -179,7 +163,6 @@
     #calls: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateCarrierStateWithSimStatus(Lcom/android/internal/telephony/IccCardConstants$State;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$1000(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Lcom/android/internal/telephony/IccCardConstants$State;)V
 
-    .line 643
     return-void
 .end method
 
@@ -188,13 +171,11 @@
     .parameter "simState"
 
     .prologue
-    .line 653
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     #calls: Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->updateCarrierStateWithSimStatus(Lcom/android/internal/telephony/IccCardConstants$State;)V
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->access$1000(Lcom/android/internal/policy/impl/KeyguardStatusViewManager;Lcom/android/internal/telephony/IccCardConstants$State;)V
 
-    .line 654
     return-void
 .end method
 
@@ -202,11 +183,9 @@
     .locals 1
 
     .prologue
-    .line 635
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$1;->this$0:Lcom/android/internal/policy/impl/KeyguardStatusViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->refreshDate()V
 
-    .line 636
     return-void
 .end method

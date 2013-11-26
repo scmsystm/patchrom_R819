@@ -20,19 +20,15 @@
     .parameter "context"
 
     .prologue
-    .line 38
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 39
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/webkit/DataListOptionsPopup$AnchorView;->setFocusable(Z)V
 
-    .line 40
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Landroid/webkit/DataListOptionsPopup$AnchorView;->setVisibility(I)V
 
-    .line 41
     return-void
 .end method

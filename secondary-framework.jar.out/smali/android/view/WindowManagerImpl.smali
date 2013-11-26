@@ -20,12 +20,10 @@
     .parameter "display"
 
     .prologue
-    .line 51
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/view/WindowManagerImpl;-><init>(Landroid/view/Display;Landroid/view/Window;)V
 
-    .line 52
     return-void
 .end method
 
@@ -35,23 +33,18 @@
     .parameter "parentWindow"
 
     .prologue
-    .line 54
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/view/WindowManagerImpl;->mGlobal:Landroid/view/WindowManagerGlobal;
 
-    .line 55
     iput-object p1, p0, Landroid/view/WindowManagerImpl;->mDisplay:Landroid/view/Display;
 
-    .line 56
     iput-object p2, p0, Landroid/view/WindowManagerImpl;->mParentWindow:Landroid/view/Window;
 
-    .line 57
     return-void
 .end method
 
@@ -63,7 +56,6 @@
     .parameter "params"
 
     .prologue
-    .line 69
     iget-object v0, p0, Landroid/view/WindowManagerImpl;->mGlobal:Landroid/view/WindowManagerGlobal;
 
     iget-object v1, p0, Landroid/view/WindowManagerImpl;->mDisplay:Landroid/view/Display;
@@ -72,7 +64,6 @@
 
     invoke-virtual {v0, p1, p2, v1, v2}, Landroid/view/WindowManagerGlobal;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;Landroid/view/Display;Landroid/view/Window;)V
 
-    .line 70
     return-void
 .end method
 
@@ -81,7 +72,6 @@
     .parameter "parentWindow"
 
     .prologue
-    .line 60
     new-instance v0, Landroid/view/WindowManagerImpl;
 
     iget-object v1, p0, Landroid/view/WindowManagerImpl;->mDisplay:Landroid/view/Display;
@@ -96,7 +86,6 @@
     .parameter "display"
 
     .prologue
-    .line 64
     new-instance v0, Landroid/view/WindowManagerImpl;
 
     iget-object v1, p0, Landroid/view/WindowManagerImpl;->mParentWindow:Landroid/view/Window;
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/view/WindowManagerImpl;->mDisplay:Landroid/view/Display;
 
     return-object v0
@@ -121,14 +109,12 @@
     .parameter "view"
 
     .prologue
-    .line 79
     iget-object v0, p0, Landroid/view/WindowManagerImpl;->mGlobal:Landroid/view/WindowManagerGlobal;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Landroid/view/WindowManagerGlobal;->removeView(Landroid/view/View;Z)V
 
-    .line 80
     return-void
 .end method
 
@@ -137,14 +123,12 @@
     .parameter "view"
 
     .prologue
-    .line 84
     iget-object v0, p0, Landroid/view/WindowManagerImpl;->mGlobal:Landroid/view/WindowManagerGlobal;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p1, v1}, Landroid/view/WindowManagerGlobal;->removeView(Landroid/view/View;Z)V
 
-    .line 85
     return-void
 .end method
 
@@ -154,11 +138,9 @@
     .parameter "params"
 
     .prologue
-    .line 74
     iget-object v0, p0, Landroid/view/WindowManagerImpl;->mGlobal:Landroid/view/WindowManagerGlobal;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/WindowManagerGlobal;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 75
     return-void
 .end method

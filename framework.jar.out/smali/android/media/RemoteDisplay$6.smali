@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 180
     iput-object p1, p0, Landroid/media/RemoteDisplay$6;->this$0:Landroid/media/RemoteDisplay;
 
     iput p2, p0, Landroid/media/RemoteDisplay$6;->val$event:I
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 183
     iget-object v0, p0, Landroid/media/RemoteDisplay$6;->this$0:Landroid/media/RemoteDisplay;
 
     #getter for: Landroid/media/RemoteDisplay;->mListener:Landroid/media/RemoteDisplay$Listener;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0, v1}, Landroid/media/RemoteDisplay$Listener;->onDisplayGenericMsgEvent(I)V
 
-    .line 184
     return-void
 .end method

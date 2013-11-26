@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 846
     iput-object p1, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 849
     const-string v0, "AdapterViewAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -215,12 +213,10 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 857
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-virtual {v0}, Landroid/widget/AdapterViewAnimator;->handleDataChanged()V
 
-    .line 860
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     #getter for: Landroid/widget/AdapterViewAnimator;->mPreviousItemCount:I
@@ -236,7 +232,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 861
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     const/4 v1, 0x1
@@ -244,13 +239,11 @@
     #setter for: Landroid/widget/AdapterViewAnimator;->mDataHasChanged:Z
     invoke-static {v0, v1}, Landroid/widget/AdapterViewAnimator;->access$202(Landroid/widget/AdapterViewAnimator;Z)Z
 
-    .line 862
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     #calls: Landroid/widget/AdapterViewAnimator;->clearViewMaps()V
     invoke-static {v0}, Landroid/widget/AdapterViewAnimator;->access$300(Landroid/widget/AdapterViewAnimator;)V
 
-    .line 867
     :cond_0
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
@@ -264,12 +257,10 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 868
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     iput v3, v0, Landroid/widget/AdapterViewAnimator;->mWhichChild:I
 
-    .line 870
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     iget-object v1, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
@@ -278,7 +269,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/widget/AdapterViewAnimator;->showOnly(IZ)V
 
-    .line 876
     :cond_1
     :goto_0
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
@@ -292,17 +282,14 @@
     #setter for: Landroid/widget/AdapterViewAnimator;->mPreviousItemCount:I
     invoke-static {v0, v1}, Landroid/widget/AdapterViewAnimator;->access$102(Landroid/widget/AdapterViewAnimator;I)I
 
-    .line 878
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-virtual {v0}, Landroid/widget/AdapterViewAnimator;->refreshChildren()V
 
-    .line 879
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     invoke-virtual {v0}, Landroid/widget/AdapterViewAnimator;->requestLayout()V
 
-    .line 881
     const-string v0, "AdapterViewAnimator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -417,10 +404,8 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 887
     return-void
 
-    .line 871
     :cond_2
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
@@ -437,7 +422,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 872
     iget-object v0, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;
 
     iget-object v1, p0, Landroid/widget/AdapterViewAnimator$2;->this$0:Landroid/widget/AdapterViewAnimator;

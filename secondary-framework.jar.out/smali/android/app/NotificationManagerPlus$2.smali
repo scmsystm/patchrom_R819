@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 251
     iput-object p1, p0, Landroid/app/NotificationManagerPlus$2;->this$0:Landroid/app/NotificationManagerPlus;
 
     iput-object p2, p0, Landroid/app/NotificationManagerPlus$2;->val$pending:Landroid/app/PendingIntent;
@@ -48,7 +47,6 @@
     .parameter "which"
 
     .prologue
-    .line 255
     const-string v1, "NotificationManangerPlus"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -83,7 +81,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     :try_start_0
     iget-object v1, p0, Landroid/app/NotificationManagerPlus$2;->val$pending:Landroid/app/PendingIntent;
 
@@ -91,15 +88,12 @@
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 262
     :goto_0
     return-void
 
-    .line 259
     :catch_0
     move-exception v0
 
-    .line 260
     .local v0, e:Landroid/app/PendingIntent$CanceledException;
     invoke-virtual {v0}, Landroid/app/PendingIntent$CanceledException;->printStackTrace()V
 

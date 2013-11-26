@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 66
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .parameter "r"
 
     .prologue
-    .line 68
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "SamplingProfilerIntegration"

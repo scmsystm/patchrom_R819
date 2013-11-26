@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 310
     iput-object p1, p0, Lcom/android/server/power/WirelessChargerDetector$1;->this$0:Lcom/android/server/power/WirelessChargerDetector;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "accuracy"
 
     .prologue
-    .line 318
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .parameter "event"
 
     .prologue
-    .line 313
     iget-object v0, p0, Lcom/android/server/power/WirelessChargerDetector$1;->this$0:Lcom/android/server/power/WirelessChargerDetector;
 
     iget-wide v1, p1, Landroid/hardware/SensorEvent;->timestamp:J
@@ -78,6 +75,5 @@
     #calls: Lcom/android/server/power/WirelessChargerDetector;->processSample(JFFF)V
     invoke-static/range {v0 .. v5}, Lcom/android/server/power/WirelessChargerDetector;->access$000(Lcom/android/server/power/WirelessChargerDetector;JFFF)V
 
-    .line 314
     return-void
 .end method

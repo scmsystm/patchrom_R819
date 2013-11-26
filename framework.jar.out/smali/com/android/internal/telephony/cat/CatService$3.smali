@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1871
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,12 +39,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 1957
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/cat/CatService$3;->onChange(ZLandroid/net/Uri;)V
 
-    .line 1958
     return-void
 .end method
 
@@ -63,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 1875
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
@@ -75,19 +71,18 @@
 
     move-result-object v1
 
-    const-string/jumbo v2, "oobe_display"
+    const-string v2, "oobe_display"
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v6
 
-    .line 1880
     .local v6, OOBE_Value:I
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPowerOnSequenceObserver onChange, OOBE_Value: "
+    const-string v2, "mPowerOnSequenceObserver onChange, OOBE_Value: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,10 +98,8 @@
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1881
     if-nez v6, :cond_0
 
-    .line 1883
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;
@@ -124,13 +117,12 @@
 
     move-result v11
 
-    .line 1888
     .local v11, seqValue:I
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPowerOnSequenceObserver onChange, "
+    const-string v2, "mPowerOnSequenceObserver onChange, "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -146,10 +138,8 @@
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1889
     if-ne v11, v4, :cond_5
 
-    .line 1891
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
@@ -159,22 +149,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 1893
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/cat/CatService;->isAlarmBoot()Z
 
     move-result v9
 
-    .line 1894
     .local v9, isAlarmState:Z
     const/4 v10, 0x0
 
-    .line 1895
     .local v10, isFlightMode:Z
     const/4 v8, 0x0
 
-    .line 1897
     .local v8, flightMode:I
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -196,13 +182,11 @@
 
     move-result v8
 
-    .line 1903
     :goto_0
     if-eqz v8, :cond_1
 
     move v10, v0
 
-    .line 1904
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -244,18 +228,15 @@
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1907
     if-eqz v9, :cond_2
 
     if-eqz v10, :cond_2
 
-    .line 1908
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->resetPowerOnSequenceFlag()V
     invoke-static {v0}, Lcom/android/internal/telephony/cat/CatService;->access$700(Lcom/android/internal/telephony/cat/CatService;)V
 
-    .line 1909
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -274,19 +255,16 @@
     #calls: Lcom/android/internal/telephony/cat/CatService;->sendTerminalResponse(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
     invoke-static/range {v0 .. v5}, Lcom/android/internal/telephony/cat/CatService;->access$800(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
 
-    .line 1910
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #setter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
     invoke-static {v0, v5}, Lcom/android/internal/telephony/cat/CatService;->access$602(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CatCmdMessage;)Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 1911
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->unregisterPowerOnSequenceObserver()V
     invoke-static {v0}, Lcom/android/internal/telephony/cat/CatService;->access$900(Lcom/android/internal/telephony/cat/CatService;)V
 
-    .line 1953
     .end local v8           #flightMode:I
     .end local v9           #isAlarmState:Z
     .end local v10           #isFlightMode:Z
@@ -295,7 +273,6 @@
     :goto_2
     return-void
 
-    .line 1899
     .restart local v8       #flightMode:I
     .restart local v9       #isAlarmState:Z
     .restart local v10       #isFlightMode:Z
@@ -303,13 +280,11 @@
     :catch_0
     move-exception v7
 
-    .line 1900
     .local v7, e:Landroid/provider/Settings$SettingNotFoundException;
     const-string v1, "fail to get property from Settings"
 
     invoke-static {p0, v1}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1901
     const/4 v8, 0x0
 
     goto :goto_0
@@ -318,10 +293,8 @@
     :cond_1
     move v10, v3
 
-    .line 1903
     goto :goto_1
 
-    .line 1916
     :cond_2
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
@@ -332,13 +305,11 @@
 
     if-ne v1, v0, :cond_3
 
-    .line 1917
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->resetPowerOnSequenceFlag()V
     invoke-static {v0}, Lcom/android/internal/telephony/cat/CatService;->access$700(Lcom/android/internal/telephony/cat/CatService;)V
 
-    .line 1918
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -357,13 +328,11 @@
     #calls: Lcom/android/internal/telephony/cat/CatService;->sendTerminalResponse(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
     invoke-static/range {v0 .. v5}, Lcom/android/internal/telephony/cat/CatService;->access$800(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
 
-    .line 1920
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #setter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
     invoke-static {v0, v5}, Lcom/android/internal/telephony/cat/CatService;->access$602(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CatCmdMessage;)Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 1921
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->unregisterPowerOnSequenceObserver()V
@@ -371,7 +340,6 @@
 
     goto :goto_2
 
-    .line 1926
     :cond_3
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
@@ -382,18 +350,15 @@
 
     if-eqz v0, :cond_4
 
-    .line 1927
     const-string v0, "[IVSR send TR directly"
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1928
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->resetPowerOnSequenceFlag()V
     invoke-static {v0}, Lcom/android/internal/telephony/cat/CatService;->access$700(Lcom/android/internal/telephony/cat/CatService;)V
 
-    .line 1929
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -412,13 +377,11 @@
     #calls: Lcom/android/internal/telephony/cat/CatService;->sendTerminalResponse(Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
     invoke-static/range {v0 .. v5}, Lcom/android/internal/telephony/cat/CatService;->access$800(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CommandDetails;Lcom/android/internal/telephony/cat/ResultCode;ZILcom/android/internal/telephony/cat/ResponseData;)V
 
-    .line 1930
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #setter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
     invoke-static {v0, v5}, Lcom/android/internal/telephony/cat/CatService;->access$602(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CatCmdMessage;)Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 1931
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->unregisterPowerOnSequenceObserver()V
@@ -426,13 +389,11 @@
 
     goto :goto_2
 
-    .line 1935
     :cond_4
-    const-string/jumbo v0, "send DISPLAY_TEXT to app"
+    const-string v0, "send DISPLAY_TEXT to app"
 
     invoke-static {p0, v0}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1936
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     iget-object v1, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -445,13 +406,11 @@
     #calls: Lcom/android/internal/telephony/cat/CatService;->sendCatCmd(Lcom/android/internal/telephony/cat/CatCmdMessage;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/cat/CatService;->access$1100(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CatCmdMessage;)V
 
-    .line 1937
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #setter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
     invoke-static {v0, v5}, Lcom/android/internal/telephony/cat/CatService;->access$602(Lcom/android/internal/telephony/cat/CatService;Lcom/android/internal/telephony/cat/CatCmdMessage;)Lcom/android/internal/telephony/cat/CatCmdMessage;
 
-    .line 1941
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #calls: Lcom/android/internal/telephony/cat/CatService;->unregisterPowerOnSequenceObserver()V
@@ -459,14 +418,12 @@
 
     goto :goto_2
 
-    .line 1943
     .end local v8           #flightMode:I
     .end local v9           #isAlarmState:Z
     .end local v10           #isFlightMode:Z
     :cond_5
     if-nez v11, :cond_0
 
-    .line 1944
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mCachedDisplayTextCmd:Lcom/android/internal/telephony/cat/CatCmdMessage;
@@ -476,7 +433,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1946
     iget-object v0, p0, Lcom/android/internal/telephony/cat/CatService$3;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mContext:Landroid/content/Context;

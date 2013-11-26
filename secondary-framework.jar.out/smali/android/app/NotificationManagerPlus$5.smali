@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 305
     iput-object p1, p0, Landroid/app/NotificationManagerPlus$5;->this$0:Landroid/app/NotificationManagerPlus;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "dialog"
 
     .prologue
-    .line 308
     iget-object v1, p0, Landroid/app/NotificationManagerPlus$5;->this$0:Landroid/app/NotificationManagerPlus;
 
     #getter for: Landroid/app/NotificationManagerPlus;->mList:Ljava/util/ArrayList;
@@ -52,7 +50,6 @@
 
     monitor-enter v2
 
-    .line 309
     :try_start_0
     iget-object v1, p0, Landroid/app/NotificationManagerPlus$5;->this$0:Landroid/app/NotificationManagerPlus;
 
@@ -65,7 +62,6 @@
 
     move-result v0
 
-    .line 310
     .local v0, remove:Z
     if-eqz v0, :cond_0
 
@@ -80,7 +76,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 311
     iget-object v1, p0, Landroid/app/NotificationManagerPlus$5;->this$0:Landroid/app/NotificationManagerPlus;
 
     #getter for: Landroid/app/NotificationManagerPlus;->mParams:Landroid/app/NotificationManagerPlus$Parameters;
@@ -92,7 +87,6 @@
 
     invoke-interface {v1, p1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
 
-    .line 313
     :cond_0
     if-eqz v0, :cond_1
 
@@ -120,7 +114,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 314
     iget-object v1, p0, Landroid/app/NotificationManagerPlus$5;->this$0:Landroid/app/NotificationManagerPlus;
 
     #getter for: Landroid/app/NotificationManagerPlus;->mParams:Landroid/app/NotificationManagerPlus$Parameters;
@@ -132,7 +125,6 @@
 
     invoke-interface {v1, p1}, Landroid/app/NotificationManagerPlus$OnLastDismissListener;->onLastDismiss(Landroid/content/DialogInterface;)V
 
-    .line 317
     :cond_1
     const-string v1, "NotificationManangerPlus"
 
@@ -177,13 +169,10 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     monitor-exit v2
 
-    .line 320
     return-void
 
-    .line 319
     .end local v0           #remove:Z
     :catchall_0
     move-exception v1

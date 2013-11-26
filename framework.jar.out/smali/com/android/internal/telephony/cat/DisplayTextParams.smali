@@ -14,13 +14,10 @@
     .parameter "textMsg"
 
     .prologue
-    .line 79
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/CommandParams;-><init>(Lcom/android/internal/telephony/cat/CommandDetails;)V
 
-    .line 80
     iput-object p2, p0, Lcom/android/internal/telephony/cat/DisplayTextParams;->textMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
-    .line 81
     return-void
 .end method
 
@@ -31,22 +28,18 @@
     .parameter "icon"
 
     .prologue
-    .line 84
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/android/internal/telephony/cat/DisplayTextParams;->textMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lcom/android/internal/telephony/cat/DisplayTextParams;->textMsg:Lcom/android/internal/telephony/cat/TextMessage;
 
     iput-object p1, v0, Lcom/android/internal/telephony/cat/TextMessage;->icon:Landroid/graphics/Bitmap;
 
-    .line 86
     const/4 v0, 0x1
 
-    .line 88
     :goto_0
     return v0
 

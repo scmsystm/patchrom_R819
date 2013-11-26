@@ -49,24 +49,20 @@
     .locals 4
 
     .prologue
-    .line 131
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const/16 v1, 0xff
 
     new-array v1, v1, [Landroid/location/GpsSatellite;
 
     iput-object v1, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
-    .line 68
     new-instance v1, Landroid/location/GpsStatus$1;
 
     invoke-direct {v1, p0}, Landroid/location/GpsStatus$1;-><init>(Landroid/location/GpsStatus;)V
 
     iput-object v1, p0, Landroid/location/GpsStatus;->mSatelliteList:Ljava/lang/Iterable;
 
-    .line 132
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -77,7 +73,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 133
     iget-object v1, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
     new-instance v2, Landroid/location/GpsSatellite;
@@ -88,12 +83,10 @@
 
     aput-object v2, v1, v0
 
-    .line 132
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 135
     :cond_0
     return-void
 .end method
@@ -103,7 +96,6 @@
     .parameter "x0"
 
     .prologue
-    .line 27
     iget-object v0, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
     return-object v0
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 245
     const/16 v0, 0xff
 
     return v0
@@ -134,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 235
     iget-object v0, p0, Landroid/location/GpsStatus;->mSatelliteList:Ljava/lang/Iterable;
 
     return-object v0
@@ -144,7 +134,6 @@
     .locals 1
 
     .prologue
-    .line 225
     iget v0, p0, Landroid/location/GpsStatus;->mTimeToFirstFix:I
 
     return v0
@@ -162,7 +151,6 @@
     .parameter "usedInFixMask"
 
     .prologue
-    .line 147
     monitor-enter p0
 
     const/4 v1, 0x0
@@ -176,7 +164,6 @@
 
     if-ge v1, v6, :cond_0
 
-    .line 148
     iget-object v6, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
     aget-object v6, v6, v1
@@ -185,40 +172,33 @@
 
     iput-boolean v7, v6, Landroid/location/GpsSatellite;->mValid:Z
 
-    .line 147
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 150
     :cond_0
     const/4 v1, 0x0
 
     :goto_1
     if-ge v1, p1, :cond_7
 
-    .line 151
     aget v6, p2, v1
 
     add-int/lit8 v3, v6, -0x1
 
-    .line 152
     .local v3, prn:I
     div-int/lit8 v0, v3, 0x20
 
-    .line 153
     .local v0, baseNum:I
     mul-int/lit8 v6, v0, 0x20
 
     sub-int v2, v3, v6
 
-    .line 154
     .local v2, posInInt:I
     const/4 v6, 0x1
 
     shl-int v4, v6, v2
 
-    .line 155
     .local v4, prnShift:I
     if-ltz v2, :cond_1
 
@@ -232,7 +212,6 @@
 
     if-lt v0, v6, :cond_2
 
-    .line 156
     :cond_1
     const-string v6, "GpsStatus"
 
@@ -266,7 +245,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 158
     :cond_2
     if-ltz v3, :cond_3
 
@@ -276,33 +254,27 @@
 
     if-ge v3, v6, :cond_3
 
-    .line 159
     iget-object v6, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
     aget-object v5, v6, v3
 
-    .line 160
     .local v5, satellite:Landroid/location/GpsSatellite;
     const/4 v6, 0x1
 
     iput-boolean v6, v5, Landroid/location/GpsSatellite;->mValid:Z
 
-    .line 161
     aget v6, p3, v1
 
     iput v6, v5, Landroid/location/GpsSatellite;->mSnr:F
 
-    .line 162
     aget v6, p4, v1
 
     iput v6, v5, Landroid/location/GpsSatellite;->mElevation:F
 
-    .line 163
     aget v6, p5, v1
 
     iput v6, v5, Landroid/location/GpsSatellite;->mAzimuth:F
 
-    .line 164
     aget v6, p6, v0
 
     and-int/2addr v6, v4
@@ -314,7 +286,6 @@
     :goto_2
     iput-boolean v6, v5, Landroid/location/GpsSatellite;->mHasEphemeris:Z
 
-    .line 165
     aget v6, p7, v0
 
     and-int/2addr v6, v4
@@ -326,7 +297,6 @@
     :goto_3
     iput-boolean v6, v5, Landroid/location/GpsSatellite;->mHasAlmanac:Z
 
-    .line 166
     aget v6, p8, v0
 
     and-int/2addr v6, v4
@@ -340,33 +310,28 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 150
     .end local v5           #satellite:Landroid/location/GpsSatellite;
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 164
     .restart local v5       #satellite:Landroid/location/GpsSatellite;
     :cond_4
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 165
     :cond_5
     const/4 v6, 0x0
 
     goto :goto_3
 
-    .line 166
     :cond_6
     const/4 v6, 0x0
 
     goto :goto_4
 
-    .line 169
     .end local v0           #baseNum:I
     .end local v2           #posInInt:I
     .end local v3           #prn:I
@@ -377,7 +342,6 @@
 
     return-void
 
-    .line 147
     :catchall_0
     move-exception v6
 
@@ -391,14 +355,12 @@
     .parameter "status"
 
     .prologue
-    .line 207
     invoke-virtual {p1}, Landroid/location/GpsStatus;->getTimeToFirstFix()I
 
     move-result v1
 
     iput v1, p0, Landroid/location/GpsStatus;->mTimeToFirstFix:I
 
-    .line 209
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -409,7 +371,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 210
     iget-object v1, p0, Landroid/location/GpsStatus;->mSatellites:[Landroid/location/GpsSatellite;
 
     aget-object v1, v1, v0
@@ -420,12 +381,10 @@
 
     invoke-virtual {v1, v2}, Landroid/location/GpsSatellite;->setStatus(Landroid/location/GpsSatellite;)V
 
-    .line 209
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 212
     :cond_0
     return-void
 .end method
@@ -435,9 +394,7 @@
     .parameter "ttff"
 
     .prologue
-    .line 215
     iput p1, p0, Landroid/location/GpsStatus;->mTimeToFirstFix:I
 
-    .line 216
     return-void
 .end method

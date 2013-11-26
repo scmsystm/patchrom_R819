@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/android/server/DevicePolicyManagerService$1$1;->this$1:Lcom/android/server/DevicePolicyManagerService$1;
 
     iput p2, p0, Lcom/android/server/DevicePolicyManagerService$1$1;->val$userHandle:I
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/android/server/DevicePolicyManagerService$1$1;->this$1:Lcom/android/server/DevicePolicyManagerService$1;
 
     iget-object v0, v0, Lcom/android/server/DevicePolicyManagerService$1;->this$0:Lcom/android/server/DevicePolicyManagerService;
@@ -64,6 +62,5 @@
     #calls: Lcom/android/server/DevicePolicyManagerService;->handlePasswordExpirationNotification(Lcom/android/server/DevicePolicyManagerService$DevicePolicyData;)V
     invoke-static {v0, v1}, Lcom/android/server/DevicePolicyManagerService;->access$000(Lcom/android/server/DevicePolicyManagerService;Lcom/android/server/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 154
     return-void
 .end method

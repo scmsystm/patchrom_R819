@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/android/server/NsdService$NsdStateMachine$DisabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 211
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$DisabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -48,7 +46,6 @@
     #calls: Lcom/android/server/NsdService;->sendNsdStateChangeBroadcast(Z)V
     invoke-static {v0, v1}, Lcom/android/server/NsdService;->access$700(Lcom/android/server/NsdService;Z)V
 
-    .line 212
     return-void
 .end method
 
@@ -57,19 +54,15 @@
     .parameter "msg"
 
     .prologue
-    .line 216
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 221
     const/4 v0, 0x0
 
-    .line 223
     :goto_0
     return v0
 
-    .line 218
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$DisabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -83,12 +76,10 @@
     #calls: Lcom/android/server/NsdService$NsdStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v0, v1}, Lcom/android/server/NsdService$NsdStateMachine;->access$900(Lcom/android/server/NsdService$NsdStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 223
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 216
     :pswitch_data_0
     .packed-switch 0x60018
         :pswitch_0

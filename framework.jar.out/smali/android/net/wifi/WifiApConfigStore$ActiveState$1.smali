@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 119
     iput-object p1, p0, Landroid/net/wifi/WifiApConfigStore$ActiveState$1;->this$1:Landroid/net/wifi/WifiApConfigStore$ActiveState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 121
     iget-object v0, p0, Landroid/net/wifi/WifiApConfigStore$ActiveState$1;->this$1:Landroid/net/wifi/WifiApConfigStore$ActiveState;
 
     iget-object v0, v0, Landroid/net/wifi/WifiApConfigStore$ActiveState;->this$0:Landroid/net/wifi/WifiApConfigStore;
@@ -58,7 +56,6 @@
     #calls: Landroid/net/wifi/WifiApConfigStore;->writeApConfiguration(Landroid/net/wifi/WifiConfiguration;)V
     invoke-static {v0, v1}, Landroid/net/wifi/WifiApConfigStore;->access$400(Landroid/net/wifi/WifiApConfigStore;Landroid/net/wifi/WifiConfiguration;)V
 
-    .line 122
     iget-object v0, p0, Landroid/net/wifi/WifiApConfigStore$ActiveState$1;->this$1:Landroid/net/wifi/WifiApConfigStore$ActiveState;
 
     iget-object v0, v0, Landroid/net/wifi/WifiApConfigStore$ActiveState;->this$0:Landroid/net/wifi/WifiApConfigStore;
@@ -67,6 +64,5 @@
 
     invoke-virtual {v0, v1}, Landroid/net/wifi/WifiApConfigStore;->sendMessage(I)V
 
-    .line 123
     return-void
 .end method

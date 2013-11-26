@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 529
     iput-object p1, p0, Landroid/view/inputmethod/InputMethodManager$2;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-direct {p0}, Lcom/android/internal/view/IInputMethodCallback$Stub;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "handled"
 
     .prologue
-    .line 532
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodManager$2;->this$0:Landroid/view/inputmethod/InputMethodManager;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/inputmethod/InputMethodManager;->finishedEvent(IZ)V
 
-    .line 533
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .parameter "pid"
 
     .prologue
-    .line 543
     return-void
 .end method
 
@@ -63,6 +59,5 @@
     .parameter "session"
 
     .prologue
-    .line 538
     return-void
 .end method

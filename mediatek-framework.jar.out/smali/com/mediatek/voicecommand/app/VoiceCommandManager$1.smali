@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$1;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     invoke-direct {p0}, Lcom/mediatek/common/voicecommand/IVoiceCommandListener$Stub;-><init>()V
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$1;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mHandler:Landroid/os/Handler;
@@ -62,6 +60,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 89
     return-void
 .end method

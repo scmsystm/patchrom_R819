@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 79
     new-instance v0, Landroid/telephony/SimSmsInsertStatus$1;
 
     invoke-direct {v0}, Landroid/telephony/SimSmsInsertStatus$1;-><init>()V
@@ -48,26 +47,20 @@
     .parameter "index"
 
     .prologue
-    .line 65
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/telephony/SimSmsInsertStatus;->insertStatus:I
 
-    .line 63
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
-    .line 66
     iput p1, p0, Landroid/telephony/SimSmsInsertStatus;->insertStatus:I
 
-    .line 67
     iput-object p2, p0, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -77,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 71
     const/4 v0, 0x0
 
     return v0
@@ -89,17 +81,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 95
     iget-object v4, p0, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
     if-nez v4, :cond_1
 
-    .line 115
     :cond_0
     :goto_0
     return-object v2
 
-    .line 99
     :cond_1
     iget-object v4, p0, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
@@ -109,7 +98,6 @@
 
     move-result-object v3
 
-    .line 100
     .local v3, temp:[Ljava/lang/String;
     if-eqz v3, :cond_2
 
@@ -117,12 +105,10 @@
 
     if-lez v4, :cond_2
 
-    .line 101
     array-length v4, v3
 
     new-array v2, v4, [I
 
-    .line 102
     .local v2, ret:[I
     const/4 v1, 0x0
 
@@ -132,7 +118,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 104
     :try_start_0
     aget-object v4, v3, v1
 
@@ -142,7 +127,6 @@
 
     aput v4, v2, v1
 
-    .line 105
     const-string v4, "SimSmsInsertStatus"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -169,17 +153,14 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     .local v0, e:Ljava/lang/NumberFormatException;
     const-string v4, "TAG"
 
@@ -187,21 +168,19 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     const/4 v4, -0x1
 
     aput v4, v2, v1
 
     goto :goto_2
 
-    .line 114
     .end local v0           #e:Ljava/lang/NumberFormatException;
     .end local v1           #i:I
     .end local v2           #ret:[I
     :cond_2
     const-string v4, "SimSmsInsertStatus"
 
-    const-string/jumbo v5, "should not arrive here"
+    const-string v5, "should not arrive here"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -214,16 +193,13 @@
     .parameter "flags"
 
     .prologue
-    .line 75
     iget v0, p0, Landroid/telephony/SimSmsInsertStatus;->insertStatus:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 76
     iget-object v0, p0, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 77
     return-void
 .end method

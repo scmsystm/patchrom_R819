@@ -76,7 +76,6 @@
     .locals 2
 
     .prologue
-    .line 43
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
@@ -93,14 +92,12 @@
     .parameter "context"
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 94
     return-void
 .end method
 
@@ -110,12 +107,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 98
     return-void
 .end method
 
@@ -128,79 +123,64 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 101
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 56
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientPaint:Landroid/graphics/Paint;
 
-    .line 57
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLeftToRight:Z
 
-    .line 59
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mOverScrollAmount:F
 
-    .line 60
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundRect:Landroid/graphics/Rect;
 
-    .line 61
     iput v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundAlpha:I
 
-    .line 64
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
-    .line 69
     const/high16 v3, 0x3f80
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlphaMultiplier:F
 
-    .line 71
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundRect:Landroid/graphics/Rect;
 
-    .line 77
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mWidgetLockedSmall:Z
 
-    .line 78
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mMaxChallengeTop:I
 
-    .line 137
     new-instance v3, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame$1;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame$1;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;)V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mUpdateMonitorCallbacks:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 103
     new-instance v3, Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
     invoke-direct {v3, p0}, Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;-><init>(Landroid/view/View;)V
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
-    .line 105
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 108
     .local v2, res:Landroid/content/res/Resources;
     invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -208,7 +188,6 @@
 
     iget v0, v3, Landroid/util/DisplayMetrics;->density:F
 
-    .line 109
     .local v0, density:F
     invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -222,11 +201,9 @@
 
     float-to-int v1, v3
 
-    .line 110
     .local v1, padding:I
     invoke-virtual {p0, v1, v1, v1, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setPadding(IIII)V
 
-    .line 112
     const/high16 v3, 0x4000
 
     mul-float/2addr v3, v0
@@ -237,7 +214,6 @@
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameStrokeAdjustment:I
 
-    .line 116
     const v3, 0x1050076
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -246,7 +222,6 @@
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
-    .line 118
     const v3, 0x10803c0
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -255,7 +230,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 119
     const v3, 0x1060048
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
@@ -264,14 +238,12 @@
 
     iput v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientColor:I
 
-    .line 120
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientPaint:Landroid/graphics/Paint;
 
     sget-object v4, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->sAddBlendMode:Landroid/graphics/PorterDuffXfermode;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 121
     return-void
 .end method
 
@@ -280,7 +252,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mPerformAppWidgetSizeUpdateOnBootComplete:Z
 
     return v0
@@ -292,7 +263,6 @@
     .parameter "x1"
 
     .prologue
-    .line 42
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mPerformAppWidgetSizeUpdateOnBootComplete:Z
 
     return p1
@@ -303,7 +273,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->performAppWidgetSizeCallbacksIfNecessary()V
 
     return-void
@@ -314,28 +283,24 @@
     .parameter "c"
 
     .prologue
-    .line 213
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundGradient:Landroid/graphics/LinearGradient;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 214
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundAlpha:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 215
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 216
     return-void
 .end method
 
@@ -344,17 +309,14 @@
     .parameter "c"
 
     .prologue
-    .line 219
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsHoveringOverDeleteDropTarget:Z
 
     if-eqz v0, :cond_0
 
-    .line 220
     const/high16 v0, -0x6601
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 222
     :cond_0
     return-void
 .end method
@@ -365,22 +327,18 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 472
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v7
 
-    .line 473
     .local v7, content:Landroid/view/View;
     instance-of v1, v7, Landroid/appwidget/AppWidgetHostView;
 
     if-nez v1, :cond_0
 
-    .line 489
     :goto_0
     return-void
 
-    .line 475
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mContext:Landroid/content/Context;
 
@@ -394,7 +352,6 @@
 
     if-nez v1, :cond_1
 
-    .line 476
     iput-boolean v6, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mPerformAppWidgetSizeUpdateOnBootComplete:Z
 
     goto :goto_0
@@ -402,10 +359,8 @@
     :cond_1
     move-object v0, v7
 
-    .line 483
     check-cast v0, Landroid/appwidget/AppWidgetHostView;
 
-    .line 484
     .local v0, awhv:Landroid/appwidget/AppWidgetHostView;
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getResources()Landroid/content/res/Resources;
 
@@ -417,7 +372,6 @@
 
     iget v8, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 486
     .local v8, density:F
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -429,7 +383,6 @@
 
     float-to-int v2, v1
 
-    .line 487
     .local v2, width:I
     invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -441,7 +394,6 @@
 
     float-to-int v3, v1
 
-    .line 488
     .local v3, height:I
     const/4 v1, 0x0
 
@@ -459,47 +411,37 @@
     .parameter "height"
 
     .prologue
-    .line 335
     const/4 v1, 0x0
 
-    .line 336
     .local v1, needLayout:Z
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v2
 
-    .line 337
     .local v2, widget:Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 338
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 339
     .local v0, lp:Landroid/widget/FrameLayout$LayoutParams;
     iget v3, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
     if-eq v3, p1, :cond_0
 
-    .line 340
     const/4 v1, 0x1
 
-    .line 341
     iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 344
     .end local v0           #lp:Landroid/widget/FrameLayout$LayoutParams;
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 345
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->requestLayout()V
 
-    .line 347
     :cond_1
     return-void
 .end method
@@ -512,14 +454,12 @@
 
     const/4 v2, 0x0
 
-    .line 440
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLeftToRight:Z
 
     if-eqz v0, :cond_0
 
     move v1, v2
 
-    .line 441
     .local v1, x0:F
     :goto_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLeftToRight:Z
@@ -534,7 +474,6 @@
 
     int-to-float v3, v0
 
-    .line 442
     .local v3, x1:F
     :goto_1
     new-instance v0, Landroid/graphics/LinearGradient;
@@ -549,7 +488,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLeftToRightGradient:Landroid/graphics/LinearGradient;
 
-    .line 444
     new-instance v7, Landroid/graphics/LinearGradient;
 
     iget v12, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mGradientColor:I
@@ -570,10 +508,8 @@
 
     iput-object v7, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mRightToLeftGradient:Landroid/graphics/LinearGradient;
 
-    .line 446
     return-void
 
-    .line 440
     .end local v1           #x0:F
     .end local v3           #x1:F
     :cond_0
@@ -591,7 +527,6 @@
     :cond_1
     move v3, v2
 
-    .line 441
     goto :goto_1
 .end method
 
@@ -602,18 +537,15 @@
     .parameter "challengeTop"
 
     .prologue
-    .line 367
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getPaddingBottom()I
 
     move-result v1
 
     add-int v0, p1, v1
 
-    .line 368
     .local v0, frameHeight:I
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setFrameHeight(I)V
 
-    .line 369
     return-void
 .end method
 
@@ -621,15 +553,12 @@
     .locals 1
 
     .prologue
-    .line 207
     invoke-super {p0}, Landroid/widget/FrameLayout;->cancelLongPress()V
 
-    .line 208
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;->cancelLongPress()V
 
-    .line 209
     return-void
 .end method
 
@@ -637,14 +566,12 @@
     .locals 2
 
     .prologue
-    .line 277
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 278
     return-void
 .end method
 
@@ -652,23 +579,19 @@
     .locals 3
 
     .prologue
-    .line 266
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v0
 
-    .line 267
     .local v0, widget:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 268
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 270
     :cond_0
     return-void
 .end method
@@ -678,25 +601,18 @@
     .parameter "canvas"
 
     .prologue
-    .line 237
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 239
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->drawBg(Landroid/graphics/Canvas;)V
 
-    .line 240
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 241
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->drawGradientOverlay(Landroid/graphics/Canvas;)V
 
-    .line 243
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->drawHoveringOverDeleteOverlay(Landroid/graphics/Canvas;)V
 
-    .line 244
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 246
     return-void
 .end method
 
@@ -705,7 +621,6 @@
     .parameter "canvas"
 
     .prologue
-    .line 225
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlpha:F
 
     const/4 v2, 0x0
@@ -714,10 +629,8 @@
 
     if-lez v1, :cond_0
 
-    .line 226
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 228
     .local v0, bg:Landroid/graphics/drawable/Drawable;
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlpha:F
 
@@ -733,15 +646,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 229
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 230
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 232
     .end local v0           #bg:Landroid/graphics/drawable/Drawable;
     :cond_0
     return-void
@@ -751,14 +661,12 @@
     .locals 2
 
     .prologue
-    .line 273
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 274
     return-void
 .end method
 
@@ -766,23 +674,19 @@
     .locals 3
 
     .prologue
-    .line 254
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v0
 
-    .line 255
     .local v0, widget:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 256
     const/4 v1, 0x2
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 258
     :cond_0
     return-void
 .end method
@@ -799,39 +703,31 @@
 
     const/4 v3, 0x0
 
-    .line 423
     if-eqz p2, :cond_0
 
-    .line 424
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBgAlphaController:Ljava/lang/Object;
 
-    .line 427
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBgAlphaController:Ljava/lang/Object;
 
     if-eq v1, p1, :cond_1
 
-    .line 437
     :goto_0
     return-void
 
-    .line 429
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
     if-eqz v1, :cond_2
 
-    .line 430
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
     invoke-virtual {v1}, Landroid/animation/Animator;->cancel()V
 
-    .line 431
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
-    .line 433
     :cond_2
     const-string v1, "backgroundAlpha"
 
@@ -843,7 +739,6 @@
 
     move-result-object v0
 
-    .line 434
     .local v0, bgAlpha:Landroid/animation/PropertyValuesHolder;
     new-array v1, v4, [Landroid/animation/PropertyValuesHolder;
 
@@ -855,14 +750,12 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
-    .line 435
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
     int-to-long v2, p4
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
-    .line 436
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameFade:Landroid/animation/Animator;
 
     invoke-virtual {v1}, Landroid/animation/Animator;->start()V
@@ -874,7 +767,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlpha:F
 
     return v0
@@ -884,7 +776,6 @@
     .locals 1
 
     .prologue
-    .line 307
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlphaMultiplier:F
 
     return v0
@@ -894,7 +785,6 @@
     .locals 1
 
     .prologue
-    .line 281
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getChildAt(I)Landroid/view/View;
@@ -908,7 +798,6 @@
     .locals 1
 
     .prologue
-    .line 318
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mContentAlpha:F
 
     return v0
@@ -918,18 +807,15 @@
     .locals 2
 
     .prologue
-    .line 285
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v0
 
-    .line 286
     .local v0, content:Landroid/view/View;
     instance-of v1, v0, Landroid/appwidget/AppWidgetHostView;
 
     if-eqz v1, :cond_0
 
-    .line 287
     check-cast v0, Landroid/appwidget/AppWidgetHostView;
 
     .end local v0           #content:Landroid/view/View;
@@ -937,18 +823,15 @@
 
     move-result v1
 
-    .line 291
     :goto_0
     return v1
 
-    .line 288
     .restart local v0       #content:Landroid/view/View;
     :cond_0
     instance-of v1, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     if-eqz v1, :cond_1
 
-    .line 289
     check-cast v0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     .end local v0           #content:Landroid/view/View;
@@ -958,7 +841,6 @@
 
     goto :goto_0
 
-    .line 291
     .restart local v0       #content:Landroid/view/View;
     :cond_1
     const/4 v1, 0x0
@@ -970,7 +852,6 @@
     .locals 1
 
     .prologue
-    .line 381
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallFrameHeight:I
 
     return v0
@@ -980,7 +861,6 @@
     .locals 1
 
     .prologue
-    .line 520
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mWorkerHandler:Landroid/os/Handler;
 
     return-object v0
@@ -991,7 +871,6 @@
     .parameter "caller"
 
     .prologue
-    .line 414
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -1000,7 +879,6 @@
 
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->fadeFrame(Ljava/lang/Object;ZFI)V
 
-    .line 415
     return-void
 .end method
 
@@ -1008,7 +886,6 @@
     .locals 1
 
     .prologue
-    .line 363
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
     return v0
@@ -1019,7 +896,6 @@
     .parameter "isActive"
 
     .prologue
-    .line 508
     return-void
 .end method
 
@@ -1027,10 +903,8 @@
     .locals 2
 
     .prologue
-    .line 133
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 134
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
@@ -1041,7 +915,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->registerCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 135
     return-void
 .end method
 
@@ -1049,13 +922,10 @@
     .locals 2
 
     .prologue
-    .line 125
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 126
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->cancelLongPress()V
 
-    .line 127
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->getInstance(Landroid/content/Context;)Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
@@ -1066,7 +936,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;->removeCallback(Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;)V
 
-    .line 129
     return-void
 .end method
 
@@ -1075,21 +944,18 @@
     .parameter "ev"
 
     .prologue
-    .line 161
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 176
     :goto_0
     :pswitch_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 163
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
@@ -1097,7 +963,6 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
@@ -1105,7 +970,6 @@
 
     goto :goto_0
 
-    .line 171
     :pswitch_3
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
@@ -1113,7 +977,6 @@
 
     goto :goto_0
 
-    .line 161
     nop
 
     :pswitch_data_0
@@ -1133,13 +996,10 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 467
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 468
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->performAppWidgetSizeCallbacksIfNecessary()V
 
-    .line 469
     return-void
 .end method
 
@@ -1153,18 +1013,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 450
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 452
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
     if-nez v0, :cond_0
 
-    .line 453
     iput p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameHeight:I
 
-    .line 458
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundRect:Landroid/graphics/Rect;
 
@@ -1188,7 +1044,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 461
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getMeasuredWidth()I
@@ -1203,13 +1058,10 @@
 
     invoke-virtual {v0, v6, v6, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 462
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->updateGradient()V
 
-    .line 463
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 464
     return-void
 .end method
 
@@ -1218,21 +1070,18 @@
     .parameter "ev"
 
     .prologue
-    .line 183
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 196
     :goto_0
     :pswitch_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 185
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
@@ -1240,7 +1089,6 @@
 
     goto :goto_0
 
-    .line 190
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLongPressHelper:Lcom/android/internal/policy/impl/keyguard/CheckLongPressHelper;
 
@@ -1248,7 +1096,6 @@
 
     goto :goto_0
 
-    .line 183
     nop
 
     :pswitch_data_0
@@ -1266,7 +1113,6 @@
     .parameter "event"
 
     .prologue
-    .line 512
     const/4 v0, 0x0
 
     return v0
@@ -1277,13 +1123,10 @@
     .parameter "disallowIntercept"
 
     .prologue
-    .line 201
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 202
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->cancelLongPress()V
 
-    .line 203
     return-void
 .end method
 
@@ -1291,22 +1134,18 @@
     .locals 1
 
     .prologue
-    .line 396
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
-    .line 397
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mWidgetLockedSmall:Z
 
     if-nez v0, :cond_0
 
-    .line 398
     const/4 v0, -0x1
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setWidgetHeight(I)V
 
-    .line 400
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getMeasuredHeight()I
 
@@ -1314,7 +1153,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setFrameHeight(I)V
 
-    .line 401
     return-void
 .end method
 
@@ -1323,7 +1161,6 @@
     .parameter "alpha"
 
     .prologue
-    .line 311
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlpha:F
 
     invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
@@ -1332,13 +1169,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 312
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlpha:F
 
-    .line 313
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 315
     :cond_0
     return-void
 .end method
@@ -1348,7 +1182,6 @@
     .parameter "multiplier"
 
     .prologue
-    .line 300
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlphaMultiplier:F
 
     invoke-static {v0, p1}, Ljava/lang/Float;->compare(FF)I
@@ -1357,13 +1190,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 301
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundAlphaMultiplier:F
 
-    .line 302
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 304
     :cond_0
     return-void
 .end method
@@ -1373,22 +1203,17 @@
     .parameter "alpha"
 
     .prologue
-    .line 322
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mContentAlpha:F
 
-    .line 323
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getContent()Landroid/view/View;
 
     move-result-object v0
 
-    .line 324
     .local v0, content:Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 325
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 327
     :cond_0
     return-void
 .end method
@@ -1400,10 +1225,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 404
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameHeight:I
 
-    .line 405
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mBackgroundRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getMeasuredWidth()I
@@ -1422,7 +1245,6 @@
 
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 406
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundRect:Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mFrameStrokeAdjustment:I
@@ -1453,13 +1275,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 409
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->updateGradient()V
 
-    .line 410
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 411
     return-void
 .end method
 
@@ -1468,18 +1287,14 @@
     .parameter "isHovering"
 
     .prologue
-    .line 150
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsHoveringOverDeleteDropTarget:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 151
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsHoveringOverDeleteDropTarget:Z
 
-    .line 152
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 155
     :cond_0
     return-void
 .end method
@@ -1489,19 +1304,16 @@
     .parameter "top"
 
     .prologue
-    .line 350
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mMaxChallengeTop:I
 
     if-eq v1, p1, :cond_1
 
     const/4 v0, 0x1
 
-    .line 351
     .local v0, dirty:Z
     :goto_0
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mMaxChallengeTop:I
 
-    .line 352
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getPaddingTop()I
 
     move-result v1
@@ -1510,7 +1322,6 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
-    .line 353
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->getPaddingBottom()I
 
     move-result v1
@@ -1519,36 +1330,30 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallFrameHeight:I
 
-    .line 354
     if-eqz v0, :cond_2
 
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
     if-eqz v1, :cond_2
 
-    .line 355
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
     invoke-direct {p0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setWidgetHeight(I)V
 
-    .line 356
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallFrameHeight:I
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setFrameHeight(I)V
 
-    .line 360
     :cond_0
     :goto_1
     return-void
 
-    .line 350
     .end local v0           #dirty:Z
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 357
     .restart local v0       #dirty:Z
     :cond_2
     if-eqz v0, :cond_0
@@ -1557,7 +1362,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 358
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
     invoke-direct {p0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setWidgetHeight(I)V
@@ -1571,7 +1375,6 @@
     .parameter "left"
 
     .prologue
-    .line 492
     iget v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mOverScrollAmount:F
 
     invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
@@ -1580,10 +1383,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 493
     iput p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mOverScrollAmount:F
 
-    .line 494
     if-eqz p2, :cond_1
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mLeftToRightGradient:Landroid/graphics/LinearGradient;
@@ -1591,7 +1392,6 @@
     :goto_0
     iput-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundGradient:Landroid/graphics/LinearGradient;
 
-    .line 495
     const/high16 v1, 0x3f00
 
     mul-float/2addr v1, p1
@@ -1606,7 +1406,6 @@
 
     iput v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mForegroundAlpha:I
 
-    .line 499
     const v1, 0x3f19999a
 
     const v2, 0x3ecccccc
@@ -1621,19 +1420,15 @@
 
     move-result v0
 
-    .line 501
     .local v0, bgAlpha:F
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setBackgroundAlpha(F)V
 
-    .line 502
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->invalidate()V
 
-    .line 504
     .end local v0           #bgAlpha:F
     :cond_0
     return-void
 
-    .line 494
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mRightToLeftGradient:Landroid/graphics/LinearGradient;
 
@@ -1645,19 +1440,15 @@
     .parameter "locked"
 
     .prologue
-    .line 389
     if-eqz p1, :cond_0
 
-    .line 390
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setWidgetHeight(I)V
 
-    .line 392
     :cond_0
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mWidgetLockedSmall:Z
 
-    .line 393
     return-void
 .end method
 
@@ -1666,10 +1457,8 @@
     .parameter "workerHandler"
 
     .prologue
-    .line 516
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mWorkerHandler:Landroid/os/Handler;
 
-    .line 517
     return-void
 .end method
 
@@ -1678,7 +1467,6 @@
     .parameter "caller"
 
     .prologue
-    .line 418
     const/4 v0, 0x1
 
     const v1, 0x3f19999a
@@ -1687,7 +1475,6 @@
 
     invoke-virtual {p0, p1, v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->fadeFrame(Ljava/lang/Object;ZFI)V
 
-    .line 420
     return-void
 .end method
 
@@ -1695,12 +1482,10 @@
     .locals 1
 
     .prologue
-    .line 385
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->shrinkWidget(Z)V
 
-    .line 386
     return-void
 .end method
 
@@ -1709,25 +1494,20 @@
     .parameter "alsoShrinkFrame"
 
     .prologue
-    .line 372
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mIsSmall:Z
 
-    .line 373
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallWidgetHeight:I
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setWidgetHeight(I)V
 
-    .line 375
     if-eqz p1, :cond_0
 
-    .line 376
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->mSmallFrameHeight:I
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetFrame;->setFrameHeight(I)V
 
-    .line 378
     :cond_0
     return-void
 .end method

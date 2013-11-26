@@ -35,28 +35,24 @@
     .parameter "clock"
 
     .prologue
-    .line 125
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 126
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;->mClock:Ljava/lang/ref/WeakReference;
 
-    .line 127
     invoke-virtual {p1}, Lcom/android/internal/policy/impl/keyguard/ClockView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;->mContext:Landroid/content/Context;
 
-    .line 128
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 131
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;->mClock:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -76,22 +71,17 @@
 
     check-cast v0, Lcom/android/internal/policy/impl/keyguard/ClockView;
 
-    .line 132
     .local v0, digitalClock:Lcom/android/internal/policy/impl/keyguard/ClockView;
     if-eqz v0, :cond_0
 
-    .line 133
     #calls: Lcom/android/internal/policy/impl/keyguard/ClockView;->setDateFormat()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->access$200(Lcom/android/internal/policy/impl/keyguard/ClockView;)V
 
-    .line 134
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->updateTime()V
 
-    .line 142
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;->mContext:Landroid/content/Context;
@@ -106,7 +96,6 @@
 
     goto :goto_0
 
-    .line 138
     :catch_0
     move-exception v1
 

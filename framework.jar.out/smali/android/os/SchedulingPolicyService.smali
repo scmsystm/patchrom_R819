@@ -16,10 +16,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Landroid/os/ISchedulingPolicyService$Stub;-><init>()V
 
-    .line 39
     return-void
 .end method
 
@@ -38,7 +36,6 @@
 
     const/4 v1, -0x1
 
-    .line 49
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -57,12 +54,10 @@
 
     if-eq v3, p1, :cond_1
 
-    .line 62
     :cond_0
     :goto_0
     return v1
 
-    .line 55
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -76,23 +71,19 @@
     :cond_2
     invoke-static {p2, v2}, Landroid/os/Process;->setThreadGroup(II)V
 
-    .line 58
     const/4 v2, 0x1
 
     invoke-static {p2, v2, p3}, Landroid/os/Process;->setThreadScheduler(III)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 62
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 59
     :catch_0
     move-exception v0
 
-    .line 60
     .local v0, e:Ljava/lang/RuntimeException;
     goto :goto_0
 .end method

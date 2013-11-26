@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 65
     new-instance v0, Landroid/net/wifi/HotspotClient$1;
 
     invoke-direct {v0}, Landroid/net/wifi/HotspotClient$1;-><init>()V
@@ -45,28 +44,22 @@
     .parameter "source"
 
     .prologue
-    .line 37
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
-    .line 38
     if-eqz p1, :cond_0
 
-    .line 39
     iget-object v0, p1, Landroid/net/wifi/HotspotClient;->deviceAddress:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/net/wifi/HotspotClient;->deviceAddress:Ljava/lang/String;
 
-    .line 40
     iget-boolean v0, p1, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
     iput-boolean v0, p0, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
-    .line 42
     :cond_0
     return-void
 .end method
@@ -77,21 +70,16 @@
     .parameter "blocked"
 
     .prologue
-    .line 32
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
-    .line 33
     iput-object p1, p0, Landroid/net/wifi/HotspotClient;->deviceAddress:Ljava/lang/String;
 
-    .line 34
     iput-boolean p2, p0, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
-    .line 35
     return-void
 .end method
 
@@ -101,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     return v0
@@ -111,12 +98,10 @@
     .locals 3
 
     .prologue
-    .line 45
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 46
     .local v0, sbuf:Ljava/lang/StringBuffer;
     const-string v1, " deviceAddress: "
 
@@ -128,12 +113,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 47
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 48
     const-string v1, " isBlocked: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -144,12 +127,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Z)Ljava/lang/StringBuffer;
 
-    .line 49
     const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 50
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -163,12 +144,10 @@
     .parameter "flags"
 
     .prologue
-    .line 60
     iget-object v0, p0, Landroid/net/wifi/HotspotClient;->deviceAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 61
     iget-boolean v0, p0, Landroid/net/wifi/HotspotClient;->isBlocked:Z
 
     if-eqz v0, :cond_0
@@ -178,10 +157,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 62
     return-void
 
-    .line 61
     :cond_0
     const/4 v0, 0x0
 

@@ -36,17 +36,14 @@
     .parameter "na"
 
     .prologue
-    .line 124
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/app/NativeActivity$InputMethodCallback;->mNa:Ljava/lang/ref/WeakReference;
 
-    .line 126
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .parameter "handled"
 
     .prologue
-    .line 130
     iget-object v1, p0, Landroid/app/NativeActivity$InputMethodCallback;->mNa:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,11 +63,9 @@
 
     check-cast v0, Landroid/app/NativeActivity;
 
-    .line 131
     .local v0, na:Landroid/app/NativeActivity;
     if-eqz v0, :cond_0
 
-    .line 132
     #getter for: Landroid/app/NativeActivity;->mNativeHandle:I
     invoke-static {v0}, Landroid/app/NativeActivity;->access$000(Landroid/app/NativeActivity;)I
 
@@ -80,7 +74,6 @@
     #calls: Landroid/app/NativeActivity;->finishPreDispatchKeyEventNative(IIZ)V
     invoke-static {v0, v1, p1, p2}, Landroid/app/NativeActivity;->access$100(Landroid/app/NativeActivity;IIZ)V
 
-    .line 134
     :cond_0
     return-void
 .end method

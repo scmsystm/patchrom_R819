@@ -15,10 +15,8 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     return-void
 .end method
 
@@ -27,10 +25,8 @@
     .parameter "context"
 
     .prologue
-    .line 52
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     return-void
 .end method
 
@@ -41,12 +37,10 @@
     .parameter "text"
 
     .prologue
-    .line 60
     const-string v0, "TelephonyProviderExt"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     return-void
 .end method
 
@@ -55,7 +49,6 @@
     .parameter "row"
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0

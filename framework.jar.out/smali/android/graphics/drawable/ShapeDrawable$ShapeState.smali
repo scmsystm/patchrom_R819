@@ -38,57 +38,45 @@
     .parameter "orig"
 
     .prologue
-    .line 409
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 406
     const/16 v0, 0xff
 
     iput v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mAlpha:I
 
-    .line 410
     if-eqz p1, :cond_0
 
-    .line 411
     iget-object v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mPaint:Landroid/graphics/Paint;
 
     iput-object v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mPaint:Landroid/graphics/Paint;
 
-    .line 412
     iget-object v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mShape:Landroid/graphics/drawable/shapes/Shape;
 
     iput-object v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mShape:Landroid/graphics/drawable/shapes/Shape;
 
-    .line 413
     iget-object v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mPadding:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mPadding:Landroid/graphics/Rect;
 
-    .line 414
     iget v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mIntrinsicWidth:I
 
     iput v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mIntrinsicWidth:I
 
-    .line 415
     iget v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mIntrinsicHeight:I
 
     iput v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mIntrinsicHeight:I
 
-    .line 416
     iget v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mAlpha:I
 
     iput v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mAlpha:I
 
-    .line 417
     iget-object v0, p1, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mShaderFactory:Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;
 
     iput-object v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mShaderFactory:Landroid/graphics/drawable/ShapeDrawable$ShaderFactory;
 
-    .line 421
     :goto_0
     return-void
 
-    .line 419
     :cond_0
     new-instance v0, Landroid/graphics/Paint;
 
@@ -107,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 435
     iget v0, p0, Landroid/graphics/drawable/ShapeDrawable$ShapeState;->mChangingConfigurations:I
 
     return v0
@@ -117,7 +104,6 @@
     .locals 2
 
     .prologue
-    .line 425
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
     const/4 v1, 0x0
@@ -132,7 +118,6 @@
     .parameter "res"
 
     .prologue
-    .line 430
     new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
     const/4 v1, 0x0

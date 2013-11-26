@@ -35,7 +35,6 @@
     .parameter "x0"
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$1;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
     invoke-direct {p0, p2}, Landroid/util/LruCache;-><init>(I)V
@@ -53,7 +52,6 @@
     .parameter "newValue"
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$1;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
     #getter for: Landroid/net/wifi/p2p/WifiP2pGroupList;->mListener:Landroid/net/wifi/p2p/WifiP2pGroupList$GroupDeleteListener;
@@ -72,7 +70,6 @@
 
     if-nez v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Landroid/net/wifi/p2p/WifiP2pGroupList$1;->this$0:Landroid/net/wifi/p2p/WifiP2pGroupList;
 
     #getter for: Landroid/net/wifi/p2p/WifiP2pGroupList;->mListener:Landroid/net/wifi/p2p/WifiP2pGroupList$GroupDeleteListener;
@@ -86,7 +83,6 @@
 
     invoke-interface {v0, v1}, Landroid/net/wifi/p2p/WifiP2pGroupList$GroupDeleteListener;->onDeleteGroup(I)V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -99,7 +95,6 @@
     .parameter "x3"
 
     .prologue
-    .line 51
     check-cast p2, Ljava/lang/Integer;
 
     .end local p2

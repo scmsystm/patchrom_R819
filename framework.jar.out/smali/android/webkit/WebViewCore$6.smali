@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 657
     iput-object p1, p0, Landroid/webkit/WebViewCore$6;->this$0:Landroid/webkit/WebViewCore;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,26 +42,21 @@
     .parameter "allow"
 
     .prologue
-    .line 660
     new-instance v0, Landroid/webkit/WebViewCore$NotificationPermissionsData;
 
     invoke-direct {v0}, Landroid/webkit/WebViewCore$NotificationPermissionsData;-><init>()V
 
-    .line 661
     .local v0, localNotificationPermissionsData:Landroid/webkit/WebViewCore$NotificationPermissionsData;
     iput-object p1, v0, Landroid/webkit/WebViewCore$NotificationPermissionsData;->mOrigin:Ljava/lang/String;
 
-    .line 662
     iput-boolean p2, v0, Landroid/webkit/WebViewCore$NotificationPermissionsData;->mAllow:Z
 
-    .line 663
     iget-object v1, p0, Landroid/webkit/WebViewCore$6;->this$0:Landroid/webkit/WebViewCore;
 
     const/16 v2, 0xe9
 
     invoke-virtual {v1, v2, v0}, Landroid/webkit/WebViewCore;->sendMessage(ILjava/lang/Object;)V
 
-    .line 664
     return-void
 .end method
 
@@ -72,7 +66,6 @@
     .parameter "pointer"
 
     .prologue
-    .line 668
     return-void
 .end method
 
@@ -82,6 +75,5 @@
     .parameter "counter"
 
     .prologue
-    .line 672
     return-void
 .end method

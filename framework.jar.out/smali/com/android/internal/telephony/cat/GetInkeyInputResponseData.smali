@@ -29,24 +29,18 @@
     .parameter "packed"
 
     .prologue
-    .line 116
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/ResponseData;-><init>()V
 
-    .line 117
     iput-boolean p2, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsUcs2:Z
 
-    .line 118
     iput-boolean p3, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsPacked:Z
 
-    .line 119
     iput-object p1, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mInData:Ljava/lang/String;
 
-    .line 120
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsYesNo:Z
 
-    .line 121
     return-void
 .end method
 
@@ -57,29 +51,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 124
     invoke-direct {p0}, Lcom/android/internal/telephony/cat/ResponseData;-><init>()V
 
-    .line 125
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsUcs2:Z
 
-    .line 126
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsPacked:Z
 
-    .line 127
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mInData:Ljava/lang/String;
 
-    .line 128
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsYesNo:Z
 
-    .line 129
     iput-boolean p1, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mYesNoResponse:Z
 
-    .line 130
     return-void
 .end method
 
@@ -94,14 +81,11 @@
 
     const/4 v10, 0x0
 
-    .line 134
     if-nez p1, :cond_1
 
-    .line 195
     :cond_0
     return-void
 
-    .line 139
     :cond_1
     sget-object v11, Lcom/android/internal/telephony/cat/ComprehensionTlvTag;->TEXT_STRING:Lcom/android/internal/telephony/cat/ComprehensionTlvTag;
 
@@ -111,19 +95,15 @@
 
     or-int/lit16 v7, v11, 0x80
 
-    .line 140
     .local v7, tag:I
     invoke-virtual {p1, v7}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 144
     iget-boolean v11, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsYesNo:Z
 
     if-eqz v11, :cond_3
 
-    .line 145
     new-array v2, v9, [B
 
-    .line 146
     .local v2, data:[B
     iget-boolean v11, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mYesNoResponse:Z
 
@@ -132,7 +112,6 @@
     :goto_0
     aput-byte v9, v2, v10
 
-    .line 181
     :goto_1
     array-length v9, v2
 
@@ -140,17 +119,14 @@
 
     invoke-static {p1, v9}, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->writeLength(Ljava/io/ByteArrayOutputStream;I)V
 
-    .line 184
     iget-boolean v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsUcs2:Z
 
     if-eqz v9, :cond_7
 
-    .line 185
     const/16 v9, 0x8
 
     invoke-virtual {p1, v9}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 192
     :goto_2
     move-object v0, v2
 
@@ -166,11 +142,9 @@
 
     aget-byte v1, v0, v4
 
-    .line 193
     .local v1, b:B
     invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    .line 192
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
@@ -182,10 +156,8 @@
     :cond_2
     move v9, v10
 
-    .line 146
     goto :goto_0
 
-    .line 147
     .end local v2           #data:[B
     :cond_3
     iget-object v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mInData:Ljava/lang/String;
@@ -200,13 +172,11 @@
 
     if-lez v9, :cond_6
 
-    .line 151
     :try_start_0
     iget-boolean v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsUcs2:Z
 
     if-eqz v9, :cond_4
 
-    .line 154
     iget-object v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mInData:Ljava/lang/String;
 
     const-string v11, "UTF-16BE"
@@ -218,14 +188,12 @@
     .restart local v2       #data:[B
     goto :goto_1
 
-    .line 155
     .end local v2           #data:[B
     :cond_4
     iget-boolean v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsPacked:Z
 
     if-eqz v9, :cond_5
 
-    .line 160
     iget-object v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mInData:Ljava/lang/String;
 
     const/4 v11, 0x0
@@ -236,17 +204,14 @@
 
     move-result-object v8
 
-    .line 162
     .local v8, tempData:[B
     array-length v9, v8
 
     add-int/lit8 v6, v9, -0x1
 
-    .line 163
     .local v6, size:I
     new-array v2, v6, [B
 
-    .line 167
     .restart local v2       #data:[B
     const/4 v9, 0x1
 
@@ -259,22 +224,18 @@
 
     goto :goto_1
 
-    .line 171
     .end local v2           #data:[B
     .end local v6           #size:I
     .end local v8           #tempData:[B
     :catch_0
     move-exception v3
 
-    .line 172
     .local v3, e:Ljava/io/UnsupportedEncodingException;
     new-array v2, v10, [B
 
-    .line 175
     .restart local v2       #data:[B
     goto :goto_1
 
-    .line 169
     .end local v2           #data:[B
     .end local v3           #e:Ljava/io/UnsupportedEncodingException;
     :cond_5
@@ -291,20 +252,16 @@
     .restart local v2       #data:[B
     goto :goto_1
 
-    .line 173
     .end local v2           #data:[B
     :catch_1
     move-exception v3
 
-    .line 174
     .local v3, e:Lcom/android/internal/telephony/EncodeException;
     new-array v2, v10, [B
 
-    .line 175
     .restart local v2       #data:[B
     goto :goto_1
 
-    .line 177
     .end local v2           #data:[B
     .end local v3           #e:Lcom/android/internal/telephony/EncodeException;
     :cond_6
@@ -313,18 +270,15 @@
     .restart local v2       #data:[B
     goto :goto_1
 
-    .line 186
     :cond_7
     iget-boolean v9, p0, Lcom/android/internal/telephony/cat/GetInkeyInputResponseData;->mIsPacked:Z
 
     if-eqz v9, :cond_8
 
-    .line 187
     invoke-virtual {p1, v10}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     goto :goto_2
 
-    .line 189
     :cond_8
     const/4 v9, 0x4
 

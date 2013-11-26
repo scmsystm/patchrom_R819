@@ -13,13 +13,10 @@
     .parameter "base"
 
     .prologue
-    .line 56
     invoke-direct {p0}, Landroid/content/Context;-><init>()V
 
-    .line 57
     iput-object p1, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
-    .line 58
     return-void
 .end method
 
@@ -30,12 +27,10 @@
     .parameter "base"
 
     .prologue
-    .line 68
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 69
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Base context already set"
@@ -44,11 +39,9 @@
 
     throw v0
 
-    .line 71
     :cond_0
     iput-object p1, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
-    .line 72
     return-void
 .end method
 
@@ -59,7 +52,6 @@
     .parameter "flags"
 
     .prologue
-    .line 473
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
@@ -77,7 +69,6 @@
     .parameter "userHandle"
 
     .prologue
-    .line 479
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;II)Z
@@ -92,7 +83,6 @@
     .parameter "permission"
 
     .prologue
-    .line 510
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
@@ -108,7 +98,6 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 552
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->checkCallingOrSelfUriPermission(Landroid/net/Uri;I)I
@@ -123,7 +112,6 @@
     .parameter "permission"
 
     .prologue
-    .line 505
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->checkCallingPermission(Ljava/lang/String;)I
@@ -139,7 +127,6 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 547
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->checkCallingUriPermission(Landroid/net/Uri;I)I
@@ -156,7 +143,6 @@
     .parameter "uid"
 
     .prologue
-    .line 500
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
@@ -174,7 +160,6 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 542
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->checkUriPermission(Landroid/net/Uri;III)I
@@ -194,7 +179,6 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 558
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -225,12 +209,10 @@
     .end annotation
 
     .prologue
-    .line 279
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->clearWallpaper()V
 
-    .line 280
     return-void
 .end method
 
@@ -239,7 +221,6 @@
     .parameter "overrideConfiguration"
 
     .prologue
-    .line 604
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->createConfigurationContext(Landroid/content/res/Configuration;)Landroid/content/Context;
@@ -254,7 +235,6 @@
     .parameter "display"
 
     .prologue
-    .line 609
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->createDisplayContext(Landroid/view/Display;)Landroid/content/Context;
@@ -275,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 592
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
@@ -297,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 599
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->createPackageContextAsUser(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/Context;
@@ -311,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->databaseList()[Ljava/lang/String;
@@ -326,7 +303,6 @@
     .parameter "name"
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->deleteDatabase(Ljava/lang/String;)Z
@@ -341,7 +317,6 @@
     .parameter "name"
 
     .prologue
-    .line 178
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
@@ -357,12 +332,10 @@
     .parameter "message"
 
     .prologue
-    .line 527
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
     return-void
 .end method
 
@@ -373,12 +346,10 @@
     .parameter "message"
 
     .prologue
-    .line 577
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->enforceCallingOrSelfUriPermission(Landroid/net/Uri;ILjava/lang/String;)V
 
-    .line 578
     return-void
 .end method
 
@@ -388,12 +359,10 @@
     .parameter "message"
 
     .prologue
-    .line 521
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 522
     return-void
 .end method
 
@@ -404,12 +373,10 @@
     .parameter "message"
 
     .prologue
-    .line 571
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->enforceCallingUriPermission(Landroid/net/Uri;ILjava/lang/String;)V
 
-    .line 572
     return-void
 .end method
 
@@ -421,12 +388,10 @@
     .parameter "message"
 
     .prologue
-    .line 516
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->enforcePermission(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 517
     return-void
 .end method
 
@@ -439,7 +404,6 @@
     .parameter "message"
 
     .prologue
-    .line 565
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -454,7 +418,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->enforceUriPermission(Landroid/net/Uri;IIILjava/lang/String;)V
 
-    .line 566
     return-void
 .end method
 
@@ -469,7 +432,6 @@
     .parameter "message"
 
     .prologue
-    .line 584
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -488,7 +450,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->enforceUriPermission(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 587
     return-void
 .end method
 
@@ -496,7 +457,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->fileList()[Ljava/lang/String;
@@ -510,7 +470,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -524,7 +483,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
@@ -538,7 +496,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -552,7 +509,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     return-object v0
@@ -562,7 +518,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
@@ -576,7 +531,6 @@
     .locals 1
 
     .prologue
-    .line 130
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
@@ -591,7 +545,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 620
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getCompatibilityInfo(I)Landroid/view/CompatibilityInfoHolder;
@@ -605,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -620,7 +572,6 @@
     .parameter "name"
 
     .prologue
-    .line 239
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
@@ -636,7 +587,6 @@
     .parameter "mode"
 
     .prologue
-    .line 218
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
@@ -650,7 +600,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getExternalCacheDir()Ljava/io/File;
@@ -665,7 +614,6 @@
     .parameter "type"
 
     .prologue
-    .line 198
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
@@ -680,7 +628,6 @@
     .parameter "name"
 
     .prologue
-    .line 183
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getFileStreamPath(Ljava/lang/String;)Ljava/io/File;
@@ -694,7 +641,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
@@ -708,7 +654,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
@@ -722,7 +667,6 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getObbDir()Ljava/io/File;
@@ -736,7 +680,6 @@
     .locals 1
 
     .prologue
-    .line 150
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageCodePath()Ljava/lang/String;
@@ -750,7 +693,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -764,7 +706,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -778,7 +719,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageResourcePath()Ljava/lang/String;
@@ -792,7 +732,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -808,7 +747,6 @@
     .parameter "mode"
 
     .prologue
-    .line 161
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
@@ -823,7 +761,6 @@
     .parameter "name"
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
@@ -838,7 +775,6 @@
     .parameter "name"
 
     .prologue
-    .line 495
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -852,7 +788,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
@@ -866,7 +801,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getThemeResId()I
@@ -880,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 249
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaper()Landroid/graphics/drawable/Drawable;
@@ -894,7 +827,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaperDesiredMinimumHeight()I
@@ -908,7 +840,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getWallpaperDesiredMinimumWidth()I
@@ -925,12 +856,10 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 532
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 533
     return-void
 .end method
 
@@ -938,7 +867,6 @@
     .locals 1
 
     .prologue
-    .line 614
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->isRestricted()Z
@@ -958,7 +886,6 @@
     .end annotation
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->openFileInput(Ljava/lang/String;)Ljava/io/FileInputStream;
@@ -979,7 +906,6 @@
     .end annotation
 
     .prologue
-    .line 173
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->openFileOutput(Ljava/lang/String;I)Ljava/io/FileOutputStream;
@@ -996,7 +922,6 @@
     .parameter "factory"
 
     .prologue
-    .line 223
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->openOrCreateDatabase(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;)Landroid/database/sqlite/SQLiteDatabase;
@@ -1014,7 +939,6 @@
     .parameter "errorHandler"
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->openOrCreateDatabase(Ljava/lang/String;ILandroid/database/sqlite/SQLiteDatabase$CursorFactory;Landroid/database/DatabaseErrorHandler;)Landroid/database/sqlite/SQLiteDatabase;
@@ -1028,7 +952,6 @@
     .locals 1
 
     .prologue
-    .line 254
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->peekWallpaper()Landroid/graphics/drawable/Drawable;
@@ -1044,7 +967,6 @@
     .parameter "filter"
 
     .prologue
-    .line 423
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
@@ -1062,7 +984,6 @@
     .parameter "scheduler"
 
     .prologue
-    .line 430
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
@@ -1081,7 +1002,6 @@
     .parameter "scheduler"
 
     .prologue
-    .line 439
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1106,12 +1026,10 @@
     .parameter "intent"
 
     .prologue
-    .line 398
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->removeStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 399
     return-void
 .end method
 
@@ -1121,12 +1039,10 @@
     .parameter "user"
 
     .prologue
-    .line 417
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->removeStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 418
     return-void
 .end method
 
@@ -1136,12 +1052,10 @@
     .parameter "modeFlags"
 
     .prologue
-    .line 537
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 538
     return-void
 .end method
 
@@ -1150,12 +1064,10 @@
     .parameter "intent"
 
     .prologue
-    .line 338
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 339
     return-void
 .end method
 
@@ -1165,12 +1077,10 @@
     .parameter "receiverPermission"
 
     .prologue
-    .line 343
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 344
     return-void
 .end method
 
@@ -1180,12 +1090,10 @@
     .parameter "user"
 
     .prologue
-    .line 364
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 365
     return-void
 .end method
 
@@ -1196,12 +1104,10 @@
     .parameter "receiverPermission"
 
     .prologue
-    .line 370
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 371
     return-void
 .end method
 
@@ -1211,12 +1117,10 @@
     .parameter "receiverPermission"
 
     .prologue
-    .line 349
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 350
     return-void
 .end method
 
@@ -1231,7 +1135,6 @@
     .parameter "initialExtras"
 
     .prologue
-    .line 357
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1250,7 +1153,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 360
     return-void
 .end method
 
@@ -1266,7 +1168,6 @@
     .parameter "initialExtras"
 
     .prologue
-    .line 377
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1287,7 +1188,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 379
     return-void
 .end method
 
@@ -1296,12 +1196,10 @@
     .parameter "intent"
 
     .prologue
-    .line 383
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 384
     return-void
 .end method
 
@@ -1311,12 +1209,10 @@
     .parameter "user"
 
     .prologue
-    .line 403
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 404
     return-void
 .end method
 
@@ -1330,7 +1226,6 @@
     .parameter "initialExtras"
 
     .prologue
-    .line 391
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1347,7 +1242,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/content/Context;->sendStickyOrderedBroadcast(Landroid/content/Intent;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 394
     return-void
 .end method
 
@@ -1362,7 +1256,6 @@
     .parameter "initialExtras"
 
     .prologue
-    .line 411
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1381,7 +1274,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendStickyOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 413
     return-void
 .end method
 
@@ -1390,12 +1282,10 @@
     .parameter "resid"
 
     .prologue
-    .line 114
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setTheme(I)V
 
-    .line 115
     return-void
 .end method
 
@@ -1409,12 +1299,10 @@
     .end annotation
 
     .prologue
-    .line 269
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setWallpaper(Landroid/graphics/Bitmap;)V
 
-    .line 270
     return-void
 .end method
 
@@ -1428,12 +1316,10 @@
     .end annotation
 
     .prologue
-    .line 274
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->setWallpaper(Ljava/io/InputStream;)V
 
-    .line 275
     return-void
 .end method
 
@@ -1442,12 +1328,10 @@
     .parameter "intents"
 
     .prologue
-    .line 306
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
 
-    .line 307
     return-void
 .end method
 
@@ -1457,12 +1341,10 @@
     .parameter "options"
 
     .prologue
-    .line 311
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivities([Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 312
     return-void
 .end method
 
@@ -1473,12 +1355,10 @@
     .parameter "userHandle"
 
     .prologue
-    .line 317
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startActivitiesAsUser([Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 318
     return-void
 .end method
 
@@ -1487,12 +1367,10 @@
     .parameter "intent"
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 285
     return-void
 .end method
 
@@ -1502,12 +1380,10 @@
     .parameter "options"
 
     .prologue
-    .line 295
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 296
     return-void
 .end method
 
@@ -1518,12 +1394,10 @@
     .parameter "user"
 
     .prologue
-    .line 301
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 302
     return-void
 .end method
 
@@ -1533,12 +1407,10 @@
     .parameter "user"
 
     .prologue
-    .line 290
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 291
     return-void
 .end method
 
@@ -1549,7 +1421,6 @@
     .parameter "arguments"
 
     .prologue
-    .line 490
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2, p3}, Landroid/content/Context;->startInstrumentation(Landroid/content/ComponentName;Ljava/lang/String;Landroid/os/Bundle;)Z
@@ -1573,7 +1444,6 @@
     .end annotation
 
     .prologue
-    .line 324
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1588,7 +1458,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;III)V
 
-    .line 326
     return-void
 .end method
 
@@ -1607,7 +1476,6 @@
     .end annotation
 
     .prologue
-    .line 332
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     move-object v1, p1
@@ -1624,7 +1492,6 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/content/Context;->startIntentSender(Landroid/content/IntentSender;Landroid/content/Intent;IIILandroid/os/Bundle;)V
 
-    .line 334
     return-void
 .end method
 
@@ -1633,7 +1500,6 @@
     .parameter "service"
 
     .prologue
-    .line 450
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -1649,7 +1515,6 @@
     .parameter "user"
 
     .prologue
-    .line 461
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
@@ -1664,7 +1529,6 @@
     .parameter "name"
 
     .prologue
-    .line 455
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
@@ -1680,7 +1544,6 @@
     .parameter "user"
 
     .prologue
-    .line 467
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1, p2}, Landroid/content/Context;->stopServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Z
@@ -1695,12 +1558,10 @@
     .parameter "conn"
 
     .prologue
-    .line 484
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 485
     return-void
 .end method
 
@@ -1709,11 +1570,9 @@
     .parameter "receiver"
 
     .prologue
-    .line 445
     iget-object v0, p0, Landroid/content/ContextWrapper;->mBase:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 446
     return-void
 .end method

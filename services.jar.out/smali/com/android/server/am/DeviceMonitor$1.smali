@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/server/am/DeviceMonitor$1;->this$0:Lcom/android/server/am/DeviceMonitor;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,12 +37,10 @@
     .locals 1
 
     .prologue
-    .line 50
     iget-object v0, p0, Lcom/android/server/am/DeviceMonitor$1;->this$0:Lcom/android/server/am/DeviceMonitor;
 
     #calls: Lcom/android/server/am/DeviceMonitor;->monitor()V
     invoke-static {v0}, Lcom/android/server/am/DeviceMonitor;->access$000(Lcom/android/server/am/DeviceMonitor;)V
 
-    .line 51
     return-void
 .end method

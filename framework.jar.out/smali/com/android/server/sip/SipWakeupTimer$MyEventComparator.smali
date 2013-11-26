@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 329
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .parameter "x0"
 
     .prologue
-    .line 329
     invoke-direct {p0}, Lcom/android/server/sip/SipWakeupTimer$MyEventComparator;-><init>()V
 
     return-void
@@ -57,17 +55,14 @@
     .parameter "e2"
 
     .prologue
-    .line 331
     if-ne p1, p2, :cond_1
 
     const/4 v0, 0x0
 
-    .line 334
     :cond_0
     :goto_0
     return v0
 
-    .line 332
     :cond_1
     iget v1, p1, Lcom/android/server/sip/SipWakeupTimer$MyEvent;->mMaxPeriod:I
 
@@ -75,7 +70,6 @@
 
     sub-int v0, v1, v2
 
-    .line 333
     .local v0, diff:I
     if-nez v0, :cond_0
 
@@ -90,7 +84,6 @@
     .parameter "x1"
 
     .prologue
-    .line 329
     check-cast p1, Lcom/android/server/sip/SipWakeupTimer$MyEvent;
 
     .end local p1
@@ -109,7 +102,6 @@
     .parameter "that"
 
     .prologue
-    .line 338
     if-ne p0, p1, :cond_0
 
     const/4 v0, 0x1

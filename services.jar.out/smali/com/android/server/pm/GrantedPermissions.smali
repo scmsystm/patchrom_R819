@@ -26,20 +26,16 @@
     .parameter "pkgFlags"
 
     .prologue
-    .line 30
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
-    .line 31
     invoke-virtual {p0, p1}, Lcom/android/server/pm/GrantedPermissions;->setFlags(I)V
 
-    .line 32
     return-void
 .end method
 
@@ -48,22 +44,18 @@
     .parameter "base"
 
     .prologue
-    .line 35
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
-    .line 36
     iget v0, p1, Lcom/android/server/pm/GrantedPermissions;->pkgFlags:I
 
     iput v0, p0, Lcom/android/server/pm/GrantedPermissions;->pkgFlags:I
 
-    .line 37
     iget-object v0, p1, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clone()Ljava/lang/Object;
@@ -74,12 +66,10 @@
 
     iput-object v0, p0, Lcom/android/server/pm/GrantedPermissions;->grantedPermissions:Ljava/util/HashSet;
 
-    .line 39
     iget-object v0, p1, Lcom/android/server/pm/GrantedPermissions;->gids:[I
 
     if-eqz v0, :cond_0
 
-    .line 40
     iget-object v0, p1, Lcom/android/server/pm/GrantedPermissions;->gids:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
@@ -90,7 +80,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/GrantedPermissions;->gids:[I
 
-    .line 42
     :cond_0
     return-void
 .end method
@@ -102,13 +91,11 @@
     .parameter "pkgFlags"
 
     .prologue
-    .line 45
     const v0, 0x60040001
 
     and-int/2addr v0, p1
 
     iput v0, p0, Lcom/android/server/pm/GrantedPermissions;->pkgFlags:I
 
-    .line 50
     return-void
 .end method

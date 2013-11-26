@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1851
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 1854
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -53,37 +51,30 @@
 
     if-eqz v4, :cond_3
 
-    .line 1855
     const-string v4, "GpsLocationProvider"
 
     const-string v5, "receive a sms"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1856
     invoke-static {p2}, Landroid/provider/Telephony$Sms$Intents;->getMessagesFromIntent(Landroid/content/Intent;)[Landroid/telephony/SmsMessage;
 
     move-result-object v1
 
-    .line 1857
     .local v1, messages:[Landroid/telephony/SmsMessage;
     if-eqz v1, :cond_2
 
-    .line 1858
     const/4 v4, 0x0
 
     aget-object v0, v1, v4
 
-    .line 1859
     .local v0, message:Landroid/telephony/SmsMessage;
     if-eqz v0, :cond_1
 
-    .line 1860
     invoke-virtual {v0}, Landroid/telephony/SmsMessage;->getMessageBody()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1861
     .local v3, text:Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -92,7 +83,6 @@
 
     move-result v2
 
-    .line 1862
     .local v2, testNum:I
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
@@ -103,7 +93,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1863
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider$6;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     const/4 v5, 0x1
@@ -113,7 +102,6 @@
     #calls: Lcom/android/server/location/GpsLocationProvider;->native_gps_test_start(III)Z
     invoke-static {v4, v2, v5, v6}, Lcom/android/server/location/GpsLocationProvider;->access$2600(Lcom/android/server/location/GpsLocationProvider;III)Z
 
-    .line 1879
     .end local v0           #message:Landroid/telephony/SmsMessage;
     .end local v1           #messages:[Landroid/telephony/SmsMessage;
     .end local v2           #testNum:I
@@ -122,7 +110,6 @@
     :goto_0
     return-void
 
-    .line 1866
     .restart local v0       #message:Landroid/telephony/SmsMessage;
     .restart local v1       #messages:[Landroid/telephony/SmsMessage;
     :cond_1
@@ -134,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1869
     .end local v0           #message:Landroid/telephony/SmsMessage;
     :cond_2
     const-string v4, "GpsLocationProvider"
@@ -145,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1871
     .end local v1           #messages:[Landroid/telephony/SmsMessage;
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -160,14 +145,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 1872
     const-string v4, "GpsLocationProvider"
 
     const-string v5, "receive gps test sms sent action"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1873
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider$6;->getResultCode()I
 
     move-result v4
@@ -176,7 +159,6 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 1874
     const-string v4, "GpsLocationProvider"
 
     const-string v5, "test sms has sent successfully"
@@ -185,7 +167,6 @@
 
     goto :goto_0
 
-    .line 1876
     :cond_4
     const-string v4, "GpsLocationProvider"
 

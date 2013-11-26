@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 247
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 250
     const-string v2, "ActivityManagerPlus"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -65,7 +63,6 @@
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     const-string v2, "android.intent.action.BOOST_DOWNLOADING"
 
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -78,22 +75,18 @@
 
     if-eqz v2, :cond_6
 
-    .line 252
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v10
 
-    .line 255
     .local v10, bundle:Landroid/os/Bundle;
     if-nez v10, :cond_1
 
-    .line 381
     .end local v10           #bundle:Landroid/os/Bundle;
     :cond_0
     :goto_0
     return-void
 
-    .line 257
     .restart local v10       #bundle:Landroid/os/Bundle;
     :cond_1
     const-string v2, "package_name"
@@ -102,11 +95,9 @@
 
     move-result-object v16
 
-    .line 258
     .local v16, pkgName:Ljava/lang/String;
     if-eqz v16, :cond_0
 
-    .line 260
     const-string v2, "enabled"
 
     const/4 v5, 0x0
@@ -119,7 +110,6 @@
 
     move-result-object v12
 
-    .line 261
     .local v12, enabled:Ljava/lang/Boolean;
     move-object/from16 v0, p0
 
@@ -131,11 +121,9 @@
 
     move-result v11
 
-    .line 262
     .local v11, count:I
     add-int/lit8 v13, v11, -0x1
 
-    .line 263
     .local v13, i:I
     const/4 v2, 0x0
 
@@ -143,11 +131,9 @@
 
     move-result-object v9
 
-    .line 265
     .local v9, alreadyInList:Ljava/lang/Boolean;
     if-eqz v11, :cond_3
 
-    .line 266
     :goto_1
     if-ltz v13, :cond_2
 
@@ -171,23 +157,19 @@
 
     if-nez v2, :cond_2
 
-    .line 267
     add-int/lit8 v13, v13, -0x1
 
     goto :goto_1
 
-    .line 269
     :cond_2
     if-gez v13, :cond_4
 
-    .line 270
     const/4 v2, 0x0
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v9
 
-    .line 275
     :cond_3
     :goto_2
     invoke-virtual {v12}, Ljava/lang/Boolean;->booleanValue()Z
@@ -202,7 +184,6 @@
 
     if-nez v2, :cond_5
 
-    .line 276
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -215,7 +196,6 @@
 
     goto :goto_0
 
-    .line 272
     :cond_4
     const/4 v2, 0x1
 
@@ -225,7 +205,6 @@
 
     goto :goto_2
 
-    .line 277
     :cond_5
     invoke-virtual {v12}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -239,7 +218,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 278
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -250,7 +228,6 @@
 
     goto :goto_0
 
-    .line 280
     .end local v9           #alreadyInList:Ljava/lang/Boolean;
     .end local v10           #bundle:Landroid/os/Bundle;
     .end local v11           #count:I
@@ -270,19 +247,16 @@
 
     if-eqz v2, :cond_a
 
-    .line 281
     const-string v2, "ActivityManagerPlus"
 
     const-string v5, "ipo PREBOOT_IPO"
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     new-instance v19, Lcom/android/internal/app/ShutdownManager;
 
     invoke-direct/range {v19 .. v19}, Lcom/android/internal/app/ShutdownManager;-><init>()V
 
-    .line 283
     .local v19, stMgr:Lcom/android/internal/app/ShutdownManager;
     move-object/from16 v0, p0
 
@@ -297,7 +271,6 @@
 
     invoke-virtual {v0, v2}, Lcom/android/internal/app/ShutdownManager;->preRestoreStates(Landroid/content/Context;)V
 
-    .line 286
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -316,7 +289,6 @@
 
     invoke-virtual {v2, v5, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -334,13 +306,11 @@
 
     move-result v18
 
-    .line 315
     .local v18, size:I
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 316
     .local v14, list:Ljava/util/ArrayList;
     const/4 v13, 0x0
 
@@ -350,7 +320,6 @@
 
     if-ge v13, v0, :cond_8
 
-    .line 317
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -370,7 +339,6 @@
 
     check-cast v3, Lcom/android/server/am/ActivityRecord;
 
-    .line 318
     .local v3, r:Lcom/android/server/am/ActivityRecord;
     iget-object v2, v3, Lcom/android/server/am/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -386,13 +354,11 @@
 
     if-eqz v2, :cond_7
 
-    .line 316
     :goto_4
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_3
 
-    .line 323
     :cond_7
     const-string v2, "ActivityManagerPlus"
 
@@ -422,19 +388,16 @@
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 324
     invoke-virtual {v14, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_4
 
-    .line 328
     .end local v3           #r:Lcom/android/server/am/ActivityRecord;
     :cond_8
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
     move-result v18
 
-    .line 329
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -446,13 +409,11 @@
 
     monitor-enter v21
 
-    .line 330
     add-int/lit8 v13, v18, -0x1
 
     :goto_5
     if-ltz v13, :cond_9
 
-    .line 331
     :try_start_0
     invoke-virtual {v14, v13}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -460,7 +421,6 @@
 
     check-cast v3, Lcom/android/server/am/ActivityRecord;
 
-    .line 332
     .restart local v3       #r:Lcom/android/server/am/ActivityRecord;
     move-object/from16 v0, p0
 
@@ -479,7 +439,6 @@
 
     move-result v4
 
-    .line 333
     .local v4, idx:I
     const-string v2, "ActivityManagerPlus"
 
@@ -513,7 +472,6 @@
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -535,12 +493,10 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/am/ActivityStack;->finishActivityLocked(Lcom/android/server/am/ActivityRecord;IILandroid/content/Intent;Ljava/lang/String;Z)Z
 
-    .line 330
     add-int/lit8 v13, v13, -0x1
 
     goto :goto_5
 
-    .line 336
     .end local v3           #r:Lcom/android/server/am/ActivityRecord;
     .end local v4           #idx:I
     :cond_9
@@ -548,10 +504,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 337
     invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
 
-    .line 338
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -565,14 +519,12 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 339
     const-string v2, "ActivityManagerPlus"
 
     const-string v5, "finished"
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -588,7 +540,6 @@
 
     goto/16 :goto_0
 
-    .line 336
     :catchall_0
     move-exception v2
 
@@ -599,7 +550,6 @@
 
     throw v2
 
-    .line 344
     .end local v13           #i:I
     .end local v14           #list:Ljava/util/ArrayList;
     .end local v18           #size:I
@@ -617,19 +567,16 @@
 
     if-eqz v2, :cond_c
 
-    .line 345
     const-string v2, "ActivityManagerPlus"
 
     const-string v5, "ipo BOOT_IPO"
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     new-instance v19, Lcom/android/internal/app/ShutdownManager;
 
     invoke-direct/range {v19 .. v19}, Lcom/android/internal/app/ShutdownManager;-><init>()V
 
-    .line 348
     .restart local v19       #stMgr:Lcom/android/internal/app/ShutdownManager;
     move-object/from16 v0, p0
 
@@ -644,21 +591,18 @@
 
     invoke-virtual {v0, v2}, Lcom/android/internal/app/ShutdownManager;->restoreStates(Landroid/content/Context;)V
 
-    .line 350
     invoke-static {}, Lcom/android/server/am/PowerOffAlarmUtility;->isAlarmBoot()Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 351
     const-string v2, "ActivityManagerPlus"
 
     const-string v5, "power off alarm enabled"
 
     invoke-static {v2, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -677,7 +621,6 @@
 
     goto/16 :goto_0
 
-    .line 358
     :cond_b
     const-string v2, "unencrypted"
 
@@ -695,14 +638,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 359
     const-string v2, "ActivityManagerPlus"
 
     const-string v5, "ipo BOOT_IPO: removeIPOWin"
 
     invoke-static {v2, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -716,7 +657,6 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/am/ActivityManagerService;->removeIPOWin(Landroid/content/Context;)V
 
-    .line 361
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -725,7 +665,6 @@
 
     goto/16 :goto_0
 
-    .line 365
     .end local v19           #stMgr:Lcom/android/internal/app/ShutdownManager;
     :cond_c
     const-string v2, "android.intent.action.ACTION_SHUTDOWN_IPO"
@@ -740,7 +679,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 368
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -758,7 +696,6 @@
 
     goto/16 :goto_0
 
-    .line 371
     :cond_d
     const-string v2, "android.intent.action.black.mode"
 
@@ -772,7 +709,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 372
     const-string v2, "_black_mode"
 
     const/4 v5, 0x0
@@ -783,13 +719,11 @@
 
     move-result v15
 
-    .line 373
     .local v15, mode:Z
     const/4 v2, 0x1
 
     if-ne v15, v2, :cond_0
 
-    .line 374
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/am/ActivityManagerPlus$1;->this$0:Lcom/android/server/am/ActivityManagerPlus;
@@ -805,7 +739,6 @@
 
     goto/16 :goto_0
 
-    .line 376
     .end local v15           #mode:Z
     :cond_e
     const-string v2, "android.media.RINGER_MODE_CHANGED"
@@ -820,7 +753,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 377
     const-string v2, "android.media.EXTRA_RINGER_MODE"
 
     const/4 v5, -0x1
@@ -831,13 +763,11 @@
 
     move-result v17
 
-    .line 378
     .local v17, ringerMode:I
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v20
 
-    .line 379
     .local v20, state:Ljava/lang/String;
     const-string v2, "persist.sys.mute.state"
 

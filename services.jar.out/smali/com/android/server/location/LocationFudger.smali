@@ -57,7 +57,6 @@
     .locals 2
 
     .prologue
-    .line 88
     const-wide v0, 0x3feff8a0902de00dL
 
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
@@ -75,34 +74,28 @@
     .parameter "handler"
 
     .prologue
-    .line 145
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct/range {v1 .. v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/location/LocationFudger;->mLock:Ljava/lang/Object;
 
-    .line 107
     new-instance v1, Ljava/security/SecureRandom;
 
     invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/location/LocationFudger;->mRandom:Ljava/security/SecureRandom;
 
-    .line 146
     iput-object p1, p0, Lcom/android/server/location/LocationFudger;->mContext:Landroid/content/Context;
 
-    .line 147
     new-instance v1, Lcom/android/server/location/LocationFudger$1;
 
     invoke-direct {v1, p0, p2}, Lcom/android/server/location/LocationFudger$1;-><init>(Lcom/android/server/location/LocationFudger;Landroid/os/Handler;)V
 
     iput-object v1, p0, Lcom/android/server/location/LocationFudger;->mSettingsObserver:Landroid/database/ContentObserver;
 
-    .line 153
     iget-object v1, p0, Lcom/android/server/location/LocationFudger;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -121,36 +114,30 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 156
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->loadCoarseAccuracy()F
 
     move-result v0
 
-    .line 157
     .local v0, accuracy:F
     iget-object v2, p0, Lcom/android/server/location/LocationFudger;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 158
     :try_start_0
     invoke-direct {p0, v0}, Lcom/android/server/location/LocationFudger;->setAccuracyInMetersLocked(F)V
 
-    .line 159
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->nextOffsetLocked()D
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
-    .line 160
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->nextOffsetLocked()D
 
     move-result-wide v3
 
     iput-wide v3, p0, Lcom/android/server/location/LocationFudger;->mOffsetLongitudeMeters:D
 
-    .line 161
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
@@ -161,13 +148,10 @@
 
     iput-wide v3, p0, Lcom/android/server/location/LocationFudger;->mNextInterval:J
 
-    .line 162
     monitor-exit v2
 
-    .line 163
     return-void
 
-    .line 162
     :catchall_0
     move-exception v1
 
@@ -183,7 +167,6 @@
     .parameter "x0"
 
     .prologue
-    .line 40
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->loadCoarseAccuracy()F
 
     move-result v0
@@ -197,7 +180,6 @@
     .parameter "x1"
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationFudger;->setAccuracyInMeters(F)V
 
     return-void
@@ -208,18 +190,15 @@
     .parameter "location"
 
     .prologue
-    .line 182
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationFudger;->createCoarseLocked(Landroid/location/Location;)Landroid/location/Location;
 
     move-result-object v0
 
-    .line 183
     .local v0, coarse:Landroid/location/Location;
     const-string v1, "coarseLocation"
 
     invoke-virtual {p1, v1, v0}, Landroid/location/Location;->setExtraLocation(Ljava/lang/String;Landroid/location/Location;)V
 
-    .line 184
     return-object v0
 .end method
 
@@ -228,52 +207,41 @@
     .parameter "fine"
 
     .prologue
-    .line 203
     new-instance v0, Landroid/location/Location;
 
     invoke-direct {v0, p1}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
-    .line 207
     .local v0, coarse:Landroid/location/Location;
     invoke-virtual {v0}, Landroid/location/Location;->removeBearing()V
 
-    .line 208
     invoke-virtual {v0}, Landroid/location/Location;->removeSpeed()V
 
-    .line 209
     invoke-virtual {v0}, Landroid/location/Location;->removeAltitude()V
 
-    .line 210
     const/4 v9, 0x0
 
     invoke-virtual {v0, v9}, Landroid/location/Location;->setExtras(Landroid/os/Bundle;)V
 
-    .line 212
     invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v1
 
-    .line 213
     .local v1, lat:D
     invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v5
 
-    .line 216
     .local v5, lon:D
     invoke-static {v1, v2}, Lcom/android/server/location/LocationFudger;->wrapLatitude(D)D
 
     move-result-wide v1
 
-    .line 217
     invoke-static {v5, v6}, Lcom/android/server/location/LocationFudger;->wrapLongitude(D)D
 
     move-result-wide v5
 
-    .line 227
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->updateRandomOffsetLocked()V
 
-    .line 229
     iget-wide v9, p0, Lcom/android/server/location/LocationFudger;->mOffsetLongitudeMeters:D
 
     invoke-static {v9, v10, v1, v2}, Lcom/android/server/location/LocationFudger;->metersToDegreesLongitude(DD)D
@@ -282,7 +250,6 @@
 
     add-double/2addr v5, v9
 
-    .line 230
     iget-wide v9, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
     invoke-static {v9, v10}, Lcom/android/server/location/LocationFudger;->metersToDegreesLatitude(D)D
@@ -291,24 +258,20 @@
 
     add-double/2addr v1, v9
 
-    .line 235
     invoke-static {v1, v2}, Lcom/android/server/location/LocationFudger;->wrapLatitude(D)D
 
     move-result-wide v1
 
-    .line 236
     invoke-static {v5, v6}, Lcom/android/server/location/LocationFudger;->wrapLongitude(D)D
 
     move-result-wide v5
 
-    .line 248
     iget-wide v9, p0, Lcom/android/server/location/LocationFudger;->mGridSizeInMeters:D
 
     invoke-static {v9, v10}, Lcom/android/server/location/LocationFudger;->metersToDegreesLatitude(D)D
 
     move-result-wide v3
 
-    .line 249
     .local v3, latGranularity:D
     div-double v9, v1, v3
 
@@ -320,14 +283,12 @@
 
     mul-double v1, v9, v3
 
-    .line 250
     iget-wide v9, p0, Lcom/android/server/location/LocationFudger;->mGridSizeInMeters:D
 
     invoke-static {v9, v10, v1, v2}, Lcom/android/server/location/LocationFudger;->metersToDegreesLongitude(DD)D
 
     move-result-wide v7
 
-    .line 251
     .local v7, lonGranularity:D
     div-double v9, v5, v7
 
@@ -339,23 +300,18 @@
 
     mul-double v5, v9, v7
 
-    .line 254
     invoke-static {v1, v2}, Lcom/android/server/location/LocationFudger;->wrapLatitude(D)D
 
     move-result-wide v1
 
-    .line 255
     invoke-static {v5, v6}, Lcom/android/server/location/LocationFudger;->wrapLongitude(D)D
 
     move-result-wide v5
 
-    .line 258
     invoke-virtual {v0, v1, v2}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 259
     invoke-virtual {v0, v5, v6}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 260
     iget v9, p0, Lcom/android/server/location/LocationFudger;->mAccuracyInMeters:F
 
     invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
@@ -368,7 +324,6 @@
 
     invoke-virtual {v0, v9}, Landroid/location/Location;->setAccuracy(F)V
 
-    .line 263
     return-object v0
 .end method
 
@@ -378,7 +333,6 @@
     .prologue
     const/high16 v2, 0x44fa
 
-    .line 371
     iget-object v3, p0, Lcom/android/server/location/LocationFudger;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -391,15 +345,12 @@
 
     move-result-object v1
 
-    .line 376
     .local v1, newSetting:Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 382
     :goto_0
     return v2
 
-    .line 380
     :cond_0
     :try_start_0
     invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
@@ -410,11 +361,9 @@
 
     goto :goto_0
 
-    .line 381
     :catch_0
     move-exception v0
 
-    .line 382
     .local v0, e:Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -424,7 +373,6 @@
     .parameter "distance"
 
     .prologue
-    .line 330
     const-wide v0, 0x40fb198000000000L
 
     div-double v0, p0, v0
@@ -438,7 +386,6 @@
     .parameter "lat"
 
     .prologue
-    .line 337
     const-wide v0, 0x40fb198000000000L
 
     div-double v0, p0, v0
@@ -460,7 +407,6 @@
     .locals 4
 
     .prologue
-    .line 305
     iget-object v0, p0, Lcom/android/server/location/LocationFudger;->mRandom:Ljava/security/SecureRandom;
 
     invoke-virtual {v0}, Ljava/security/SecureRandom;->nextGaussian()D
@@ -479,22 +425,17 @@
     .parameter "accuracyInMeters"
 
     .prologue
-    .line 362
     iget-object v1, p0, Lcom/android/server/location/LocationFudger;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 363
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationFudger;->setAccuracyInMetersLocked(F)V
 
-    .line 364
     monitor-exit v1
 
-    .line 365
     return-void
 
-    .line 364
     :catchall_0
     move-exception v0
 
@@ -510,7 +451,6 @@
     .parameter "accuracyInMeters"
 
     .prologue
-    .line 350
     const/high16 v0, 0x4348
 
     invoke-static {p1, v0}, Ljava/lang/Math;->max(FF)F
@@ -519,14 +459,12 @@
 
     iput v0, p0, Lcom/android/server/location/LocationFudger;->mAccuracyInMeters:F
 
-    .line 354
     iget v0, p0, Lcom/android/server/location/LocationFudger;->mAccuracyInMeters:F
 
     float-to-double v0, v0
 
     iput-wide v0, p0, Lcom/android/server/location/LocationFudger;->mGridSizeInMeters:D
 
-    .line 355
     iget-wide v0, p0, Lcom/android/server/location/LocationFudger;->mGridSizeInMeters:D
 
     const-wide/high16 v2, 0x4010
@@ -535,7 +473,6 @@
 
     iput-wide v0, p0, Lcom/android/server/location/LocationFudger;->mStandardDeviationInMeters:D
 
-    .line 356
     return-void
 .end method
 
@@ -545,12 +482,10 @@
     .prologue
     const-wide v6, 0x3f9eb851eb851eb8L
 
-    .line 284
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 285
     .local v0, now:J
     iget-wide v2, p0, Lcom/android/server/location/LocationFudger;->mNextInterval:J
 
@@ -558,11 +493,9 @@
 
     if-gez v2, :cond_0
 
-    .line 302
     :goto_0
     return-void
 
-    .line 293
     :cond_0
     const-wide/32 v2, 0x36ee80
 
@@ -570,7 +503,6 @@
 
     iput-wide v2, p0, Lcom/android/server/location/LocationFudger;->mNextInterval:J
 
-    .line 295
     iget-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
     sget-wide v4, Lcom/android/server/location/LocationFudger;->PREVIOUS_WEIGHT:D
@@ -579,7 +511,6 @@
 
     iput-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
-    .line 296
     iget-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->nextOffsetLocked()D
@@ -592,7 +523,6 @@
 
     iput-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLatitudeMeters:D
 
-    .line 297
     iget-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLongitudeMeters:D
 
     sget-wide v4, Lcom/android/server/location/LocationFudger;->PREVIOUS_WEIGHT:D
@@ -601,7 +531,6 @@
 
     iput-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLongitudeMeters:D
 
-    .line 298
     iget-wide v2, p0, Lcom/android/server/location/LocationFudger;->mOffsetLongitudeMeters:D
 
     invoke-direct {p0}, Lcom/android/server/location/LocationFudger;->nextOffsetLocked()D
@@ -622,17 +551,14 @@
     .parameter "lat"
 
     .prologue
-    .line 309
     const-wide v0, 0x40567fffda36a676L
 
     cmpl-double v0, p0, v0
 
     if-lez v0, :cond_0
 
-    .line 310
     const-wide p0, 0x40567fffda36a676L
 
-    .line 312
     :cond_0
     const-wide v0, -0x3fa9800025c9598aL
 
@@ -640,10 +566,8 @@
 
     if-gez v0, :cond_1
 
-    .line 313
     const-wide p0, -0x3fa9800025c9598aL
 
-    .line 315
     :cond_1
     return-wide p0
 .end method
@@ -655,20 +579,16 @@
     .prologue
     const-wide v2, 0x4076800000000000L
 
-    .line 319
     rem-double/2addr p0, v2
 
-    .line 320
     const-wide v0, 0x4066800000000000L
 
     cmpl-double v0, p0, v0
 
     if-ltz v0, :cond_0
 
-    .line 321
     sub-double/2addr p0, v2
 
-    .line 323
     :cond_0
     const-wide v0, -0x3f99800000000000L
 
@@ -676,10 +596,8 @@
 
     if-gez v0, :cond_1
 
-    .line 324
     add-double/2addr p0, v2
 
-    .line 326
     :cond_1
     return-wide p0
 .end method
@@ -693,7 +611,6 @@
     .parameter "args"
 
     .prologue
-    .line 341
     const-string v0, "offset: %.0f, %.0f (meters)"
 
     const/4 v1, 0x2
@@ -726,7 +643,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 343
     return-void
 .end method
 
@@ -735,12 +651,10 @@
     .parameter "location"
 
     .prologue
-    .line 169
     iget-object v2, p0, Lcom/android/server/location/LocationFudger;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 170
     :try_start_0
     const-string v1, "coarseLocation"
 
@@ -748,11 +662,9 @@
 
     move-result-object v0
 
-    .line 171
     .local v0, coarse:Landroid/location/Location;
     if-nez v0, :cond_0
 
-    .line 172
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationFudger;->addCoarseLocationExtraLocked(Landroid/location/Location;)Landroid/location/Location;
 
     move-result-object v0
@@ -760,11 +672,9 @@
     .end local v0           #coarse:Landroid/location/Location;
     monitor-exit v2
 
-    .line 177
     :goto_0
     return-object v0
 
-    .line 174
     .restart local v0       #coarse:Landroid/location/Location;
     :cond_0
     invoke-virtual {v0}, Landroid/location/Location;->getAccuracy()F
@@ -777,7 +687,6 @@
 
     if-gez v1, :cond_1
 
-    .line 175
     invoke-direct {p0, p1}, Lcom/android/server/location/LocationFudger;->addCoarseLocationExtraLocked(Landroid/location/Location;)Landroid/location/Location;
 
     move-result-object v0
@@ -787,7 +696,6 @@
 
     goto :goto_0
 
-    .line 178
     :catchall_0
     move-exception v1
 
@@ -797,7 +705,6 @@
 
     throw v1
 
-    .line 177
     .restart local v0       #coarse:Landroid/location/Location;
     :cond_1
     :try_start_1

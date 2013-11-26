@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 311
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$GpsStatusObserver;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
-    .line 312
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 313
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .parameter "change"
 
     .prologue
-    .line 316
     iget-object v1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$GpsStatusObserver;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->isGpsAvailable()Z
@@ -50,7 +46,6 @@
 
     move-result v0
 
-    .line 317
     .local v0, status:Z
     iget-object v1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$GpsStatusObserver;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -75,6 +70,5 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 318
     return-void
 .end method

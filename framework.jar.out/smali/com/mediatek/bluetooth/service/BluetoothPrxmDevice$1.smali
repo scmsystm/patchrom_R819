@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 141
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 145
     new-instance v0, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;
 
     const/4 v1, 0x0
@@ -58,7 +56,6 @@
 
     invoke-direct {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;-><init>(Landroid/bluetooth/BluetoothDevice;)V
 
-    .line 146
     .local v0, pdi:Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
@@ -67,7 +64,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->capability:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$002(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 147
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -75,7 +71,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->linkLossLevel:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$102(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 148
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -83,7 +78,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->pathLossLevel:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$202(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 149
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -91,7 +85,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->pathLossThreshold:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$302(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 150
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -99,7 +92,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->remoteTxPower:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$402(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 151
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
@@ -107,7 +99,6 @@
     #setter for: Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->currentRssi:B
     invoke-static {v0, v1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;->access$502(Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;B)B
 
-    .line 152
     return-object v0
 .end method
 
@@ -116,7 +107,6 @@
     .parameter "x0"
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice$1;->createFromParcel(Landroid/os/Parcel;)Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;
 
     move-result-object v0
@@ -129,7 +119,6 @@
     .parameter "size"
 
     .prologue
-    .line 156
     new-array v0, p1, [Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;
 
     return-object v0
@@ -140,7 +129,6 @@
     .parameter "x0"
 
     .prologue
-    .line 141
     invoke-virtual {p0, p1}, Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice$1;->newArray(I)[Lcom/mediatek/bluetooth/service/BluetoothPrxmDevice;
 
     move-result-object v0

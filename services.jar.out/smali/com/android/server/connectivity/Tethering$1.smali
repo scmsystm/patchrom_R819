@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1164
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Landroid/net/INetworkManagementIpv6EventObserver$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "up"
 
     .prologue
-    .line 1167
     const-string v0, "Tethering"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,7 +71,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1168
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     #calls: Lcom/android/server/connectivity/Tethering;->isIpv6MasterSmOn()Z
@@ -83,7 +80,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1169
     iget-object v0, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     #getter for: Lcom/android/server/connectivity/Tethering;->mIpv6TetherMasterSM:Lcom/android/internal/util/StateMachine;
@@ -95,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/util/StateMachine;->sendMessage(I)V
 
-    .line 1170
     :cond_0
     return-void
 .end method

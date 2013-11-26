@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 1760
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .parameter "in"
 
     .prologue
-    .line 1762
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 1763
     .local v0, type:I
     packed-switch v0, :pswitch_data_0
 
-    .line 1771
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -79,15 +75,12 @@
 
     throw v1
 
-    .line 1764
     :pswitch_0
     const/4 v1, 0x0
 
-    .line 1768
     :goto_0
     return-object v1
 
-    .line 1765
     :pswitch_1
     invoke-static {p1}, Landroid/net/Uri$StringUri;->readFrom(Landroid/os/Parcel;)Landroid/net/Uri;
 
@@ -95,7 +88,6 @@
 
     goto :goto_0
 
-    .line 1766
     :pswitch_2
     invoke-static {p1}, Landroid/net/Uri$OpaqueUri;->readFrom(Landroid/os/Parcel;)Landroid/net/Uri;
 
@@ -103,7 +95,6 @@
 
     goto :goto_0
 
-    .line 1768
     :pswitch_3
     invoke-static {p1}, Landroid/net/Uri$HierarchicalUri;->readFrom(Landroid/os/Parcel;)Landroid/net/Uri;
 
@@ -111,7 +102,6 @@
 
     goto :goto_0
 
-    .line 1763
     nop
 
     :pswitch_data_0
@@ -128,7 +118,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1760
     invoke-virtual {p0, p1}, Landroid/net/Uri$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/Uri;
 
     move-result-object v0
@@ -141,7 +130,6 @@
     .parameter "size"
 
     .prologue
-    .line 1775
     new-array v0, p1, [Landroid/net/Uri;
 
     return-object v0
@@ -152,7 +140,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1760
     invoke-virtual {p0, p1}, Landroid/net/Uri$1;->newArray(I)[Landroid/net/Uri;
 
     move-result-object v0

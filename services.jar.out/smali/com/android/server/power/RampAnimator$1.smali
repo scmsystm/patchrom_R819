@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 99
     .local p0, this:Lcom/android/server/power/RampAnimator$1;,"Lcom/android/server/power/RampAnimator.1;"
     iput-object p1, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -42,7 +41,6 @@
     .locals 8
 
     .prologue
-    .line 102
     .local p0, this:Lcom/android/server/power/RampAnimator$1;,"Lcom/android/server/power/RampAnimator.1;"
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -55,7 +53,6 @@
 
     move-result-wide v1
 
-    .line 103
     .local v1, frameTimeNanos:J
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -72,7 +69,6 @@
 
     mul-float v4, v5, v6
 
-    .line 105
     .local v4, timeDelta:F
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -91,14 +87,12 @@
 
     div-float v0, v5, v6
 
-    .line 106
     .local v0, amount:F
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     #setter for: Lcom/android/server/power/RampAnimator;->mLastFrameTimeNanos:J
     invoke-static {v5, v1, v2}, Lcom/android/server/power/RampAnimator;->access$102(Lcom/android/server/power/RampAnimator;J)J
 
-    .line 112
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     #getter for: Lcom/android/server/power/RampAnimator;->mCurrentValue:I
@@ -106,7 +100,6 @@
 
     move-result v3
 
-    .line 113
     .local v3, oldCurrentValue:I
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -124,7 +117,6 @@
 
     if-le v5, v6, :cond_1
 
-    .line 114
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     iget-object v6, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
@@ -152,7 +144,6 @@
     #setter for: Lcom/android/server/power/RampAnimator;->mAnimatedValue:F
     invoke-static {v5, v6}, Lcom/android/server/power/RampAnimator;->access$502(Lcom/android/server/power/RampAnimator;F)F
 
-    .line 118
     :goto_0
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -170,7 +161,6 @@
     #setter for: Lcom/android/server/power/RampAnimator;->mCurrentValue:I
     invoke-static {v5, v6}, Lcom/android/server/power/RampAnimator;->access$302(Lcom/android/server/power/RampAnimator;I)I
 
-    .line 120
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     #getter for: Lcom/android/server/power/RampAnimator;->mCurrentValue:I
@@ -180,7 +170,6 @@
 
     if-eq v3, v5, :cond_0
 
-    .line 121
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     #getter for: Lcom/android/server/power/RampAnimator;->mProperty:Landroid/util/IntProperty;
@@ -204,7 +193,6 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/util/IntProperty;->setValue(Ljava/lang/Object;I)V
 
-    .line 124
     :cond_0
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -222,17 +210,14 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 125
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
     #calls: Lcom/android/server/power/RampAnimator;->postCallback()V
     invoke-static {v5}, Lcom/android/server/power/RampAnimator;->access$800(Lcom/android/server/power/RampAnimator;)V
 
-    .line 129
     :goto_1
     return-void
 
-    .line 116
     :cond_1
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 
@@ -263,7 +248,6 @@
 
     goto :goto_0
 
-    .line 127
     :cond_2
     iget-object v5, p0, Lcom/android/server/power/RampAnimator$1;->this$0:Lcom/android/server/power/RampAnimator;
 

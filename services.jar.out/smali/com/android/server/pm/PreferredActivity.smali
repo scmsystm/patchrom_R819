@@ -27,17 +27,14 @@
     .parameter "activity"
 
     .prologue
-    .line 41
     invoke-direct {p0, p1}, Landroid/content/IntentFilter;-><init>(Landroid/content/IntentFilter;)V
 
-    .line 42
     new-instance v0, Lcom/android/server/PreferredComponent;
 
     invoke-direct {v0, p0, p2, p3, p4}, Lcom/android/server/PreferredComponent;-><init>(Lcom/android/server/PreferredComponent$Callbacks;I[Landroid/content/ComponentName;Landroid/content/ComponentName;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/PreferredComponent;
 
-    .line 43
     return-void
 .end method
 
@@ -52,17 +49,14 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-direct {p0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 46
     new-instance v0, Lcom/android/server/PreferredComponent;
 
     invoke-direct {v0, p0, p1}, Lcom/android/server/PreferredComponent;-><init>(Lcom/android/server/PreferredComponent$Callbacks;Lorg/xmlpull/v1/XmlPullParser;)V
 
     iput-object v0, p0, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/PreferredComponent;
 
-    .line 47
     return-void
 .end method
 
@@ -80,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 58
     const-string v0, "filter"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -89,16 +82,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
     invoke-virtual {p0, p2}, Lcom/android/server/pm/PreferredActivity;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 72
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 68
     :cond_0
     const/4 v0, 0x5
 
@@ -126,7 +116,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 70
     invoke-static {p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
@@ -144,24 +133,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
     iget-object v0, p0, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/PreferredComponent;
 
     invoke-virtual {v0, p1}, Lcom/android/server/PreferredComponent;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 51
     const-string v0, "filter"
 
     invoke-interface {p1, v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 52
     invoke-super {p0, p1}, Landroid/content/IntentFilter;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 53
     const-string v0, "filter"
 
     invoke-interface {p1, v1, v0}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 54
     return-void
 .end method

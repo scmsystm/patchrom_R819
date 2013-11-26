@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitorCallback;-><init>()V
@@ -38,13 +37,11 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     #calls: Lcom/android/internal/policy/impl/LockScreen;->updateTargets()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/LockScreen;->access$200(Lcom/android/internal/policy/impl/LockScreen;)V
 
-    .line 102
     return-void
 .end method
 
@@ -53,14 +50,12 @@
     .parameter "state"
 
     .prologue
-    .line 92
     const/4 v1, 0x2
 
     if-eq v1, p1, :cond_1
 
     const/4 v0, 0x1
 
-    .line 93
     .local v0, silent:Z
     :goto_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
@@ -72,13 +67,11 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 94
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     #setter for: Lcom/android/internal/policy/impl/LockScreen;->mSilentMode:Z
     invoke-static {v1, v0}, Lcom/android/internal/policy/impl/LockScreen;->access$002(Lcom/android/internal/policy/impl/LockScreen;Z)Z
 
-    .line 95
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/LockScreen;->mUnlockWidgetMethods:Lcom/android/internal/policy/impl/LockScreen$UnlockWidgetCommonMethods;
@@ -88,11 +81,9 @@
 
     invoke-interface {v1}, Lcom/android/internal/policy/impl/LockScreen$UnlockWidgetCommonMethods;->updateResources()V
 
-    .line 97
     :cond_0
     return-void
 
-    .line 92
     .end local v0           #silent:Z
     :cond_1
     const/4 v0, 0x0
@@ -105,12 +96,10 @@
     .parameter "simState"
 
     .prologue
-    .line 106
     iget-object v0, p0, Lcom/android/internal/policy/impl/LockScreen$1;->this$0:Lcom/android/internal/policy/impl/LockScreen;
 
     #calls: Lcom/android/internal/policy/impl/LockScreen;->updateTargets()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/LockScreen;->access$200(Lcom/android/internal/policy/impl/LockScreen;)V
 
-    .line 107
     return-void
 .end method

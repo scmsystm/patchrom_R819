@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 61
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;->mLive:Z
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -72,7 +69,6 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;->mCalendar:Ljava/util/Calendar;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;->access$102(Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    .line 69
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekDigitalClock;
 
@@ -87,6 +83,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 74
     return-void
 .end method

@@ -114,20 +114,16 @@
     .parameter "context"
 
     .prologue
-    .line 163
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
     new-instance v0, Landroid/bluetooth/BluetoothHid$1;
 
     invoke-direct {v0, p0}, Landroid/bluetooth/BluetoothHid$1;-><init>(Landroid/bluetooth/BluetoothHid;)V
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothHid;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 164
     iput-object p1, p0, Landroid/bluetooth/BluetoothHid;->mContext:Landroid/content/Context;
 
-    .line 165
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Landroid/bluetooth/IBluetoothHid;
@@ -148,14 +144,12 @@
 
     if-nez v0, :cond_0
 
-    .line 166
     const-string v0, "BT_HID_JAVA"
 
     const-string v1, "Could not bind to Bluetooth HID Service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     :cond_0
     return-void
 .end method
@@ -166,7 +160,6 @@
     .parameter "x1"
 
     .prologue
-    .line 51
     iput-object p1, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
     return-object p1
@@ -178,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 238
     monitor-enter p0
 
     :try_start_0
@@ -186,38 +178,32 @@
 
     if-eqz v0, :cond_0
 
-    .line 239
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
-    .line 242
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothHid;->mConnection:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_1
 
-    .line 243
     iget-object v0, p0, Landroid/bluetooth/BluetoothHid;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/bluetooth/BluetoothHid;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 244
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/bluetooth/BluetoothHid;->mConnection:Landroid/content/ServiceConnection;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 249
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 238
     :catchall_0
     move-exception v0
 
@@ -233,12 +219,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 172
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
     if-eqz v2, :cond_0
 
-    .line 174
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
@@ -246,17 +230,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 184
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 175
     :catch_0
     move-exception v0
 
-    .line 176
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BT_HID_JAVA"
 
@@ -282,12 +263,11 @@
 
     goto :goto_0
 
-    .line 181
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const-string v2, "BT_HID_JAVA"
 
-    const-string/jumbo v3, "mService is null"
+    const-string v3, "mService is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -301,12 +281,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 189
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
     if-eqz v2, :cond_0
 
-    .line 191
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
@@ -314,17 +292,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 192
     :catch_0
     move-exception v0
 
-    .line 193
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BT_HID_JAVA"
 
@@ -350,12 +325,11 @@
 
     goto :goto_0
 
-    .line 198
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const-string v2, "BT_HID_JAVA"
 
-    const-string/jumbo v3, "mService is null"
+    const-string v3, "mService is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -375,12 +349,10 @@
     .end annotation
 
     .prologue
-    .line 222
     iget-object v1, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
     if-eqz v1, :cond_0
 
-    .line 224
     :try_start_0
     new-instance v1, Ljava/util/HashSet;
 
@@ -402,15 +374,12 @@
 
     move-result-object v1
 
-    .line 233
     :goto_0
     return-object v1
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 227
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "BT_HID_JAVA"
 
@@ -434,18 +403,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 233
     .end local v0           #e:Landroid/os/RemoteException;
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 231
     :cond_0
     const-string v1, "BT_HID_JAVA"
 
-    const-string/jumbo v2, "mService is null"
+    const-string v2, "mService is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -457,16 +424,13 @@
     .parameter "device"
 
     .prologue
-    .line 205
     const/16 v1, 0x67
 
-    .line 207
     .local v1, ret:I
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
     if-eqz v2, :cond_0
 
-    .line 209
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
 
@@ -476,15 +440,12 @@
 
     move-result v1
 
-    .line 217
     :goto_0
     return v1
 
-    .line 210
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, e:Landroid/os/RemoteException;
     const-string v2, "BT_HID_JAVA"
 
@@ -510,12 +471,11 @@
 
     goto :goto_0
 
-    .line 215
     .end local v0           #e:Landroid/os/RemoteException;
     :cond_0
     const-string v2, "BT_HID_JAVA"
 
-    const-string/jumbo v3, "mService is null"
+    const-string v3, "mService is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 

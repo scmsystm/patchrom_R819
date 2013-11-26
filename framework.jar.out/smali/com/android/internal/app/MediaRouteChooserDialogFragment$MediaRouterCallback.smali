@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 582
     iput-object p1, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-direct {p0}, Landroid/media/MediaRouter$Callback;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "info"
 
     .prologue
-    .line 596
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 597
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .parameter "info"
 
     .prologue
-    .line 609
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -70,7 +66,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->notifyDataSetChanged()V
 
-    .line 610
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .parameter "index"
 
     .prologue
-    .line 615
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -92,7 +86,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 616
     return-void
 .end method
 
@@ -102,7 +95,6 @@
     .parameter "info"
 
     .prologue
-    .line 601
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -117,7 +109,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 602
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -127,7 +118,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->finishGrouping()V
 
-    .line 604
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
@@ -138,7 +128,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 605
     return-void
 .end method
 
@@ -149,7 +138,6 @@
     .parameter "info"
 
     .prologue
-    .line 585
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -159,12 +147,10 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 586
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->updateVolume()V
 
-    .line 587
     return-void
 .end method
 
@@ -175,7 +161,6 @@
     .parameter "group"
 
     .prologue
-    .line 620
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -185,7 +170,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 621
     return-void
 .end method
 
@@ -196,7 +180,6 @@
     .parameter "info"
 
     .prologue
-    .line 591
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mAdapter:Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;
@@ -206,7 +189,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment$RouteAdapter;->update()V
 
-    .line 592
     return-void
 .end method
 
@@ -216,7 +198,6 @@
     .parameter "info"
 
     .prologue
-    .line 625
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     #getter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mIgnoreCallbackVolumeChanges:Z
@@ -226,12 +207,10 @@
 
     if-nez v0, :cond_0
 
-    .line 626
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$MediaRouterCallback;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->updateVolume()V
 
-    .line 628
     :cond_0
     return-void
 .end method

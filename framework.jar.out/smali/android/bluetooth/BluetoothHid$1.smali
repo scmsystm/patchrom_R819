@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 153
     iput-object p1, p0, Landroid/bluetooth/BluetoothHid$1;->this$0:Landroid/bluetooth/BluetoothHid;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "service"
 
     .prologue
-    .line 155
     iget-object v0, p0, Landroid/bluetooth/BluetoothHid$1;->this$0:Landroid/bluetooth/BluetoothHid;
 
     invoke-static {p2}, Landroid/bluetooth/IBluetoothHid$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothHid;
@@ -53,7 +51,6 @@
     #setter for: Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHid;->access$002(Landroid/bluetooth/BluetoothHid;Landroid/bluetooth/IBluetoothHid;)Landroid/bluetooth/IBluetoothHid;
 
-    .line 156
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .parameter "className"
 
     .prologue
-    .line 159
     iget-object v0, p0, Landroid/bluetooth/BluetoothHid$1;->this$0:Landroid/bluetooth/BluetoothHid;
 
     const/4 v1, 0x0
@@ -70,6 +66,5 @@
     #setter for: Landroid/bluetooth/BluetoothHid;->mService:Landroid/bluetooth/IBluetoothHid;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHid;->access$002(Landroid/bluetooth/BluetoothHid;Landroid/bluetooth/IBluetoothHid;)Landroid/bluetooth/IBluetoothHid;
 
-    .line 160
     return-void
 .end method

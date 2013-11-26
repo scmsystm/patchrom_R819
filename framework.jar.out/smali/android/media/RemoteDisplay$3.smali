@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 149
     iput-object p1, p0, Landroid/media/RemoteDisplay$3;->this$0:Landroid/media/RemoteDisplay;
 
     iput p2, p0, Landroid/media/RemoteDisplay$3;->val$error:I
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-object v0, p0, Landroid/media/RemoteDisplay$3;->this$0:Landroid/media/RemoteDisplay;
 
     #getter for: Landroid/media/RemoteDisplay;->mListener:Landroid/media/RemoteDisplay$Listener;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0, v1}, Landroid/media/RemoteDisplay$Listener;->onDisplayError(I)V
 
-    .line 153
     return-void
 .end method

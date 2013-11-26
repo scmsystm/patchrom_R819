@@ -18,29 +18,24 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     instance-of v0, p1, Lorg/apache/harmony/xnet/provider/jsse/TrustManagerImpl;
 
     if-eqz v0, :cond_0
 
-    .line 46
     check-cast p1, Lorg/apache/harmony/xnet/provider/jsse/TrustManagerImpl;
 
     .end local p1
     iput-object p1, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lorg/apache/harmony/xnet/provider/jsse/TrustManagerImpl;
 
-    .line 50
     return-void
 
-    .line 48
     .restart local p1
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "tm is not a supported type of X509TrustManager"
+    const-string v1, "tm is not a supported type of X509TrustManager"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 64
     iget-object v0, p0, Landroid/net/http/X509TrustManagerExtensions;->mDelegate:Lorg/apache/harmony/xnet/provider/jsse/TrustManagerImpl;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/apache/harmony/xnet/provider/jsse/TrustManagerImpl;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;

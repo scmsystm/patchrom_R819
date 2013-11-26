@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 387
     invoke-static {}, Landroid/bluetooth/BluetoothProfileManager$Profile;->values()[Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v0

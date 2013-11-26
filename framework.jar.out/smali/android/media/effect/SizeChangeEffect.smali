@@ -14,10 +14,8 @@
     .parameter "finalParameters"
 
     .prologue
-    .line 43
     invoke-direct/range {p0 .. p6}, Landroid/media/effect/SingleFilterEffect;-><init>(Landroid/media/effect/EffectContext;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 44
     return-void
 .end method
 
@@ -31,15 +29,12 @@
     .parameter "outputTexId"
 
     .prologue
-    .line 48
     invoke-virtual {p0}, Landroid/media/effect/SizeChangeEffect;->beginGLEffect()V
 
-    .line 50
     invoke-virtual {p0, p1, p2, p3}, Landroid/media/effect/SizeChangeEffect;->frameFromTexture(III)Landroid/filterfw/core/Frame;
 
     move-result-object v0
 
-    .line 51
     .local v0, inputFrame:Landroid/filterfw/core/Frame;
     iget-object v5, p0, Landroid/media/effect/SingleFilterEffect;->mFunction:Landroid/filterfw/core/FilterFunction;
 
@@ -61,7 +56,6 @@
 
     move-result-object v4
 
-    .line 53
     .local v4, resultFrame:Landroid/filterfw/core/Frame;
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
@@ -71,7 +65,6 @@
 
     move-result v3
 
-    .line 54
     .local v3, outputWidth:I
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->getFormat()Landroid/filterfw/core/FrameFormat;
 
@@ -81,28 +74,21 @@
 
     move-result v2
 
-    .line 56
     .local v2, outputHeight:I
     invoke-virtual {p0, p4, v3, v2}, Landroid/media/effect/SizeChangeEffect;->frameFromTexture(III)Landroid/filterfw/core/Frame;
 
     move-result-object v1
 
-    .line 57
     .local v1, outputFrame:Landroid/filterfw/core/Frame;
     invoke-virtual {v1, v4}, Landroid/filterfw/core/Frame;->setDataFromFrame(Landroid/filterfw/core/Frame;)V
 
-    .line 59
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 60
     invoke-virtual {v1}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 61
     invoke-virtual {v4}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 63
     invoke-virtual {p0}, Landroid/media/effect/SizeChangeEffect;->endGLEffect()V
 
-    .line 64
     return-void
 .end method

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 65
     iput-object p1, p0, Landroid/bluetooth/BluetoothBipi$1;->this$0:Landroid/bluetooth/BluetoothBipi;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "service"
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/bluetooth/BluetoothBipi$1;->this$0:Landroid/bluetooth/BluetoothBipi;
 
     invoke-static {p2}, Landroid/bluetooth/IBluetoothBipi$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothBipi;
@@ -53,7 +51,6 @@
     #setter for: Landroid/bluetooth/BluetoothBipi;->mService:Landroid/bluetooth/IBluetoothBipi;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothBipi;->access$002(Landroid/bluetooth/BluetoothBipi;Landroid/bluetooth/IBluetoothBipi;)Landroid/bluetooth/IBluetoothBipi;
 
-    .line 68
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .parameter "className"
 
     .prologue
-    .line 70
     iget-object v0, p0, Landroid/bluetooth/BluetoothBipi$1;->this$0:Landroid/bluetooth/BluetoothBipi;
 
     const/4 v1, 0x0
@@ -70,6 +66,5 @@
     #setter for: Landroid/bluetooth/BluetoothBipi;->mService:Landroid/bluetooth/IBluetoothBipi;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothBipi;->access$002(Landroid/bluetooth/BluetoothBipi;Landroid/bluetooth/IBluetoothBipi;)Landroid/bluetooth/IBluetoothBipi;
 
-    .line 71
     return-void
 .end method

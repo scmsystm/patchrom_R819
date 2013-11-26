@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 107
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v0
@@ -37,13 +35,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 113
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 109
     :pswitch_0
     new-instance v0, Landroid/telephony/cdma/CdmaCellLocation;
 
@@ -51,7 +47,6 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_1
     new-instance v0, Landroid/telephony/gsm/GsmCellLocation;
 
@@ -59,7 +54,6 @@
 
     goto :goto_0
 
-    .line 107
     nop
 
     :pswitch_data_0
@@ -74,8 +68,7 @@
     .parameter "bundle"
 
     .prologue
-    .line 76
-    const-string/jumbo v0, "type"
+    const-string v0, "type"
 
     const/4 v1, 0x0
 
@@ -85,20 +78,17 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 84
     const-string v0, "CellLocation"
 
     const-string v1, "create null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 78
     :pswitch_0
     const-string v0, "CellLocation"
 
@@ -106,14 +96,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     new-instance v0, Landroid/telephony/cdma/CdmaCellLocation;
 
     invoke-direct {v0, p0}, Landroid/telephony/cdma/CdmaCellLocation;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 81
     :pswitch_1
     const-string v0, "CellLocation"
 
@@ -121,14 +109,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     new-instance v0, Landroid/telephony/gsm/GsmCellLocation;
 
     invoke-direct {v0, p0}, Landroid/telephony/gsm/GsmCellLocation;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_0
 
-    .line 76
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -140,9 +126,8 @@
     .locals 2
 
     .prologue
-    .line 50
     :try_start_0
-    const-string/jumbo v1, "phone"
+    const-string v1, "phone"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -152,21 +137,17 @@
 
     move-result-object v0
 
-    .line 51
     .local v0, phone:Lcom/android/internal/telephony/ITelephony;
     if-eqz v0, :cond_0
 
-    .line 52
     invoke-interface {v0}, Lcom/android/internal/telephony/ITelephony;->updateServiceLocation()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     :cond_0
     :goto_0
     return-void
 
-    .line 54
     :catch_0
     move-exception v1
 

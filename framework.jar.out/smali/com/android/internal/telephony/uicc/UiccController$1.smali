@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,21 +41,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 636
     if-nez p2, :cond_1
 
-    .line 662
     :cond_0
     :goto_0
     return-void
 
-    .line 637
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 638
     .local v0, action:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
@@ -64,7 +59,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "mIntentReceiver Receive action "
+    const-string v5, "mIntentReceiver Receive action "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -81,7 +76,6 @@
     #calls: Lcom/android/internal/telephony/uicc/UiccController;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/internal/telephony/uicc/UiccController;->access$000(Lcom/android/internal/telephony/uicc/UiccController;Ljava/lang/String;)V
 
-    .line 640
     const-string v3, "android.intent.action.ACTION_SHUTDOWN_IPO"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -90,22 +84,19 @@
 
     if-eqz v3, :cond_2
 
-    .line 641
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
-    const-string/jumbo v4, "mIntentReceiver ACTION_SHUTDOWN_IPO"
+    const-string v4, "mIntentReceiver ACTION_SHUTDOWN_IPO"
 
     #calls: Lcom/android/internal/telephony/uicc/UiccController;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/internal/telephony/uicc/UiccController;->access$000(Lcom/android/internal/telephony/uicc/UiccController;Ljava/lang/String;)V
 
-    .line 642
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/uicc/UiccController;->disableSimMissingNotification()V
 
     goto :goto_0
 
-    .line 643
     :cond_2
     sget-object v3, Lcom/android/internal/telephony/gemini/GeminiPhone;->EVENT_INITIALIZATION_FRAMEWORK_DONE:Ljava/lang/String;
 
@@ -115,7 +106,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 644
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     #getter for: Lcom/android/internal/telephony/uicc/UiccController;->mIsHotSwap:Z
@@ -125,13 +115,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 645
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     #setter for: Lcom/android/internal/telephony/uicc/UiccController;->mIsHotSwap:Z
     invoke-static {v3, v6}, Lcom/android/internal/telephony/uicc/UiccController;->access$102(Lcom/android/internal/telephony/uicc/UiccController;Z)Z
 
-    .line 646
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     #getter for: Lcom/android/internal/telephony/uicc/UiccController;->mContext:Landroid/content/Context;
@@ -149,7 +137,6 @@
 
     move-result v1
 
-    .line 650
     .local v1, airplaneMode:I
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
@@ -170,7 +157,6 @@
 
     move-result v2
 
-    .line 655
     .local v2, dualSimMode:I
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
@@ -178,7 +164,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "mIntentReceiver EVENT_INITIALIZATION_FRAMEWORK_DONE airplaneMode:"
+    const-string v5, "mIntentReceiver EVENT_INITIALIZATION_FRAMEWORK_DONE airplaneMode:"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -205,7 +191,6 @@
     #calls: Lcom/android/internal/telephony/uicc/UiccController;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/android/internal/telephony/uicc/UiccController;->access$000(Lcom/android/internal/telephony/uicc/UiccController;Ljava/lang/String;)V
 
-    .line 656
     if-nez v1, :cond_0
 
     const/4 v3, 0x1
@@ -222,7 +207,6 @@
 
     if-lez v3, :cond_0
 
-    .line 658
     iget-object v3, p0, Lcom/android/internal/telephony/uicc/UiccController$1;->this$0:Lcom/android/internal/telephony/uicc/UiccController;
 
     #getter for: Lcom/android/internal/telephony/uicc/UiccController;->mCi:Lcom/android/internal/telephony/CommandsInterface;

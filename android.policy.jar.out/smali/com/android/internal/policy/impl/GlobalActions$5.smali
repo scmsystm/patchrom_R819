@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 415
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     iput-object p5, p0, Lcom/android/internal/policy/impl/GlobalActions$5;->val$user:Landroid/content/pm/UserInfo;
@@ -46,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 418
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -60,15 +58,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 422
     :goto_0
     return-void
 
-    .line 419
     :catch_0
     move-exception v0
 
-    .line 420
     .local v0, re:Landroid/os/RemoteException;
     const-string v1, "GlobalActions"
 
@@ -99,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 429
     const/4 v0, 0x0
 
     return v0
@@ -109,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 425
     const/4 v0, 0x1
 
     return v0

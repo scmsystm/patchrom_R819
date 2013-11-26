@@ -26,10 +26,8 @@
     .parameter "context"
 
     .prologue
-    .line 499
     invoke-direct {p0, p1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;)V
 
-    .line 500
     return-void
 .end method
 
@@ -40,10 +38,8 @@
     .parameter "id"
 
     .prologue
-    .line 506
     iput p1, p0, Landroid/app/NotificationManagerPlus$DialogPlus;->mId:I
 
-    .line 507
     return-void
 .end method
 
@@ -52,9 +48,7 @@
     .parameter "packageName"
 
     .prologue
-    .line 510
     iput-object p1, p0, Landroid/app/NotificationManagerPlus$DialogPlus;->mPackageName:Ljava/lang/String;
 
-    .line 511
     return-void
 .end method

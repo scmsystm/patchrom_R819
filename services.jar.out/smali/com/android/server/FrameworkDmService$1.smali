@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/android/server/FrameworkDmService$1;->this$0:Lcom/android/server/FrameworkDmService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 61
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
     .local v0, action:Ljava/lang/String;
     const-string v1, "com.mediatek.dm.LAWMO_LOCK"
 
@@ -55,19 +52,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 64
     iget-object v1, p0, Lcom/android/server/FrameworkDmService$1;->this$0:Lcom/android/server/FrameworkDmService;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/android/server/FrameworkDmService;->dmEnable(Z)I
 
-    .line 68
     :cond_0
     :goto_0
     return-void
 
-    .line 65
     :cond_1
     const-string v1, "com.mediatek.dm.LAWMO_UNLOCK"
 
@@ -77,7 +71,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 66
     iget-object v1, p0, Lcom/android/server/FrameworkDmService$1;->this$0:Lcom/android/server/FrameworkDmService;
 
     const/4 v2, 0x1

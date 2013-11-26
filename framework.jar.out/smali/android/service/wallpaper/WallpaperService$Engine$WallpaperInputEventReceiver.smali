@@ -26,13 +26,10 @@
     .parameter "looper"
 
     .prologue
-    .line 258
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService$Engine$WallpaperInputEventReceiver;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
-    .line 259
     invoke-direct {p0, p2, p3}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 260
     return-void
 .end method
 
@@ -43,10 +40,8 @@
     .parameter "event"
 
     .prologue
-    .line 264
     const/4 v2, 0x0
 
-    .line 266
     .local v2, handled:Z
     :try_start_0
     instance-of v3, p1, Landroid/view/MotionEvent;
@@ -61,7 +56,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 268
     move-object v0, p1
 
     check-cast v0, Landroid/view/MotionEvent;
@@ -72,7 +66,6 @@
 
     move-result-object v1
 
-    .line 269
     .local v1, dup:Landroid/view/MotionEvent;
     iget-object v3, p0, Landroid/service/wallpaper/WallpaperService$Engine$WallpaperInputEventReceiver;->this$1:Landroid/service/wallpaper/WallpaperService$Engine;
 
@@ -81,18 +74,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 270
     const/4 v2, 0x1
 
-    .line 273
     .end local v1           #dup:Landroid/view/MotionEvent;
     :cond_0
     invoke-virtual {p0, p1, v2}, Landroid/service/wallpaper/WallpaperService$Engine$WallpaperInputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
-    .line 275
     return-void
 
-    .line 273
     :catchall_0
     move-exception v3
 

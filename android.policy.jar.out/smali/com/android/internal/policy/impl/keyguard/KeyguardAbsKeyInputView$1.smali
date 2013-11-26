@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "v"
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardAbsKeyInputView;->mCallback:Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;
@@ -51,6 +49,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;->userActivity(J)V
 
-    .line 111
     return-void
 .end method

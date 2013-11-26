@@ -19,18 +19,13 @@
     .parameter "DMport"
 
     .prologue
-    .line 53
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p1, p0, Lcom/android/internal/telephony/DMOperatorInfo;->mOpname:Ljava/lang/String;
 
-    .line 56
     iput-object p2, p0, Lcom/android/internal/telephony/DMOperatorInfo;->mDMnum:Ljava/lang/String;
 
-    .line 57
     iput p3, p0, Lcom/android/internal/telephony/DMOperatorInfo;->mDMport:I
 
-    .line 58
     return-void
 .end method

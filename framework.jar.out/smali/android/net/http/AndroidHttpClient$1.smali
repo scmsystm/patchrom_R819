@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 101
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .parameter "context"
 
     .prologue
-    .line 104
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -53,7 +51,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 105
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "This thread forbids HTTP requests"
@@ -62,7 +59,6 @@
 
     throw v0
 
-    .line 107
     :cond_0
     return-void
 .end method

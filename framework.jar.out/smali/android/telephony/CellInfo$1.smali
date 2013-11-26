@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 196
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,16 +44,13 @@
     .parameter "in"
 
     .prologue
-    .line 199
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 200
     .local v0, type:I
     packed-switch v0, :pswitch_data_0
 
-    .line 204
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Bad CellInfo Parcel"
@@ -63,17 +59,14 @@
 
     throw v1
 
-    .line 201
     :pswitch_0
     invoke-static {p1}, Landroid/telephony/CellInfoGsm;->createFromParcelBody(Landroid/os/Parcel;)Landroid/telephony/CellInfoGsm;
 
     move-result-object v1
 
-    .line 203
     :goto_0
     return-object v1
 
-    .line 202
     :pswitch_1
     invoke-static {p1}, Landroid/telephony/CellInfoCdma;->createFromParcelBody(Landroid/os/Parcel;)Landroid/telephony/CellInfoCdma;
 
@@ -81,7 +74,6 @@
 
     goto :goto_0
 
-    .line 203
     :pswitch_2
     invoke-static {p1}, Landroid/telephony/CellInfoLte;->createFromParcelBody(Landroid/os/Parcel;)Landroid/telephony/CellInfoLte;
 
@@ -89,7 +81,6 @@
 
     goto :goto_0
 
-    .line 200
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -103,7 +94,6 @@
     .parameter "x0"
 
     .prologue
-    .line 196
     invoke-virtual {p0, p1}, Landroid/telephony/CellInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/CellInfo;
 
     move-result-object v0
@@ -116,7 +106,6 @@
     .parameter "size"
 
     .prologue
-    .line 210
     new-array v0, p1, [Landroid/telephony/CellInfo;
 
     return-object v0
@@ -127,7 +116,6 @@
     .parameter "x0"
 
     .prologue
-    .line 196
     invoke-virtual {p0, p1}, Landroid/telephony/CellInfo$1;->newArray(I)[Landroid/telephony/CellInfo;
 
     move-result-object v0

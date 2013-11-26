@@ -41,16 +41,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 83
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     iput-boolean v0, p0, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->useSingleShift:Z
 
-    .line 122
     iput-boolean v0, p0, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->useLockingShift:Z
 
-    .line 124
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/telephony/GsmAlphabet$TextEncodingDetails;->shiftLangId:I
@@ -64,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

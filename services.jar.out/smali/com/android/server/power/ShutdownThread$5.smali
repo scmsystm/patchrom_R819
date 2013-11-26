@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 592
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +39,9 @@
     .parameter "intent"
 
     .prologue
-    .line 595
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$5;->this$0:Lcom/android/server/power/ShutdownThread;
 
     invoke-virtual {v0}, Lcom/android/server/power/ShutdownThread;->actionDone()V
 
-    .line 596
     return-void
 .end method

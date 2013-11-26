@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 369
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 373
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 374
     .local v3, action:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -55,7 +52,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "onReceive: action="
+    const-string v15, "onReceive: action="
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -71,7 +68,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 375
     const-string v13, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v3, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,7 +76,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 376
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -89,29 +84,25 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mIsScreenOn:Z
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->stopNetStatPoll()V
 
-    .line 378
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->startNetStatPoll()V
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->restartDataStallAlarm()V
 
-    .line 382
-    const-string/jumbo v13, "ril.fd.mode"
+    const-string v13, "ril.fd.mode"
 
     const-string v14, "0"
 
@@ -123,7 +114,6 @@
 
     move-result v2
 
-    .line 383
     .local v2, FD_MD_Enable_Mode:I
     const-string v13, "gsm.3gswitch"
 
@@ -139,7 +129,6 @@
 
     const/4 v1, 0x1
 
-    .line 384
     .local v1, FDSimID:I
     :goto_0
     move-object/from16 v0, p0
@@ -182,12 +171,10 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 385
     const/4 v13, 0x1
 
     if-ne v2, v13, :cond_2
 
-    .line 387
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -200,7 +187,6 @@
 
     if-ne v13, v1, :cond_0
 
-    .line 388
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -233,21 +219,18 @@
 
     invoke-interface/range {v13 .. v17}, Lcom/android/internal/telephony/CommandsInterface;->setFDMode(IIILandroid/os/Message;)V
 
-    .line 529
     .end local v1           #FDSimID:I
     .end local v2           #FD_MD_Enable_Mode:I
     :cond_0
     :goto_1
     return-void
 
-    .line 383
     .restart local v2       #FD_MD_Enable_Mode:I
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 392
     .restart local v1       #FDSimID:I
     :cond_2
     move-object/from16 v0, p0
@@ -256,7 +239,6 @@
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->stopScriPoll()V
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -265,7 +247,6 @@
 
     goto :goto_1
 
-    .line 396
     .end local v1           #FDSimID:I
     .end local v2           #FD_MD_Enable_Mode:I
     :cond_3
@@ -277,7 +258,6 @@
 
     if-eqz v13, :cond_6
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -286,29 +266,25 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mIsScreenOn:Z
 
-    .line 398
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->stopNetStatPoll()V
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->startNetStatPoll()V
 
-    .line 400
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->restartDataStallAlarm()V
 
-    .line 403
-    const-string/jumbo v13, "ril.fd.mode"
+    const-string v13, "ril.fd.mode"
 
     const-string v14, "0"
 
@@ -320,7 +296,6 @@
 
     move-result v2
 
-    .line 404
     .restart local v2       #FD_MD_Enable_Mode:I
     const-string v13, "gsm.3gswitch"
 
@@ -336,14 +311,12 @@
 
     const/4 v1, 0x1
 
-    .line 405
     .restart local v1       #FDSimID:I
     :goto_2
     const/4 v13, 0x1
 
     if-ne v2, v13, :cond_5
 
-    .line 407
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -384,7 +357,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 408
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -397,7 +369,6 @@
 
     if-ne v13, v1, :cond_0
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -432,14 +403,12 @@
 
     goto/16 :goto_1
 
-    .line 404
     .end local v1           #FDSimID:I
     :cond_4
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 413
     .restart local v1       #FDSimID:I
     :cond_5
     move-object/from16 v0, p0
@@ -448,7 +417,6 @@
 
     invoke-virtual {v13}, Lcom/android/internal/telephony/DataConnectionTracker;->stopScriPoll()V
 
-    .line 414
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -457,7 +425,6 @@
 
     goto/16 :goto_1
 
-    .line 416
     .end local v1           #FDSimID:I
     .end local v2           #FD_MD_Enable_Mode:I
     :cond_6
@@ -475,7 +442,6 @@
 
     if-eqz v13, :cond_7
 
-    .line 417
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -506,7 +472,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 418
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -517,7 +482,6 @@
 
     goto/16 :goto_1
 
-    .line 419
     :cond_7
     move-object/from16 v0, p0
 
@@ -533,7 +497,6 @@
 
     if-eqz v13, :cond_8
 
-    .line 421
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -544,7 +507,7 @@
 
     move-result v13
 
-    const-string/jumbo v14, "simId"
+    const-string v14, "simId"
 
     const/4 v15, -0x1
 
@@ -556,7 +519,6 @@
 
     if-ne v13, v14, :cond_0
 
-    .line 422
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -567,7 +529,6 @@
 
     goto/16 :goto_1
 
-    .line 427
     :cond_8
     const-string v13, "android.net.wifi.STATE_CHANGE"
 
@@ -577,8 +538,7 @@
 
     if-eqz v13, :cond_b
 
-    .line 428
-    const-string/jumbo v13, "networkInfo"
+    const-string v13, "networkInfo"
 
     move-object/from16 v0, p2
 
@@ -588,7 +548,6 @@
 
     check-cast v6, Landroid/net/NetworkInfo;
 
-    .line 430
     .local v6, networkInfo:Landroid/net/NetworkInfo;
     move-object/from16 v0, p0
 
@@ -607,7 +566,6 @@
     :goto_3
     iput-boolean v13, v14, Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
 
-    .line 432
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -638,7 +596,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 435
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -647,7 +604,6 @@
 
     move-result v4
 
-    .line 436
     .local v4, currentDataConnectionSimId:I
     move-object/from16 v0, p0
 
@@ -693,7 +649,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 437
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -706,7 +661,6 @@
 
     if-ne v13, v4, :cond_0
 
-    .line 438
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -727,16 +681,14 @@
 
     if-eqz v13, :cond_a
 
-    .line 439
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
-    const-string/jumbo v14, "mIsWifiConnected is true and DEFAULT is enabled."
+    const-string v14, "mIsWifiConnected is true and DEFAULT is enabled."
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 440
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -749,14 +701,12 @@
 
     goto/16 :goto_1
 
-    .line 430
     .end local v4           #currentDataConnectionSimId:I
     :cond_9
     const/4 v13, 0x0
 
     goto/16 :goto_3
 
-    .line 441
     .restart local v4       #currentDataConnectionSimId:I
     :cond_a
     move-object/from16 v0, p0
@@ -779,16 +729,14 @@
 
     if-nez v13, :cond_0
 
-    .line 442
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
-    const-string/jumbo v14, "mIsWifiConnected is false and DEFAULT is NOT enabled."
+    const-string v14, "mIsWifiConnected is false and DEFAULT is NOT enabled."
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 443
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -801,7 +749,6 @@
 
     goto/16 :goto_1
 
-    .line 448
     .end local v4           #currentDataConnectionSimId:I
     .end local v6           #networkInfo:Landroid/net/NetworkInfo;
     :cond_b
@@ -813,8 +760,7 @@
 
     if-eqz v13, :cond_d
 
-    .line 449
-    const-string/jumbo v13, "wifi_state"
+    const-string v13, "wifi_state"
 
     const/4 v14, 0x4
 
@@ -830,7 +776,6 @@
 
     const/4 v5, 0x1
 
-    .line 451
     .local v5, enabled:Z
     :goto_4
     move-object/from16 v0, p0
@@ -873,10 +818,8 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 452
     if-nez v5, :cond_0
 
-    .line 455
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -885,7 +828,6 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mIsWifiConnected:Z
 
-    .line 458
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -894,7 +836,6 @@
 
     move-result v4
 
-    .line 459
     .restart local v4       #currentDataConnectionSimId:I
     move-object/from16 v0, p0
 
@@ -940,7 +881,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->logd(Ljava/lang/String;)V
 
-    .line 460
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -953,7 +893,6 @@
 
     if-ne v13, v4, :cond_0
 
-    .line 461
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -966,7 +905,6 @@
 
     if-nez v13, :cond_0
 
-    .line 462
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -979,7 +917,6 @@
 
     goto/16 :goto_1
 
-    .line 449
     .end local v4           #currentDataConnectionSimId:I
     .end local v5           #enabled:Z
     :cond_c
@@ -987,7 +924,6 @@
 
     goto/16 :goto_4
 
-    .line 468
     :cond_d
     const-string v13, "com.android.internal.telephony.dataconnectiontracker.intent_set_fail_data_setup_counter"
 
@@ -997,7 +933,6 @@
 
     if-eqz v13, :cond_e
 
-    .line 469
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1014,7 +949,6 @@
 
     iput v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mFailDataSetupCounter:I
 
-    .line 470
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1039,7 +973,6 @@
 
     iput-object v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mFailDataSetupFailCause:Lcom/android/internal/telephony/DataConnection$FailCause;
 
-    .line 473
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1048,7 +981,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "set mFailDataSetupCounter="
+    const-string v15, "set mFailDataSetupCounter="
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1088,7 +1021,6 @@
 
     goto/16 :goto_1
 
-    .line 475
     :cond_e
     const-string v13, "android.intent.action.BATTERY_CHANGED"
 
@@ -1098,8 +1030,7 @@
 
     if-eqz v13, :cond_0
 
-    .line 477
-    const-string/jumbo v13, "status"
+    const-string v13, "status"
 
     const/4 v14, 0x0
 
@@ -1109,9 +1040,8 @@
 
     move-result v12
 
-    .line 478
     .local v12, status:I
-    const-string/jumbo v13, "plugged"
+    const-string v13, "plugged"
 
     const/4 v14, 0x0
 
@@ -1121,7 +1051,6 @@
 
     move-result v7
 
-    .line 479
     .local v7, plugged:I
     move-object/from16 v0, p0
 
@@ -1129,20 +1058,17 @@
 
     iget-boolean v8, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mChargingMode:Z
 
-    .line 481
     .local v8, previousChargingMode:Z
     const-string v10, ""
 
     .local v10, sChargingModeStr:Ljava/lang/String;
     const-string v11, ""
 
-    .line 482
     .local v11, sPluggedStr:Ljava/lang/String;
     const/4 v13, 0x2
 
     if-ne v12, v13, :cond_15
 
-    .line 483
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1151,19 +1077,15 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mChargingMode:Z
 
-    .line 484
     const-string v10, "Charging"
 
-    .line 490
     :goto_5
     const/4 v13, 0x1
 
     if-ne v7, v13, :cond_16
 
-    .line 491
     const-string v11, "Plugged in AC"
 
-    .line 497
     :cond_f
     :goto_6
     const/4 v13, 0x1
@@ -1174,7 +1096,6 @@
 
     if-ne v7, v13, :cond_11
 
-    .line 498
     :cond_10
     move-object/from16 v0, p0
 
@@ -1184,9 +1105,8 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mChargingMode:Z
 
-    .line 503
     :cond_11
-    const-string/jumbo v13, "ril.fd.mode"
+    const-string v13, "ril.fd.mode"
 
     const-string v14, "0"
 
@@ -1198,7 +1118,6 @@
 
     move-result v2
 
-    .line 504
     .restart local v2       #FD_MD_Enable_Mode:I
     const-string v13, "gsm.3gswitch"
 
@@ -1214,7 +1133,6 @@
 
     const/4 v1, 0x1
 
-    .line 506
     .restart local v1       #FDSimID:I
     :goto_7
     move-object/from16 v0, p0
@@ -1223,7 +1141,6 @@
 
     iget v9, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mEnableFDOnCharing:I
 
-    .line 507
     .local v9, previousEnableFDOnCharging:I
     move-object/from16 v0, p0
 
@@ -1243,7 +1160,6 @@
 
     iput v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mEnableFDOnCharing:I
 
-    .line 509
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1260,7 +1176,6 @@
 
     if-eq v9, v13, :cond_13
 
-    .line 510
     :cond_12
     move-object/from16 v0, p0
 
@@ -1302,7 +1217,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 511
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1311,7 +1225,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "previousEnableFDOnCharging="
+    const-string v15, "previousEnableFDOnCharging="
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1349,7 +1263,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 512
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1358,7 +1271,7 @@
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v15, "previousChargingMode="
+    const-string v15, "previousChargingMode="
 
     invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1416,13 +1329,11 @@
 
     invoke-virtual {v13, v14}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
-    .line 515
     :cond_13
     const/4 v13, 0x1
 
     if-ne v2, v13, :cond_0
 
-    .line 517
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1435,7 +1346,6 @@
 
     if-ne v13, v1, :cond_0
 
-    .line 518
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1452,7 +1362,6 @@
 
     if-eq v9, v13, :cond_0
 
-    .line 519
     :cond_14
     move-object/from16 v0, p0
 
@@ -1470,7 +1379,6 @@
 
     if-nez v13, :cond_18
 
-    .line 520
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/internal/telephony/DataConnectionTracker$1;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
@@ -1505,7 +1413,6 @@
 
     goto/16 :goto_1
 
-    .line 486
     .end local v1           #FDSimID:I
     .end local v2           #FD_MD_Enable_Mode:I
     .end local v9           #previousEnableFDOnCharging:I
@@ -1518,30 +1425,25 @@
 
     iput-boolean v14, v13, Lcom/android/internal/telephony/DataConnectionTracker;->mChargingMode:Z
 
-    .line 487
     const-string v10, "Non-Charging"
 
     goto/16 :goto_5
 
-    .line 492
     :cond_16
     const/4 v13, 0x2
 
     if-ne v7, v13, :cond_f
 
-    .line 493
     const-string v11, "Plugged in USB"
 
     goto/16 :goto_6
 
-    .line 504
     .restart local v2       #FD_MD_Enable_Mode:I
     :cond_17
     const/4 v1, 0x0
 
     goto/16 :goto_7
 
-    .line 522
     .restart local v1       #FDSimID:I
     .restart local v9       #previousEnableFDOnCharging:I
     :cond_18

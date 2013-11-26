@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 544
     iput-object p1, p0, Lcom/android/server/TwilightService$2;->this$0:Lcom/android/server/TwilightService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "location"
 
     .prologue
-    .line 546
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .parameter "provider"
 
     .prologue
-    .line 549
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .parameter "provider"
 
     .prologue
-    .line 552
     return-void
 .end method
 
@@ -71,6 +67,5 @@
     .parameter "extras"
 
     .prologue
-    .line 555
     return-void
 .end method

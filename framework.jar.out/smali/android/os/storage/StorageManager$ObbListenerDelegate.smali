@@ -40,12 +40,10 @@
     .parameter "listener"
 
     .prologue
-    .line 164
     iput-object p1, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
     #calls: Landroid/os/storage/StorageManager;->getNextNonce()I
     invoke-static {p1}, Landroid/os/storage/StorageManager;->access$300(Landroid/os/storage/StorageManager;)I
 
@@ -53,14 +51,12 @@
 
     iput v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->nonce:I
 
-    .line 166
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mObbEventListenerRef:Ljava/lang/ref/WeakReference;
 
-    .line 167
     new-instance v0, Landroid/os/storage/StorageManager$ObbListenerDelegate$1;
 
     iget-object v1, p1, Landroid/os/storage/StorageManager;->mTgtLooper:Landroid/os/Looper;
@@ -69,7 +65,6 @@
 
     iput-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mHandler:Landroid/os/Handler;
 
-    .line 185
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .parameter "x0"
 
     .prologue
-    .line 158
     iget v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->nonce:I
 
     return v0
@@ -90,15 +84,12 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-object v0, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mObbEventListenerRef:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
-    .line 189
     const/4 v0, 0x0
 
-    .line 191
     :goto_0
     return-object v0
 
@@ -120,14 +111,12 @@
     .parameter "state"
 
     .prologue
-    .line 195
     new-instance v0, Landroid/os/storage/StorageManager$ObbStateChangedStorageEvent;
 
     iget-object v1, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->this$0:Landroid/os/storage/StorageManager;
 
     invoke-direct {v0, v1, p1, p2}, Landroid/os/storage/StorageManager$ObbStateChangedStorageEvent;-><init>(Landroid/os/storage/StorageManager;Ljava/lang/String;I)V
 
-    .line 196
     .local v0, e:Landroid/os/storage/StorageManager$ObbStateChangedStorageEvent;
     iget-object v1, p0, Landroid/os/storage/StorageManager$ObbListenerDelegate;->mHandler:Landroid/os/Handler;
 
@@ -137,6 +126,5 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 197
     return-void
 .end method

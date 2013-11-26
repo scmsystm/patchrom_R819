@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1548
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,22 +40,18 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1551
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 1552
     .local v6, bundle:Landroid/os/Bundle;
     const/4 v9, 0x0
 
-    .line 1553
     .local v9, type:I
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1592
     :pswitch_0
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -65,12 +60,10 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 1595
     :cond_0
     :goto_0
     return-void
 
-    .line 1555
     :pswitch_1
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -85,7 +78,6 @@
 
     goto :goto_0
 
-    .line 1558
     :pswitch_2
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -118,7 +110,6 @@
 
     goto :goto_0
 
-    .line 1561
     :pswitch_3
     new-instance v8, Landroid/content/Intent;
 
@@ -126,7 +117,6 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1562
     .local v8, intent:Landroid/content/Intent;
     const-string v0, "msg"
 
@@ -138,7 +128,6 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1563
     const-string v0, "type"
 
     const-string v1, "type"
@@ -149,7 +138,6 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1564
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->agpsSendBroadcast(Landroid/content/Intent;)V
@@ -157,7 +145,6 @@
 
     goto :goto_0
 
-    .line 1567
     .end local v8           #intent:Landroid/content/Intent;
     :pswitch_4
     const-string v0, "type"
@@ -166,10 +153,8 @@
 
     move-result v9
 
-    .line 1568
     if-nez v9, :cond_1
 
-    .line 1569
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -179,7 +164,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1570
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mLocationManager:Landroid/location/LocationManager;
@@ -198,11 +182,9 @@
 
     goto :goto_0
 
-    .line 1571
     :cond_1
     if-ne v9, v2, :cond_2
 
-    .line 1572
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v1, "force enable GPS setting and acquire wakelock"
@@ -210,7 +192,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 1573
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -220,7 +201,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1574
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mContext:Landroid/content/Context;
@@ -236,7 +216,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1576
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mLocationManager:Landroid/location/LocationManager;
@@ -261,49 +240,40 @@
 
     goto/16 :goto_0
 
-    .line 1577
     :cond_2
     const/4 v0, 0x2
 
     if-ne v9, v0, :cond_0
 
-    .line 1578
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 1579
     .local v7, extras:Landroid/os/Bundle;
     const-string v0, "ephemeris"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1580
     const-string v0, "almanac"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1581
     const-string v0, "position"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1582
     const-string v0, "time"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1583
     const-string v0, "iono"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1584
     const-string v0, "utc"
 
     invoke-virtual {v7, v0, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1585
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #getter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mLocationManager:Landroid/location/LocationManager;
@@ -319,7 +289,6 @@
 
     goto/16 :goto_0
 
-    .line 1589
     .end local v7           #extras:Landroid/os/Bundle;
     :pswitch_5
     iget-object v0, p0, Lcom/mediatek/agps/MtkAgpsManagerService$5;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -335,7 +304,6 @@
 
     goto/16 :goto_0
 
-    .line 1553
     nop
 
     :pswitch_data_0

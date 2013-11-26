@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 140
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "Pattern"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Pattern:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 145
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "SimPin"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPin:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 150
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "SimPuk"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->SimPuk:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 155
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "Account"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Account:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 160
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "Password"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Password:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 165
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     const-string v1, "Unknown"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->Unknown:Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
-    .line 135
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
@@ -157,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 135
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -168,7 +160,6 @@
     .parameter "name"
 
     .prologue
-    .line 135
     const-class v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -184,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 135
     sget-object v0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->$VALUES:[Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;
 
     invoke-virtual {v0}, [Lcom/android/internal/policy/impl/LockPatternKeyguardView$UnlockMode;->clone()Ljava/lang/Object;

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 692
     iput-object p1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,19 +40,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 695
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 767
     const/4 v0, 0x0
 
-    .line 769
     :goto_0
     return v0
 
-    .line 697
     :sswitch_0
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -64,7 +59,6 @@
 
     goto :goto_0
 
-    .line 701
     :sswitch_1
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -75,7 +69,6 @@
 
     goto :goto_0
 
-    .line 705
     :sswitch_2
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -86,7 +79,6 @@
 
     goto :goto_0
 
-    .line 709
     :sswitch_3
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 713
     :sswitch_4
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 717
     :sswitch_5
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -119,7 +109,6 @@
 
     goto :goto_0
 
-    .line 721
     :sswitch_6
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 725
     :sswitch_7
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -141,7 +129,6 @@
 
     goto :goto_0
 
-    .line 729
     :sswitch_8
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -152,7 +139,6 @@
 
     goto :goto_0
 
-    .line 733
     :sswitch_9
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -163,7 +149,6 @@
 
     goto :goto_0
 
-    .line 737
     :sswitch_a
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -174,7 +159,6 @@
 
     goto :goto_0
 
-    .line 741
     :sswitch_b
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -185,7 +169,6 @@
 
     goto :goto_0
 
-    .line 745
     :sswitch_c
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -196,7 +179,6 @@
 
     goto :goto_0
 
-    .line 750
     :sswitch_d
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -207,7 +189,6 @@
 
     goto :goto_0
 
-    .line 755
     :sswitch_e
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -218,7 +199,6 @@
 
     goto/16 :goto_0
 
-    .line 759
     :sswitch_f
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -229,7 +209,6 @@
 
     goto/16 :goto_0
 
-    .line 763
     :sswitch_10
     iget-object v1, p0, Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine$P2pNotSupportedState;->this$1:Landroid/net/wifi/p2p/WifiP2pService$P2pStateMachine;
 
@@ -240,7 +219,6 @@
 
     goto/16 :goto_0
 
-    .line 695
     :sswitch_data_0
     .sparse-switch
         0x22001 -> :sswitch_0

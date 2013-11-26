@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 4674
     iput-object p1, p0, Landroid/media/AudioService$4;->this$0:Landroid/media/AudioService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,25 +39,20 @@
     .parameter "intent"
 
     .prologue
-    .line 4676
     if-nez p2, :cond_1
 
-    .line 4686
     :cond_0
     :goto_0
     return-void
 
-    .line 4679
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 4680
     .local v0, extras:Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 4683
     const-string v1, "android.media.AudioService.WAKELOCK_ACQUIRED"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -67,7 +61,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4684
     iget-object v1, p0, Landroid/media/AudioService$4;->this$0:Landroid/media/AudioService;
 
     #getter for: Landroid/media/AudioService;->mMediaEventWakeLock:Landroid/os/PowerManager$WakeLock;

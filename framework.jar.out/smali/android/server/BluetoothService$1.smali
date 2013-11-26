@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 645
     iput-object p1, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,44 +38,36 @@
     .parameter "msg"
 
     .prologue
-    .line 648
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 686
     :cond_0
     :goto_0
     return-void
 
-    .line 650
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 651
     .local v0, address:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 652
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v4, v0}, Landroid/server/BluetoothService;->sendUuidIntent(Ljava/lang/String;)V
 
-    .line 653
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v4, v0}, Landroid/server/BluetoothService;->makeServiceChannelCallbacks(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 657
     .end local v0           #address:Ljava/lang/String;
     :pswitch_1
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 658
     .local v2, mode:I
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -87,7 +78,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 662
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     const/16 v5, 0x15
@@ -98,18 +88,15 @@
 
     goto :goto_0
 
-    .line 666
     .end local v2           #mode:I
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 667
     .restart local v0       #address:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 668
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothBondState;
@@ -121,7 +108,6 @@
 
     move-result v1
 
-    .line 674
     .local v1, attempt:I
     if-lez v1, :cond_1
 
@@ -129,7 +115,6 @@
 
     if-gt v1, v4, :cond_1
 
-    .line 675
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBondState:Landroid/server/BluetoothBondState;
@@ -139,14 +124,12 @@
 
     invoke-virtual {v4, v0}, Landroid/server/BluetoothBondState;->attempt(Ljava/lang/String;)V
 
-    .line 676
     iget-object v4, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
     invoke-virtual {v4, v0}, Landroid/server/BluetoothService;->createBond(Ljava/lang/String;)Z
 
     goto :goto_0
 
-    .line 679
     :cond_1
     if-lez v1, :cond_0
 
@@ -161,7 +144,6 @@
 
     goto :goto_0
 
-    .line 682
     .end local v0           #address:Ljava/lang/String;
     .end local v1           #attempt:I
     :pswitch_3
@@ -169,7 +151,6 @@
 
     check-cast v3, Landroid/util/Pair;
 
-    .line 683
     .local v3, pair:Landroid/util/Pair;,"Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     iget-object v5, p0, Landroid/server/BluetoothService$1;->this$0:Landroid/server/BluetoothService;
 
@@ -194,7 +175,6 @@
 
     goto :goto_0
 
-    .line 648
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -61,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 95
     invoke-static {}, Landroid/util/DisplayMetrics;->getDeviceDensity()I
 
     move-result v0
@@ -75,10 +74,8 @@
     .locals 0
 
     .prologue
-    .line 186
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 187
     return-void
 .end method
 
@@ -86,10 +83,9 @@
     .locals 3
 
     .prologue
-    .line 269
-    const-string/jumbo v0, "qemu.sf.lcd_density"
+    const-string v0, "qemu.sf.lcd_density"
 
-    const-string/jumbo v1, "ro.sf.lcd_density"
+    const-string v1, "ro.sf.lcd_density"
 
     const/16 v2, 0xa0
 
@@ -111,7 +107,6 @@
     .parameter "other"
 
     .prologue
-    .line 235
     if-eqz p1, :cond_0
 
     iget v0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -230,7 +225,6 @@
     .parameter "o"
 
     .prologue
-    .line 225
     instance-of v0, p1, Landroid/util/DisplayMetrics;
 
     if-eqz v0, :cond_0
@@ -259,7 +253,6 @@
     .locals 2
 
     .prologue
-    .line 254
     iget v0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v1, p0, Landroid/util/DisplayMetrics;->heightPixels:I
@@ -278,77 +271,62 @@
     .parameter "o"
 
     .prologue
-    .line 190
     iget v0, p1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 191
     iget v0, p1, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 192
     iget v0, p1, Landroid/util/DisplayMetrics;->density:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 193
     iget v0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 194
     iget v0, p1, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
-    .line 195
     iget v0, p1, Landroid/util/DisplayMetrics;->xdpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->xdpi:F
 
-    .line 196
     iget v0, p1, Landroid/util/DisplayMetrics;->ydpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->ydpi:F
 
-    .line 197
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatWidthPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatWidthPixels:I
 
-    .line 198
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatHeightPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatHeightPixels:I
 
-    .line 199
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatDensity:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatDensity:F
 
-    .line 200
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatDensityDpi:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatDensityDpi:I
 
-    .line 201
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatScaledDensity:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatScaledDensity:F
 
-    .line 202
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatXdpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatXdpi:F
 
-    .line 203
     iget v0, p1, Landroid/util/DisplayMetrics;->noncompatYdpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatYdpi:F
 
-    .line 204
     return-void
 .end method
 
@@ -358,13 +336,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 207
     iput v0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 208
     iput v0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 209
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     int-to-float v0, v0
@@ -375,66 +350,54 @@
 
     iput v0, p0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 210
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 211
     iget v0, p0, Landroid/util/DisplayMetrics;->density:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
-    .line 212
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     int-to-float v0, v0
 
     iput v0, p0, Landroid/util/DisplayMetrics;->xdpi:F
 
-    .line 213
     sget v0, Landroid/util/DisplayMetrics;->DENSITY_DEVICE:I
 
     int-to-float v0, v0
 
     iput v0, p0, Landroid/util/DisplayMetrics;->ydpi:F
 
-    .line 214
     iget v0, p0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatWidthPixels:I
 
-    .line 215
     iget v0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatHeightPixels:I
 
-    .line 216
     iget v0, p0, Landroid/util/DisplayMetrics;->density:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatDensity:F
 
-    .line 217
     iget v0, p0, Landroid/util/DisplayMetrics;->densityDpi:I
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatDensityDpi:I
 
-    .line 218
     iget v0, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatScaledDensity:F
 
-    .line 219
     iget v0, p0, Landroid/util/DisplayMetrics;->xdpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatXdpi:F
 
-    .line 220
     iget v0, p0, Landroid/util/DisplayMetrics;->ydpi:F
 
     iput v0, p0, Landroid/util/DisplayMetrics;->noncompatYdpi:F
 
-    .line 221
     return-void
 .end method
 
@@ -442,7 +405,6 @@
     .locals 2
 
     .prologue
-    .line 259
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -519,7 +481,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

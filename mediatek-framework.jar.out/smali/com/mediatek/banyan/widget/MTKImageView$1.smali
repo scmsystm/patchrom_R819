@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 133
     iput-object p1, p0, Lcom/mediatek/banyan/widget/MTKImageView$1;->this$0:Lcom/mediatek/banyan/widget/MTKImageView;
 
     iput-object p2, p0, Lcom/mediatek/banyan/widget/MTKImageView$1;->val$action:Ljava/lang/String;
@@ -53,7 +52,6 @@
 
     const/high16 v6, 0x3f00
 
-    .line 136
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -68,22 +66,18 @@
 
     iget v0, v4, Landroid/content/res/CompatibilityInfo;->applicationScale:F
 
-    .line 137
     .local v0, appScale:F
     const/4 v4, 0x2
 
     new-array v2, v4, [I
 
-    .line 138
     .local v2, pos:[I
     invoke-virtual {p1, v2}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 140
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
-    .line 141
     .local v3, rect:Landroid/graphics/Rect;
     aget v4, v2, v7
 
@@ -97,7 +91,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->left:I
 
-    .line 142
     aget v4, v2, v8
 
     int-to-float v4, v4
@@ -110,7 +103,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->top:I
 
-    .line 143
     aget v4, v2, v7
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -129,7 +121,6 @@
 
     iput v4, v3, Landroid/graphics/Rect;->right:I
 
-    .line 144
     aget v4, v2, v8
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -148,32 +139,27 @@
 
     iput v4, v3, Landroid/graphics/Rect;->bottom:I
 
-    .line 146
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 147
     .local v1, intent:Landroid/content/Intent;
     iget-object v4, p0, Lcom/mediatek/banyan/widget/MTKImageView$1;->val$action:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 148
     const-string v4, "widgetX"
 
     aget v5, v2, v7
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 149
     const-string v4, "widgetY"
 
     aget v5, v2, v8
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 150
     const-string v4, "widgetWidth"
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
@@ -182,7 +168,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 151
     const-string v4, "widgetHeight"
 
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
@@ -191,10 +176,8 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 152
     invoke-virtual {v1, v3}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
-    .line 153
     iget-object v4, p0, Lcom/mediatek/banyan/widget/MTKImageView$1;->this$0:Lcom/mediatek/banyan/widget/MTKImageView;
 
     #getter for: Lcom/mediatek/banyan/widget/MTKImageView;->mContext:Landroid/content/Context;
@@ -204,6 +187,5 @@
 
     invoke-virtual {v4, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 154
     return-void
 .end method

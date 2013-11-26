@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 97
     new-instance v0, Landroid/telephony/SmsMemoryStatus$1;
 
     invoke-direct {v0}, Landroid/telephony/SmsMemoryStatus$1;-><init>()V
@@ -46,16 +45,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 61
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput v0, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
-    .line 63
     iput v0, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
-    .line 64
     return-void
 .end method
 
@@ -65,16 +60,12 @@
     .parameter "total"
 
     .prologue
-    .line 66
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 67
     iput p1, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
-    .line 68
     iput p2, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
-    .line 69
     return-void
 .end method
 
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     return v0
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget v0, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
     return v0
@@ -104,7 +93,6 @@
     .locals 2
 
     .prologue
-    .line 80
     iget v0, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
     iget v1, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
@@ -118,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
     return v0
@@ -130,13 +117,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 84
     iput v0, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
-    .line 85
     iput v0, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
-    .line 86
     return-void
 .end method
 
@@ -146,16 +130,13 @@
     .parameter "flags"
 
     .prologue
-    .line 93
     iget v0, p0, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 94
     iget v0, p0, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 95
     return-void
 .end method

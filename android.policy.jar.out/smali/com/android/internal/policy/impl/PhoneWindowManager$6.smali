@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 2314
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$6;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +40,5 @@
     .locals 0
 
     .prologue
-    .line 2316
     return-void
 .end method

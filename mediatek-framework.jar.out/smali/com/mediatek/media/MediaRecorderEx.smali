@@ -30,7 +30,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 52
     new-array v2, v2, [Ljava/lang/Class;
 
     const/4 v3, 0x0
@@ -41,7 +40,6 @@
 
     sput-object v2, Lcom/mediatek/media/MediaRecorderEx;->METHOD_TYPES:[Ljava/lang/Class;
 
-    .line 56
     :try_start_0
     const-string v2, "android.media.MediaRecorder"
 
@@ -49,7 +47,6 @@
 
     move-result-object v0
 
-    .line 57
     .local v0, cls:Ljava/lang/Class;
     const-string v2, "setParameter"
 
@@ -61,12 +58,10 @@
 
     sput-object v2, Lcom/mediatek/media/MediaRecorderEx;->sSetParameter:Ljava/lang/reflect/Method;
 
-    .line 58
     sget-object v2, Lcom/mediatek/media/MediaRecorderEx;->sSetParameter:Ljava/lang/reflect/Method;
 
     if-eqz v2, :cond_0
 
-    .line 59
     sget-object v2, Lcom/mediatek/media/MediaRecorderEx;->sSetParameter:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x1
@@ -76,16 +71,13 @@
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 66
     :cond_0
     :goto_0
     return-void
 
-    .line 61
     :catch_0
     move-exception v1
 
-    .line 62
     .local v1, e:Ljava/lang/NoSuchMethodException;
     const-string v2, "MediaRecorderEx"
 
@@ -95,12 +87,10 @@
 
     goto :goto_0
 
-    .line 63
     .end local v1           #e:Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v1
 
-    .line 64
     .local v1, e:Ljava/lang/ClassNotFoundException;
     const-string v2, "MediaRecorderEx"
 
@@ -115,10 +105,8 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
     return-void
 .end method
 
@@ -132,21 +120,17 @@
     .end annotation
 
     .prologue
-    .line 95
     if-nez p0, :cond_0
 
-    .line 96
     const-string v0, "MediaRecorderEx"
 
     const-string v1, "Null MediaRecorder!"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 100
     :goto_0
     return-void
 
-    .line 99
     :cond_0
     const-string v0, "media-param-pause=1"
 
@@ -166,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 165
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +170,6 @@
 
     invoke-static {p0, v0}, Lcom/mediatek/media/MediaRecorderEx;->setParameter(Landroid/media/MediaRecorder;Ljava/lang/String;)V
 
-    .line 166
     return-void
 .end method
 
@@ -202,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 152
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -223,7 +204,6 @@
 
     invoke-static {p0, v0}, Lcom/mediatek/media/MediaRecorderEx;->setParameter(Landroid/media/MediaRecorder;Ljava/lang/String;)V
 
-    .line 153
     return-void
 .end method
 
@@ -240,14 +220,12 @@
     .end annotation
 
     .prologue
-    .line 131
     if-ltz p1, :cond_0
 
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_1
 
-    .line 132
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -273,11 +251,9 @@
 
     throw v0
 
-    .line 135
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 136
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -298,11 +274,9 @@
 
     invoke-static {p0, v0}, Lcom/mediatek/media/MediaRecorderEx;->setParameter(Landroid/media/MediaRecorder;Ljava/lang/String;)V
 
-    .line 140
     :goto_0
     return-void
 
-    .line 138
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -333,12 +307,10 @@
     .parameter "nameValuePair"
 
     .prologue
-    .line 69
     sget-object v4, Lcom/mediatek/media/MediaRecorderEx;->sSetParameter:Ljava/lang/reflect/Method;
 
     if-eqz v4, :cond_0
 
-    .line 71
     :try_start_0
     sget-object v4, Lcom/mediatek/media/MediaRecorderEx;->sSetParameter:Ljava/lang/reflect/Method;
 
@@ -357,15 +329,12 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 84
     :goto_0
     return-void
 
-    .line 72
     :catch_0
     move-exception v0
 
-    .line 73
     .local v0, ae:Ljava/lang/IllegalAccessException;
     const-string v4, "MediaRecorderEx"
 
@@ -375,12 +344,10 @@
 
     goto :goto_0
 
-    .line 74
     .end local v0           #ae:Ljava/lang/IllegalAccessException;
     :catch_1
     move-exception v3
 
-    .line 75
     .local v3, te:Ljava/lang/reflect/InvocationTargetException;
     const-string v4, "MediaRecorderEx"
 
@@ -390,12 +357,10 @@
 
     goto :goto_0
 
-    .line 76
     .end local v3           #te:Ljava/lang/reflect/InvocationTargetException;
     :catch_2
     move-exception v1
 
-    .line 77
     .local v1, ex:Ljava/lang/IllegalArgumentException;
     const-string v4, "MediaRecorderEx"
 
@@ -405,12 +370,10 @@
 
     goto :goto_0
 
-    .line 78
     .end local v1           #ex:Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v2
 
-    .line 79
     .local v2, npe:Ljava/lang/NullPointerException;
     const-string v4, "MediaRecorderEx"
 
@@ -420,7 +383,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v2           #npe:Ljava/lang/NullPointerException;
     :cond_0
     const-string v4, "MediaRecorderEx"
@@ -443,7 +405,6 @@
     .end annotation
 
     .prologue
-    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,6 +425,5 @@
 
     invoke-static {p0, v0}, Lcom/mediatek/media/MediaRecorderEx;->setParameter(Landroid/media/MediaRecorder;Ljava/lang/String;)V
 
-    .line 179
     return-void
 .end method

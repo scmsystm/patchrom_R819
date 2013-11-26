@@ -40,20 +40,16 @@
     .parameter "context"
 
     .prologue
-    .line 95
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
 
-    .line 209
     new-instance v1, Lcom/mediatek/hdmi/HDMIObserver$1;
 
     invoke-direct {v1, p0}, Lcom/mediatek/hdmi/HDMIObserver$1;-><init>(Lcom/mediatek/hdmi/HDMIObserver;)V
 
     iput-object v1, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHandler:Landroid/os/Handler;
 
-    .line 96
     iput-object p1, p0, Lcom/mediatek/hdmi/HDMIObserver;->mContext:Landroid/content/Context;
 
-    .line 97
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -62,7 +58,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 98
     .local v0, pm:Landroid/os/PowerManager;
     const/4 v1, 0x1
 
@@ -74,27 +69,22 @@
 
     iput-object v1, p0, Lcom/mediatek/hdmi/HDMIObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 99
     iget-object v1, p0, Lcom/mediatek/hdmi/HDMIObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 101
     const-string v1, "DEVPATH=/devices/virtual/switch/hdmi"
 
     invoke-virtual {p0, v1}, Lcom/mediatek/hdmi/HDMIObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 102
     const-string v1, "DEVPATH=/devices/virtual/switch/mtk_hdmi"
 
     invoke-virtual {p0, v1}, Lcom/mediatek/hdmi/HDMIObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 104
     invoke-direct {p0}, Lcom/mediatek/hdmi/HDMIObserver;->init()V
 
-    .line 105
     return-void
 .end method
 
@@ -106,7 +96,6 @@
     .parameter "x3"
 
     .prologue
-    .line 73
     invoke-direct {p0, p1, p2, p3}, Lcom/mediatek/hdmi/HDMIObserver;->sendIntents(IILjava/lang/String;)V
 
     return-void
@@ -117,7 +106,6 @@
     .parameter "x0"
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/mediatek/hdmi/HDMIObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -127,7 +115,6 @@
     .locals 9
 
     .prologue
-    .line 122
     monitor-enter p0
 
     const/16 v6, 0x400
@@ -135,15 +122,12 @@
     :try_start_0
     new-array v0, v6, [C
 
-    .line 124
     .local v0, buffer:[C
     iget-object v4, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIName:Ljava/lang/String;
 
-    .line 125
     .local v4, newName:Ljava/lang/String;
     iget v5, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
 
-    .line 126
     .local v5, newState:I
     iget v6, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
 
@@ -151,7 +135,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     :try_start_1
     new-instance v2, Ljava/io/FileReader;
 
@@ -159,7 +142,6 @@
 
     invoke-direct {v2, v6}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    .line 129
     .local v2, file:Ljava/io/FileReader;
     const/4 v6, 0x0
 
@@ -169,7 +151,6 @@
 
     move-result v3
 
-    .line 130
     .local v3, len:I
     new-instance v6, Ljava/lang/String;
 
@@ -189,7 +170,6 @@
 
     move-result v5
 
-    .line 132
     new-instance v2, Ljava/io/FileReader;
 
     .end local v2           #file:Ljava/io/FileReader;
@@ -197,7 +177,6 @@
 
     invoke-direct {v2, v6}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    .line 133
     .restart local v2       #file:Ljava/io/FileReader;
     const/4 v6, 0x0
 
@@ -207,7 +186,6 @@
 
     move-result v3
 
-    .line 134
     new-instance v6, Ljava/lang/String;
 
     const/4 v7, 0x0
@@ -218,7 +196,6 @@
 
     move-result-object v4
 
-    .line 135
     const-string v6, "hdmi"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -255,7 +232,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 142
     .end local v2           #file:Ljava/io/FileReader;
     .end local v3           #len:I
     :goto_0
@@ -264,16 +240,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 143
     monitor-exit p0
 
     return-void
 
-    .line 136
     :catch_0
     move-exception v1
 
-    .line 137
     .local v1, e:Ljava/io/FileNotFoundException;
     :try_start_3
     const-string v6, "hdmi"
@@ -286,7 +259,6 @@
 
     goto :goto_0
 
-    .line 122
     .end local v0           #buffer:[C
     .end local v1           #e:Ljava/io/FileNotFoundException;
     .end local v4           #newName:Ljava/lang/String;
@@ -298,14 +270,12 @@
 
     throw v6
 
-    .line 138
     .restart local v0       #buffer:[C
     .restart local v4       #newName:Ljava/lang/String;
     .restart local v5       #newState:I
     :catch_1
     move-exception v1
 
-    .line 139
     .local v1, e:Ljava/lang/Exception;
     :try_start_4
     const-string v6, "hdmi"
@@ -327,50 +297,41 @@
     .parameter "HDMIName"
 
     .prologue
-    .line 192
     and-int v2, p2, p1
 
     and-int v3, p3, p1
 
     if-eq v2, v3, :cond_1
 
-    .line 194
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.HDMI_PLUG"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 195
     .local v0, intent:Landroid/content/Intent;
     const/high16 v2, 0x4000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 196
     const/4 v1, 0x0
 
-    .line 197
     .local v1, state:I
     and-int v2, p2, p1
 
     if-eqz v2, :cond_0
 
-    .line 198
     const/4 v1, 0x1
 
-    .line 200
     :cond_0
     const-string v2, "state"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 201
     const-string v2, "name"
 
     invoke-virtual {v0, v2, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 203
     const-string v2, "hdmi"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -403,7 +364,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     const/4 v2, 0x0
 
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
@@ -412,7 +372,6 @@
 
     invoke-static {v0, v2, v3}, Landroid/app/ActivityManagerNative;->broadcastStickyIntent(Landroid/content/Intent;Ljava/lang/String;I)V
 
-    .line 207
     .end local v0           #intent:Landroid/content/Intent;
     .end local v1           #state:I
     :cond_1
@@ -426,24 +385,20 @@
     .parameter "HDMIName"
 
     .prologue
-    .line 186
     monitor-enter p0
 
     const/4 v0, 0x1
 
-    .line 188
     .local v0, curHDMI:I
     :try_start_0
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/mediatek/hdmi/HDMIObserver;->sendIntent(IIILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     monitor-exit p0
 
     return-void
 
-    .line 186
     :catchall_0
     move-exception v1
 
@@ -458,7 +413,6 @@
     .parameter "newState"
 
     .prologue
-    .line 146
     monitor-enter p0
 
     :try_start_0
@@ -496,20 +450,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     move v0, p2
 
-    .line 149
     .local v0, HDMIState:I
     iget v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
 
     or-int v2, v0, v3
 
-    .line 150
     .local v2, newOrOld:I
     const/4 v1, 0x0
 
-    .line 172
     .local v1, delay:I
     iget v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
     :try_end_0
@@ -523,32 +473,26 @@
 
     if-eqz v3, :cond_1
 
-    .line 183
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 177
     :cond_1
     :try_start_1
     iput-object p1, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIName:Ljava/lang/String;
 
-    .line 178
     iget v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
 
     iput v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mPrevHDMIState:I
 
-    .line 179
     iput v0, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHDMIState:I
 
-    .line 181
     iget-object v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 182
     iget-object v3, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHandler:Landroid/os/Handler;
 
     iget-object v4, p0, Lcom/mediatek/hdmi/HDMIObserver;->mHandler:Landroid/os/Handler;
@@ -573,7 +517,6 @@
 
     goto :goto_0
 
-    .line 146
     .end local v0           #HDMIState:I
     .end local v1           #delay:I
     .end local v2           #newOrOld:I
@@ -592,7 +535,6 @@
     .parameter "event"
 
     .prologue
-    .line 109
     const-string v3, "hdmi"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -619,7 +561,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :try_start_0
     const-string v3, "SWITCH_NAME"
 
@@ -627,7 +568,6 @@
 
     move-result-object v1
 
-    .line 113
     .local v1, name:Ljava/lang/String;
     const-string v3, "SWITCH_STATE"
 
@@ -639,7 +579,6 @@
 
     move-result v2
 
-    .line 114
     .local v2, state:I
     const-string v3, "hdmi"
 
@@ -673,22 +612,18 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     invoke-direct {p0, v1, v2}, Lcom/mediatek/hdmi/HDMIObserver;->update(Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 119
     .end local v1           #name:Ljava/lang/String;
     .end local v2           #state:I
     :goto_0
     return-void
 
-    .line 116
     :catch_0
     move-exception v0
 
-    .line 117
     .local v0, e:Ljava/lang/NumberFormatException;
     const-string v3, "hdmi"
 

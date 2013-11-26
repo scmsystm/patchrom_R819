@@ -65,39 +65,32 @@
     .parameter "context"
 
     .prologue
-    .line 125
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothProfileManager$Stub;-><init>()V
 
-    .line 75
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/server/BluetoothProfileManagerService;->mBluetoothEnableTime:J
 
-    .line 91
     new-instance v0, Landroid/server/BluetoothProfileManagerService$1;
 
     invoke-direct {v0, p0}, Landroid/server/BluetoothProfileManagerService$1;-><init>(Landroid/server/BluetoothProfileManagerService;)V
 
     iput-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mBroadcastreceiver:Landroid/content/BroadcastReceiver;
 
-    .line 127
     iput-object p1, p0, Landroid/server/BluetoothProfileManagerService;->mContext:Landroid/content/Context;
 
-    .line 128
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
-    .line 129
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
-    .line 130
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
@@ -106,21 +99,18 @@
 
     iput-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 131
     iget-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.bluetooth.profilemanager.action.PROFILE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 132
     iget-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.bluetooth.profilemanager.action.STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 133
     iget-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/server/BluetoothProfileManagerService;->mBroadcastreceiver:Landroid/content/BroadcastReceiver;
@@ -129,7 +119,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 134
     return-void
 .end method
 
@@ -138,7 +127,6 @@
     .parameter "x0"
 
     .prologue
-    .line 67
     invoke-static {p0}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
     return-void
@@ -149,7 +137,6 @@
     .parameter "x0"
 
     .prologue
-    .line 67
     invoke-direct {p0}, Landroid/server/BluetoothProfileManagerService;->onBluetoothEnable()V
 
     return-void
@@ -160,7 +147,6 @@
     .parameter "x0"
 
     .prologue
-    .line 67
     invoke-direct {p0}, Landroid/server/BluetoothProfileManagerService;->onBluetoothDisable()V
 
     return-void
@@ -173,7 +159,6 @@
     .parameter "x2"
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Landroid/server/BluetoothProfileManagerService;->onProfileStateUpdate(Landroid/bluetooth/BluetoothProfileManager$Profile;I)V
 
     return-void
@@ -186,7 +171,6 @@
     .parameter "x2"
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Landroid/server/BluetoothProfileManagerService;->updateProfileState(Landroid/bluetooth/BluetoothProfileManager$Profile;I)V
 
     return-void
@@ -197,7 +181,6 @@
     .parameter "profile"
 
     .prologue
-    .line 354
     iget-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -206,7 +189,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 355
     iget-object v0, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -215,7 +197,6 @@
 
     check-cast v0, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
-    .line 357
     :goto_0
     return-object v0
 
@@ -230,10 +211,8 @@
     .parameter "profile"
 
     .prologue
-    .line 386
     const/4 v0, 0x0
 
-    .line 387
     .local v0, profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     sget-object v1, Landroid/server/BluetoothProfileManagerService$2;->$SwitchMap$android$bluetooth$BluetoothProfileManager$Profile:[I
 
@@ -245,17 +224,14 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 437
-    const-string/jumbo v1, "unexpected profile"
+    const-string v1, "unexpected profile"
 
     invoke-static {v1}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 440
     :goto_0
     :pswitch_0
     return-object v0
 
-    .line 398
     :pswitch_1
     new-instance v0, Landroid/bluetooth/BluetoothFtp$Client;
 
@@ -264,11 +240,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothFtp$Client;-><init>(Landroid/content/Context;)V
 
-    .line 399
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 401
     :pswitch_2
     new-instance v0, Landroid/bluetooth/BluetoothFtp$Server;
 
@@ -277,11 +251,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothFtp$Server;-><init>(Landroid/content/Context;)V
 
-    .line 402
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 404
     :pswitch_3
     new-instance v0, Landroid/bluetooth/BluetoothBipi;
 
@@ -290,11 +262,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothBipi;-><init>(Landroid/content/Context;)V
 
-    .line 405
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 407
     :pswitch_4
     new-instance v0, Landroid/bluetooth/BluetoothBipr;
 
@@ -303,11 +273,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothBipr;-><init>(Landroid/content/Context;)V
 
-    .line 408
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 411
     :pswitch_5
     new-instance v0, Landroid/bluetooth/BluetoothSimap;
 
@@ -316,11 +284,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothSimap;-><init>(Landroid/content/Context;)V
 
-    .line 412
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 423
     :pswitch_6
     new-instance v0, Landroid/bluetooth/BluetoothDun;
 
@@ -329,11 +295,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothDun;-><init>(Landroid/content/Context;)V
 
-    .line 424
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 426
     :pswitch_7
     new-instance v0, Landroid/bluetooth/BluetoothPrxm;
 
@@ -342,11 +306,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothPrxm;-><init>(Landroid/content/Context;)V
 
-    .line 427
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 429
     :pswitch_8
     new-instance v0, Landroid/bluetooth/BluetoothPrxr;
 
@@ -355,11 +317,9 @@
 
     invoke-direct {v0, v1}, Landroid/bluetooth/BluetoothPrxr;-><init>(Landroid/content/Context;)V
 
-    .line 430
     .restart local v0       #profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     goto :goto_0
 
-    .line 387
     nop
 
     :pswitch_data_0
@@ -387,7 +347,6 @@
     .parameter "profile"
 
     .prologue
-    .line 210
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -412,7 +371,6 @@
 
     invoke-static {v0}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 212
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HID:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-virtual {p1, v0}, Landroid/bluetooth/BluetoothProfileManager$Profile;->equals(Ljava/lang/Object;)Z
@@ -427,7 +385,6 @@
     .parameter "msg"
 
     .prologue
-    .line 511
     const-string v0, "BluetoothProfileManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -450,7 +407,6 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 512
     return-void
 .end method
 
@@ -458,12 +414,10 @@
     .locals 4
 
     .prologue
-    .line 152
-    const-string/jumbo v2, "onBluetoothDisable"
+    const-string v2, "onBluetoothDisable"
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 153
     iget-object v2, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -474,7 +428,6 @@
 
     move-result-object v1
 
-    .line 154
     .local v1, service:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -483,14 +436,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 158
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 159
     .local v0, entry:Ljava/util/Map$Entry;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -500,19 +451,17 @@
 
     invoke-interface {v2}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->close()V
 
-    .line 160
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 162
     .end local v0           #entry:Ljava/util/Map$Entry;
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "mServiceList size is "
+    const-string v3, "mServiceList size is "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -534,12 +483,10 @@
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 164
     const-string v2, "android.bluetooth.profilemanager.action.DISABLE_PROFILES"
 
     invoke-direct {p0, v2}, Landroid/server/BluetoothProfileManagerService;->sendMonitorMessage(Ljava/lang/String;)V
 
-    .line 166
     return-void
 .end method
 
@@ -547,39 +494,32 @@
     .locals 2
 
     .prologue
-    .line 137
-    const-string/jumbo v0, "onBluetoothEnable"
+    const-string v0, "onBluetoothEnable"
 
     invoke-static {v0}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 140
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_A2DP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-direct {p0, v0}, Landroid/server/BluetoothProfileManagerService;->updateProfileServiceList(Landroid/bluetooth/BluetoothProfileManager$Profile;)V
 
-    .line 144
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HEADSET:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-direct {p0, v0}, Landroid/server/BluetoothProfileManagerService;->updateProfileServiceList(Landroid/bluetooth/BluetoothProfileManager$Profile;)V
 
-    .line 146
     const-string v0, "PRX"
 
     const-string v1, "hard code service registered."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXM:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-direct {p0, v0}, Landroid/server/BluetoothProfileManagerService;->updateProfileServiceList(Landroid/bluetooth/BluetoothProfileManager$Profile;)V
 
-    .line 148
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXR:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-direct {p0, v0}, Landroid/server/BluetoothProfileManagerService;->updateProfileServiceList(Landroid/bluetooth/BluetoothProfileManager$Profile;)V
 
-    .line 149
     return-void
 .end method
 
@@ -589,12 +529,11 @@
     .parameter "state"
 
     .prologue
-    .line 362
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "onProfileStateUpdate():profile->"
+    const-string v1, "onProfileStateUpdate():profile->"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -620,15 +559,12 @@
 
     invoke-static {v0}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 364
     const/16 v0, 0xb
 
     if-ne p2, v0, :cond_0
 
-    .line 365
     invoke-direct {p0, p1}, Landroid/server/BluetoothProfileManagerService;->updateProfileServiceList(Landroid/bluetooth/BluetoothProfileManager$Profile;)V
 
-    .line 368
     :cond_0
     return-void
 .end method
@@ -638,12 +574,11 @@
     .parameter "action"
 
     .prologue
-    .line 445
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "sendMonitorMessage():action->"
+    const-string v2, "sendMonitorMessage():action->"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -659,12 +594,10 @@
 
     invoke-static {v1}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 446
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 447
     .local v0, intent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/server/BluetoothProfileManagerService;->mContext:Landroid/content/Context;
 
@@ -672,7 +605,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 448
     return-void
 .end method
 
@@ -685,12 +617,11 @@
 
     const/4 v3, 0x1
 
-    .line 488
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateBluetoothNotification:"
+    const-string v2, "updateBluetoothNotification:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -706,28 +637,23 @@
 
     invoke-static {v1}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 490
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.bluetooth.profilemanager.action.UPDATE_ NOTIFICATION"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 491
     .local v0, intent:Landroid/content/Intent;
     if-eqz p1, :cond_0
 
-    .line 492
     const-string v1, "android.bluetooth.profilemanager.extra.EXTRA_NEW_STATE"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 493
     const-string v1, "android.bluetooth.profilemanager.extra.EXTRA_PREVIOUS_STATE"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 499
     :goto_0
     iget-object v1, p0, Landroid/server/BluetoothProfileManagerService;->mContext:Landroid/content/Context;
 
@@ -735,16 +661,13 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 500
     return-void
 
-    .line 495
     :cond_0
     const-string v1, "android.bluetooth.profilemanager.extra.EXTRA_NEW_STATE"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 496
     const-string v1, "android.bluetooth.profilemanager.extra.EXTRA_PREVIOUS_STATE"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -757,10 +680,8 @@
     .parameter "profile"
 
     .prologue
-    .line 372
     const/4 v0, 0x0
 
-    .line 374
     .local v0, profileBehavior:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     iget-object v1, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
@@ -770,21 +691,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 383
     :cond_0
     :goto_0
     return-void
 
-    .line 378
     :cond_1
     invoke-direct {p0, p1}, Landroid/server/BluetoothProfileManagerService;->getProfileBehavior(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v0
 
-    .line 380
     if-eqz v0, :cond_0
 
-    .line 381
     iget-object v1, p0, Landroid/server/BluetoothProfileManagerService;->mServiceList:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -800,12 +717,11 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 451
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "updateProfileState:"
+    const-string v2, "updateProfileState:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -835,20 +751,17 @@
 
     invoke-static {v1}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 455
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->size()I
 
     move-result v0
 
-    .line 456
     .local v0, mProfileSize:I
     if-eq p2, v3, :cond_0
 
     if-nez p2, :cond_5
 
-    .line 457
     :cond_0
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
@@ -858,12 +771,10 @@
 
     if-nez v1, :cond_4
 
-    .line 458
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 459
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -890,7 +801,6 @@
 
     invoke-static {v1}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 479
     :cond_1
     :goto_0
     if-lez v0, :cond_2
@@ -903,12 +813,10 @@
 
     if-nez v1, :cond_2
 
-    .line 480
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Landroid/server/BluetoothProfileManagerService;->updateBluetoothNotification(Z)V
 
-    .line 482
     :cond_2
     if-nez v0, :cond_3
 
@@ -920,14 +828,11 @@
 
     if-lez v1, :cond_3
 
-    .line 483
     invoke-direct {p0, v3}, Landroid/server/BluetoothProfileManagerService;->updateBluetoothNotification(Z)V
 
-    .line 485
     :cond_3
     return-void
 
-    .line 461
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -961,13 +866,11 @@
 
     goto :goto_0
 
-    .line 463
     :cond_5
     const/4 v1, 0x2
 
     if-ne p2, v1, :cond_1
 
-    .line 464
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -976,7 +879,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 465
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HID:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-virtual {p1, v1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->equals(Ljava/lang/Object;)Z
@@ -985,17 +887,15 @@
 
     if-nez v1, :cond_6
 
-    .line 466
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 467
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "remove profile:"
+    const-string v2, "remove profile:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1013,7 +913,6 @@
 
     goto :goto_0
 
-    .line 468
     :cond_6
     sget-object v1, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HID:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
@@ -1029,17 +928,15 @@
 
     if-nez v1, :cond_7
 
-    .line 469
     sget-object v1, Landroid/server/BluetoothProfileManagerService;->sConenctedProfileList:Ljava/util/Set;
 
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 470
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "remove profile:"
+    const-string v2, "remove profile:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1057,13 +954,12 @@
 
     goto/16 :goto_0
 
-    .line 472
     :cond_7
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "remove profile:"
+    const-string v2, "remove profile:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1087,13 +983,12 @@
 
     goto/16 :goto_0
 
-    .line 475
     :cond_8
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "remove profile failure:the profile("
+    const-string v2, "remove profile failure:the profile("
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1130,7 +1025,6 @@
     .parameter "device"
 
     .prologue
-    .line 169
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1165,34 +1059,27 @@
 
     invoke-static {v5}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 173
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v2
 
-    .line 174
     .local v2, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     invoke-direct {p0, v2}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v1
 
-    .line 175
     .local v1, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-nez v1, :cond_0
 
-    .line 176
     const-string v5, "connect():mService is null"
 
     invoke-static {v5}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 177
     const/4 v5, 0x0
 
-    .line 205
     :goto_0
     return v5
 
-    .line 180
     :cond_0
     invoke-direct {p0, v2}, Landroid/server/BluetoothProfileManagerService;->isConnectableToMultiDevices(Landroid/bluetooth/BluetoothProfileManager$Profile;)Z
 
@@ -1200,10 +1087,8 @@
 
     if-nez v5, :cond_2
 
-    .line 181
     const/4 v4, 0x0
 
-    .line 182
     .local v4, sinks:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     sget-object v5, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_A2DP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
@@ -1213,16 +1098,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 183
     const-string v5, "in connect profile equals Bluetooth_A2DP"
 
     invoke-static {v5}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 188
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 189
     invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1241,13 +1123,11 @@
 
     check-cast v3, Landroid/bluetooth/BluetoothDevice;
 
-    .line 191
     .local v3, sink:Landroid/bluetooth/BluetoothDevice;
     invoke-interface {v1, v3}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->disconnect(Landroid/bluetooth/BluetoothDevice;)Z
 
     goto :goto_2
 
-    .line 186
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v3           #sink:Landroid/bluetooth/BluetoothDevice;
     :cond_1
@@ -1257,12 +1137,10 @@
 
     goto :goto_1
 
-    .line 201
     .end local v4           #sinks:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     :cond_2
     invoke-interface {v1, p2}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->connect(Landroid/bluetooth/BluetoothDevice;)Z
 
-    .line 205
     const/4 v5, 0x1
 
     goto :goto_0
@@ -1276,7 +1154,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 216
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1311,42 +1188,34 @@
 
     invoke-static {v4}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 218
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v2
 
-    .line 219
     .local v2, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     const/4 v0, 0x0
 
-    .line 220
     .local v0, devices:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-direct {p0, v2}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v1
 
-    .line 221
     .local v1, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-nez v1, :cond_1
 
-    .line 222
     const-string v4, "disconnect():mService is null"
 
     invoke-static {v4}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 251
     :cond_0
     :goto_0
     return v3
 
-    .line 227
     :cond_1
     invoke-interface {v1}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->getConnectedDevices()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 232
     if-eqz v0, :cond_0
 
     invoke-interface {v0, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -1355,10 +1224,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 245
     invoke-interface {v1, p2}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->disconnect(Landroid/bluetooth/BluetoothDevice;)Z
 
-    .line 251
     const/4 v3, 0x1
 
     goto :goto_0
@@ -1369,7 +1236,6 @@
     .parameter "profileName"
 
     .prologue
-    .line 255
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1390,31 +1256,25 @@
 
     invoke-static {v3}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 257
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v2
 
-    .line 258
     .local v2, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     const/4 v0, 0x0
 
-    .line 259
     .local v0, devices:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-direct {p0, v2}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v1
 
-    .line 260
     .local v1, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-eqz v1, :cond_1
 
-    .line 262
     invoke-interface {v1}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->getConnectedDevices()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 271
     :goto_0
     if-nez v0, :cond_0
 
@@ -1423,7 +1283,6 @@
     .end local v0           #devices:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 273
     .restart local v0       #devices:Ljava/util/Set;,"Ljava/util/Set<Landroid/bluetooth/BluetoothDevice;>;"
     :cond_0
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -1440,7 +1299,6 @@
 
     return-object v3
 
-    .line 268
     :cond_1
     const-string v3, "getConnectedDevices():mService is null"
 
@@ -1457,7 +1315,6 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 333
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1492,27 +1349,22 @@
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 335
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v1
 
-    .line 336
     .local v1, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     invoke-direct {p0, v1}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v0
 
-    .line 337
     .local v0, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-nez v0, :cond_0
 
-    .line 338
     const-string v2, "getPreferred():mService is null"
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 347
     :cond_0
     return v4
 .end method
@@ -1523,35 +1375,28 @@
     .parameter "device"
 
     .prologue
-    .line 279
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v1
 
-    .line 280
     .local v1, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     const/4 v2, 0x5
 
-    .line 281
     .local v2, state:I
     invoke-direct {p0, v1}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v0
 
-    .line 282
     .local v0, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-eqz v0, :cond_0
 
-    .line 284
     invoke-interface {v0, p2}, Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;->getState(Landroid/bluetooth/BluetoothDevice;)I
 
     move-result v2
 
-    .line 292
     :goto_0
     return v2
 
-    .line 290
     :cond_0
     const/4 v2, -0x1
 
@@ -1566,7 +1411,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 296
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1601,27 +1445,22 @@
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 298
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v1
 
-    .line 299
     .local v1, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     invoke-direct {p0, v1}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v0
 
-    .line 300
     .local v0, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-nez v0, :cond_0
 
-    .line 301
     const-string v2, "isPreferred():mService is null"
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 308
     :cond_0
     return v4
 .end method
@@ -1631,7 +1470,6 @@
     .parameter "proxy"
 
     .prologue
-    .line 504
     return-void
 .end method
 
@@ -1639,7 +1477,6 @@
     .locals 0
 
     .prologue
-    .line 508
     return-void
 .end method
 
@@ -1650,12 +1487,11 @@
     .parameter "preferred"
 
     .prologue
-    .line 312
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "setPreferred:"
+    const-string v3, "setPreferred:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1695,30 +1531,24 @@
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 314
     invoke-static {p1}, Landroid/bluetooth/BluetoothProfileManager$Profile;->valueOf(Ljava/lang/String;)Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     move-result-object v1
 
-    .line 315
     .local v1, profile:Landroid/bluetooth/BluetoothProfileManager$Profile;
     invoke-direct {p0, v1}, Landroid/server/BluetoothProfileManagerService;->checkProfileService(Landroid/bluetooth/BluetoothProfileManager$Profile;)Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
 
     move-result-object v0
 
-    .line 316
     .local v0, mService:Landroid/bluetooth/BluetoothProfileManager$BluetoothProfileBehavior;
     if-nez v0, :cond_0
 
-    .line 317
-    const-string/jumbo v2, "setPreferred():mService is null"
+    const-string v2, "setPreferred():mService is null"
 
     invoke-static {v2}, Landroid/server/BluetoothProfileManagerService;->log(Ljava/lang/String;)V
 
-    .line 318
     const/4 v2, 0x0
 
-    .line 329
     :goto_0
     return v2
 

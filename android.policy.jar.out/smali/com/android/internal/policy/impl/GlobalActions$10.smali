@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 936
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,17 +38,14 @@
     .parameter "msg"
 
     .prologue
-    .line 938
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 952
     :cond_0
     :goto_0
     return-void
 
-    .line 940
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -60,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 941
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mDialog:Lcom/android/internal/policy/impl/GlobalActions$GlobalActionsDialog;
@@ -72,14 +67,12 @@
 
     goto :goto_0
 
-    .line 945
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #calls: Lcom/android/internal/policy/impl/GlobalActions;->refreshSilentMode()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/GlobalActions;->access$1600(Lcom/android/internal/policy/impl/GlobalActions;)V
 
-    .line 946
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
     #getter for: Lcom/android/internal/policy/impl/GlobalActions;->mAdapter:Lcom/android/internal/policy/impl/GlobalActions$MyAdapter;
@@ -91,7 +84,6 @@
 
     goto :goto_0
 
-    .line 949
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlobalActions$10;->this$0:Lcom/android/internal/policy/impl/GlobalActions;
 
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 938
     nop
 
     :pswitch_data_0

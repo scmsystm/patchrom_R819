@@ -26,7 +26,6 @@
     .parameter
 
     .prologue
-    .line 312
     iput-object p3, p0, Landroid/app/Presentation$1;->val$displayWindowManager:Landroid/view/WindowManagerImpl;
 
     invoke-direct {p0, p1, p2}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
@@ -41,7 +40,6 @@
     .parameter "name"
 
     .prologue
-    .line 315
     const-string v0, "window"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -50,10 +48,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
     iget-object v0, p0, Landroid/app/Presentation$1;->val$displayWindowManager:Landroid/view/WindowManagerImpl;
 
-    .line 318
     :goto_0
     return-object v0
 

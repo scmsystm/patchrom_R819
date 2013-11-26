@@ -29,27 +29,22 @@
     .parameter "_pkgFlags"
 
     .prologue
-    .line 34
     invoke-direct {p0, p2}, Lcom/android/server/pm/GrantedPermissions;-><init>(I)V
 
-    .line 29
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedUserSetting;->packages:Ljava/util/HashSet;
 
-    .line 31
     new-instance v0, Lcom/android/server/pm/PackageSignatures;
 
     invoke-direct {v0}, Lcom/android/server/pm/PackageSignatures;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/SharedUserSetting;->signatures:Lcom/android/server/pm/PackageSignatures;
 
-    .line 35
     iput-object p1, p0, Lcom/android/server/pm/SharedUserSetting;->name:Ljava/lang/String;
 
-    .line 36
     return-void
 .end method
 
@@ -59,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

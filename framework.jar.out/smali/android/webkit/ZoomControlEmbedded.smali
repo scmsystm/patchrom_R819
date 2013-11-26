@@ -30,16 +30,12 @@
     .parameter "webView"
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomManager:Landroid/webkit/ZoomManager;
 
-    .line 35
     iput-object p2, p0, Landroid/webkit/ZoomControlEmbedded;->mWebView:Landroid/webkit/WebViewClassic;
 
-    .line 36
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .parameter "x0"
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/webkit/ZoomControlEmbedded;->mWebView:Landroid/webkit/WebViewClassic;
 
     return-object v0
@@ -59,7 +54,6 @@
     .parameter "x0"
 
     .prologue
-    .line 25
     iget-object v0, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     return-object v0
@@ -69,12 +63,10 @@
     .locals 5
 
     .prologue
-    .line 84
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     if-nez v2, :cond_0
 
-    .line 85
     new-instance v2, Landroid/widget/ZoomButtonsController;
 
     iget-object v3, p0, Landroid/webkit/ZoomControlEmbedded;->mWebView:Landroid/webkit/WebViewClassic;
@@ -87,7 +79,6 @@
 
     iput-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
-    .line 86
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     new-instance v3, Landroid/webkit/ZoomControlEmbedded$ZoomListener;
@@ -98,26 +89,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ZoomButtonsController;->setOnZoomListener(Landroid/widget/ZoomButtonsController$OnZoomListener;)V
 
-    .line 90
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     invoke-virtual {v2}, Landroid/widget/ZoomButtonsController;->getZoomControls()Landroid/view/View;
 
     move-result-object v0
 
-    .line 91
     .local v0, controls:Landroid/view/View;
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    .line 92
     .local v1, params:Landroid/view/ViewGroup$LayoutParams;
     instance-of v2, v1, Landroid/widget/FrameLayout$LayoutParams;
 
     if-eqz v2, :cond_0
 
-    .line 93
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
     .end local v1           #params:Landroid/view/ViewGroup$LayoutParams;
@@ -125,7 +112,6 @@
 
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 96
     .end local v0           #controls:Landroid/view/View;
     :cond_0
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
@@ -139,19 +125,16 @@
     .locals 2
 
     .prologue
-    .line 57
     iget-object v0, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ZoomButtonsController;->setVisible(Z)V
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -160,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     if-eqz v0, :cond_0
@@ -190,7 +172,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 39
     invoke-direct {p0}, Landroid/webkit/ZoomControlEmbedded;->getControls()Landroid/widget/ZoomButtonsController;
 
     move-result-object v2
@@ -209,12 +190,10 @@
 
     if-nez v2, :cond_0
 
-    .line 41
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     invoke-virtual {v2, v4}, Landroid/widget/ZoomButtonsController;->setVisible(Z)V
 
-    .line 43
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomManager:Landroid/webkit/ZoomManager;
 
     invoke-virtual {v2}, Landroid/webkit/ZoomManager;->isDoubleTapEnabled()Z
@@ -223,20 +202,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 44
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mWebView:Landroid/webkit/WebViewClassic;
 
     invoke-virtual {v2}, Landroid/webkit/WebViewClassic;->getSettings()Landroid/webkit/WebSettingsClassic;
 
     move-result-object v1
 
-    .line 45
     .local v1, settings:Landroid/webkit/WebSettingsClassic;
     invoke-virtual {v1}, Landroid/webkit/WebSettingsClassic;->getDoubleTapToastCount()I
 
     move-result v0
 
-    .line 46
     .local v0, count:I
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -248,12 +224,10 @@
 
     if-lez v0, :cond_0
 
-    .line 47
     add-int/lit8 v0, v0, -0x1
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebSettingsClassic;->setDoubleTapToastCount(I)V
 
-    .line 48
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mWebView:Landroid/webkit/WebViewClassic;
 
     invoke-virtual {v2}, Landroid/webkit/WebViewClassic;->getContext()Landroid/content/Context;
@@ -268,7 +242,6 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 54
     .end local v0           #count:I
     .end local v1           #settings:Landroid/webkit/WebSettingsClassic;
     :cond_0
@@ -279,16 +252,13 @@
     .locals 4
 
     .prologue
-    .line 67
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     if-nez v2, :cond_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 71
     :cond_0
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -296,7 +266,6 @@
 
     move-result v0
 
-    .line 72
     .local v0, canZoomIn:Z
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomManager:Landroid/webkit/ZoomManager;
 
@@ -316,14 +285,12 @@
 
     const/4 v1, 0x1
 
-    .line 73
     .local v1, canZoomOut:Z
     :goto_1
     if-nez v0, :cond_2
 
     if-nez v1, :cond_2
 
-    .line 75
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     invoke-virtual {v2}, Landroid/widget/ZoomButtonsController;->getZoomControls()Landroid/view/View;
@@ -336,21 +303,18 @@
 
     goto :goto_0
 
-    .line 72
     .end local v1           #canZoomOut:Z
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 78
     .restart local v1       #canZoomOut:Z
     :cond_2
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     invoke-virtual {v2, v0}, Landroid/widget/ZoomButtonsController;->setZoomInEnabled(Z)V
 
-    .line 79
     iget-object v2, p0, Landroid/webkit/ZoomControlEmbedded;->mZoomButtonsController:Landroid/widget/ZoomButtonsController;
 
     invoke-virtual {v2, v1}, Landroid/widget/ZoomButtonsController;->setZoomOutEnabled(Z)V

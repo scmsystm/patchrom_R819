@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 259
     iput-object p1, p0, Landroid/widget/BounceGallery$1;->this$0:Landroid/widget/BounceGallery;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 261
     iget-object v0, p0, Landroid/widget/BounceGallery$1;->this$0:Landroid/widget/BounceGallery;
 
     const/4 v1, 0x0
@@ -49,11 +47,9 @@
     #setter for: Landroid/widget/BounceGallery;->mSuppressSelectionChanged:Z
     invoke-static {v0, v1}, Landroid/widget/BounceGallery;->access$002(Landroid/widget/BounceGallery;Z)Z
 
-    .line 262
     iget-object v0, p0, Landroid/widget/BounceGallery$1;->this$0:Landroid/widget/BounceGallery;
 
     invoke-virtual {v0}, Landroid/widget/BounceGallery;->selectionChanged()V
 
-    .line 263
     return-void
 .end method

@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 1135
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     iput-object p2, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->val$state:Lcom/android/server/accessibility/AccessibilityManagerService$UserState;
@@ -53,7 +52,6 @@
     .parameter "which"
 
     .prologue
-    .line 1139
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->val$state:Lcom/android/server/accessibility/AccessibilityManagerService$UserState;
 
     iget-object v0, v0, Lcom/android/server/accessibility/AccessibilityManagerService$UserState;->mTouchExplorationGrantedServices:Ljava/util/Set;
@@ -64,7 +62,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 1140
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     const-string v1, "touch_exploration_granted_accessibility_services"
@@ -80,7 +77,6 @@
     #calls: Lcom/android/server/accessibility/AccessibilityManagerService;->persistComponentNamesToSettingLocked(Ljava/lang/String;Ljava/util/Set;I)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$800(Lcom/android/server/accessibility/AccessibilityManagerService;Ljava/lang/String;Ljava/util/Set;I)V
 
-    .line 1144
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     #getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
@@ -102,6 +98,5 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1147
     return-void
 .end method

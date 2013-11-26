@@ -31,7 +31,6 @@
     .parameter
 
     .prologue
-    .line 712
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     iput-object p1, p0, Lcom/android/server/IntentResolver$2;->this$0:Lcom/android/server/IntentResolver;
 
@@ -55,7 +54,6 @@
     .end annotation
 
     .prologue
-    .line 717
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     .local p1, filter:Landroid/content/IntentFilter;,"TF;"
     .local p2, dest:Ljava/util/List;,"Ljava/util/List<TR;>;"
@@ -79,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 720
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     .local p1, filter:Landroid/content/IntentFilter;,"TF;"
     iget-object v0, p0, Lcom/android/server/IntentResolver$2;->this$0:Lcom/android/server/IntentResolver;
@@ -103,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 723
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     .local p1, filter:Landroid/content/IntentFilter;,"TF;"
     iget-object v0, p0, Lcom/android/server/IntentResolver$2;->this$0:Lcom/android/server/IntentResolver;
@@ -126,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 714
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     .local p1, filter:Landroid/content/IntentFilter;,"TF;"
     iget-object v0, p0, Lcom/android/server/IntentResolver$2;->this$0:Lcom/android/server/IntentResolver;
@@ -150,13 +145,11 @@
     .end annotation
 
     .prologue
-    .line 726
     .local p0, this:Lcom/android/server/IntentResolver$2;,"Lcom/android/server/IntentResolver.2;"
     .local p1, results:Ljava/util/List;,"Ljava/util/List<TR;>;"
     iget-object v0, p0, Lcom/android/server/IntentResolver$2;->this$0:Lcom/android/server/IntentResolver;
 
     invoke-virtual {v0, p1}, Lcom/android/server/IntentResolver;->sortResults(Ljava/util/List;)V
 
-    .line 727
     return-void
 .end method

@@ -31,23 +31,17 @@
     .parameter "info"
 
     .prologue
-    .line 199
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 194
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/cat/ChannelStatus;->isActivated:Z
 
-    .line 200
     iput p1, p0, Lcom/android/internal/telephony/cat/ChannelStatus;->mChannelId:I
 
-    .line 201
     iput p2, p0, Lcom/android/internal/telephony/cat/ChannelStatus;->mChannelStatus:I
 
-    .line 202
     iput p3, p0, Lcom/android/internal/telephony/cat/ChannelStatus;->mChannelStatusInfo:I
 
-    .line 203
     return-void
 .end method

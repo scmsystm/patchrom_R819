@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 328
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$5$1;->this$1:Lcom/android/server/display/WifiDisplayController$5;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "reason"
 
     .prologue
-    .line 336
     const-string v0, "WifiDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +63,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     return-void
 .end method
 
@@ -73,13 +70,11 @@
     .locals 2
 
     .prologue
-    .line 331
     const-string v0, "WifiDisplayController"
 
     const-string v1, "Disconnected from previous Wi-Fi P2p device, succeess"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 332
     return-void
 .end method

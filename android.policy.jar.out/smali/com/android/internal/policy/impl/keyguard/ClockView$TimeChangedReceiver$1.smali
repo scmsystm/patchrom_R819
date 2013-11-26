@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver$1;->val$timezoneChanged:Z
@@ -51,12 +50,10 @@
     .locals 2
 
     .prologue
-    .line 76
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver$1;->val$timezoneChanged:Z
 
     if-eqz v0, :cond_0
 
-    .line 77
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver$1;->val$clock:Lcom/android/internal/policy/impl/keyguard/ClockView;
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -66,12 +63,10 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/ClockView;->access$002(Lcom/android/internal/policy/impl/keyguard/ClockView;Ljava/util/Calendar;)Ljava/util/Calendar;
 
-    .line 79
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver$1;->val$clock:Lcom/android/internal/policy/impl/keyguard/ClockView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->updateTime()V
 
-    .line 80
     return-void
 .end method

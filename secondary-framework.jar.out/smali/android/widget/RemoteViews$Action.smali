@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 197
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "x0"
 
     .prologue
-    .line 197
     invoke-direct {p0}, Landroid/widget/RemoteViews$Action;-><init>()V
 
     return-void
@@ -65,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 206
     const/4 v0, 0x0
 
     return v0
@@ -78,7 +75,6 @@
     .locals 2
 
     .prologue
-    .line 229
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 223
     const/4 v0, 0x0
 
     return v0
@@ -119,7 +114,6 @@
     .parameter "bitmapCache"
 
     .prologue
-    .line 220
     return-void
 .end method
 
@@ -128,6 +122,5 @@
     .parameter "counter"
 
     .prologue
-    .line 215
     return-void
 .end method

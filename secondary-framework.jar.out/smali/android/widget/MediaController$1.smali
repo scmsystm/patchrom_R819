@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 268
     iput-object p1, p0, Landroid/widget/MediaController$1;->this$0:Landroid/widget/MediaController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -50,20 +49,17 @@
     .parameter "oldBottom"
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/widget/MediaController$1;->this$0:Landroid/widget/MediaController;
 
     #calls: Landroid/widget/MediaController;->updateFloatingWindowLayout()V
     invoke-static {v0}, Landroid/widget/MediaController;->access$000(Landroid/widget/MediaController;)V
 
-    .line 273
     iget-object v0, p0, Landroid/widget/MediaController$1;->this$0:Landroid/widget/MediaController;
 
     iget-boolean v0, v0, Landroid/widget/MediaController;->mShowing:Z
 
     if-eqz v0, :cond_0
 
-    .line 274
     iget-object v0, p0, Landroid/widget/MediaController$1;->this$0:Landroid/widget/MediaController;
 
     iget-object v0, v0, Landroid/widget/MediaController;->mWindowManager:Landroid/view/WindowManager;
@@ -78,7 +74,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 276
     :cond_0
     return-void
 .end method

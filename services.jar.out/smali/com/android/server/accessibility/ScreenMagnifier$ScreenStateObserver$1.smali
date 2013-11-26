@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 844
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,22 +38,18 @@
     .parameter "message"
 
     .prologue
-    .line 847
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 853
     :goto_0
     return-void
 
-    .line 849
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 850
     .local v0, action:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$ScreenStateObserver;
 
@@ -63,7 +58,6 @@
 
     goto :goto_0
 
-    .line 847
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const-class v0, Landroid/view/inputmethod/InputMethodSubtype;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -73,7 +72,6 @@
 
     sput-object v0, Landroid/view/inputmethod/InputMethodSubtype;->TAG:Ljava/lang/String;
 
-    .line 362
     new-instance v0, Landroid/view/inputmethod/InputMethodSubtype$1;
 
     invoke-direct {v0}, Landroid/view/inputmethod/InputMethodSubtype$1;-><init>()V
@@ -93,7 +91,6 @@
     .parameter "isAuxiliary"
 
     .prologue
-    .line 87
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -112,7 +109,6 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/view/inputmethod/InputMethodSubtype;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZ)V
 
-    .line 88
     return-void
 .end method
 
@@ -127,7 +123,6 @@
     .parameter "overridesImplicitlyEnabledSubtype"
 
     .prologue
-    .line 116
     const/4 v8, 0x0
 
     move-object v0, p0
@@ -148,7 +143,6 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/inputmethod/InputMethodSubtype;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZI)V
 
-    .line 118
     return-void
 .end method
 
@@ -164,43 +158,34 @@
     .parameter "id"
 
     .prologue
-    .line 150
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 151
     iput p1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeNameResId:I
 
-    .line 152
     iput p2, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeIconResId:I
 
-    .line 153
     if-eqz p3, :cond_0
 
     .end local p3
     :goto_0
     iput-object p3, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
-    .line 154
     if-eqz p4, :cond_1
 
     .end local p4
     :goto_1
     iput-object p4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeMode:Ljava/lang/String;
 
-    .line 155
     if-eqz p5, :cond_2
 
     .end local p5
     :goto_2
     iput-object p5, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeExtraValue:Ljava/lang/String;
 
-    .line 156
     iput-boolean p6, p0, Landroid/view/inputmethod/InputMethodSubtype;->mIsAuxiliary:Z
 
-    .line 157
     iput-boolean p7, p0, Landroid/view/inputmethod/InputMethodSubtype;->mOverridesImplicitlyEnabledSubtype:Z
 
-    .line 160
     if-eqz p8, :cond_3
 
     move v0, p8
@@ -208,13 +193,10 @@
     :goto_3
     iput v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeHashCode:I
 
-    .line 162
     iput p8, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeId:I
 
-    .line 163
     return-void
 
-    .line 153
     .restart local p3
     .restart local p4
     .restart local p5
@@ -223,21 +205,18 @@
 
     goto :goto_0
 
-    .line 154
     .end local p3
     :cond_1
     const-string p4, ""
 
     goto :goto_1
 
-    .line 155
     .end local p4
     :cond_2
     const-string p5, ""
 
     goto :goto_2
 
-    .line 160
     .end local p5
     :cond_3
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
@@ -266,29 +245,24 @@
 
     const/4 v2, 0x1
 
-    .line 165
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 167
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeNameResId:I
 
-    .line 168
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeIconResId:I
 
-    .line 169
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     .local v0, s:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -296,12 +270,10 @@
     :goto_0
     iput-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
-    .line 171
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 172
     .restart local v0       #s:Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -309,12 +281,10 @@
     :goto_1
     iput-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeMode:Ljava/lang/String;
 
-    .line 173
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 174
     .restart local v0       #s:Ljava/lang/String;
     if-eqz v0, :cond_2
 
@@ -322,7 +292,6 @@
     :goto_2
     iput-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeExtraValue:Ljava/lang/String;
 
-    .line 175
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -334,7 +303,6 @@
     :goto_3
     iput-boolean v1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mIsAuxiliary:Z
 
-    .line 176
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -344,37 +312,31 @@
     :goto_4
     iput-boolean v2, p0, Landroid/view/inputmethod/InputMethodSubtype;->mOverridesImplicitlyEnabledSubtype:Z
 
-    .line 177
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeHashCode:I
 
-    .line 178
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeId:I
 
-    .line 179
     return-void
 
-    .line 170
     .restart local v0       #s:Ljava/lang/String;
     :cond_0
     const-string v0, ""
 
     goto :goto_0
 
-    .line 172
     :cond_1
     const-string v0, ""
 
     goto :goto_1
 
-    .line 174
     :cond_2
     const-string v0, ""
 
@@ -384,13 +346,11 @@
     :cond_3
     move v1, v3
 
-    .line 175
     goto :goto_3
 
     :cond_4
     move v2, v3
 
-    .line 176
     goto :goto_4
 .end method
 
@@ -409,19 +369,16 @@
 
     const/4 v3, 0x0
 
-    .line 376
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 388
     :cond_0
     :goto_0
     return-object v1
 
-    .line 378
     :cond_1
     const-string v2, "_"
 
@@ -429,13 +386,11 @@
 
     move-result-object v0
 
-    .line 381
     .local v0, localeParams:[Ljava/lang/String;
     array-length v2, v0
 
     if-ne v2, v4, :cond_2
 
-    .line 382
     new-instance v1, Ljava/util/Locale;
 
     aget-object v2, v0, v3
@@ -444,13 +399,11 @@
 
     goto :goto_0
 
-    .line 383
     :cond_2
     array-length v2, v0
 
     if-ne v2, v5, :cond_3
 
-    .line 384
     new-instance v1, Ljava/util/Locale;
 
     aget-object v2, v0, v3
@@ -461,13 +414,11 @@
 
     goto :goto_0
 
-    .line 385
     :cond_3
     array-length v2, v0
 
     if-ne v2, v6, :cond_0
 
-    .line 386
     new-instance v1, Ljava/util/Locale;
 
     aget-object v2, v0, v3
@@ -497,28 +448,23 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 278
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
     if-nez v4, :cond_4
 
-    .line 279
     monitor-enter p0
 
-    .line 280
     :try_start_0
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
     if-nez v4, :cond_3
 
-    .line 281
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
-    .line 282
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeExtraValue:Ljava/lang/String;
 
     const-string v5, ","
@@ -527,11 +473,9 @@
 
     move-result-object v3
 
-    .line 283
     .local v3, pairs:[Ljava/lang/String;
     array-length v0, v3
 
-    .line 284
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -539,7 +483,6 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
-    .line 285
     aget-object v4, v3, v1
 
     const-string v5, "="
@@ -548,13 +491,11 @@
 
     move-result-object v2
 
-    .line 286
     .local v2, pair:[Ljava/lang/String;
     array-length v4, v2
 
     if-ne v4, v7, :cond_1
 
-    .line 287
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
     const/4 v5, 0x0
@@ -565,34 +506,29 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 284
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 288
     :cond_1
     array-length v4, v2
 
     if-le v4, v7, :cond_0
 
-    .line 289
     array-length v4, v2
 
     const/4 v5, 0x2
 
     if-le v4, v5, :cond_2
 
-    .line 290
     sget-object v4, Landroid/view/inputmethod/InputMethodSubtype;->TAG:Ljava/lang/String;
 
     const-string v5, "ExtraValue has two or more \'=\'s"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     :cond_2
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
@@ -608,7 +544,6 @@
 
     goto :goto_1
 
-    .line 296
     .end local v0           #N:I
     .end local v1           #i:I
     .end local v2           #pair:[Ljava/lang/String;
@@ -628,7 +563,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 298
     :cond_4
     iget-object v4, p0, Landroid/view/inputmethod/InputMethodSubtype;->mExtraValueHashMapCache:Ljava/util/HashMap;
 
@@ -644,7 +578,6 @@
     .parameter "overridesImplicitlyEnabledSubtype"
 
     .prologue
-    .line 393
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -708,35 +641,29 @@
     .end annotation
 
     .prologue
-    .line 408
     .local p3, subtypeList:Ljava/util/List;,"Ljava/util/List<Landroid/view/inputmethod/InputMethodSubtype;>;"
     if-nez p2, :cond_0
 
-    .line 425
     .end local p3           #subtypeList:Ljava/util/List;,"Ljava/util/List<Landroid/view/inputmethod/InputMethodSubtype;>;"
     :goto_0
     return-object p3
 
-    .line 409
     .restart local p3       #subtypeList:Ljava/util/List;,"Ljava/util/List<Landroid/view/inputmethod/InputMethodSubtype;>;"
     :cond_0
     new-instance v3, Ljava/util/HashSet;
 
     invoke-direct {v3, p3}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 411
     .local v3, inputSubtypesSet:Ljava/util/HashSet;,"Ljava/util/HashSet<Landroid/view/inputmethod/InputMethodSubtype;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 412
     .local v4, sortedList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/view/inputmethod/InputMethodSubtype;>;"
     invoke-virtual {p2}, Landroid/view/inputmethod/InputMethodInfo;->getSubtypeCount()I
 
     move-result v0
 
-    .line 413
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -744,12 +671,10 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 414
     invoke-virtual {p2, v1}, Landroid/view/inputmethod/InputMethodInfo;->getSubtypeAt(I)Landroid/view/inputmethod/InputMethodSubtype;
 
     move-result-object v5
 
-    .line 415
     .local v5, subtype:Landroid/view/inputmethod/InputMethodSubtype;
     invoke-virtual {v3, v5}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -757,19 +682,15 @@
 
     if-eqz v6, :cond_1
 
-    .line 416
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 417
     invoke-virtual {v3, v5}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 413
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 422
     .end local v5           #subtype:Landroid/view/inputmethod/InputMethodSubtype;
     :cond_2
     invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -790,7 +711,6 @@
 
     check-cast v5, Landroid/view/inputmethod/InputMethodSubtype;
 
-    .line 423
     .restart local v5       #subtype:Landroid/view/inputmethod/InputMethodSubtype;
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -800,7 +720,6 @@
     :cond_3
     move-object p3, v4
 
-    .line 425
     goto :goto_0
 .end method
 
@@ -811,7 +730,6 @@
     .parameter "key"
 
     .prologue
-    .line 308
     invoke-direct {p0}, Landroid/view/inputmethod/InputMethodSubtype;->getExtraValueHashMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -827,7 +745,6 @@
     .locals 1
 
     .prologue
-    .line 346
     const/4 v0, 0x0
 
     return v0
@@ -842,17 +759,14 @@
 
     const/4 v2, 0x0
 
-    .line 328
     instance-of v3, p1, Landroid/view/inputmethod/InputMethodSubtype;
 
     if-eqz v3, :cond_5
 
     move-object v0, p1
 
-    .line 329
     check-cast v0, Landroid/view/inputmethod/InputMethodSubtype;
 
-    .line 330
     .local v0, subtype:Landroid/view/inputmethod/InputMethodSubtype;
     iget v3, v0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeId:I
 
@@ -862,7 +776,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 331
     :cond_0
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodSubtype;->hashCode()I
 
@@ -874,7 +787,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 341
     .end local v0           #subtype:Landroid/view/inputmethod/InputMethodSubtype;
     :cond_1
     :goto_0
@@ -884,10 +796,8 @@
     :cond_2
     move v1, v2
 
-    .line 331
     goto :goto_0
 
-    .line 333
     :cond_3
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodSubtype;->hashCode()I
 
@@ -980,7 +890,6 @@
     :cond_5
     move v1, v2
 
-    .line 341
     goto :goto_0
 .end method
 
@@ -991,14 +900,12 @@
     .parameter "appInfo"
 
     .prologue
-    .line 253
     iget-object v5, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
     invoke-static {v5}, Landroid/view/inputmethod/InputMethodSubtype;->constructLocaleFromString(Ljava/lang/String;)Ljava/util/Locale;
 
     move-result-object v1
 
-    .line 254
     .local v1, locale:Ljava/util/Locale;
     if-eqz v1, :cond_1
 
@@ -1006,26 +913,22 @@
 
     move-result-object v2
 
-    .line 255
     .local v2, localeStr:Ljava/lang/String;
     :goto_0
     iget v5, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeNameResId:I
 
     if-nez v5, :cond_2
 
-    .line 273
     .end local v2           #localeStr:Ljava/lang/String;
     :cond_0
     :goto_1
     return-object v2
 
-    .line 254
     :cond_1
     iget-object v2, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 258
     .restart local v2       #localeStr:Ljava/lang/String;
     :cond_2
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1038,7 +941,6 @@
 
     move-result-object v4
 
-    .line 260
     .local v4, subtypeName:Ljava/lang/CharSequence;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1046,7 +948,6 @@
 
     if-nez v5, :cond_0
 
-    .line 261
     const-string v5, "UntranslatableReplacementStringInSubtypeName"
 
     invoke-virtual {p0, v5}, Landroid/view/inputmethod/InputMethodSubtype;->containsExtraValueKey(Ljava/lang/String;)Z
@@ -1061,7 +962,6 @@
 
     move-result-object v3
 
-    .line 266
     .local v3, replacementString:Ljava/lang/String;
     :goto_2
     :try_start_0
@@ -1090,10 +990,8 @@
     :cond_3
     move-object v3, v2
 
-    .line 261
     goto :goto_2
 
-    .line 266
     .restart local v3       #replacementString:Ljava/lang/String;
     :cond_4
     const-string v3, ""
@@ -1102,12 +1000,10 @@
 
     goto :goto_3
 
-    .line 268
     .end local v3           #replacementString:Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 269
     .local v0, e:Ljava/util/IllegalFormatException;
     sget-object v5, Landroid/view/inputmethod/InputMethodSubtype;->TAG:Ljava/lang/String;
 
@@ -1141,7 +1037,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     const-string v2, ""
 
     goto :goto_1
@@ -1151,7 +1046,6 @@
     .locals 1
 
     .prologue
-    .line 214
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeExtraValue:Ljava/lang/String;
 
     return-object v0
@@ -1162,7 +1056,6 @@
     .parameter "key"
 
     .prologue
-    .line 318
     invoke-direct {p0}, Landroid/view/inputmethod/InputMethodSubtype;->getExtraValueHashMap()Ljava/util/HashMap;
 
     move-result-object v0
@@ -1180,7 +1073,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeIconResId:I
 
     return v0
@@ -1190,7 +1082,6 @@
     .locals 1
 
     .prologue
-    .line 200
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
     return-object v0
@@ -1200,7 +1091,6 @@
     .locals 1
 
     .prologue
-    .line 207
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeMode:Ljava/lang/String;
 
     return-object v0
@@ -1210,7 +1100,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeNameResId:I
 
     return v0
@@ -1220,7 +1109,6 @@
     .locals 1
 
     .prologue
-    .line 323
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeHashCode:I
 
     return v0
@@ -1230,7 +1118,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-boolean v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mIsAuxiliary:Z
 
     return v0
@@ -1240,7 +1127,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-boolean v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mOverridesImplicitlyEnabledSubtype:Z
 
     return v0
@@ -1256,32 +1142,26 @@
 
     const/4 v2, 0x0
 
-    .line 351
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeNameResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 352
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeIconResId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 353
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeLocale:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 354
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeMode:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 355
     iget-object v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeExtraValue:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 356
     iget-boolean v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mIsAuxiliary:Z
 
     if-eqz v0, :cond_0
@@ -1291,7 +1171,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 357
     iget-boolean v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mOverridesImplicitlyEnabledSubtype:Z
 
     if-eqz v0, :cond_1
@@ -1299,28 +1178,23 @@
     :goto_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 358
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeHashCode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 359
     iget v0, p0, Landroid/view/inputmethod/InputMethodSubtype;->mSubtypeId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 360
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 356
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 357
     goto :goto_1
 .end method

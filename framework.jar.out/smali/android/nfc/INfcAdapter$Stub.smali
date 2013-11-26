@@ -60,15 +60,12 @@
     .locals 1
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 18
     const-string v0, "android.nfc.INfcAdapter"
 
     invoke-virtual {p0, p0, v0}, Landroid/nfc/INfcAdapter$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 19
     return-void
 .end method
 
@@ -77,17 +74,13 @@
     .parameter "obj"
 
     .prologue
-    .line 26
     if-nez p0, :cond_0
 
-    .line 27
     const/4 v0, 0x0
 
-    .line 33
     :goto_0
     return-object v0
 
-    .line 29
     :cond_0
     const-string v1, "android.nfc.INfcAdapter"
 
@@ -95,7 +88,6 @@
 
     move-result-object v0
 
-    .line 30
     .local v0, iin:Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -103,12 +95,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 31
     check-cast v0, Landroid/nfc/INfcAdapter;
 
     goto :goto_0
 
-    .line 33
     :cond_1
     new-instance v0, Landroid/nfc/INfcAdapter$Stub$Proxy;
 
@@ -124,7 +114,6 @@
     .locals 0
 
     .prologue
-    .line 37
     return-object p0
 .end method
 
@@ -147,10 +136,8 @@
 
     const/4 v5, 0x1
 
-    .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 195
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -158,7 +145,6 @@
     :goto_0
     return v5
 
-    .line 45
     :sswitch_0
     const-string v4, "android.nfc.INfcAdapter"
 
@@ -166,22 +152,18 @@
 
     goto :goto_0
 
-    .line 50
     :sswitch_1
     const-string v6, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 51
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->getNfcTagInterface()Landroid/nfc/INfcTag;
 
     move-result-object v3
 
-    .line 52
     .local v3, _result:Landroid/nfc/INfcTag;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 53
     if-eqz v3, :cond_0
 
     invoke-interface {v3}, Landroid/nfc/INfcTag;->asBinder()Landroid/os/IBinder;
@@ -193,29 +175,24 @@
 
     goto :goto_0
 
-    .line 58
     .end local v3           #_result:Landroid/nfc/INfcTag;
     :sswitch_2
     const-string v6, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 60
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 61
     .local v0, _arg0:Ljava/lang/String;
     invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->getNfcAdapterExtrasInterface(Ljava/lang/String;)Landroid/nfc/INfcAdapterExtras;
 
     move-result-object v3
 
-    .line 62
     .local v3, _result:Landroid/nfc/INfcAdapterExtras;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 63
     if-eqz v3, :cond_1
 
     invoke-interface {v3}, Landroid/nfc/INfcAdapterExtras;->asBinder()Landroid/os/IBinder;
@@ -227,7 +204,6 @@
 
     goto :goto_0
 
-    .line 68
     .end local v0           #_arg0:Ljava/lang/String;
     .end local v3           #_result:Landroid/nfc/INfcAdapterExtras;
     :sswitch_3
@@ -235,28 +211,23 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 69
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->getState()I
 
     move-result v3
 
-    .line 70
     .local v3, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 71
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    .line 76
     .end local v3           #_result:I
     :sswitch_4
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 78
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
@@ -265,18 +236,15 @@
 
     move v0, v5
 
-    .line 79
     .local v0, _arg0:Z
     :goto_1
     invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->disable(Z)Z
 
     move-result v3
 
-    .line 80
     .local v3, _result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 81
     if-eqz v3, :cond_2
 
     move v6, v5
@@ -291,25 +259,20 @@
     :cond_3
     move v0, v6
 
-    .line 78
     goto :goto_1
 
-    .line 86
     :sswitch_5
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 87
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->enable()Z
 
     move-result v3
 
-    .line 88
     .restart local v3       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 89
     if-eqz v3, :cond_4
 
     move v6, v5
@@ -319,23 +282,19 @@
 
     goto :goto_0
 
-    .line 94
     .end local v3           #_result:Z
     :sswitch_6
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 95
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->enableNdefPush()Z
 
     move-result v3
 
-    .line 96
     .restart local v3       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 97
     if-eqz v3, :cond_5
 
     move v6, v5
@@ -345,23 +304,19 @@
 
     goto/16 :goto_0
 
-    .line 102
     .end local v3           #_result:Z
     :sswitch_7
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 103
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->disableNdefPush()Z
 
     move-result v3
 
-    .line 104
     .restart local v3       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 105
     if-eqz v3, :cond_6
 
     move v6, v5
@@ -371,23 +326,19 @@
 
     goto/16 :goto_0
 
-    .line 110
     .end local v3           #_result:Z
     :sswitch_8
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 111
     invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->isNdefPushEnabled()Z
 
     move-result v3
 
-    .line 112
     .restart local v3       #_result:Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 113
     if-eqz v3, :cond_7
 
     move v6, v5
@@ -397,21 +348,18 @@
 
     goto/16 :goto_0
 
-    .line 118
     .end local v3           #_result:Z
     :sswitch_9
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_8
 
-    .line 121
     sget-object v4, Landroid/app/PendingIntent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -420,7 +368,6 @@
 
     check-cast v0, Landroid/app/PendingIntent;
 
-    .line 127
     .local v0, _arg0:Landroid/app/PendingIntent;
     :goto_2
     sget-object v4, Landroid/content/IntentFilter;->CREATOR:Landroid/os/Parcelable$Creator;
@@ -431,7 +378,6 @@
 
     check-cast v1, [Landroid/content/IntentFilter;
 
-    .line 129
     .local v1, _arg1:[Landroid/content/IntentFilter;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -439,7 +385,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 130
     sget-object v4, Landroid/nfc/TechListParcel;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -448,17 +393,14 @@
 
     check-cast v2, Landroid/nfc/TechListParcel;
 
-    .line 135
     .local v2, _arg2:Landroid/nfc/TechListParcel;
     :goto_3
     invoke-virtual {p0, v0, v1, v2}, Landroid/nfc/INfcAdapter$Stub;->setForegroundDispatch(Landroid/app/PendingIntent;[Landroid/content/IntentFilter;Landroid/nfc/TechListParcel;)V
 
-    .line 136
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 124
     .end local v0           #_arg0:Landroid/app/PendingIntent;
     .end local v1           #_arg1:[Landroid/content/IntentFilter;
     .end local v2           #_arg2:Landroid/nfc/TechListParcel;
@@ -468,7 +410,6 @@
     .restart local v0       #_arg0:Landroid/app/PendingIntent;
     goto :goto_2
 
-    .line 133
     .restart local v1       #_arg1:[Landroid/content/IntentFilter;
     :cond_9
     const/4 v2, 0x0
@@ -476,7 +417,6 @@
     .restart local v2       #_arg2:Landroid/nfc/TechListParcel;
     goto :goto_3
 
-    .line 141
     .end local v0           #_arg0:Landroid/app/PendingIntent;
     .end local v1           #_arg1:[Landroid/content/IntentFilter;
     .end local v2           #_arg2:Landroid/nfc/TechListParcel;
@@ -485,7 +425,6 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 143
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v4
@@ -494,30 +433,25 @@
 
     move-result-object v0
 
-    .line 144
     .local v0, _arg0:Landroid/nfc/INdefPushCallback;
     invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->setNdefPushCallback(Landroid/nfc/INdefPushCallback;)V
 
-    .line 145
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 150
     .end local v0           #_arg0:Landroid/nfc/INdefPushCallback;
     :sswitch_b
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 152
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
     if-eqz v4, :cond_a
 
-    .line 153
     sget-object v4, Landroid/nfc/Tag;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v4, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -526,17 +460,14 @@
 
     check-cast v0, Landroid/nfc/Tag;
 
-    .line 158
     .local v0, _arg0:Landroid/nfc/Tag;
     :goto_4
     invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->dispatch(Landroid/nfc/Tag;)V
 
-    .line 159
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 156
     .end local v0           #_arg0:Landroid/nfc/Tag;
     :cond_a
     const/4 v0, 0x0
@@ -544,34 +475,28 @@
     .restart local v0       #_arg0:Landroid/nfc/Tag;
     goto :goto_4
 
-    .line 164
     .end local v0           #_arg0:Landroid/nfc/Tag;
     :sswitch_c
     const-string v4, "android.nfc.INfcAdapter"
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 168
     .local v0, _arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 169
     .local v1, _arg1:I
     invoke-virtual {p0, v0, v1}, Landroid/nfc/INfcAdapter$Stub;->setP2pModes(II)V
 
-    .line 170
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 175
     .end local v0           #_arg0:I
     .end local v1           #_arg1:I
     :sswitch_d
@@ -579,27 +504,22 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 177
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 178
     .restart local v0       #_arg0:I
     invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->getModeFlag(I)I
 
     move-result v3
 
-    .line 179
     .local v3, _result:I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 180
     invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 185
     .end local v0           #_arg0:I
     .end local v3           #_result:I
     :sswitch_e
@@ -607,27 +527,22 @@
 
     invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 187
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 189
     .restart local v0       #_arg0:I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 190
     .restart local v1       #_arg1:I
     invoke-virtual {p0, v0, v1}, Landroid/nfc/INfcAdapter$Stub;->setModeFlag(II)V
 
-    .line 191
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 41
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

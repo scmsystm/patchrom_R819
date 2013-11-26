@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2125
     iput-object p1, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 2128
     iget-object v0, p0, Lcom/android/server/WifiService$4;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->autoConnectEnableAllNetworks()V
     invoke-static {v0}, Lcom/android/server/WifiService;->access$4200(Lcom/android/server/WifiService;)V
 
-    .line 2129
     return-void
 .end method

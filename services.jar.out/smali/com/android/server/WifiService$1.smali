@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 406
     iput-object p1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 409
     iget-object v1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->isAirplaneModeOn()Z
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 410
     .local v0, isAirplaneModeOn:Z
     const-string v1, "WifiService"
 
@@ -72,7 +69,6 @@
 
     invoke-static {v1, v2}, Lcom/mediatek/xlog/SXlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 411
     iget-object v1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     #getter for: Lcom/android/server/WifiService;->mAirplaneModeOn:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -82,7 +78,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 412
     iget-object v1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     iget-object v2, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
@@ -99,12 +94,10 @@
     #calls: Lcom/android/server/WifiService;->handleAirplaneModeToggled(Z)V
     invoke-static {v1, v2}, Lcom/android/server/WifiService;->access$1000(Lcom/android/server/WifiService;Z)V
 
-    .line 413
     iget-object v1, p0, Lcom/android/server/WifiService$1;->this$0:Lcom/android/server/WifiService;
 
     #calls: Lcom/android/server/WifiService;->updateWifiState()V
     invoke-static {v1}, Lcom/android/server/WifiService;->access$1100(Lcom/android/server/WifiService;)V
 
-    .line 414
     return-void
 .end method

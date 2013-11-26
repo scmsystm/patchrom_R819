@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 98
     invoke-direct {p0, p1}, Lcom/android/server/ResettableTimeout$T;-><init>(Lcom/android/server/ResettableTimeout;)V
 
     return-void
@@ -50,7 +48,6 @@
     .locals 6
 
     .prologue
-    .line 102
     iget-object v2, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
     #getter for: Lcom/android/server/ResettableTimeout;->mLock:Landroid/os/ConditionVariable;
@@ -60,11 +57,9 @@
 
     invoke-virtual {v2}, Landroid/os/ConditionVariable;->open()V
 
-    .line 105
     :goto_0
     monitor-enter p0
 
-    .line 106
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
@@ -79,7 +74,6 @@
 
     sub-long v0, v2, v4
 
-    .line 107
     .local v0, diff:J
     const-wide/16 v2, 0x0
 
@@ -87,7 +81,6 @@
 
     if-gtz v2, :cond_0
 
-    .line 108
     iget-object v2, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
     const/4 v3, 0x1
@@ -95,12 +88,10 @@
     #setter for: Lcom/android/server/ResettableTimeout;->mOffCalled:Z
     invoke-static {v2, v3}, Lcom/android/server/ResettableTimeout;->access$302(Lcom/android/server/ResettableTimeout;Z)Z
 
-    .line 109
     iget-object v2, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
     invoke-virtual {v2}, Lcom/android/server/ResettableTimeout;->off()V
 
-    .line 110
     iget-object v2, p0, Lcom/android/server/ResettableTimeout$T;->this$0:Lcom/android/server/ResettableTimeout;
 
     const/4 v3, 0x0
@@ -108,19 +99,15 @@
     #setter for: Lcom/android/server/ResettableTimeout;->mThread:Ljava/lang/Thread;
     invoke-static {v2, v3}, Lcom/android/server/ResettableTimeout;->access$402(Lcom/android/server/ResettableTimeout;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 111
     monitor-exit p0
 
-    .line 120
     return-void
 
-    .line 113
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 115
     :try_start_1
     invoke-static {v0, v1}, Lcom/android/server/ResettableTimeout$T;->sleep(J)V
     :try_end_1
@@ -128,13 +115,11 @@
 
     goto :goto_0
 
-    .line 117
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 113
     .end local v0           #diff:J
     :catchall_0
     move-exception v2

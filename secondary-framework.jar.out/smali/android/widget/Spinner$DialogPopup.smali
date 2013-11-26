@@ -34,7 +34,6 @@
     .parameter
 
     .prologue
-    .line 834
     iput-object p1, p0, Landroid/widget/Spinner$DialogPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
     .parameter "x1"
 
     .prologue
-    .line 834
     invoke-direct {p0, p1}, Landroid/widget/Spinner$DialogPopup;-><init>(Landroid/widget/Spinner;)V
 
     return-void
@@ -60,17 +58,14 @@
     .locals 1
 
     .prologue
-    .line 840
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 841
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
-    .line 842
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 894
     const/4 v0, 0x0
 
     return-object v0
@@ -88,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 857
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     return-object v0
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 904
     const/4 v0, 0x0
 
     return v0
@@ -108,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 899
     const/4 v0, 0x0
 
     return v0
@@ -118,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 845
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
     if-eqz v0, :cond_0
@@ -144,19 +134,16 @@
     .parameter "which"
 
     .prologue
-    .line 870
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->this$0:Landroid/widget/Spinner;
 
     invoke-virtual {v0, p2}, Landroid/widget/Spinner;->setSelection(I)V
 
-    .line 871
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->this$0:Landroid/widget/Spinner;
 
     iget-object v0, v0, Landroid/widget/AdapterView;->mOnItemClickListener:Landroid/widget/AdapterView$OnItemClickListener;
 
     if-eqz v0, :cond_0
 
-    .line 872
     iget-object v0, p0, Landroid/widget/Spinner$DialogPopup;->this$0:Landroid/widget/Spinner;
 
     const/4 v1, 0x0
@@ -169,11 +156,9 @@
 
     invoke-virtual {v0, v1, p2, v2, v3}, Landroid/widget/Spinner;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 874
     :cond_0
     invoke-virtual {p0}, Landroid/widget/Spinner$DialogPopup;->dismiss()V
 
-    .line 875
     return-void
 .end method
 
@@ -182,10 +167,8 @@
     .parameter "adapter"
 
     .prologue
-    .line 849
     iput-object p1, p0, Landroid/widget/Spinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
-    .line 850
     return-void
 .end method
 
@@ -194,14 +177,12 @@
     .parameter "bg"
 
     .prologue
-    .line 879
     const-string v0, "Spinner"
 
     const-string v1, "Cannot set popup background for MODE_DIALOG, ignoring"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 880
     return-void
 .end method
 
@@ -210,14 +191,12 @@
     .parameter "px"
 
     .prologue
-    .line 889
     const-string v0, "Spinner"
 
     const-string v1, "Cannot set horizontal offset for MODE_DIALOG, ignoring"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 890
     return-void
 .end method
 
@@ -226,10 +205,8 @@
     .parameter "hintText"
 
     .prologue
-    .line 853
     iput-object p1, p0, Landroid/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
-    .line 854
     return-void
 .end method
 
@@ -238,14 +215,12 @@
     .parameter "px"
 
     .prologue
-    .line 884
     const-string v0, "Spinner"
 
     const-string v1, "Cannot set vertical offset for MODE_DIALOG, ignoring"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 885
     return-void
 .end method
 
@@ -253,7 +228,6 @@
     .locals 3
 
     .prologue
-    .line 861
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     iget-object v1, p0, Landroid/widget/Spinner$DialogPopup;->this$0:Landroid/widget/Spinner;
@@ -264,18 +238,15 @@
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 862
     .local v0, builder:Landroid/app/AlertDialog$Builder;
     iget-object v1, p0, Landroid/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_0
 
-    .line 863
     iget-object v1, p0, Landroid/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 865
     :cond_0
     iget-object v1, p0, Landroid/widget/Spinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
@@ -295,6 +266,5 @@
 
     iput-object v1, p0, Landroid/widget/Spinner$DialogPopup;->mPopup:Landroid/app/AlertDialog;
 
-    .line 867
     return-void
 .end method

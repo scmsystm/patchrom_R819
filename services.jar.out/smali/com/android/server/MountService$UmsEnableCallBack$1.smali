@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 471
     iput-object p1, p0, Lcom/android/server/MountService$UmsEnableCallBack$1;->this$1:Lcom/android/server/MountService$UmsEnableCallBack;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,12 +37,10 @@
     .locals 2
 
     .prologue
-    .line 473
     const-wide/16 v0, 0x12c
 
     invoke-static {v0, v1}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 474
     iget-object v0, p0, Lcom/android/server/MountService$UmsEnableCallBack$1;->this$1:Lcom/android/server/MountService$UmsEnableCallBack;
 
     iget-object v0, v0, Lcom/android/server/MountService$UmsEnableCallBack;->this$0:Lcom/android/server/MountService;
@@ -53,6 +50,5 @@
     #setter for: Lcom/android/server/MountService;->mIsTurnOnOffUsb:Z
     invoke-static {v0, v1}, Lcom/android/server/MountService;->access$1102(Lcom/android/server/MountService;Z)Z
 
-    .line 475
     return-void
 .end method

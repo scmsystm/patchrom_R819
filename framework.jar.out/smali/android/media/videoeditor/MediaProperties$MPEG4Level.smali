@@ -44,7 +44,6 @@
     .parameter
 
     .prologue
-    .line 239
     iput-object p1, p0, Landroid/media/videoeditor/MediaProperties$MPEG4Level;->this$0:Landroid/media/videoeditor/MediaProperties;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

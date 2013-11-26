@@ -44,31 +44,24 @@
     .parameter "protocol"
 
     .prologue
-    .line 249
     const-string v0, "icbka"
 
     invoke-direct {p0, v0}, Landroid/net/sip/SimpleSessionDescription$Fields;-><init>(Ljava/lang/String;)V
 
-    .line 246
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
-    .line 250
     iput-object p1, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mType:Ljava/lang/String;
 
-    .line 251
     iput p2, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mPort:I
 
-    .line 252
     iput p3, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mPortCount:I
 
-    .line 253
     iput-object p4, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mProtocol:Ljava/lang/String;
 
-    .line 254
     return-void
 .end method
 
@@ -81,7 +74,6 @@
     .parameter "x4"
 
     .prologue
-    .line 241
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/net/sip/SimpleSessionDescription$Media;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     return-void
@@ -93,7 +85,6 @@
     .parameter "x1"
 
     .prologue
-    .line 241
     invoke-direct {p0, p1}, Landroid/net/sip/SimpleSessionDescription$Media;->write(Ljava/lang/StringBuilder;)V
 
     return-void
@@ -106,7 +97,6 @@
     .prologue
     const/16 v4, 0x20
 
-    .line 373
     const-string v2, "m="
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -127,14 +117,12 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 374
     iget v2, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mPortCount:I
 
     const/4 v3, 0x1
 
     if-eq v2, v3, :cond_0
 
-    .line 375
     const/16 v2, 0x2f
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -145,7 +133,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 377
     :cond_0
     invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -155,7 +142,6 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 378
     iget-object v2, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -176,7 +162,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 379
     .local v0, format:Ljava/lang/String;
     invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -186,18 +171,15 @@
 
     goto :goto_0
 
-    .line 381
     .end local v0           #format:Ljava/lang/String;
     :cond_1
     const-string v2, "\r\n"
 
     invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 382
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->write(Ljava/lang/StringBuilder;)V
     invoke-static {p0, p1}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$200(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/StringBuilder;)V
 
-    .line 383
     return-void
 .end method
 
@@ -207,7 +189,6 @@
     .locals 1
 
     .prologue
-    .line 241
     invoke-super {p0}, Landroid/net/sip/SimpleSessionDescription$Fields;->getAddress()Ljava/lang/String;
 
     move-result-object v0
@@ -220,7 +201,6 @@
     .parameter "x0"
 
     .prologue
-    .line 241
     invoke-super {p0, p1}, Landroid/net/sip/SimpleSessionDescription$Fields;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -232,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 241
     invoke-super {p0}, Landroid/net/sip/SimpleSessionDescription$Fields;->getAttributeNames()[Ljava/lang/String;
 
     move-result-object v0
@@ -245,7 +224,6 @@
     .parameter "x0"
 
     .prologue
-    .line 241
     invoke-super {p0, p1}, Landroid/net/sip/SimpleSessionDescription$Fields;->getBandwidth(Ljava/lang/String;)I
 
     move-result v0
@@ -257,7 +235,6 @@
     .locals 1
 
     .prologue
-    .line 241
     invoke-super {p0}, Landroid/net/sip/SimpleSessionDescription$Fields;->getBandwidthTypes()[Ljava/lang/String;
 
     move-result-object v0
@@ -269,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 241
     invoke-super {p0}, Landroid/net/sip/SimpleSessionDescription$Fields;->getEncryptionKey()Ljava/lang/String;
 
     move-result-object v0
@@ -281,7 +257,6 @@
     .locals 1
 
     .prologue
-    .line 241
     invoke-super {p0}, Landroid/net/sip/SimpleSessionDescription$Fields;->getEncryptionMethod()Ljava/lang/String;
 
     move-result-object v0
@@ -294,7 +269,6 @@
     .parameter "type"
 
     .prologue
-    .line 347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -328,7 +302,6 @@
     .parameter "format"
 
     .prologue
-    .line 296
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,7 +334,6 @@
     .locals 2
 
     .prologue
-    .line 288
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     iget-object v1, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
@@ -385,7 +357,6 @@
     .locals 1
 
     .prologue
-    .line 267
     iget v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mPort:I
 
     return v0
@@ -395,7 +366,6 @@
     .locals 1
 
     .prologue
-    .line 274
     iget v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mPortCount:I
 
     return v0
@@ -405,7 +375,6 @@
     .locals 1
 
     .prologue
-    .line 281
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mProtocol:Ljava/lang/String;
 
     return-object v0
@@ -415,7 +384,6 @@
     .locals 5
 
     .prologue
-    .line 323
     iget-object v4, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -424,11 +392,9 @@
 
     new-array v3, v4, [I
 
-    .line 324
     .local v3, types:[I
     const/4 v2, 0x0
 
-    .line 325
     .local v2, length:I
     iget-object v4, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
@@ -450,7 +416,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 327
     .local v0, format:Ljava/lang/String;
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -461,12 +426,10 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 328
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 331
     .end local v0           #format:Ljava/lang/String;
     :cond_0
     invoke-static {v3, v2}, Ljava/util/Arrays;->copyOf([II)[I
@@ -475,7 +438,6 @@
 
     return-object v4
 
-    .line 329
     .restart local v0       #format:Ljava/lang/String;
     :catch_0
     move-exception v4
@@ -488,7 +450,6 @@
     .parameter "type"
 
     .prologue
-    .line 339
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -521,7 +482,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mType:Ljava/lang/String;
 
     return-object v0
@@ -536,12 +496,10 @@
 
     const/16 v2, 0x20
 
-    .line 314
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 315
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -563,7 +521,6 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v0, v2, v3}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 316
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -585,7 +542,6 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v0, v2, v3}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 317
     return-void
 .end method
 
@@ -594,14 +550,12 @@
     .parameter "type"
 
     .prologue
-    .line 369
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/net/sip/SimpleSessionDescription$Media;->removeFormat(Ljava/lang/String;)V
 
-    .line 370
     return-void
 .end method
 
@@ -610,7 +564,6 @@
     .parameter "x0"
 
     .prologue
-    .line 241
     invoke-super {p0, p1}, Landroid/net/sip/SimpleSessionDescription$Fields;->setAddress(Ljava/lang/String;)V
 
     return-void
@@ -622,7 +575,6 @@
     .parameter "x1"
 
     .prologue
-    .line 241
     invoke-super {p0, p1, p2}, Landroid/net/sip/SimpleSessionDescription$Fields;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -634,7 +586,6 @@
     .parameter "x1"
 
     .prologue
-    .line 241
     invoke-super {p0, p1, p2}, Landroid/net/sip/SimpleSessionDescription$Fields;->setBandwidth(Ljava/lang/String;I)V
 
     return-void
@@ -646,7 +597,6 @@
     .parameter "x1"
 
     .prologue
-    .line 241
     invoke-super {p0, p1, p2}, Landroid/net/sip/SimpleSessionDescription$Fields;->setEncryption(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -660,17 +610,14 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 304
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 305
     iget-object v0, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 306
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -694,7 +641,6 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v0, v2, v1}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 307
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -716,7 +662,6 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v0, v2, p2}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 308
     return-void
 .end method
 
@@ -729,23 +674,19 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 357
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 358
     .local v0, format:Ljava/lang/String;
     iget-object v1, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 359
     iget-object v1, p0, Landroid/net/sip/SimpleSessionDescription$Media;->mFormats:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 360
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -767,7 +708,6 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v1, v3, p2}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 361
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -789,6 +729,5 @@
     #calls: Landroid/net/sip/SimpleSessionDescription$Fields;->set(Ljava/lang/String;CLjava/lang/String;)V
     invoke-static {p0, v1, v3, p3}, Landroid/net/sip/SimpleSessionDescription$Fields;->access$500(Landroid/net/sip/SimpleSessionDescription$Fields;Ljava/lang/String;CLjava/lang/String;)V
 
-    .line 362
     return-void
 .end method

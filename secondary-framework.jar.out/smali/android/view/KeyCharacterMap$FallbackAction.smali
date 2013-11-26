@@ -37,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 731
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
@@ -51,10 +50,8 @@
     .locals 0
 
     .prologue
-    .line 740
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 741
     return-void
 .end method
 
@@ -62,56 +59,46 @@
     .locals 3
 
     .prologue
-    .line 745
     sget-object v2, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 746
     :try_start_0
     sget-object v1, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleBin:Landroid/view/KeyCharacterMap$FallbackAction;
 
     if-nez v1, :cond_0
 
-    .line 747
     new-instance v0, Landroid/view/KeyCharacterMap$FallbackAction;
 
     invoke-direct {v0}, Landroid/view/KeyCharacterMap$FallbackAction;-><init>()V
 
-    .line 754
     .local v0, target:Landroid/view/KeyCharacterMap$FallbackAction;
     :goto_0
     monitor-exit v2
 
-    .line 755
     return-object v0
 
-    .line 749
     .end local v0           #target:Landroid/view/KeyCharacterMap$FallbackAction;
     :cond_0
     sget-object v0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleBin:Landroid/view/KeyCharacterMap$FallbackAction;
 
-    .line 750
     .restart local v0       #target:Landroid/view/KeyCharacterMap$FallbackAction;
     iget-object v1, v0, Landroid/view/KeyCharacterMap$FallbackAction;->next:Landroid/view/KeyCharacterMap$FallbackAction;
 
     sput-object v1, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleBin:Landroid/view/KeyCharacterMap$FallbackAction;
 
-    .line 751
     sget v1, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycledCount:I
 
     add-int/lit8 v1, v1, -0x1
 
     sput v1, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycledCount:I
 
-    .line 752
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/view/KeyCharacterMap$FallbackAction;->next:Landroid/view/KeyCharacterMap$FallbackAction;
 
     goto :goto_0
 
-    .line 754
     :catchall_0
     move-exception v1
 
@@ -128,12 +115,10 @@
     .locals 3
 
     .prologue
-    .line 759
     sget-object v1, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 760
     :try_start_0
     sget v0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycledCount:I
 
@@ -141,29 +126,23 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 761
     sget-object v0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleBin:Landroid/view/KeyCharacterMap$FallbackAction;
 
     iput-object v0, p0, Landroid/view/KeyCharacterMap$FallbackAction;->next:Landroid/view/KeyCharacterMap$FallbackAction;
 
-    .line 762
     sput-object p0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycleBin:Landroid/view/KeyCharacterMap$FallbackAction;
 
-    .line 763
     sget v0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycledCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Landroid/view/KeyCharacterMap$FallbackAction;->sRecycledCount:I
 
-    .line 767
     :goto_0
     monitor-exit v1
 
-    .line 768
     return-void
 
-    .line 765
     :cond_0
     const/4 v0, 0x0
 
@@ -171,7 +150,6 @@
 
     goto :goto_0
 
-    .line 767
     :catchall_0
     move-exception v0
 

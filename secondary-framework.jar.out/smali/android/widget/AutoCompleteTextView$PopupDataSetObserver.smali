@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1254
     iput-object p1, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1254
     invoke-direct {p0, p1}, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;-><init>(Landroid/widget/AutoCompleteTextView;)V
 
     return-void
@@ -50,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 1257
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     #getter for: Landroid/widget/AutoCompleteTextView;->mAdapter:Landroid/widget/ListAdapter;
@@ -60,7 +57,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1262
     iget-object v0, p0, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver;->this$0:Landroid/widget/AutoCompleteTextView;
 
     new-instance v1, Landroid/widget/AutoCompleteTextView$PopupDataSetObserver$1;
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/AutoCompleteTextView;->post(Ljava/lang/Runnable;)Z
 
-    .line 1273
     :cond_0
     return-void
 .end method

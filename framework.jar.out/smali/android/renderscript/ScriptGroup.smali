@@ -27,10 +27,8 @@
     .parameter "rs"
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Landroid/renderscript/BaseObj;-><init>(ILandroid/renderscript/RenderScript;)V
 
-    .line 92
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .locals 2
 
     .prologue
-    .line 140
     iget-object v0, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v1, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
@@ -51,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/renderscript/RenderScript;->nScriptGroupExecute(I)V
 
-    .line 141
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .parameter "a"
 
     .prologue
-    .line 104
     const/4 v0, 0x0
 
     .local v0, ct:I
@@ -72,7 +67,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 105
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mInputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
@@ -81,14 +75,12 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 106
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mInputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
 
     iput-object p2, v1, Landroid/renderscript/ScriptGroup$IO;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 107
     iget-object v1, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v2, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
@@ -111,16 +103,13 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/renderscript/RenderScript;->nScriptGroupSetInput(III)V
 
-    .line 108
     return-void
 
-    .line 104
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 111
     :cond_1
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 
@@ -137,7 +126,6 @@
     .parameter "a"
 
     .prologue
-    .line 124
     const/4 v0, 0x0
 
     .local v0, ct:I
@@ -148,7 +136,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 125
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mOutputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
@@ -157,14 +144,12 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 126
     iget-object v1, p0, Landroid/renderscript/ScriptGroup;->mOutputs:[Landroid/renderscript/ScriptGroup$IO;
 
     aget-object v1, v1, v0
 
     iput-object p2, v1, Landroid/renderscript/ScriptGroup$IO;->mAllocation:Landroid/renderscript/Allocation;
 
-    .line 127
     iget-object v1, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
 
     iget-object v2, p0, Landroid/renderscript/BaseObj;->mRS:Landroid/renderscript/RenderScript;
@@ -187,16 +172,13 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/renderscript/RenderScript;->nScriptGroupSetOutput(III)V
 
-    .line 128
     return-void
 
-    .line 124
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 131
     :cond_1
     new-instance v1, Landroid/renderscript/RSIllegalArgumentException;
 

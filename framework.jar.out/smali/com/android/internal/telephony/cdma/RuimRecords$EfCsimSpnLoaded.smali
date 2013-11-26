@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 349
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 349
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;-><init>(Lcom/android/internal/telephony/cdma/RuimRecords;)V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 351
     const-string v0, "EF_CSIM_SPN"
 
     return-object v0
@@ -70,7 +67,6 @@
 
     const/4 v9, 0x0
 
-    .line 355
     iget-object v7, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v7, [B
@@ -79,7 +75,6 @@
 
     check-cast v0, [B
 
-    .line 356
     .local v0, data:[B
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
@@ -107,7 +102,6 @@
 
     invoke-virtual {v7, v10}, Lcom/android/internal/telephony/cdma/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 360
     iget-object v10, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     aget-byte v7, v0, v9
@@ -121,20 +115,16 @@
     :goto_0
     iput-boolean v7, v10, Lcom/android/internal/telephony/cdma/RuimRecords;->mCsimSpnDisplayCondition:Z
 
-    .line 362
     aget-byte v2, v0, v8
 
-    .line 363
     .local v2, encoding:I
     const/4 v7, 0x2
 
     aget-byte v3, v0, v7
 
-    .line 364
     .local v3, language:I
     new-array v6, v4, [B
 
-    .line 365
     .local v6, spnData:[B
     array-length v7, v0
 
@@ -146,14 +136,12 @@
 
     add-int/lit8 v4, v7, -0x3
 
-    .line 366
     .local v4, len:I
     :cond_0
     const/4 v7, 0x3
 
     invoke-static {v0, v7, v6, v9, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 369
     const/4 v5, 0x0
 
     .local v5, numBytes:I
@@ -162,7 +150,6 @@
 
     if-ge v5, v7, :cond_1
 
-    .line 370
     aget-byte v7, v6, v5
 
     and-int/lit16 v7, v7, 0xff
@@ -171,11 +158,9 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 373
     :cond_1
     if-nez v5, :cond_4
 
-    .line 374
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     const-string v8, ""
@@ -183,7 +168,6 @@
     #setter for: Lcom/android/internal/telephony/IccRecords;->spn:Ljava/lang/String;
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cdma/RuimRecords;->access$202(Lcom/android/internal/telephony/cdma/RuimRecords;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 400
     :goto_2
     return-void
 
@@ -195,10 +179,8 @@
     :cond_2
     move v7, v9
 
-    .line 360
     goto :goto_0
 
-    .line 369
     .restart local v2       #encoding:I
     .restart local v3       #language:I
     .restart local v4       #len:I
@@ -209,11 +191,9 @@
 
     goto :goto_1
 
-    .line 378
     :cond_4
     packed-switch v2, :pswitch_data_0
 
-    .line 392
     :pswitch_0
     :try_start_0
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
@@ -224,7 +204,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 397
     :goto_3
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
@@ -232,7 +211,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "spn="
+    const-string v9, "spn="
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -255,14 +234,13 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/cdma/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 398
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "spnCondition="
+    const-string v9, "spnCondition="
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -282,7 +260,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/cdma/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 399
     const-string v7, "gsm.sim.operator.alpha"
 
     iget-object v8, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
@@ -296,7 +273,6 @@
 
     goto :goto_2
 
-    .line 381
     :pswitch_1
     :try_start_1
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
@@ -316,11 +292,9 @@
 
     goto :goto_3
 
-    .line 394
     :catch_0
     move-exception v1
 
-    .line 395
     .local v1, e:Ljava/lang/Exception;
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
@@ -328,7 +302,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "spn decode error: "
+    const-string v9, "spn decode error: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -346,7 +320,6 @@
 
     goto :goto_3
 
-    .line 386
     .end local v1           #e:Ljava/lang/Exception;
     :pswitch_2
     :try_start_2
@@ -367,7 +340,6 @@
 
     goto :goto_3
 
-    .line 389
     :pswitch_3
     iget-object v7, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfCsimSpnLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
@@ -375,7 +347,7 @@
 
     const/4 v9, 0x0
 
-    const-string/jumbo v10, "utf-16"
+    const-string v10, "utf-16"
 
     invoke-direct {v8, v6, v9, v5, v10}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
@@ -386,7 +358,6 @@
 
     goto/16 :goto_3
 
-    .line 378
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

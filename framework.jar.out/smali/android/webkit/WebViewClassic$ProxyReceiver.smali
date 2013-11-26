@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1619
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1619
     invoke-direct {p0}, Landroid/webkit/WebViewClassic$ProxyReceiver;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
     .parameter "intent"
 
     .prologue
-    .line 1622
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -57,11 +54,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1623
     #calls: Landroid/webkit/WebViewClassic;->handleProxyBroadcast(Landroid/content/Intent;)V
     invoke-static {p2}, Landroid/webkit/WebViewClassic;->access$1300(Landroid/content/Intent;)V
 
-    .line 1625
     :cond_0
     return-void
 .end method

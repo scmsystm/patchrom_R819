@@ -22,27 +22,20 @@
     .parameter "info"
 
     .prologue
-    .line 67
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/BookmarkItem;->mResId:I
 
-    .line 68
     iput p1, p0, Landroid/widget/BookmarkItem;->mResId:I
 
-    .line 69
     iput-object p2, p0, Landroid/widget/BookmarkItem;->mContent:Landroid/graphics/Bitmap;
 
-    .line 70
     iput-object p3, p0, Landroid/widget/BookmarkItem;->mTitle:Ljava/lang/String;
 
-    .line 71
     iput-object p4, p0, Landroid/widget/BookmarkItem;->mInfo:Ljava/lang/String;
 
-    .line 72
     return-void
 .end method
 
@@ -53,12 +46,10 @@
     .parameter "info"
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0, p2, p3}, Landroid/widget/BookmarkItem;-><init>(ILandroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
     return-void
 .end method
 
@@ -69,12 +60,10 @@
     .parameter "info"
 
     .prologue
-    .line 60
     const/4 v0, -0x1
 
     invoke-direct {p0, v0, p1, p2, p3}, Landroid/widget/BookmarkItem;-><init>(ILandroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -83,7 +72,6 @@
     .parameter "item"
 
     .prologue
-    .line 64
     iget v0, p1, Landroid/widget/BookmarkItem;->mResId:I
 
     iget-object v1, p1, Landroid/widget/BookmarkItem;->mContent:Landroid/graphics/Bitmap;
@@ -94,7 +82,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Landroid/widget/BookmarkItem;-><init>(ILandroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 65
     return-void
 .end method
 
@@ -104,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/widget/BookmarkItem;->mContent:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -114,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Landroid/widget/BookmarkItem;->mInfo:Ljava/lang/String;
 
     return-object v0
@@ -124,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Landroid/widget/BookmarkItem;->mTitle:Ljava/lang/String;
 
     return-object v0
@@ -135,10 +119,8 @@
     .parameter "resourceId"
 
     .prologue
-    .line 89
     iput p1, p0, Landroid/widget/BookmarkItem;->mResId:I
 
-    .line 90
     return-void
 .end method
 
@@ -147,10 +129,8 @@
     .parameter "bmp"
 
     .prologue
-    .line 80
     iput-object p1, p0, Landroid/widget/BookmarkItem;->mContent:Landroid/graphics/Bitmap;
 
-    .line 81
     return-void
 .end method
 
@@ -159,10 +139,8 @@
     .parameter "infoString"
 
     .prologue
-    .line 107
     iput-object p1, p0, Landroid/widget/BookmarkItem;->mInfo:Ljava/lang/String;
 
-    .line 108
     return-void
 .end method
 
@@ -171,9 +149,7 @@
     .parameter "titleString"
 
     .prologue
-    .line 98
     iput-object p1, p0, Landroid/widget/BookmarkItem;->mTitle:Ljava/lang/String;
 
-    .line 99
     return-void
 .end method

@@ -41,31 +41,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2074
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2032
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
-    .line 2037
     iput v2, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
-    .line 2069
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
-    .line 2075
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
-    .line 2076
     iput v2, p0, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
-    .line 2077
     return-void
 .end method
 
@@ -74,12 +67,10 @@
     .parameter "in"
 
     .prologue
-    .line 2135
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/os/StrictMode$ViolationInfo;-><init>(Landroid/os/Parcel;Z)V
 
-    .line 2136
     return-void
 .end method
 
@@ -89,46 +80,37 @@
     .parameter "unsetGatheringBit"
 
     .prologue
-    .line 2144
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2032
     const/4 v1, -0x1
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
-    .line 2037
     const/4 v1, 0x0
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
-    .line 2069
     const-wide/16 v1, -0x1
 
     iput-wide v1, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
-    .line 2145
     new-instance v1, Landroid/app/ApplicationErrorReport$CrashInfo;
 
     invoke-direct {v1, p1}, Landroid/app/ApplicationErrorReport$CrashInfo;-><init>(Landroid/os/Parcel;)V
 
     iput-object v1, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
-    .line 2146
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 2147
     .local v0, rawPolicy:I
     if-eqz p2, :cond_0
 
-    .line 2148
     and-int/lit16 v1, v0, -0x101
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
-    .line 2152
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -136,52 +118,44 @@
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
-    .line 2153
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->violationNumThisLoop:I
 
-    .line 2154
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
-    .line 2155
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Landroid/os/StrictMode$ViolationInfo;->violationUptimeMillis:J
 
-    .line 2156
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
-    .line 2157
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
 
-    .line 2158
     invoke-virtual {p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
-    .line 2159
     return-void
 
-    .line 2150
     :cond_0
     iput v0, p0, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
@@ -194,65 +168,53 @@
     .parameter "policy"
 
     .prologue
-    .line 2082
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2032
     const/4 v5, -0x1
 
     iput v5, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
-    .line 2037
     const/4 v5, 0x0
 
     iput v5, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
-    .line 2069
     const-wide/16 v5, -0x1
 
     iput-wide v5, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
-    .line 2083
     new-instance v5, Landroid/app/ApplicationErrorReport$CrashInfo;
 
     invoke-direct {v5, p1}, Landroid/app/ApplicationErrorReport$CrashInfo;-><init>(Ljava/lang/Throwable;)V
 
     iput-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
-    .line 2084
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v5
 
     iput-wide v5, p0, Landroid/os/StrictMode$ViolationInfo;->violationUptimeMillis:J
 
-    .line 2085
     iput p2, p0, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
-    .line 2086
     invoke-static {}, Landroid/animation/ValueAnimator;->getCurrentAnimationsCount()I
 
     move-result v5
 
     iput v5, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
-    .line 2087
     invoke-static {}, Landroid/app/ActivityThread;->getIntentBeingBroadcast()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 2088
     .local v0, broadcastIntent:Landroid/content/Intent;
     if-eqz v0, :cond_0
 
-    .line 2089
     invoke-virtual {v0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v5
 
     iput-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
 
-    .line 2091
     :cond_0
     invoke-static {}, Landroid/os/StrictMode;->access$2200()Ljava/lang/ThreadLocal;
 
@@ -264,13 +226,11 @@
 
     check-cast v4, Landroid/os/StrictMode$ThreadSpanState;
 
-    .line 2092
     .local v4, state:Landroid/os/StrictMode$ThreadSpanState;
     instance-of v5, p1, Landroid/os/StrictMode$InstanceCountViolation;
 
     if-eqz v5, :cond_1
 
-    .line 2093
     check-cast p1, Landroid/os/StrictMode$InstanceCountViolation;
 
     .end local p1
@@ -278,47 +238,37 @@
 
     iput-wide v5, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
-    .line 2095
     :cond_1
     monitor-enter v4
 
-    .line 2096
     :try_start_0
     iget v3, v4, Landroid/os/StrictMode$ThreadSpanState;->mActiveSize:I
 
-    .line 2097
     .local v3, spanActiveCount:I
     const/16 v5, 0x14
 
     if-le v3, v5, :cond_2
 
-    .line 2098
     const/16 v3, 0x14
 
-    .line 2100
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 2101
     new-array v5, v3, [Ljava/lang/String;
 
     iput-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
-    .line 2102
     iget-object v2, v4, Landroid/os/StrictMode$ThreadSpanState;->mActiveHead:Landroid/os/StrictMode$Span;
 
-    .line 2103
     .local v2, iter:Landroid/os/StrictMode$Span;
     const/4 v1, 0x0
 
-    .line 2104
     .local v1, index:I
     :goto_0
     if-eqz v2, :cond_3
 
     if-ge v1, v3, :cond_3
 
-    .line 2105
     iget-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
     #getter for: Landroid/os/StrictMode$Span;->mName:Ljava/lang/String;
@@ -328,10 +278,8 @@
 
     aput-object v6, v5, v1
 
-    .line 2106
     add-int/lit8 v1, v1, 0x1
 
-    .line 2107
     #getter for: Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
     invoke-static {v2}, Landroid/os/StrictMode$Span;->access$1800(Landroid/os/StrictMode$Span;)Landroid/os/StrictMode$Span;
 
@@ -339,16 +287,13 @@
 
     goto :goto_0
 
-    .line 2110
     .end local v1           #index:I
     .end local v2           #iter:Landroid/os/StrictMode$Span;
     :cond_3
     monitor-exit v4
 
-    .line 2111
     return-void
 
-    .line 2110
     .end local v3           #spanActiveCount:I
     :catchall_0
     move-exception v5
@@ -368,12 +313,10 @@
     .parameter "prefix"
 
     .prologue
-    .line 2181
     iget-object v6, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
     invoke-virtual {v6, p1, p2}, Landroid/app/ApplicationErrorReport$CrashInfo;->dump(Landroid/util/Printer;Ljava/lang/String;)V
 
-    .line 2182
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +325,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "policy: "
+    const-string v7, "policy: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -400,14 +343,12 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2183
     iget v6, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
     const/4 v7, -0x1
 
     if-eq v6, v7, :cond_0
 
-    .line 2184
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -434,7 +375,6 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2186
     :cond_0
     iget-wide v6, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
@@ -444,7 +384,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 2187
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -453,7 +392,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "numInstances: "
+    const-string v7, "numInstances: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -471,13 +410,11 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2189
     :cond_1
     iget v6, p0, Landroid/os/StrictMode$ViolationInfo;->violationNumThisLoop:I
 
     if-eqz v6, :cond_2
 
-    .line 2190
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -486,7 +423,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "violationNumThisLoop: "
+    const-string v7, "violationNumThisLoop: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -504,13 +441,11 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2192
     :cond_2
     iget v6, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
     if-eqz v6, :cond_3
 
-    .line 2193
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -519,7 +454,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "numAnimationsRunning: "
+    const-string v7, "numAnimationsRunning: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -537,7 +472,6 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2195
     :cond_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -547,7 +481,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "violationUptimeMillis: "
+    const-string v7, "violationUptimeMillis: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -565,12 +499,10 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2196
     iget-object v6, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
 
     if-eqz v6, :cond_4
 
-    .line 2197
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -597,16 +529,13 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2199
     :cond_4
     iget-object v6, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
     if-eqz v6, :cond_5
 
-    .line 2200
     const/4 v2, 0x0
 
-    .line 2201
     .local v2, index:I
     iget-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
@@ -626,7 +555,6 @@
 
     aget-object v5, v0, v1
 
-    .line 2202
     .local v5, tag:Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -636,7 +564,7 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "tag["
+    const-string v7, "tag["
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -666,7 +594,6 @@
 
     invoke-interface {p1, v6}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 2201
     add-int/lit8 v1, v1, 0x1
 
     move v3, v2
@@ -675,7 +602,6 @@
     .restart local v3       #index:I
     goto :goto_0
 
-    .line 2205
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v1           #i$:I
     .end local v3           #index:I
@@ -689,10 +615,8 @@
     .locals 7
 
     .prologue
-    .line 2115
     const/16 v3, 0x11
 
-    .line 2116
     .local v3, result:I
     iget-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
@@ -704,21 +628,17 @@
 
     add-int/lit16 v3, v5, 0x275
 
-    .line 2117
     iget v5, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
     if-eqz v5, :cond_0
 
-    .line 2118
     mul-int/lit8 v3, v3, 0x25
 
-    .line 2120
     :cond_0
     iget-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
 
     if-eqz v5, :cond_1
 
-    .line 2121
     mul-int/lit8 v5, v3, 0x25
 
     iget-object v6, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
@@ -729,13 +649,11 @@
 
     add-int v3, v5, v6
 
-    .line 2123
     :cond_1
     iget-object v5, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
     if-eqz v5, :cond_2
 
-    .line 2124
     iget-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
     .local v0, arr$:[Ljava/lang/String;
@@ -750,7 +668,6 @@
 
     aget-object v4, v0, v1
 
-    .line 2125
     .local v4, tag:Ljava/lang/String;
     mul-int/lit8 v5, v3, 0x25
 
@@ -760,12 +677,10 @@
 
     add-int v3, v5, v6
 
-    .line 2124
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2128
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v1           #i$:I
     .end local v2           #len$:I
@@ -780,51 +695,41 @@
     .parameter "flags"
 
     .prologue
-    .line 2165
     iget-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
     invoke-virtual {v0, p1, p2}, Landroid/app/ApplicationErrorReport$CrashInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 2166
     iget v0, p0, Landroid/os/StrictMode$ViolationInfo;->policy:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2167
     iget v0, p0, Landroid/os/StrictMode$ViolationInfo;->durationMillis:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2168
     iget v0, p0, Landroid/os/StrictMode$ViolationInfo;->violationNumThisLoop:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2169
     iget v0, p0, Landroid/os/StrictMode$ViolationInfo;->numAnimationsRunning:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2170
     iget-wide v0, p0, Landroid/os/StrictMode$ViolationInfo;->violationUptimeMillis:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 2171
     iget-wide v0, p0, Landroid/os/StrictMode$ViolationInfo;->numInstances:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 2172
     iget-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->broadcastIntentAction:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 2173
     iget-object v0, p0, Landroid/os/StrictMode$ViolationInfo;->tags:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 2174
     return-void
 .end method

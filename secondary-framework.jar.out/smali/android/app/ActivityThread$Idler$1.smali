@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1599
     iput-object p1, p0, Landroid/app/ActivityThread$Idler$1;->this$1:Landroid/app/ActivityThread$Idler;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +40,13 @@
     .locals 2
 
     .prologue
-    .line 1601
     const-string v0, "ActivityThread"
 
     const-string v1, "Stop profiling now!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1602
     invoke-static {}, Landroid/os/Debug;->stopMethodTracing()V
 
-    .line 1603
     return-void
 .end method

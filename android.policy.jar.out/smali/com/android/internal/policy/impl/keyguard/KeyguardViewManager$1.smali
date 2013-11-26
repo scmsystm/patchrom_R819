@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 390
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ShowListener;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 393
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->mKeyguardHost:Landroid/widget/FrameLayout;
@@ -60,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 394
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -69,7 +66,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 395
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ShowListener;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;
@@ -85,11 +81,9 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ShowListener;->onShown(Landroid/os/IBinder;)V
 
-    .line 400
     :goto_0
     return-void
 
-    .line 397
     :cond_0
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager;->access$100()Ljava/lang/String;
 
@@ -99,7 +93,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 398
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$1;->val$showListener:Lcom/android/internal/policy/impl/keyguard/KeyguardViewManager$ShowListener;
 
     const/4 v1, 0x0

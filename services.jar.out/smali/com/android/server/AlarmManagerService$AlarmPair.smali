@@ -30,17 +30,13 @@
     .parameter "pendingintent"
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$AlarmPair;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     iput-wide p2, p0, Lcom/android/server/AlarmManagerService$AlarmPair;->mTriggerTime:J
 
-    .line 129
     iput-object p4, p0, Lcom/android/server/AlarmManagerService$AlarmPair;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 130
     return-void
 .end method

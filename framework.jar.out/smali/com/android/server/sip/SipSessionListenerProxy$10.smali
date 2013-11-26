@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 170
     iput-object p1, p0, Lcom/android/server/sip/SipSessionListenerProxy$10;->this$0:Lcom/android/server/sip/SipSessionListenerProxy;
 
     iput-object p2, p0, Lcom/android/server/sip/SipSessionListenerProxy$10;->val$session:Landroid/net/sip/ISipSession;
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 173
     :try_start_0
     iget-object v1, p0, Lcom/android/server/sip/SipSessionListenerProxy$10;->this$0:Lcom/android/server/sip/SipSessionListenerProxy;
 
@@ -61,19 +59,16 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 177
     :goto_0
     return-void
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, t:Ljava/lang/Throwable;
     iget-object v1, p0, Lcom/android/server/sip/SipSessionListenerProxy$10;->this$0:Lcom/android/server/sip/SipSessionListenerProxy;
 
-    const-string/jumbo v2, "onRegistering()"
+    const-string v2, "onRegistering()"
 
     #calls: Lcom/android/server/sip/SipSessionListenerProxy;->handle(Ljava/lang/Throwable;Ljava/lang/String;)V
     invoke-static {v1, v0, v2}, Lcom/android/server/sip/SipSessionListenerProxy;->access$100(Lcom/android/server/sip/SipSessionListenerProxy;Ljava/lang/Throwable;Ljava/lang/String;)V

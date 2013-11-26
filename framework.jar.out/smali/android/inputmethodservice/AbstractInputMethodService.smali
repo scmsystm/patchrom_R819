@@ -26,17 +26,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 48
     new-instance v0, Landroid/view/KeyEvent$DispatcherState;
 
     invoke-direct {v0}, Landroid/view/KeyEvent$DispatcherState;-><init>()V
 
     iput-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
-    .line 90
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .parameter "args"
 
     .prologue
-    .line 193
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mDispatcherState:Landroid/view/KeyEvent$DispatcherState;
 
     return-object v0
@@ -68,19 +63,16 @@
     .parameter "intent"
 
     .prologue
-    .line 197
     iget-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mInputMethod:Landroid/view/inputmethod/InputMethod;
 
     if-nez v0, :cond_0
 
-    .line 198
     invoke-virtual {p0}, Landroid/inputmethodservice/AbstractInputMethodService;->onCreateInputMethodInterface()Landroid/inputmethodservice/AbstractInputMethodService$AbstractInputMethodImpl;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/inputmethodservice/AbstractInputMethodService;->mInputMethod:Landroid/view/inputmethod/InputMethod;
 
-    .line 200
     :cond_0
     new-instance v0, Landroid/inputmethodservice/IInputMethodWrapper;
 
@@ -102,7 +94,6 @@
     .parameter "event"
 
     .prologue
-    .line 222
     const/4 v0, 0x0
 
     return v0
@@ -113,7 +104,6 @@
     .parameter "event"
 
     .prologue
-    .line 211
     const/4 v0, 0x0
 
     return v0

@@ -30,17 +30,14 @@
     .parameter
 
     .prologue
-    .line 1572
     iput-object p1, p0, Landroid/content/SyncManager$SyncTimeTracker;->this$0:Landroid/content/SyncManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1574
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
 
-    .line 1576
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/content/SyncManager$SyncTimeTracker;->mWhenSyncStarted:J
@@ -54,7 +51,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1572
     invoke-direct {p0, p1}, Landroid/content/SyncManager$SyncTimeTracker;-><init>(Landroid/content/SyncManager;)V
 
     return-void
@@ -66,7 +62,6 @@
     .locals 6
 
     .prologue
-    .line 1595
     monitor-enter p0
 
     :try_start_0
@@ -78,20 +73,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1598
     :goto_0
     monitor-exit p0
 
     return-wide v2
 
-    .line 1597
     :cond_0
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 1598
     .local v0, now:J
     iget-wide v2, p0, Landroid/content/SyncManager$SyncTimeTracker;->mTimeSpentSyncing:J
 
@@ -105,7 +97,6 @@
 
     goto :goto_0
 
-    .line 1595
     .end local v0           #now:J
     :catchall_0
     move-exception v2
@@ -119,7 +110,6 @@
     .locals 7
 
     .prologue
-    .line 1582
     monitor-enter p0
 
     :try_start_0
@@ -135,7 +125,6 @@
 
     const/4 v0, 0x1
 
-    .line 1583
     .local v0, isSyncInProgress:Z
     :goto_0
     iget-boolean v3, p0, Landroid/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
@@ -144,20 +133,17 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 1591
     :goto_1
     monitor-exit p0
 
     return-void
 
-    .line 1582
     .end local v0           #isSyncInProgress:Z
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1584
     .restart local v0       #isSyncInProgress:Z
     :cond_1
     :try_start_1
@@ -165,14 +151,11 @@
 
     move-result-wide v1
 
-    .line 1585
     .local v1, now:J
     if-eqz v0, :cond_2
 
-    .line 1586
     iput-wide v1, p0, Landroid/content/SyncManager$SyncTimeTracker;->mWhenSyncStarted:J
 
-    .line 1590
     :goto_2
     iput-boolean v0, p0, Landroid/content/SyncManager$SyncTimeTracker;->mLastWasSyncing:Z
     :try_end_1
@@ -180,7 +163,6 @@
 
     goto :goto_1
 
-    .line 1582
     .end local v0           #isSyncInProgress:Z
     .end local v1           #now:J
     :catchall_0
@@ -190,7 +172,6 @@
 
     throw v3
 
-    .line 1588
     .restart local v0       #isSyncInProgress:Z
     .restart local v1       #now:J
     :cond_2

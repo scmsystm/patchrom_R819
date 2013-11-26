@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$DoubleEvaluator;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -54,7 +53,6 @@
     .parameter "endValue"
 
     .prologue
-    .line 72
     invoke-virtual {p2}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -89,7 +87,6 @@
     .parameter "x2"
 
     .prologue
-    .line 70
     check-cast p2, Ljava/lang/Double;
 
     .end local p2

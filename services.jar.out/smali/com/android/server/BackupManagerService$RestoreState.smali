@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 4127
     new-instance v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     const-string v1, "INITIAL"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestoreState;->INITIAL:Lcom/android/server/BackupManagerService$RestoreState;
 
-    .line 4128
     new-instance v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     const-string v1, "DOWNLOAD_DATA"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestoreState;->DOWNLOAD_DATA:Lcom/android/server/BackupManagerService$RestoreState;
 
-    .line 4129
     new-instance v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     const-string v1, "PM_METADATA"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestoreState;->PM_METADATA:Lcom/android/server/BackupManagerService$RestoreState;
 
-    .line 4130
     new-instance v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     const-string v1, "RUNNING_QUEUE"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestoreState;->RUNNING_QUEUE:Lcom/android/server/BackupManagerService$RestoreState;
 
-    .line 4131
     new-instance v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     const-string v1, "FINAL"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/server/BackupManagerService$RestoreState;->FINAL:Lcom/android/server/BackupManagerService$RestoreState;
 
-    .line 4126
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/server/BackupManagerService$RestoreState;
@@ -138,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 4126
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -149,7 +142,6 @@
     .parameter "name"
 
     .prologue
-    .line 4126
     const-class v0, Lcom/android/server/BackupManagerService$RestoreState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -165,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 4126
     sget-object v0, Lcom/android/server/BackupManagerService$RestoreState;->$VALUES:[Lcom/android/server/BackupManagerService$RestoreState;
 
     invoke-virtual {v0}, [Lcom/android/server/BackupManagerService$RestoreState;->clone()Ljava/lang/Object;

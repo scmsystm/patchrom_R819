@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 157
     iput-object p1, p0, Lcom/android/server/RecognitionManagerService$1;->this$0:Lcom/android/server/RecognitionManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 159
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 161
     .local v0, action:Ljava/lang/String;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -55,7 +52,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 162
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, -0x1
@@ -64,17 +60,14 @@
 
     move-result v1
 
-    .line 163
     .local v1, userHandle:I
     if-lez v1, :cond_0
 
-    .line 164
     iget-object v2, p0, Lcom/android/server/RecognitionManagerService$1;->this$0:Lcom/android/server/RecognitionManagerService;
 
     #calls: Lcom/android/server/RecognitionManagerService;->initForUser(I)V
     invoke-static {v2, v1}, Lcom/android/server/RecognitionManagerService;->access$000(Lcom/android/server/RecognitionManagerService;I)V
 
-    .line 167
     .end local v1           #userHandle:I
     :cond_0
     return-void

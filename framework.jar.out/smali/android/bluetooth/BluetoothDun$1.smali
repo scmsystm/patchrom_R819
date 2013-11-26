@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 271
     iput-object p1, p0, Landroid/bluetooth/BluetoothDun$1;->this$0:Landroid/bluetooth/BluetoothDun;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,20 +42,17 @@
     .parameter "service"
 
     .prologue
-    .line 274
     const-string v0, "Proxy object connected"
 
     #calls: Landroid/bluetooth/BluetoothDun;->log(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/bluetooth/BluetoothDun;->access$000(Ljava/lang/String;)V
 
-    .line 275
     invoke-static {p2}, Landroid/bluetooth/IBluetoothDun$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothDun;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDun;->access$102(Landroid/bluetooth/IBluetoothDun;)Landroid/bluetooth/IBluetoothDun;
 
-    .line 276
     return-void
 .end method
 
@@ -65,17 +61,14 @@
     .parameter "className"
 
     .prologue
-    .line 278
     const-string v0, "Proxy object disconnected"
 
     #calls: Landroid/bluetooth/BluetoothDun;->log(Ljava/lang/String;)V
     invoke-static {v0}, Landroid/bluetooth/BluetoothDun;->access$000(Ljava/lang/String;)V
 
-    .line 279
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothDun;->access$102(Landroid/bluetooth/IBluetoothDun;)Landroid/bluetooth/IBluetoothDun;
 
-    .line 280
     return-void
 .end method

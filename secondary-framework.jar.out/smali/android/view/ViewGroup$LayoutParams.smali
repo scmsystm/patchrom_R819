@@ -66,10 +66,8 @@
     .locals 0
 
     .prologue
-    .line 5694
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5695
     return-void
 .end method
 
@@ -79,16 +77,12 @@
     .parameter "height"
 
     .prologue
-    .line 5675
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5676
     iput p1, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 5677
     iput p2, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 5678
     return-void
 .end method
 
@@ -98,17 +92,14 @@
     .parameter "attrs"
 
     .prologue
-    .line 5656
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5657
     sget-object v1, Lcom/android/internal/R$styleable;->ViewGroup_Layout:[I
 
     invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 5658
     .local v0, a:Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -116,10 +107,8 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/view/ViewGroup$LayoutParams;->setBaseAttributes(Landroid/content/res/TypedArray;II)V
 
-    .line 5661
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 5662
     return-void
 .end method
 
@@ -128,20 +117,16 @@
     .parameter "source"
 
     .prologue
-    .line 5685
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5686
     iget v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 5687
     iget v0, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 5688
     return-void
 .end method
 
@@ -150,30 +135,24 @@
     .parameter "size"
 
     .prologue
-    .line 5756
     const/4 v0, -0x2
 
     if-ne p0, v0, :cond_0
 
-    .line 5757
     const-string v0, "wrap-content"
 
-    .line 5762
     :goto_0
     return-object v0
 
-    .line 5759
     :cond_0
     const/4 v0, -0x1
 
     if-ne p0, v0, :cond_1
 
-    .line 5760
     const-string v0, "match-parent"
 
     goto :goto_0
 
-    .line 5762
     :cond_1
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -189,7 +168,6 @@
     .parameter "output"
 
     .prologue
-    .line 5732
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +227,6 @@
     .parameter "canvas"
 
     .prologue
-    .line 5745
     return-void
 .end method
 
@@ -258,7 +235,6 @@
     .parameter "layoutDirection"
 
     .prologue
-    .line 5720
     return-void
 .end method
 
@@ -269,7 +245,6 @@
     .parameter "heightAttr"
 
     .prologue
-    .line 5705
     const-string v0, "layout_width"
 
     invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -278,7 +253,6 @@
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 5706
     const-string v0, "layout_height"
 
     invoke-virtual {p1, p3, v0}, Landroid/content/res/TypedArray;->getLayoutDimension(ILjava/lang/String;)I
@@ -287,6 +261,5 @@
 
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 5707
     return-void
 .end method

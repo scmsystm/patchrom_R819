@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .parameter "source"
 
     .prologue
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 78
     .local v1, recordNumber:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, alphaTag:Ljava/lang/String;
     new-instance v2, Lcom/android/internal/telephony/UsimGroup;
 
@@ -70,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/UsimGroup$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/UsimGroup;
 
     move-result-object v0
@@ -83,7 +78,6 @@
     .parameter "size"
 
     .prologue
-    .line 84
     new-array v0, p1, [Lcom/android/internal/telephony/UsimGroup;
 
     return-object v0
@@ -94,7 +88,6 @@
     .parameter "x0"
 
     .prologue
-    .line 72
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/UsimGroup$1;->newArray(I)[Lcom/android/internal/telephony/UsimGroup;
 
     move-result-object v0

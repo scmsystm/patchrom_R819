@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$2;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,11 +38,9 @@
     .parameter "animation"
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$2;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;->completeAnimationImmediately()V
 
-    .line 49
     return-void
 .end method

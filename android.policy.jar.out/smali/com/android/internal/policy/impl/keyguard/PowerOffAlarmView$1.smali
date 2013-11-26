@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,18 +38,15 @@
     .parameter "msg"
 
     .prologue
-    .line 103
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 113
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 105
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
@@ -59,7 +55,6 @@
 
     goto :goto_0
 
-    .line 108
     :pswitch_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
@@ -70,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/PowerOffAlarmView;->titleView:Landroid/widget/TextView;
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 103
     :pswitch_data_0
     .packed-switch 0x63
         :pswitch_2

@@ -56,21 +56,16 @@
 
     const/4 v1, -0x1
 
-    .line 96
     sput-object v0, Lcom/android/internal/telephony/PhoneFactory;->sProxyPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 97
     sput-object v0, Lcom/android/internal/telephony/PhoneFactory;->sCommandsInterface:Lcom/android/internal/telephony/CommandsInterface;
 
-    .line 99
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/internal/telephony/PhoneFactory;->sMadeDefaults:Z
 
-    .line 104
     sput v1, Lcom/android/internal/telephony/PhoneFactory;->sTelephonyMode:I
 
-    .line 105
     sput v1, Lcom/android/internal/telephony/PhoneFactory;->sFirstMD:I
 
     return-void
@@ -80,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -90,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 139
     invoke-static {}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->getCdmaPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -102,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 135
     invoke-static {}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -114,30 +106,25 @@
     .locals 3
 
     .prologue
-    .line 178
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getTelephonyMode()I
 
     move-result v0
 
-    .line 179
     .local v0, telephonyMode:I
     packed-switch v0, :pswitch_data_0
 
-    .line 196
     :cond_0
     :goto_0
     sget v1, Lcom/android/internal/telephony/PhoneFactory;->sFirstMD:I
 
     return v1
 
-    .line 181
     :pswitch_0
     sget v1, Lcom/android/internal/telephony/PhoneFactory;->sFirstMD:I
 
     if-gez v1, :cond_0
 
-    .line 182
-    const-string/jumbo v1, "ril.first.md"
+    const-string v1, "ril.first.md"
 
     const/4 v2, 0x0
 
@@ -149,7 +136,6 @@
 
     goto :goto_0
 
-    .line 188
     :pswitch_1
     const/4 v1, 0x1
 
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 192
     :pswitch_2
     const/4 v1, 0x2
 
@@ -165,7 +150,6 @@
 
     goto :goto_0
 
-    .line 179
     nop
 
     :pswitch_data_0
@@ -181,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 143
     invoke-static {}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->getGsmPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -194,7 +177,6 @@
     .parameter "networkMode"
 
     .prologue
-    .line 131
     invoke-static {p0}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->getPhoneType(I)I
 
     move-result v0
@@ -206,13 +188,11 @@
     .locals 2
 
     .prologue
-    .line 168
     sget v0, Lcom/android/internal/telephony/PhoneFactory;->sTelephonyMode:I
 
     if-gez v0, :cond_0
 
-    .line 169
-    const-string/jumbo v0, "ril.telephony.mode"
+    const-string v0, "ril.telephony.mode"
 
     const/4 v1, 0x0
 
@@ -222,7 +202,6 @@
 
     sput v0, Lcom/android/internal/telephony/PhoneFactory;->sTelephonyMode:I
 
-    .line 170
     :cond_0
     sget v0, Lcom/android/internal/telephony/PhoneFactory;->sTelephonyMode:I
 
@@ -233,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 156
     const/4 v0, 0x0
 
     return v0
@@ -243,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 160
     const/4 v0, 0x1
 
     return v0
@@ -253,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 164
     const/4 v0, 0x0
 
     return v0
@@ -264,8 +240,7 @@
     .parameter "context"
 
     .prologue
-    .line 115
-    const-string/jumbo v0, "persist.radio.default_sim_mode"
+    const-string v0, "persist.radio.default_sim_mode"
 
     const/16 v1, 0xc
 
@@ -275,10 +250,8 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     invoke-static {p0}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->makeDefaultPhone(Landroid/content/Context;)V
 
-    .line 121
     return-void
 .end method
 
@@ -287,7 +260,6 @@
     .parameter "sipUri"
 
     .prologue
-    .line 152
     invoke-static {p0}, Lcom/android/internal/telephony/gemini/MTKPhoneFactory;->getSipPhone(Ljava/lang/String;)Lcom/android/internal/telephony/sip/SipPhone;
 
     move-result-object v0

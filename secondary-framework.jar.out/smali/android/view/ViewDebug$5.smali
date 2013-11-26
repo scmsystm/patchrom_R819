@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 596
     iput-object p1, p0, Landroid/view/ViewDebug$5;->val$operation:Landroid/view/ViewDebug$ViewOperation;
 
     iput-object p2, p0, Landroid/view/ViewDebug$5;->val$duration:[J
@@ -51,7 +50,6 @@
     .locals 7
 
     .prologue
-    .line 599
     :try_start_0
     iget-object v3, p0, Landroid/view/ViewDebug$5;->val$operation:Landroid/view/ViewDebug$ViewOperation;
 
@@ -59,19 +57,16 @@
 
     move-result-object v0
 
-    .line 600
     .local v0, data:[Ljava/lang/Object;,"[TT;"
     invoke-static {}, Landroid/os/Debug;->threadCpuTimeNanos()J
 
     move-result-wide v1
 
-    .line 602
     .local v1, start:J
     iget-object v3, p0, Landroid/view/ViewDebug$5;->val$operation:Landroid/view/ViewDebug$ViewOperation;
 
     invoke-interface {v3, v0}, Landroid/view/ViewDebug$ViewOperation;->run([Ljava/lang/Object;)V
 
-    .line 603
     iget-object v3, p0, Landroid/view/ViewDebug$5;->val$duration:[J
 
     const/4 v4, 0x0
@@ -84,22 +79,18 @@
 
     aput-wide v5, v3, v4
 
-    .line 605
     iget-object v3, p0, Landroid/view/ViewDebug$5;->val$operation:Landroid/view/ViewDebug$ViewOperation;
 
     invoke-interface {v3, v0}, Landroid/view/ViewDebug$ViewOperation;->post([Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 607
     iget-object v3, p0, Landroid/view/ViewDebug$5;->val$latch:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v3}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 609
     return-void
 
-    .line 607
     .end local v0           #data:[Ljava/lang/Object;,"[TT;"
     .end local v1           #start:J
     :catchall_0

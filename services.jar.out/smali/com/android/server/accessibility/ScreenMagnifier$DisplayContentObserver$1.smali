@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 922
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     invoke-direct {p0}, Landroid/view/IDisplayContentChangeListener$Stub;-><init>()V
@@ -43,33 +42,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 932
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 933
     .local v0, args:Lcom/android/internal/os/SomeArgs;
     iget v1, p2, Landroid/graphics/Rect;->left:I
 
     iput v1, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
 
-    .line 934
     iget v1, p2, Landroid/graphics/Rect;->top:I
 
     iput v1, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 935
     iget v1, p2, Landroid/graphics/Rect;->right:I
 
     iput v1, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 936
     iget v1, p2, Landroid/graphics/Rect;->bottom:I
 
     iput v1, v0, Lcom/android/internal/os/SomeArgs;->argi4:I
 
-    .line 937
     iget-object v1, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;->mHandler:Landroid/os/Handler;
@@ -90,13 +83,11 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 939
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 937
     goto :goto_0
 .end method
 
@@ -110,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 943
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;->mHandler:Landroid/os/Handler;
@@ -128,7 +118,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 945
     return-void
 .end method
 
@@ -142,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 949
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;->mHandler:Landroid/os/Handler;
@@ -154,7 +142,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 950
     return-void
 .end method
 
@@ -165,7 +152,6 @@
     .parameter "info"
 
     .prologue
-    .line 925
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$1;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     #getter for: Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;->mHandler:Landroid/os/Handler;
@@ -187,6 +173,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 927
     return-void
 .end method

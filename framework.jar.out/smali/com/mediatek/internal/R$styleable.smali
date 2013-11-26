@@ -119,7 +119,6 @@
 
     const/4 v2, 0x0
 
-    .line 1801
     const/16 v0, 0xf
 
     new-array v0, v0, [I
@@ -128,7 +127,6 @@
 
     sput-object v0, Lcom/mediatek/internal/R$styleable;->BladeView:[I
 
-    .line 2039
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -137,7 +135,6 @@
 
     sput-object v0, Lcom/mediatek/internal/R$styleable;->BookmarkView:[I
 
-    .line 2203
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -146,7 +143,6 @@
 
     sput-object v0, Lcom/mediatek/internal/R$styleable;->GlowPadView:[I
 
-    .line 2421
     new-array v0, v3, [I
 
     const v1, 0x2010011
@@ -155,7 +151,6 @@
 
     sput-object v0, Lcom/mediatek/internal/R$styleable;->MTKAppWidgetProviderInfo:[I
 
-    .line 2450
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -164,7 +159,6 @@
 
     sput-object v0, Lcom/mediatek/internal/R$styleable;->MTKManifest:[I
 
-    .line 2489
     new-array v0, v3, [I
 
     const v1, 0x2010026
@@ -175,7 +169,6 @@
 
     return-void
 
-    .line 1801
     :array_0
     .array-data 0x4
         0x0t 0x0t 0x1t 0x2t
@@ -195,7 +188,6 @@
         0xet 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 2039
     :array_1
     .array-data 0x4
         0x12t 0x0t 0x1t 0x2t
@@ -208,7 +200,6 @@
         0x19t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 2203
     :array_2
     .array-data 0x4
         0xaft 0x0t 0x1t 0x1t
@@ -227,7 +218,6 @@
         0x27t 0x0t 0x1t 0x2t
     .end array-data
 
-    .line 2450
     :array_3
     .array-data 0x4
         0xft 0x0t 0x1t 0x2t
@@ -239,7 +229,6 @@
     .locals 0
 
     .prologue
-    .line 1761
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

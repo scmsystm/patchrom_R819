@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1584
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$29;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +42,18 @@
     .parameter "which"
 
     .prologue
-    .line 1587
     invoke-static {}, Lcom/android/server/display/WifiDisplayController;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1588
     const-string v0, "WifiDisplayController"
 
     const-string v1, "BT on, turn off WifiDisplay"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1590
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$29;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -76,6 +72,5 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1591
     return-void
 .end method

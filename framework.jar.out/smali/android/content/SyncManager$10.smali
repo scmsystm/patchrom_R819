@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 435
     iput-object p1, p0, Landroid/content/SyncManager$10;->this$0:Landroid/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/ISyncStatusObserver$Stub;-><init>()V
@@ -39,12 +38,10 @@
     .parameter "which"
 
     .prologue
-    .line 438
     iget-object v0, p0, Landroid/content/SyncManager$10;->this$0:Landroid/content/SyncManager;
 
     #calls: Landroid/content/SyncManager;->sendCheckAlarmsMessage()V
     invoke-static {v0}, Landroid/content/SyncManager;->access$100(Landroid/content/SyncManager;)V
 
-    .line 439
     return-void
 .end method

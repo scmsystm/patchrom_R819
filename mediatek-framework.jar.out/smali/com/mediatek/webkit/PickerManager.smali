@@ -28,18 +28,14 @@
     .parameter "type"
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     const-string v0, "colorPicker"
 
     iput-object v0, p0, Lcom/mediatek/webkit/PickerManager;->mPickerType:Ljava/lang/String;
 
-    .line 67
     iput-object p1, p0, Lcom/mediatek/webkit/PickerManager;->mPickerType:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -48,19 +44,16 @@
     .parameter "type"
 
     .prologue
-    .line 33
     invoke-static {p0}, Lcom/mediatek/webkit/PickerManager;->isValid(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 34
     new-instance v0, Lcom/mediatek/webkit/PickerManager;
 
     invoke-direct {v0, p0}, Lcom/mediatek/webkit/PickerManager;-><init>(Ljava/lang/String;)V
 
-    .line 36
     :goto_0
     return-object v0
 
@@ -75,7 +68,6 @@
     .parameter "type"
 
     .prologue
-    .line 40
     const-string v0, "colorPicker"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -118,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/mediatek/webkit/PickerManager;->mPickerType:Ljava/lang/String;
 
     return-object v0
@@ -129,10 +120,8 @@
     .parameter "listener"
 
     .prologue
-    .line 50
     iput-object p1, p0, Lcom/mediatek/webkit/PickerManager;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
 
-    .line 51
     return-void
 .end method
 
@@ -144,7 +133,6 @@
     .parameter "initialObj"
 
     .prologue
-    .line 54
     iget-object v1, p0, Lcom/mediatek/webkit/PickerManager;->mPickerType:Ljava/lang/String;
 
     const-string v2, "colorPicker"
@@ -155,21 +143,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 55
     if-eqz p1, :cond_1
 
-    .line 56
     new-instance v0, Lcom/mediatek/webkit/ColorPickerDialog;
 
     invoke-direct {v0, p1, p2}, Lcom/mediatek/webkit/ColorPickerDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 57
     .local v0, mDialog:Lcom/mediatek/webkit/ColorPickerDialog;
     iget-object v1, p0, Lcom/mediatek/webkit/PickerManager;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
 
     if-eqz v1, :cond_0
 
-    .line 58
     new-instance v1, Lcom/mediatek/webkit/PickerManager$ColorChangedListener;
 
     iget-object v2, p0, Lcom/mediatek/webkit/PickerManager;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
@@ -178,11 +162,9 @@
 
     invoke-virtual {v0, v1}, Lcom/mediatek/webkit/ColorPickerDialog;->setOnColorChangedListener(Lcom/mediatek/webkit/ColorPickerDialog$OnColorChangedListener;)V
 
-    .line 60
     :cond_0
     invoke-virtual {v0}, Lcom/mediatek/webkit/ColorPickerDialog;->show()V
 
-    .line 63
     .end local v0           #mDialog:Lcom/mediatek/webkit/ColorPickerDialog;
     :cond_1
     return-void

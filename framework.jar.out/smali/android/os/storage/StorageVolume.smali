@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 223
     new-instance v0, Landroid/os/storage/StorageVolume$1;
 
     invoke-direct {v0}, Landroid/os/storage/StorageVolume$1;-><init>()V
@@ -67,17 +66,14 @@
 
     const/4 v2, 0x0
 
-    .line 68
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/storage/StorageVolume;->mStorageId:I
 
-    .line 70
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -88,14 +84,12 @@
 
     iput-object v0, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
-    .line 71
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
 
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -107,7 +101,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/os/storage/StorageVolume;->mPrimary:Z
 
-    .line 73
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -119,7 +112,6 @@
     :goto_1
     iput-boolean v0, p0, Landroid/os/storage/StorageVolume;->mRemovable:Z
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -131,14 +123,12 @@
     :goto_2
     iput-boolean v0, p0, Landroid/os/storage/StorageVolume;->mEmulated:Z
 
-    .line 75
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/os/storage/StorageVolume;->mMtpReserveSpace:I
 
-    .line 76
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -148,14 +138,12 @@
     :goto_3
     iput-boolean v1, p0, Landroid/os/storage/StorageVolume;->mAllowMassStorage:Z
 
-    .line 77
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/os/storage/StorageVolume;->mMaxFileSize:J
 
-    .line 78
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -166,31 +154,26 @@
 
     iput-object v0, p0, Landroid/os/storage/StorageVolume;->mOwner:Landroid/os/UserHandle;
 
-    .line 79
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 72
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 73
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 74
     goto :goto_2
 
     :cond_3
     move v1, v2
 
-    .line 76
     goto :goto_3
 .end method
 
@@ -200,7 +183,6 @@
     .parameter "x1"
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/os/storage/StorageVolume;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -219,37 +201,26 @@
     .parameter "owner"
 
     .prologue
-    .line 56
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p1, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
-    .line 58
     iput p2, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
 
-    .line 59
     iput-boolean p3, p0, Landroid/os/storage/StorageVolume;->mPrimary:Z
 
-    .line 60
     iput-boolean p4, p0, Landroid/os/storage/StorageVolume;->mRemovable:Z
 
-    .line 61
     iput-boolean p5, p0, Landroid/os/storage/StorageVolume;->mEmulated:Z
 
-    .line 62
     iput p6, p0, Landroid/os/storage/StorageVolume;->mMtpReserveSpace:I
 
-    .line 63
     iput-boolean p7, p0, Landroid/os/storage/StorageVolume;->mAllowMassStorage:Z
 
-    .line 64
     iput-wide p8, p0, Landroid/os/storage/StorageVolume;->mMaxFileSize:J
 
-    .line 65
     iput-object p10, p0, Landroid/os/storage/StorageVolume;->mOwner:Landroid/os/UserHandle;
 
-    .line 66
     return-void
 .end method
 
@@ -260,7 +231,6 @@
     .parameter "owner"
 
     .prologue
-    .line 82
     new-instance v0, Landroid/os/storage/StorageVolume;
 
     iget v2, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
@@ -292,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mAllowMassStorage:Z
 
     return v0
@@ -302,7 +271,6 @@
     .locals 1
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
     return v0
@@ -313,7 +281,6 @@
     .parameter "obj"
 
     .prologue
-    .line 194
     instance-of v1, p1, Landroid/os/storage/StorageVolume;
 
     if-eqz v1, :cond_0
@@ -324,10 +291,8 @@
 
     move-object v0, p1
 
-    .line 195
     check-cast v0, Landroid/os/storage/StorageVolume;
 
-    .line 196
     .local v0, volume:Landroid/os/storage/StorageVolume;
     iget-object v1, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
@@ -337,7 +302,6 @@
 
     move-result v1
 
-    .line 198
     .end local v0           #volume:Landroid/os/storage/StorageVolume;
     :goto_0
     return v1
@@ -353,7 +317,6 @@
     .parameter "context"
 
     .prologue
-    .line 106
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -371,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget v0, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
 
     return v0
@@ -381,7 +343,6 @@
     .locals 2
 
     .prologue
-    .line 185
     iget-wide v0, p0, Landroid/os/storage/StorageVolume;->mMaxFileSize:J
 
     return-wide v0
@@ -391,7 +352,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget v0, p0, Landroid/os/storage/StorageVolume;->mMtpReserveSpace:I
 
     return v0
@@ -401,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mOwner:Landroid/os/UserHandle;
 
     return-object v0
@@ -411,7 +370,6 @@
     .locals 1
 
     .prologue
-    .line 93
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -425,7 +383,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
     return-object v0
@@ -435,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget v0, p0, Landroid/os/storage/StorageVolume;->mStorageId:I
 
     return v0
@@ -445,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->hashCode()I
@@ -459,7 +414,6 @@
     .locals 1
 
     .prologue
-    .line 132
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mEmulated:Z
 
     return v0
@@ -469,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 114
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mPrimary:Z
 
     return v0
@@ -479,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mRemovable:Z
 
     return v0
@@ -490,7 +442,6 @@
     .parameter "index"
 
     .prologue
-    .line 151
     add-int/lit8 v0, p1, 0x1
 
     shl-int/lit8 v0, v0, 0x10
@@ -499,7 +450,6 @@
 
     iput v0, p0, Landroid/os/storage/StorageVolume;->mStorageId:I
 
-    .line 152
     return-void
 .end method
 
@@ -507,16 +457,14 @@
     .locals 4
 
     .prologue
-    .line 208
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "StorageVolume ["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 209
     .local v0, builder:Ljava/lang/StringBuilder;
-    const-string/jumbo v1, "mStorageId="
+    const-string v1, "mStorageId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -526,7 +474,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 210
     const-string v1, " mPath="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -537,7 +484,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 211
     const-string v1, " mDescriptionId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -548,7 +494,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 212
     const-string v1, " mPrimary="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -559,7 +504,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 213
     const-string v1, " mRemovable="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -570,7 +514,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 214
     const-string v1, " mEmulated="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -581,7 +524,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 215
     const-string v1, " mMtpReserveSpace="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -592,7 +534,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 216
     const-string v1, " mAllowMassStorage="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -603,7 +544,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 217
     const-string v1, " mMaxFileSize="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -614,7 +554,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    .line 218
     const-string v1, " mOwner="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -625,12 +564,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 219
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 220
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -648,12 +585,10 @@
 
     const/4 v2, 0x0
 
-    .line 242
     iget v0, p0, Landroid/os/storage/StorageVolume;->mStorageId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 243
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mPath:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -662,12 +597,10 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 244
     iget v0, p0, Landroid/os/storage/StorageVolume;->mDescriptionId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 245
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mPrimary:Z
 
     if-eqz v0, :cond_0
@@ -677,7 +610,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 246
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mRemovable:Z
 
     if-eqz v0, :cond_1
@@ -687,7 +619,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 247
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mEmulated:Z
 
     if-eqz v0, :cond_2
@@ -697,12 +628,10 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 248
     iget v0, p0, Landroid/os/storage/StorageVolume;->mMtpReserveSpace:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 249
     iget-boolean v0, p0, Landroid/os/storage/StorageVolume;->mAllowMassStorage:Z
 
     if-eqz v0, :cond_3
@@ -710,40 +639,33 @@
     :goto_3
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 250
     iget-wide v0, p0, Landroid/os/storage/StorageVolume;->mMaxFileSize:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 251
     iget-object v0, p0, Landroid/os/storage/StorageVolume;->mOwner:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 252
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 245
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 246
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 247
     goto :goto_2
 
     :cond_3
     move v1, v2
 
-    .line 249
     goto :goto_3
 .end method

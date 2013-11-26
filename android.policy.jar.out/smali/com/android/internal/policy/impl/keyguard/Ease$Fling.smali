@@ -27,14 +27,12 @@
     .prologue
     const/high16 v1, 0x3fc0
 
-    .line 89
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0, v1}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/Ease$Fling;->easeOut:Landroid/animation/TimeInterpolator;
 
-    .line 90
     new-instance v0, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v0, v1}, Landroid/view/animation/AccelerateInterpolator;-><init>(F)V
@@ -48,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

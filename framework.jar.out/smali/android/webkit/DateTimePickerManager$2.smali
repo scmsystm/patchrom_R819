@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 96
     iput-object p1, p0, Landroid/webkit/DateTimePickerManager$2;->val$date:Ljava/util/Date;
 
     iput-object p2, p0, Landroid/webkit/DateTimePickerManager$2;->val$view:Landroid/webkit/WebViewClassic;
@@ -53,17 +52,14 @@
 
     const/4 v1, 0x0
 
-    .line 98
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$2;->val$date:Ljava/util/Date;
 
     invoke-virtual {v0, p2}, Ljava/util/Date;->setHours(I)V
 
-    .line 99
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$2;->val$date:Ljava/util/Date;
 
     invoke-virtual {v0, p3}, Ljava/util/Date;->setMinutes(I)V
 
-    .line 100
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v4, "HH:mm"
@@ -78,7 +74,6 @@
 
     move-result-object v3
 
-    .line 101
     .local v3, output:Ljava/lang/String;
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$2;->val$view:Landroid/webkit/WebViewClassic;
 
@@ -88,6 +83,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebViewClassic;->replaceTextfieldText(IILjava/lang/String;II)V
 
-    .line 102
     return-void
 .end method

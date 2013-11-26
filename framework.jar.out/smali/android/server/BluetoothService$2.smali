@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1971
     iput-object p1, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,27 +43,22 @@
 
     const/4 v8, 0x0
 
-    .line 1974
     const-string v4, "[API] onReceive()"
 
     #calls: Landroid/server/BluetoothService;->log(Ljava/lang/String;)V
     invoke-static {v4}, Landroid/server/BluetoothService;->access$600(Ljava/lang/String;)V
 
-    .line 1975
     if-nez p2, :cond_1
 
-    .line 2007
     :cond_0
     :goto_0
     return-void
 
-    .line 1977
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1978
     .local v0, action:Ljava/lang/String;
     const-string v4, "android.intent.action.AIRPLANE_MODE"
 
@@ -74,12 +68,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 1979
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 1982
     .local v2, resolver:Landroid/content/ContentResolver;
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -89,7 +81,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1983
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mBluetoothState:Landroid/server/BluetoothAdapterStateMachine;
@@ -103,7 +94,6 @@
 
     goto :goto_0
 
-    .line 1985
     :cond_2
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -118,7 +108,6 @@
 
     goto :goto_0
 
-    .line 1987
     .end local v2           #resolver:Landroid/content/ContentResolver;
     :cond_3
     const-string v4, "android.intent.action.DOCK_EVENT"
@@ -129,14 +118,12 @@
 
     if-eqz v4, :cond_5
 
-    .line 1988
     const-string v4, "android.intent.extra.DOCK_STATE"
 
     invoke-virtual {p2, v4, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1990
     .local v3, state:I
     const-string v4, "BluetoothService"
 
@@ -160,13 +147,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1991
     if-nez v3, :cond_4
 
-    .line 1992
     invoke-static {v7}, Landroid/server/BluetoothService;->access$802(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1993
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #setter for: Landroid/server/BluetoothService;->mDockPin:Ljava/lang/String;
@@ -174,7 +158,6 @@
 
     goto :goto_0
 
-    .line 1995
     :cond_4
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
@@ -198,7 +181,6 @@
 
     move-result-object v1
 
-    .line 1998
     .local v1, editor:Landroid/content/SharedPreferences$Editor;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -226,12 +208,10 @@
 
     invoke-interface {v1, v4, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 1999
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     goto/16 :goto_0
 
-    .line 2001
     .end local v1           #editor:Landroid/content/SharedPreferences$Editor;
     .end local v3           #state:I
     :cond_5
@@ -243,7 +223,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 2002
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mHandler:Landroid/os/Handler;
@@ -257,7 +236,6 @@
 
     goto/16 :goto_0
 
-    .line 2003
     :cond_6
     const-string v4, "android.intent.action.USER_SWITCHED"
 
@@ -267,7 +245,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2004
     iget-object v4, p0, Landroid/server/BluetoothService$2;->this$0:Landroid/server/BluetoothService;
 
     #getter for: Landroid/server/BluetoothService;->mUserSwitchedHandler:Landroid/server/BluetoothService$UserSwitchedHandler;

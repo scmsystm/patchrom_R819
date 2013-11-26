@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 91
     iput-object p1, p0, Landroid/text/style/URLSpan$2;->this$0:Landroid/text/style/URLSpan;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +42,7 @@
     .parameter "which"
 
     .prologue
-    .line 93
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 94
     return-void
 .end method

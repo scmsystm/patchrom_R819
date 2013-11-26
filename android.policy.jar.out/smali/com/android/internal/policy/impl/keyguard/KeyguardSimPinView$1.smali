@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,16 +41,13 @@
     .parameter "v"
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;->doHapticKeyClick()V
 
-    .line 75
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;->verifyPasswordAndUnlock()V
 
-    .line 76
     return-void
 .end method

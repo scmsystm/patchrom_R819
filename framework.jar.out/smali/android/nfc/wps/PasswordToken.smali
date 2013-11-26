@@ -41,38 +41,32 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 11
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
     sput-object v0, Landroid/nfc/wps/PasswordToken;->mPASSWORDTOKEN_ATTRIBUTE_ID_VERSION:[B
 
-    .line 13
     new-array v0, v1, [B
 
     fill-array-data v0, :array_1
 
     sput-object v0, Landroid/nfc/wps/PasswordToken;->mPASSWORDTOKEN_ATTRIBUTE_ID_OOB_DEVICE_PASSWORD:[B
 
-    .line 15
     new-array v0, v1, [B
 
     fill-array-data v0, :array_2
 
     sput-object v0, Landroid/nfc/wps/PasswordToken;->mPASSWORDTOKEN_ATTRIBUTE_ID_VENDOR_EXTENSION:[B
 
-    .line 17
     const/16 v0, 0x10
 
     sput-byte v0, Landroid/nfc/wps/PasswordToken;->mPASSWORDTOKEN_VERSION_10:B
 
-    .line 19
     const/16 v0, 0x20
 
     sput-byte v0, Landroid/nfc/wps/PasswordToken;->mPASSWORDTOKEN_VERSION_20:B
 
-    .line 113
     new-instance v0, Landroid/nfc/wps/PasswordToken$1;
 
     invoke-direct {v0}, Landroid/nfc/wps/PasswordToken$1;-><init>()V
@@ -81,14 +75,12 @@
 
     return-void
 
-    .line 11
     :array_0
     .array-data 0x1
         0x10t
         0x4at
     .end array-data
 
-    .line 13
     nop
 
     :array_1
@@ -97,7 +89,6 @@
         0x2ct
     .end array-data
 
-    .line 15
     nop
 
     :array_2
@@ -111,17 +102,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
-    .line 46
     return-void
 .end method
 
@@ -130,38 +118,33 @@
     .parameter "in"
 
     .prologue
-    .line 48
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
-    .line 49
     const-string v0, "PasswordToken"
 
     const-string v1, "assemble function is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/nfc/wps/PasswordToken;->mPwdId:I
 
-    .line 51
     const-string v0, "PasswordToken"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPwdId = "
+    const-string v2, "mPwdId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -179,7 +162,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -188,12 +170,10 @@
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
-    .line 53
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 54
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -202,12 +182,10 @@
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
-    .line 55
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 56
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -216,12 +194,10 @@
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
-    .line 57
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 58
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -230,12 +206,10 @@
 
     iput-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
-    .line 59
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 60
     return-void
 .end method
 
@@ -245,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 125
     const/4 v0, 0x0
 
     return v0
@@ -255,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
     return-object v0
@@ -265,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
     return-object v0
@@ -275,7 +246,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget v0, p0, Landroid/nfc/wps/PasswordToken;->mPwdId:I
 
     return v0
@@ -285,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
     return-object v0
@@ -296,10 +265,8 @@
     .parameter "devPwd"
 
     .prologue
-    .line 86
     iput-object p1, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
-    .line 87
     return-void
 .end method
 
@@ -308,10 +275,8 @@
     .parameter "pubKeyHash"
 
     .prologue
-    .line 82
     iput-object p1, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
-    .line 83
     return-void
 .end method
 
@@ -320,10 +285,8 @@
     .parameter "pwdId"
 
     .prologue
-    .line 78
     iput p1, p0, Landroid/nfc/wps/PasswordToken;->mPwdId:I
 
-    .line 79
     return-void
 .end method
 
@@ -332,10 +295,8 @@
     .parameter "vendorEx"
 
     .prologue
-    .line 90
     iput-object p1, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
-    .line 91
     return-void
 .end method
 
@@ -343,7 +304,6 @@
     .locals 0
 
     .prologue
-    .line 111
     return-void
 .end method
 
@@ -353,26 +313,23 @@
     .parameter "flags"
 
     .prologue
-    .line 63
     const-string v0, "PasswordToken"
 
-    const-string/jumbo v1, "writeToParcel is called"
+    const-string v1, "writeToParcel is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     iget v0, p0, Landroid/nfc/wps/PasswordToken;->mPwdId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 65
     const-string v0, "PasswordToken"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "mPwdId = "
+    const-string v2, "mPwdId = "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -390,54 +347,45 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mPublicKeyHash:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 68
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mDevicePwd:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 70
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 71
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorId:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 72
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 73
     iget-object v0, p0, Landroid/nfc/wps/PasswordToken;->mVendorEx:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 74
     return-void
 .end method

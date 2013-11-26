@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 204
     const-string v1, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -67,14 +65,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 207
     :cond_0
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #calls: Lcom/android/server/AlarmManagerService;->shutdownCheckPoweroffAlarm()V
     invoke-static {v1}, Lcom/android/server/AlarmManagerService;->access$000(Lcom/android/server/AlarmManagerService;)V
 
-    .line 208
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     const/4 v2, 0x1
@@ -82,7 +78,6 @@
     #setter for: Lcom/android/server/AlarmManagerService;->mIPOShutdown:Z
     invoke-static {v1, v2}, Lcom/android/server/AlarmManagerService;->access$102(Lcom/android/server/AlarmManagerService;Z)Z
 
-    .line 209
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     const/4 v2, 0x3
@@ -101,12 +96,10 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/android/server/AlarmManagerService;->set(IJLandroid/app/PendingIntent;)V
 
-    .line 228
     :cond_1
     :goto_0
     return-void
 
-    .line 212
     :cond_2
     const-string v1, "android.intent.action.ACTION_BOOT_IPO"
 
@@ -120,13 +113,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 213
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #setter for: Lcom/android/server/AlarmManagerService;->mIPOShutdown:Z
     invoke-static {v1, v7}, Lcom/android/server/AlarmManagerService;->access$102(Lcom/android/server/AlarmManagerService;Z)Z
 
-    .line 214
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
@@ -139,7 +130,6 @@
     #setter for: Lcom/android/server/AlarmManagerService;->mDescriptor:I
     invoke-static {v1, v2}, Lcom/android/server/AlarmManagerService;->access$202(Lcom/android/server/AlarmManagerService;I)I
 
-    .line 215
     const-string v1, "AlarmManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -173,7 +163,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     iget-object v2, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
@@ -196,20 +185,17 @@
     #setter for: Lcom/android/server/AlarmManagerService;->mBootPackage:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/android/server/AlarmManagerService;->access$402(Lcom/android/server/AlarmManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 218
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.TIME_SET"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 219
     .local v0, timeChangeIntent:Landroid/content/Intent;
     const/high16 v1, 0x2000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 220
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mContext:Landroid/content/Context;
@@ -219,7 +205,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 222
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mClockReceiver:Lcom/android/server/AlarmManagerService$ClockReceiver;
@@ -229,7 +214,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/AlarmManagerService$ClockReceiver;->scheduleTimeTickEvent()V
 
-    .line 223
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mClockReceiver:Lcom/android/server/AlarmManagerService$ClockReceiver;
@@ -239,7 +223,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/AlarmManagerService$ClockReceiver;->scheduleDateChangedEvent()V
 
-    .line 224
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
     #getter for: Lcom/android/server/AlarmManagerService;->mWaitThreadlock:Ljava/lang/Object;
@@ -249,7 +232,6 @@
 
     monitor-enter v2
 
-    .line 225
     :try_start_0
     iget-object v1, p0, Lcom/android/server/AlarmManagerService$1;->this$0:Lcom/android/server/AlarmManagerService;
 
@@ -260,7 +242,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 226
     monitor-exit v2
 
     goto/16 :goto_0

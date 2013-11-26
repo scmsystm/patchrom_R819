@@ -34,23 +34,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldOverrideSystem:Z
 
-    .line 52
     const/16 v0, -0x3e7
 
     iput v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mRingerModeToUpdate:I
 
-    .line 53
     iput-boolean v1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSetLastActiveKey:Z
 
-    .line 54
     iput-boolean v1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSyncToSystem:Z
 
     return-void
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mRingerModeToUpdate:I
 
     return v0
@@ -73,10 +67,8 @@
     .parameter "ringerModeToUpdate"
 
     .prologue
-    .line 57
     iput p1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mRingerModeToUpdate:I
 
-    .line 58
     return-void
 .end method
 
@@ -85,10 +77,8 @@
     .parameter "shouldOverrideSystem"
 
     .prologue
-    .line 73
     iput-boolean p1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldOverrideSystem:Z
 
-    .line 74
     return-void
 .end method
 
@@ -97,10 +87,8 @@
     .parameter "shouldSetLastActiveKey"
 
     .prologue
-    .line 65
     iput-boolean p1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSetLastActiveKey:Z
 
-    .line 66
     return-void
 .end method
 
@@ -109,10 +97,8 @@
     .parameter "shouldSyncToSystem"
 
     .prologue
-    .line 81
     iput-boolean p1, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSyncToSystem:Z
 
-    .line 82
     return-void
 .end method
 
@@ -120,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-boolean v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldOverrideSystem:Z
 
     return v0
@@ -130,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-boolean v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSetLastActiveKey:Z
 
     return v0
@@ -140,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-boolean v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension$ActiveProfileChangeInfo;->mShouldSyncToSystem:Z
 
     return v0

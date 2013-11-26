@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +41,18 @@
     .parameter "thisView"
 
     .prologue
-    .line 44
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->mTextView:Landroid/widget/TextView;
 
     if-nez v1, :cond_0
 
-    .line 45
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     iget v1, v1, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->mTextViewResId:I
 
     if-lez v1, :cond_0
 
-    .line 46
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->getRootView()Landroid/view/View;
@@ -71,7 +67,6 @@
 
     move-result-object v0
 
-    .line 47
     .local v0, v:Landroid/view/View;
     if-eqz v0, :cond_0
 
@@ -79,7 +74,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 48
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     check-cast v0, Landroid/widget/TextView;
@@ -87,7 +81,6 @@
     .end local v0           #v:Landroid/view/View;
     iput-object v0, v1, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->mTextView:Landroid/widget/TextView;
 
-    .line 53
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
@@ -105,7 +98,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 54
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->mTextView:Landroid/widget/TextView;
@@ -120,12 +112,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
 
-    .line 56
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/NumPadKey$1;->this$0:Lcom/android/internal/policy/impl/keyguard/NumPadKey;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/NumPadKey;->doHapticKeyClick()V
 
-    .line 57
     return-void
 .end method

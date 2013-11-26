@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 529
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .parameter "in"
 
     .prologue
-    .line 532
     new-instance v1, Landroid/location/LocationRequest;
 
     invoke-direct {v1}, Landroid/location/LocationRequest;-><init>()V
 
-    .line 533
     .local v1, request:Landroid/location/LocationRequest;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -58,53 +55,45 @@
 
     invoke-virtual {v1, v2}, Landroid/location/LocationRequest;->setQuality(I)Landroid/location/LocationRequest;
 
-    .line 534
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Landroid/location/LocationRequest;->setFastestInterval(J)Landroid/location/LocationRequest;
 
-    .line 535
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Landroid/location/LocationRequest;->setInterval(J)Landroid/location/LocationRequest;
 
-    .line 536
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
     invoke-virtual {v1, v2, v3}, Landroid/location/LocationRequest;->setExpireAt(J)Landroid/location/LocationRequest;
 
-    .line 537
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     invoke-virtual {v1, v2}, Landroid/location/LocationRequest;->setNumUpdates(I)Landroid/location/LocationRequest;
 
-    .line 538
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v2
 
     invoke-virtual {v1, v2}, Landroid/location/LocationRequest;->setSmallestDisplacement(F)Landroid/location/LocationRequest;
 
-    .line 539
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 540
     .local v0, provider:Ljava/lang/String;
     if-eqz v0, :cond_0
 
     invoke-virtual {v1, v0}, Landroid/location/LocationRequest;->setProvider(Ljava/lang/String;)Landroid/location/LocationRequest;
 
-    .line 541
     :cond_0
     return-object v1
 .end method
@@ -114,7 +103,6 @@
     .parameter "x0"
 
     .prologue
-    .line 529
     invoke-virtual {p0, p1}, Landroid/location/LocationRequest$1;->createFromParcel(Landroid/os/Parcel;)Landroid/location/LocationRequest;
 
     move-result-object v0
@@ -127,7 +115,6 @@
     .parameter "size"
 
     .prologue
-    .line 545
     new-array v0, p1, [Landroid/location/LocationRequest;
 
     return-object v0
@@ -138,7 +125,6 @@
     .parameter "x0"
 
     .prologue
-    .line 529
     invoke-virtual {p0, p1}, Landroid/location/LocationRequest$1;->newArray(I)[Landroid/location/LocationRequest;
 
     move-result-object v0

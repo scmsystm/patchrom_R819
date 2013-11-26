@@ -24,7 +24,6 @@
     .parameter "listener"
 
     .prologue
-    .line 36
     const-string v5, "HeadlessDisplayAdapter"
 
     move-object v0, p0
@@ -39,7 +38,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/display/DisplayAdapter;-><init>(Lcom/android/server/display/DisplayManagerService$SyncRoot;Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/display/DisplayAdapter$Listener;Ljava/lang/String;)V
 
-    .line 37
     return-void
 .end method
 
@@ -49,10 +47,8 @@
     .locals 2
 
     .prologue
-    .line 41
     invoke-super {p0}, Lcom/android/server/display/DisplayAdapter;->registerLocked()V
 
-    .line 42
     new-instance v0, Lcom/android/server/display/HeadlessDisplayAdapter$HeadlessDisplayDevice;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/HeadlessDisplayAdapter$HeadlessDisplayDevice;-><init>(Lcom/android/server/display/HeadlessDisplayAdapter;)V
@@ -61,6 +57,5 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/display/HeadlessDisplayAdapter;->sendDisplayDeviceEventLocked(Lcom/android/server/display/DisplayDevice;I)V
 
-    .line 43
     return-void
 .end method

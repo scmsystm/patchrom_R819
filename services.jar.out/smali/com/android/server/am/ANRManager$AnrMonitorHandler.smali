@@ -25,13 +25,10 @@
     .parameter "looper"
 
     .prologue
-    .line 120
     iput-object p1, p0, Lcom/android/server/am/ANRManager$AnrMonitorHandler;->this$0:Lcom/android/server/am/ANRManager;
 
-    .line 121
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 122
     return-void
 .end method
 
@@ -42,26 +39,21 @@
     .parameter "msg"
 
     .prologue
-    .line 127
     iget v5, p1, Landroid/os/Message;->what:I
 
     packed-switch v5, :pswitch_data_0
 
-    .line 173
     :goto_0
     return-void
 
-    .line 131
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/am/BroadcastQueue;
 
-    .line 132
     .local v1, bq:Lcom/android/server/am/BroadcastQueue;
     const/4 v3, -0x1
 
-    .line 133
     .local v3, pid:I
     if-eqz v1, :cond_1
 
@@ -73,7 +65,6 @@
 
     if-lez v5, :cond_1
 
-    .line 134
     iget-object v5, v1, Lcom/android/server/am/BroadcastQueue;->mOrderedBroadcasts:Ljava/util/ArrayList;
 
     const/4 v6, 0x0
@@ -84,7 +75,6 @@
 
     check-cast v2, Lcom/android/server/am/BroadcastRecord;
 
-    .line 135
     .local v2, br:Lcom/android/server/am/BroadcastRecord;
     if-eqz v2, :cond_0
 
@@ -92,12 +82,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 136
     iget-object v5, v2, Lcom/android/server/am/BroadcastRecord;->curApp:Lcom/android/server/am/ProcessRecord;
 
     iget v3, v5, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    .line 138
     :cond_0
     const-string v5, "ANRManager"
 
@@ -127,14 +115,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     iget-object v5, p0, Lcom/android/server/am/ANRManager$AnrMonitorHandler;->this$0:Lcom/android/server/am/ANRManager;
 
     invoke-virtual {v5, v3}, Lcom/android/server/am/ANRManager;->preDumpStackTraces(I)V
 
     goto :goto_0
 
-    .line 142
     .end local v2           #br:Lcom/android/server/am/BroadcastRecord;
     :cond_1
     const-string v5, "ANRManager"
@@ -145,7 +131,6 @@
 
     goto :goto_0
 
-    .line 148
     .end local v1           #bq:Lcom/android/server/am/BroadcastQueue;
     .end local v3           #pid:I
     :pswitch_1
@@ -153,18 +138,14 @@
 
     check-cast v4, Lcom/android/server/am/ProcessRecord;
 
-    .line 149
     .local v4, pr:Lcom/android/server/am/ProcessRecord;
     const/4 v3, -0x1
 
-    .line 150
     .restart local v3       #pid:I
     if-eqz v4, :cond_2
 
-    .line 151
     iget v3, v4, Lcom/android/server/am/ProcessRecord;->pid:I
 
-    .line 153
     :cond_2
     const-string v5, "ANRManager"
 
@@ -194,14 +175,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 154
     iget-object v5, p0, Lcom/android/server/am/ANRManager$AnrMonitorHandler;->this$0:Lcom/android/server/am/ANRManager;
 
     invoke-virtual {v5, v3}, Lcom/android/server/am/ANRManager;->preDumpStackTraces(I)V
 
     goto :goto_0
 
-    .line 159
     .end local v3           #pid:I
     .end local v4           #pr:Lcom/android/server/am/ProcessRecord;
     :pswitch_2
@@ -209,7 +188,6 @@
 
     check-cast v0, Lcom/android/server/am/ANRManager$AnrDumpRecord;
 
-    .line 160
     .local v0, adp:Lcom/android/server/am/ANRManager$AnrDumpRecord;
     const-string v5, "ANRManager"
 
@@ -233,7 +211,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     iget-object v5, p0, Lcom/android/server/am/ANRManager$AnrMonitorHandler;->this$0:Lcom/android/server/am/ANRManager;
 
     iget-object v5, v5, Lcom/android/server/am/ANRManager;->mAnrDumpMgr:Lcom/android/server/am/ANRManager$AnrDumpMgr;
@@ -242,12 +219,10 @@
 
     goto/16 :goto_0
 
-    .line 167
     .end local v0           #adp:Lcom/android/server/am/ANRManager$AnrDumpRecord;
     :pswitch_3
     iget v3, p1, Landroid/os/Message;->arg1:I
 
-    .line 168
     .restart local v3       #pid:I
     const-string v5, "ANRManager"
 
@@ -277,14 +252,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     iget-object v5, p0, Lcom/android/server/am/ANRManager$AnrMonitorHandler;->this$0:Lcom/android/server/am/ANRManager;
 
     invoke-virtual {v5, v3}, Lcom/android/server/am/ANRManager;->preDumpStackTraces(I)V
 
     goto/16 :goto_0
 
-    .line 127
     nop
 
     :pswitch_data_0

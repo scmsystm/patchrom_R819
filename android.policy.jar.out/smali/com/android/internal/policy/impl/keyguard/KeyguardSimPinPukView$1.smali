@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "slotId"
 
     .prologue
-    .line 155
     const-string v0, "KeyguardSimPinPukView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,7 +74,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->isGemini()Z
 
     move-result v0
@@ -89,13 +86,11 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 158
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->getSIMCardName(I)V
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->access$100(Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;I)V
 
-    .line 160
     :cond_0
     return-void
 .end method
@@ -105,7 +100,6 @@
     .parameter "newState"
 
     .prologue
-    .line 166
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->mSimCardDialog:Landroid/app/AlertDialog;
@@ -130,7 +124,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 168
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->mSimCardDialog:Landroid/app/AlertDialog;
@@ -140,7 +133,6 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 171
     :cond_0
     return-void
 .end method
@@ -150,7 +142,6 @@
     .parameter "slotId"
 
     .prologue
-    .line 147
     const-string v0, "KeyguardSimPinPukView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -187,20 +178,17 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->xlogD(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     iget v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->mSimId:I
 
     if-ne v0, p1, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->dealwithSIMInfoChanged(I)V
     invoke-static {v0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->access$000(Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;I)V
 
-    .line 151
     :cond_0
     return-void
 .end method

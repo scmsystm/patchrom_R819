@@ -26,12 +26,10 @@
     .parameter
 
     .prologue
-    .line 2066
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 2067
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->hasNotifiedForWapPushSetting:Z
@@ -51,7 +49,6 @@
 
     const/4 v7, 0x1
 
-    .line 2071
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v8
@@ -64,12 +61,10 @@
 
     if-eqz v8, :cond_1
 
-    .line 2112
     :cond_0
     :goto_0
     return-void
 
-    .line 2073
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -83,19 +78,17 @@
 
     if-eqz v8, :cond_3
 
-    .line 2074
     const-string v8, "SMS"
 
-    const-string/jumbo v9, "receive cancel intent"
+    const-string v9, "receive cancel intent"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2075
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v8, v8, Lcom/android/internal/telephony/SMSDispatcher;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v9, "notification"
+    const-string v9, "notification"
 
     invoke-virtual {v8, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -103,25 +96,21 @@
 
     check-cast v3, Landroid/app/NotificationManager;
 
-    .line 2076
     .local v3, notiMgr:Landroid/app/NotificationManager;
     if-eqz v3, :cond_2
 
-    .line 2077
     const-string v8, "SMS"
 
     const-string v9, "cancel wap push setting notification"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2078
     const/16 v8, 0x1387
 
     invoke-virtual {v3, v8}, Landroid/app/NotificationManager;->cancel(I)V
 
     goto :goto_0
 
-    .line 2080
     :cond_2
     const-string v8, "SMS"
 
@@ -131,7 +120,6 @@
 
     goto :goto_0
 
-    .line 2082
     .end local v3           #notiMgr:Landroid/app/NotificationManager;
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -146,8 +134,7 @@
 
     if-eqz v8, :cond_4
 
-    .line 2083
-    const-string/jumbo v8, "simId"
+    const-string v8, "simId"
 
     iget-object v9, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
@@ -161,7 +148,6 @@
 
     move-result v2
 
-    .line 2084
     .local v2, etws_sim:I
     const-string v8, "SMS"
 
@@ -169,7 +155,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "receive EVENT_ETWS_ALARM "
+    const-string v10, "receive EVENT_ETWS_ALARM "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -185,7 +171,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2085
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v8, v8, Lcom/android/internal/telephony/SMSDispatcher;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -196,7 +181,6 @@
 
     if-ne v2, v8, :cond_0
 
-    .line 2086
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     iget-object v8, v8, Lcom/android/internal/telephony/SMSDispatcher;->mCellBroadcastFwkExt:Lcom/android/internal/telephony/ICellBroadcastFwkExt;
@@ -207,21 +191,18 @@
 
     invoke-interface {v8, v9}, Lcom/android/internal/telephony/ICellBroadcastFwkExt;->closeEtwsChannel(Lcom/android/internal/telephony/EtwsNotification;)V
 
-    .line 2087
     iget-object v8, p0, Lcom/android/internal/telephony/SMSDispatcher$1;->this$0:Lcom/android/internal/telephony/SMSDispatcher;
 
     invoke-virtual {v8}, Lcom/android/internal/telephony/SMSDispatcher;->stopEtwsAlarm()V
 
     goto/16 :goto_0
 
-    .line 2093
     .end local v2           #etws_sim:I
     :cond_4
     invoke-virtual {p0}, Lcom/android/internal/telephony/SMSDispatcher$1;->getResultCode()I
 
     move-result v6
 
-    .line 2094
     .local v6, rc:I
     const/4 v8, -0x1
 
@@ -229,28 +210,24 @@
 
     if-ne v6, v7, :cond_6
 
-    .line 2097
     .local v7, success:Z
     :cond_5
     :goto_1
-    const-string/jumbo v8, "rTime"
+    const-string v8, "rTime"
 
     invoke-virtual {p2, v8, v10, v11}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v4
 
-    .line 2098
     .local v4, rTime:J
     cmp-long v8, v4, v10
 
     if-eqz v8, :cond_0
 
-    .line 2099
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 2100
     .local v0, curTime:J
     const-string v8, "SMS"
 
@@ -276,7 +253,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2101
     sub-long v8, v0, v4
 
     const-wide/16 v10, 0x3e8
@@ -289,7 +265,6 @@
 
     if-lez v8, :cond_7
 
-    .line 2102
     const-string v8, "SMS"
 
     const-string v9, "APP process too long"
@@ -298,7 +273,6 @@
 
     goto/16 :goto_0
 
-    .line 2094
     .end local v0           #curTime:J
     .end local v4           #rTime:J
     .end local v7           #success:Z
@@ -307,7 +281,6 @@
 
     goto :goto_1
 
-    .line 2106
     .restart local v0       #curTime:J
     .restart local v4       #rTime:J
     .restart local v7       #success:Z

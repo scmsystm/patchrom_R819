@@ -18,10 +18,8 @@
     .parameter "ci"
 
     .prologue
-    .line 74
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/IccFileHandler;-><init>(Lcom/android/internal/telephony/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 75
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .parameter "efid"
 
     .prologue
-    .line 81
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getEFPath(IZ)Ljava/lang/String;
@@ -48,10 +45,8 @@
     .parameter "is7FFF"
 
     .prologue
-    .line 86
     const-string v0, "7F20"
 
-    .line 88
     .local v0, DF_APP:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/IccFileHandler;->mParentApp:Lcom/android/internal/telephony/UiccCardApplication;
 
@@ -67,23 +62,18 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 89
     const-string v0, "7FFF"
 
-    .line 92
     :cond_0
     sparse-switch p1, :sswitch_data_0
 
-    .line 123
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/gsm/SIMFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 124
     .local v1, path:Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 125
     const-string v2, "GSM"
 
     const-string v3, "Error: EF Path being returned in null"
@@ -93,33 +83,28 @@
     :cond_1
     move-object v0, v1
 
-    .line 127
     .end local v0           #DF_APP:Ljava/lang/String;
     .end local v1           #path:Ljava/lang/String;
     :goto_0
     :sswitch_0
     return-object v0
 
-    .line 94
     .restart local v0       #DF_APP:Ljava/lang/String;
     :sswitch_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 114
     :sswitch_2
     const-string v0, "3F007F20"
 
     goto :goto_0
 
-    .line 121
     :sswitch_3
     const-string v0, "7FFF7F665F30"
 
     goto :goto_0
 
-    .line 92
     :sswitch_data_0
     .sparse-switch
         0x2fe2 -> :sswitch_1
@@ -153,7 +138,6 @@
     .parameter "msg"
 
     .prologue
-    .line 132
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -176,7 +160,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     return-void
 .end method
 
@@ -185,7 +168,6 @@
     .parameter "msg"
 
     .prologue
-    .line 137
     const-string v0, "GSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -208,6 +190,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     return-void
 .end method

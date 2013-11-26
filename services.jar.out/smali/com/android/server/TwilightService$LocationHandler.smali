@@ -60,17 +60,14 @@
     .parameter
 
     .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 301
     const-wide/32 v0, -0x1b7740
 
     iput-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastNetworkRegisterTime:J
 
-    .line 304
     new-instance v0, Lcom/android/server/TwilightCalculator;
 
     invoke-direct {v0}, Lcom/android/server/TwilightCalculator;-><init>()V
@@ -86,7 +83,6 @@
     .parameter "x1"
 
     .prologue
-    .line 283
     invoke-direct {p0, p1}, Lcom/android/server/TwilightService$LocationHandler;-><init>(Lcom/android/server/TwilightService;)V
 
     return-void
@@ -96,10 +92,8 @@
     .locals 13
 
     .prologue
-    .line 423
     const/4 v4, 0x0
 
-    .line 424
     .local v4, location:Landroid/location/Location;
     iget-object v6, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
@@ -122,7 +116,6 @@
 
     move-result-object v5
 
-    .line 426
     .local v5, providers:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -132,7 +125,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 427
     iget-object v6, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
     #getter for: Lcom/android/server/TwilightService;->mLocationManager:Landroid/location/LocationManager;
@@ -150,7 +142,6 @@
 
     move-result-object v1
 
-    .line 430
     .local v1, lastKnownLocation:Landroid/location/Location;
     if-eqz v4, :cond_1
 
@@ -168,23 +159,19 @@
 
     if-gez v6, :cond_0
 
-    .line 433
     :cond_1
     move-object v4, v1
 
     goto :goto_0
 
-    .line 440
     .end local v1           #lastKnownLocation:Landroid/location/Location;
     :cond_2
     if-nez v4, :cond_3
 
-    .line 441
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0}, Landroid/text/format/Time;-><init>()V
 
-    .line 442
     .local v0, currentTime:Landroid/text/format/Time;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -192,7 +179,6 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/text/format/Time;->set(J)V
 
-    .line 443
     const-wide v7, 0x3f71111111111111L
 
     iget-wide v9, v0, Landroid/text/format/Time;->gmtoff:J
@@ -212,7 +198,6 @@
 
     mul-double v2, v7, v9
 
-    .line 445
     .local v2, lngOffset:D
     new-instance v4, Landroid/location/Location;
 
@@ -221,44 +206,36 @@
 
     invoke-direct {v4, v6}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
-    .line 446
     .restart local v4       #location:Landroid/location/Location;
     invoke-virtual {v4, v2, v3}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 447
     const-wide/16 v6, 0x0
 
     invoke-virtual {v4, v6, v7}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 448
     const v6, 0x48cb9d00
 
     invoke-virtual {v4, v6}, Landroid/location/Location;->setAccuracy(F)V
 
-    .line 449
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
     invoke-virtual {v4, v6, v7}, Landroid/location/Location;->setTime(J)V
 
-    .line 450
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v6
 
     invoke-virtual {v4, v6, v7}, Landroid/location/Location;->setElapsedRealtimeNanos(J)V
 
-    .line 457
     .end local v0           #currentTime:Landroid/text/format/Time;
     .end local v2           #lngOffset:D
     :cond_3
     invoke-direct {p0, v4}, Lcom/android/server/TwilightService$LocationHandler;->setLocation(Landroid/location/Location;)V
 
-    .line 458
     return-void
 
-    .line 443
     .restart local v0       #currentTime:Landroid/text/format/Time;
     :cond_4
     const/4 v6, 0x0
@@ -271,13 +248,10 @@
     .parameter "location"
 
     .prologue
-    .line 461
     iput-object p1, p0, Lcom/android/server/TwilightService$LocationHandler;->mLocation:Landroid/location/Location;
 
-    .line 462
     invoke-direct {p0}, Lcom/android/server/TwilightService$LocationHandler;->updateTwilightState()V
 
-    .line 463
     return-void
 .end method
 
@@ -285,14 +259,12 @@
     .locals 25
 
     .prologue
-    .line 466
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->mLocation:Landroid/location/Location;
 
     if-nez v3, :cond_0
 
-    .line 467
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
@@ -302,17 +274,14 @@
     #calls: Lcom/android/server/TwilightService;->setTwilightState(Lcom/android/server/TwilightService$TwilightState;)V
     invoke-static {v3, v4}, Lcom/android/server/TwilightService;->access$500(Lcom/android/server/TwilightService;Lcom/android/server/TwilightService$TwilightState;)V
 
-    .line 524
     :goto_0
     return-void
 
-    .line 471
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v15
 
-    .line 474
     .local v15, now:J
     move-object/from16 v0, p0
 
@@ -340,7 +309,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/TwilightCalculator;->calculateTwilight(JDD)V
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->mTwilightCalculator:Lcom/android/server/TwilightCalculator;
@@ -349,7 +317,6 @@
 
     move-wide/from16 v23, v0
 
-    .line 479
     .local v23, yesterdaySunset:J
     move-object/from16 v0, p0
 
@@ -375,7 +342,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/TwilightCalculator;->calculateTwilight(JDD)V
 
-    .line 481
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->mTwilightCalculator:Lcom/android/server/TwilightCalculator;
@@ -388,7 +354,6 @@
 
     const/4 v12, 0x1
 
-    .line 482
     .local v12, isNight:Z
     :goto_1
     move-object/from16 v0, p0
@@ -399,7 +364,6 @@
 
     move-wide/from16 v18, v0
 
-    .line 483
     .local v18, todaySunrise:J
     move-object/from16 v0, p0
 
@@ -409,7 +373,6 @@
 
     move-wide/from16 v20, v0
 
-    .line 486
     .local v20, todaySunset:J
     move-object/from16 v0, p0
 
@@ -437,14 +400,12 @@
 
     invoke-virtual/range {v2 .. v8}, Lcom/android/server/TwilightCalculator;->calculateTwilight(JDD)V
 
-    .line 488
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->mTwilightCalculator:Lcom/android/server/TwilightCalculator;
 
     iget-wide v10, v3, Lcom/android/server/TwilightCalculator;->mSunrise:J
 
-    .line 491
     .local v10, tomorrowSunrise:J
     new-instance v2, Lcom/android/server/TwilightService$TwilightState;
 
@@ -458,7 +419,6 @@
 
     invoke-direct/range {v2 .. v11}, Lcom/android/server/TwilightService$TwilightState;-><init>(ZJJJJ)V
 
-    .line 496
     .local v2, state:Lcom/android/server/TwilightService$TwilightState;
     move-object/from16 v0, p0
 
@@ -467,10 +427,8 @@
     #calls: Lcom/android/server/TwilightService;->setTwilightState(Lcom/android/server/TwilightService$TwilightState;)V
     invoke-static {v3, v2}, Lcom/android/server/TwilightService;->access$500(Lcom/android/server/TwilightService;Lcom/android/server/TwilightService$TwilightState;)V
 
-    .line 499
     const-wide/16 v13, 0x0
 
-    .line 500
     .local v13, nextUpdate:J
     const-wide/16 v3, -0x1
 
@@ -484,13 +442,11 @@
 
     if-nez v3, :cond_3
 
-    .line 502
     :cond_1
     const-wide/32 v3, 0x2932e00
 
     add-long v13, v15, v3
 
-    .line 520
     :goto_2
     new-instance v22, Landroid/content/Intent;
 
@@ -500,7 +456,6 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 521
     .local v22, updateIntent:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -521,7 +476,6 @@
 
     move-result-object v17
 
-    .line 522
     .local v17, pendingIntent:Landroid/app/PendingIntent;
     move-object/from16 v0, p0
 
@@ -536,7 +490,6 @@
 
     invoke-virtual {v3, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 523
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
@@ -554,7 +507,6 @@
 
     goto/16 :goto_0
 
-    .line 481
     .end local v2           #state:Lcom/android/server/TwilightService$TwilightState;
     .end local v10           #tomorrowSunrise:J
     .end local v12           #isNight:Z
@@ -568,7 +520,6 @@
 
     goto/16 :goto_1
 
-    .line 505
     .restart local v2       #state:Lcom/android/server/TwilightService$TwilightState;
     .restart local v10       #tomorrowSunrise:J
     .restart local v12       #isNight:Z
@@ -580,28 +531,23 @@
 
     add-long/2addr v13, v3
 
-    .line 507
     cmp-long v3, v15, v20
 
     if-lez v3, :cond_4
 
-    .line 508
     add-long/2addr v13, v10
 
     goto :goto_2
 
-    .line 509
     :cond_4
     cmp-long v3, v15, v18
 
     if-lez v3, :cond_5
 
-    .line 510
     add-long v13, v13, v20
 
     goto :goto_2
 
-    .line 512
     :cond_5
     add-long v13, v13, v18
 
@@ -614,12 +560,10 @@
     .locals 1
 
     .prologue
-    .line 312
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/server/TwilightService$LocationHandler;->sendEmptyMessage(I)Z
 
-    .line 313
     return-void
 .end method
 
@@ -628,23 +572,19 @@
     .parameter "msg"
 
     .prologue
-    .line 325
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 420
     :cond_0
     :goto_0
     return-void
 
-    .line 327
     :pswitch_0
     iget-object v9, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v9, Landroid/location/Location;
 
-    .line 328
     .local v9, location:Landroid/location/Location;
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLocation:Landroid/location/Location;
 
@@ -653,7 +593,6 @@
 
     move-result v8
 
-    .line 329
     .local v8, hasMoved:Z
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLocation:Landroid/location/Location;
 
@@ -676,27 +615,23 @@
     :cond_1
     const/4 v7, 0x1
 
-    .line 336
     .local v7, hasBetterAccuracy:Z
     :goto_1
     if-nez v8, :cond_2
 
     if-eqz v7, :cond_0
 
-    .line 337
     :cond_2
     invoke-direct {p0, v9}, Lcom/android/server/TwilightService$LocationHandler;->setLocation(Landroid/location/Location;)V
 
     goto :goto_0
 
-    .line 329
     .end local v7           #hasBetterAccuracy:Z
     :cond_3
     const/4 v7, 0x0
 
     goto :goto_1
 
-    .line 343
     .end local v8           #hasMoved:Z
     .end local v9           #location:Landroid/location/Location;
     :pswitch_1
@@ -704,7 +639,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 348
     iget-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastNetworkRegisterTime:J
 
     const-wide/32 v2, 0x1b7740
@@ -719,12 +653,10 @@
 
     if-gez v0, :cond_0
 
-    .line 357
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mNetworkListenerEnabled:Z
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
     #getter for: Lcom/android/server/TwilightService;->mLocationManager:Landroid/location/LocationManager;
@@ -741,7 +673,6 @@
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 366
     :pswitch_2
     :try_start_0
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
@@ -759,7 +690,6 @@
 
     move-result v10
 
-    .line 373
     .local v10, networkLocationEnabled:Z
     :goto_2
     iget-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mNetworkListenerEnabled:Z
@@ -768,19 +698,16 @@
 
     if-eqz v10, :cond_4
 
-    .line 374
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mNetworkListenerEnabled:Z
 
-    .line 375
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastNetworkRegisterTime:J
 
-    .line 376
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
     #getter for: Lcom/android/server/TwilightService;->mLocationManager:Landroid/location/LocationManager;
@@ -803,25 +730,20 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 379
     iget-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mDidFirstInit:Z
 
     if-nez v0, :cond_4
 
-    .line 380
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mDidFirstInit:Z
 
-    .line 381
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLocation:Landroid/location/Location;
 
     if-nez v0, :cond_4
 
-    .line 382
     invoke-direct {p0}, Lcom/android/server/TwilightService$LocationHandler;->retrieveLocation()V
 
-    .line 391
     :cond_4
     :try_start_1
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
@@ -839,7 +761,6 @@
 
     move-result v11
 
-    .line 399
     .local v11, passiveLocationEnabled:Z
     :goto_3
     iget-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mPassiveListenerEnabled:Z
@@ -848,12 +769,10 @@
 
     if-eqz v11, :cond_5
 
-    .line 400
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mPassiveListenerEnabled:Z
 
-    .line 401
     iget-object v0, p0, Lcom/android/server/TwilightService$LocationHandler;->this$0:Lcom/android/server/TwilightService;
 
     #getter for: Lcom/android/server/TwilightService;->mLocationManager:Landroid/location/LocationManager;
@@ -876,7 +795,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    .line 405
     :cond_5
     iget-boolean v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mNetworkListenerEnabled:Z
 
@@ -886,7 +804,6 @@
 
     if-nez v0, :cond_0
 
-    .line 406
     :cond_6
     iget-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
 
@@ -900,7 +817,6 @@
 
     iput-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
 
-    .line 407
     iget-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
 
     const-wide/16 v2, 0x0
@@ -909,12 +825,10 @@
 
     if-nez v0, :cond_8
 
-    .line 408
     const-wide/16 v0, 0x1388
 
     iput-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
 
-    .line 412
     :cond_7
     :goto_4
     const/4 v0, 0x1
@@ -925,32 +839,27 @@
 
     goto/16 :goto_0
 
-    .line 368
     .end local v10           #networkLocationEnabled:Z
     .end local v11           #passiveLocationEnabled:Z
     :catch_0
     move-exception v6
 
-    .line 371
     .local v6, e:Ljava/lang/Exception;
     const/4 v10, 0x0
 
     .restart local v10       #networkLocationEnabled:Z
     goto/16 :goto_2
 
-    .line 393
     .end local v6           #e:Ljava/lang/Exception;
     :catch_1
     move-exception v6
 
-    .line 396
     .restart local v6       #e:Ljava/lang/Exception;
     const/4 v11, 0x0
 
     .restart local v11       #passiveLocationEnabled:Z
     goto :goto_3
 
-    .line 409
     .end local v6           #e:Ljava/lang/Exception;
     :cond_8
     iget-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
@@ -961,14 +870,12 @@
 
     if-lez v0, :cond_7
 
-    .line 410
     const-wide/32 v0, 0xdbba0
 
     iput-wide v0, p0, Lcom/android/server/TwilightService$LocationHandler;->mLastUpdateInterval:J
 
     goto :goto_4
 
-    .line 417
     .end local v10           #networkLocationEnabled:Z
     .end local v11           #passiveLocationEnabled:Z
     :pswitch_3
@@ -976,7 +883,6 @@
 
     goto/16 :goto_0
 
-    .line 325
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -991,18 +897,15 @@
     .parameter "location"
 
     .prologue
-    .line 307
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1, p1}, Lcom/android/server/TwilightService$LocationHandler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 308
     .local v0, msg:Landroid/os/Message;
     invoke-virtual {p0, v0}, Lcom/android/server/TwilightService$LocationHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 309
     return-void
 .end method
 
@@ -1010,12 +913,10 @@
     .locals 1
 
     .prologue
-    .line 316
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lcom/android/server/TwilightService$LocationHandler;->sendEmptyMessage(I)Z
 
-    .line 317
     return-void
 .end method
 
@@ -1023,11 +924,9 @@
     .locals 1
 
     .prologue
-    .line 320
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/android/server/TwilightService$LocationHandler;->sendEmptyMessage(I)Z
 
-    .line 321
     return-void
 .end method

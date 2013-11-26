@@ -24,17 +24,14 @@
     .parameter "context"
 
     .prologue
-    .line 168
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
     new-instance v0, Landroid/app/NotificationPlus;
 
     invoke-direct {v0, p1}, Landroid/app/NotificationPlus;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
-    .line 170
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     return-object v0
@@ -55,7 +51,6 @@
     .parameter "cancelable"
 
     .prologue
-    .line 249
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 250
     return-object p0
 .end method
 
@@ -73,7 +67,6 @@
     .parameter "message"
 
     .prologue
-    .line 190
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -82,7 +75,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 191
     return-object p0
 .end method
 
@@ -92,7 +84,6 @@
     .parameter "pendingIntent"
 
     .prologue
-    .line 234
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -101,7 +92,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 235
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -110,7 +100,6 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 236
     return-object p0
 .end method
 
@@ -120,7 +109,6 @@
     .parameter "pendingIntent"
 
     .prologue
-    .line 219
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -129,7 +117,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 220
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -138,7 +125,6 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 221
     return-object p0
 .end method
 
@@ -147,7 +133,6 @@
     .parameter "pendingIntent"
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -156,7 +141,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 265
     return-object p0
 .end method
 
@@ -166,7 +150,6 @@
     .parameter "pendingIntent"
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -175,7 +158,6 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 205
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -184,7 +166,6 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 206
     return-object p0
 .end method
 
@@ -193,7 +174,6 @@
     .parameter "title"
 
     .prologue
-    .line 179
     iget-object v0, p0, Landroid/app/NotificationPlus$Builder;->mNotification:Landroid/app/NotificationPlus;
 
     iget-object v0, v0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
@@ -202,6 +182,5 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 180
     return-object p0
 .end method

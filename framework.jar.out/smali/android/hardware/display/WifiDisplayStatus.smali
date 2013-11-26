@@ -56,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 62
     new-instance v0, Landroid/hardware/display/WifiDisplayStatus$1;
 
     invoke-direct {v0}, Landroid/hardware/display/WifiDisplayStatus$1;-><init>()V
@@ -72,7 +71,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 93
     const/4 v4, 0x0
 
     sget-object v5, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
@@ -87,7 +85,6 @@
 
     invoke-direct/range {v0 .. v6}, Landroid/hardware/display/WifiDisplayStatus;-><init>(IIILandroid/hardware/display/WifiDisplay;[Landroid/hardware/display/WifiDisplay;[Landroid/hardware/display/WifiDisplay;)V
 
-    .line 95
     return-void
 .end method
 
@@ -101,13 +98,10 @@
     .parameter "rememberedDisplays"
 
     .prologue
-    .line 99
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     if-nez p5, :cond_0
 
-    .line 101
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "availableDisplays must not be null"
@@ -116,39 +110,30 @@
 
     throw v0
 
-    .line 103
     :cond_0
     if-nez p6, :cond_1
 
-    .line 104
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "rememberedDisplays must not be null"
+    const-string v1, "rememberedDisplays must not be null"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 107
     :cond_1
     iput p1, p0, Landroid/hardware/display/WifiDisplayStatus;->mFeatureState:I
 
-    .line 108
     iput p2, p0, Landroid/hardware/display/WifiDisplayStatus;->mScanState:I
 
-    .line 109
     iput p3, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplayState:I
 
-    .line 110
     iput-object p4, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
-    .line 111
     iput-object p5, p0, Landroid/hardware/display/WifiDisplayStatus;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 112
     iput-object p6, p0, Landroid/hardware/display/WifiDisplayStatus;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
-    .line 113
     return-void
 .end method
 
@@ -158,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 201
     const/4 v0, 0x0
 
     return v0
@@ -168,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     return-object v0
@@ -178,7 +161,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplayState:I
 
     return v0
@@ -188,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     return-object v0
@@ -198,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 124
     iget v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mFeatureState:I
 
     return v0
@@ -208,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
     return-object v0
@@ -218,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mScanState:I
 
     return v0
@@ -228,7 +206,6 @@
     .locals 2
 
     .prologue
-    .line 207
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,7 +290,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -332,37 +309,30 @@
     .parameter "flags"
 
     .prologue
-    .line 177
     iget v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mFeatureState:I
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 178
     iget v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mScanState:I
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 179
     iget v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplayState:I
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 181
     iget-object v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     if-eqz v4, :cond_0
 
-    .line 182
     const/4 v4, 0x1
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 183
     iget-object v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mActiveDisplay:Landroid/hardware/display/WifiDisplay;
 
     invoke-virtual {v4, p1, p2}, Landroid/hardware/display/WifiDisplay;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 188
     :goto_0
     iget-object v4, p0, Landroid/hardware/display/WifiDisplayStatus;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
@@ -370,7 +340,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 189
     iget-object v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mAvailableDisplays:[Landroid/hardware/display/WifiDisplay;
 
     .local v0, arr$:[Landroid/hardware/display/WifiDisplay;
@@ -385,16 +354,13 @@
 
     aget-object v1, v0, v2
 
-    .line 190
     .local v1, display:Landroid/hardware/display/WifiDisplay;
     invoke-virtual {v1, p1, p2}, Landroid/hardware/display/WifiDisplay;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 189
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 185
     .end local v0           #arr$:[Landroid/hardware/display/WifiDisplay;
     .end local v1           #display:Landroid/hardware/display/WifiDisplay;
     .end local v2           #i$:I
@@ -406,7 +372,6 @@
 
     goto :goto_0
 
-    .line 193
     .restart local v0       #arr$:[Landroid/hardware/display/WifiDisplay;
     .restart local v2       #i$:I
     .restart local v3       #len$:I
@@ -417,7 +382,6 @@
 
     invoke-virtual {p1, v4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 194
     iget-object v0, p0, Landroid/hardware/display/WifiDisplayStatus;->mRememberedDisplays:[Landroid/hardware/display/WifiDisplay;
 
     array-length v3, v0
@@ -429,16 +393,13 @@
 
     aget-object v1, v0, v2
 
-    .line 195
     .restart local v1       #display:Landroid/hardware/display/WifiDisplay;
     invoke-virtual {v1, p1, p2}, Landroid/hardware/display/WifiDisplay;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 194
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 197
     .end local v1           #display:Landroid/hardware/display/WifiDisplay;
     :cond_2
     return-void

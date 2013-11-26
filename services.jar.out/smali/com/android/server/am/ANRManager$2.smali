@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1008
     iput-object p1, p0, Lcom/android/server/am/ANRManager$2;->this$0:Lcom/android/server/am/ANRManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,18 +41,15 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1012
     const-string v3, "NBT_DUMP_PROCESS"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1013
     .local v2, processnametmp:Ljava/lang/String;
     if-eqz v2, :cond_3
 
-    .line 1015
     const/4 v3, 0x1
 
     new-array v1, v3, [Ljava/lang/String;
@@ -62,22 +58,18 @@
 
     aput-object v3, v1, v5
 
-    .line 1016
     .local v1, processname:[Ljava/lang/String;
     aput-object v2, v1, v5
 
-    .line 1017
     invoke-static {v1}, Landroid/os/Process;->getPidsForCommands([Ljava/lang/String;)[I
 
     move-result-object v0
 
-    .line 1018
     .local v0, pidtmp:[I
     array-length v3, v0
 
     if-lez v3, :cond_2
 
-    .line 1020
     const-string v3, "android.intent.action.ACTION_ADD_NBT_DUMP_PID"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -90,21 +82,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 1022
     iget-object v3, p0, Lcom/android/server/am/ANRManager$2;->this$0:Lcom/android/server/am/ANRManager;
 
     aget v4, v0, v5
 
     invoke-virtual {v3, v4}, Lcom/android/server/am/ANRManager;->checkNBTDumpPid(I)V
 
-    .line 1038
     .end local v0           #pidtmp:[I
     .end local v1           #processname:[Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 1024
     .restart local v0       #pidtmp:[I
     .restart local v1       #processname:[Ljava/lang/String;
     :cond_1
@@ -120,7 +109,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1026
     iget-object v3, p0, Lcom/android/server/am/ANRManager$2;->this$0:Lcom/android/server/am/ANRManager;
 
     aget v4, v0, v5
@@ -129,7 +117,6 @@
 
     goto :goto_0
 
-    .line 1031
     :cond_2
     const-string v3, "ANRManager"
 
@@ -155,7 +142,6 @@
 
     goto :goto_0
 
-    .line 1036
     .end local v0           #pidtmp:[I
     .end local v1           #processname:[Ljava/lang/String;
     :cond_3

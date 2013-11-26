@@ -8,14 +8,12 @@
     .locals 2
 
     .prologue
-    .line 46
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Landroid/net/wifi/p2p/nsd/WifiP2pServiceRequest;-><init>(ILjava/lang/String;)V
 
-    .line 47
     return-void
 .end method
 
@@ -24,12 +22,10 @@
     .parameter "query"
 
     .prologue
-    .line 38
     const/4 v0, 0x2
 
     invoke-direct {p0, v0, p1}, Landroid/net/wifi/p2p/nsd/WifiP2pServiceRequest;-><init>(ILjava/lang/String;)V
 
-    .line 39
     return-void
 .end method
 
@@ -37,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 55
     new-instance v0, Landroid/net/wifi/p2p/nsd/WifiP2pUpnpServiceRequest;
 
     invoke-direct {v0}, Landroid/net/wifi/p2p/nsd/WifiP2pUpnpServiceRequest;-><init>()V
@@ -50,25 +45,21 @@
     .parameter "st"
 
     .prologue
-    .line 72
     if-nez p0, :cond_0
 
-    .line 73
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v2, "search target cannot be null"
+    const-string v2, "search target cannot be null"
 
     invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    .line 75
     :cond_0
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 76
     .local v0, sb:Ljava/lang/StringBuffer;
     const-string v1, "%02x"
 
@@ -92,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 77
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
@@ -103,7 +93,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 78
     new-instance v1, Landroid/net/wifi/p2p/nsd/WifiP2pUpnpServiceRequest;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

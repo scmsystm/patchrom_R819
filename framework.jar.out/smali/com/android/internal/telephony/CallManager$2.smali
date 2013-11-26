@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 2777
     iput-object p1, p0, Lcom/android/internal/telephony/CallManager$2;->this$0:Lcom/android/internal/telephony/CallManager;
 
     iput p2, p0, Lcom/android/internal/telephony/CallManager$2;->val$value:I
@@ -48,7 +47,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 2779
     const-string v7, "/sys/devices/platform/Accdet_Driver/driver/accdet_call_state"
 
     new-array v8, v10, [Ljava/lang/Object;
@@ -57,7 +55,6 @@
 
     move-result-object v0
 
-    .line 2781
     .local v0, callStateFilePath:Ljava/lang/String;
     :try_start_0
     iget v7, p0, Lcom/android/internal/telephony/CallManager$2;->val$value:I
@@ -66,20 +63,16 @@
 
     move-result-object v5
 
-    .line 2782
     .local v5, state:Ljava/lang/String;
     new-instance v3, Ljava/io/FileWriter;
 
     invoke-direct {v3, v0}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
 
-    .line 2783
     .local v3, fw:Ljava/io/FileWriter;
     invoke-virtual {v3, v5}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 2784
     invoke-virtual {v3}, Ljava/io/FileWriter;->close()V
 
-    .line 2785
     const-string v7, "CallManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -104,7 +97,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2791
     .end local v3           #fw:Ljava/io/FileWriter;
     .end local v5           #state:Ljava/lang/String;
     :goto_0
@@ -116,7 +108,6 @@
 
     move-result-object v1
 
-    .line 2793
     .local v1, callStateFilePath2:Ljava/lang/String;
     :try_start_1
     iget v7, p0, Lcom/android/internal/telephony/CallManager$2;->val$value:I
@@ -125,20 +116,16 @@
 
     move-result-object v6
 
-    .line 2794
     .local v6, state2:Ljava/lang/String;
     new-instance v4, Ljava/io/FileWriter;
 
     invoke-direct {v4, v1}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
 
-    .line 2795
     .local v4, fw2:Ljava/io/FileWriter;
     invoke-virtual {v4, v6}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 2796
     invoke-virtual {v4}, Ljava/io/FileWriter;->close()V
 
-    .line 2797
     const-string v7, "CallManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -163,18 +150,15 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2801
     .end local v4           #fw2:Ljava/io/FileWriter;
     .end local v6           #state2:Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 2786
     .end local v1           #callStateFilePath2:Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 2787
     .local v2, e:Ljava/lang/Exception;
     const-string v7, "CallManager"
 
@@ -184,13 +168,11 @@
 
     goto :goto_0
 
-    .line 2798
     .end local v2           #e:Ljava/lang/Exception;
     .restart local v1       #callStateFilePath2:Ljava/lang/String;
     :catch_1
     move-exception v2
 
-    .line 2799
     .restart local v2       #e:Ljava/lang/Exception;
     const-string v7, "CallManager"
 

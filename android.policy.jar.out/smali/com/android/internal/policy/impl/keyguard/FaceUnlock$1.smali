@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 355
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/FaceUnlock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/FaceUnlock;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .parameter "iservice"
 
     .prologue
-    .line 360
     const-string v0, "FULLockscreen"
 
     const-string v1, "Connected to Face Unlock service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/FaceUnlock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/FaceUnlock;
 
     invoke-static {p2}, Lcom/android/internal/policy/IFaceLockInterface$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/policy/IFaceLockInterface;
@@ -60,7 +57,6 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/FaceUnlock;->mService:Lcom/android/internal/policy/IFaceLockInterface;
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/FaceUnlock;->access$002(Lcom/android/internal/policy/impl/keyguard/FaceUnlock;Lcom/android/internal/policy/IFaceLockInterface;)Lcom/android/internal/policy/IFaceLockInterface;
 
-    .line 362
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/FaceUnlock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/FaceUnlock;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/FaceUnlock;->mHandler:Landroid/os/Handler;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 363
     return-void
 .end method
 
@@ -81,14 +76,12 @@
     .parameter "className"
 
     .prologue
-    .line 369
     const-string v0, "FULLockscreen"
 
     const-string v1, "Unexpected disconnect from Face Unlock service"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/FaceUnlock$1;->this$0:Lcom/android/internal/policy/impl/keyguard/FaceUnlock;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/FaceUnlock;->mHandler:Landroid/os/Handler;
@@ -100,6 +93,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 371
     return-void
 .end method

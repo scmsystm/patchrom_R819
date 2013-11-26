@@ -52,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 132
     new-instance v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     const-string v1, "NONE"
@@ -61,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->NONE:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    .line 133
     new-instance v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     const-string v1, "DATAIN"
@@ -70,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAIN:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    .line 134
     new-instance v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     const-string v1, "DATAOUT"
@@ -79,7 +76,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    .line 135
     new-instance v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     const-string v1, "DATAINANDOUT"
@@ -88,7 +84,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DATAINANDOUT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    .line 136
     new-instance v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     const-string v1, "DORMANT"
@@ -97,7 +92,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->DORMANT:Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
-    .line 131
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/android/internal/telephony/DataConnectionTracker$Activity;
@@ -138,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 131
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -149,7 +142,6 @@
     .parameter "name"
 
     .prologue
-    .line 131
     const-class v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -165,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 131
     sget-object v0, Lcom/android/internal/telephony/DataConnectionTracker$Activity;->$VALUES:[Lcom/android/internal/telephony/DataConnectionTracker$Activity;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/DataConnectionTracker$Activity;->clone()Ljava/lang/Object;

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 593
     iput-object p1, p0, Landroid/media/MediaPlayer$WfdBroadcastReceiver;->this$0:Landroid/media/MediaPlayer;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 593
     invoke-direct {p0, p1}, Landroid/media/MediaPlayer$WfdBroadcastReceiver;-><init>(Landroid/media/MediaPlayer;)V
 
     return-void
@@ -56,7 +54,6 @@
 
     const/4 v1, 0x0
 
-    .line 596
     const-string v2, "connected"
 
     invoke-virtual {p2, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -65,7 +62,6 @@
 
     if-ne v2, v0, :cond_1
 
-    .line 597
     .local v0, connected:Z
     :goto_0
     const-string v1, "MediaPlayer"
@@ -90,16 +86,13 @@
 
     invoke-static {v1, v2}, Lcom/mediatek/xlog/Xlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 598
     iget-object v1, p0, Landroid/media/MediaPlayer$WfdBroadcastReceiver;->this$0:Landroid/media/MediaPlayer;
 
     #setter for: Landroid/media/MediaPlayer;->mWfdConnected:Z
     invoke-static {v1, v0}, Landroid/media/MediaPlayer;->access$002(Landroid/media/MediaPlayer;Z)Z
 
-    .line 600
     if-eqz v0, :cond_0
 
-    .line 601
     iget-object v1, p0, Landroid/media/MediaPlayer$WfdBroadcastReceiver;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mPrompt:Lcom/mediatek/common/drm/ISecureWarningPrompt;
@@ -109,7 +102,6 @@
 
     invoke-interface {v1}, Lcom/mediatek/common/drm/ISecureWarningPrompt;->show()V
 
-    .line 603
     :cond_0
     return-void
 
@@ -117,6 +109,5 @@
     :cond_1
     move v0, v1
 
-    .line 596
     goto :goto_0
 .end method

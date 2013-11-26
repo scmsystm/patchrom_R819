@@ -34,29 +34,24 @@
     .parameter "updateVersionPath"
 
     .prologue
-    .line 64
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 65
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateDir:Ljava/io/File;
 
-    .line 66
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1, p2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateContent:Ljava/io/File;
 
-    .line 67
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1, p3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     .local v0, updateMetadataDir:Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -64,7 +59,6 @@
 
     iput-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateVersion:Ljava/io/File;
 
-    .line 69
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .parameter "x1"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getCert(Landroid/content/ContentResolver;)Ljava/security/cert/X509Certificate;
 
     move-result-object v0
@@ -93,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getAltContent(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
@@ -116,7 +108,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct/range {p0 .. p5}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->verifySignature(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/security/cert/X509Certificate;)Z
 
     move-result v0
@@ -136,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->install(Ljava/lang/String;I)V
 
     return-void
@@ -153,7 +143,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getVersionFromIntent(Landroid/content/Intent;)I
 
     move-result v0
@@ -167,7 +156,6 @@
     .parameter "x1"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getRequiredHashFromIntent(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
@@ -181,7 +169,6 @@
     .parameter "x1"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getSignatureFromIntent(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v0
@@ -199,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getCurrentVersion()I
 
     move-result v0
@@ -212,7 +198,6 @@
     .parameter "x0"
 
     .prologue
-    .line 48
     invoke-direct {p0}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getCurrentContent()Ljava/lang/String;
 
     move-result-object v0
@@ -225,7 +210,6 @@
     .parameter "x0"
 
     .prologue
-    .line 48
     invoke-static {p0}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getCurrentHash(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -240,7 +224,6 @@
     .parameter "x2"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->verifyVersion(II)Z
 
     move-result v0
@@ -255,7 +238,6 @@
     .parameter "x2"
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->verifyPreviousHash(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
@@ -273,7 +255,6 @@
     .end annotation
 
     .prologue
-    .line 176
     invoke-direct {p0, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->getContentFromIntent(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v1
@@ -282,7 +263,6 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, contents:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -296,14 +276,12 @@
     .parameter "cr"
 
     .prologue
-    .line 121
     const-string v5, "config_update_certificate"
 
     invoke-static {p1, v5}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
     .local v0, cert:Ljava/lang/String;
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
@@ -316,13 +294,11 @@
 
     move-result-object v2
 
-    .line 125
     .local v2, derCert:[B
     new-instance v4, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v4, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 126
     .local v4, istream:Ljava/io/InputStream;
     const-string v5, "X.509"
 
@@ -330,7 +306,6 @@
 
     move-result-object v1
 
-    .line 127
     .local v1, cf:Ljava/security/cert/CertificateFactory;
     invoke-virtual {v1, v4}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
@@ -342,14 +317,12 @@
 
     return-object v5
 
-    .line 128
     .end local v1           #cf:Ljava/security/cert/CertificateFactory;
     .end local v2           #derCert:[B
     .end local v4           #istream:Ljava/io/InputStream;
     :catch_0
     move-exception v3
 
-    .line 129
     .local v3, e:Ljava/security/cert/CertificateException;
     new-instance v5, Ljava/lang/IllegalStateException;
 
@@ -365,18 +338,15 @@
     .parameter "i"
 
     .prologue
-    .line 134
     const-string v1, "CONTENT_PATH"
 
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 135
     .local v0, extraValue:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 136
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Missing required content path, ignoring."
@@ -385,7 +355,6 @@
 
     throw v1
 
-    .line 138
     :cond_0
     return-object v0
 .end method
@@ -394,7 +363,6 @@
     .locals 3
 
     .prologue
-    .line 182
     :try_start_0
     iget-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateContent:Ljava/io/File;
 
@@ -412,15 +380,12 @@
 
     move-result-object v1
 
-    .line 185
     :goto_0
     return-object v1
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 184
     .local v0, e:Ljava/io/IOException;
     const-string v1, "ConfigUpdateInstallReceiver"
 
@@ -428,7 +393,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 185
     const/4 v1, 0x0
 
     goto :goto_0
@@ -439,17 +403,13 @@
     .parameter "content"
 
     .prologue
-    .line 190
     if-nez p0, :cond_0
 
-    .line 191
     const-string v4, "0"
 
-    .line 197
     :goto_0
     return-object v4
 
-    .line 194
     :cond_0
     :try_start_0
     const-string v4, "SHA512"
@@ -458,19 +418,16 @@
 
     move-result-object v0
 
-    .line 195
     .local v0, dgst:Ljava/security/MessageDigest;
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
 
-    .line 196
     .local v2, encoded:[B
     invoke-virtual {v0, v2}, Ljava/security/MessageDigest;->digest([B)[B
 
     move-result-object v3
 
-    .line 197
     .local v3, fingerprint:[B
     const/4 v4, 0x0
 
@@ -482,14 +439,12 @@
 
     goto :goto_0
 
-    .line 198
     .end local v0           #dgst:Ljava/security/MessageDigest;
     .end local v2           #encoded:[B
     .end local v3           #fingerprint:[B
     :catch_0
     move-exception v1
 
-    .line 199
     .local v1, e:Ljava/security/NoSuchAlgorithmException;
     new-instance v4, Ljava/lang/AssertionError;
 
@@ -507,7 +462,6 @@
     .end annotation
 
     .prologue
-    .line 167
     :try_start_0
     iget-object v2, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateVersion:Ljava/io/File;
 
@@ -523,7 +477,6 @@
 
     move-result-object v1
 
-    .line 168
     .local v1, strVersion:Ljava/lang/String;
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -531,16 +484,13 @@
 
     move-result v2
 
-    .line 171
     .end local v1           #strVersion:Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 169
     :catch_0
     move-exception v0
 
-    .line 170
     .local v0, e:Ljava/io/IOException;
     const-string v2, "ConfigUpdateInstallReceiver"
 
@@ -548,7 +498,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     const/4 v2, 0x0
 
     goto :goto_0
@@ -559,18 +508,15 @@
     .parameter "i"
 
     .prologue
-    .line 150
     const-string v1, "REQUIRED_HASH"
 
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 151
     .local v0, extraValue:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 152
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Missing required previous hash, ignoring."
@@ -579,7 +525,6 @@
 
     throw v1
 
-    .line 154
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -593,18 +538,15 @@
     .parameter "i"
 
     .prologue
-    .line 158
     const-string v1, "SIGNATURE"
 
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 159
     .local v0, extraValue:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 160
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Missing required signature, ignoring."
@@ -613,7 +555,6 @@
 
     throw v1
 
-    .line 162
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -632,18 +573,15 @@
     .end annotation
 
     .prologue
-    .line 142
     const-string v1, "VERSION"
 
     invoke-virtual {p1, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 143
     .local v0, extraValue:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 144
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Missing required version number, ignoring."
@@ -652,7 +590,6 @@
 
     throw v1
 
-    .line 146
     :cond_0
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -676,14 +613,12 @@
     .end annotation
 
     .prologue
-    .line 259
     iget-object v0, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateDir:Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateContent:Ljava/io/File;
 
     invoke-direct {p0, v0, v1, p1}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->writeUpdate(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)V
 
-    .line 260
     iget-object v0, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateDir:Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->updateVersion:Ljava/io/File;
@@ -696,7 +631,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver;->writeUpdate(Ljava/io/File;Ljava/io/File;Ljava/lang/String;)V
 
-    .line 261
     return-void
 .end method
 
@@ -706,7 +640,6 @@
     .parameter "required"
 
     .prologue
-    .line 209
     const-string v0, "NONE"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -715,10 +648,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 210
     const/4 v0, 0x1
 
-    .line 213
     :goto_0
     return v0
 
@@ -744,25 +675,21 @@
     .end annotation
 
     .prologue
-    .line 218
     const-string v1, "SHA512withRSA"
 
     invoke-static {v1}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
 
     move-result-object v0
 
-    .line 219
     .local v0, signer:Ljava/security/Signature;
     invoke-virtual {v0, p5}, Ljava/security/Signature;->initVerify(Ljava/security/cert/Certificate;)V
 
-    .line 220
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/security/Signature;->update([B)V
 
-    .line 221
     int-to-long v1, p2
 
     invoke-static {v1, v2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -775,14 +702,12 @@
 
     invoke-virtual {v0, v1}, Ljava/security/Signature;->update([B)V
 
-    .line 222
     invoke-virtual {p3}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/security/Signature;->update([B)V
 
-    .line 223
     invoke-virtual {p4}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v1
@@ -806,7 +731,6 @@
     .parameter "alternative"
 
     .prologue
-    .line 204
     if-ge p1, p2, :cond_0
 
     const/4 v0, 0x1
@@ -832,14 +756,11 @@
     .end annotation
 
     .prologue
-    .line 227
     const/4 v0, 0x0
 
-    .line 228
     .local v0, out:Ljava/io/FileOutputStream;
     const/4 v3, 0x0
 
-    .line 231
     .local v3, tmp:Ljava/io/File;
     :try_start_0
     const-string v4, "journal"
@@ -850,23 +771,19 @@
 
     move-result-object v3
 
-    .line 233
     invoke-virtual {p2}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object v2
 
-    .line 234
     .local v2, parent:Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
-    .line 236
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 237
     new-instance v4, Ljava/io/IOException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -897,7 +814,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 251
     .end local v2           #parent:Ljava/io/File;
     :catchall_0
     move-exception v4
@@ -905,17 +821,13 @@
     :goto_0
     if-eqz v3, :cond_0
 
-    .line 252
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 254
     :cond_0
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 251
     throw v4
 
-    .line 240
     .restart local v2       #parent:Ljava/io/File;
     :cond_1
     const/4 v4, 0x1
@@ -925,14 +837,12 @@
     :try_start_1
     invoke-virtual {v3, v4, v5}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 242
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 243
     .end local v0           #out:Ljava/io/FileOutputStream;
     .local v1, out:Ljava/io/FileOutputStream;
     :try_start_2
@@ -942,21 +852,18 @@
 
     invoke-virtual {v1, v4}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 245
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v4
 
     invoke-virtual {v4}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 247
     invoke-virtual {v3, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 248
     new-instance v4, Ljava/io/IOException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -987,7 +894,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 251
     :catchall_1
     move-exception v4
 
@@ -1002,14 +908,11 @@
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 252
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 254
     :cond_3
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 256
     return-void
 .end method
 
@@ -1021,13 +924,11 @@
     .parameter "intent"
 
     .prologue
-    .line 73
     new-instance v0, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;-><init>(Lcom/android/server/updates/ConfigUpdateInstallReceiver;Landroid/content/Context;Landroid/content/Intent;)V
 
     invoke-virtual {v0}, Lcom/android/server/updates/ConfigUpdateInstallReceiver$1;->start()V
 
-    .line 117
     return-void
 .end method

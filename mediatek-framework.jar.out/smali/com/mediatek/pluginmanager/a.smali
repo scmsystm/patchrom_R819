@@ -21,17 +21,14 @@
 
     const/4 v2, 0x0
 
-    .line 441
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 443
     invoke-static {p1}, Lcom/mediatek/pluginmanager/a;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 444
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,7 +59,6 @@
 
     throw v0
 
-    .line 446
     :cond_0
     const-string v0, "\\."
 
@@ -70,12 +66,10 @@
 
     move-result-object v0
 
-    .line 447
     array-length v1, v0
 
     packed-switch v1, :pswitch_data_0
 
-    .line 465
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -118,7 +112,6 @@
 
     throw v1
 
-    .line 449
     :pswitch_0
     aget-object v0, v0, v2
 
@@ -128,17 +121,13 @@
 
     iput v0, p0, Lcom/mediatek/pluginmanager/a;->a:I
 
-    .line 450
     iput v2, p0, Lcom/mediatek/pluginmanager/a;->b:I
 
-    .line 451
     iput v2, p0, Lcom/mediatek/pluginmanager/a;->c:I
 
-    .line 469
     :goto_0
     return-void
 
-    .line 454
     :pswitch_1
     aget-object v1, v0, v2
 
@@ -148,7 +137,6 @@
 
     iput v1, p0, Lcom/mediatek/pluginmanager/a;->a:I
 
-    .line 455
     aget-object v0, v0, v3
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -157,12 +145,10 @@
 
     iput v0, p0, Lcom/mediatek/pluginmanager/a;->b:I
 
-    .line 456
     iput v2, p0, Lcom/mediatek/pluginmanager/a;->c:I
 
     goto :goto_0
 
-    .line 459
     :pswitch_2
     aget-object v1, v0, v2
 
@@ -172,7 +158,6 @@
 
     iput v1, p0, Lcom/mediatek/pluginmanager/a;->a:I
 
-    .line 460
     aget-object v1, v0, v3
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -181,7 +166,6 @@
 
     iput v1, p0, Lcom/mediatek/pluginmanager/a;->b:I
 
-    .line 461
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
@@ -194,7 +178,6 @@
 
     goto :goto_0
 
-    .line 447
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -210,7 +193,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 488
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
@@ -219,12 +201,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 496
     :cond_0
     :goto_0
     return v0
 
-    .line 491
     :cond_1
     const-string v1, "^(\\d+(\\.\\d+){0,2})$"
 
@@ -232,19 +212,16 @@
 
     move-result-object v1
 
-    .line 492
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 493
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 494
     const/4 v0, 0x1
 
     goto :goto_0
@@ -258,7 +235,6 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 500
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -367,33 +343,28 @@
 
     const/4 v1, 0x0
 
-    .line 472
     invoke-static {p1}, Lcom/mediatek/pluginmanager/a;->b(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 473
     const-string v2, "\\."
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 474
     array-length v3, v2
 
     if-lt v3, v0, :cond_1
 
-    .line 475
     aget-object v2, v2, v1
 
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 476
     const-string v3, "PluginManager.Version"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -428,16 +399,13 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 477
     iget v3, p0, Lcom/mediatek/pluginmanager/a;->a:I
 
     if-ne v2, v3, :cond_1
 
-    .line 484
     :goto_0
     return v0
 
-    .line 482
     :cond_0
     const-string v0, "PluginManager.Version"
 
@@ -470,6 +438,5 @@
     :cond_1
     move v0, v1
 
-    .line 484
     goto :goto_0
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 111
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 113
     new-instance v0, Lcom/android/internal/telephony/cat/BearerDesc;
 
     const/4 v1, 0x0
@@ -60,7 +58,6 @@
     .parameter "x0"
 
     .prologue
-    .line 111
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/BearerDesc$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/telephony/cat/BearerDesc;
 
     move-result-object v0
@@ -73,7 +70,6 @@
     .parameter "size"
 
     .prologue
-    .line 117
     new-array v0, p1, [Lcom/android/internal/telephony/cat/BearerDesc;
 
     return-object v0
@@ -84,7 +80,6 @@
     .parameter "x0"
 
     .prologue
-    .line 111
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/cat/BearerDesc$1;->newArray(I)[Lcom/android/internal/telephony/cat/BearerDesc;
 
     move-result-object v0

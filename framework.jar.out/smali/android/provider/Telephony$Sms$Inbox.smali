@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 401
     const-string v0, "content://sms/inbox"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -45,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 397
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -61,7 +59,6 @@
     .parameter "read"
 
     .prologue
-    .line 423
     sget-object v1, Landroid/provider/Telephony$Sms$Inbox;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v7, 0x0
@@ -96,7 +93,6 @@
     .parameter "simId"
 
     .prologue
-    .line 450
     sget-object v1, Landroid/provider/Telephony$Sms$Inbox;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v7, 0x0
@@ -135,7 +131,6 @@
     .parameter "read"
 
     .prologue
-    .line 431
     sget-object v1, Landroid/provider/Telephony$Sms$Inbox;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v8, 0x0
@@ -177,7 +172,6 @@
     .parameter "simId"
 
     .prologue
-    .line 457
     sget-object v1, Landroid/provider/Telephony$Sms$Inbox;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v8, 0x0

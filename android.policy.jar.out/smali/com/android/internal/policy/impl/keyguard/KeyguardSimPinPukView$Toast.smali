@@ -48,32 +48,26 @@
     .parameter "context"
 
     .prologue
-    .line 969
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 962
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mHandler:Landroid/os/Handler;
 
-    .line 965
     const/16 v0, 0x51
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mGravity:I
 
-    .line 970
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mContext:Landroid/content/Context;
 
-    .line 971
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mTN:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
-    .line 972
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -86,7 +80,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mY:I
 
-    .line 973
     return-void
 .end method
 
@@ -94,19 +87,15 @@
     .locals 1
 
     .prologue
-    .line 1016
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mService:Landroid/app/INotificationManager;
 
     if-eqz v0, :cond_0
 
-    .line 1017
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mService:Landroid/app/INotificationManager;
 
-    .line 1020
     :goto_0
     return-object v0
 
-    .line 1019
     :cond_0
     const-string v0, "notification"
 
@@ -120,7 +109,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mService:Landroid/app/INotificationManager;
 
-    .line 1020
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mService:Landroid/app/INotificationManager;
 
     goto :goto_0
@@ -132,12 +120,10 @@
     .parameter "text"
 
     .prologue
-    .line 976
     new-instance v1, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;
 
     invoke-direct {v1, p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;-><init>(Landroid/content/Context;)V
 
-    .line 978
     .local v1, result:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;
     const-string v4, "layout_inflater"
 
@@ -147,7 +133,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 979
     .local v0, inflate:Landroid/view/LayoutInflater;
     const v4, 0x10900de
 
@@ -157,7 +142,6 @@
 
     move-result-object v3
 
-    .line 980
     .local v3, v:Landroid/view/View;
     const v4, 0x102000b
 
@@ -167,14 +151,11 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 981
     .local v2, tv:Landroid/widget/TextView;
     invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 983
     iput-object v3, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mView:Landroid/view/View;
 
-    .line 985
     return-object v1
 .end method
 
@@ -184,12 +165,10 @@
     .locals 1
 
     .prologue
-    .line 1010
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mTN:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;->hide()V
 
-    .line 1011
     return-void
 .end method
 
@@ -197,12 +176,10 @@
     .locals 5
 
     .prologue
-    .line 992
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mView:Landroid/view/View;
 
     if-nez v3, :cond_0
 
-    .line 993
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string v4, "setView must have been called"
@@ -211,13 +188,11 @@
 
     throw v3
 
-    .line 995
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->getService()Landroid/app/INotificationManager;
 
     move-result-object v1
 
-    .line 996
     .local v1, service:Landroid/app/INotificationManager;
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mContext:Landroid/content/Context;
 
@@ -225,11 +200,9 @@
 
     move-result-object v0
 
-    .line 997
     .local v0, pkg:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast;->mTN:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
-    .line 999
     .local v2, tn:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
     const/4 v3, 0x0
 
@@ -238,11 +211,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1003
     :goto_0
     return-void
 
-    .line 1000
     :catch_0
     move-exception v3
 

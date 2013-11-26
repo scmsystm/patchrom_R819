@@ -24,21 +24,16 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 73
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mStorage:Ljava/lang/String;
 
-    .line 75
     iput v1, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mUsed:I
 
-    .line 76
     iput v1, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mTotal:I
 
-    .line 77
     return-void
 .end method
 
@@ -47,12 +42,10 @@
     .parameter "source"
 
     .prologue
-    .line 80
     new-instance v0, Lcom/android/internal/telephony/gsm/PBMemStorage;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/gsm/PBMemStorage;-><init>()V
 
-    .line 82
     .local v0, p:Lcom/android/internal/telephony/gsm/PBMemStorage;
     invoke-virtual {p0}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -60,21 +53,18 @@
 
     iput-object v1, v0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mStorage:Ljava/lang/String;
 
-    .line 83
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mUsed:I
 
-    .line 84
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mTotal:I
 
-    .line 85
     return-object v0
 .end method
 
@@ -84,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mStorage:Ljava/lang/String;
 
     return-object v0
@@ -94,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget v0, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mTotal:I
 
     return v0
@@ -104,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget v0, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mUsed:I
 
     return v0
@@ -115,10 +102,8 @@
     .parameter "sStorage"
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mStorage:Ljava/lang/String;
 
-    .line 97
     return-void
 .end method
 
@@ -127,10 +112,8 @@
     .parameter "iTotal"
 
     .prologue
-    .line 104
     iput p1, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mTotal:I
 
-    .line 105
     return-void
 .end method
 
@@ -139,10 +122,8 @@
     .parameter "iUsed"
 
     .prologue
-    .line 100
     iput p1, p0, Lcom/android/internal/telephony/gsm/PBMemStorage;->mUsed:I
 
-    .line 101
     return-void
 .end method
 
@@ -150,7 +131,6 @@
     .locals 2
 
     .prologue
-    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

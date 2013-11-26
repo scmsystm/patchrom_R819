@@ -31,12 +31,10 @@
     .parameter "context"
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/mediatek/webkit/ColorPickerPanelView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 57
     return-void
 .end method
 
@@ -46,12 +44,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/mediatek/webkit/ColorPickerPanelView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 61
     return-void
 .end method
 
@@ -62,28 +58,22 @@
     .parameter "defStyle"
 
     .prologue
-    .line 64
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 41
     const/high16 v0, 0x3f80
 
     iput v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDensity:F
 
-    .line 43
     const v0, -0x919192
 
     iput v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderColor:I
 
-    .line 44
     const/high16 v0, -0x100
 
     iput v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColor:I
 
-    .line 65
     invoke-direct {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->init()V
 
-    .line 66
     return-void
 .end method
 
@@ -91,21 +81,18 @@
     .locals 1
 
     .prologue
-    .line 69
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderPaint:Landroid/graphics/Paint;
 
-    .line 70
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorPaint:Landroid/graphics/Paint;
 
-    .line 71
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -122,7 +109,6 @@
 
     iput v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDensity:F
 
-    .line 72
     return-void
 .end method
 
@@ -132,34 +118,28 @@
     .prologue
     const/high16 v6, 0x3f80
 
-    .line 115
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
-    .line 117
     .local v1, dRect:Landroid/graphics/RectF;
     iget v5, v1, Landroid/graphics/RectF;->left:F
 
     add-float v2, v5, v6
 
-    .line 118
     .local v2, left:F
     iget v5, v1, Landroid/graphics/RectF;->top:F
 
     add-float v4, v5, v6
 
-    .line 119
     .local v4, top:F
     iget v5, v1, Landroid/graphics/RectF;->bottom:F
 
     sub-float v0, v5, v6
 
-    .line 120
     .local v0, bottom:F
     iget v5, v1, Landroid/graphics/RectF;->right:F
 
     sub-float v3, v5, v6
 
-    .line 122
     .local v3, right:F
     new-instance v5, Landroid/graphics/RectF;
 
@@ -167,7 +147,6 @@
 
     iput-object v5, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorRect:Landroid/graphics/RectF;
 
-    .line 124
     new-instance v5, Lcom/mediatek/webkit/AlphaPatternDrawable;
 
     const/high16 v6, 0x40a0
@@ -182,7 +161,6 @@
 
     iput-object v5, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mAlphaPattern:Lcom/mediatek/webkit/AlphaPatternDrawable;
 
-    .line 126
     iget-object v5, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mAlphaPattern:Lcom/mediatek/webkit/AlphaPatternDrawable;
 
     iget-object v6, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorRect:Landroid/graphics/RectF;
@@ -219,7 +197,6 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Lcom/mediatek/webkit/AlphaPatternDrawable;->setBounds(IIII)V
 
-    .line 132
     return-void
 .end method
 
@@ -229,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderColor:I
 
     return v0
@@ -239,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColor:I
 
     return v0
@@ -250,10 +225,8 @@
     .parameter "canvas"
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorRect:Landroid/graphics/RectF;
 
-    .line 80
     .local v0, rect:Landroid/graphics/RectF;
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderPaint:Landroid/graphics/Paint;
 
@@ -261,24 +234,20 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 81
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
     iget-object v2, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 84
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mAlphaPattern:Lcom/mediatek/webkit/AlphaPatternDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 85
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mAlphaPattern:Lcom/mediatek/webkit/AlphaPatternDrawable;
 
     invoke-virtual {v1, p1}, Lcom/mediatek/webkit/AlphaPatternDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 88
     :cond_0
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorPaint:Landroid/graphics/Paint;
 
@@ -286,12 +255,10 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 90
     iget-object v1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColorPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 91
     return-void
 .end method
 
@@ -301,22 +268,18 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 95
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 96
     .local v1, width:I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 98
     .local v0, height:I
     invoke-virtual {p0, v1, v0}, Lcom/mediatek/webkit/ColorPickerPanelView;->setMeasuredDimension(II)V
 
-    .line 99
     return-void
 .end method
 
@@ -328,17 +291,14 @@
     .parameter "oldh"
 
     .prologue
-    .line 103
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onSizeChanged(IIII)V
 
-    .line 105
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
-    .line 106
     iget-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->getPaddingLeft()I
@@ -349,7 +309,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 107
     iget-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->getPaddingRight()I
@@ -362,7 +321,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 108
     iget-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->getPaddingTop()I
@@ -373,7 +331,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 109
     iget-object v0, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mDrawingRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->getPaddingBottom()I
@@ -386,10 +343,8 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 111
     invoke-direct {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->setUpColorRect()V
 
-    .line 112
     return-void
 .end method
 
@@ -398,13 +353,10 @@
     .parameter "color"
 
     .prologue
-    .line 156
     iput p1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mBorderColor:I
 
-    .line 157
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->invalidate()V
 
-    .line 158
     return-void
 .end method
 
@@ -413,12 +365,9 @@
     .parameter "color"
 
     .prologue
-    .line 139
     iput p1, p0, Lcom/mediatek/webkit/ColorPickerPanelView;->mColor:I
 
-    .line 140
     invoke-virtual {p0}, Lcom/mediatek/webkit/ColorPickerPanelView;->invalidate()V
 
-    .line 141
     return-void
 .end method

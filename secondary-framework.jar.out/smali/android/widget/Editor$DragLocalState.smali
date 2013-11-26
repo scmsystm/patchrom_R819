@@ -30,18 +30,13 @@
     .parameter "end"
 
     .prologue
-    .line 1770
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1771
     iput-object p1, p0, Landroid/widget/Editor$DragLocalState;->sourceTextView:Landroid/widget/TextView;
 
-    .line 1772
     iput p2, p0, Landroid/widget/Editor$DragLocalState;->start:I
 
-    .line 1773
     iput p3, p0, Landroid/widget/Editor$DragLocalState;->end:I
 
-    .line 1774
     return-void
 .end method

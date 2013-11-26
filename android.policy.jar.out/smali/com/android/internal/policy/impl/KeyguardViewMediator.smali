@@ -147,60 +147,46 @@
 
     const/4 v9, 0x1
 
-    .line 358
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-boolean v9, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
 
-    .line 191
     iput-boolean v9, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
-    .line 198
     iput-boolean v10, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mNeedToReshowWhenReenabled:Z
 
-    .line 202
     iput-boolean v10, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
-    .line 205
     iput-boolean v10, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHidden:Z
 
-    .line 232
     sget-object v0, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPhoneState:Ljava/lang/String;
 
-    .line 243
     iput-boolean v10, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWaitingUntilKeyguardVisible:Z
 
-    .line 256
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardViewMediator$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator$1;-><init>(Lcom/android/internal/policy/impl/KeyguardViewMediator;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateCallback:Lcom/android/internal/policy/impl/KeyguardUpdateMonitorCallback;
 
-    .line 803
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator$2;-><init>(Lcom/android/internal/policy/impl/KeyguardViewMediator;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 975
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardViewMediator$3;
 
     invoke-direct {v0, p0, v9}, Lcom/android/internal/policy/impl/KeyguardViewMediator$3;-><init>(Lcom/android/internal/policy/impl/KeyguardViewMediator;Z)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
-    .line 359
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
-    .line 360
     iput-object p2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mCallback:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    .line 361
     const-string v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -211,7 +197,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
-    .line 362
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
     const v1, 0x1000001a
@@ -224,12 +209,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 364
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v10}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 365
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
     const-string v1, "show keyguard"
@@ -240,12 +223,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowKeyguardWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 366
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowKeyguardWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v10}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 368
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
     const-string v1, "keyguardWakeAndHandOff"
@@ -256,12 +237,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeAndHandOff:Landroid/os/PowerManager$WakeLock;
 
-    .line 369
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeAndHandOff:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0, v10}, Landroid/os/PowerManager$WakeLock;->setReferenceCounted(Z)V
 
-    .line 371
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
@@ -274,7 +253,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 373
     const-string v0, "alarm"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -285,14 +263,12 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 375
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
-    .line 377
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
@@ -301,7 +277,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 378
     new-instance v0, Lcom/android/internal/policy/impl/LockPatternKeyguardViewProperties;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -312,7 +287,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewProperties:Lcom/android/internal/policy/impl/KeyguardViewProperties;
 
-    .line 381
     const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -321,7 +295,6 @@
 
     check-cast v2, Landroid/view/WindowManager;
 
-    .line 382
     .local v2, wm:Landroid/view/WindowManager;
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardViewManager;
 
@@ -337,7 +310,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
-    .line 385
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.USER_PRESENT"
@@ -346,21 +318,18 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUserPresentIntent:Landroid/content/Intent;
 
-    .line 386
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUserPresentIntent:Landroid/content/Intent;
 
     const/high16 v1, 0x2800
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 389
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    .line 390
     .local v6, cr:Landroid/content/ContentResolver;
     const-string v0, "show_status_bar_lock"
 
@@ -375,7 +344,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowLockIcon:Z
 
-    .line 392
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
     invoke-virtual {v0}, Landroid/os/PowerManager;->isScreenOn()Z
@@ -384,25 +352,21 @@
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mScreenOn:Z
 
-    .line 394
     new-instance v0, Landroid/media/SoundPool;
 
     invoke-direct {v0, v9, v9, v10}, Landroid/media/SoundPool;-><init>(III)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
 
-    .line 395
     const-string v0, "lock_sound"
 
     invoke-static {v6, v0}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 396
     .local v8, soundPath:Ljava/lang/String;
     if-eqz v8, :cond_0
 
-    .line 397
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
 
     invoke-virtual {v0, v8, v9}, Landroid/media/SoundPool;->load(Ljava/lang/String;I)I
@@ -411,7 +375,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSoundId:I
 
-    .line 399
     :cond_0
     if-eqz v8, :cond_1
 
@@ -419,7 +382,6 @@
 
     if-nez v0, :cond_1
 
-    .line 402
     :cond_1
     const-string v0, "unlock_sound"
 
@@ -427,10 +389,8 @@
 
     move-result-object v8
 
-    .line 403
     if-eqz v8, :cond_2
 
-    .line 404
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
 
     invoke-virtual {v0, v8, v9}, Landroid/media/SoundPool;->load(Ljava/lang/String;I)I
@@ -439,7 +399,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUnlockSoundId:I
 
-    .line 406
     :cond_2
     if-eqz v8, :cond_3
 
@@ -447,7 +406,6 @@
 
     if-nez v0, :cond_3
 
-    .line 409
     :cond_3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -459,7 +417,6 @@
 
     move-result v7
 
-    .line 411
     .local v7, lockSoundDefaultAttenuation:I
     const-wide/high16 v0, 0x4024
 
@@ -479,7 +436,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSoundVolume:F
 
-    .line 412
     return-void
 
     .end local v7           #lockSoundDefaultAttenuation:I
@@ -487,7 +443,6 @@
     :cond_4
     move v0, v10
 
-    .line 390
     goto :goto_0
 .end method
 
@@ -496,7 +451,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
     return-object v0
@@ -507,7 +461,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->resetStateLocked()V
 
     return-void
@@ -519,7 +472,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
 
     return p1
@@ -531,7 +483,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleTimeout(I)V
 
     return-void
@@ -542,7 +493,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleShow()V
 
     return-void
@@ -553,7 +503,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleHide()V
 
     return-void
@@ -564,7 +513,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleReset()V
 
     return-void
@@ -575,7 +523,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleVerifyUnlock()V
 
     return-void
@@ -586,7 +533,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleNotifyScreenOff()V
 
     return-void
@@ -598,7 +544,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleNotifyScreenOn(Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;)V
 
     return-void
@@ -610,7 +555,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleWakeWhenReady(I)V
 
     return-void
@@ -622,7 +566,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleKeyguardDone(Z)V
 
     return-void
@@ -633,7 +576,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mScreenOn:Z
 
     return v0
@@ -644,7 +586,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleKeyguardDoneDrawing()V
 
     return-void
@@ -656,7 +597,6 @@
     .parameter "x1"
 
     .prologue
-    .line 94
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleSetHidden(Z)V
 
     return-void
@@ -667,7 +607,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
     return v0
@@ -678,7 +617,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguardLocked()V
 
     return-void
@@ -689,7 +627,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustStatusBarLocked()V
 
     return-void
@@ -700,7 +637,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUserPresentIntent:Landroid/content/Intent;
 
     return-object v0
@@ -711,7 +647,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -722,7 +657,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     return-object v0
@@ -733,7 +667,6 @@
     .parameter "x0"
 
     .prologue
-    .line 94
     iget v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mDelayedShowingSequence:I
 
     return v0
@@ -745,12 +678,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1176
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
     if-nez v2, :cond_0
 
-    .line 1177
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     const-string v3, "statusbar"
@@ -763,30 +694,25 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
-    .line 1180
     :cond_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
     if-nez v2, :cond_1
 
-    .line 1181
     const-string v2, "KeyguardViewMediator"
 
     const-string v3, "Could not get status bar manager"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1225
     :goto_0
     return-void
 
-    .line 1183
     :cond_1
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowLockIcon:Z
 
     if-eqz v2, :cond_2
 
-    .line 1185
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-eqz v2, :cond_4
@@ -797,12 +723,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 1186
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowingLockIcon:Z
 
     if-nez v2, :cond_2
 
-    .line 1187
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     const v3, 0x1040508
@@ -811,7 +735,6 @@
 
     move-result-object v0
 
-    .line 1189
     .local v0, contentDescription:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
@@ -821,36 +744,30 @@
 
     invoke-virtual {v2, v3, v4, v5, v0}, Landroid/app/StatusBarManager;->setIcon(Ljava/lang/String;IILjava/lang/String;)V
 
-    .line 1192
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowingLockIcon:Z
 
-    .line 1204
     .end local v0           #contentDescription:Ljava/lang/String;
     :cond_2
     :goto_1
     const/4 v1, 0x0
 
-    .line 1205
     .local v1, flags:I
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-eqz v2, :cond_3
 
-    .line 1207
     const/high16 v2, 0x100
 
     or-int/2addr v1, v2
 
-    .line 1208
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->isSecure()Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    .line 1212
     :goto_2
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->isSecure()Z
 
@@ -858,12 +775,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 1214
     const/high16 v2, 0x8
 
     or-int/2addr v1, v2
 
-    .line 1223
     :cond_3
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
@@ -871,26 +786,22 @@
 
     goto :goto_0
 
-    .line 1195
     .end local v1           #flags:I
     :cond_4
     iget-boolean v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowingLockIcon:Z
 
     if-eqz v2, :cond_2
 
-    .line 1196
     iget-object v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mStatusBarManager:Landroid/app/StatusBarManager;
 
     const-string v3, "secure"
 
     invoke-virtual {v2, v3}, Landroid/app/StatusBarManager;->removeIcon(Ljava/lang/String;)V
 
-    .line 1197
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowingLockIcon:Z
 
     goto :goto_1
 
-    .line 1210
     .restart local v1       #flags:I
     :cond_5
     const/high16 v2, 0x1
@@ -904,7 +815,6 @@
     .locals 2
 
     .prologue
-    .line 1166
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-eqz v1, :cond_0
@@ -916,7 +826,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 1169
     .local v0, enabled:Z
     :goto_0
     if-nez v0, :cond_1
@@ -925,14 +834,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 1171
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock()V
 
-    .line 1173
     :cond_1
     return-void
 
-    .line 1166
     .end local v0           #enabled:Z
     :cond_2
     const/4 v0, 0x0
@@ -948,17 +854,14 @@
 
     const/4 v5, 0x0
 
-    .line 669
     iget-boolean v6, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
     if-nez v6, :cond_1
 
-    .line 713
     :cond_0
     :goto_0
     return-void
 
-    .line 685
     :cond_1
     iget-object v6, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
@@ -968,7 +871,6 @@
 
     if-nez v6, :cond_0
 
-    .line 691
     const-string v6, "keyguard.no_require_sim"
 
     invoke-static {v6, v5}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -979,7 +881,6 @@
 
     move v2, v4
 
-    .line 693
     .local v2, requireSim:Z
     :goto_1
     iget-object v6, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -988,7 +889,6 @@
 
     move-result v1
 
-    .line 694
     .local v1, provisioned:Z
     iget-object v6, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -996,7 +896,6 @@
 
     move-result-object v3
 
-    .line 695
     .local v3, state:Lcom/android/internal/telephony/IccCardConstants$State;
     invoke-virtual {v3}, Lcom/android/internal/telephony/IccCardConstants$State;->isPinLocked()Z
 
@@ -1018,14 +917,12 @@
     :cond_3
     move v0, v4
 
-    .line 700
     .local v0, lockedOrMissing:Z
     :goto_2
     if-nez v0, :cond_4
 
     if-eqz v1, :cond_0
 
-    .line 706
     :cond_4
     iget-object v4, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
@@ -1037,7 +934,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 712
     :cond_5
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->showLocked()V
 
@@ -1050,7 +946,6 @@
     :cond_6
     move v2, v5
 
-    .line 691
     goto :goto_1
 
     .restart local v1       #provisioned:Z
@@ -1059,7 +954,6 @@
     :cond_7
     move v0, v5
 
-    .line 695
     goto :goto_2
 .end method
 
@@ -1067,10 +961,8 @@
     .locals 2
 
     .prologue
-    .line 1142
     monitor-enter p0
 
-    .line 1144
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeAndHandOff:Landroid/os/PowerManager$WakeLock;
 
@@ -1080,21 +972,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1145
     const-string v0, "KeyguardViewMediator"
 
     const-string v1, "attempt to hide the keyguard while waking, ignored"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1146
     monitor-exit p0
 
-    .line 1161
     :goto_0
     return-void
 
-    .line 1151
     :cond_0
     sget-object v0, Landroid/telephony/TelephonyManager;->EXTRA_STATE_IDLE:Ljava/lang/String;
 
@@ -1106,32 +994,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 1152
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
 
-    .line 1155
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewManager;->hide()V
 
-    .line 1156
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
-    .line 1157
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->updateActivityLockScreenState()V
 
-    .line 1158
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustUserActivityLocked()V
 
-    .line 1159
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustStatusBarLocked()V
 
-    .line 1160
     monitor-exit p0
 
     goto :goto_0
@@ -1151,13 +1032,10 @@
     .parameter "wakeup"
 
     .prologue
-    .line 1030
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->handleHide()V
 
-    .line 1031
     if-eqz p1, :cond_0
 
-    .line 1032
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mPM:Landroid/os/PowerManager;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -1166,13 +1044,11 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/PowerManager;->wakeUp(J)V
 
-    .line 1034
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1036
     new-instance v0, Landroid/os/UserHandle;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -1183,7 +1059,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 1037
     .local v0, currentUser:Landroid/os/UserHandle;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
@@ -1191,7 +1066,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1038
     return-void
 .end method
 
@@ -1199,38 +1073,30 @@
     .locals 2
 
     .prologue
-    .line 1045
     monitor-enter p0
 
-    .line 1047
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWaitingUntilKeyguardVisible:Z
 
     if-eqz v0, :cond_0
 
-    .line 1049
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWaitingUntilKeyguardVisible:Z
 
-    .line 1050
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1055
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1057
     :cond_0
     monitor-exit p0
 
-    .line 1058
     return-void
 
-    .line 1057
     :catchall_0
     move-exception v0
 
@@ -1245,22 +1111,17 @@
     .locals 1
 
     .prologue
-    .line 1285
     monitor-enter p0
 
-    .line 1287
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewManager;->onScreenTurnedOff()V
 
-    .line 1288
     monitor-exit p0
 
-    .line 1289
     return-void
 
-    .line 1288
     :catchall_0
     move-exception v0
 
@@ -1276,22 +1137,17 @@
     .parameter "showListener"
 
     .prologue
-    .line 1296
     monitor-enter p0
 
-    .line 1298
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/impl/KeyguardViewManager;->onScreenTurnedOn(Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;)V
 
-    .line 1299
     monitor-exit p0
 
-    .line 1300
     return-void
 
-    .line 1299
     :catchall_0
     move-exception v0
 
@@ -1306,22 +1162,17 @@
     .locals 1
 
     .prologue
-    .line 1261
     monitor-enter p0
 
-    .line 1263
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewManager;->reset()V
 
-    .line 1264
     monitor-exit p0
 
-    .line 1265
     return-void
 
-    .line 1264
     :catchall_0
     move-exception v0
 
@@ -1337,35 +1188,26 @@
     .parameter "isHidden"
 
     .prologue
-    .line 633
     monitor-enter p0
 
-    .line 634
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHidden:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 635
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHidden:Z
 
-    .line 636
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->updateActivityLockScreenState()V
 
-    .line 637
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustUserActivityLocked()V
 
-    .line 638
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustStatusBarLocked()V
 
-    .line 640
     :cond_0
     monitor-exit p0
 
-    .line 641
     return-void
 
-    .line 640
     :catchall_0
     move-exception v0
 
@@ -1380,10 +1222,8 @@
     .locals 2
 
     .prologue
-    .line 1116
     monitor-enter p0
 
-    .line 1118
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSystemReady:Z
 
@@ -1391,33 +1231,26 @@
 
     monitor-exit p0
 
-    .line 1135
     :goto_0
     return-void
 
-    .line 1120
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewManager;->show()V
 
-    .line 1121
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
-    .line 1122
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->updateActivityLockScreenState()V
 
-    .line 1123
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustUserActivityLocked()V
 
-    .line 1124
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->adjustStatusBarLocked()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1126
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1430,19 +1263,16 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1131
     :goto_1
     const/4 v0, 0x1
 
     :try_start_2
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->playSounds(Z)V
 
-    .line 1133
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowKeyguardWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1134
     monitor-exit p0
 
     goto :goto_0
@@ -1456,7 +1286,6 @@
 
     throw v0
 
-    .line 1127
     :catch_0
     move-exception v0
 
@@ -1468,28 +1297,22 @@
     .parameter "seq"
 
     .prologue
-    .line 1067
     monitor-enter p0
 
-    .line 1069
     :try_start_0
     iget v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakelockSequence:I
 
     if-ne p1, v0, :cond_0
 
-    .line 1070
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1072
     :cond_0
     monitor-exit p0
 
-    .line 1073
     return-void
 
-    .line 1072
     :catchall_0
     move-exception v0
 
@@ -1504,30 +1327,23 @@
     .locals 1
 
     .prologue
-    .line 1272
     monitor-enter p0
 
-    .line 1274
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/KeyguardViewManager;->verifyUnlock()V
 
-    .line 1275
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
-    .line 1276
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->updateActivityLockScreenState()V
 
-    .line 1277
     monitor-exit p0
 
-    .line 1278
     return-void
 
-    .line 1277
     :catchall_0
     move-exception v0
 
@@ -1543,10 +1359,8 @@
     .parameter "keyCode"
 
     .prologue
-    .line 1233
     monitor-enter p0
 
-    .line 1238
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/KeyguardViewManager;
 
@@ -1556,23 +1370,19 @@
 
     if-nez v0, :cond_0
 
-    .line 1240
     const-string v0, "KeyguardViewMediator"
 
     const-string v1, "mKeyguardViewManager.wakeWhenReadyTq did not poke wake lock, so poke it ourselves"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1241
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock()V
 
-    .line 1248
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeAndHandOff:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1250
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1581,21 +1391,17 @@
 
     if-nez v0, :cond_1
 
-    .line 1251
     const-string v0, "KeyguardViewMediator"
 
     const-string v1, "mWakeLock not held in mKeyguardViewManager.wakeWhenReadyTq"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1253
     :cond_1
     monitor-exit p0
 
-    .line 1254
     return-void
 
-    .line 1253
     :catchall_0
     move-exception v0
 
@@ -1610,7 +1416,6 @@
     .locals 3
 
     .prologue
-    .line 795
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x3
@@ -1619,13 +1424,11 @@
 
     move-result-object v0
 
-    .line 796
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 797
     return-void
 .end method
 
@@ -1635,10 +1438,8 @@
     .parameter "isDocked"
 
     .prologue
-    .line 856
     sparse-switch p1, :sswitch_data_0
 
-    .line 878
     const/4 p2, 0x1
 
     .end local p2
@@ -1646,14 +1447,12 @@
     :sswitch_0
     return p2
 
-    .line 876
     .restart local p2
     :sswitch_1
     const/4 p2, 0x0
 
     goto :goto_0
 
-    .line 856
     nop
 
     :sswitch_data_0
@@ -1680,14 +1479,12 @@
     .locals 2
 
     .prologue
-    .line 742
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 743
     return-void
 .end method
 
@@ -1696,7 +1493,6 @@
     .parameter "showListener"
 
     .prologue
-    .line 752
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x7
@@ -1705,13 +1501,11 @@
 
     move-result-object v0
 
-    .line 753
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 754
     return-void
 .end method
 
@@ -1724,20 +1518,16 @@
 
     const/4 v4, 0x1
 
-    .line 1078
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
 
     if-eqz v0, :cond_1
 
-    .line 1079
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
 
-    .line 1101
     :cond_0
     :goto_0
     return-void
 
-    .line 1083
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
@@ -1745,7 +1535,6 @@
 
     move-result-object v7
 
-    .line 1084
     .local v7, cr:Landroid/content/ContentResolver;
     const-string v0, "lockscreen_sounds_enabled"
 
@@ -1755,12 +1544,10 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 1085
     if-eqz p1, :cond_3
 
     iget v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSoundId:I
 
-    .line 1088
     .local v1, whichSound:I
     :goto_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
@@ -1769,12 +1556,10 @@
 
     invoke-virtual {v0, v2}, Landroid/media/SoundPool;->stop(I)V
 
-    .line 1090
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
 
     if-nez v0, :cond_2
 
-    .line 1091
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -1787,12 +1572,10 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 1092
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
 
     if-eqz v0, :cond_0
 
-    .line 1093
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->getMasterStreamType()I
@@ -1801,7 +1584,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mMasterStreamType:I
 
-    .line 1096
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mAudioManager:Landroid/media/AudioManager;
 
@@ -1813,7 +1595,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1098
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSounds:Landroid/media/SoundPool;
 
     iget v2, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockSoundVolume:F
@@ -1830,7 +1611,6 @@
 
     goto :goto_0
 
-    .line 1085
     .end local v1           #whichSound:I
     :cond_3
     iget v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUnlockSoundId:I
@@ -1842,7 +1622,6 @@
     .locals 3
 
     .prologue
-    .line 721
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x4
@@ -1851,13 +1630,11 @@
 
     move-result-object v0
 
-    .line 722
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 723
     return-void
 .end method
 
@@ -1865,12 +1642,10 @@
     .locals 3
 
     .prologue
-    .line 784
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowKeyguardWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 785
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x2
@@ -1879,13 +1654,11 @@
 
     move-result-object v0
 
-    .line 786
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 787
     return-void
 .end method
 
@@ -1893,7 +1666,6 @@
     .locals 2
 
     .prologue
-    .line 1105
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1914,17 +1686,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1109
     :goto_1
     return-void
 
-    .line 1105
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1107
     :catch_0
     move-exception v0
 
@@ -1935,14 +1704,12 @@
     .locals 2
 
     .prologue
-    .line 731
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 732
     return-void
 .end method
 
@@ -1951,12 +1718,10 @@
     .parameter "keyCode"
 
     .prologue
-    .line 771
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeAndHandOff:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 773
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/16 v2, 0x8
@@ -1967,13 +1732,11 @@
 
     move-result-object v0
 
-    .line 774
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 775
     return-void
 .end method
 
@@ -1985,25 +1748,21 @@
     .prologue
     const/16 v2, 0xd
 
-    .line 648
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 649
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 650
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 651
     return-void
 .end method
 
@@ -2011,7 +1770,6 @@
     .locals 1
 
     .prologue
-    .line 659
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-nez v0, :cond_0
@@ -2044,7 +1802,6 @@
     .locals 1
 
     .prologue
-    .line 800
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mKeyguardViewProperties:Lcom/android/internal/policy/impl/KeyguardViewProperties;
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardViewProperties;->isSecure()Z
@@ -2058,7 +1815,6 @@
     .locals 1
 
     .prologue
-    .line 609
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     return v0
@@ -2068,7 +1824,6 @@
     .locals 1
 
     .prologue
-    .line 616
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-eqz v0, :cond_0
@@ -2093,12 +1848,10 @@
     .parameter "authenticated"
 
     .prologue
-    .line 930
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->keyguardDone(ZZ)V
 
-    .line 931
     return-void
 .end method
 
@@ -2112,10 +1865,8 @@
 
     const/4 v2, 0x0
 
-    .line 934
     monitor-enter p0
 
-    .line 935
     const v3, 0x11170
 
     const/4 v4, 0x2
@@ -2123,7 +1874,6 @@
     :try_start_0
     invoke-static {v3, v4}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 937
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/16 v4, 0x9
@@ -2132,69 +1882,55 @@
 
     move-result-object v0
 
-    .line 938
     .local v0, msg:Landroid/os/Message;
     if-eqz p2, :cond_2
 
     :goto_0
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 939
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 941
     if-eqz p1, :cond_0
 
-    .line 942
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->clearFailedAttempts()V
 
-    .line 945
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     if-eqz v1, :cond_1
 
-    .line 946
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     invoke-interface {v1, p1}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
-    .line 947
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
-    .line 949
     if-eqz p1, :cond_1
 
-    .line 952
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
-    .line 953
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mNeedToReshowWhenReenabled:Z
 
-    .line 956
     :cond_1
     monitor-exit p0
 
-    .line 957
     return-void
 
     :cond_2
     move v1, v2
 
-    .line 938
     goto :goto_0
 
-    .line 956
     .end local v0           #msg:Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -2210,14 +1946,12 @@
     .locals 2
 
     .prologue
-    .line 965
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 966
     return-void
 .end method
 
@@ -2226,10 +1960,8 @@
     .parameter "why"
 
     .prologue
-    .line 433
     monitor-enter p0
 
-    .line 434
     const/16 v18, 0x0
 
     :try_start_0
@@ -2239,7 +1971,6 @@
 
     iput-boolean v0, v1, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mScreenOn:Z
 
-    .line 440
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -2267,7 +1998,6 @@
     :cond_0
     const/4 v10, 0x1
 
-    .line 443
     .local v10, lockImmediately:Z
     :goto_0
     move-object/from16 v0, p0
@@ -2278,7 +2008,6 @@
 
     if-eqz v18, :cond_3
 
-    .line 445
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
@@ -2289,7 +2018,6 @@
 
     invoke-interface/range {v18 .. v19}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
-    .line 446
     const/16 v18, 0x0
 
     move-object/from16 v0, v18
@@ -2298,7 +2026,6 @@
 
     iput-object v0, v1, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
-    .line 447
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
@@ -2307,25 +2034,20 @@
 
     if-nez v18, :cond_1
 
-    .line 448
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->hideLocked()V
 
-    .line 504
     :cond_1
     :goto_1
     monitor-exit p0
 
-    .line 505
     return-void
 
-    .line 440
     .end local v10           #lockImmediately:Z
     :cond_2
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 450
     .restart local v10       #lockImmediately:Z
     :cond_3
     move-object/from16 v0, p0
@@ -2336,15 +2058,12 @@
 
     if-eqz v18, :cond_4
 
-    .line 451
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->notifyScreenOffLocked()V
 
-    .line 452
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->resetStateLocked()V
 
     goto :goto_1
 
-    .line 504
     .end local v10           #lockImmediately:Z
     :catchall_0
     move-exception v18
@@ -2355,7 +2074,6 @@
 
     throw v18
 
-    .line 453
     .restart local v10       #lockImmediately:Z
     :cond_4
     const/16 v18, 0x3
@@ -2376,7 +2094,6 @@
 
     if-nez v10, :cond_8
 
-    .line 460
     :cond_5
     :try_start_1
     move-object/from16 v0, p0
@@ -2389,7 +2106,6 @@
 
     move-result-object v4
 
-    .line 463
     .local v4, cr:Landroid/content/ContentResolver;
     const-string v18, "screen_off_timeout"
 
@@ -2407,7 +2123,6 @@
 
     int-to-long v5, v0
 
-    .line 467
     .local v5, displayTimeout:J
     const-string v18, "lock_screen_lock_after_timeout"
 
@@ -2425,7 +2140,6 @@
 
     int-to-long v8, v0
 
-    .line 472
     .local v8, lockAfterTimeout:J
     move-object/from16 v0, p0
 
@@ -2443,7 +2157,6 @@
 
     move-result-wide v11
 
-    .line 476
     .local v11, policyTimeout:J
     const-wide/16 v18, 0x0
 
@@ -2451,7 +2164,6 @@
 
     if-lez v18, :cond_6
 
-    .line 478
     const-wide/16 v18, 0x0
 
     move-wide/from16 v0, v18
@@ -2460,7 +2172,6 @@
 
     move-result-wide v5
 
-    .line 479
     sub-long v18, v11, v5
 
     move-wide/from16 v0, v18
@@ -2469,7 +2180,6 @@
 
     move-result-wide v14
 
-    .line 484
     .local v14, timeout:J
     :goto_2
     const-wide/16 v18, 0x0
@@ -2478,7 +2188,6 @@
 
     if-gtz v18, :cond_7
 
-    .line 486
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -2487,12 +2196,10 @@
 
     iput-boolean v0, v1, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSuppressNextLockSound:Z
 
-    .line 487
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguardLocked()V
 
     goto/16 :goto_1
 
-    .line 481
     .end local v14           #timeout:J
     :cond_6
     move-wide v14, v8
@@ -2500,7 +2207,6 @@
     .restart local v14       #timeout:J
     goto :goto_2
 
-    .line 490
     :cond_7
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -2508,7 +2214,6 @@
 
     add-long v16, v18, v14
 
-    .line 491
     .local v16, when:J
     new-instance v7, Landroid/content/Intent;
 
@@ -2518,7 +2223,6 @@
 
     invoke-direct {v7, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 492
     .local v7, intent:Landroid/content/Intent;
     const-string v18, "seq"
 
@@ -2534,7 +2238,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 493
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mContext:Landroid/content/Context;
@@ -2555,7 +2258,6 @@
 
     move-result-object v13
 
-    .line 495
     .local v13, sender:Landroid/app/PendingIntent;
     move-object/from16 v0, p0
 
@@ -2575,7 +2277,6 @@
 
     goto/16 :goto_1
 
-    .line 499
     .end local v4           #cr:Landroid/content/ContentResolver;
     .end local v5           #displayTimeout:J
     .end local v7           #intent:Landroid/content/Intent;
@@ -2593,7 +2294,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 502
     invoke-direct/range {p0 .. p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguardLocked()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2606,36 +2306,28 @@
     .parameter "showListener"
 
     .prologue
-    .line 511
     monitor-enter p0
 
-    .line 512
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mScreenOn:Z
 
-    .line 513
     iget v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mDelayedShowingSequence:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mDelayedShowingSequence:I
 
-    .line 515
     if-eqz p1, :cond_0
 
-    .line 516
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->notifyScreenOnLocked(Lcom/android/internal/policy/impl/KeyguardViewManager$ShowListener;)V
 
-    .line 518
     :cond_0
     monitor-exit p0
 
-    .line 519
     return-void
 
-    .line 518
     :catchall_0
     move-exception v0
 
@@ -2650,32 +2342,25 @@
     .locals 2
 
     .prologue
-    .line 418
     monitor-enter p0
 
-    .line 420
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mSystemReady:Z
 
-    .line 421
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateCallback:Lcom/android/internal/policy/impl/KeyguardUpdateMonitorCallback;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->registerCallback(Lcom/android/internal/policy/impl/KeyguardUpdateMonitorCallback;)V
 
-    .line 422
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->doKeyguardLocked()V
 
-    .line 423
     monitor-exit p0
 
-    .line 424
     return-void
 
-    .line 423
     :catchall_0
     move-exception v0
 
@@ -2692,20 +2377,16 @@
     .parameter "isDocked"
 
     .prologue
-    .line 837
     invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->isWakeKeyWhenKeyguardShowing(IZ)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 841
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->wakeWhenReadyLocked(I)V
 
-    .line 842
     const/4 v0, 0x1
 
-    .line 844
     :goto_0
     return v0
 
@@ -2719,12 +2400,10 @@
     .locals 1
 
     .prologue
-    .line 899
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->wakeWhenReadyLocked(I)V
 
-    .line 900
     const/4 v0, 0x1
 
     return v0
@@ -2734,12 +2413,10 @@
     .locals 1
 
     .prologue
-    .line 909
     const/16 v0, 0x2710
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock(I)V
 
-    .line 910
     return-void
 .end method
 
@@ -2748,30 +2425,25 @@
     .parameter "holdMs"
 
     .prologue
-    .line 914
     monitor-enter p0
 
-    .line 916
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 917
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 918
     iget v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakelockSequence:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWakelockSequence:I
 
-    .line 919
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x1
@@ -2784,7 +2456,6 @@
 
     move-result-object v0
 
-    .line 920
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
@@ -2792,13 +2463,10 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 921
     monitor-exit p0
 
-    .line 922
     return-void
 
-    .line 921
     .end local v0           #msg:Landroid/os/Message;
     :catchall_0
     move-exception v1
@@ -2819,12 +2487,10 @@
 
     const/4 v2, 0x0
 
-    .line 624
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 625
     iget-object v3, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     if-eqz p1, :cond_0
@@ -2836,20 +2502,17 @@
 
     move-result-object v0
 
-    .line 626
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 627
     return-void
 
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     move v1, v2
 
-    .line 625
     goto :goto_0
 .end method
 
@@ -2858,42 +2521,33 @@
     .parameter "enabled"
 
     .prologue
-    .line 527
     monitor-enter p0
 
-    .line 531
     :try_start_0
     iput-boolean p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
-    .line 533
     if-nez p1, :cond_2
 
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mShowing:Z
 
     if-eqz v1, :cond_2
 
-    .line 534
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     if-eqz v1, :cond_0
 
-    .line 538
     monitor-exit p0
 
-    .line 577
     :goto_0
     return-void
 
-    .line 544
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mNeedToReshowWhenReenabled:Z
 
-    .line 545
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->hideLocked()V
 
-    .line 576
     :cond_1
     :goto_1
     monitor-exit p0
@@ -2909,7 +2563,6 @@
 
     throw v1
 
-    .line 546
     :cond_2
     if-eqz p1, :cond_1
 
@@ -2918,43 +2571,35 @@
 
     if-eqz v1, :cond_1
 
-    .line 550
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mNeedToReshowWhenReenabled:Z
 
-    .line 552
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     if-eqz v1, :cond_3
 
-    .line 554
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     const/4 v2, 0x0
 
     invoke-interface {v1, v2}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
-    .line 555
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
-    .line 556
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->resetStateLocked()V
 
     goto :goto_1
 
-    .line 558
     :cond_3
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->showLocked()V
 
-    .line 563
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWaitingUntilKeyguardVisible:Z
 
-    .line 564
     iget-object v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mHandler:Landroid/os/Handler;
 
     const/16 v2, 0xa
@@ -2963,7 +2608,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 566
     :goto_2
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mWaitingUntilKeyguardVisible:Z
     :try_end_1
@@ -2971,7 +2615,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 568
     :try_start_2
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_2
@@ -2980,11 +2623,9 @@
 
     goto :goto_2
 
-    .line 569
     :catch_0
     move-exception v0
 
-    .line 570
     .local v0, e:Ljava/lang/InterruptedException;
     :try_start_3
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -3003,10 +2644,8 @@
     .parameter "callback"
 
     .prologue
-    .line 583
     monitor-enter p0
 
-    .line 585
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -3016,39 +2655,32 @@
 
     if-nez v0, :cond_0
 
-    .line 588
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
-    .line 602
     :goto_0
     monitor-exit p0
 
-    .line 603
     return-void
 
-    .line 589
     :cond_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExternallyEnabled:Z
 
     if-eqz v0, :cond_1
 
-    .line 593
     const-string v0, "KeyguardViewMediator"
 
     const-string v1, "verifyUnlock called when not externally disabled"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 594
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
     goto :goto_0
 
-    .line 602
     :catchall_0
     move-exception v0
 
@@ -3058,25 +2690,21 @@
 
     throw v0
 
-    .line 595
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
     if-eqz v0, :cond_2
 
-    .line 597
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;->onKeyguardExitResult(Z)V
 
     goto :goto_0
 
-    .line 599
     :cond_2
     iput-object p1, p0, Lcom/android/internal/policy/impl/KeyguardViewMediator;->mExitSecureCallback:Landroid/view/WindowManagerPolicy$OnKeyguardExitResult;
 
-    .line 600
     invoke-direct {p0}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->verifyUnlockLocked()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

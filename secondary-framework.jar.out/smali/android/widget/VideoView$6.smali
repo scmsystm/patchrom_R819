@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 590
     iput-object p1, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,17 +48,14 @@
 
     const/4 v3, 0x0
 
-    .line 594
     iget-object v4, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iput p3, v4, Landroid/widget/VideoView;->mSurfaceWidth:I
 
-    .line 595
     iget-object v4, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iput p4, v4, Landroid/widget/VideoView;->mSurfaceHeight:I
 
-    .line 596
     iget-object v4, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iget v4, v4, Landroid/widget/VideoView;->mTargetState:I
@@ -70,7 +66,6 @@
 
     move v1, v2
 
-    .line 597
     .local v1, isValidState:Z
     :goto_0
     iget-object v4, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
@@ -87,7 +82,6 @@
 
     move v0, v2
 
-    .line 598
     .local v0, hasValidSize:Z
     :goto_1
     iget-object v2, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
@@ -100,14 +94,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 599
     iget-object v2, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iget v2, v2, Landroid/widget/VideoView;->mSeekWhenPrepared:I
 
     if-eqz v2, :cond_0
 
-    .line 600
     iget-object v2, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iget-object v3, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
@@ -116,13 +108,11 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/VideoView;->seekTo(I)V
 
-    .line 602
     :cond_0
     iget-object v2, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     invoke-virtual {v2}, Landroid/widget/VideoView;->start()V
 
-    .line 604
     :cond_1
     return-void
 
@@ -131,14 +121,12 @@
     :cond_2
     move v1, v3
 
-    .line 596
     goto :goto_0
 
     .restart local v1       #isValidState:Z
     :cond_3
     move v0, v3
 
-    .line 597
     goto :goto_1
 .end method
 
@@ -147,17 +135,14 @@
     .parameter "holder"
 
     .prologue
-    .line 608
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iput-object p1, v0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 609
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     invoke-virtual {v0}, Landroid/widget/VideoView;->openVideo()V
 
-    .line 610
     return-void
 .end method
 
@@ -166,14 +151,12 @@
     .parameter "holder"
 
     .prologue
-    .line 615
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Landroid/widget/VideoView;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 616
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
     iget-object v0, v0, Landroid/widget/VideoView;->mMediaController:Landroid/widget/MediaController;
@@ -186,7 +169,6 @@
 
     invoke-virtual {v0}, Landroid/widget/MediaController;->hide()V
 
-    .line 617
     :cond_0
     iget-object v0, p0, Landroid/widget/VideoView$6;->this$0:Landroid/widget/VideoView;
 
@@ -194,6 +176,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/VideoView;->release(Z)V
 
-    .line 618
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 356
     iput-object p1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 359
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 360
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.net.wifi.RSSI_CHANGED"
 
@@ -55,12 +52,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 361
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21003
 
-    const-string/jumbo v3, "newRssi"
+    const-string v3, "newRssi"
 
     const/16 v4, -0xc8
 
@@ -76,12 +72,10 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 375
     :cond_0
     :goto_0
     return-void
 
-    .line 363
     :cond_1
     const-string v1, "android.net.wifi.supplicant.STATE_CHANGE"
 
@@ -91,7 +85,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 364
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21004
@@ -100,7 +93,6 @@
 
     goto :goto_0
 
-    .line 365
     :cond_2
     const-string v1, "android.net.wifi.STATE_CHANGE"
 
@@ -110,7 +102,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 366
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21002
@@ -119,7 +110,6 @@
 
     goto :goto_0
 
-    .line 367
     :cond_3
     const-string v1, "android.intent.action.SCREEN_ON"
 
@@ -129,7 +119,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 368
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21008
@@ -138,7 +127,6 @@
 
     goto :goto_0
 
-    .line 369
     :cond_4
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -148,7 +136,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 370
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21009
@@ -157,7 +144,6 @@
 
     goto :goto_0
 
-    .line 371
     :cond_5
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
@@ -167,12 +153,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 372
     iget-object v1, p0, Landroid/net/wifi/WifiWatchdogStateMachine$1;->this$0:Landroid/net/wifi/WifiWatchdogStateMachine;
 
     const v2, 0x21005
 
-    const-string/jumbo v3, "wifi_state"
+    const-string v3, "wifi_state"
 
     const/4 v4, 0x4
 

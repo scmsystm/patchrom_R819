@@ -31,20 +31,16 @@
     .parameter "pin"
 
     .prologue
-    .line 512
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 513
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPin:Ljava/lang/String;
 
-    .line 514
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPuk:Ljava/lang/String;
 
-    .line 515
     return-void
 .end method
 
@@ -55,20 +51,16 @@
     .parameter "simId"
 
     .prologue
-    .line 516
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 517
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPin:Ljava/lang/String;
 
-    .line 518
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPuk:Ljava/lang/String;
 
-    .line 519
     return-void
 .end method
 
@@ -80,18 +72,14 @@
     .parameter "simId"
 
     .prologue
-    .line 521
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 522
     iput-object p3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPin:Ljava/lang/String;
 
-    .line 523
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mPuk:Ljava/lang/String;
 
-    .line 524
     return-void
 .end method
 
@@ -100,7 +88,6 @@
     .parameter "x0"
 
     .prologue
-    .line 507
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mResult:Z
 
     return v0
@@ -115,7 +102,6 @@
     .locals 6
 
     .prologue
-    .line 531
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
@@ -127,7 +113,6 @@
 
     move-result-object v1
 
-    .line 532
     .local v1, updateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     const-string v2, "KeyguardSimPinPukView"
 
@@ -155,14 +140,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardUtils;->isGemini()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 534
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
     iget v2, v2, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->mSimId:I
@@ -175,7 +158,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 535
     const-string v2, "phone"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -198,7 +180,6 @@
 
     iput-boolean v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->mResult:Z
 
-    .line 550
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
@@ -209,12 +190,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;->post(Ljava/lang/Runnable;)Z
 
-    .line 562
     .end local v1           #updateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     :goto_1
     return-void
 
-    .line 537
     .restart local v1       #updateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     :cond_1
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
@@ -229,7 +208,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 538
     const-string v2, "phone"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -258,12 +236,10 @@
 
     goto :goto_0
 
-    .line 555
     .end local v1           #updateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     :catch_0
     move-exception v0
 
-    .line 556
     .local v0, e:Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
@@ -275,7 +251,6 @@
 
     goto :goto_1
 
-    .line 542
     .end local v0           #e:Landroid/os/RemoteException;
     .restart local v1       #updateMonitor:Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitor;
     :cond_2
@@ -292,7 +267,6 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 543
     const-string v2, "phone"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -313,7 +287,6 @@
 
     goto :goto_0
 
-    .line 545
     :cond_3
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$CheckSimPinPuk;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView;
 
@@ -327,7 +300,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 546
     const-string v2, "phone"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->checkService(Ljava/lang/String;)Landroid/os/IBinder;

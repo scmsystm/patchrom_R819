@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     return-void
 .end method
 
@@ -24,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 94
     monitor-enter p0
 
     :try_start_0
@@ -53,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 27
     invoke-virtual {p0}, Landroid/webkit/WebHistoryItem;->clone()Landroid/webkit/WebHistoryItem;
 
     move-result-object v0
@@ -65,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 87
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -79,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 45
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -91,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 67
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -103,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 77
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V
@@ -115,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 57
     new-instance v0, Landroid/webkit/MustOverrideException;
 
     invoke-direct {v0}, Landroid/webkit/MustOverrideException;-><init>()V

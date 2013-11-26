@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 438
     iput-object p1, p0, Landroid/app/FragmentManagerImpl$1;->this$0:Landroid/app/FragmentManagerImpl;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 441
     iget-object v0, p0, Landroid/app/FragmentManagerImpl$1;->this$0:Landroid/app/FragmentManagerImpl;
 
     invoke-virtual {v0}, Landroid/app/FragmentManagerImpl;->execPendingActions()Z
 
-    .line 442
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 441
     iput-object p1, p0, Lcom/mediatek/epo/MtkEpoClientManagerService$2;->this$0:Lcom/mediatek/epo/MtkEpoClientManagerService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,19 +37,15 @@
     .locals 3
 
     .prologue
-    .line 443
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 444
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 445
     .local v0, looper:Landroid/os/Looper;
     if-eqz v0, :cond_0
 
-    .line 446
     iget-object v1, p0, Lcom/mediatek/epo/MtkEpoClientManagerService$2;->this$0:Lcom/mediatek/epo/MtkEpoClientManagerService;
 
     new-instance v2, Lcom/mediatek/epo/MtkEpoClientManagerService$2$1;
@@ -60,10 +55,8 @@
     #setter for: Lcom/mediatek/epo/MtkEpoClientManagerService;->mDownloadHandler:Landroid/os/Handler;
     invoke-static {v1, v2}, Lcom/mediatek/epo/MtkEpoClientManagerService;->access$302(Lcom/mediatek/epo/MtkEpoClientManagerService;Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 453
     :cond_0
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 454
     return-void
 .end method

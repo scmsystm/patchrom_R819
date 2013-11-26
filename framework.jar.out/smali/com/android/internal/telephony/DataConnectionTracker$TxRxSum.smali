@@ -28,15 +28,12 @@
     .parameter
 
     .prologue
-    .line 594
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 595
     invoke-virtual {p0}, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->reset()V
 
-    .line 596
     return-void
 .end method
 
@@ -47,18 +44,14 @@
     .parameter "rxPkts"
 
     .prologue
-    .line 598
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 599
     iput-wide p2, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->txPkts:J
 
-    .line 600
     iput-wide p4, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->rxPkts:J
 
-    .line 601
     return-void
 .end method
 
@@ -68,22 +61,18 @@
     .parameter "sum"
 
     .prologue
-    .line 603
     iput-object p1, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->this$0:Lcom/android/internal/telephony/DataConnectionTracker;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 604
     iget-wide v0, p2, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->txPkts:J
 
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->txPkts:J
 
-    .line 605
     iget-wide v0, p2, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->rxPkts:J
 
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->rxPkts:J
 
-    .line 606
     return-void
 .end method
 
@@ -95,13 +84,10 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 609
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->txPkts:J
 
-    .line 610
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->rxPkts:J
 
-    .line 611
     return-void
 .end method
 
@@ -109,12 +95,11 @@
     .locals 3
 
     .prologue
-    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "{txSum="
+    const-string v1, "{txSum="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -138,7 +123,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -155,20 +140,17 @@
     .locals 2
 
     .prologue
-    .line 618
     invoke-static {}, Landroid/net/TrafficStats;->getMobileTxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->txPkts:J
 
-    .line 619
     invoke-static {}, Landroid/net/TrafficStats;->getMobileRxPackets()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/telephony/DataConnectionTracker$TxRxSum;->rxPkts:J
 
-    .line 620
     return-void
 .end method

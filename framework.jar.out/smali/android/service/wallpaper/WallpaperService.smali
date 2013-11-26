@@ -72,24 +72,20 @@
     .locals 1
 
     .prologue
-    .line 73
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 114
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
-    .line 135
     new-instance v0, Landroid/service/wallpaper/WallpaperService$1;
 
     invoke-direct {v0, p0}, Landroid/service/wallpaper/WallpaperService$1;-><init>(Landroid/service/wallpaper/WallpaperService;)V
 
     iput-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1131
     return-void
 .end method
 
@@ -98,7 +94,6 @@
     .parameter "x0"
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     return-object v0
@@ -109,7 +104,6 @@
     .parameter "x0"
 
     .prologue
-    .line 73
     invoke-direct {p0}, Landroid/service/wallpaper/WallpaperService;->isTabletBuild()Z
 
     move-result v0
@@ -122,7 +116,6 @@
     .parameter "x0"
 
     .prologue
-    .line 73
     iget-object v0, p0, Landroid/service/wallpaper/WallpaperService;->mCallbackLooper:Landroid/os/Looper;
 
     return-object v0
@@ -132,10 +125,9 @@
     .locals 2
 
     .prologue
-    .line 128
-    const-string/jumbo v0, "tablet"
+    const-string v0, "tablet"
 
-    const-string/jumbo v1, "ro.build.characteristics"
+    const-string v1, "ro.build.characteristics"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
@@ -157,7 +149,6 @@
     .parameter "args"
 
     .prologue
-    .line 1206
     const-string v2, "State of wallpaper "
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -168,7 +159,6 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1207
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -181,7 +171,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1208
     iget-object v2, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -190,7 +179,6 @@
 
     check-cast v0, Landroid/service/wallpaper/WallpaperService$Engine;
 
-    .line 1209
     .local v0, engine:Landroid/service/wallpaper/WallpaperService$Engine;
     const-string v2, "  Engine "
 
@@ -202,17 +190,14 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1210
     const-string v2, "    "
 
     invoke-virtual {v0, v2, p1, p2, p3}, Landroid/service/wallpaper/WallpaperService$Engine;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 1207
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1212
     .end local v0           #engine:Landroid/service/wallpaper/WallpaperService$Engine;
     :cond_0
     return-void
@@ -223,7 +208,6 @@
     .parameter "intent"
 
     .prologue
-    .line 1180
     new-instance v0, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;
 
     invoke-direct {v0, p0, p0}, Landroid/service/wallpaper/WallpaperService$IWallpaperServiceWrapper;-><init>(Landroid/service/wallpaper/WallpaperService;Landroid/service/wallpaper/WallpaperService;)V
@@ -235,44 +219,36 @@
     .locals 2
 
     .prologue
-    .line 1151
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
-    .line 1152
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1153
     .local v0, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1154
     const-string v1, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1156
     invoke-direct {p0}, Landroid/service/wallpaper/WallpaperService;->isTabletBuild()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1157
     const-string v1, "android.intent.action.ACTION_PREBOOT_IPO"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1160
     :cond_0
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Landroid/service/wallpaper/WallpaperService;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1161
     return-void
 .end method
 
@@ -283,15 +259,12 @@
     .locals 2
 
     .prologue
-    .line 1165
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    .line 1166
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1}, Landroid/service/wallpaper/WallpaperService;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1167
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -304,7 +277,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1168
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -315,18 +287,15 @@
 
     invoke-virtual {v1}, Landroid/service/wallpaper/WallpaperService$Engine;->detach()V
 
-    .line 1167
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1170
     :cond_0
     iget-object v1, p0, Landroid/service/wallpaper/WallpaperService;->mActiveEngines:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1171
     return-void
 .end method
 
@@ -335,9 +304,7 @@
     .parameter "looper"
 
     .prologue
-    .line 1193
     iput-object p1, p0, Landroid/service/wallpaper/WallpaperService;->mCallbackLooper:Landroid/os/Looper;
 
-    .line 1194
     return-void
 .end method

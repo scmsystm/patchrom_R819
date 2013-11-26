@@ -40,20 +40,16 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/content/pm/PackageUserState;->installed:Z
 
-    .line 38
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/content/pm/PackageUserState;->enabled:I
 
-    .line 39
     return-void
 .end method
 
@@ -64,30 +60,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 41
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iget-boolean v0, p1, Landroid/content/pm/PackageUserState;->installed:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageUserState;->installed:Z
 
-    .line 43
     iget-boolean v0, p1, Landroid/content/pm/PackageUserState;->stopped:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageUserState;->stopped:Z
 
-    .line 44
     iget-boolean v0, p1, Landroid/content/pm/PackageUserState;->notLaunched:Z
 
     iput-boolean v0, p0, Landroid/content/pm/PackageUserState;->notLaunched:Z
 
-    .line 45
     iget v0, p1, Landroid/content/pm/PackageUserState;->enabled:I
 
     iput v0, p0, Landroid/content/pm/PackageUserState;->enabled:I
 
-    .line 46
     iget-object v0, p1, Landroid/content/pm/PackageUserState;->disabledComponents:Ljava/util/HashSet;
 
     if-eqz v0, :cond_1
@@ -101,7 +91,6 @@
     :goto_0
     iput-object v0, p0, Landroid/content/pm/PackageUserState;->disabledComponents:Ljava/util/HashSet;
 
-    .line 48
     iget-object v0, p1, Landroid/content/pm/PackageUserState;->enabledComponents:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
@@ -115,12 +104,10 @@
     :cond_0
     iput-object v1, p0, Landroid/content/pm/PackageUserState;->enabledComponents:Ljava/util/HashSet;
 
-    .line 50
     return-void
 
     :cond_1
     move-object v0, v1
 
-    .line 46
     goto :goto_0
 .end method

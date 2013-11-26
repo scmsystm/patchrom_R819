@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 3
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,12 +35,10 @@
 
     const/4 v5, 0x2
 
-    .line 27
     const/16 v4, 0x38
 
     new-array v0, v4, [B
 
-    .line 28
     .local v0, etwsPdu:[B
     iget v4, p0, Lcom/android/internal/telephony/EtwsNotification;->serialNumber:I
 
@@ -49,40 +46,33 @@
 
     move-result-object v2
 
-    .line 29
     .local v2, serialNumberBytes:[B
     invoke-static {v2, v5, v0, v7, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 30
     iget v4, p0, Lcom/android/internal/telephony/EtwsNotification;->messageId:I
 
     invoke-static {v4}, Lcom/android/internal/telephony/EtwsUtils;->intToBytes(I)[B
 
     move-result-object v1
 
-    .line 31
     .local v1, messageIdBytes:[B
     invoke-static {v1, v5, v0, v5, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 32
     iget v4, p0, Lcom/android/internal/telephony/EtwsNotification;->warningType:I
 
     invoke-static {v4}, Lcom/android/internal/telephony/EtwsUtils;->intToBytes(I)[B
 
     move-result-object v3
 
-    .line 33
     .local v3, warningTypeBytes:[B
     const/4 v4, 0x4
 
     invoke-static {v3, v5, v0, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 34
     iget-object v4, p0, Lcom/android/internal/telephony/EtwsNotification;->securityInfo:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 35
     iget-object v4, p0, Lcom/android/internal/telephony/EtwsNotification;->securityInfo:Ljava/lang/String;
 
     invoke-static {v4}, Lcom/android/internal/telephony/IccUtils;->hexStringToBytes(Ljava/lang/String;)[B
@@ -95,7 +85,6 @@
 
     invoke-static {v4, v7, v0, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 38
     :cond_0
     return-object v0
 .end method
@@ -105,7 +94,6 @@
     .parameter "other"
 
     .prologue
-    .line 16
     iget v0, p0, Lcom/android/internal/telephony/EtwsNotification;->warningType:I
 
     iget v1, p1, Lcom/android/internal/telephony/EtwsNotification;->warningType:I
@@ -134,10 +122,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     const/4 v0, 0x1
 
-    .line 23
     :goto_0
     return v0
 
@@ -151,7 +137,6 @@
     .locals 2
 
     .prologue
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

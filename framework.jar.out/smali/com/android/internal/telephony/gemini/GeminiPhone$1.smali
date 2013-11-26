@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 645
     iput-object p1, p0, Lcom/android/internal/telephony/gemini/GeminiPhone$1;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,7 +37,6 @@
     .locals 5
 
     .prologue
-    .line 648
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/GeminiPhone$1;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->d(Lcom/android/internal/telephony/gemini/GeminiPhone;)Landroid/content/Context;
@@ -67,6 +65,5 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lcom/android/internal/telephony/DefaultSIMSettings;->onAllIccidQueryComplete(Landroid/content/Context;Lcom/android/internal/telephony/Phone;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 649
     return-void
 .end method

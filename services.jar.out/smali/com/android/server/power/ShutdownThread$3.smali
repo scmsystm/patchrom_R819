@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 291
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,14 +33,12 @@
     .locals 2
 
     .prologue
-    .line 293
     const-string v0, "ShutdownThread"
 
     const-string v1, "setBacklightBrightness: Off"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Lcom/android/server/power/ShutdownThread;
 
     move-result-object v0
@@ -68,7 +65,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Lcom/android/server/power/ShutdownThread;
 
     move-result-object v0
@@ -80,7 +76,6 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 296
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Lcom/android/server/power/ShutdownThread;
 
     move-result-object v0
@@ -90,7 +85,6 @@
     #setter for: Lcom/android/server/power/ShutdownThread;->mScreenWakeLock:Landroid/os/PowerManager$WakeLock;
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->access$502(Lcom/android/server/power/ShutdownThread;Landroid/os/PowerManager$WakeLock;)Landroid/os/PowerManager$WakeLock;
 
-    .line 298
     :cond_0
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$400()Lcom/android/server/power/ShutdownThread;
 
@@ -105,6 +99,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/PowerManager;->setBacklightBrightnessOff(Z)V
 
-    .line 299
     return-void
 .end method

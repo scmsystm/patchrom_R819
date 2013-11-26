@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 594
     iput-object p1, p0, Landroid/media/videoeditor/MediaItem$1;->this$0:Landroid/media/videoeditor/MediaItem;
 
     iput-object p2, p0, Landroid/media/videoeditor/MediaItem$1;->val$bitmaps:[Landroid/graphics/Bitmap;
@@ -48,11 +47,9 @@
     .parameter "index"
 
     .prologue
-    .line 596
     iget-object v0, p0, Landroid/media/videoeditor/MediaItem$1;->val$bitmaps:[Landroid/graphics/Bitmap;
 
     aput-object p1, v0, p2
 
-    .line 597
     return-void
 .end method

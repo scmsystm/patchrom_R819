@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 348
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$SIMStatus;->values()[Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$SIMStatus;
 
     move-result-object v0

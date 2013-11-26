@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 143
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .parameter "in"
 
     .prologue
-    .line 145
     new-instance v0, Landroid/nfc/wps/ConfigurationToken;
 
     invoke-direct {v0, p1}, Landroid/nfc/wps/ConfigurationToken;-><init>(Landroid/os/Parcel;)V
@@ -48,7 +46,6 @@
     .parameter "x0"
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Landroid/nfc/wps/ConfigurationToken$1;->createFromParcel(Landroid/os/Parcel;)Landroid/nfc/wps/ConfigurationToken;
 
     move-result-object v0
@@ -61,7 +58,6 @@
     .parameter "size"
 
     .prologue
-    .line 149
     new-array v0, p1, [Landroid/nfc/wps/ConfigurationToken;
 
     return-object v0
@@ -72,7 +68,6 @@
     .parameter "x0"
 
     .prologue
-    .line 143
     invoke-virtual {p0, p1}, Landroid/nfc/wps/ConfigurationToken$1;->newArray(I)[Landroid/nfc/wps/ConfigurationToken;
 
     move-result-object v0

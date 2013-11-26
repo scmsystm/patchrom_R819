@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 166
     iput-object p1, p0, Landroid/server/search/SearchEngineManagerService$LocaleChangeReceiver;->this$0:Landroid/server/search/SearchEngineManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 166
     invoke-direct {p0, p1}, Landroid/server/search/SearchEngineManagerService$LocaleChangeReceiver;-><init>(Landroid/server/search/SearchEngineManagerService;)V
 
     return-void
@@ -52,12 +50,10 @@
     .parameter "intent"
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/server/search/SearchEngineManagerService$LocaleChangeReceiver;->this$0:Landroid/server/search/SearchEngineManagerService;
 
     #calls: Landroid/server/search/SearchEngineManagerService;->initSearchEngineInfos()V
     invoke-static {v0}, Landroid/server/search/SearchEngineManagerService;->access$200(Landroid/server/search/SearchEngineManagerService;)V
 
-    .line 170
     return-void
 .end method

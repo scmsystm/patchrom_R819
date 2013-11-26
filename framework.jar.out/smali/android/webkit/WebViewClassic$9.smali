@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 3750
     iput-object p1, p0, Landroid/webkit/WebViewClassic$9;->this$0:Landroid/webkit/WebViewClassic;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 3753
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3754
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -55,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3755
     iget-object v1, p0, Landroid/webkit/WebViewClassic$9;->this$0:Landroid/webkit/WebViewClassic;
 
     #getter for: Landroid/webkit/WebViewClassic;->mPageVisibile:Z
@@ -74,7 +70,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3756
     iget-object v1, p0, Landroid/webkit/WebViewClassic$9;->this$0:Landroid/webkit/WebViewClassic;
 
     const/4 v2, 0x4
@@ -92,7 +87,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/webkit/WebViewClassic;->updatePageVisibilityState(II)V
 
-    .line 3757
     iget-object v1, p0, Landroid/webkit/WebViewClassic$9;->this$0:Landroid/webkit/WebViewClassic;
 
     const/4 v2, 0x0
@@ -100,7 +94,6 @@
     #setter for: Landroid/webkit/WebViewClassic;->mUserPresent:Z
     invoke-static {v1, v2}, Landroid/webkit/WebViewClassic;->access$2402(Landroid/webkit/WebViewClassic;Z)Z
 
-    .line 3760
     :cond_0
     return-void
 .end method

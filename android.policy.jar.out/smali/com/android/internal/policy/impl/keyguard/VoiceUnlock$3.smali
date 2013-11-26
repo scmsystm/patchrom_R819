@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 171
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock$3;->this$0:Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .locals 2
 
     .prologue
-    .line 173
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock$3;->this$0:Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;->stop()Z
 
-    .line 174
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock$3;->this$0:Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;
 
     const/16 v1, 0x1388
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/VoiceUnlock;->pokeWakelock(I)V
 
-    .line 175
     return-void
 .end method

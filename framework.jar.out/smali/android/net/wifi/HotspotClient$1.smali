@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 66
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,7 +46,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 68
     new-instance v0, Landroid/net/wifi/HotspotClient;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -63,11 +61,9 @@
     :goto_0
     invoke-direct {v0, v2, v1}, Landroid/net/wifi/HotspotClient;-><init>(Ljava/lang/String;Z)V
 
-    .line 69
     .local v0, result:Landroid/net/wifi/HotspotClient;
     return-object v0
 
-    .line 68
     .end local v0           #result:Landroid/net/wifi/HotspotClient;
     :cond_0
     const/4 v1, 0x0
@@ -80,7 +76,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     invoke-virtual {p0, p1}, Landroid/net/wifi/HotspotClient$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/HotspotClient;
 
     move-result-object v0
@@ -93,7 +88,6 @@
     .parameter "size"
 
     .prologue
-    .line 73
     new-array v0, p1, [Landroid/net/wifi/HotspotClient;
 
     return-object v0
@@ -104,7 +98,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     invoke-virtual {p0, p1}, Landroid/net/wifi/HotspotClient$1;->newArray(I)[Landroid/net/wifi/HotspotClient;
 
     move-result-object v0

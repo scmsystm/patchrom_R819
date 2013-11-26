@@ -29,14 +29,11 @@
     .parameter "height"
 
     .prologue
-    .line 208
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 205
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/LockScreenLayout$LayoutParams;->customPosition:Z
 
-    .line 209
     return-void
 .end method

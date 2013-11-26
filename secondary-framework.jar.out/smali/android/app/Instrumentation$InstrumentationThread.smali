@@ -25,13 +25,10 @@
     .parameter "name"
 
     .prologue
-    .line 1653
     iput-object p1, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
-    .line 1654
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 1655
     return-void
 .end method
 
@@ -41,12 +38,10 @@
     .locals 5
 
     .prologue
-    .line 1657
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 1659
     .local v0, am:Landroid/app/IActivityManager;
     const/4 v2, -0x8
 
@@ -55,7 +50,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1664
     :goto_0
     iget-object v2, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
@@ -66,25 +60,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 1665
     iget-object v2, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
     invoke-virtual {v2}, Landroid/app/Instrumentation;->startPerformanceSnapshot()V
 
-    .line 1667
     :cond_0
     iget-object v2, p0, Landroid/app/Instrumentation$InstrumentationThread;->this$0:Landroid/app/Instrumentation;
 
     invoke-virtual {v2}, Landroid/app/Instrumentation;->onStart()V
 
-    .line 1668
     return-void
 
-    .line 1660
     :catch_0
     move-exception v1
 
-    .line 1661
     .local v1, e:Ljava/lang/RuntimeException;
     const-string v2, "Instrumentation"
 

@@ -29,7 +29,6 @@
     .parameter
 
     .prologue
-    .line 514
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "x1"
 
     .prologue
-    .line 514
     invoke-direct {p0, p1}, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;-><init>(Lcom/android/server/BluetoothManagerService;)V
 
     return-void
@@ -55,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 523
     iget-boolean v0, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->mGetNameAddressOnly:Z
 
     return v0
@@ -67,14 +64,12 @@
     .parameter "service"
 
     .prologue
-    .line 527
     const-string v1, "BluetoothManagerService"
 
     const-string v2, "BluetoothServiceConnection: connected to AdapterService"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     #getter for: Lcom/android/server/BluetoothManagerService;->mHandler:Lcom/android/server/BluetoothManagerService$BluetoothHandler;
@@ -88,11 +83,9 @@
 
     move-result-object v0
 
-    .line 529
     .local v0, msg:Landroid/os/Message;
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 530
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     #getter for: Lcom/android/server/BluetoothManagerService;->mHandler:Lcom/android/server/BluetoothManagerService$BluetoothHandler;
@@ -102,7 +95,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/BluetoothManagerService$BluetoothHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 531
     return-void
 .end method
 
@@ -111,14 +103,12 @@
     .parameter "className"
 
     .prologue
-    .line 535
     const-string v1, "BluetoothManagerService"
 
     const-string v2, "BluetoothServiceConnection: disconnected from AdapterService"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
     #getter for: Lcom/android/server/BluetoothManagerService;->mHandler:Lcom/android/server/BluetoothManagerService$BluetoothHandler;
@@ -132,7 +122,6 @@
 
     move-result-object v0
 
-    .line 537
     .local v0, msg:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -143,7 +132,6 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/BluetoothManagerService$BluetoothHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 538
     return-void
 .end method
 
@@ -152,9 +140,7 @@
     .parameter "getOnly"
 
     .prologue
-    .line 519
     iput-boolean p1, p0, Lcom/android/server/BluetoothManagerService$BluetoothServiceConnection;->mGetNameAddressOnly:Z
 
-    .line 520
     return-void
 .end method

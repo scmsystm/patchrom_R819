@@ -40,29 +40,23 @@
     .parameter "looper"
 
     .prologue
-    .line 195
     iput-object p1, p0, Landroid/location/LocationManager$ListenerTransport;->this$0:Landroid/location/LocationManager;
 
     invoke-direct {p0}, Landroid/location/ILocationListener$Stub;-><init>()V
 
-    .line 196
     iput-object p2, p0, Landroid/location/LocationManager$ListenerTransport;->mListener:Landroid/location/LocationListener;
 
-    .line 198
     if-nez p3, :cond_0
 
-    .line 199
     new-instance v0, Landroid/location/LocationManager$ListenerTransport$1;
 
     invoke-direct {v0, p0, p1}, Landroid/location/LocationManager$ListenerTransport$1;-><init>(Landroid/location/LocationManager$ListenerTransport;Landroid/location/LocationManager;)V
 
     iput-object v0, p0, Landroid/location/LocationManager$ListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
-    .line 213
     :goto_0
     return-void
 
-    .line 206
     :cond_0
     new-instance v0, Landroid/location/LocationManager$ListenerTransport$2;
 
@@ -78,12 +72,10 @@
     .parameter "msg"
 
     .prologue
-    .line 254
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 274
     :goto_0
     :try_start_0
     iget-object v6, p0, Landroid/location/LocationManager$ListenerTransport;->this$0:Landroid/location/LocationManager;
@@ -97,11 +89,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 278
     :goto_1
     return-void
 
-    .line 256
     :pswitch_0
     new-instance v3, Landroid/location/Location;
 
@@ -111,7 +101,6 @@
 
     invoke-direct {v3, v6}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
-    .line 257
     .local v3, location:Landroid/location/Location;
     iget-object v6, p0, Landroid/location/LocationManager$ListenerTransport;->mListener:Landroid/location/LocationListener;
 
@@ -119,30 +108,26 @@
 
     goto :goto_0
 
-    .line 260
     .end local v3           #location:Landroid/location/Location;
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/Bundle;
 
-    .line 261
     .local v0, b:Landroid/os/Bundle;
-    const-string/jumbo v6, "provider"
+    const-string v6, "provider"
 
     invoke-virtual {v0, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 262
     .local v4, provider:Ljava/lang/String;
-    const-string/jumbo v6, "status"
+    const-string v6, "status"
 
     invoke-virtual {v0, v6}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 263
     .local v5, status:I
     const-string v6, "extras"
 
@@ -150,7 +135,6 @@
 
     move-result-object v2
 
-    .line 264
     .local v2, extras:Landroid/os/Bundle;
     iget-object v6, p0, Landroid/location/LocationManager$ListenerTransport;->mListener:Landroid/location/LocationListener;
 
@@ -158,7 +142,6 @@
 
     goto :goto_0
 
-    .line 267
     .end local v0           #b:Landroid/os/Bundle;
     .end local v2           #extras:Landroid/os/Bundle;
     .end local v4           #provider:Ljava/lang/String;
@@ -174,7 +157,6 @@
 
     goto :goto_0
 
-    .line 270
     :pswitch_3
     iget-object v7, p0, Landroid/location/LocationManager$ListenerTransport;->mListener:Landroid/location/LocationListener;
 
@@ -186,11 +168,9 @@
 
     goto :goto_0
 
-    .line 275
     :catch_0
     move-exception v1
 
-    .line 276
     .local v1, e:Landroid/os/RemoteException;
     const-string v6, "LocationManager"
 
@@ -200,7 +180,6 @@
 
     goto :goto_1
 
-    .line 254
     nop
 
     :pswitch_data_0
@@ -218,7 +197,6 @@
     .parameter "x1"
 
     .prologue
-    .line 186
     invoke-direct {p0, p1}, Landroid/location/LocationManager$ListenerTransport;->_handleMessage(Landroid/os/Message;)V
 
     return-void
@@ -231,26 +209,21 @@
     .parameter "location"
 
     .prologue
-    .line 217
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 218
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 219
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 220
     iget-object v1, p0, Landroid/location/LocationManager$ListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 221
     return-void
 .end method
 
@@ -259,26 +232,21 @@
     .parameter "provider"
 
     .prologue
-    .line 247
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 248
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x4
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 249
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 250
     iget-object v1, p0, Landroid/location/LocationManager$ListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 251
     return-void
 .end method
 
@@ -287,26 +255,21 @@
     .parameter "provider"
 
     .prologue
-    .line 239
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 240
     .local v0, msg:Landroid/os/Message;
     const/4 v1, 0x3
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 241
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 242
     iget-object v1, p0, Landroid/location/LocationManager$ListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 243
     return-void
 .end method
 
@@ -317,50 +280,40 @@
     .parameter "extras"
 
     .prologue
-    .line 225
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 226
     .local v1, msg:Landroid/os/Message;
     const/4 v2, 0x2
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 227
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 228
     .local v0, b:Landroid/os/Bundle;
-    const-string/jumbo v2, "provider"
+    const-string v2, "provider"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
-    const-string/jumbo v2, "status"
+    const-string v2, "status"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 230
     if-eqz p3, :cond_0
 
-    .line 231
     const-string v2, "extras"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 233
     :cond_0
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 234
     iget-object v2, p0, Landroid/location/LocationManager$ListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 235
     return-void
 .end method

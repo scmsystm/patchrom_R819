@@ -19,26 +19,22 @@
     .locals 2
 
     .prologue
-    .line 45
     const-string v0, "TV/JAV"
 
     const-string v1, "com.mediatek.TvOut"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     const-string v0, "TV/JAV"
 
     const-string v1, "load libtvoutjni.so"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     const-string v0, "tvoutjni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 48
     return-void
 .end method
 
@@ -46,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

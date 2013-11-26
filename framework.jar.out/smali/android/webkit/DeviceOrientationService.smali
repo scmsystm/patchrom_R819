@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 30
     const-class v0, Landroid/webkit/DeviceOrientationService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -70,13 +69,10 @@
     .parameter "context"
 
     .prologue
-    .line 48
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Landroid/webkit/DeviceOrientationService;->mManager:Landroid/webkit/DeviceMotionAndOrientationManager;
 
-    .line 50
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -91,11 +87,9 @@
 
     throw v0
 
-    .line 51
     :cond_0
     iput-object p2, p0, Landroid/webkit/DeviceOrientationService;->mContext:Landroid/content/Context;
 
-    .line 52
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_1
@@ -110,7 +104,6 @@
 
     throw v0
 
-    .line 53
     :cond_1
     return-void
 .end method
@@ -120,7 +113,6 @@
     .parameter "x0"
 
     .prologue
-    .line 30
     iget-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
     return v0
@@ -131,7 +123,6 @@
     .parameter "x0"
 
     .prologue
-    .line 30
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mManager:Landroid/webkit/DeviceMotionAndOrientationManager;
 
     return-object v0
@@ -143,7 +134,6 @@
     .prologue
     const-wide v11, 0x4076800000000000L
 
-    .line 106
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
     if-eqz v0, :cond_0
@@ -152,18 +142,15 @@
 
     if-nez v0, :cond_1
 
-    .line 134
     :cond_0
     :goto_0
     return-void
 
-    .line 112
     :cond_1
     const/16 v0, 0x9
 
     new-array v7, v0, [F
 
-    .line 113
     .local v7, deviceRotationMatrix:[F
     const/4 v0, 0x0
 
@@ -177,16 +164,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
     const/4 v0, 0x3
 
     new-array v8, v0, [F
 
-    .line 125
     .local v8, rotationAngles:[F
     invoke-static {v7, v8}, Landroid/hardware/SensorManager;->getOrientation([F[F)[F
 
-    .line 126
     const/4 v0, 0x0
 
     aget v0, v8, v0
@@ -199,7 +183,6 @@
 
     move-result-wide v1
 
-    .line 127
     .local v1, alpha:D
     :goto_1
     const-wide/16 v9, 0x0
@@ -212,7 +195,6 @@
 
     goto :goto_1
 
-    .line 128
     :cond_2
     const/4 v0, 0x1
 
@@ -226,7 +208,6 @@
 
     move-result-wide v3
 
-    .line 129
     .local v3, beta:D
     :goto_2
     const-wide v9, -0x3f99800000000000L
@@ -239,7 +220,6 @@
 
     goto :goto_2
 
-    .line 130
     :cond_3
     const/4 v0, 0x2
 
@@ -251,7 +231,6 @@
 
     move-result-wide v5
 
-    .line 131
     .local v5, gamma:D
     :goto_3
     const-wide v9, -0x3fa9800000000000L
@@ -267,7 +246,6 @@
     :cond_4
     move-object v0, p0
 
-    .line 133
     invoke-direct/range {v0 .. v6}, Landroid/webkit/DeviceOrientationService;->maybeSendChange(DDD)V
 
     goto :goto_0
@@ -277,7 +255,6 @@
     .locals 2
 
     .prologue
-    .line 137
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -304,16 +281,14 @@
 
     throw v0
 
-    .line 138
     :cond_0
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-nez v0, :cond_1
 
-    .line 139
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "sensor"
+    const-string v1, "sensor"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -323,7 +298,6 @@
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 141
     :cond_1
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -339,7 +313,6 @@
     .prologue
     const-wide/high16 v2, 0x3ff0
 
-    .line 169
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -366,7 +339,6 @@
 
     throw v0
 
-    .line 170
     :cond_0
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mAlpha:Ljava/lang/Double;
 
@@ -428,7 +400,6 @@
 
     if-lez v0, :cond_2
 
-    .line 174
     :cond_1
     invoke-static {p1, p2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -436,21 +407,18 @@
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mAlpha:Ljava/lang/Double;
 
-    .line 175
     invoke-static {p3, p4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mBeta:Ljava/lang/Double;
 
-    .line 176
     invoke-static {p5, p6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGamma:Ljava/lang/Double;
 
-    .line 177
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mManager:Landroid/webkit/DeviceMotionAndOrientationManager;
 
     iget-object v1, p0, Landroid/webkit/DeviceOrientationService;->mAlpha:Ljava/lang/Double;
@@ -461,12 +429,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/webkit/DeviceMotionAndOrientationManager;->onOrientationChange(Ljava/lang/Double;Ljava/lang/Double;Ljava/lang/Double;)V
 
-    .line 179
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mHaveSentErrorEvent:Z
 
-    .line 181
     :cond_2
     return-void
 .end method
@@ -477,7 +443,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 145
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->getSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v1
@@ -488,7 +453,6 @@
 
     move-result-object v0
 
-    .line 146
     .local v0, sensors:Ljava/util/List;,"Ljava/util/List<Landroid/hardware/Sensor;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -498,7 +462,6 @@
 
     move v1, v2
 
-    .line 150
     :goto_0
     return v1
 
@@ -528,7 +491,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 155
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->getSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v1
@@ -539,7 +501,6 @@
 
     move-result-object v0
 
-    .line 156
     .local v0, sensors:Ljava/util/List;,"Ljava/util/List<Landroid/hardware/Sensor;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -549,7 +510,6 @@
 
     move v1, v2
 
-    .line 160
     :goto_0
     return v1
 
@@ -577,19 +537,16 @@
     .locals 1
 
     .prologue
-    .line 96
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 97
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mHandler:Landroid/os/Handler;
 
-    .line 99
     :cond_0
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->registerForAccelerometerSensor()Z
 
@@ -603,14 +560,11 @@
 
     if-nez v0, :cond_2
 
-    .line 100
     :cond_1
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->unregisterFromSensors()V
 
-    .line 101
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->sendErrorEvent()V
 
-    .line 103
     :cond_2
     return-void
 .end method
@@ -619,7 +573,6 @@
     .locals 2
 
     .prologue
-    .line 78
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -646,23 +599,19 @@
 
     throw v0
 
-    .line 80
     :cond_0
     iget-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mHaveSentErrorEvent:Z
 
     if-eqz v0, :cond_1
 
-    .line 93
     :goto_0
     return-void
 
-    .line 82
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mHaveSentErrorEvent:Z
 
-    .line 83
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Landroid/webkit/DeviceOrientationService$1;
@@ -678,14 +627,12 @@
     .locals 1
 
     .prologue
-    .line 165
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->getSensorManager()Landroid/hardware/SensorManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 166
     return-void
 .end method
 
@@ -697,7 +644,6 @@
     .parameter "accuracy"
 
     .prologue
-    .line 223
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -724,7 +670,6 @@
 
     throw v0
 
-    .line 224
     :cond_0
     return-void
 .end method
@@ -742,7 +687,6 @@
 
     const/4 v2, 0x0
 
-    .line 189
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -759,7 +703,6 @@
 
     throw v0
 
-    .line 190
     :cond_0
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
@@ -787,18 +730,15 @@
 
     throw v0
 
-    .line 193
     :cond_1
     iget-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
     if-nez v0, :cond_3
 
-    .line 219
     :cond_2
     :goto_0
     return-void
 
-    .line 197
     :cond_3
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
@@ -808,7 +748,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 217
     sget-boolean v0, Landroid/webkit/DeviceOrientationService;->$assertionsDisabled:Z
 
     if-nez v0, :cond_2
@@ -819,18 +758,15 @@
 
     throw v0
 
-    .line 199
     :pswitch_0
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
     if-nez v0, :cond_4
 
-    .line 200
     new-array v0, v5, [F
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
-    .line 202
     :cond_4
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
@@ -840,7 +776,6 @@
 
     aput v1, v0, v2
 
-    .line 203
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -849,7 +784,6 @@
 
     aput v1, v0, v3
 
-    .line 204
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mGravityVector:[F
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -858,23 +792,19 @@
 
     aput v1, v0, v4
 
-    .line 205
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->getOrientationUsingGetRotationMatrix()V
 
     goto :goto_0
 
-    .line 208
     :pswitch_1
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mMagneticFieldVector:[F
 
     if-nez v0, :cond_5
 
-    .line 209
     new-array v0, v5, [F
 
     iput-object v0, p0, Landroid/webkit/DeviceOrientationService;->mMagneticFieldVector:[F
 
-    .line 211
     :cond_5
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mMagneticFieldVector:[F
 
@@ -884,7 +814,6 @@
 
     aput v1, v0, v2
 
-    .line 212
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mMagneticFieldVector:[F
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -893,7 +822,6 @@
 
     aput v1, v0, v3
 
-    .line 213
     iget-object v0, p0, Landroid/webkit/DeviceOrientationService;->mMagneticFieldVector:[F
 
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
@@ -902,12 +830,10 @@
 
     aput v1, v0, v4
 
-    .line 214
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->getOrientationUsingGetRotationMatrix()V
 
     goto :goto_0
 
-    .line 197
     nop
 
     :pswitch_data_0
@@ -921,15 +847,12 @@
     .locals 1
 
     .prologue
-    .line 72
     iget-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 73
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->registerForSensors()V
 
-    .line 75
     :cond_0
     return-void
 .end method
@@ -938,15 +861,12 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
-    .line 57
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->registerForSensors()V
 
-    .line 58
     return-void
 .end method
 
@@ -954,15 +874,12 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
-    .line 62
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->unregisterFromSensors()V
 
-    .line 63
     return-void
 .end method
 
@@ -970,15 +887,12 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-boolean v0, p0, Landroid/webkit/DeviceOrientationService;->mIsRunning:Z
 
     if-eqz v0, :cond_0
 
-    .line 67
     invoke-direct {p0}, Landroid/webkit/DeviceOrientationService;->unregisterFromSensors()V
 
-    .line 69
     :cond_0
     return-void
 .end method

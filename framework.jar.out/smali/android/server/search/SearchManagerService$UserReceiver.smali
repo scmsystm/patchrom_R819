@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 129
     iput-object p1, p0, Landroid/server/search/SearchManagerService$UserReceiver;->this$0:Landroid/server/search/SearchManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 129
     invoke-direct {p0, p1}, Landroid/server/search/SearchManagerService$UserReceiver;-><init>(Landroid/server/search/SearchManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .parameter "intent"
 
     .prologue
-    .line 132
     iget-object v0, p0, Landroid/server/search/SearchManagerService$UserReceiver;->this$0:Landroid/server/search/SearchManagerService;
 
     const-string v1, "android.intent.extra.user_handle"
@@ -66,6 +63,5 @@
     #calls: Landroid/server/search/SearchManagerService;->onUserRemoved(I)V
     invoke-static {v0, v1}, Landroid/server/search/SearchManagerService;->access$400(Landroid/server/search/SearchManagerService;I)V
 
-    .line 133
     return-void
 .end method

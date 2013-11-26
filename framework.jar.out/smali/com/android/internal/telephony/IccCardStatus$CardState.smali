@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 61
     new-instance v0, Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     const-string v1, "CARDSTATE_ABSENT"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardStatus$CardState;->CARDSTATE_ABSENT:Lcom/android/internal/telephony/IccCardStatus$CardState;
 
-    .line 62
     new-instance v0, Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     const-string v1, "CARDSTATE_PRESENT"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardStatus$CardState;->CARDSTATE_PRESENT:Lcom/android/internal/telephony/IccCardStatus$CardState;
 
-    .line 63
     new-instance v0, Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     const-string v1, "CARDSTATE_ERROR"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/IccCardStatus$CardState;->CARDSTATE_ERROR:Lcom/android/internal/telephony/IccCardStatus$CardState;
 
-    .line 60
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/telephony/IccCardStatus$CardState;
@@ -104,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +110,6 @@
     .parameter "name"
 
     .prologue
-    .line 60
     const-class v0, Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -131,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 60
     sget-object v0, Lcom/android/internal/telephony/IccCardStatus$CardState;->$VALUES:[Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/IccCardStatus$CardState;->clone()Ljava/lang/Object;
@@ -149,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 69
     sget-object v0, Lcom/android/internal/telephony/IccCardStatus$CardState;->CARDSTATE_PRESENT:Lcom/android/internal/telephony/IccCardStatus$CardState;
 
     if-ne p0, v0, :cond_0

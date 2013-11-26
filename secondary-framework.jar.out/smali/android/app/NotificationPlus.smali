@@ -65,13 +65,10 @@
     .parameter "context"
 
     .prologue
-    .line 130
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
     iput-object p1, p0, Landroid/app/NotificationPlus;->mContext:Landroid/content/Context;
 
-    .line 132
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "mediatek.intent.action.FULL_SCRENN_NOTIFY"
@@ -80,14 +77,12 @@
 
     iput-object v0, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
-    .line 133
     iget-object v0, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     const-string v1, "android.intent.category.DEFAULT"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 134
     iget-object v0, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     const-string v1, "mediatek.intent.extra.package"
@@ -100,7 +95,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 135
     return-void
 .end method
 
@@ -110,14 +104,12 @@
     .locals 7
 
     .prologue
-    .line 146
     iget-object v4, p0, Landroid/app/NotificationPlus;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 148
     const-string v4, "NotificationPlus"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -142,20 +134,17 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     iget-object v4, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v4}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 152
     .local v0, extras:Landroid/os/Bundle;
     invoke-virtual {v0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
-    .line 153
     .local v3, keys:Ljava/util/Set;,"Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -175,7 +164,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 154
     .local v2, key:Ljava/lang/String;
     const-string v4, "NotificationPlus"
 
@@ -215,7 +203,6 @@
 
     goto :goto_0
 
-    .line 157
     .end local v2           #key:Ljava/lang/String;
     :cond_0
     return-void
@@ -226,14 +213,12 @@
     .parameter "id"
 
     .prologue
-    .line 142
     iget-object v0, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     const-string v1, "mediatek.intent.extra.id"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 143
     return-void
 .end method
 
@@ -242,13 +227,11 @@
     .parameter "type"
 
     .prologue
-    .line 138
     iget-object v0, p0, Landroid/app/NotificationPlus;->mIntent:Landroid/content/Intent;
 
     const-string v1, "mediatek.intent.extra.type"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 139
     return-void
 .end method

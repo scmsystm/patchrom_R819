@@ -41,10 +41,9 @@
     .locals 2
 
     .prologue
-    .line 7617
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "provider_status"
+    const-string v1, "provider_status"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -52,10 +51,9 @@
 
     sput-object v0, Landroid/provider/ContactsContract$ProviderStatus;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 7627
     sget-object v0, Landroid/provider/ContactsContract;->AUTHORITY_URI:Landroid/net/Uri;
 
-    const-string/jumbo v1, "provider_sim_contact_status"
+    const-string v1, "provider_sim_contact_status"
 
     invoke-static {v0, v1}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
@@ -70,9 +68,7 @@
     .locals 0
 
     .prologue
-    .line 7608
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7609
     return-void
 .end method

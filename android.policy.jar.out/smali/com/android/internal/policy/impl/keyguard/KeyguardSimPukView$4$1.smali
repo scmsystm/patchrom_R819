@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 257
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->val$success:Z
@@ -48,7 +47,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 259
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
@@ -72,13 +69,11 @@
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->hide()V
 
-    .line 262
     :cond_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->val$success:Z
 
     if-eqz v0, :cond_1
 
-    .line 263
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
@@ -87,7 +82,6 @@
 
     invoke-interface {v0, v2}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;->dismiss(Z)V
 
-    .line 268
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
@@ -98,10 +92,8 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;->mCheckInProgress:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;->access$802(Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;Z)Z
 
-    .line 269
     return-void
 
-    .line 265
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
@@ -114,7 +106,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$StateMachine;->reset()V
 
-    .line 266
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4$1;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$4;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;

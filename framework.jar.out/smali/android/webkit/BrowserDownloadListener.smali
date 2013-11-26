@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .parameter "contentLength"
 
     .prologue
-    .line 54
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -45,7 +43,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/webkit/BrowserDownloadListener;->onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 56
     return-void
 .end method
 

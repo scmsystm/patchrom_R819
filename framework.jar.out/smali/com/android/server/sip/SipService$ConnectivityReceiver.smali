@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1078
     iput-object p1, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1078
     invoke-direct {p0, p1}, Lcom/android/server/sip/SipService$ConnectivityReceiver;-><init>(Lcom/android/server/sip/SipService;)V
 
     return-void
@@ -52,17 +50,14 @@
     .parameter "intent"
 
     .prologue
-    .line 1081
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1082
     .local v0, bundle:Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 1083
-    const-string/jumbo v2, "networkInfo"
+    const-string v2, "networkInfo"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -70,7 +65,6 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 1087
     .local v1, info:Landroid/net/NetworkInfo;
     iget-object v2, p0, Lcom/android/server/sip/SipService$ConnectivityReceiver;->this$0:Lcom/android/server/sip/SipService;
 
@@ -85,7 +79,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/sip/SipService$MyExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1093
     .end local v1           #info:Landroid/net/NetworkInfo;
     :cond_0
     return-void

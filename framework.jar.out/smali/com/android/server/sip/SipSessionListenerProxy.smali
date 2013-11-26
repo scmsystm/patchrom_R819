@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/net/sip/ISipSessionListener$Stub;-><init>()V
 
     return-void
@@ -27,7 +26,6 @@
     .parameter "x0"
 
     .prologue
-    .line 26
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     return-object v0
@@ -40,7 +38,6 @@
     .parameter "x2"
 
     .prologue
-    .line 26
     invoke-direct {p0, p1, p2}, Lcom/android/server/sip/SipSessionListenerProxy;->handle(Ljava/lang/Throwable;Ljava/lang/String;)V
 
     return-void
@@ -52,28 +49,23 @@
     .parameter "message"
 
     .prologue
-    .line 223
     instance-of v0, p1, Landroid/os/DeadObjectException;
 
     if-eqz v0, :cond_1
 
-    .line 224
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
-    .line 230
     :cond_0
     :goto_0
     return-void
 
-    .line 227
     :cond_1
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-eqz v0, :cond_0
 
-    .line 228
     const-string v0, "SipSession"
 
     invoke-static {v0, p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
@@ -86,7 +78,6 @@
     .parameter "runnable"
 
     .prologue
-    .line 43
     new-instance v0, Ljava/lang/Thread;
 
     const-string v1, "SipSessionCallbackThread"
@@ -95,7 +86,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 44
     return-void
 .end method
 
@@ -105,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     return-object v0
@@ -116,16 +105,13 @@
     .parameter "session"
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 138
     :goto_0
     return-void
 
-    .line 129
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$7;
 
@@ -143,16 +129,13 @@
     .parameter "message"
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 152
     :goto_0
     return-void
 
-    .line 143
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$8;
 
@@ -168,16 +151,13 @@
     .parameter "session"
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 111
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$5;
 
@@ -194,16 +174,13 @@
     .parameter "sessionDescription"
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 98
     :goto_0
     return-void
 
-    .line 89
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$4;
 
@@ -220,16 +197,13 @@
     .parameter "sessionDescription"
 
     .prologue
-    .line 115
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 125
     :goto_0
     return-void
 
-    .line 116
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$6;
 
@@ -245,16 +219,13 @@
     .parameter "session"
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 57
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$1;
 
@@ -272,16 +243,13 @@
     .parameter "message"
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 166
     :goto_0
     return-void
 
-    .line 157
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$9;
 
@@ -297,16 +265,13 @@
     .parameter "session"
 
     .prologue
-    .line 169
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 179
     :goto_0
     return-void
 
-    .line 170
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$10;
 
@@ -323,16 +288,13 @@
     .parameter "duration"
 
     .prologue
-    .line 183
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 193
     :goto_0
     return-void
 
-    .line 184
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$11;
 
@@ -350,16 +312,13 @@
     .parameter "message"
 
     .prologue
-    .line 197
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 207
     :goto_0
     return-void
 
-    .line 198
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$12;
 
@@ -375,16 +334,13 @@
     .parameter "session"
 
     .prologue
-    .line 210
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 220
     :goto_0
     return-void
 
-    .line 211
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$13;
 
@@ -402,16 +358,13 @@
     .parameter "sessionDescription"
 
     .prologue
-    .line 61
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 71
     :goto_0
     return-void
 
-    .line 62
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$2;
 
@@ -427,16 +380,13 @@
     .parameter "session"
 
     .prologue
-    .line 74
     iget-object v0, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
     if-nez v0, :cond_0
 
-    .line 84
     :goto_0
     return-void
 
-    .line 75
     :cond_0
     new-instance v0, Lcom/android/server/sip/SipSessionListenerProxy$3;
 
@@ -452,9 +402,7 @@
     .parameter "listener"
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/android/server/sip/SipSessionListenerProxy;->mListener:Landroid/net/sip/ISipSessionListener;
 
-    .line 33
     return-void
 .end method

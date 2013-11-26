@@ -27,15 +27,12 @@
     .parameter "pin"
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$CheckSimPin;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 131
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$CheckSimPin;->mPin:Ljava/lang/String;
 
-    .line 132
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .locals 4
 
     .prologue
-    .line 139
     :try_start_0
     const-string v2, "phone"
 
@@ -66,7 +62,6 @@
 
     move-result v1
 
-    .line 141
     .local v1, result:Z
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$CheckSimPin;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
@@ -78,16 +73,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 153
     .end local v1           #result:Z
     :goto_0
     return-void
 
-    .line 146
     :catch_0
     move-exception v0
 
-    .line 147
     .local v0, e:Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$CheckSimPin;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 164
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,17 +44,14 @@
     .parameter "parcel"
 
     .prologue
-    .line 166
     invoke-static {}, Landroid/view/WindowInfo;->obtain()Landroid/view/WindowInfo;
 
     move-result-object v0
 
-    .line 167
     .local v0, info:Landroid/view/WindowInfo;
     #calls: Landroid/view/WindowInfo;->initFromParcel(Landroid/os/Parcel;)V
     invoke-static {v0, p1}, Landroid/view/WindowInfo;->access$000(Landroid/view/WindowInfo;Landroid/os/Parcel;)V
 
-    .line 168
     return-object v0
 .end method
 
@@ -64,7 +60,6 @@
     .parameter "x0"
 
     .prologue
-    .line 164
     invoke-virtual {p0, p1}, Landroid/view/WindowInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/view/WindowInfo;
 
     move-result-object v0
@@ -77,7 +72,6 @@
     .parameter "size"
 
     .prologue
-    .line 172
     new-array v0, p1, [Landroid/view/WindowInfo;
 
     return-object v0
@@ -88,7 +82,6 @@
     .parameter "x0"
 
     .prologue
-    .line 164
     invoke-virtual {p0, p1}, Landroid/view/WindowInfo$1;->newArray(I)[Landroid/view/WindowInfo;
 
     move-result-object v0

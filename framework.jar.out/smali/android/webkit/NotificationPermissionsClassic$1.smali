@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 48
     iput-object p1, p0, Landroid/webkit/NotificationPermissionsClassic$1;->this$0:Landroid/webkit/NotificationPermissionsClassic;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,23 +38,19 @@
     .parameter "msg"
 
     .prologue
-    .line 51
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 58
     :goto_0
     return-void
 
-    .line 53
     :pswitch_0
     #calls: Landroid/webkit/NotificationPermissionsClassic;->nativeClearAll()V
     invoke-static {}, Landroid/webkit/NotificationPermissionsClassic;->access$000()V
 
     goto :goto_0
 
-    .line 51
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

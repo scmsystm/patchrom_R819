@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 617
     invoke-static {}, Lcom/android/internal/telephony/CommandException$Error;->values()[Lcom/android/internal/telephony/CommandException$Error;
 
     move-result-object v0

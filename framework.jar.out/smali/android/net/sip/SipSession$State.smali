@@ -45,10 +45,8 @@
     .locals 0
 
     .prologue
-    .line 102
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     return-void
 .end method
 
@@ -57,76 +55,63 @@
     .parameter "state"
 
     .prologue
-    .line 76
     packed-switch p0, :pswitch_data_0
 
-    .line 98
     const-string v0, "NOT_DEFINED"
 
     :goto_0
     return-object v0
 
-    .line 78
     :pswitch_0
     const-string v0, "READY_TO_CALL"
 
     goto :goto_0
 
-    .line 80
     :pswitch_1
     const-string v0, "REGISTERING"
 
     goto :goto_0
 
-    .line 82
     :pswitch_2
     const-string v0, "DEREGISTERING"
 
     goto :goto_0
 
-    .line 84
     :pswitch_3
     const-string v0, "INCOMING_CALL"
 
     goto :goto_0
 
-    .line 86
     :pswitch_4
     const-string v0, "INCOMING_CALL_ANSWERING"
 
     goto :goto_0
 
-    .line 88
     :pswitch_5
     const-string v0, "OUTGOING_CALL"
 
     goto :goto_0
 
-    .line 90
     :pswitch_6
     const-string v0, "OUTGOING_CALL_RING_BACK"
 
     goto :goto_0
 
-    .line 92
     :pswitch_7
     const-string v0, "OUTGOING_CALL_CANCELING"
 
     goto :goto_0
 
-    .line 94
     :pswitch_8
     const-string v0, "IN_CALL"
 
     goto :goto_0
 
-    .line 96
     :pswitch_9
     const-string v0, "PINGING"
 
     goto :goto_0
 
-    .line 76
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

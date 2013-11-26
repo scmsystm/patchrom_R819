@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .prologue
     const/4 v0, 0x3
 
-    .line 52
     invoke-static {v0, v0, p0, p1}, Lcom/mediatek/xlog/Xlog;->println_native(IILjava/lang/String;Ljava/lang/String;)I
 
     move-result v0
@@ -39,7 +37,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,7 +76,6 @@
     .parameter "msg"
 
     .prologue
-    .line 76
     const/4 v0, 0x3
 
     const/4 v1, 0x6
@@ -98,7 +94,6 @@
     .parameter "tr"
 
     .prologue
-    .line 80
     const/4 v0, 0x3
 
     const/4 v1, 0x6
@@ -142,7 +137,6 @@
     .parameter "msg"
 
     .prologue
-    .line 60
     const/4 v0, 0x3
 
     const/4 v1, 0x4
@@ -161,7 +155,6 @@
     .parameter "tr"
 
     .prologue
-    .line 64
     const/4 v0, 0x3
 
     const/4 v1, 0x4
@@ -205,7 +198,6 @@
     .parameter "msg"
 
     .prologue
-    .line 44
     const/4 v0, 0x3
 
     const/4 v1, 0x2
@@ -224,7 +216,6 @@
     .parameter "tr"
 
     .prologue
-    .line 48
     const/4 v0, 0x3
 
     const/4 v1, 0x2
@@ -268,7 +259,6 @@
     .parameter "msg"
 
     .prologue
-    .line 68
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -287,7 +277,6 @@
     .parameter "tr"
 
     .prologue
-    .line 72
     const/4 v0, 0x3
 
     const/4 v1, 0x5

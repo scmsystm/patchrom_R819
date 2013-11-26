@@ -12,10 +12,8 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     return-void
 .end method
 
@@ -25,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 75
     monitor-enter p0
 
     :try_start_0
@@ -54,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 26
     invoke-virtual {p0}, Landroid/webkit/WebBackForwardList;->clone()Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 49
     monitor-enter p0
 
     :try_start_0
@@ -90,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 40
     monitor-enter p0
 
     :try_start_0
@@ -115,7 +109,6 @@
     .parameter "index"
 
     .prologue
-    .line 58
     monitor-enter p0
 
     :try_start_0
@@ -139,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 66
     monitor-enter p0
 
     :try_start_0

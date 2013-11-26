@@ -35,7 +35,6 @@
     .parameter "padding"
 
     .prologue
-    .line 406
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -44,7 +43,6 @@
 
     invoke-direct {p0, p1, p2, v0, v1}, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;-><init>(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
-    .line 407
     return-void
 .end method
 
@@ -55,12 +53,10 @@
     .parameter "layoutInsets"
 
     .prologue
-    .line 410
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;-><init>(Landroid/graphics/NinePatch;Landroid/graphics/Rect;Landroid/graphics/Rect;Z)V
 
-    .line 411
     return-void
 .end method
 
@@ -72,31 +68,24 @@
     .parameter "dither"
 
     .prologue
-    .line 413
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 403
     const/16 v0, 0xa0
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 414
     iput-object p1, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 415
     iput-object p2, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
-    .line 416
     invoke-static {p3}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mLayoutInsets:Landroid/graphics/Insets;
 
-    .line 417
     iput-boolean p4, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
-    .line 418
     return-void
 .end method
 
@@ -105,15 +94,12 @@
     .parameter "state"
 
     .prologue
-    .line 422
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 403
     const/16 v0, 0xa0
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 423
     new-instance v0, Landroid/graphics/NinePatch;
 
     iget-object v1, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
@@ -122,32 +108,26 @@
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 425
     iget-object v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mPadding:Landroid/graphics/Rect;
 
-    .line 426
     iget-object v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mLayoutInsets:Landroid/graphics/Insets;
 
     iput-object v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mLayoutInsets:Landroid/graphics/Insets;
 
-    .line 427
     iget-boolean v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
     iput-boolean v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mDither:Z
 
-    .line 428
     iget v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
-    .line 429
     iget v0, p1, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
     iput v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mTargetDensity:I
 
-    .line 430
     return-void
 .end method
 
@@ -157,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 444
     iget v0, p0, Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mChangingConfigurations:I
 
     return v0
@@ -169,7 +148,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 434
     new-instance v0, Landroid/graphics/drawable/NinePatchDrawable;
 
     invoke-direct {v0, p0, v1, v1}, Landroid/graphics/drawable/NinePatchDrawable;-><init>(Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;Landroid/content/res/Resources;Landroid/graphics/drawable/NinePatchDrawable$1;)V
@@ -182,7 +160,6 @@
     .parameter "res"
 
     .prologue
-    .line 439
     new-instance v0, Landroid/graphics/drawable/NinePatchDrawable;
 
     const/4 v1, 0x0

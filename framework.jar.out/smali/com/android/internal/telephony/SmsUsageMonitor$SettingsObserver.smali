@@ -28,21 +28,16 @@
     .parameter "enabled"
 
     .prologue
-    .line 238
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 239
     iput-object p2, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mContext:Landroid/content/Context;
 
-    .line 240
     iput-object p3, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 241
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->onChange(Z)V
 
-    .line 242
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 246
     iget-object v1, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mEnabled:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v2, p0, Lcom/android/internal/telephony/SmsUsageMonitor$SettingsObserver;->mContext:Landroid/content/Context;
@@ -64,7 +58,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "sms_short_code_confirmation"
+    const-string v3, "sms_short_code_confirmation"
 
     invoke-static {v2, v3, v0}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
@@ -75,10 +69,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 248
     return-void
 
-    .line 246
     :cond_0
     const/4 v0, 0x0
 

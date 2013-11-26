@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 311
     iput-object p1, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 311
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cdma/RuimRecords$EfPlLoaded;-><init>(Lcom/android/internal/telephony/cdma/RuimRecords;)V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 313
     const-string v0, "EF_PL"
 
     return-object v0
@@ -64,7 +61,6 @@
     .parameter "ar"
 
     .prologue
-    .line 317
     iget-object v1, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
@@ -76,7 +72,6 @@
     #setter for: Lcom/android/internal/telephony/cdma/RuimRecords;->mEFpl:[B
     invoke-static {v1, v0}, Lcom/android/internal/telephony/cdma/RuimRecords;->access$002(Lcom/android/internal/telephony/cdma/RuimRecords;[B)[B
 
-    .line 318
     iget-object v0, p0, Lcom/android/internal/telephony/cdma/RuimRecords$EfPlLoaded;->this$0:Lcom/android/internal/telephony/cdma/RuimRecords;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -110,6 +105,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/cdma/RuimRecords;->log(Ljava/lang/String;)V
 
-    .line 319
     return-void
 .end method

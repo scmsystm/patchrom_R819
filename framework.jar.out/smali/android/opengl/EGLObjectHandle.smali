@@ -13,13 +13,10 @@
     .parameter "handle"
 
     .prologue
-    .line 27
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
     iput p1, p0, Landroid/opengl/EGLObjectHandle;->mHandle:I
 
-    .line 29
     return-void
 .end method
 
@@ -29,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget v0, p0, Landroid/opengl/EGLObjectHandle;->mHandle:I
 
     return v0
@@ -39,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Landroid/opengl/EGLObjectHandle;->getHandle()I
 
     move-result v0

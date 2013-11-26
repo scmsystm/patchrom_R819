@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 93
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,12 +44,10 @@
     .parameter "in"
 
     .prologue
-    .line 96
     new-instance v0, Lcom/android/internal/net/VpnConfig;
 
     invoke-direct {v0}, Lcom/android/internal/net/VpnConfig;-><init>()V
 
-    .line 97
     .local v0, config:Lcom/android/internal/net/VpnConfig;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -58,56 +55,48 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->user:Ljava/lang/String;
 
-    .line 98
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->interfaze:Ljava/lang/String;
 
-    .line 99
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 100
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, v0, Lcom/android/internal/net/VpnConfig;->mtu:I
 
-    .line 101
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->addresses:Ljava/lang/String;
 
-    .line 102
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->routes:Ljava/lang/String;
 
-    .line 103
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->dnsServers:Ljava/util/List;
 
-    .line 104
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->searchDomains:Ljava/util/List;
 
-    .line 105
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
@@ -118,14 +107,12 @@
 
     iput-object v1, v0, Lcom/android/internal/net/VpnConfig;->configureIntent:Landroid/app/PendingIntent;
 
-    .line 106
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v1
 
     iput-wide v1, v0, Lcom/android/internal/net/VpnConfig;->startTime:J
 
-    .line 107
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -137,10 +124,8 @@
     :goto_0
     iput-boolean v1, v0, Lcom/android/internal/net/VpnConfig;->legacy:Z
 
-    .line 108
     return-object v0
 
-    .line 107
     :cond_0
     const/4 v1, 0x0
 
@@ -152,7 +137,6 @@
     .parameter "x0"
 
     .prologue
-    .line 93
     invoke-virtual {p0, p1}, Lcom/android/internal/net/VpnConfig$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/net/VpnConfig;
 
     move-result-object v0
@@ -165,7 +149,6 @@
     .parameter "size"
 
     .prologue
-    .line 113
     new-array v0, p1, [Lcom/android/internal/net/VpnConfig;
 
     return-object v0
@@ -176,7 +159,6 @@
     .parameter "x0"
 
     .prologue
-    .line 93
     invoke-virtual {p0, p1}, Lcom/android/internal/net/VpnConfig$1;->newArray(I)[Lcom/android/internal/net/VpnConfig;
 
     move-result-object v0

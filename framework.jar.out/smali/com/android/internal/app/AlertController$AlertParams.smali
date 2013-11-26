@@ -110,33 +110,24 @@
 
     const/4 v0, 0x0
 
-    .line 826
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 775
     iput v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconId:I
 
-    .line 777
     iput v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconAttrId:I
 
-    .line 799
     iput-boolean v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingSpecified:Z
 
-    .line 803
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
-    .line 811
     iput-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mRecycleOnMeasure:Z
 
-    .line 827
     iput-object p1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
 
-    .line 828
     iput-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCancelable:Z
 
-    .line 829
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -147,7 +138,6 @@
 
     iput-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 830
     return-void
 .end method
 
@@ -162,7 +152,6 @@
 
     const/4 v5, 0x0
 
-    .line 891
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mInflater:Landroid/view/LayoutInflater;
 
     #getter for: Lcom/android/internal/app/AlertController;->mListLayout:I
@@ -178,18 +167,15 @@
 
     check-cast v6, Lcom/android/internal/app/AlertController$RecycleListView;
 
-    .line 895
     .local v6, listView:Lcom/android/internal/app/AlertController$RecycleListView;
     iget-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIsMultiChoice:Z
 
     if-eqz v1, :cond_5
 
-    .line 896
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCursor:Landroid/database/Cursor;
 
     if-nez v1, :cond_4
 
-    .line 897
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams$1;
 
     iget-object v2, p0, Lcom/android/internal/app/AlertController$AlertParams;->mContext:Landroid/content/Context;
@@ -205,77 +191,63 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/internal/app/AlertController$AlertParams$1;-><init>(Lcom/android/internal/app/AlertController$AlertParams;Landroid/content/Context;II[Ljava/lang/CharSequence;Lcom/android/internal/app/AlertController$RecycleListView;)V
 
-    .line 950
     .local v0, adapter:Landroid/widget/ListAdapter;
     :goto_0
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnPrepareListViewListener:Lcom/android/internal/app/AlertController$AlertParams$OnPrepareListViewListener;
 
     if-eqz v1, :cond_0
 
-    .line 951
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnPrepareListViewListener:Lcom/android/internal/app/AlertController$AlertParams$OnPrepareListViewListener;
 
     invoke-interface {v1, v6}, Lcom/android/internal/app/AlertController$AlertParams$OnPrepareListViewListener;->onPrepareListView(Landroid/widget/ListView;)V
 
-    .line 957
     :cond_0
     #setter for: Lcom/android/internal/app/AlertController;->mAdapter:Landroid/widget/ListAdapter;
     invoke-static {p1, v0}, Lcom/android/internal/app/AlertController;->access$1202(Lcom/android/internal/app/AlertController;Landroid/widget/ListAdapter;)Landroid/widget/ListAdapter;
 
-    .line 958
     iget v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCheckedItem:I
 
     #setter for: Lcom/android/internal/app/AlertController;->mCheckedItem:I
     invoke-static {p1, v1}, Lcom/android/internal/app/AlertController;->access$1302(Lcom/android/internal/app/AlertController;I)I
 
-    .line 960
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnClickListener:Landroid/content/DialogInterface$OnClickListener;
 
     if-eqz v1, :cond_9
 
-    .line 961
     new-instance v1, Lcom/android/internal/app/AlertController$AlertParams$3;
 
     invoke-direct {v1, p0, p1}, Lcom/android/internal/app/AlertController$AlertParams$3;-><init>(Lcom/android/internal/app/AlertController$AlertParams;Lcom/android/internal/app/AlertController;)V
 
     invoke-virtual {v6, v1}, Lcom/android/internal/app/AlertController$RecycleListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 982
     :cond_1
     :goto_1
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     if-eqz v1, :cond_2
 
-    .line 983
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnItemSelectedListener:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     invoke-virtual {v6, v1}, Lcom/android/internal/app/AlertController$RecycleListView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 986
     :cond_2
     iget-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
 
     if-eqz v1, :cond_a
 
-    .line 987
     invoke-virtual {v6, v9}, Lcom/android/internal/app/AlertController$RecycleListView;->setChoiceMode(I)V
 
-    .line 991
     :cond_3
     :goto_2
     iget-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mRecycleOnMeasure:Z
 
     iput-boolean v1, v6, Lcom/android/internal/app/AlertController$RecycleListView;->mRecycleOnMeasure:Z
 
-    .line 992
     #setter for: Lcom/android/internal/app/AlertController;->mListView:Landroid/widget/ListView;
     invoke-static {p1, v6}, Lcom/android/internal/app/AlertController;->access$1402(Lcom/android/internal/app/AlertController;Landroid/widget/ListView;)Landroid/widget/ListView;
 
-    .line 993
     return-void
 
-    .line 912
     .end local v0           #adapter:Landroid/widget/ListAdapter;
     :cond_4
     new-instance v0, Lcom/android/internal/app/AlertController$AlertParams$2;
@@ -295,7 +267,6 @@
     .restart local v0       #adapter:Landroid/widget/ListAdapter;
     goto :goto_0
 
-    .line 939
     .end local v0           #adapter:Landroid/widget/ListAdapter;
     :cond_5
     iget-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIsSingleChoice:Z
@@ -307,14 +278,12 @@
 
     move-result v2
 
-    .line 941
     .local v2, layout:I
     :goto_3
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCursor:Landroid/database/Cursor;
 
     if-nez v1, :cond_8
 
-    .line 942
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mAdapter:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_7
@@ -325,7 +294,6 @@
     :goto_4
     goto :goto_0
 
-    .line 939
     .end local v0           #adapter:Landroid/widget/ListAdapter;
     .end local v2           #layout:I
     :cond_6
@@ -336,7 +304,6 @@
 
     goto :goto_3
 
-    .line 942
     .restart local v2       #layout:I
     :cond_7
     new-instance v0, Landroid/widget/ArrayAdapter;
@@ -349,7 +316,6 @@
 
     goto :goto_4
 
-    .line 945
     :cond_8
     new-instance v0, Landroid/widget/SimpleCursorAdapter;
 
@@ -376,14 +342,12 @@
     .restart local v0       #adapter:Landroid/widget/ListAdapter;
     goto :goto_0
 
-    .line 969
     .end local v2           #layout:I
     :cond_9
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mOnCheckboxClickListener:Landroid/content/DialogInterface$OnMultiChoiceClickListener;
 
     if-eqz v1, :cond_1
 
-    .line 970
     new-instance v1, Lcom/android/internal/app/AlertController$AlertParams$4;
 
     invoke-direct {v1, p0, v6, p1}, Lcom/android/internal/app/AlertController$AlertParams$4;-><init>(Lcom/android/internal/app/AlertController$AlertParams;Lcom/android/internal/app/AlertController$RecycleListView;Lcom/android/internal/app/AlertController;)V
@@ -392,13 +356,11 @@
 
     goto :goto_1
 
-    .line 988
     :cond_a
     iget-boolean v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIsMultiChoice:Z
 
     if-eqz v1, :cond_3
 
-    .line 989
     const/4 v1, 0x2
 
     invoke-virtual {v6, v1}, Lcom/android/internal/app/AlertController$RecycleListView;->setChoiceMode(I)V
@@ -415,35 +377,29 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 833
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCustomTitleView:Landroid/view/View;
 
     if-eqz v0, :cond_9
 
-    .line 834
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mCustomTitleView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setCustomTitle(Landroid/view/View;)V
 
-    .line 849
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
 
-    .line 850
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mMessage:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 852
     :cond_1
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_2
 
-    .line 853
     const/4 v0, -0x1
 
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mPositiveButtonText:Ljava/lang/CharSequence;
@@ -452,13 +408,11 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/android/internal/app/AlertController;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 856
     :cond_2
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonText:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_3
 
-    .line 857
     const/4 v0, -0x2
 
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mNegativeButtonText:Ljava/lang/CharSequence;
@@ -467,13 +421,11 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/android/internal/app/AlertController;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 860
     :cond_3
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonText:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_4
 
-    .line 861
     const/4 v0, -0x3
 
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mNeutralButtonText:Ljava/lang/CharSequence;
@@ -482,18 +434,15 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/android/internal/app/AlertController;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;)V
 
-    .line 864
     :cond_4
     iget-boolean v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mForceInverseBackground:Z
 
     if-eqz v0, :cond_5
 
-    .line 865
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setInverseBackgroundForced(Z)V
 
-    .line 869
     :cond_5
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
@@ -507,22 +456,18 @@
 
     if-eqz v0, :cond_7
 
-    .line 870
     :cond_6
     invoke-direct {p0, p1}, Lcom/android/internal/app/AlertController$AlertParams;->createListView(Lcom/android/internal/app/AlertController;)V
 
-    .line 872
     :cond_7
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     if-eqz v0, :cond_8
 
-    .line 873
     iget-boolean v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingSpecified:Z
 
     if-eqz v0, :cond_d
 
-    .line 874
     iget-object v1, p0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 
     iget v2, p0, Lcom/android/internal/app/AlertController$AlertParams;->mViewSpacingLeft:I
@@ -537,51 +482,42 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/internal/app/AlertController;->setView(Landroid/view/View;IIII)V
 
-    .line 888
     :cond_8
     :goto_1
     return-void
 
-    .line 836
     :cond_9
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_a
 
-    .line 837
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mTitle:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 839
     :cond_a
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIcon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_b
 
-    .line 840
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setIcon(Landroid/graphics/drawable/Drawable;)V
 
-    .line 842
     :cond_b
     iget v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconId:I
 
     if-ltz v0, :cond_c
 
-    .line 843
     iget v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconId:I
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->setIcon(I)V
 
-    .line 845
     :cond_c
     iget v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconAttrId:I
 
     if-lez v0, :cond_0
 
-    .line 846
     iget v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mIconAttrId:I
 
     invoke-virtual {p1, v0}, Lcom/android/internal/app/AlertController;->getIconAttributeResId(I)I
@@ -592,7 +528,6 @@
 
     goto/16 :goto_0
 
-    .line 877
     :cond_d
     iget-object v0, p0, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
 

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 683
     iput-object p1, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$VolumeSliderChangeListener;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .parameter "fromUser"
 
     .prologue
-    .line 687
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$VolumeSliderChangeListener;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-virtual {v0, p2}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->changeVolume(I)V
 
-    .line 688
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .parameter "seekBar"
 
     .prologue
-    .line 692
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$VolumeSliderChangeListener;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     const/4 v1, 0x1
@@ -66,7 +62,6 @@
     #setter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mIgnoreCallbackVolumeChanges:Z
     invoke-static {v0, v1}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->access$802(Lcom/android/internal/app/MediaRouteChooserDialogFragment;Z)Z
 
-    .line 693
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .parameter "seekBar"
 
     .prologue
-    .line 697
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$VolumeSliderChangeListener;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     const/4 v1, 0x0
@@ -83,11 +77,9 @@
     #setter for: Lcom/android/internal/app/MediaRouteChooserDialogFragment;->mIgnoreCallbackVolumeChanges:Z
     invoke-static {v0, v1}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->access$802(Lcom/android/internal/app/MediaRouteChooserDialogFragment;Z)Z
 
-    .line 698
     iget-object v0, p0, Lcom/android/internal/app/MediaRouteChooserDialogFragment$VolumeSliderChangeListener;->this$0:Lcom/android/internal/app/MediaRouteChooserDialogFragment;
 
     invoke-virtual {v0}, Lcom/android/internal/app/MediaRouteChooserDialogFragment;->updateVolume()V
 
-    .line 699
     return-void
 .end method

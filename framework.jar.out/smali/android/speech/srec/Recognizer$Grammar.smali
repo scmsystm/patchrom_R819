@@ -32,17 +32,14 @@
     .end annotation
 
     .prologue
-    .line 183
     iput-object p1, p0, Landroid/speech/srec/Recognizer$Grammar;->this$0:Landroid/speech/srec/Recognizer;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 177
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
-    .line 184
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarLoad(Ljava/lang/String;)I
     invoke-static {p2}, Landroid/speech/srec/Recognizer;->access$000(Ljava/lang/String;)I
 
@@ -50,7 +47,6 @@
 
     iput v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
-    .line 185
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     #getter for: Landroid/speech/srec/Recognizer;->mVocabulary:I
@@ -61,7 +57,6 @@
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarSetupVocabulary(II)V
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->access$200(II)V
 
-    .line 186
     return-void
 .end method
 
@@ -70,7 +65,6 @@
     .parameter "x0"
 
     .prologue
-    .line 176
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     return v0
@@ -87,7 +81,6 @@
     .parameter "tag"
 
     .prologue
-    .line 205
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     move-object v1, p1
@@ -103,7 +96,6 @@
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarAddWordToSlot(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     invoke-static/range {v0 .. v5}, Landroid/speech/srec/Recognizer;->access$400(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 206
     return-void
 .end method
 
@@ -111,13 +103,11 @@
     .locals 1
 
     .prologue
-    .line 212
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarCompile(I)V
     invoke-static {v0}, Landroid/speech/srec/Recognizer;->access$500(I)V
 
-    .line 213
     return-void
 .end method
 
@@ -125,23 +115,19 @@
     .locals 1
 
     .prologue
-    .line 238
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     if-eqz v0, :cond_0
 
-    .line 239
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarDestroy(I)V
     invoke-static {v0}, Landroid/speech/srec/Recognizer;->access$1000(I)V
 
-    .line 240
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
-    .line 242
     :cond_0
     return-void
 .end method
@@ -150,24 +136,20 @@
     .locals 2
 
     .prologue
-    .line 248
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     if-eqz v0, :cond_0
 
-    .line 249
     invoke-virtual {p0}, Landroid/speech/srec/Recognizer$Grammar;->destroy()V
 
-    .line 250
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string/jumbo v1, "someone forgot to destroy Grammar"
+    const-string v1, "someone forgot to destroy Grammar"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 252
     :cond_0
     return-void
 .end method
@@ -176,13 +158,11 @@
     .locals 1
 
     .prologue
-    .line 192
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarResetAllSlots(I)V
     invoke-static {v0}, Landroid/speech/srec/Recognizer;->access$300(I)V
 
-    .line 193
     return-void
 .end method
 
@@ -196,13 +176,11 @@
     .end annotation
 
     .prologue
-    .line 230
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarSave(ILjava/lang/String;)V
     invoke-static {v0, p1}, Landroid/speech/srec/Recognizer;->access$900(ILjava/lang/String;)V
 
-    .line 231
     return-void
 .end method
 
@@ -210,7 +188,6 @@
     .locals 2
 
     .prologue
-    .line 219
     iget v0, p0, Landroid/speech/srec/Recognizer$Grammar;->mGrammar:I
 
     iget-object v1, p0, Landroid/speech/srec/Recognizer$Grammar;->this$0:Landroid/speech/srec/Recognizer;
@@ -223,12 +200,10 @@
     #calls: Landroid/speech/srec/Recognizer;->SR_GrammarSetupRecognizer(II)V
     invoke-static {v0, v1}, Landroid/speech/srec/Recognizer;->access$700(II)V
 
-    .line 220
     iget-object v0, p0, Landroid/speech/srec/Recognizer$Grammar;->this$0:Landroid/speech/srec/Recognizer;
 
     #setter for: Landroid/speech/srec/Recognizer;->mActiveGrammar:Landroid/speech/srec/Recognizer$Grammar;
     invoke-static {v0, p0}, Landroid/speech/srec/Recognizer;->access$802(Landroid/speech/srec/Recognizer;Landroid/speech/srec/Recognizer$Grammar;)Landroid/speech/srec/Recognizer$Grammar;
 
-    .line 221
     return-void
 .end method

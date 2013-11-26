@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1828
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$InvalidDialogCallback;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1828
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$InvalidDialogCallback;-><init>(Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;)V
 
     return-void
@@ -53,7 +51,6 @@
     .locals 5
 
     .prologue
-    .line 1831
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$InvalidDialogCallback;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;->mContext:Landroid/content/Context;
@@ -67,7 +64,6 @@
 
     move-result-object v2
 
-    .line 1833
     .local v2, title:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$InvalidDialogCallback;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
@@ -82,7 +78,6 @@
 
     move-result-object v1
 
-    .line 1835
     .local v1, message:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator$InvalidDialogCallback;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardViewMediator;
 
@@ -91,10 +86,8 @@
 
     move-result-object v0
 
-    .line 1836
     .local v0, dialog:Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 1837
     return-void
 .end method

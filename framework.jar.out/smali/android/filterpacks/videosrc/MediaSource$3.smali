@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 556
     iput-object p1, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "mp"
 
     .prologue
-    .line 558
     iget-object v0, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     #getter for: Landroid/filterpacks/videosrc/MediaSource;->mLogVerbose:Z
@@ -58,13 +56,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     :cond_0
     iget-object v1, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
     monitor-enter v1
 
-    .line 560
     :try_start_0
     iget-object v0, p0, Landroid/filterpacks/videosrc/MediaSource$3;->this$0:Landroid/filterpacks/videosrc/MediaSource;
 
@@ -73,13 +69,10 @@
     #setter for: Landroid/filterpacks/videosrc/MediaSource;->mCompleted:Z
     invoke-static {v0, v2}, Landroid/filterpacks/videosrc/MediaSource;->access$702(Landroid/filterpacks/videosrc/MediaSource;Z)Z
 
-    .line 561
     monitor-exit v1
 
-    .line 562
     return-void
 
-    .line 561
     :catchall_0
     move-exception v0
 

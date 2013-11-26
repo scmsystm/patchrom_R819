@@ -39,12 +39,10 @@
     .parameter
 
     .prologue
-    .line 1515
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$2;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$Viewport;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1516
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -63,10 +61,8 @@
     .parameter "toFrame"
 
     .prologue
-    .line 1519
     iget-object v0, p0, Lcom/android/server/accessibility/ScreenMagnifier$Viewport$2;->mReusableResultRect:Landroid/graphics/Rect;
 
-    .line 1520
     .local v0, result:Landroid/graphics/Rect;
     iget v1, p2, Landroid/graphics/Rect;->left:I
 
@@ -88,7 +84,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 1522
     iget v1, p2, Landroid/graphics/Rect;->top:I
 
     int-to-float v1, v1
@@ -109,7 +104,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 1524
     iget v1, p2, Landroid/graphics/Rect;->right:I
 
     int-to-float v1, v1
@@ -130,7 +124,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 1526
     iget v1, p2, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v1, v1
@@ -151,7 +144,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 1528
     return-object v0
 .end method
 
@@ -162,7 +154,6 @@
     .parameter "x2"
 
     .prologue
-    .line 1515
     check-cast p2, Landroid/graphics/Rect;
 
     .end local p2

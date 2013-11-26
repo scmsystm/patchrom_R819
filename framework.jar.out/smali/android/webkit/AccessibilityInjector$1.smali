@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 374
     iput-object p1, p0, Landroid/webkit/AccessibilityInjector$1;->this$0:Landroid/webkit/AccessibilityInjector;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 3
 
     .prologue
-    .line 377
     invoke-static {}, Landroid/webkit/AccessibilityInjector;->access$000()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 378
     invoke-static {}, Landroid/webkit/AccessibilityInjector;->access$100()Ljava/lang/String;
 
     move-result-object v0
@@ -90,13 +87,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 381
     :cond_0
     iget-object v0, p0, Landroid/webkit/AccessibilityInjector$1;->this$0:Landroid/webkit/AccessibilityInjector;
 
     #calls: Landroid/webkit/AccessibilityInjector;->injectJavaScript()V
     invoke-static {v0}, Landroid/webkit/AccessibilityInjector;->access$300(Landroid/webkit/AccessibilityInjector;)V
 
-    .line 382
     return-void
 .end method

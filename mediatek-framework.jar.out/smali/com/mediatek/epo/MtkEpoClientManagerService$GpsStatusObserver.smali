@@ -25,13 +25,10 @@
     .parameter "handler"
 
     .prologue
-    .line 362
     iput-object p1, p0, Lcom/mediatek/epo/MtkEpoClientManagerService$GpsStatusObserver;->this$0:Lcom/mediatek/epo/MtkEpoClientManagerService;
 
-    .line 363
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 364
     return-void
 .end method
 
@@ -42,6 +39,5 @@
     .parameter "change"
 
     .prologue
-    .line 372
     return-void
 .end method

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 354
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$1;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "loc"
 
     .prologue
-    .line 355
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .parameter "provider"
 
     .prologue
-    .line 356
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .parameter "provider"
 
     .prologue
-    .line 357
     return-void
 .end method
 
@@ -71,6 +67,5 @@
     .parameter "extras"
 
     .prologue
-    .line 358
     return-void
 .end method

@@ -16,12 +16,10 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/telephony/gemini/GeminiSmsMessage;-><init>(I)V
 
-    .line 77
     return-void
 .end method
 
@@ -30,13 +28,10 @@
     .parameter "simId"
 
     .prologue
-    .line 80
     invoke-direct {p0}, Landroid/telephony/SmsMessage;-><init>()V
 
-    .line 81
     iput p1, p0, Landroid/telephony/gemini/GeminiSmsMessage;->simId:I
 
-    .line 82
     return-void
 .end method
 
@@ -46,25 +41,19 @@
     .parameter "simId"
 
     .prologue
-    .line 84
     invoke-direct {p0}, Landroid/telephony/SmsMessage;-><init>()V
 
-    .line 85
     if-eqz p1, :cond_0
 
-    .line 86
     iget-object v0, p1, Landroid/telephony/SmsMessage;->mWrappedSmsMessage:Lcom/android/internal/telephony/SmsMessageBase;
 
     iput-object v0, p0, Landroid/telephony/SmsMessage;->mWrappedSmsMessage:Lcom/android/internal/telephony/SmsMessageBase;
 
-    .line 90
     :goto_0
     iput p2, p0, Landroid/telephony/gemini/GeminiSmsMessage;->simId:I
 
-    .line 91
     return-void
 
-    .line 88
     :cond_0
     const/4 v0, 0x0
 
@@ -80,18 +69,15 @@
     .parameter "simId"
 
     .prologue
-    .line 168
     invoke-static {p2}, Landroid/telephony/gemini/GeminiSmsManager;->getSmsFormat(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 170
     .local v0, format:Ljava/lang/String;
     invoke-static {p0, p1, v0}, Landroid/telephony/gemini/GeminiSmsMessage;->createFromEfRecord(I[BLjava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v1
 
-    .line 172
     .local v1, sms:Landroid/telephony/SmsMessage;
     if-nez v1, :cond_0
 
@@ -114,12 +100,10 @@
     .parameter "simId"
 
     .prologue
-    .line 100
     invoke-static {p1}, Landroid/telephony/gemini/GeminiSmsManager;->getSmsFormat(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 101
     .local v0, format:Ljava/lang/String;
     const-string v2, "SMS"
 
@@ -143,25 +127,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     invoke-static {p0, v0}, Landroid/telephony/gemini/GeminiSmsMessage;->createFromPdu([BLjava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v1
 
-    .line 103
     .local v1, sms:Landroid/telephony/SmsMessage;
     if-eqz v1, :cond_0
 
-    .line 104
     new-instance v2, Landroid/telephony/gemini/GeminiSmsMessage;
 
     invoke-direct {v2, v1, p1}, Landroid/telephony/gemini/GeminiSmsMessage;-><init>(Landroid/telephony/SmsMessage;I)V
 
-    .line 107
     :goto_0
     return-object v2
 
-    .line 106
     :cond_0
     const-string v2, "SMS"
 
@@ -169,7 +148,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     const/4 v2, 0x0
 
     goto :goto_0
@@ -182,12 +160,10 @@
     .parameter "simId"
 
     .prologue
-    .line 114
     invoke-static {p0, p1}, Landroid/telephony/gemini/GeminiSmsMessage;->createFromPdu([BLjava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
 
-    .line 116
     .local v0, sms:Landroid/telephony/SmsMessage;
     new-instance v1, Landroid/telephony/gemini/GeminiSmsMessage;
 
@@ -202,12 +178,10 @@
     .parameter "simId"
 
     .prologue
-    .line 143
     invoke-static {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->newFromCDS(Ljava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
 
-    .line 145
     .local v0, sms:Landroid/telephony/SmsMessage;
     new-instance v1, Landroid/telephony/gemini/GeminiSmsMessage;
 
@@ -222,12 +196,10 @@
     .parameter "simId"
 
     .prologue
-    .line 127
     invoke-static {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->newFromCMT([Ljava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
 
-    .line 129
     .local v0, sms:Landroid/telephony/SmsMessage;
     new-instance v1, Landroid/telephony/gemini/GeminiSmsMessage;
 
@@ -242,12 +214,10 @@
     .parameter "simId"
 
     .prologue
-    .line 135
     invoke-static {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->newFromCMTI(Ljava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
 
-    .line 137
     .local v0, sms:Landroid/telephony/SmsMessage;
     new-instance v1, Landroid/telephony/gemini/GeminiSmsMessage;
 
@@ -262,12 +232,10 @@
     .parameter "simId"
 
     .prologue
-    .line 151
     invoke-static {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->newFromParcel(Landroid/os/Parcel;)Landroid/telephony/SmsMessage;
 
     move-result-object v0
 
-    .line 153
     .local v0, sms:Landroid/telephony/SmsMessage;
     new-instance v1, Landroid/telephony/gemini/GeminiSmsMessage;
 
@@ -282,7 +250,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget v0, p0, Landroid/telephony/gemini/GeminiSmsMessage;->simId:I
 
     return v0
@@ -292,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 193
     invoke-super {p0}, Landroid/telephony/SmsMessage;->getSmsc()[B
 
     move-result-object v0
@@ -309,7 +275,6 @@
 
     const/4 v8, 0x0
 
-    .line 204
     const-string v5, "SMS"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -332,12 +297,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     invoke-virtual {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->getPdu()[B
 
     move-result-object v1
 
-    .line 206
     .local v1, pdu:[B
     const-string v5, "3gpp"
 
@@ -347,23 +310,19 @@
 
     if-eqz v5, :cond_1
 
-    .line 207
     if-nez v1, :cond_0
 
-    .line 208
     const-string v5, "SMS"
 
-    const-string/jumbo v6, "pdu is null"
+    const-string v6, "pdu is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v2, v4
 
-    .line 226
     :goto_0
     return-object v2
 
-    .line 212
     :cond_0
     aget-byte v5, v1, v8
 
@@ -371,11 +330,9 @@
 
     add-int/lit8 v3, v5, 0x1
 
-    .line 213
     .local v3, smsc_len:I
     new-array v2, v3, [B
 
-    .line 216
     .local v2, smsc:[B
     const/4 v5, 0x0
 
@@ -390,11 +347,9 @@
 
     goto :goto_0
 
-    .line 218
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, e:Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v5, "SMS"
 
@@ -404,10 +359,8 @@
 
     move-object v2, v4
 
-    .line 220
     goto :goto_0
 
-    .line 222
     .end local v0           #e:Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2           #smsc:[B
     .end local v3           #smsc_len:I
@@ -422,10 +375,8 @@
 
     move-object v2, v4
 
-    .line 223
     goto :goto_0
 
-    .line 226
     :cond_2
     invoke-super {p0}, Landroid/telephony/SmsMessage;->getSmsc()[B
 
@@ -438,7 +389,6 @@
     .locals 1
 
     .prologue
-    .line 240
     invoke-super {p0}, Landroid/telephony/SmsMessage;->getTpdu()[B
 
     move-result-object v0
@@ -455,7 +405,6 @@
 
     const/4 v9, 0x0
 
-    .line 251
     const-string v6, "SMS"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -478,12 +427,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     invoke-virtual {p0}, Landroid/telephony/gemini/GeminiSmsMessage;->getPdu()[B
 
     move-result-object v1
 
-    .line 253
     .local v1, pdu:[B
     const-string v6, "3gpp"
 
@@ -493,23 +440,19 @@
 
     if-eqz v6, :cond_1
 
-    .line 254
     if-nez v1, :cond_0
 
-    .line 255
     const-string v6, "SMS"
 
-    const-string/jumbo v7, "pdu is null"
+    const-string v7, "pdu is null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v3, v5
 
-    .line 274
     :goto_0
     return-object v3
 
-    .line 259
     :cond_0
     aget-byte v6, v1, v9
 
@@ -517,17 +460,14 @@
 
     add-int/lit8 v2, v6, 0x1
 
-    .line 260
     .local v2, smsc_len:I
     array-length v6, v1
 
     sub-int v4, v6, v2
 
-    .line 261
     .local v4, tpdu_len:I
     new-array v3, v4, [B
 
-    .line 264
     .local v3, tpdu:[B
     const/4 v6, 0x0
 
@@ -540,11 +480,9 @@
 
     goto :goto_0
 
-    .line 266
     :catch_0
     move-exception v0
 
-    .line 267
     .local v0, e:Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v6, "SMS"
 
@@ -554,10 +492,8 @@
 
     move-object v3, v5
 
-    .line 268
     goto :goto_0
 
-    .line 270
     .end local v0           #e:Ljava/lang/ArrayIndexOutOfBoundsException;
     .end local v2           #smsc_len:I
     .end local v3           #tpdu:[B
@@ -573,10 +509,8 @@
 
     move-object v3, v1
 
-    .line 271
     goto :goto_0
 
-    .line 274
     :cond_2
     invoke-super {p0}, Landroid/telephony/SmsMessage;->getTpdu()[B
 

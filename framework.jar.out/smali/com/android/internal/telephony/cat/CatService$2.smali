@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 1742
     iput-object p1, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -48,12 +47,10 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1748
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1749
     .local v0, action:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -75,7 +72,6 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1751
     const-string v7, "android.intent.action.ACTION_SHUTDOWN_IPO"
 
     invoke-virtual {v0, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -84,12 +80,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 1752
-    const-string/jumbo v7, "remove event list because of ipo shutdown"
+    const-string v7, "remove event list because of ipo shutdown"
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1753
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     const/4 v8, 0x0
@@ -97,7 +91,6 @@
     #setter for: Lcom/android/internal/telephony/cat/CatService;->mEventList:[B
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatService;->access$002(Lcom/android/internal/telephony/cat/CatService;[B)[B
 
-    .line 1768
     :cond_0
     :goto_0
     const-string v7, "android.intent.action.SIM_STATE_CHANGED"
@@ -112,8 +105,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 1769
-    const-string/jumbo v7, "simId"
+    const-string v7, "simId"
 
     const/4 v8, -0x1
 
@@ -121,7 +113,6 @@
 
     move-result v3
 
-    .line 1770
     .local v3, id:I
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -160,7 +151,6 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1771
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mSimId:I
@@ -170,10 +160,9 @@
 
     if-ne v3, v7, :cond_1
 
-    .line 1772
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
-    const-string/jumbo v8, "ss"
+    const-string v8, "ss"
 
     invoke-virtual {p2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -182,18 +171,16 @@
     #setter for: Lcom/android/internal/telephony/cat/CatService;->simState:Ljava/lang/String;
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatService;->access$302(Lcom/android/internal/telephony/cat/CatService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1773
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #setter for: Lcom/android/internal/telephony/cat/CatService;->simIdfromIntent:I
     invoke-static {v7, v3}, Lcom/android/internal/telephony/cat/CatService;->access$402(Lcom/android/internal/telephony/cat/CatService;I)I
 
-    .line 1774
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v8, "simIdfromIntent["
+    const-string v8, "simIdfromIntent["
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -239,13 +226,11 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1809
     .end local v3           #id:I
     :cond_1
     :goto_1
     return-void
 
-    .line 1754
     :cond_2
     const-string v7, "android.intent.action.IVSR_NOTIFY"
 
@@ -255,7 +240,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 1755
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     #getter for: Lcom/android/internal/telephony/cat/CatService;->mSimId:I
@@ -263,7 +247,7 @@
 
     move-result v7
 
-    const-string/jumbo v8, "simId"
+    const-string v8, "simId"
 
     invoke-virtual {p2, v8, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -271,16 +255,14 @@
 
     if-ne v7, v8, :cond_1
 
-    .line 1759
     const-string v7, "action"
 
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1760
     .local v5, ivsrAction:Ljava/lang/String;
-    const-string/jumbo v7, "start"
+    const-string v7, "start"
 
     invoke-virtual {v5, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -288,12 +270,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 1761
     const-string v7, "[IVSR set IVSR flag"
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1762
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     const/4 v8, 0x1
@@ -301,7 +281,6 @@
     #setter for: Lcom/android/internal/telephony/cat/CatService;->isIvsrBootUp:Z
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatService;->access$202(Lcom/android/internal/telephony/cat/CatService;Z)Z
 
-    .line 1763
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     const/16 v8, 0xe
@@ -312,7 +291,6 @@
 
     goto/16 :goto_0
 
-    .line 1777
     .end local v5           #ivsrAction:Ljava/lang/String;
     :cond_3
     const-string v7, "android.intent.action.ACTION_SIM_DETECTED"
@@ -327,19 +305,16 @@
 
     if-eqz v7, :cond_1
 
-    .line 1779
     const-string v7, "get SIM_DETECTED begin"
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1780
-    const-string/jumbo v7, "simDetectStatus"
+    const-string v7, "simDetectStatus"
 
     invoke-virtual {p2, v7}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1781
     .local v6, status:Ljava/lang/String;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -361,7 +336,6 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1782
     const-string v7, "REMOVE"
 
     invoke-virtual {v7, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -370,8 +344,7 @@
 
     if-eqz v7, :cond_4
 
-    .line 1784
-    const-string/jumbo v7, "phone"
+    const-string v7, "phone"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
@@ -381,14 +354,11 @@
 
     move-result-object v2
 
-    .line 1785
     .local v2, iTel:Lcom/android/internal/telephony/ITelephony;
     if-eqz v2, :cond_5
 
-    .line 1787
     const/4 v4, 0x1
 
-    .line 1789
     .local v4, isSimInserted:Z
     :try_start_0
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
@@ -402,7 +372,6 @@
 
     move-result v4
 
-    .line 1790
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -440,10 +409,8 @@
 
     invoke-static {p0, v7}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1791
     if-nez v4, :cond_4
 
-    .line 1794
     iget-object v7, p0, Lcom/android/internal/telephony/cat/CatService$2;->this$0:Lcom/android/internal/telephony/cat/CatService;
 
     const/4 v8, 0x0
@@ -452,7 +419,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1807
     .end local v2           #iTel:Lcom/android/internal/telephony/ITelephony;
     .end local v4           #isSimInserted:Z
     :cond_4
@@ -463,13 +429,11 @@
 
     goto/16 :goto_1
 
-    .line 1797
     .restart local v2       #iTel:Lcom/android/internal/telephony/ITelephony;
     .restart local v4       #isSimInserted:Z
     :catch_0
     move-exception v1
 
-    .line 1799
     .local v1, ex:Ljava/lang/Exception;
     const-string v7, "Query Sim insert status fail"
 
@@ -477,7 +441,6 @@
 
     goto :goto_2
 
-    .line 1804
     .end local v1           #ex:Ljava/lang/Exception;
     .end local v4           #isSimInserted:Z
     :cond_5

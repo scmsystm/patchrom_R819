@@ -216,7 +216,6 @@
 
     const/4 v4, 0x0
 
-    .line 52
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -225,7 +224,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIOS:[I
 
-    .line 64
     new-array v0, v6, [Landroid/util/Pair;
 
     new-instance v1, Landroid/util/Pair;
@@ -260,7 +258,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_3_2_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 71
     new-array v0, v6, [Landroid/util/Pair;
 
     new-instance v1, Landroid/util/Pair;
@@ -297,7 +294,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_4_3_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 78
     new-array v0, v5, [Landroid/util/Pair;
 
     new-instance v1, Landroid/util/Pair;
@@ -318,7 +314,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_5_3_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 84
     new-array v0, v6, [Landroid/util/Pair;
 
     new-instance v1, Landroid/util/Pair;
@@ -359,7 +354,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_11_9_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 91
     const/4 v0, 0x3
 
     new-array v0, v0, [Landroid/util/Pair;
@@ -416,7 +410,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_16_9_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 118
     const/16 v0, 0xd
 
     new-array v0, v0, [I
@@ -425,7 +418,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_BITRATES:[I
 
-    .line 144
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -434,7 +426,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_VCODECS:[I
 
-    .line 267
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -443,7 +434,6 @@
 
     sput-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_ACODECS:[I
 
-    .line 310
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -454,7 +444,6 @@
 
     return-void
 
-    .line 52
     :array_0
     .array-data 0x4
         0x1t 0x0t 0x0t 0x0t
@@ -464,7 +453,6 @@
         0x5t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 118
     :array_1
     .array-data 0x4
         0x60t 0x6dt 0x0t 0x0t
@@ -482,7 +470,6 @@
         0x0t 0x12t 0x7at 0x0t
     .end array-data
 
-    .line 144
     :array_2
     .array-data 0x4
         0x2t 0x0t 0x0t 0x0t
@@ -490,7 +477,6 @@
         0x3t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 267
     :array_3
     .array-data 0x4
         0x2t 0x0t 0x0t 0x0t
@@ -500,7 +486,6 @@
         0x4t 0x0t 0x0t 0x0t
     .end array-data
 
-    .line 310
     :array_4
     .array-data 0x4
         0x0t 0x0t 0x0t 0x0t
@@ -513,10 +498,8 @@
     .locals 0
 
     .prologue
-    .line 329
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 330
     return-void
 .end method
 
@@ -524,7 +507,6 @@
     .locals 1
 
     .prologue
-    .line 336
     sget-object v0, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIOS:[I
 
     return-object v0
@@ -534,7 +516,6 @@
     .locals 1
 
     .prologue
-    .line 417
     sget-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_ACODECS:[I
 
     return-object v0
@@ -544,7 +525,6 @@
     .locals 1
 
     .prologue
-    .line 445
     const/4 v0, 0x1
 
     return v0
@@ -554,7 +534,6 @@
     .locals 1
 
     .prologue
-    .line 438
     const/16 v0, 0x64
 
     return v0
@@ -577,10 +556,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 348
     packed-switch p0, :pswitch_data_0
 
-    .line 375
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -605,22 +582,18 @@
 
     throw v8
 
-    .line 350
     :pswitch_0
     sget-object v4, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_3_2_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 380
     .local v4, resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :goto_0
     invoke-static {}, Landroid/media/videoeditor/VideoEditorProfile;->get()Landroid/media/videoeditor/VideoEditorProfile;
 
     move-result-object v7
 
-    .line 381
     .local v7, veProfile:Landroid/media/videoeditor/VideoEditorProfile;
     if-nez v7, :cond_0
 
-    .line 382
     new-instance v8, Ljava/lang/RuntimeException;
 
     const-string v9, "Can\'t get the video editor profile"
@@ -629,67 +602,53 @@
 
     throw v8
 
-    .line 355
     .end local v4           #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     .end local v7           #veProfile:Landroid/media/videoeditor/VideoEditorProfile;
     :pswitch_1
     sget-object v4, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_4_3_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 356
     .restart local v4       #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 360
     .end local v4           #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :pswitch_2
     sget-object v4, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_5_3_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 361
     .restart local v4       #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 365
     .end local v4           #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :pswitch_3
     sget-object v4, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_11_9_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 366
     .restart local v4       #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 370
     .end local v4           #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     :pswitch_4
     sget-object v4, Landroid/media/videoeditor/MediaProperties;->ASPECT_RATIO_16_9_RESOLUTIONS:[Landroid/util/Pair;
 
-    .line 371
     .restart local v4       #resolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 384
     .restart local v7       #veProfile:Landroid/media/videoeditor/VideoEditorProfile;
     :cond_0
     iget v2, v7, Landroid/media/videoeditor/VideoEditorProfile;->maxOutputVideoFrameWidth:I
 
-    .line 385
     .local v2, maxWidth:I
     iget v1, v7, Landroid/media/videoeditor/VideoEditorProfile;->maxOutputVideoFrameHeight:I
 
-    .line 386
     .local v1, maxHeight:I
     array-length v8, v4
 
     new-array v6, v8, [Landroid/util/Pair;
 
-    .line 387
     .local v6, tmpResolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
-    .line 388
     .local v3, numSupportedResolution:I
     const/4 v0, 0x0
 
-    .line 391
     .local v0, i:I
     const/4 v0, 0x0
 
@@ -698,7 +657,6 @@
 
     if-ge v0, v8, :cond_2
 
-    .line 392
     aget-object v8, v4, v0
 
     iget-object v8, v8, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -723,32 +681,25 @@
 
     if-gt v8, v1, :cond_1
 
-    .line 394
     aget-object v8, v4, v0
 
     aput-object v8, v6, v3
 
-    .line 395
     add-int/lit8 v3, v3, 0x1
 
-    .line 391
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 398
     :cond_2
     new-array v5, v3, [Landroid/util/Pair;
 
-    .line 400
     .local v5, supportedResolutions:[Landroid/util/Pair;,"[Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     invoke-static {v6, v9, v5, v9, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 403
     return-object v5
 
-    .line 348
     nop
 
     :pswitch_data_0
@@ -765,7 +716,6 @@
     .locals 1
 
     .prologue
-    .line 431
     sget-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_BITRATES:[I
 
     return-object v0
@@ -775,7 +725,6 @@
     .locals 1
 
     .prologue
-    .line 410
     sget-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_VCODECS:[I
 
     return-object v0
@@ -785,7 +734,6 @@
     .locals 1
 
     .prologue
-    .line 424
     sget-object v0, Landroid/media/videoeditor/MediaProperties;->SUPPORTED_VIDEO_FILE_FORMATS:[I
 
     return-object v0

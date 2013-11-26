@@ -32,16 +32,12 @@
     .parameter "file"
 
     .prologue
-    .line 638
     iput-object p1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->this$0:Landroid/speech/tts/TextToSpeechService;
 
-    .line 639
     invoke-direct/range {p0 .. p6}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;-><init>(Landroid/speech/tts/TextToSpeechService;Ljava/lang/Object;IILandroid/os/Bundle;Ljava/lang/String;)V
 
-    .line 640
     iput-object p7, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->mFile:Ljava/io/File;
 
-    .line 641
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 2
 
     .prologue
-    .line 645
     new-instance v0, Landroid/speech/tts/FileSynthesisCallback;
 
     iget-object v1, p0, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->mFile:Ljava/io/File;
@@ -65,26 +60,20 @@
     .locals 1
 
     .prologue
-    .line 650
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnStart()V
 
-    .line 651
     invoke-super {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisSpeechItem;->playImpl()I
 
     move-result v0
 
-    .line 652
     .local v0, status:I
     if-nez v0, :cond_0
 
-    .line 653
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnDone()V
 
-    .line 657
     :goto_0
     return v0
 
-    .line 655
     :cond_0
     invoke-virtual {p0}, Landroid/speech/tts/TextToSpeechService$SynthesisToFileSpeechItem;->dispatchOnError()V
 

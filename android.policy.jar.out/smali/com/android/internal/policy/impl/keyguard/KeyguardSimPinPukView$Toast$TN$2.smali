@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1030
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN$2;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 1032
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN$2;->this$1:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinPukView$Toast$TN;->handleHide()V
 
-    .line 1033
     return-void
 .end method

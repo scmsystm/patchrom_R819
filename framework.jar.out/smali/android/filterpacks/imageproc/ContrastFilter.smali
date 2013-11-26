@@ -13,12 +13,10 @@
     .parameter "name"
 
     .prologue
-    .line 51
     const-string v0, "contrast"
 
     invoke-direct {p0, p1, v0}, Landroid/filterpacks/imageproc/SimpleImageFilter;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     return-void
 .end method
 
@@ -29,7 +27,6 @@
     .parameter "context"
 
     .prologue
-    .line 56
     new-instance v0, Landroid/filterfw/core/NativeProgram;
 
     const-string v1, "filterpack_imageproc"
@@ -46,10 +43,9 @@
     .parameter "context"
 
     .prologue
-    .line 61
     new-instance v0, Landroid/filterfw/core/ShaderProgram;
 
-    const-string/jumbo v1, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform float contrast;\nvarying vec2 v_texcoord;\nvoid main() {\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  color -= 0.5;\n  color *= contrast;\n  color += 0.5;\n  gl_FragColor = color;\n}\n"
+    const-string v1, "precision mediump float;\nuniform sampler2D tex_sampler_0;\nuniform float contrast;\nvarying vec2 v_texcoord;\nvoid main() {\n  vec4 color = texture2D(tex_sampler_0, v_texcoord);\n  color -= 0.5;\n  color *= contrast;\n  color += 0.5;\n  gl_FragColor = color;\n}\n"
 
     invoke-direct {v0, p1, v1}, Landroid/filterfw/core/ShaderProgram;-><init>(Landroid/filterfw/core/FilterContext;Ljava/lang/String;)V
 

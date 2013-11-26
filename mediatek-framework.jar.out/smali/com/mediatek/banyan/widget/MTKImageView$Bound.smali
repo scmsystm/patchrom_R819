@@ -28,7 +28,6 @@
     .parameter
 
     .prologue
-    .line 368
     iput-object p1, p0, Lcom/mediatek/banyan/widget/MTKImageView$Bound;->this$0:Lcom/mediatek/banyan/widget/MTKImageView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "x1"
 
     .prologue
-    .line 368
     invoke-direct {p0, p1}, Lcom/mediatek/banyan/widget/MTKImageView$Bound;-><init>(Lcom/mediatek/banyan/widget/MTKImageView;)V
 
     return-void
@@ -53,7 +51,6 @@
     .parameter "x0"
 
     .prologue
-    .line 368
     iget v0, p0, Lcom/mediatek/banyan/widget/MTKImageView$Bound;->width:I
 
     return v0
@@ -65,7 +62,6 @@
     .parameter "x1"
 
     .prologue
-    .line 368
     iput p1, p0, Lcom/mediatek/banyan/widget/MTKImageView$Bound;->width:I
 
     return p1
@@ -76,7 +72,6 @@
     .parameter "x0"
 
     .prologue
-    .line 368
     iget v0, p0, Lcom/mediatek/banyan/widget/MTKImageView$Bound;->height:I
 
     return v0
@@ -88,7 +83,6 @@
     .parameter "x1"
 
     .prologue
-    .line 368
     iput p1, p0, Lcom/mediatek/banyan/widget/MTKImageView$Bound;->height:I
 
     return p1

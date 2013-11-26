@@ -15,10 +15,8 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     return-void
 .end method
 
@@ -31,7 +29,6 @@
     .parameter "numberPlus"
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -44,7 +41,6 @@
     .parameter "numberPlus"
 
     .prologue
-    .line 58
     const/4 v0, 0x0
 
     return v0
@@ -55,7 +51,6 @@
     .parameter "dialString"
 
     .prologue
-    .line 54
     const/4 v0, 0x0
 
     return v0
@@ -66,11 +61,9 @@
     .parameter "text"
 
     .prologue
-    .line 62
     const-string v0, "PhoneNumberExt"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     return-void
 .end method

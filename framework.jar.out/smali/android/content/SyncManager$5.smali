@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 277
     iput-object p1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 279
     iget-object v1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
     #getter for: Landroid/content/SyncManager;->mDataConnectionIsConnected:Z
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 283
     .local v0, wasConnected:Z
     iget-object v1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
@@ -62,7 +59,6 @@
     #setter for: Landroid/content/SyncManager;->mDataConnectionIsConnected:Z
     invoke-static {v1, v2}, Landroid/content/SyncManager;->access$402(Landroid/content/SyncManager;Z)Z
 
-    .line 284
     iget-object v1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
     #getter for: Landroid/content/SyncManager;->mDataConnectionIsConnected:Z
@@ -72,10 +68,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 285
     if-nez v0, :cond_1
 
-    .line 286
     const-string v1, "SyncManager"
 
     const/4 v2, 0x2
@@ -86,14 +80,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 287
     const-string v1, "SyncManager"
 
     const-string v2, "Reconnection detected: clearing all backoffs"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     :cond_0
     iget-object v1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
@@ -111,14 +103,12 @@
 
     invoke-virtual {v1, v2}, Landroid/content/SyncStorageEngine;->clearAllBackoffs(Landroid/content/SyncQueue;)V
 
-    .line 291
     :cond_1
     iget-object v1, p0, Landroid/content/SyncManager$5;->this$0:Landroid/content/SyncManager;
 
     #calls: Landroid/content/SyncManager;->sendCheckAlarmsMessage()V
     invoke-static {v1}, Landroid/content/SyncManager;->access$100(Landroid/content/SyncManager;)V
 
-    .line 293
     :cond_2
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 1203
     iput-object p1, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1203
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;-><init>(Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;)V
 
     return-void
@@ -53,14 +51,11 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1206
     iget v0, p1, Landroid/os/Message;->what:I
 
-    .line 1207
     .local v0, action:I
     packed-switch v0, :pswitch_data_0
 
-    .line 1234
     :pswitch_0
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
@@ -86,7 +81,6 @@
 
     throw v6
 
-    .line 1209
     :pswitch_1
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
@@ -97,17 +91,14 @@
 
     invoke-virtual {v6, v2, v2}, Lcom/android/server/accessibility/ScreenMagnifier$Viewport;->setFrameShown(ZZ)V
 
-    .line 1237
     :goto_0
     return-void
 
-    .line 1212
     :pswitch_2
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/internal/os/SomeArgs;
 
-    .line 1214
     .local v1, args:Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
@@ -127,12 +118,10 @@
 
     invoke-virtual {v6, v7, v8, v9, v10}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1215
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     if-ne v6, v2, :cond_0
 
-    .line 1216
     .local v2, immediate:Z
     :goto_1
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
@@ -149,19 +138,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1218
     invoke-virtual {v1}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto :goto_0
 
-    .line 1215
     .end local v2           #immediate:Z
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 1218
     :catchall_0
     move-exception v6
 
@@ -169,18 +155,15 @@
 
     throw v6
 
-    .line 1222
     .end local v1           #args:Lcom/android/internal/os/SomeArgs;
     :pswitch_3
     iget v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 1223
     .local v5, transition:I
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v3, Landroid/view/WindowInfo;
 
-    .line 1224
     .local v3, info:Landroid/view/WindowInfo;
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
@@ -189,13 +172,11 @@
 
     goto :goto_0
 
-    .line 1227
     .end local v3           #info:Landroid/view/WindowInfo;
     .end local v5           #transition:I
     :pswitch_4
     iget v4, p1, Landroid/os/Message;->arg1:I
 
-    .line 1228
     .local v4, rotation:I
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
 
@@ -204,7 +185,6 @@
 
     goto :goto_0
 
-    .line 1231
     .end local v4           #rotation:I
     :pswitch_5
     iget-object v6, p0, Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver$MyHandler;->this$0:Lcom/android/server/accessibility/ScreenMagnifier$DisplayContentObserver;
@@ -229,7 +209,6 @@
 
     goto :goto_0
 
-    .line 1207
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

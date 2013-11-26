@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,18 +44,15 @@
     .parameter "source"
 
     .prologue
-    .line 102
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 103
     .local v1, used:I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 104
     .local v0, total:I
     new-instance v2, Landroid/telephony/SmsMemoryStatus;
 
@@ -70,7 +66,6 @@
     .parameter "x0"
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Landroid/telephony/SmsMemoryStatus$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/SmsMemoryStatus;
 
     move-result-object v0
@@ -83,7 +78,6 @@
     .parameter "size"
 
     .prologue
-    .line 108
     new-array v0, p1, [Landroid/telephony/SmsMemoryStatus;
 
     return-object v0
@@ -94,7 +88,6 @@
     .parameter "x0"
 
     .prologue
-    .line 97
     invoke-virtual {p0, p1}, Landroid/telephony/SmsMemoryStatus$1;->newArray(I)[Landroid/telephony/SmsMemoryStatus;
 
     move-result-object v0

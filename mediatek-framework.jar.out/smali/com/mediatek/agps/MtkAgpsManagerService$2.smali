@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 483
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 485
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 486
     .local v9, action:Ljava/lang/String;
     const-string v1, "android.location.GPS_ENABLED_CHANGE"
 
@@ -55,7 +52,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 487
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -73,7 +69,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mIsGPSStart:Z
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$202(Lcom/mediatek/agps/MtkAgpsManagerService;Z)Z
 
-    .line 488
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -90,12 +85,10 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->GpsState(Z)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$300(Lcom/mediatek/agps/MtkAgpsManagerService;Z)V
 
-    .line 576
     :cond_0
     :goto_0
     return-void
 
-    .line 489
     :cond_1
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
@@ -105,7 +98,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 490
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -115,7 +107,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 491
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 492
     :cond_2
     const-string v1, "android.intent.action.ACTION_BOOT_IPO"
 
@@ -137,7 +127,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 493
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -147,7 +136,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 494
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -159,7 +147,6 @@
 
     goto :goto_0
 
-    .line 495
     :cond_3
     const-string v1, "android.intent.action.ACTION_SHUTDOWN_IPO"
 
@@ -169,7 +156,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 496
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -181,7 +167,6 @@
 
     goto :goto_0
 
-    .line 497
     :cond_4
     const-string v1, "com.mediatek.agps.toast"
 
@@ -191,7 +176,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -201,7 +185,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->showToast(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$500(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 499
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -211,7 +194,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 500
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -234,7 +216,6 @@
 
     goto :goto_0
 
-    .line 501
     :cond_5
     const-string v1, "android.location.agps.EMERGENCY_CALL"
 
@@ -244,23 +225,19 @@
 
     if-eqz v1, :cond_8
 
-    .line 502
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v13
 
-    .line 503
     .local v13, mbundle:Landroid/os/Bundle;
     if-eqz v13, :cond_0
 
-    .line 504
     const-string v1, "EM_Call_State"
 
     invoke-virtual {v13, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v15
 
-    .line 505
     .local v15, state:I
     const-string v1, "Call_Number"
 
@@ -268,11 +245,9 @@
 
     move-result-object v10
 
-    .line 506
     .local v10, call_number:Ljava/lang/String;
     if-eqz v10, :cond_6
 
-    .line 507
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -282,11 +257,9 @@
 
     goto/16 :goto_0
 
-    .line 508
     :cond_6
     if-nez v10, :cond_7
 
-    .line 509
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -298,7 +271,6 @@
 
     goto/16 :goto_0
 
-    .line 511
     :cond_7
     move-object/from16 v0, p0
 
@@ -327,7 +299,6 @@
 
     goto/16 :goto_0
 
-    .line 514
     .end local v10           #call_number:Ljava/lang/String;
     .end local v13           #mbundle:Landroid/os/Bundle;
     .end local v15           #state:I
@@ -340,14 +311,12 @@
 
     if-eqz v1, :cond_9
 
-    .line 515
     new-instance v12, Landroid/location/Location;
 
     const-string v1, "gps"
 
     invoke-direct {v12, v1}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
-    .line 516
     .local v12, location:Landroid/location/Location;
     const-string v1, "latitude"
 
@@ -361,7 +330,6 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 517
     const-string v1, "longitude"
 
     const-wide/16 v2, 0x0
@@ -374,7 +342,6 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 518
     const-string v1, "altitude"
 
     const-wide/16 v2, 0x0
@@ -387,7 +354,6 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/location/Location;->setAltitude(D)V
 
-    .line 519
     const-string v1, "speed"
 
     const/4 v2, 0x0
@@ -400,7 +366,6 @@
 
     invoke-virtual {v12, v1}, Landroid/location/Location;->setSpeed(F)V
 
-    .line 520
     const-string v1, "bearing"
 
     const/4 v2, 0x0
@@ -413,7 +378,6 @@
 
     invoke-virtual {v12, v1}, Landroid/location/Location;->setBearing(F)V
 
-    .line 521
     const-string v1, "accuracy"
 
     const/4 v2, 0x0
@@ -426,7 +390,6 @@
 
     invoke-virtual {v12, v1}, Landroid/location/Location;->setAccuracy(F)V
 
-    .line 522
     const-string v1, "timestamp"
 
     const-wide/16 v2, 0x0
@@ -439,7 +402,6 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/location/Location;->setTime(J)V
 
-    .line 524
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -459,7 +421,6 @@
 
     goto/16 :goto_0
 
-    .line 525
     .end local v12           #location:Landroid/location/Location;
     :cond_9
     const-string v1, "android.net.wifi.STATE_CHANGE"
@@ -470,7 +431,6 @@
 
     if-eqz v1, :cond_d
 
-    .line 526
     const-string v1, "networkInfo"
 
     move-object/from16 v0, p2
@@ -481,26 +441,21 @@
 
     check-cast v14, Landroid/net/NetworkInfo;
 
-    .line 527
     .local v14, networkinfo:Landroid/net/NetworkInfo;
     sget-object v15, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
-    .line 528
     .local v15, state:Landroid/net/NetworkInfo$State;
     if-eqz v14, :cond_a
 
-    .line 529
     invoke-virtual {v14}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v15
 
-    .line 534
     :goto_1
     sget-object v1, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v15, v1, :cond_c
 
-    .line 535
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -525,7 +480,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mWifiMgr:Landroid/net/wifi/WifiManager;
     invoke-static {v2, v1}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1102(Lcom/mediatek/agps/MtkAgpsManagerService;Landroid/net/wifi/WifiManager;)Landroid/net/wifi/WifiManager;
 
-    .line 536
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -539,16 +493,13 @@
 
     move-result-object v21
 
-    .line 537
     .local v21, wifiinfo:Landroid/net/wifi/WifiInfo;
     if-eqz v21, :cond_b
 
-    .line 538
     invoke-virtual/range {v21 .. v21}, Landroid/net/wifi/WifiInfo;->getIpAddress()I
 
     move-result v8
 
-    .line 539
     .local v8, IPAddr:I
     shr-int/lit8 v1, v8, 0x18
 
@@ -556,7 +507,6 @@
 
     move/from16 v19, v0
 
-    .line 540
     .local v19, val4:I
     shr-int/lit8 v1, v8, 0x10
 
@@ -564,7 +514,6 @@
 
     move/from16 v18, v0
 
-    .line 541
     .local v18, val3:I
     shr-int/lit8 v1, v8, 0x8
 
@@ -572,13 +521,11 @@
 
     move/from16 v17, v0
 
-    .line 542
     .local v17, val2:I
     and-int/lit16 v0, v8, 0xff
 
     move/from16 v16, v0
 
-    .line 544
     .local v16, val1:I
     move-object/from16 v0, p0
 
@@ -643,7 +590,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mIpAddr:Ljava/lang/String;
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1302(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 545
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -678,7 +624,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 546
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -688,7 +633,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mDataConnWifi:I
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1402(Lcom/mediatek/agps/MtkAgpsManagerService;I)I
 
-    .line 548
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -726,7 +670,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->writeData2Agpsd(IIIIILjava/lang/String;)V
     invoke-static/range {v1 .. v7}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1500(Lcom/mediatek/agps/MtkAgpsManagerService;IIIIILjava/lang/String;)V
 
-    .line 550
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -747,7 +690,6 @@
 
     goto/16 :goto_0
 
-    .line 531
     .end local v8           #IPAddr:I
     .end local v16           #val1:I
     .end local v17           #val2:I
@@ -766,7 +708,6 @@
 
     goto/16 :goto_1
 
-    .line 552
     .restart local v21       #wifiinfo:Landroid/net/wifi/WifiInfo;
     :cond_b
     move-object/from16 v0, p0
@@ -780,14 +721,12 @@
 
     goto/16 :goto_0
 
-    .line 554
     .end local v21           #wifiinfo:Landroid/net/wifi/WifiInfo;
     :cond_c
     sget-object v1, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v15, v1, :cond_0
 
-    .line 555
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -797,7 +736,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 556
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -807,7 +745,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mDataConnWifi:I
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1402(Lcom/mediatek/agps/MtkAgpsManagerService;I)I
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -828,7 +765,6 @@
 
     goto/16 :goto_0
 
-    .line 559
     .end local v14           #networkinfo:Landroid/net/NetworkInfo;
     .end local v15           #state:Landroid/net/NetworkInfo$State;
     :cond_d
@@ -840,7 +776,6 @@
 
     if-eqz v1, :cond_e
 
-    .line 560
     const-string v1, "wifi_state"
 
     const/4 v2, -0x1
@@ -851,7 +786,6 @@
 
     move-result v20
 
-    .line 561
     .local v20, wifiState:I
     const/4 v1, 0x1
 
@@ -859,7 +793,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 562
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -869,7 +802,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 563
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -879,7 +811,6 @@
     #setter for: Lcom/mediatek/agps/MtkAgpsManagerService;->mDataConnWifi:I
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$1402(Lcom/mediatek/agps/MtkAgpsManagerService;I)I
 
-    .line 564
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -900,7 +831,6 @@
 
     goto/16 :goto_0
 
-    .line 566
     .end local v20           #wifiState:I
     :cond_e
     const-string v1, "com.mediatek.agps.EPO_EVENT"
@@ -911,7 +841,6 @@
 
     if-eqz v1, :cond_f
 
-    .line 567
     const-string v1, "event"
 
     const/4 v2, 0x0
@@ -922,7 +851,6 @@
 
     move-result v11
 
-    .line 568
     .local v11, event:I
     move-object/from16 v0, p0
 
@@ -949,7 +877,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 569
     const/16 v1, 0x16
 
     if-lt v11, v1, :cond_0
@@ -958,7 +885,6 @@
 
     if-gt v11, v1, :cond_0
 
-    .line 571
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/mediatek/agps/MtkAgpsManagerService$2;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -970,7 +896,6 @@
 
     goto/16 :goto_0
 
-    .line 574
     .end local v11           #event:I
     :cond_f
     move-object/from16 v0, p0

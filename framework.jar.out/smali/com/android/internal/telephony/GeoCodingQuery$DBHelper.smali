@@ -30,7 +30,6 @@
     .parameter "context"
 
     .prologue
-    .line 175
     const-string v0, "/system/etc/geocoding.db"
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 176
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .parameter "db"
 
     .prologue
-    .line 180
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .parameter "newVersion"
 
     .prologue
-    .line 184
     return-void
 .end method
 
@@ -74,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 187
     const-string v0, "/system/etc/geocoding.db"
 
     const/4 v1, 0x0
@@ -87,7 +82,6 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/GeoCodingQuery$DBHelper;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 188
     iget-object v0, p0, Lcom/android/internal/telephony/GeoCodingQuery$DBHelper;->mDatabase:Landroid/database/sqlite/SQLiteDatabase;
 
     return-object v0

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 121
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -38,13 +37,11 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->updateTargets()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->access$700(Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;)V
 
-    .line 126
     return-void
 .end method
 
@@ -53,12 +50,10 @@
     .parameter "simState"
 
     .prologue
-    .line 130
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->updateTargets()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;->access$700(Lcom/android/internal/policy/impl/keyguard/KeyguardSelectorView;)V
 
-    .line 131
     return-void
 .end method

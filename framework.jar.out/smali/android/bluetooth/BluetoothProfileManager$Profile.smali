@@ -84,7 +84,6 @@
 
     const/4 v4, 0x0
 
-    .line 119
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_HEADSET"
@@ -93,7 +92,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HEADSET:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 120
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_A2DP"
@@ -102,7 +100,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_A2DP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 121
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_HID"
@@ -111,7 +108,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_HID:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 122
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_FTP_Client"
@@ -120,7 +116,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_FTP_Client:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 123
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_FTP_Server"
@@ -129,7 +124,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_FTP_Server:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 124
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_BIP_Initiator"
@@ -142,7 +136,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_BIP_Initiator:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 125
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_BIP_Responder"
@@ -155,7 +148,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_BIP_Responder:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 126
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_BPP_Sender"
@@ -168,7 +160,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_BPP_Sender:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 127
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_SIMAP"
@@ -181,7 +172,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_SIMAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 128
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_PBAP"
@@ -194,7 +184,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PBAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 129
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_OPP_Server"
@@ -207,7 +196,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_OPP_Server:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 130
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_OPP_Client"
@@ -220,7 +208,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_OPP_Client:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 131
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_DUN"
@@ -233,7 +220,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_DUN:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 132
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_AVRCP"
@@ -246,7 +232,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_AVRCP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 133
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_PRXM"
@@ -259,7 +244,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXM:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 134
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_PRXR"
@@ -272,7 +256,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PRXR:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 135
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_PAN_NAP"
@@ -285,7 +268,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PAN_NAP:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 136
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_PAN_GN"
@@ -298,7 +280,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_PAN_GN:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 137
     new-instance v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     const-string v1, "Bluetooth_MAP_Server"
@@ -311,7 +292,6 @@
 
     sput-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->Bluetooth_MAP_Server:Landroid/bluetooth/BluetoothProfileManager$Profile;
 
-    .line 118
     const/16 v0, 0x13
 
     new-array v0, v0, [Landroid/bluetooth/BluetoothProfileManager$Profile;
@@ -437,13 +417,10 @@
     .end annotation
 
     .prologue
-    .line 141
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 142
     iput p3, p0, Landroid/bluetooth/BluetoothProfileManager$Profile;->localizedString:I
 
-    .line 143
     return-void
 .end method
 
@@ -452,7 +429,6 @@
     .parameter "name"
 
     .prologue
-    .line 118
     const-class v0, Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -468,7 +444,6 @@
     .locals 1
 
     .prologue
-    .line 118
     sget-object v0, Landroid/bluetooth/BluetoothProfileManager$Profile;->$VALUES:[Landroid/bluetooth/BluetoothProfileManager$Profile;
 
     invoke-virtual {v0}, [Landroid/bluetooth/BluetoothProfileManager$Profile;->clone()Ljava/lang/Object;

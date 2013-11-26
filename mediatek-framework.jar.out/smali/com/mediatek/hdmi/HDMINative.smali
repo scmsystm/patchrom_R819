@@ -15,19 +15,16 @@
     .locals 2
 
     .prologue
-    .line 49
     const-string v0, "hdmi"
 
     const-string v1, "load libhdminative_jni.so"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     const-string v0, "mtkhdmi_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
@@ -35,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

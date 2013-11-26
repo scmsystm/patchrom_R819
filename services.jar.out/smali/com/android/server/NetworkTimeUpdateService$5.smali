@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 478
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$5;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,12 +38,10 @@
     .parameter "msg"
 
     .prologue
-    .line 480
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
 
-    .line 481
     .local v0, timeoutMsg:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/NetworkTimeUpdateService$5;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
@@ -61,6 +58,5 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 482
     return-void
 .end method

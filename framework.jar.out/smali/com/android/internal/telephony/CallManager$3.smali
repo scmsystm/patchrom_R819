@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 3803
     invoke-static {}, Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;->values()[Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
 
     move-result-object v0
@@ -67,7 +66,6 @@
     :try_end_1
     .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 613
     :goto_1
     invoke-static {}, Lcom/android/internal/telephony/PhoneConstants$State;->values()[Lcom/android/internal/telephony/PhoneConstants$State;
 
@@ -123,7 +121,6 @@
 
     goto :goto_2
 
-    .line 3803
     :catch_2
     move-exception v0
 

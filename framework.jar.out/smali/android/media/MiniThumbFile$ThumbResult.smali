@@ -31,10 +31,8 @@
     .locals 1
 
     .prologue
-    .line 367
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 381
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/media/MiniThumbFile$ThumbResult;->mDetail:I
@@ -48,7 +46,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget v0, p0, Landroid/media/MiniThumbFile$ThumbResult;->mDetail:I
 
     return v0
@@ -59,9 +56,7 @@
     .parameter "detail"
 
     .prologue
-    .line 384
     iput p1, p0, Landroid/media/MiniThumbFile$ThumbResult;->mDetail:I
 
-    .line 385
     return-void
 .end method

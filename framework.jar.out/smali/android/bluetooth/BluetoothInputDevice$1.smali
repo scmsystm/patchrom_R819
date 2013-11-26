@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 204
     iput-object p1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +42,18 @@
     .parameter "service"
 
     .prologue
-    .line 206
     const-string v0, "BluetoothInputDevice"
 
-    const-string/jumbo v1, "onServiceConnected"
+    const-string v1, "onServiceConnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     invoke-static {p2}, Landroid/bluetooth/IBluetoothHid$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothHid;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothInputDevice;->access$002(Landroid/bluetooth/IBluetoothHid;)Landroid/bluetooth/IBluetoothHid;
 
-    .line 208
     return-void
 .end method
 
@@ -66,18 +62,15 @@
     .parameter "className"
 
     .prologue
-    .line 211
     const-string v0, "BluetoothInputDevice"
 
-    const-string/jumbo v1, "onServiceDisconnected"
+    const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothInputDevice;->access$002(Landroid/bluetooth/IBluetoothHid;)Landroid/bluetooth/IBluetoothHid;
 
-    .line 213
     return-void
 .end method

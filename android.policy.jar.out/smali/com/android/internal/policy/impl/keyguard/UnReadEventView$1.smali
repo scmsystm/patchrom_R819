@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 52
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadEventView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadEventView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 55
     iget-object v4, p0, Lcom/android/internal/policy/impl/keyguard/UnReadEventView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadEventView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/UnReadEventView;->mNewEventViews:Ljava/util/ArrayList;
@@ -63,11 +61,9 @@
 
     if-gtz v4, :cond_1
 
-    .line 64
     :cond_0
     return-void
 
-    .line 58
     :cond_1
     iget-object v4, p0, Lcom/android/internal/policy/impl/keyguard/UnReadEventView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadEventView;
 
@@ -80,13 +76,11 @@
 
     move-result v0
 
-    .line 59
     .local v0, count:I
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 60
     .local v1, currentTime:J
     const/4 v3, 0x0
 
@@ -94,7 +88,6 @@
     :goto_0
     if-ge v3, v0, :cond_0
 
-    .line 61
     iget-object v4, p0, Lcom/android/internal/policy/impl/keyguard/UnReadEventView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadEventView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/UnReadEventView;->mNewEventViews:Ljava/util/ArrayList;
@@ -110,7 +103,6 @@
 
     invoke-virtual {v4, v1, v2}, Lcom/android/internal/policy/impl/keyguard/LockScreenNewEventView;->updateQueryBaseTime(J)V
 
-    .line 60
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0

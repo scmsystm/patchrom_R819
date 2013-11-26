@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 2032
     iput-object p1, p0, Landroid/drm/DrmManagerClient$5;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,19 +42,16 @@
     .parameter "which"
 
     .prologue
-    .line 2034
     iget-object v0, p0, Landroid/drm/DrmManagerClient$5;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     if-eqz v0, :cond_0
 
-    .line 2035
     iget-object v0, p0, Landroid/drm/DrmManagerClient$5;->val$listener:Landroid/drm/DrmManagerClient$DrmOperationListener;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Landroid/drm/DrmManagerClient$DrmOperationListener;->onOperated(I)V
 
-    .line 2037
     :cond_0
     return-void
 .end method

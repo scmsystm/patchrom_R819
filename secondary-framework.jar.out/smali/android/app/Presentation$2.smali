@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 323
     iput-object p1, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 326
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 337
     iget-object v0, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     #getter for: Landroid/app/Presentation;->mDisplay:Landroid/view/Display;
@@ -65,13 +62,11 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 338
     iget-object v0, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     #calls: Landroid/app/Presentation;->handleDisplayChanged()V
     invoke-static {v0}, Landroid/app/Presentation;->access$200(Landroid/app/Presentation;)V
 
-    .line 340
     :cond_0
     return-void
 .end method
@@ -81,7 +76,6 @@
     .parameter "displayId"
 
     .prologue
-    .line 330
     iget-object v0, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     #getter for: Landroid/app/Presentation;->mDisplay:Landroid/view/Display;
@@ -95,13 +89,11 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 331
     iget-object v0, p0, Landroid/app/Presentation$2;->this$0:Landroid/app/Presentation;
 
     #calls: Landroid/app/Presentation;->handleDisplayRemoved()V
     invoke-static {v0}, Landroid/app/Presentation;->access$100(Landroid/app/Presentation;)V
 
-    .line 333
     :cond_0
     return-void
 .end method

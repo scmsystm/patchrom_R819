@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 197
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,12 +38,10 @@
     .parameter "animator"
 
     .prologue
-    .line 199
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->pingInternal()V
 
-    .line 200
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     const/4 v1, 0x0
@@ -66,12 +63,10 @@
     #calls: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->switchToState(IFF)V
     invoke-static {v0, v1, v2, v3}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->access$300(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;IFF)V
 
-    .line 201
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->dispatchOnFinishFinalAnimation()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->access$400(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;)V
 
-    .line 202
     return-void
 .end method

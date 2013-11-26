@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 199
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .parameter "in"
 
     .prologue
-    .line 202
     new-instance v0, Lcom/android/internal/net/VpnProfile;
 
     invoke-direct {v0, p1}, Lcom/android/internal/net/VpnProfile;-><init>(Landroid/os/Parcel;)V
@@ -58,7 +56,6 @@
     .parameter "x0"
 
     .prologue
-    .line 199
     invoke-virtual {p0, p1}, Lcom/android/internal/net/VpnProfile$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/net/VpnProfile;
 
     move-result-object v0
@@ -71,7 +68,6 @@
     .parameter "size"
 
     .prologue
-    .line 207
     new-array v0, p1, [Lcom/android/internal/net/VpnProfile;
 
     return-object v0
@@ -82,7 +78,6 @@
     .parameter "x0"
 
     .prologue
-    .line 199
     invoke-virtual {p0, p1}, Lcom/android/internal/net/VpnProfile$1;->newArray(I)[Lcom/android/internal/net/VpnProfile;
 
     move-result-object v0

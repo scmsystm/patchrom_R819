@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 456
     iput-object p1, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     iput p2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->val$milliseconds:I
@@ -48,10 +47,8 @@
     .locals 5
 
     .prologue
-    .line 458
     const/4 v0, 0x0
 
-    .line 460
     .local v0, isTimeout:Z
     :try_start_0
     iget v2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->val$milliseconds:I
@@ -62,10 +59,8 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 461
     const/4 v0, 0x1
 
-    .line 464
     :goto_0
     const-string v2, "NetworkTimeUpdateService"
 
@@ -89,23 +84,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 465
     const/4 v2, 0x1
 
     if-ne v0, v2, :cond_0
 
-    .line 466
     new-instance v1, Landroid/os/Message;
 
     invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    .line 467
     .local v1, m:Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->val$timeoutMsg:Ljava/lang/String;
 
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 468
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     #getter for: Lcom/android/server/NetworkTimeUpdateService;->mGpsToastHandler:Landroid/os/Handler;
@@ -115,7 +106,6 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 470
     .end local v1           #m:Landroid/os/Message;
     :cond_0
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
@@ -134,7 +124,6 @@
 
     invoke-virtual {v2, v3}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 471
     iget-object v2, p0, Lcom/android/server/NetworkTimeUpdateService$4;->this$0:Lcom/android/server/NetworkTimeUpdateService;
 
     const/4 v3, 0x0
@@ -142,10 +131,8 @@
     #setter for: Lcom/android/server/NetworkTimeUpdateService;->mIsGpsTimeSyncRunning:Z
     invoke-static {v2, v3}, Lcom/android/server/NetworkTimeUpdateService;->access$902(Lcom/android/server/NetworkTimeUpdateService;Z)Z
 
-    .line 472
     return-void
 
-    .line 462
     :catch_0
     move-exception v2
 

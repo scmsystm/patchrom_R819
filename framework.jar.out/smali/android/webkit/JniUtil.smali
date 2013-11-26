@@ -20,17 +20,14 @@
     .locals 1
 
     .prologue
-    .line 31
-    const-string/jumbo v0, "webcore"
+    const-string v0, "webcore"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 32
     const-string v0, "chromium_net"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 33
     return-void
 .end method
 
@@ -38,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,10 +45,8 @@
     .parameter "bytesRequested"
 
     .prologue
-    .line 181
     invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    .line 182
     sget-object v4, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     const-string v5, "activity"
@@ -63,24 +57,20 @@
 
     check-cast v2, Landroid/app/ActivityManager;
 
-    .line 184
     .local v2, manager:Landroid/app/ActivityManager;
     new-instance v3, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v3}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 185
     .local v3, memInfo:Landroid/app/ActivityManager$MemoryInfo;
     invoke-virtual {v2, v3}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 186
     iget-wide v4, v3, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     iget-wide v6, v3, Landroid/app/ActivityManager$MemoryInfo;->threshold:J
 
     sub-long v0, v4, v6
 
-    .line 187
     .local v0, leftToAllocate:J
     iget-boolean v4, v3, Landroid/app/ActivityManager$MemoryInfo;->lowMemory:Z
 
@@ -105,12 +95,10 @@
     .locals 2
 
     .prologue
-    .line 43
     sget-object v0, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 44
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Call CookieSyncManager::createInstance() or create a webview before using this class"
@@ -119,7 +107,6 @@
 
     throw v0
 
-    .line 46
     :cond_0
     return-void
 .end method
@@ -133,7 +120,6 @@
 
     const/4 v13, -0x1
 
-    .line 111
     const-class v10, Landroid/webkit/JniUtil;
 
     monitor-enter v10
@@ -149,7 +135,6 @@
 
     if-eqz v11, :cond_2
 
-    .line 116
     const/16 v11, 0x3f
 
     :try_start_1
@@ -157,24 +142,20 @@
 
     move-result v3
 
-    .line 117
     .local v3, mimeIndex:I
     if-eq v3, v13, :cond_0
 
-    .line 118
     const/4 v11, 0x0
 
     invoke-virtual {p0, v11, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 120
     :cond_0
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 121
     .local v7, uri:Landroid/net/Uri;
     sget-object v11, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
@@ -186,7 +167,6 @@
 
     move-result-object v2
 
-    .line 122
     .local v2, is:Ljava/io/InputStream;
     const/16 v11, 0x400
 
@@ -195,11 +175,9 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 124
     .local v0, buffer:[B
     const-wide/16 v5, 0x0
 
-    .line 126
     .local v5, size:J
     :goto_0
     :try_start_2
@@ -212,14 +190,12 @@
     .local v4, n:I
     if-eq v4, v13, :cond_1
 
-    .line 127
     int-to-long v11, v4
 
     add-long/2addr v5, v11
 
     goto :goto_0
 
-    .line 130
     :cond_1
     :try_start_3
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
@@ -227,7 +203,6 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 138
     .end local v0           #buffer:[B
     .end local v2           #is:Ljava/io/InputStream;
     .end local v3           #mimeIndex:I
@@ -239,7 +214,6 @@
 
     return-wide v5
 
-    .line 130
     .restart local v0       #buffer:[B
     .restart local v2       #is:Ljava/io/InputStream;
     .restart local v3       #mimeIndex:I
@@ -256,7 +230,6 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 133
     .end local v0           #buffer:[B
     .end local v2           #is:Ljava/io/InputStream;
     .end local v3           #mimeIndex:I
@@ -265,10 +238,9 @@
     :catch_0
     move-exception v1
 
-    .line 134
     .local v1, e:Ljava/lang/Exception;
     :try_start_5
-    const-string/jumbo v11, "webkit"
+    const-string v11, "webkit"
 
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -294,17 +266,14 @@
 
     move-wide v5, v8
 
-    .line 135
     goto :goto_1
 
     .end local v1           #e:Ljava/lang/Exception;
     :cond_2
     move-wide v5, v8
 
-    .line 138
     goto :goto_1
 
-    .line 111
     :catchall_1
     move-exception v8
 
@@ -320,7 +289,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 150
     const-class v4, Landroid/webkit/JniUtil;
 
     monitor-enter v4
@@ -336,7 +304,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 157
     const/16 v5, 0x3f
 
     :try_start_1
@@ -344,26 +311,22 @@
 
     move-result v1
 
-    .line 158
     .local v1, mimeIndex:I
     const/4 v5, -0x1
 
     if-eq v1, v5, :cond_0
 
-    .line 159
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 161
     :cond_0
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 162
     .local v2, uri:Landroid/net/Uri;
     sget-object v5, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
@@ -378,7 +341,6 @@
 
     move-result-object v3
 
-    .line 168
     .end local v1           #mimeIndex:I
     .end local v2           #uri:Landroid/net/Uri;
     :cond_1
@@ -387,14 +349,12 @@
 
     return-object v3
 
-    .line 163
     :catch_0
     move-exception v0
 
-    .line 164
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
-    const-string/jumbo v5, "webkit"
+    const-string v5, "webkit"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -420,7 +380,6 @@
 
     goto :goto_0
 
-    .line 150
     .end local v0           #e:Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -434,7 +393,6 @@
     .locals 3
 
     .prologue
-    .line 173
     const-class v1, Landroid/webkit/JniUtil;
 
     monitor-enter v1
@@ -442,14 +400,13 @@
     :try_start_0
     invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    .line 176
     sget-object v0, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string/jumbo v2, "web_autofill_query_url"
+    const-string v2, "web_autofill_query_url"
 
     invoke-static {v0, v2}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -461,7 +418,6 @@
 
     return-object v0
 
-    .line 173
     :catchall_0
     move-exception v0
 
@@ -474,7 +430,6 @@
     .locals 3
 
     .prologue
-    .line 79
     const-class v2, Landroid/webkit/JniUtil;
 
     monitor-enter v2
@@ -482,28 +437,23 @@
     :try_start_0
     invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    .line 81
     sget-object v1, Landroid/webkit/JniUtil;->sCacheDirectory:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 82
     sget-object v1, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object v0
 
-    .line 83
     .local v0, cacheDir:Ljava/io/File;
     if-nez v0, :cond_1
 
-    .line 84
     const-string v1, ""
 
     sput-object v1, Landroid/webkit/JniUtil;->sCacheDirectory:Ljava/lang/String;
 
-    .line 90
     :cond_0
     :goto_0
     sget-object v1, Landroid/webkit/JniUtil;->sCacheDirectory:Ljava/lang/String;
@@ -514,7 +464,6 @@
 
     return-object v1
 
-    .line 86
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
@@ -527,7 +476,6 @@
 
     goto :goto_0
 
-    .line 79
     :catchall_0
     move-exception v1
 
@@ -540,7 +488,6 @@
     .locals 2
 
     .prologue
-    .line 57
     const-class v0, Landroid/webkit/JniUtil;
 
     monitor-enter v0
@@ -566,7 +513,6 @@
     .locals 3
 
     .prologue
-    .line 65
     const-class v1, Landroid/webkit/JniUtil;
 
     monitor-enter v1
@@ -574,12 +520,10 @@
     :try_start_0
     invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    .line 67
     sget-object v0, Landroid/webkit/JniUtil;->sDatabaseDirectory:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 68
     sget-object v0, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     const-string v2, "dummy"
@@ -594,7 +538,6 @@
 
     sput-object v0, Landroid/webkit/JniUtil;->sDatabaseDirectory:Ljava/lang/String;
 
-    .line 71
     :cond_0
     sget-object v0, Landroid/webkit/JniUtil;->sDatabaseDirectory:Ljava/lang/String;
     :try_end_0
@@ -604,7 +547,6 @@
 
     return-object v0
 
-    .line 65
     :catchall_0
     move-exception v0
 
@@ -617,7 +559,6 @@
     .locals 2
 
     .prologue
-    .line 98
     const-class v1, Landroid/webkit/JniUtil;
 
     monitor-enter v1
@@ -625,7 +566,6 @@
     :try_start_0
     invoke-static {}, Landroid/webkit/JniUtil;->checkInitialized()V
 
-    .line 100
     sget-object v0, Landroid/webkit/JniUtil;->sContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -638,7 +578,6 @@
 
     return-object v0
 
-    .line 98
     :catchall_0
     move-exception v0
 
@@ -652,7 +591,6 @@
     .parameter "context"
 
     .prologue
-    .line 49
     const-class v1, Landroid/webkit/JniUtil;
 
     monitor-enter v1
@@ -664,13 +602,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 54
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 53
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -683,7 +619,6 @@
 
     goto :goto_0
 
-    .line 49
     :catchall_0
     move-exception v0
 

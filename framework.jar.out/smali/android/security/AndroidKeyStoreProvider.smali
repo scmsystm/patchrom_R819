@@ -12,7 +12,6 @@
     .locals 4
 
     .prologue
-    .line 30
     const-string v0, "AndroidKeyStoreProvider"
 
     const-wide/high16 v1, 0x3ff0
@@ -21,7 +20,6 @@
 
     invoke-direct {p0, v0, v1, v2, v3}, Ljava/security/Provider;-><init>(Ljava/lang/String;DLjava/lang/String;)V
 
-    .line 33
     const-string v0, "KeyStore.AndroidKeyStore"
 
     const-class v1, Landroid/security/AndroidKeyStore;
@@ -32,7 +30,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/security/AndroidKeyStoreProvider;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 36
     const-string v0, "KeyPairGenerator.AndroidKeyPairGenerator"
 
     const-class v1, Landroid/security/AndroidKeyPairGenerator;
@@ -43,6 +40,5 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/security/AndroidKeyStoreProvider;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     return-void
 .end method

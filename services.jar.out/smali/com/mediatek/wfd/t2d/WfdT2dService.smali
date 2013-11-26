@@ -66,46 +66,36 @@
     .parameter "listener"
 
     .prologue
-    .line 79
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mFilter:Landroid/content/IntentFilter;
 
-    .line 196
     new-instance v0, Lcom/mediatek/wfd/t2d/WfdT2dService$1;
 
     invoke-direct {v0, p0}, Lcom/mediatek/wfd/t2d/WfdT2dService$1;-><init>(Lcom/mediatek/wfd/t2d/WfdT2dService;)V
 
     iput-object v0, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 80
     iput-object p1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mContext:Landroid/content/Context;
 
-    .line 81
     iput-object p5, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mListener:Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;
 
-    .line 82
     iput-object p2, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
 
-    .line 83
     iput-object p3, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
 
-    .line 84
     iput-object p4, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mRemoteDisplay:Landroid/media/RemoteDisplay;
 
-    .line 85
     iget-object v0, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mFilter:Landroid/content/IntentFilter;
 
     const-string v1, "mediatek.nfc.handover.intent.action.WFD_ACTIVE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 86
     iget-object v0, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -114,7 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 87
     return-void
 .end method
 
@@ -124,7 +113,6 @@
     .parameter "x1"
 
     .prologue
-    .line 21
     invoke-direct {p0, p1}, Lcom/mediatek/wfd/t2d/WfdT2dService;->handleBroadcastT2d(Landroid/content/Intent;)V
 
     return-void
@@ -135,7 +123,6 @@
     .parameter "intent"
 
     .prologue
-    .line 140
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_MAC_ADDR"
 
     move-object/from16 v0, p1
@@ -144,7 +131,6 @@
 
     move-result-object v9
 
-    .line 141
     .local v9, macAddr:[B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_NETWORK_KEY"
 
@@ -154,7 +140,6 @@
 
     move-result-object v4
 
-    .line 142
     .local v4, NetworkKey:Ljava/lang/String;
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_SSID"
 
@@ -164,7 +149,6 @@
 
     move-result-object v5
 
-    .line 143
     .local v5, SSID:Ljava/lang/String;
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_NETWORK_ID"
 
@@ -176,7 +160,6 @@
 
     move-result v3
 
-    .line 144
     .local v3, NetworkId:B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_AUTH_TYPE"
 
@@ -188,7 +171,6 @@
 
     move-result v1
 
-    .line 145
     .local v1, AuthType:S
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_ENC_TYPE"
 
@@ -200,7 +182,6 @@
 
     move-result v2
 
-    .line 146
     .local v2, EncType:S
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_VENDOR_ID"
 
@@ -210,7 +191,6 @@
 
     move-result-object v12
 
-    .line 147
     .local v12, vendorId:[B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_GC_IP"
 
@@ -220,7 +200,6 @@
 
     move-result-object v6
 
-    .line 148
     .local v6, gcIp:[B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_GO_IP"
 
@@ -230,7 +209,6 @@
 
     move-result-object v7
 
-    .line 149
     .local v7, goIp:[B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_MAX_HEIGHT"
 
@@ -240,7 +218,6 @@
 
     move-result-object v10
 
-    .line 150
     .local v10, maxHeight:[B
     const-string v13, "mediatek.nfc.handover.intent.extra.WFD_MAX_WIDTH"
 
@@ -250,22 +227,18 @@
 
     move-result-object v11
 
-    .line 151
     .local v11, maxWidth:[B
     new-instance v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;
 
     invoke-direct {v8}, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;-><init>()V
 
-    .line 152
     .local v8, info:Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;
     iput v3, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->networkId:I
 
-    .line 153
     const/4 v13, -0x1
 
     iput v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->venderId:I
 
-    .line 154
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/mediatek/wfd/t2d/WfdT2dService;->convertDeviceAddress([B)Ljava/lang/String;
@@ -274,7 +247,6 @@
 
     iput-object v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->deviceAddress:Ljava/lang/String;
 
-    .line 155
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -299,10 +271,8 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iput-object v5, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->ssid:Ljava/lang/String;
 
-    .line 157
     move-object/from16 v0, p0
 
     invoke-direct {v0, v1}, Lcom/mediatek/wfd/t2d/WfdT2dService;->convertTo4DigitsHexString(S)Ljava/lang/String;
@@ -311,7 +281,6 @@
 
     iput-object v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->authType:Ljava/lang/String;
 
-    .line 158
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -336,7 +305,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Lcom/mediatek/wfd/t2d/WfdT2dService;->convertTo4DigitsHexString(S)Ljava/lang/String;
@@ -345,7 +313,6 @@
 
     iput-object v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->encrType:Ljava/lang/String;
 
-    .line 160
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -370,15 +337,12 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     iput-object v4, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->psk:Ljava/lang/String;
 
-    .line 162
     move-object/from16 v0, p0
 
     iput-object v6, v0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mGcIp:[B
 
-    .line 163
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/mediatek/wfd/t2d/WfdT2dService;->convertIp([B)Ljava/lang/String;
@@ -387,7 +351,6 @@
 
     iput-object v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->gcIpAddress:Ljava/lang/String;
 
-    .line 164
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -412,7 +375,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/mediatek/wfd/t2d/WfdT2dService;->convertIp([B)Ljava/lang/String;
@@ -421,7 +383,6 @@
 
     iput-object v13, v8, Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;->goIpAddress:Ljava/lang/String;
 
-    .line 166
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -446,7 +407,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     const-string v13, "WfdT2dService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -469,7 +429,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     return-object v8
 .end method
 
@@ -484,14 +443,12 @@
 
     const/4 v8, 0x5
 
-    .line 95
     if-eqz p1, :cond_0
 
     array-length v6, p1
 
     if-eq v6, v7, :cond_2
 
-    .line 96
     :cond_0
     const-string v6, "WfdT2dService"
 
@@ -499,14 +456,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     const/4 v2, 0x0
 
-    .line 112
     :cond_1
     return-object v2
 
-    .line 99
     :cond_2
     new-array v0, v7, [Ljava/lang/String;
 
@@ -544,11 +498,9 @@
 
     aput-object v6, v0, v8
 
-    .line 100
     .local v0, hex:[Ljava/lang/String;
     const-string v2, ""
 
-    .line 101
     .local v2, out:Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -558,22 +510,18 @@
 
     if-ge v1, v6, :cond_1
 
-    .line 103
     aget-byte v6, p1, v1
 
     and-int/lit16 v5, v6, 0xff
 
-    .line 104
     .local v5, v:I
     div-int/lit8 v3, v5, 0x10
 
-    .line 105
     .local v3, q:I
     mul-int/lit8 v6, v3, 0x10
 
     sub-int v4, v5, v6
 
-    .line 106
     .local v4, r:I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -598,7 +546,6 @@
 
     move-result-object v2
 
-    .line 107
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -622,10 +569,8 @@
 
     move-result-object v2
 
-    .line 108
     if-eq v1, v8, :cond_3
 
-    .line 109
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -644,13 +589,11 @@
 
     move-result-object v2
 
-    .line 101
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 106
     :cond_4
     add-int/lit8 v6, v3, -0xa
 
@@ -658,7 +601,6 @@
 
     goto :goto_1
 
-    .line 107
     :cond_5
     add-int/lit8 v6, v4, -0xa
 
@@ -672,10 +614,8 @@
     .parameter "ByteArray"
 
     .prologue
-    .line 116
     const/4 v2, 0x3
 
-    .line 118
     .local v2, separateLength:I
     array-length v3, p1
 
@@ -683,7 +623,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 119
     const-string v3, "WfdT2dService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -708,7 +647,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -718,7 +656,6 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 124
     .local v1, sb:Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -728,19 +665,16 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 125
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
 
     if-lez v3, :cond_1
 
-    .line 126
     const/16 v3, 0x2e
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 127
     :cond_1
     const-string v3, "%d"
 
@@ -772,12 +706,10 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 124
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 130
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -791,10 +723,8 @@
     .parameter "encType"
 
     .prologue
-    .line 134
     const-string v0, "0x"
 
-    .line 135
     .local v0, ret:Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -830,7 +760,6 @@
 
     move-result-object v0
 
-    .line 136
     return-object v0
 .end method
 
@@ -838,14 +767,12 @@
     .locals 3
 
     .prologue
-    .line 90
     const-string v0, "WfdT2dService"
 
     const-string v1, "crash me!!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     const-string v0, "WfdT2dService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -874,7 +801,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     return-void
 .end method
 
@@ -883,7 +809,6 @@
     .parameter "info"
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mWifiP2pManager:Landroid/net/wifi/p2p/WifiP2pManager;
 
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mChannel:Landroid/net/wifi/p2p/WifiP2pManager$Channel;
@@ -892,7 +817,6 @@
 
     invoke-virtual {v0, v1, p1, v2}, Landroid/net/wifi/p2p/WifiP2pManager;->fastConnectAsGc(Landroid/net/wifi/p2p/WifiP2pManager$Channel;Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;Landroid/net/wifi/p2p/WifiP2pManager$ActionListener;)V
 
-    .line 173
     const/4 v0, 0x1
 
     return v0
@@ -903,56 +827,47 @@
     .parameter "intent"
 
     .prologue
-    .line 177
     const-string v1, "WfdT2dService"
 
     const-string v2, "NFC_HANDOVER_INTENT_ACTION_WFD_ACTIVE"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 178
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mListener:Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;
 
     invoke-interface {v1}, Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;->onT2dRequestReceived()I
 
     move-result v0
 
-    .line 179
     .local v0, condition:I
     if-nez v0, :cond_0
 
-    .line 180
     const-string v1, "WfdT2dService"
 
     const-string v2, "REJECT_T2D"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :goto_0
     return-void
 
-    .line 181
     :cond_0
     const/4 v1, 0x1
 
     if-ne v1, v0, :cond_2
 
-    .line 182
     const-string v1, "WfdT2dService"
 
     const-string v2, "ALLOW_T2D"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     invoke-direct {p0, p1}, Lcom/mediatek/wfd/t2d/WfdT2dService;->constructFastConnectInfo(Landroid/content/Intent;)Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mFastInfo:Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;
 
-    .line 184
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mFastInfo:Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;
 
     invoke-direct {p0, v1}, Lcom/mediatek/wfd/t2d/WfdT2dService;->doFastConnection(Landroid/net/wifi/p2p/fastconnect/WifiP2pFastConnectInfo;)Z
@@ -961,21 +876,18 @@
 
     if-nez v1, :cond_1
 
-    .line 185
     const-string v1, "WfdT2dService"
 
     const-string v2, "doFastConnection() fail"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 186
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mListener:Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;
 
     invoke-interface {v1}, Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;->onT2dConnectFail()V
 
     goto :goto_0
 
-    .line 188
     :cond_1
     iget-object v1, p0, Lcom/mediatek/wfd/t2d/WfdT2dService;->mListener:Lcom/mediatek/wfd/t2d/WfdT2dServiceAdapter$Listener;
 
@@ -987,7 +899,6 @@
 
     goto :goto_0
 
-    .line 191
     :cond_2
     const-string v1, "WfdT2dService"
 
@@ -995,7 +906,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     invoke-direct {p0}, Lcom/mediatek/wfd/t2d/WfdT2dService;->crashMe()V
 
     goto :goto_0
@@ -1008,7 +918,6 @@
     .parameter "emConfig"
 
     .prologue
-    .line 62
     const-string v0, "WfdT2dService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1035,7 +944,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const/4 v0, 0x1
 
     return v0

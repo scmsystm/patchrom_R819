@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 678
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2$1;->this$1:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 681
     const-string v1, "GSM"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -74,7 +72,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 682
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2$1;->this$1:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2;
 
     iget-object v1, v1, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -87,7 +84,6 @@
 
     move-result-object v0
 
-    .line 683
     .local v0, response:Landroid/os/Message;
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2$1;->this$1:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$2;
 
@@ -104,6 +100,5 @@
 
     invoke-interface {v1, v2, v0}, Lcom/android/internal/telephony/CommandsInterface;->deleteSmsOnSim(ILandroid/os/Message;)V
 
-    .line 684
     return-void
 .end method

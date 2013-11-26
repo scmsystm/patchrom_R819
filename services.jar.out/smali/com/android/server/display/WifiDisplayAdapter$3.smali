@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 181
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$3;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput-object p2, p0, Lcom/android/server/display/WifiDisplayAdapter$3;->val$address:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 2
 
     .prologue
-    .line 184
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$3;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     #getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -56,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 185
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayAdapter$3;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     #getter for: Lcom/android/server/display/WifiDisplayAdapter;->mDisplayController:Lcom/android/server/display/WifiDisplayController;
@@ -68,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/WifiDisplayController;->requestConnect(Ljava/lang/String;)V
 
-    .line 187
     :cond_0
     return-void
 .end method

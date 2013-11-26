@@ -34,17 +34,14 @@
     .locals 1
 
     .prologue
-    .line 1433
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1434
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
-    .line 1435
     return-void
 .end method
 
@@ -52,32 +49,26 @@
     .locals 1
 
     .prologue
-    .line 1442
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Part;->isMedia()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1443
     const-string v0, "d"
 
-    .line 1447
     :goto_0
     return-object v0
 
-    .line 1444
     :cond_0
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->meText:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 1445
     const-string v0, "m"
 
     goto :goto_0
 
-    .line 1447
     :cond_1
     const-string v0, ""
 
@@ -91,29 +82,25 @@
     .parameter "token"
 
     .prologue
-    .line 1471
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Part;->isMedia()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1472
     new-instance v0, Ljava/lang/AssertionError;
 
-    const-string/jumbo v1, "media "
+    const-string v1, "media "
 
     invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
     throw v0
 
-    .line 1474
     :cond_0
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1475
     return-void
 .end method
 
@@ -121,14 +108,12 @@
     .locals 2
 
     .prologue
-    .line 1463
     invoke-virtual {p0}, Lcom/google/android/util/AbstractMessageParser$Part;->isMedia()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1464
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -139,7 +124,6 @@
 
     check-cast v0, Lcom/google/android/util/AbstractMessageParser$Token;
 
-    .line 1466
     :goto_0
     return-object v0
 
@@ -153,23 +137,19 @@
     .locals 3
 
     .prologue
-    .line 1483
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1484
     .local v0, buf:Ljava/lang/StringBuilder;
     iget-object v2, p0, Lcom/google/android/util/AbstractMessageParser$Part;->meText:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    .line 1485
     iget-object v2, p0, Lcom/google/android/util/AbstractMessageParser$Part;->meText:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1487
     :cond_0
     const/4 v1, 0x0
 
@@ -183,7 +163,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1488
     iget-object v2, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -198,12 +177,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1487
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1490
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -225,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 1494
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
     return-object v0
@@ -236,14 +212,13 @@
     .parameter "isSend"
 
     .prologue
-    .line 1438
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     if-eqz p1, :cond_0
 
-    const-string/jumbo v0, "s"
+    const-string v0, "s"
 
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -265,7 +240,7 @@
     return-object v0
 
     :cond_0
-    const-string/jumbo v0, "r"
+    const-string v0, "r"
 
     goto :goto_0
 .end method
@@ -278,7 +253,6 @@
 
     const/4 v2, 0x0
 
-    .line 1452
     iget-object v0, p0, Lcom/google/android/util/AbstractMessageParser$Part;->tokens:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -317,9 +291,7 @@
     .parameter "meText"
 
     .prologue
-    .line 1478
     iput-object p1, p0, Lcom/google/android/util/AbstractMessageParser$Part;->meText:Ljava/lang/String;
 
-    .line 1479
     return-void
 .end method

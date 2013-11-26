@@ -28,16 +28,12 @@
     .parameter "looper"
 
     .prologue
-    .line 2144
     iput-object p1, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
-    .line 2145
     invoke-direct {p0, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2146
     iput-object p2, p0, Landroid/media/MediaPlayer$EventHandler;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 2147
     return-void
 .end method
 
@@ -52,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 2151
     iget-object v5, p0, Landroid/media/MediaPlayer$EventHandler;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mNativeContext:I
@@ -62,26 +57,22 @@
 
     if-nez v5, :cond_1
 
-    .line 2152
     const-string v3, "MediaPlayer"
 
-    const-string/jumbo v4, "mediaplayer went away with unhandled events"
+    const-string v4, "mediaplayer went away with unhandled events"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2250
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
-    .line 2155
     :cond_1
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 2247
     const-string v3, "MediaPlayer"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -108,7 +99,6 @@
 
     goto :goto_0
 
-    .line 2157
     :sswitch_1
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -119,7 +109,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2158
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnPreparedListener:Landroid/media/MediaPlayer$OnPreparedListener;
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 2162
     :sswitch_2
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -144,7 +132,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2163
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -156,7 +143,6 @@
 
     invoke-interface {v4, v5}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 2164
     :cond_2
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -165,7 +151,6 @@
 
     goto :goto_0
 
-    .line 2168
     :sswitch_3
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -176,7 +161,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2169
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnBufferingUpdateListener:Landroid/media/MediaPlayer$OnBufferingUpdateListener;
@@ -192,7 +176,6 @@
 
     goto :goto_0
 
-    .line 2173
     :sswitch_4
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -203,7 +186,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2174
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnSeekCompleteListener:Landroid/media/MediaPlayer$OnSeekCompleteListener;
@@ -217,7 +199,6 @@
 
     goto :goto_0
 
-    .line 2178
     :sswitch_5
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -228,7 +209,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2179
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnVideoSizeChangedListener:Landroid/media/MediaPlayer$OnVideoSizeChangedListener;
@@ -246,7 +226,6 @@
 
     goto/16 :goto_0
 
-    .line 2183
     :sswitch_6
     const-string v4, "MediaPlayer"
 
@@ -290,10 +269,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2184
     const/4 v0, 0x0
 
-    .line 2185
     .local v0, error_was_handled:Z
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -304,7 +281,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 2186
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnErrorListener:Landroid/media/MediaPlayer$OnErrorListener;
@@ -322,7 +298,6 @@
 
     move-result v0
 
-    .line 2188
     :cond_3
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -335,7 +310,6 @@
 
     if-nez v0, :cond_4
 
-    .line 2189
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnCompletionListener:Landroid/media/MediaPlayer$OnCompletionListener;
@@ -347,7 +321,6 @@
 
     invoke-interface {v4, v5}, Landroid/media/MediaPlayer$OnCompletionListener;->onCompletion(Landroid/media/MediaPlayer;)V
 
-    .line 2191
     :cond_4
     iget-object v4, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -356,7 +329,6 @@
 
     goto/16 :goto_0
 
-    .line 2195
     .end local v0           #error_was_handled:Z
     :sswitch_7
     iget v3, p1, Landroid/os/Message;->arg1:I
@@ -365,7 +337,6 @@
 
     if-eq v3, v4, :cond_5
 
-    .line 2196
     const-string v3, "MediaPlayer"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -408,7 +379,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2198
     :cond_5
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -419,7 +389,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2199
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnInfoListener:Landroid/media/MediaPlayer$OnInfoListener;
@@ -437,7 +406,6 @@
 
     goto/16 :goto_0
 
-    .line 2204
     :sswitch_8
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -448,12 +416,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 2206
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     if-nez v3, :cond_6
 
-    .line 2207
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
@@ -469,7 +435,6 @@
 
     goto/16 :goto_0
 
-    .line 2209
     :cond_6
     iget-object v3, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -477,22 +442,18 @@
 
     if-eqz v3, :cond_0
 
-    .line 2210
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Parcel;
 
-    .line 2211
     .local v1, parcel:Landroid/os/Parcel;
     new-instance v2, Landroid/media/TimedText;
 
     invoke-direct {v2, v1}, Landroid/media/TimedText;-><init>(Landroid/os/Parcel;)V
 
-    .line 2212
     .local v2, text:Landroid/media/TimedText;
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    .line 2213
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnTimedTextListener:Landroid/media/MediaPlayer$OnTimedTextListener;
@@ -506,7 +467,6 @@
 
     goto/16 :goto_0
 
-    .line 2222
     .end local v1           #parcel:Landroid/os/Parcel;
     .end local v2           #text:Landroid/media/TimedText;
     :sswitch_9
@@ -540,7 +500,6 @@
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2223
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnDurationUpdateListener:Landroid/media/MediaPlayer$OnDurationUpdateListener;
@@ -550,7 +509,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2224
     iget-object v3, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
     #getter for: Landroid/media/MediaPlayer;->mOnDurationUpdateListener:Landroid/media/MediaPlayer$OnDurationUpdateListener;
@@ -566,7 +524,6 @@
 
     goto/16 :goto_0
 
-    .line 2228
     :sswitch_a
     iget-object v5, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -577,12 +534,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 2229
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-eqz v5, :cond_7
 
-    .line 2230
     const-string v5, "MediaPlayer"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -607,7 +562,6 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2233
     :cond_7
     iget-object v5, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -634,7 +588,6 @@
 
     goto :goto_1
 
-    .line 2238
     :sswitch_b
     iget-object v5, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -645,12 +598,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 2239
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-eqz v5, :cond_9
 
-    .line 2240
     const-string v5, "MediaPlayer"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -675,7 +626,6 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2242
     :cond_9
     iget-object v5, p0, Landroid/media/MediaPlayer$EventHandler;->this$0:Landroid/media/MediaPlayer;
 
@@ -702,7 +652,6 @@
 
     goto :goto_2
 
-    .line 2155
     nop
 
     :sswitch_data_0

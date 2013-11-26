@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1125
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,8 +33,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1152
-    const-string/jumbo v4, "pdus"
+    const-string v4, "pdus"
 
     invoke-virtual {p0, v4}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
 
@@ -47,26 +45,21 @@
 
     check-cast v1, [Ljava/lang/Object;
 
-    .line 1153
     .local v1, messages:[Ljava/lang/Object;
     if-nez v1, :cond_1
 
-    .line 1154
     const/4 v2, 0x0
 
-    .line 1166
     :cond_0
     return-object v2
 
-    .line 1157
     :cond_1
     array-length v4, v1
 
     new-array v2, v4, [Landroid/telephony/CbSmsMessage;
 
-    .line 1158
     .local v2, msgs:[Landroid/telephony/CbSmsMessage;
-    const-string/jumbo v4, "simId"
+    const-string v4, "simId"
 
     const/4 v5, -0x1
 
@@ -74,7 +67,6 @@
 
     move-result v3
 
-    .line 1160
     .local v3, simId:I
     const-string v4, "Telephony"
 
@@ -98,7 +90,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1163
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -107,7 +98,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 1164
     aget-object v4, v1, v0
 
     check-cast v4, [B
@@ -120,7 +110,6 @@
 
     aput-object v4, v2, v0
 
-    .line 1163
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

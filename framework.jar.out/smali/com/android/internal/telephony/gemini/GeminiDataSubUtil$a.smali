@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 164
     new-instance v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;
 
     const-string v1, "DETACHED"
@@ -105,7 +104,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;->f:Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;
 
-    .line 163
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;
@@ -152,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 163
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -163,7 +160,6 @@
     .parameter
 
     .prologue
-    .line 163
     const-class v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -179,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 163
     sget-object v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;->g:[Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;->clone()Ljava/lang/Object;
@@ -197,7 +192,6 @@
     .locals 2
 
     .prologue
-    .line 167
     sget-object v0, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$1;->a:[I
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/gemini/GeminiDataSubUtil$a;->ordinal()I
@@ -208,49 +202,41 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 174
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 168
     :pswitch_0
     const-string v0, "DETACHED"
 
     goto :goto_0
 
-    .line 169
     :pswitch_1
     const-string v0, "ATTACHING"
 
     goto :goto_0
 
-    .line 170
     :pswitch_2
     const-string v0, "ATTACHED"
 
     goto :goto_0
 
-    .line 171
     :pswitch_3
     const-string v0, "DETACHING"
 
     goto :goto_0
 
-    .line 172
     :pswitch_4
     const-string v0, "RECOVERY"
 
     goto :goto_0
 
-    .line 173
     :pswitch_5
     const-string v0, "REACTIVE"
 
     goto :goto_0
 
-    .line 167
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

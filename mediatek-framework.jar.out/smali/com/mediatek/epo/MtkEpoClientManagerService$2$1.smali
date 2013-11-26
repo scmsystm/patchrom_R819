@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 446
     iput-object p1, p0, Lcom/mediatek/epo/MtkEpoClientManagerService$2$1;->this$1:Lcom/mediatek/epo/MtkEpoClientManagerService$2;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -40,7 +39,6 @@
     .parameter "msg"
 
     .prologue
-    .line 449
     iget-object v0, p0, Lcom/mediatek/epo/MtkEpoClientManagerService$2$1;->this$1:Lcom/mediatek/epo/MtkEpoClientManagerService$2;
 
     iget-object v0, v0, Lcom/mediatek/epo/MtkEpoClientManagerService$2;->this$0:Lcom/mediatek/epo/MtkEpoClientManagerService;
@@ -48,6 +46,5 @@
     #calls: Lcom/mediatek/epo/MtkEpoClientManagerService;->startEpoDownload()V
     invoke-static {v0}, Lcom/mediatek/epo/MtkEpoClientManagerService;->access$400(Lcom/mediatek/epo/MtkEpoClientManagerService;)V
 
-    .line 450
     return-void
 .end method

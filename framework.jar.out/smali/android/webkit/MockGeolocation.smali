@@ -13,13 +13,10 @@
     .parameter "webViewCore"
 
     .prologue
-    .line 26
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Landroid/webkit/MockGeolocation;->mWebViewCore:Landroid/webkit/WebViewCore;
 
-    .line 28
     return-void
 .end method
 
@@ -43,12 +40,10 @@
     .parameter "message"
 
     .prologue
-    .line 50
     iget-object v0, p0, Landroid/webkit/MockGeolocation;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0, p1, p2}, Landroid/webkit/MockGeolocation;->nativeSetError(Landroid/webkit/WebViewCore;ILjava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
@@ -57,12 +52,10 @@
     .parameter "allow"
 
     .prologue
-    .line 55
     iget-object v0, p0, Landroid/webkit/MockGeolocation;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0, p1}, Landroid/webkit/MockGeolocation;->nativeSetPermission(Landroid/webkit/WebViewCore;Z)V
 
-    .line 56
     return-void
 .end method
 
@@ -73,7 +66,6 @@
     .parameter "accuracy"
 
     .prologue
-    .line 42
     iget-object v0, p0, Landroid/webkit/MockGeolocation;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     move-wide v1, p1
@@ -84,7 +76,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/webkit/MockGeolocation;->nativeSetPosition(Landroid/webkit/WebViewCore;DDD)V
 
-    .line 43
     return-void
 .end method
 
@@ -92,11 +83,9 @@
     .locals 1
 
     .prologue
-    .line 34
     iget-object v0, p0, Landroid/webkit/MockGeolocation;->mWebViewCore:Landroid/webkit/WebViewCore;
 
     invoke-static {v0}, Landroid/webkit/MockGeolocation;->nativeSetUseMock(Landroid/webkit/WebViewCore;)V
 
-    .line 35
     return-void
 .end method

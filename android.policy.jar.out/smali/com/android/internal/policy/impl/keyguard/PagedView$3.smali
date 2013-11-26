@@ -26,12 +26,10 @@
     .parameter
 
     .prologue
-    .line 1975
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/PagedView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 1976
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$3;->cancelled:Z
@@ -46,12 +44,10 @@
     .parameter "animation"
 
     .prologue
-    .line 1979
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$3;->cancelled:Z
 
-    .line 1980
     return-void
 .end method
 
@@ -60,12 +56,10 @@
     .parameter "animation"
 
     .prologue
-    .line 1983
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$3;->cancelled:Z
 
     if-nez v0, :cond_0
 
-    .line 1984
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/PagedView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/PagedView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/PagedView;->mScrollIndicator:Landroid/view/View;
@@ -77,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1986
     :cond_0
     return-void
 .end method

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 330
     iput-object p1, p0, Lcom/android/internal/policy/impl/GlobalActions$3$1$1;->this$2:Lcom/android/internal/policy/impl/GlobalActions$3$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 333
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -51,11 +49,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 337
     :goto_0
     return-void
 
-    .line 335
     :catch_0
     move-exception v0
 

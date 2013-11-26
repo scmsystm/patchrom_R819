@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 237
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,41 +35,34 @@
     .parameter "which"
 
     .prologue
-    .line 239
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$000()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 240
     const/4 v0, 0x0
 
     :try_start_0
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$102(Z)Z
 
-    .line 241
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 242
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$200()Landroid/app/AlertDialog;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 243
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$202(Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 245
     :cond_0
     return-void
 
-    .line 241
     :catchall_0
     move-exception v0
 

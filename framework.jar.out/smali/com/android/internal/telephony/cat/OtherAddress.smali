@@ -28,37 +28,29 @@
 
     const/4 v4, 0x0
 
-    .line 155
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 151
     iput v1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->addressType:I
 
-    .line 152
     iput-object v4, p0, Lcom/android/internal/telephony/cat/OtherAddress;->rawAddress:[B
 
-    .line 153
     iput-object v4, p0, Lcom/android/internal/telephony/cat/OtherAddress;->address:Ljava/net/InetAddress;
 
-    .line 157
     :try_start_0
     iput p1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->addressType:I
 
-    .line 158
     const/16 v1, 0x21
 
     iget v2, p0, Lcom/android/internal/telephony/cat/OtherAddress;->addressType:I
 
     if-ne v1, v2, :cond_1
 
-    .line 159
     const/4 v1, 0x4
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->rawAddress:[B
 
-    .line 160
     iget-object v1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->rawAddress:[B
 
     const/4 v2, 0x0
@@ -69,7 +61,6 @@
 
     invoke-static {p2, p3, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 161
     iget-object v1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->rawAddress:[B
 
     invoke-static {v1}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
@@ -78,12 +69,10 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/cat/OtherAddress;->address:Ljava/net/InetAddress;
 
-    .line 175
     :cond_0
     :goto_0
     return-void
 
-    .line 162
     :cond_1
     const/16 v1, 0x57
 
@@ -95,11 +84,9 @@
 
     goto :goto_0
 
-    .line 167
     :catch_0
     move-exception v0
 
-    .line 168
     .local v0, e:Ljava/lang/IndexOutOfBoundsException;
     const-string v1, "[BIP]"
 
@@ -107,10 +94,8 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     iput-object v4, p0, Lcom/android/internal/telephony/cat/OtherAddress;->rawAddress:[B
 
-    .line 170
     iput-object v4, p0, Lcom/android/internal/telephony/cat/OtherAddress;->address:Ljava/net/InetAddress;
 
     goto :goto_0

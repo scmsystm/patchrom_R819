@@ -76,7 +76,6 @@
     .locals 0
 
     .prologue
-    .line 87
     invoke-static {}, Landroid/graphics/PixelFormat;->nativeClassInit()V
 
     return-void
@@ -86,7 +85,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -97,23 +95,19 @@
     .parameter "format"
 
     .prologue
-    .line 91
     packed-switch p0, :pswitch_data_0
 
-    .line 101
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 99
     :pswitch_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 91
     nop
 
     :pswitch_data_0

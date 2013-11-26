@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 921
     iput-object p1, p0, Lcom/android/server/power/DisplayPowerController$3;->this$0:Lcom/android/server/power/DisplayPowerController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 924
     iget-object v0, p0, Lcom/android/server/power/DisplayPowerController$3;->this$0:Lcom/android/server/power/DisplayPowerController;
 
     #calls: Lcom/android/server/power/DisplayPowerController;->sendUpdatePowerState()V
     invoke-static {v0}, Lcom/android/server/power/DisplayPowerController;->access$200(Lcom/android/server/power/DisplayPowerController;)V
 
-    .line 925
     return-void
 .end method

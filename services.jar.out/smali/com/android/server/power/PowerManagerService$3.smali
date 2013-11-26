@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 585
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 591
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #getter for: Lcom/android/server/power/PowerManagerService;->mBootCompleted:Z
@@ -52,20 +50,17 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 592
     const-string v0, "PowerManagerService"
 
     const-string v1, "set mBootCompleted as true"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 593
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$3;->this$0:Lcom/android/server/power/PowerManagerService;
 
     #setter for: Lcom/android/server/power/PowerManagerService;->mBootCompleted:Z
     invoke-static {v0, v2}, Lcom/android/server/power/PowerManagerService;->access$2002(Lcom/android/server/power/PowerManagerService;Z)Z
 
-    .line 595
     :cond_0
     return-void
 .end method

@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 81
     iput-object p1, p0, Landroid/webkit/DateTimePickerManager$1;->val$date:Ljava/util/Date;
 
     iput-object p2, p0, Landroid/webkit/DateTimePickerManager$1;->val$view:Landroid/webkit/WebViewClassic;
@@ -54,27 +53,23 @@
 
     const/4 v1, 0x0
 
-    .line 83
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$1;->val$date:Ljava/util/Date;
 
     add-int/lit16 v4, p2, -0x76c
 
     invoke-virtual {v0, v4}, Ljava/util/Date;->setYear(I)V
 
-    .line 84
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$1;->val$date:Ljava/util/Date;
 
     invoke-virtual {v0, p3}, Ljava/util/Date;->setMonth(I)V
 
-    .line 85
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$1;->val$date:Ljava/util/Date;
 
     invoke-virtual {v0, p4}, Ljava/util/Date;->setDate(I)V
 
-    .line 86
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string/jumbo v4, "yyyy-MM-dd"
+    const-string v4, "yyyy-MM-dd"
 
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -86,7 +81,6 @@
 
     move-result-object v3
 
-    .line 87
     .local v3, output:Ljava/lang/String;
     iget-object v0, p0, Landroid/webkit/DateTimePickerManager$1;->val$view:Landroid/webkit/WebViewClassic;
 
@@ -96,6 +90,5 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebViewClassic;->replaceTextfieldText(IILjava/lang/String;II)V
 
-    .line 88
     return-void
 .end method

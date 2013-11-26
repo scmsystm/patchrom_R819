@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 248
     iput-object p1, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 251
     const-string v0, "DhcpStateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +63,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     return-void
 .end method
 
@@ -74,10 +71,8 @@
     .parameter "message"
 
     .prologue
-    .line 256
     const/4 v0, 0x1
 
-    .line 257
     .local v0, retValue:Z
     const-string v1, "DhcpStateMachine"
 
@@ -113,20 +108,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 273
     const/4 v0, 0x0
 
-    .line 276
     :goto_0
     :sswitch_0
     return v0
 
-    .line 260
     :sswitch_1
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -139,7 +130,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 261
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
 
     iget-object v2, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
@@ -154,7 +144,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_0
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -170,7 +159,6 @@
 
     goto :goto_0
 
-    .line 267
     :sswitch_2
     iget-object v1, p0, Landroid/net/DhcpStateMachine$WaitBeforeStartState;->this$0:Landroid/net/DhcpStateMachine;
 
@@ -186,7 +174,6 @@
 
     goto :goto_0
 
-    .line 258
     :sswitch_data_0
     .sparse-switch
         0x30001 -> :sswitch_0

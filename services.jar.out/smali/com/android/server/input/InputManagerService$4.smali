@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 736
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$4;->this$0:Lcom/android/server/input/InputManagerService;
 
     iput-object p2, p0, Lcom/android/server/input/InputManagerService$4;->val$availableKeyboardLayouts:Ljava/util/HashSet;
@@ -51,11 +50,9 @@
     .parameter "keyboardLayoutResId"
 
     .prologue
-    .line 740
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$4;->val$availableKeyboardLayouts:Ljava/util/HashSet;
 
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 741
     return-void
 .end method

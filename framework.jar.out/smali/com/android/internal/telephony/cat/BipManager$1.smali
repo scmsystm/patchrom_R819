@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 687
     iput-object p1, p0, Lcom/android/internal/telephony/cat/BipManager$1;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "intent"
 
     .prologue
-    .line 689
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
@@ -73,14 +71,12 @@
 
     if-nez v1, :cond_0
 
-    .line 691
     const-string v1, "[BIP]"
 
     const-string v2, "Connectivity changed onReceive Enter"
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 692
     iget-object v1, p0, Lcom/android/internal/telephony/cat/BipManager$1;->this$0:Lcom/android/internal/telephony/cat/BipManager;
 
     #getter for: Lcom/android/internal/telephony/cat/BipManager;->mHandler:Lcom/android/internal/telephony/cat/CatService;
@@ -92,7 +88,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/cat/CatService;->removeMessages(I)V
 
-    .line 694
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/internal/telephony/cat/BipManager$ConnectivityChangeThread;
@@ -103,18 +98,15 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 695
     .local v0, rt:Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 696
     const-string v1, "[BIP]"
 
     const-string v2, "Connectivity changed onReceive Leave"
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 698
     .end local v0           #rt:Ljava/lang/Thread;
     :cond_0
     return-void

@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 43
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/filterfw/MffEnvironment;-><init>(Landroid/filterfw/core/FrameManager;)V
 
-    .line 44
     return-void
 .end method
 
@@ -22,10 +20,8 @@
     .parameter "frameManager"
 
     .prologue
-    .line 53
     invoke-direct {p0, p1}, Landroid/filterfw/MffEnvironment;-><init>(Landroid/filterfw/core/FrameManager;)V
 
-    .line 54
     return-void
 .end method
 
@@ -37,7 +33,6 @@
     .parameter "parameters"
 
     .prologue
-    .line 66
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,7 +61,6 @@
 
     move-result-object v1
 
-    .line 67
     .local v1, filterName:Ljava/lang/String;
     invoke-static {}, Landroid/filterfw/core/FilterFactory;->sharedFactory()Landroid/filterfw/core/FilterFactory;
 
@@ -76,11 +70,9 @@
 
     move-result-object v0
 
-    .line 68
     .local v0, filter:Landroid/filterfw/core/Filter;
     invoke-virtual {v0, p2}, Landroid/filterfw/core/Filter;->initWithAssignmentList([Ljava/lang/Object;)V
 
-    .line 69
     new-instance v2, Landroid/filterfw/core/FilterFunction;
 
     invoke-virtual {p0}, Landroid/filterfw/FilterFunctionEnvironment;->getContext()Landroid/filterfw/core/FilterContext;

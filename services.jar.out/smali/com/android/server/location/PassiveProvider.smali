@@ -25,7 +25,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 46
     new-instance v0, Lcom/android/internal/location/ProviderProperties;
 
     const/4 v8, 0x1
@@ -56,13 +55,10 @@
     .parameter "locationManager"
 
     .prologue
-    .line 53
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/location/PassiveProvider;->mLocationManager:Landroid/location/ILocationManager;
 
-    .line 55
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 78
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .parameter "args"
 
     .prologue
-    .line 122
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +100,6 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 123
     return-void
 .end method
 
@@ -114,7 +107,6 @@
     .locals 0
 
     .prologue
-    .line 74
     return-void
 .end method
 
@@ -123,7 +115,6 @@
     .parameter "times"
 
     .prologue
-    .line 126
     const/4 v0, -0x1
 
     return v0
@@ -133,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const-string v0, "passive"
 
     return-object v0
@@ -143,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 64
     sget-object v0, Lcom/android/server/location/PassiveProvider;->PROPERTIES:Lcom/android/internal/location/ProviderProperties;
 
     return-object v0
@@ -154,15 +143,12 @@
     .parameter "extras"
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
     if-eqz v0, :cond_0
 
-    .line 83
     const/4 v0, 0x2
 
-    .line 85
     :goto_0
     return v0
 
@@ -176,7 +162,6 @@
     .locals 2
 
     .prologue
-    .line 91
     const-wide/16 v0, -0x1
 
     return-wide v0
@@ -186,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x1
 
     return v0
@@ -198,7 +182,6 @@
     .parameter "extras"
 
     .prologue
-    .line 117
     const/4 v0, 0x0
 
     return v0
@@ -210,12 +193,10 @@
     .parameter "source"
 
     .prologue
-    .line 96
     iget-boolean v0, p1, Lcom/android/internal/location/ProviderRequest;->reportLocation:Z
 
     iput-boolean v0, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
-    .line 97
     return-void
 .end method
 
@@ -224,7 +205,6 @@
     .parameter "userId"
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -232,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 130
     const/4 v0, -0x1
 
     return v0
@@ -243,12 +222,10 @@
     .parameter "location"
 
     .prologue
-    .line 105
     iget-boolean v1, p0, Lcom/android/server/location/PassiveProvider;->mReportLocation:Z
 
     if-eqz v1, :cond_0
 
-    .line 108
     :try_start_0
     iget-object v1, p0, Lcom/android/server/location/PassiveProvider;->mLocationManager:Landroid/location/ILocationManager;
 
@@ -258,16 +235,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 113
     :cond_0
     :goto_0
     return-void
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, e:Landroid/os/RemoteException;
     const-string v1, "PassiveProvider"
 

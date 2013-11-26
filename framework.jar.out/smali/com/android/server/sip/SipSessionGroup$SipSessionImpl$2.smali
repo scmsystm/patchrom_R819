@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 988
     iput-object p1, p0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2;->this$1:Lcom/android/server/sip/SipSessionGroup$SipSessionImpl;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .parameter "realm"
 
     .prologue
-    .line 991
     new-instance v0, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2$1;-><init>(Lcom/android/server/sip/SipSessionGroup$SipSessionImpl$2;)V

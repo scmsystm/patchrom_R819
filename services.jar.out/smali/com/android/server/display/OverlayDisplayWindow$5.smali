@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 350
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "detector"
 
     .prologue
-    .line 353
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
@@ -48,12 +46,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/display/OverlayDisplayWindow;->access$932(Lcom/android/server/display/OverlayDisplayWindow;F)F
 
-    .line 354
     iget-object v0, p0, Lcom/android/server/display/OverlayDisplayWindow$5;->this$0:Lcom/android/server/display/OverlayDisplayWindow;
 
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->relayout()V
 
-    .line 355
     const/4 v0, 0x1
 
     return v0

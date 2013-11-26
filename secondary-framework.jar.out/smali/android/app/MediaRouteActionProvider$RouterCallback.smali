@@ -33,17 +33,14 @@
     .parameter "ap"
 
     .prologue
-    .line 145
     invoke-direct {p0}, Landroid/media/MediaRouter$SimpleCallback;-><init>()V
 
-    .line 146
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Landroid/app/MediaRouteActionProvider$RouterCallback;->mAp:Ljava/lang/ref/WeakReference;
 
-    .line 147
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .parameter "info"
 
     .prologue
-    .line 151
     iget-object v1, p0, Landroid/app/MediaRouteActionProvider$RouterCallback;->mAp:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,18 +60,14 @@
 
     check-cast v0, Landroid/app/MediaRouteActionProvider;
 
-    .line 152
     .local v0, ap:Landroid/app/MediaRouteActionProvider;
     if-nez v0, :cond_0
 
-    .line 153
     invoke-virtual {p1, p0}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
 
-    .line 158
     :goto_0
     return-void
 
-    .line 157
     :cond_0
     invoke-virtual {v0}, Landroid/app/MediaRouteActionProvider;->refreshVisibility()V
 
@@ -88,7 +80,6 @@
     .parameter "info"
 
     .prologue
-    .line 162
     iget-object v1, p0, Landroid/app/MediaRouteActionProvider$RouterCallback;->mAp:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -97,18 +88,14 @@
 
     check-cast v0, Landroid/app/MediaRouteActionProvider;
 
-    .line 163
     .local v0, ap:Landroid/app/MediaRouteActionProvider;
     if-nez v0, :cond_0
 
-    .line 164
     invoke-virtual {p1, p0}, Landroid/media/MediaRouter;->removeCallback(Landroid/media/MediaRouter$Callback;)V
 
-    .line 169
     :goto_0
     return-void
 
-    .line 168
     :cond_0
     invoke-virtual {v0}, Landroid/app/MediaRouteActionProvider;->refreshVisibility()V
 

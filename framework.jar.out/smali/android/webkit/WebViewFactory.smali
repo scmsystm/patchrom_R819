@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 44
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct/range {v0 .. v0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
     .parameter "loader"
 
     .prologue
-    .line 91
     const/4 v2, 0x1
 
     :try_start_0
@@ -58,7 +55,6 @@
 
     move-result-object v0
 
-    .line 93
     .local v0, c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -70,16 +66,13 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 101
     .end local v0           #c:Ljava/lang/Class;,"Ljava/lang/Class<*>;"
     :goto_0
     return-object v2
 
-    .line 94
     :catch_0
     move-exception v1
 
-    .line 95
     .local v1, e:Ljava/lang/ClassNotFoundException;
     const-string v2, "WebViewFactory"
 
@@ -103,18 +96,15 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 101
     .end local v1           #e:Ljava/lang/ClassNotFoundException;
     :goto_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 96
     :catch_1
     move-exception v1
 
-    .line 97
     .local v1, e:Ljava/lang/IllegalAccessException;
     const-string v2, "WebViewFactory"
 
@@ -140,12 +130,10 @@
 
     goto :goto_1
 
-    .line 98
     .end local v1           #e:Ljava/lang/IllegalAccessException;
     :catch_2
     move-exception v1
 
-    .line 99
     .local v1, e:Ljava/lang/InstantiationException;
     const-string v2, "WebViewFactory"
 
@@ -176,12 +164,10 @@
     .locals 4
 
     .prologue
-    .line 47
     sget-object v2, Landroid/webkit/WebViewFactory;->sProviderLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 50
     :try_start_0
     sget-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
@@ -191,19 +177,17 @@
 
     monitor-exit v2
 
-    .line 75
     .local v0, oldPolicy:Landroid/os/StrictMode$ThreadPolicy;
     :goto_0
     return-object v1
 
-    .line 55
     .end local v0           #oldPolicy:Landroid/os/StrictMode$ThreadPolicy;
     :cond_0
     sget-boolean v1, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v1, :cond_1
 
-    const-string/jumbo v1, "webview.use_chromium"
+    const-string v1, "webview.use_chromium"
 
     const/4 v3, 0x0
 
@@ -213,14 +197,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 56
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 58
     .restart local v0       #oldPolicy:Landroid/os/StrictMode$ThreadPolicy;
     :try_start_1
     invoke-static {}, Landroid/webkit/WebViewFactory;->loadChromiumProvider()Landroid/webkit/WebViewFactoryProvider;
@@ -231,17 +213,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 61
     :try_start_2
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 65
     :cond_1
     sget-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
     if-nez v1, :cond_2
 
-    .line 68
     const-string v1, "android.webkit.WebViewClassic$Factory"
 
     const-class v3, Landroid/webkit/WebViewFactory;
@@ -256,19 +235,16 @@
 
     sput-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
-    .line 70
     sget-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
     if-nez v1, :cond_2
 
-    .line 72
     new-instance v1, Landroid/webkit/WebViewClassic$Factory;
 
     invoke-direct {v1}, Landroid/webkit/WebViewClassic$Factory;-><init>()V
 
     sput-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
-    .line 75
     :cond_2
     sget-object v1, Landroid/webkit/WebViewFactory;->sProviderInstance:Landroid/webkit/WebViewFactoryProvider;
 
@@ -276,7 +252,6 @@
 
     goto :goto_0
 
-    .line 76
     :catchall_0
     move-exception v1
 
@@ -286,7 +261,6 @@
 
     throw v1
 
-    .line 61
     :catchall_1
     move-exception v1
 
@@ -302,7 +276,6 @@
     .locals 4
 
     .prologue
-    .line 82
     new-instance v0, Ldalvik/system/PathClassLoader;
 
     const-string v1, "/system/framework/webviewchromium.jar"
@@ -317,7 +290,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    .line 84
     .local v0, clazzLoader:Ljava/lang/ClassLoader;
     const-string v1, "com.android.webviewchromium.WebViewChromiumFactoryProvider"
 

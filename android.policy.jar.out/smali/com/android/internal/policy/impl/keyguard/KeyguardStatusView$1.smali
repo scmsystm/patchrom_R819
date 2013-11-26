@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 51
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -39,10 +38,8 @@
     .parameter "showing"
 
     .prologue
-    .line 60
     if-eqz p1, :cond_0
 
-    .line 61
     const-string v0, "KeyguardStatusView"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,12 +62,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refresh()V
 
-    .line 64
     :cond_0
     return-void
 .end method
@@ -79,11 +74,9 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView$1;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardStatusView;->refresh()V
 
-    .line 56
     return-void
 .end method

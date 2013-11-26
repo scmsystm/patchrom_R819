@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 523
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .parameter "x1"
 
     .prologue
-    .line 523
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -51,16 +49,13 @@
     .parameter "msg"
 
     .prologue
-    .line 526
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 540
     :goto_0
     return-void
 
-    .line 528
     :pswitch_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -69,7 +64,6 @@
 
     goto :goto_0
 
-    .line 531
     :pswitch_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -78,7 +72,6 @@
 
     goto :goto_0
 
-    .line 534
     :pswitch_2
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -90,7 +83,6 @@
 
     goto :goto_0
 
-    .line 537
     :pswitch_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PolicyHandler;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -102,7 +94,6 @@
 
     goto :goto_0
 
-    .line 526
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 84
     iput-object p1, p0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,19 +38,16 @@
     .parameter "msg"
 
     .prologue
-    .line 87
     move-object/from16 v0, p1
 
     iget v1, v0, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 157
     :cond_0
     :goto_0
     return-void
 
-    .line 89
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -59,17 +55,14 @@
 
     check-cast v15, Landroid/bluetooth/BluetoothHealthAppConfiguration;
 
-    .line 91
     .local v15, registerApp:Landroid/bluetooth/BluetoothHealthAppConfiguration;
     invoke-virtual {v15}, Landroid/bluetooth/BluetoothHealthAppConfiguration;->getRole()I
 
     move-result v17
 
-    .line 92
     .local v17, role:I
     const/4 v14, 0x0
 
-    .line 94
     .local v14, path:Ljava/lang/String;
     const/4 v1, 0x2
 
@@ -77,7 +70,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 95
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -110,11 +102,9 @@
 
     move-result-object v14
 
-    .line 103
     :goto_1
     if-nez v14, :cond_2
 
-    .line 104
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -124,7 +114,6 @@
     #calls: Landroid/server/BluetoothHealthProfileHandler;->callHealthApplicationStatusCallback(Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V
     invoke-static {v1, v15, v2}, Landroid/server/BluetoothHealthProfileHandler;->access$400(Landroid/server/BluetoothHealthProfileHandler;Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V
 
-    .line 106
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -138,7 +127,6 @@
 
     goto :goto_0
 
-    .line 98
     :cond_1
     move-object/from16 v0, p0
 
@@ -189,7 +177,6 @@
 
     goto :goto_1
 
-    .line 108
     :cond_2
     move-object/from16 v0, p0
 
@@ -202,7 +189,6 @@
 
     invoke-virtual {v1, v15, v14}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -214,7 +200,6 @@
 
     goto/16 :goto_0
 
-    .line 115
     .end local v14           #path:Ljava/lang/String;
     .end local v15           #registerApp:Landroid/bluetooth/BluetoothHealthAppConfiguration;
     .end local v17           #role:I
@@ -227,7 +212,6 @@
 
     check-cast v18, Landroid/bluetooth/BluetoothHealthAppConfiguration;
 
-    .line 119
     .local v18, unregisterApp:Landroid/bluetooth/BluetoothHealthAppConfiguration;
     new-instance v8, Ljava/util/ArrayList;
 
@@ -242,7 +226,6 @@
 
     invoke-direct {v8, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 122
     .local v8, cache:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/server/BluetoothHealthProfileHandler$HealthChannel;>;"
     invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -263,7 +246,6 @@
 
     check-cast v9, Landroid/server/BluetoothHealthProfileHandler$HealthChannel;
 
-    .line 123
     .local v9, chan:Landroid/server/BluetoothHealthProfileHandler$HealthChannel;
     #getter for: Landroid/server/BluetoothHealthProfileHandler$HealthChannel;->mConfig:Landroid/bluetooth/BluetoothHealthAppConfiguration;
     invoke-static {v9}, Landroid/server/BluetoothHealthProfileHandler$HealthChannel;->access$800(Landroid/server/BluetoothHealthProfileHandler$HealthChannel;)Landroid/bluetooth/BluetoothHealthAppConfiguration;
@@ -292,7 +274,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 125
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -313,7 +294,6 @@
 
     goto :goto_2
 
-    .line 129
     .end local v9           #chan:Landroid/server/BluetoothHealthProfileHandler$HealthChannel;
     :cond_4
     move-object/from16 v0, p0
@@ -346,11 +326,9 @@
 
     move-result v16
 
-    .line 131
     .local v16, result:Z
     if-eqz v16, :cond_5
 
-    .line 132
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -362,7 +340,6 @@
     #calls: Landroid/server/BluetoothHealthProfileHandler;->callHealthApplicationStatusCallback(Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V
     invoke-static {v1, v0, v2}, Landroid/server/BluetoothHealthProfileHandler;->access$400(Landroid/server/BluetoothHealthProfileHandler;Landroid/bluetooth/BluetoothHealthAppConfiguration;I)V
 
-    .line 134
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -376,7 +353,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -392,7 +368,6 @@
 
     goto/16 :goto_0
 
-    .line 137
     :cond_5
     move-object/from16 v0, p0
 
@@ -407,7 +382,6 @@
 
     goto/16 :goto_0
 
-    .line 142
     .end local v8           #cache:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/server/BluetoothHealthProfileHandler$HealthChannel;>;"
     .end local v13           #i$:Ljava/util/Iterator;
     .end local v16           #result:Z
@@ -419,7 +393,6 @@
 
     check-cast v9, Landroid/server/BluetoothHealthProfileHandler$HealthChannel;
 
-    .line 143
     .restart local v9       #chan:Landroid/server/BluetoothHealthProfileHandler$HealthChannel;
     move-object/from16 v0, p0
 
@@ -443,7 +416,6 @@
 
     move-result-object v12
 
-    .line 145
     .local v12, deviceObjectPath:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -465,7 +437,6 @@
 
     check-cast v11, Ljava/lang/String;
 
-    .line 146
     .local v11, configPath:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -481,7 +452,6 @@
 
     move-result-object v10
 
-    .line 148
     .local v10, channelType:Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -503,17 +473,14 @@
 
     if-nez v1, :cond_0
 
-    .line 150
     #getter for: Landroid/server/BluetoothHealthProfileHandler$HealthChannel;->mState:I
     invoke-static {v9}, Landroid/server/BluetoothHealthProfileHandler$HealthChannel;->access$900(Landroid/server/BluetoothHealthProfileHandler$HealthChannel;)I
 
     move-result v4
 
-    .line 151
     .local v4, prevState:I
     const/4 v5, 0x0
 
-    .line 152
     .local v5, state:I
     move-object/from16 v0, p0
 
@@ -539,7 +506,6 @@
     #calls: Landroid/server/BluetoothHealthProfileHandler;->callHealthChannelCallback(Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothDevice;IILandroid/os/ParcelFileDescriptor;I)V
     invoke-static/range {v1 .. v7}, Landroid/server/BluetoothHealthProfileHandler;->access$1300(Landroid/server/BluetoothHealthProfileHandler;Landroid/bluetooth/BluetoothHealthAppConfiguration;Landroid/bluetooth/BluetoothDevice;IILandroid/os/ParcelFileDescriptor;I)V
 
-    .line 154
     move-object/from16 v0, p0
 
     iget-object v1, v0, Landroid/server/BluetoothHealthProfileHandler$1;->this$0:Landroid/server/BluetoothHealthProfileHandler;
@@ -553,7 +519,6 @@
 
     goto/16 :goto_0
 
-    .line 87
     nop
 
     :pswitch_data_0

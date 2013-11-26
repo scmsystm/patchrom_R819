@@ -45,12 +45,10 @@
     .parameter "context"
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 147
     return-void
 .end method
 
@@ -60,22 +58,18 @@
     .parameter "attrs"
 
     .prologue
-    .line 150
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAttached:I
 
-    .line 55
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mHandler:Landroid/os/Handler;
 
-    .line 151
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .parameter "x1"
 
     .prologue
-    .line 42
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
 
     return-object p1
@@ -96,7 +89,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -107,7 +99,6 @@
     .parameter "x0"
 
     .prologue
-    .line 42
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->setDateFormat()V
 
     return-void
@@ -117,7 +108,6 @@
     .locals 3
 
     .prologue
-    .line 221
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -133,7 +123,6 @@
     :goto_0
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormat:Ljava/lang/String;
 
-    .line 222
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAmPm:Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormat:Ljava/lang/String;
@@ -146,10 +135,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;->setShowAmPm(Z)V
 
-    .line 223
     return-void
 
-    .line 221
     :cond_0
     const-string v0, "h:mm"
 
@@ -164,50 +151,41 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 165
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
-    .line 167
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAttached:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAttached:I
 
-    .line 170
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v0, :cond_0
 
-    .line 171
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/ClockView$TimeChangedReceiver;-><init>(Lcom/android/internal/policy/impl/keyguard/ClockView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 172
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 173
     .local v3, filter:Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.TIME_TICK"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 174
     const-string v0, "android.intent.action.TIME_SET"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 175
     const-string v0, "android.intent.action.TIMEZONE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 176
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -218,21 +196,18 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 180
     .end local v3           #filter:Landroid/content/IntentFilter;
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormatChangeObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_1
 
-    .line 181
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/keyguard/ClockView$FormatChangeObserver;-><init>(Lcom/android/internal/policy/impl/keyguard/ClockView;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormatChangeObserver:Landroid/database/ContentObserver;
 
-    .line 182
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -247,11 +222,9 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 186
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->updateTime()V
 
-    .line 187
     return-void
 .end method
 
@@ -261,35 +234,29 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 191
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
-    .line 193
     iget v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAttached:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAttached:I
 
-    .line 195
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 198
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormatChangeObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_1
 
-    .line 199
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -300,14 +267,11 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 203
     :cond_1
     iput-object v2, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormatChangeObserver:Landroid/database/ContentObserver;
 
-    .line 204
     iput-object v2, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 205
     return-void
 .end method
 
@@ -315,10 +279,8 @@
     .locals 2
 
     .prologue
-    .line 155
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    .line 156
     const v0, 0x1020305
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->findViewById(I)Landroid/view/View;
@@ -329,7 +291,6 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mTimeView:Landroid/widget/TextView;
 
-    .line 157
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mTimeView:Landroid/widget/TextView;
 
     const-string v1, "/system/fonts/AndroidClock.ttf"
@@ -340,7 +301,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 158
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;
 
     const/4 v1, 0x0
@@ -349,17 +309,14 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAmPm:Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;
 
-    .line 159
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
 
-    .line 160
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->setDateFormat()V
 
-    .line 161
     return-void
 .end method
 
@@ -367,7 +324,6 @@
     .locals 4
 
     .prologue
-    .line 213
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -376,7 +332,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 215
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mFormat:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
@@ -385,13 +340,11 @@
 
     move-result-object v0
 
-    .line 216
     .local v0, newTime:Ljava/lang/CharSequence;
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mTimeView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 217
     iget-object v2, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mAmPm:Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
@@ -409,10 +362,8 @@
     :goto_0
     invoke-virtual {v2, v1}, Lcom/android/internal/policy/impl/keyguard/ClockView$AmPm;->setIsMorning(Z)V
 
-    .line 218
     return-void
 
-    .line 217
     :cond_0
     const/4 v1, 0x0
 
@@ -424,12 +375,9 @@
     .parameter "c"
 
     .prologue
-    .line 208
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/ClockView;->mCalendar:Ljava/util/Calendar;
 
-    .line 209
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/ClockView;->updateTime()V
 
-    .line 210
     return-void
 .end method

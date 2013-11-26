@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 345
     const/4 v0, 0x0
 
     return-object v0
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 357
     const/4 v0, 0x0
 
     return-object v0
@@ -58,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 363
     .local p1, callback:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<[Ljava/lang/String;>;"
     return-void
 .end method
@@ -68,7 +64,6 @@
     .parameter "window"
 
     .prologue
-    .line 143
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 320
     return-void
 .end method
 
@@ -90,7 +84,6 @@
     .parameter "consoleMessage"
 
     .prologue
-    .line 330
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->message()Ljava/lang/String;
 
     move-result-object v0
@@ -105,7 +98,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/webkit/WebChromeClient;->onConsoleMessage(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 332
     const/4 v0, 0x0
 
     return v0
@@ -119,7 +111,6 @@
     .parameter "resultMsg"
 
     .prologue
-    .line 125
     const/4 v0, 0x0
 
     return v0
@@ -135,10 +126,8 @@
     .parameter "quotaUpdater"
 
     .prologue
-    .line 244
     invoke-interface {p9, p3, p4}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
 
-    .line 245
     return-void
 .end method
 
@@ -146,7 +135,6 @@
     .locals 0
 
     .prologue
-    .line 289
     return-void
 .end method
 
@@ -156,7 +144,6 @@
     .parameter "callback"
 
     .prologue
-    .line 281
     return-void
 .end method
 
@@ -164,7 +151,6 @@
     .locals 0
 
     .prologue
-    .line 95
     return-void
 .end method
 
@@ -176,7 +162,6 @@
     .parameter "result"
 
     .prologue
-    .line 157
     const/4 v0, 0x0
 
     return v0
@@ -190,7 +175,6 @@
     .parameter "result"
 
     .prologue
-    .line 215
     const/4 v0, 0x0
 
     return v0
@@ -204,7 +188,6 @@
     .parameter "result"
 
     .prologue
-    .line 175
     const/4 v0, 0x0
 
     return v0
@@ -219,7 +202,6 @@
     .parameter "result"
 
     .prologue
-    .line 194
     const/4 v0, 0x0
 
     return v0
@@ -229,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 307
     const/4 v0, 0x1
 
     return v0
@@ -240,7 +221,6 @@
     .parameter "id"
 
     .prologue
-    .line 397
     return-void
 .end method
 
@@ -253,7 +233,6 @@
     .parameter "callback"
 
     .prologue
-    .line 410
     return-void
 .end method
 
@@ -261,7 +240,6 @@
     .locals 0
 
     .prologue
-    .line 416
     return-void
 .end method
 
@@ -271,7 +249,6 @@
     .parameter "callback"
 
     .prologue
-    .line 425
     return-void
 .end method
 
@@ -281,7 +258,6 @@
     .parameter "newProgress"
 
     .prologue
-    .line 33
     return-void
 .end method
 
@@ -292,10 +268,8 @@
     .parameter "quotaUpdater"
 
     .prologue
-    .line 266
     invoke-interface {p5, p3, p4}, Landroid/webkit/WebStorage$QuotaUpdater;->updateQuota(J)V
 
-    .line 267
     return-void
 .end method
 
@@ -305,7 +279,6 @@
     .parameter "icon"
 
     .prologue
-    .line 47
     return-void
 .end method
 
@@ -315,7 +288,6 @@
     .parameter "title"
 
     .prologue
-    .line 40
     return-void
 .end method
 
@@ -326,7 +298,6 @@
     .parameter "precomposed"
 
     .prologue
-    .line 56
     return-void
 .end method
 
@@ -335,7 +306,6 @@
     .parameter "view"
 
     .prologue
-    .line 134
     return-void
 .end method
 
@@ -346,7 +316,6 @@
     .parameter "callback"
 
     .prologue
-    .line 89
     return-void
 .end method
 
@@ -356,7 +325,6 @@
     .parameter "callback"
 
     .prologue
-    .line 77
     return-void
 .end method
 
@@ -379,13 +347,11 @@
     .end annotation
 
     .prologue
-    .line 376
     .local p1, uploadFile:Landroid/webkit/ValueCallback;,"Landroid/webkit/ValueCallback<Landroid/net/Uri;>;"
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
-    .line 377
     return-void
 .end method
 
@@ -394,6 +360,5 @@
     .parameter "msg"
 
     .prologue
-    .line 387
     return-void
 .end method

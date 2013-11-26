@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 1114
     const-string v0, "content://cb/channel"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -48,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 1110
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

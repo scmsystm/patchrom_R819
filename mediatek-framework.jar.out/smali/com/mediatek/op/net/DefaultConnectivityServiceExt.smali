@@ -15,15 +15,12 @@
     .locals 1
 
     .prologue
-    .line 55
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     const-string v0, "DefaultConnectivityServiceExt in default"
 
     invoke-direct {p0, v0}, Lcom/mediatek/op/net/DefaultConnectivityServiceExt;->log(Ljava/lang/String;)V
 
-    .line 57
     return-void
 .end method
 
@@ -32,12 +29,10 @@
     .parameter "s"
 
     .prologue
-    .line 85
     const-string v0, "CDS/IConnectivityServiceExt"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 86
     return-void
 .end method
 
@@ -48,12 +43,10 @@
     .parameter "context"
 
     .prologue
-    .line 60
     const-string v0, "init in default"
 
     invoke-direct {p0, v0}, Lcom/mediatek/op/net/DefaultConnectivityServiceExt;->log(Ljava/lang/String;)V
 
-    .line 61
     return-void
 .end method
 
@@ -63,7 +56,6 @@
     .parameter "radio"
 
     .prologue
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -94,7 +86,6 @@
 
     invoke-direct {p0, v0}, Lcom/mediatek/op/net/DefaultConnectivityServiceExt;->log(Ljava/lang/String;)V
 
-    .line 75
     if-nez p2, :cond_0
 
     const/16 v0, 0x22
@@ -105,10 +96,8 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 78
     const/4 v0, 0x1
 
-    .line 81
     :goto_0
     return v0
 
@@ -124,12 +113,10 @@
     .parameter "activeDefaultNetwork"
 
     .prologue
-    .line 69
     const-string v0, "default isDefaultFailover"
 
     invoke-direct {p0, v0}, Lcom/mediatek/op/net/DefaultConnectivityServiceExt;->log(Ljava/lang/String;)V
 
-    .line 70
     const/4 v0, 0x1
 
     return v0
@@ -139,12 +126,10 @@
     .locals 1
 
     .prologue
-    .line 64
     const-string v0, "default isUserPrompt"
 
     invoke-direct {p0, v0}, Lcom/mediatek/op/net/DefaultConnectivityServiceExt;->log(Ljava/lang/String;)V
 
-    .line 65
     const/4 v0, 0x0
 
     return v0

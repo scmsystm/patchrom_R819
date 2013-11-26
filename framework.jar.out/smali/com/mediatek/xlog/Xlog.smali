@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,7 +19,6 @@
     .parameter "msg"
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -39,7 +37,6 @@
     .parameter "tr"
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -83,7 +80,6 @@
     .parameter "msg"
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     const/4 v1, 0x6
@@ -102,7 +98,6 @@
     .parameter "tr"
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     const/4 v1, 0x6
@@ -146,7 +141,6 @@
     .parameter "msg"
 
     .prologue
-    .line 60
     const/4 v0, 0x0
 
     const/4 v1, 0x4
@@ -165,7 +159,6 @@
     .parameter "tr"
 
     .prologue
-    .line 64
     const/4 v0, 0x0
 
     const/4 v1, 0x4
@@ -212,7 +205,6 @@
     .parameter "msg"
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -231,7 +223,6 @@
     .parameter "tr"
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     const/4 v1, 0x2
@@ -275,7 +266,6 @@
     .parameter "msg"
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     const/4 v1, 0x5
@@ -294,7 +284,6 @@
     .parameter "tr"
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     const/4 v1, 0x5

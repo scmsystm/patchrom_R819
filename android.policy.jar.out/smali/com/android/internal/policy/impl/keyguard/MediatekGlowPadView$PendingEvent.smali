@@ -32,7 +32,6 @@
     .parameter
 
     .prologue
-    .line 373
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$PendingEvent;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .parameter "x1"
 
     .prologue
-    .line 373
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$PendingEvent;-><init>(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;)V
 
     return-void

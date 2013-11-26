@@ -33,22 +33,16 @@
     .parameter "values"
 
     .prologue
-    .line 718
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 719
     iput p1, p0, Landroid/os/BatteryStats$BitDescription;->mask:I
 
-    .line 720
     iput p2, p0, Landroid/os/BatteryStats$BitDescription;->shift:I
 
-    .line 721
     iput-object p3, p0, Landroid/os/BatteryStats$BitDescription;->name:Ljava/lang/String;
 
-    .line 722
     iput-object p4, p0, Landroid/os/BatteryStats$BitDescription;->values:[Ljava/lang/String;
 
-    .line 723
     return-void
 .end method
 
@@ -58,25 +52,19 @@
     .parameter "name"
 
     .prologue
-    .line 711
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 712
     iput p1, p0, Landroid/os/BatteryStats$BitDescription;->mask:I
 
-    .line 713
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/os/BatteryStats$BitDescription;->shift:I
 
-    .line 714
     iput-object p2, p0, Landroid/os/BatteryStats$BitDescription;->name:Ljava/lang/String;
 
-    .line 715
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/BatteryStats$BitDescription;->values:[Ljava/lang/String;
 
-    .line 716
     return-void
 .end method

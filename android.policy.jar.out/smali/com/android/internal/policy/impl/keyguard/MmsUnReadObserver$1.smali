@@ -35,7 +35,6 @@
     .parameter
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -52,7 +51,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 61
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;
 
     iget-wide v0, v0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;->mCreateTime:J
@@ -61,7 +59,6 @@
 
     div-long v8, v0, v2
 
-    .line 62
     .local v8, queryBaseTime:J
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;
 
@@ -113,15 +110,12 @@
 
     move-result-object v6
 
-    .line 65
     .local v6, cursor:Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 66
     .local v7, mmsCount:I
     if-eqz v6, :cond_0
 
-    .line 68
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
     :try_end_0
@@ -129,13 +123,10 @@
 
     move-result v7
 
-    .line 70
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 71
     const/4 v6, 0x0
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;
 
@@ -191,14 +182,11 @@
 
     move-result-object v6
 
-    .line 78
     const/4 v10, 0x0
 
-    .line 79
     .local v10, smsCount:I
     if-eqz v6, :cond_1
 
-    .line 81
     :try_start_1
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
     :try_end_1
@@ -206,10 +194,8 @@
 
     move-result v10
 
-    .line 83
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 86
     :cond_1
     const-string v0, "MmsUnReadObserver"
 
@@ -257,7 +243,6 @@
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     add-int v0, v7, v10
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -266,19 +251,16 @@
 
     return-object v0
 
-    .line 70
     .end local v10           #smsCount:I
     :catchall_0
     move-exception v0
 
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 71
     const/4 v6, 0x0
 
     throw v0
 
-    .line 83
     .restart local v10       #smsCount:I
     :catchall_1
     move-exception v0
@@ -293,7 +275,6 @@
     .parameter "x0"
 
     .prologue
-    .line 57
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1
@@ -309,7 +290,6 @@
     .parameter "result"
 
     .prologue
-    .line 92
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver$1;->this$0:Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -318,7 +298,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/impl/keyguard/MmsUnReadObserver;->upateNewEventNumber(I)V
 
-    .line 93
     return-void
 .end method
 
@@ -327,7 +306,6 @@
     .parameter "x0"
 
     .prologue
-    .line 57
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1

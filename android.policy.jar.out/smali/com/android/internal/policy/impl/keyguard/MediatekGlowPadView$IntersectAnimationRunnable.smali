@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 2214
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$IntersectAnimationRunnable;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 2217
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$IntersectAnimationRunnable;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->mDragging:Z
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2218
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$IntersectAnimationRunnable;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     const/4 v1, 0x0
@@ -59,7 +56,6 @@
     #setter for: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->mShouldDoIntersectAnim:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->access$2502(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;Z)Z
 
-    .line 2220
     :cond_0
     return-void
 .end method

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 36
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "animation"
 
     .prologue
-    .line 39
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -55,7 +53,6 @@
 
     float-to-double v0, v3
 
-    .line 41
     .local v0, r:D
     const-wide/high16 v3, 0x4024
 
@@ -67,7 +64,6 @@
 
     double-to-float v2, v3
 
-    .line 42
     .local v2, rotation:F
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation$1;->this$0:Lcom/android/internal/policy/impl/keyguard/UnReadHintAnimation;
 
@@ -75,6 +71,5 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setRotation(F)V
 
-    .line 43
     return-void
 .end method

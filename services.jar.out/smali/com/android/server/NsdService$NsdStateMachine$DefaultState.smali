@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 152
     iput-object p1, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 155
     iget v4, p1, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 201
     const-string v4, "NsdService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -69,22 +66,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     :goto_0
     return v3
 
-    .line 157
     :sswitch_0
     iget v3, p1, Landroid/os/Message;->arg1:I
 
     if-nez v3, :cond_0
 
-    .line 158
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/internal/util/AsyncChannel;
 
-    .line 159
     .local v1, c:Lcom/android/internal/util/AsyncChannel;
     const-string v3, "NsdService"
 
@@ -92,12 +85,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     const v3, 0x11002
 
     invoke-virtual {v1, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 161
     new-instance v2, Lcom/android/server/NsdService$ClientInfo;
 
     iget-object v3, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
@@ -110,7 +101,6 @@
 
     invoke-direct {v2, v3, v1, v4, v5}, Lcom/android/server/NsdService$ClientInfo;-><init>(Lcom/android/server/NsdService;Lcom/android/internal/util/AsyncChannel;Landroid/os/Messenger;Lcom/android/server/NsdService$1;)V
 
-    .line 162
     .local v2, cInfo:Lcom/android/server/NsdService$ClientInfo;
     iget-object v3, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -125,7 +115,6 @@
 
     invoke-virtual {v3, v4, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     .end local v1           #c:Lcom/android/internal/util/AsyncChannel;
     .end local v2           #cInfo:Lcom/android/server/NsdService$ClientInfo;
     :goto_1
@@ -133,7 +122,6 @@
 
     goto :goto_0
 
-    .line 164
     :cond_0
     const-string v3, "NsdService"
 
@@ -161,7 +149,6 @@
 
     goto :goto_1
 
-    .line 168
     :sswitch_1
     iget v3, p1, Landroid/os/Message;->arg1:I
 
@@ -169,14 +156,12 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 169
     const-string v3, "NsdService"
 
     const-string v4, "Send failed, client connection lost"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     :goto_2
     iget-object v3, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -193,7 +178,6 @@
 
     goto :goto_1
 
-    .line 171
     :cond_1
     const-string v3, "NsdService"
 
@@ -221,13 +205,11 @@
 
     goto :goto_2
 
-    .line 176
     :sswitch_2
     new-instance v0, Lcom/android/internal/util/AsyncChannel;
 
     invoke-direct {v0}, Lcom/android/internal/util/AsyncChannel;-><init>()V
 
-    .line 177
     .local v0, ac:Lcom/android/internal/util/AsyncChannel;
     iget-object v3, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -250,7 +232,6 @@
 
     goto :goto_1
 
-    .line 180
     .end local v0           #ac:Lcom/android/internal/util/AsyncChannel;
     :sswitch_3
     iget-object v4, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
@@ -264,7 +245,6 @@
 
     goto :goto_1
 
-    .line 184
     :sswitch_4
     iget-object v4, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -277,7 +257,6 @@
 
     goto :goto_1
 
-    .line 188
     :sswitch_5
     iget-object v4, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -290,7 +269,6 @@
 
     goto/16 :goto_1
 
-    .line 192
     :sswitch_6
     iget-object v4, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -303,7 +281,6 @@
 
     goto/16 :goto_1
 
-    .line 196
     :sswitch_7
     iget-object v4, p0, Lcom/android/server/NsdService$NsdStateMachine$DefaultState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -316,7 +293,6 @@
 
     goto/16 :goto_1
 
-    .line 155
     :sswitch_data_0
     .sparse-switch
         0x11000 -> :sswitch_0

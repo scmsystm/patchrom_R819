@@ -21,10 +21,8 @@
     .parameter "h"
 
     .prologue
-    .line 1543
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 1544
     return-void
 .end method
 
@@ -34,10 +32,8 @@
     .parameter "attrs"
 
     .prologue
-    .line 1539
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1540
     return-void
 .end method
 
@@ -46,9 +42,7 @@
     .parameter "source"
 
     .prologue
-    .line 1547
     invoke-direct {p0, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1548
     return-void
 .end method

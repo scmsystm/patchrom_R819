@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 2541
     const-string v0, "content://telephony/carriers_gemini"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -34,7 +33,6 @@
 
     sput-object v0, Landroid/provider/Telephony$Carriers$GeminiCarriers;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 2543
     const-string v0, "content://telephony/carriers_dm_gemini"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -50,7 +48,6 @@
     .locals 0
 
     .prologue
-    .line 2540
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

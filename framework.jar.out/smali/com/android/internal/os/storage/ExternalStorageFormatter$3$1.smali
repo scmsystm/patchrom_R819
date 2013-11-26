@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 230
     iput-object p1, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3$1;->this$1:Lcom/android/internal/os/storage/ExternalStorageFormatter$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 232
     iget-object v0, p0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3$1;->this$1:Lcom/android/internal/os/storage/ExternalStorageFormatter$3;
 
     iget-object v0, v0, Lcom/android/internal/os/storage/ExternalStorageFormatter$3;->this$0:Lcom/android/internal/os/storage/ExternalStorageFormatter;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 234
     return-void
 .end method

@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 46
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/mediatek/op/audioprofile/DefaultAudioProfileExtension;->IS_SUPPORT_OUTDOOR_EDITABLE:Z
 
-    .line 50
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .parameter "customActiveProfileDeleted"
 
     .prologue
-    .line 123
     const/4 v0, 0x0
 
     return-object v0
@@ -57,7 +53,6 @@
     .parameter "context"
 
     .prologue
-    .line 90
     return-void
 .end method
 
@@ -68,7 +63,6 @@
     .parameter "newProfileKey"
 
     .prologue
-    .line 128
     const/4 v0, 0x1
 
     return v0
@@ -79,7 +73,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -90,7 +83,6 @@
     .parameter "newRingerMode"
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -103,7 +95,6 @@
     .parameter "extra"
 
     .prologue
-    .line 101
     const/4 v0, 0x0
 
     return v0
@@ -114,7 +105,6 @@
     .parameter "selfChange"
 
     .prologue
-    .line 105
     const/4 v0, 0x0
 
     return v0
@@ -125,7 +115,6 @@
     .parameter "streamType"
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     return v0
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 113
     const/4 v0, 0x1
 
     return v0
@@ -145,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const/4 v0, 0x1
 
     return v0

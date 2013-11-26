@@ -26,7 +26,6 @@
     .parameter
 
     .prologue
-    .line 1753
     iput-object p1, p0, Landroid/widget/BounceGallery$WindowRunnnable;->this$0:Landroid/widget/BounceGallery;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1753
     invoke-direct {p0, p1}, Landroid/widget/BounceGallery$WindowRunnnable;-><init>(Landroid/widget/BounceGallery;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1757
     iget-object v0, p0, Landroid/widget/BounceGallery$WindowRunnnable;->this$0:Landroid/widget/BounceGallery;
 
     #calls: Landroid/widget/BounceGallery;->getWindowAttachCount()I
@@ -62,7 +59,6 @@
 
     iput v0, p0, Landroid/widget/BounceGallery$WindowRunnnable;->mOriginalAttachCount:I
 
-    .line 1758
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 2
 
     .prologue
-    .line 1761
     iget-object v0, p0, Landroid/widget/BounceGallery$WindowRunnnable;->this$0:Landroid/widget/BounceGallery;
 
     invoke-virtual {v0}, Landroid/widget/BounceGallery;->hasWindowFocus()Z

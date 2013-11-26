@@ -14,26 +14,22 @@
     .parameter "tile"
 
     .prologue
-    .line 56
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 57
     const/4 v0, 0x0
 
     cmpg-float v0, p3, v0
 
     if-gtz v0, :cond_0
 
-    .line 58
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "radius must be > 0"
+    const-string v1, "radius must be > 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 60
     :cond_0
     iget v5, p6, Landroid/graphics/Shader$TileMode;->nativeInt:I
 
@@ -53,7 +49,6 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_instance:I
 
-    .line 61
     iget v0, p0, Landroid/graphics/Shader;->native_instance:I
 
     iget v6, p6, Landroid/graphics/Shader$TileMode;->nativeInt:I
@@ -74,7 +69,6 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_shader:I
 
-    .line 63
     return-void
 .end method
 
@@ -88,26 +82,22 @@
     .parameter "tile"
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/graphics/Shader;-><init>()V
 
-    .line 33
     const/4 v0, 0x0
 
     cmpg-float v0, p3, v0
 
     if-gtz v0, :cond_0
 
-    .line 34
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "radius must be > 0"
+    const-string v1, "radius must be > 0"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 36
     :cond_0
     array-length v0, p4
 
@@ -115,16 +105,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 37
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "needs >= 2 number of colors"
+    const-string v1, "needs >= 2 number of colors"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 39
     :cond_1
     if-eqz p5, :cond_2
 
@@ -134,7 +122,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 40
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "color and position arrays must be of equal length"
@@ -143,7 +130,6 @@
 
     throw v0
 
-    .line 42
     :cond_2
     iget v5, p6, Landroid/graphics/Shader$TileMode;->nativeInt:I
 
@@ -163,7 +149,6 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_instance:I
 
-    .line 43
     iget v0, p0, Landroid/graphics/Shader;->native_instance:I
 
     iget v6, p6, Landroid/graphics/Shader$TileMode;->nativeInt:I
@@ -184,7 +169,6 @@
 
     iput v0, p0, Landroid/graphics/Shader;->native_shader:I
 
-    .line 45
     return-void
 .end method
 

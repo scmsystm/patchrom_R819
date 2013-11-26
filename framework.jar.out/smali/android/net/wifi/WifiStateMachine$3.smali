@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 724
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$3;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 727
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 728
     .local v0, action:Ljava/lang/String;
     const-string v1, "WifiStateMachine"
 
@@ -53,7 +50,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v3, "onReceive, action:"
+    const-string v3, "onReceive, action:"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -69,7 +66,6 @@
 
     invoke-static {v1, v2}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
     const-string v1, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,7 +74,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 730
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$3;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     const/4 v2, 0x1
@@ -86,12 +81,10 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->handleScreenStateChanged(Z)V
     invoke-static {v1, v2}, Landroid/net/wifi/WifiStateMachine;->access$000(Landroid/net/wifi/WifiStateMachine;Z)V
 
-    .line 734
     :cond_0
     :goto_0
     return-void
 
-    .line 731
     :cond_1
     const-string v1, "android.intent.action.SCREEN_OFF"
 
@@ -101,7 +94,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 732
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$3;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     const/4 v2, 0x0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 85
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "v"
 
     .prologue
-    .line 87
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;->mPasswordEntry:Landroid/widget/TextView;
@@ -51,7 +49,6 @@
 
     move-result-object v0
 
-    .line 88
     .local v0, str:Ljava/lang/CharSequence;
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -59,7 +56,6 @@
 
     if-lez v1, :cond_0
 
-    .line 89
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;->mPasswordEntry:Landroid/widget/TextView;
@@ -78,12 +74,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 91
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPinView;->doHapticKeyClick()V
 
-    .line 92
     return-void
 .end method

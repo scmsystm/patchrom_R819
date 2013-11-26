@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 163
     const-class v0, Landroid/database/sqlite/SQLiteSession;
 
     invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
@@ -69,13 +68,10 @@
     .parameter "connectionPool"
 
     .prologue
-    .line 227
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
     if-nez p1, :cond_0
 
-    .line 229
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "connectionPool must not be null"
@@ -84,11 +80,9 @@
 
     throw v0
 
-    .line 232
     :cond_0
     iput-object p1, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionPool:Landroid/database/sqlite/SQLiteConnectionPool;
 
-    .line 233
     return-void
 .end method
 
@@ -99,12 +93,10 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 892
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
     if-nez v0, :cond_1
 
-    .line 893
     sget-boolean v0, Landroid/database/sqlite/SQLiteSession;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -119,7 +111,6 @@
 
     throw v0
 
-    .line 894
     :cond_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionPool:Landroid/database/sqlite/SQLiteConnectionPool;
 
@@ -129,10 +120,8 @@
 
     iput-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
-    .line 896
     iput p2, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionFlags:I
 
-    .line 898
     :cond_1
     iget v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionUseCount:I
 
@@ -140,7 +129,6 @@
 
     iput v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionUseCount:I
 
-    .line 899
     return-void
 .end method
 
@@ -154,32 +142,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 305
     if-eqz p4, :cond_0
 
-    .line 306
     invoke-virtual {p4}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 309
     :cond_0
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v2, :cond_1
 
-    .line 310
     invoke-direct {p0, v3, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 315
     :cond_1
     :try_start_0
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v2, :cond_2
 
-    .line 317
     packed-switch p1, :pswitch_data_0
 
-    .line 327
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
     const-string v3, "BEGIN;"
@@ -190,49 +171,40 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 333
     :cond_2
     :goto_0
     if-eqz p2, :cond_3
 
-    .line 335
     :try_start_1
     invoke-interface {p2}, Landroid/database/sqlite/SQLiteTransactionListener;->onBegin()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 345
     :cond_3
     :try_start_2
     invoke-direct {p0, p1, p2}, Landroid/database/sqlite/SQLiteSession;->obtainTransaction(ILandroid/database/sqlite/SQLiteTransactionListener;)Landroid/database/sqlite/SQLiteSession$Transaction;
 
     move-result-object v1
 
-    .line 346
     .local v1, transaction:Landroid/database/sqlite/SQLiteSession$Transaction;
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v2, v1, Landroid/database/sqlite/SQLiteSession$Transaction;->mParent:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 347
     iput-object v1, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 349
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v2, :cond_4
 
-    .line 350
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
-    .line 353
     :cond_4
     return-void
 
-    .line 319
     .end local v1           #transaction:Landroid/database/sqlite/SQLiteSession$Transaction;
     :pswitch_0
     :try_start_3
@@ -248,7 +220,6 @@
 
     goto :goto_0
 
-    .line 349
     :catchall_0
     move-exception v2
 
@@ -256,13 +227,11 @@
 
     if-nez v3, :cond_5
 
-    .line 350
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     :cond_5
     throw v2
 
-    .line 323
     :pswitch_1
     :try_start_4
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
@@ -275,17 +244,14 @@
 
     goto :goto_0
 
-    .line 336
     :catch_0
     move-exception v0
 
-    .line 337
     .local v0, ex:Ljava/lang/RuntimeException;
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v2, :cond_6
 
-    .line 338
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
     const-string v3, "ROLLBACK;"
@@ -294,13 +260,11 @@
 
     invoke-virtual {v2, v3, v4, p4}, Landroid/database/sqlite/SQLiteConnection;->execute(Ljava/lang/String;[Ljava/lang/Object;Landroid/os/CancellationSignal;)V
 
-    .line 340
     :cond_6
     throw v0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 317
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -316,17 +280,13 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 405
     if-eqz p1, :cond_0
 
-    .line 406
     invoke-virtual {p1}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 409
     :cond_0
     iget-object v4, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 410
     .local v4, top:Landroid/database/sqlite/SQLiteSession$Transaction;
     iget-boolean v6, v4, Landroid/database/sqlite/SQLiteSession$Transaction;->mMarkedSuccessful:Z
 
@@ -341,60 +301,47 @@
 
     move v3, v5
 
-    .line 412
     .local v3, successful:Z
     :goto_0
     const/4 v2, 0x0
 
-    .line 413
     .local v2, listenerException:Ljava/lang/RuntimeException;
     iget-object v1, v4, Landroid/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
-    .line 414
     .local v1, listener:Landroid/database/sqlite/SQLiteTransactionListener;
     if-eqz v1, :cond_2
 
-    .line 416
     if-eqz v3, :cond_5
 
-    .line 417
     :try_start_0
     invoke-interface {v1}, Landroid/database/sqlite/SQLiteTransactionListener;->onCommit()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 427
     :cond_2
     :goto_1
     iget-object v6, v4, Landroid/database/sqlite/SQLiteSession$Transaction;->mParent:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v6, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 428
     invoke-direct {p0, v4}, Landroid/database/sqlite/SQLiteSession;->recycleTransaction(Landroid/database/sqlite/SQLiteSession$Transaction;)V
 
-    .line 430
     iget-object v6, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz v6, :cond_6
 
-    .line 431
     if-nez v3, :cond_3
 
-    .line 432
     iget-object v6, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iput-boolean v5, v6, Landroid/database/sqlite/SQLiteSession$Transaction;->mChildFailed:Z
 
-    .line 446
     :cond_3
     :goto_2
     if-eqz v2, :cond_8
 
-    .line 447
     throw v2
 
-    .line 410
     .end local v1           #listener:Landroid/database/sqlite/SQLiteTransactionListener;
     .end local v2           #listenerException:Ljava/lang/RuntimeException;
     .end local v3           #successful:Z
@@ -403,7 +350,6 @@
 
     goto :goto_0
 
-    .line 419
     .restart local v1       #listener:Landroid/database/sqlite/SQLiteTransactionListener;
     .restart local v2       #listenerException:Ljava/lang/RuntimeException;
     .restart local v3       #successful:Z
@@ -415,25 +361,20 @@
 
     goto :goto_1
 
-    .line 421
     :catch_0
     move-exception v0
 
-    .line 422
     .local v0, ex:Ljava/lang/RuntimeException;
     move-object v2, v0
 
-    .line 423
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 436
     .end local v0           #ex:Ljava/lang/RuntimeException;
     :cond_6
     if-eqz v3, :cond_7
 
-    .line 437
     :try_start_2
     iget-object v5, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -445,13 +386,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 442
     :goto_3
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_2
 
-    .line 439
     :cond_7
     :try_start_3
     iget-object v5, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
@@ -466,7 +405,6 @@
 
     goto :goto_3
 
-    .line 442
     :catchall_0
     move-exception v5
 
@@ -474,7 +412,6 @@
 
     throw v5
 
-    .line 449
     :cond_8
     return-void
 .end method
@@ -489,29 +426,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 867
     if-eqz p4, :cond_0
 
-    .line 868
     invoke-virtual {p4}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 871
     :cond_0
     invoke-static {p1}, Landroid/database/DatabaseUtils;->getSqlStatementType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 872
     .local v0, type:I
     packed-switch v0, :pswitch_data_0
 
-    .line 887
     const/4 v1, 0x0
 
     :goto_0
     return v1
 
-    .line 874
     :pswitch_0
     const/4 v2, 0x2
 
@@ -521,22 +452,18 @@
 
     goto :goto_0
 
-    .line 879
     :pswitch_1
     invoke-virtual {p0}, Landroid/database/sqlite/SQLiteSession;->setTransactionSuccessful()V
 
-    .line 880
     invoke-virtual {p0, p4}, Landroid/database/sqlite/SQLiteSession;->endTransaction(Landroid/os/CancellationSignal;)V
 
     goto :goto_0
 
-    .line 884
     :pswitch_2
     invoke-virtual {p0, p4}, Landroid/database/sqlite/SQLiteSession;->endTransaction(Landroid/os/CancellationSignal;)V
 
     goto :goto_0
 
-    .line 872
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0
@@ -555,38 +482,28 @@
 
     const/4 v2, 0x0
 
-    .line 936
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionPool:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 937
     .local v0, transaction:Landroid/database/sqlite/SQLiteSession$Transaction;
     if-eqz v0, :cond_0
 
-    .line 938
     iget-object v1, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mParent:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v1, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionPool:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 939
     iput-object v3, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mParent:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 940
     iput-boolean v2, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mMarkedSuccessful:Z
 
-    .line 941
     iput-boolean v2, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mChildFailed:Z
 
-    .line 945
     :goto_0
     iput p1, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mMode:I
 
-    .line 946
     iput-object p2, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
-    .line 947
     return-object v0
 
-    .line 943
     :cond_0
     new-instance v0, Landroid/database/sqlite/SQLiteSession$Transaction;
 
@@ -602,20 +519,16 @@
     .parameter "transaction"
 
     .prologue
-    .line 951
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionPool:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iput-object v0, p1, Landroid/database/sqlite/SQLiteSession$Transaction;->mParent:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 952
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
-    .line 953
     iput-object p1, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionPool:Landroid/database/sqlite/SQLiteSession$Transaction;
 
-    .line 954
     return-void
 .end method
 
@@ -625,7 +538,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 902
     sget-boolean v0, Landroid/database/sqlite/SQLiteSession;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -640,7 +552,6 @@
 
     throw v0
 
-    .line 903
     :cond_0
     sget-boolean v0, Landroid/database/sqlite/SQLiteSession;->$assertionsDisabled:Z
 
@@ -656,7 +567,6 @@
 
     throw v0
 
-    .line 904
     :cond_1
     iget v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionUseCount:I
 
@@ -666,7 +576,6 @@
 
     if-nez v0, :cond_2
 
-    .line 906
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionPool:Landroid/database/sqlite/SQLiteConnectionPool;
 
@@ -676,14 +585,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 908
     iput-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
-    .line 911
     :cond_2
     return-void
 
-    .line 908
     :catchall_0
     move-exception v0
 
@@ -696,7 +602,6 @@
     .locals 2
 
     .prologue
-    .line 929
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v0, :cond_0
@@ -707,7 +612,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 930
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot perform this operation because a nested transaction is in progress."
@@ -716,7 +620,6 @@
 
     throw v0
 
-    .line 933
     :cond_0
     return-void
 .end method
@@ -725,12 +628,10 @@
     .locals 2
 
     .prologue
-    .line 914
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-nez v0, :cond_0
 
-    .line 915
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot perform this operation because there is no current transaction."
@@ -739,7 +640,6 @@
 
     throw v0
 
-    .line 918
     :cond_0
     return-void
 .end method
@@ -748,7 +648,6 @@
     .locals 2
 
     .prologue
-    .line 921
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz v0, :cond_0
@@ -759,7 +658,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 922
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot perform this operation because the transaction has already been marked successful.  The only thing you can do now is call endTransaction()."
@@ -768,7 +666,6 @@
 
     throw v0
 
-    .line 926
     :cond_0
     return-void
 .end method
@@ -781,13 +678,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 526
     if-eqz p3, :cond_0
 
-    .line 527
     invoke-virtual {p3}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 530
     :cond_0
     iget-object v4, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionPool:Landroid/database/sqlite/SQLiteConnectionPool;
 
@@ -801,54 +695,44 @@
 
     if-nez v4, :cond_1
 
-    .line 531
     const/4 v3, 0x0
 
-    .line 549
     :goto_0
     return v3
 
-    .line 534
     :cond_1
     iget-object v4, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iget v2, v4, Landroid/database/sqlite/SQLiteSession$Transaction;->mMode:I
 
-    .line 535
     .local v2, transactionMode:I
     iget-object v4, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     iget-object v1, v4, Landroid/database/sqlite/SQLiteSession$Transaction;->mListener:Landroid/database/sqlite/SQLiteTransactionListener;
 
-    .line 536
     .local v1, listener:Landroid/database/sqlite/SQLiteTransactionListener;
     iget v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnectionFlags:I
 
-    .line 537
     .local v0, connectionFlags:I
     invoke-direct {p0, p3, v3}, Landroid/database/sqlite/SQLiteSession;->endTransactionUnchecked(Landroid/os/CancellationSignal;Z)V
 
-    .line 539
     const-wide/16 v4, 0x0
 
     cmp-long v4, p1, v4
 
     if-lez v4, :cond_2
 
-    .line 541
     :try_start_0
     invoke-static {p1, p2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 547
     :cond_2
     :goto_1
     invoke-direct {p0, v2, v1, v0, p3}, Landroid/database/sqlite/SQLiteSession;->beginTransactionUnchecked(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroid/os/CancellationSignal;)V
 
     goto :goto_0
 
-    .line 542
     :catch_0
     move-exception v4
 
@@ -865,13 +749,10 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 297
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
-    .line 298
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->beginTransactionUnchecked(ILandroid/database/sqlite/SQLiteTransactionListener;ILandroid/os/CancellationSignal;)V
 
-    .line 300
     return-void
 .end method
 
@@ -880,10 +761,8 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 398
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
-    .line 399
     sget-boolean v0, Landroid/database/sqlite/SQLiteSession;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -898,13 +777,11 @@
 
     throw v0
 
-    .line 401
     :cond_0
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/database/sqlite/SQLiteSession;->endTransactionUnchecked(Landroid/os/CancellationSignal;Z)V
 
-    .line 402
     return-void
 .end method
 
@@ -916,19 +793,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 609
     if-nez p1, :cond_0
 
-    .line 610
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 613
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -936,15 +810,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 623
     :goto_0
     return-void
 
-    .line 617
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 619
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -952,7 +823,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 621
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -973,19 +843,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 710
     if-nez p1, :cond_0
 
-    .line 711
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 714
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -993,18 +860,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 715
     const/4 v0, 0x0
 
-    .line 723
     :goto_0
     return-object v0
 
-    .line 718
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 720
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1014,7 +877,6 @@
 
     move-result-object v0
 
-    .line 723
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1035,19 +897,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 744
     if-nez p1, :cond_0
 
-    .line 745
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 748
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -1055,18 +914,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 749
     const/4 v0, 0x0
 
-    .line 757
     :goto_0
     return v0
 
-    .line 752
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 754
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1076,7 +931,6 @@
 
     move-result v0
 
-    .line 757
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1101,32 +955,27 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 822
     if-nez p1, :cond_0
 
-    .line 823
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "sql must not be null."
+    const-string v3, "sql must not be null."
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 825
     :cond_0
     if-nez p3, :cond_1
 
-    .line 826
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v3, "window must not be null."
+    const-string v3, "window must not be null."
 
     invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v2
 
-    .line 829
     :cond_1
     move/from16 v0, p7
 
@@ -1138,17 +987,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 830
     invoke-virtual {p3}, Landroid/database/CursorWindow;->clear()V
 
-    .line 831
     const/4 v2, 0x0
 
-    .line 840
     :goto_0
     return v2
 
-    .line 834
     :cond_2
     move/from16 v0, p7
 
@@ -1156,7 +1001,6 @@
 
     invoke-direct {p0, p1, v0, v1}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 836
     :try_start_0
     iget-object v2, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1180,7 +1024,6 @@
 
     move-result v2
 
-    .line 840
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1201,19 +1044,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 778
     if-nez p1, :cond_0
 
-    .line 779
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 782
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -1221,18 +1061,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 783
     const-wide/16 v0, 0x0
 
-    .line 791
     :goto_0
     return-wide v0
 
-    .line 786
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 788
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1242,7 +1078,6 @@
 
     move-result-wide v0
 
-    .line 791
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1263,19 +1098,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 642
     if-nez p1, :cond_0
 
-    .line 643
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 646
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -1283,18 +1115,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 647
     const-wide/16 v0, 0x0
 
-    .line 654
     :goto_0
     return-wide v0
 
-    .line 650
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 652
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1304,7 +1132,6 @@
 
     move-result-wide v0
 
-    .line 654
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1325,19 +1152,16 @@
     .parameter "cancellationSignal"
 
     .prologue
-    .line 675
     if-nez p1, :cond_0
 
-    .line 676
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 679
     :cond_0
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/database/sqlite/SQLiteSession;->executeSpecial(Ljava/lang/String;[Ljava/lang/Object;ILandroid/os/CancellationSignal;)Z
 
@@ -1345,18 +1169,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 680
     const/4 v0, 0x0
 
-    .line 687
     :goto_0
     return-object v0
 
-    .line 683
     :cond_1
     invoke-direct {p0, p1, p3, p4}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 685
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1366,7 +1186,6 @@
 
     move-result-object v0
 
-    .line 687
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
     goto :goto_0
@@ -1383,7 +1202,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
     if-eqz v0, :cond_0
@@ -1403,7 +1221,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz v0, :cond_0
@@ -1429,7 +1246,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     if-eqz v0, :cond_0
@@ -1453,30 +1269,24 @@
     .parameter "outStatementInfo"
 
     .prologue
-    .line 578
     if-nez p1, :cond_0
 
-    .line 579
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    const-string/jumbo v1, "sql must not be null."
+    const-string v1, "sql must not be null."
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 582
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 583
     invoke-virtual {p3}, Landroid/os/CancellationSignal;->throwIfCanceled()V
 
-    .line 586
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Landroid/database/sqlite/SQLiteSession;->acquireConnection(Ljava/lang/String;ILandroid/os/CancellationSignal;)V
 
-    .line 588
     :try_start_0
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mConnection:Landroid/database/sqlite/SQLiteConnection;
 
@@ -1484,13 +1294,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 590
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->releaseConnection()V
 
-    .line 592
     return-void
 
-    .line 590
     :catchall_0
     move-exception v0
 
@@ -1503,20 +1310,16 @@
     .locals 2
 
     .prologue
-    .line 371
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
-    .line 372
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
-    .line 374
     iget-object v0, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/database/sqlite/SQLiteSession$Transaction;->mMarkedSuccessful:Z
 
-    .line 375
     return-void
 .end method
 
@@ -1529,19 +1332,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 504
     if-eqz p3, :cond_1
 
-    .line 505
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfNoTransaction()V
 
-    .line 506
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfTransactionMarkedSuccessful()V
 
-    .line 507
     invoke-direct {p0}, Landroid/database/sqlite/SQLiteSession;->throwIfNestedTransaction()V
 
-    .line 514
     :cond_0
     sget-boolean v1, Landroid/database/sqlite/SQLiteSession;->$assertionsDisabled:Z
 
@@ -1557,7 +1355,6 @@
 
     throw v0
 
-    .line 509
     :cond_1
     iget-object v1, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
@@ -1575,12 +1372,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 520
     :cond_2
     :goto_0
     return v0
 
-    .line 516
     :cond_3
     iget-object v1, p0, Landroid/database/sqlite/SQLiteSession;->mTransactionStack:Landroid/database/sqlite/SQLiteSession$Transaction;
 
@@ -1588,7 +1383,6 @@
 
     if-nez v1, :cond_2
 
-    .line 520
     invoke-direct {p0, p1, p2, p4}, Landroid/database/sqlite/SQLiteSession;->yieldTransactionUnchecked(JLandroid/os/CancellationSignal;)Z
 
     move-result v0

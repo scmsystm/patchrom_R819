@@ -8,10 +8,8 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 34
     return-void
 .end method
 
@@ -21,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 53
     return-void
 .end method
 
@@ -31,7 +28,6 @@
     .parameter "password"
 
     .prologue
-    .line 61
     return-void
 .end method
 
@@ -39,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 70
     const/4 v0, 0x0
 
     return v0
@@ -49,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     return v0

@@ -58,17 +58,14 @@
     .locals 1
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 54
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mMessages:Ljava/util/Vector;
 
-    .line 56
     return-void
 .end method
 
@@ -77,7 +74,6 @@
     .parameter "x0"
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;-><init>()V
 
     return-void
@@ -88,7 +84,6 @@
     .parameter "x0"
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->hasHandler()Z
 
     move-result v0
@@ -101,7 +96,6 @@
     .parameter "x0"
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->createHandler()V
 
     return-void
@@ -114,7 +108,6 @@
     .parameter "x2"
 
     .prologue
-    .line 40
     invoke-direct {p0, p1, p2}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->requestIconAndSendResult(Ljava/lang/String;Landroid/webkit/WebIconDatabase$IconListener;)V
 
     return-void
@@ -126,7 +119,6 @@
     .parameter "x1"
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->bulkRequestIcons(Landroid/os/Message;)V
 
     return-void
@@ -138,7 +130,6 @@
     .parameter "x1"
 
     .prologue
-    .line 40
     invoke-direct {p0, p1}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->postMessage(Landroid/os/Message;)V
 
     return-void
@@ -149,12 +140,10 @@
     .parameter "msg"
 
     .prologue
-    .line 142
     iget-object v9, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v9, Ljava/util/HashMap;
 
-    .line 143
     .local v9, map:Ljava/util/HashMap;
     const-string v1, "listener"
 
@@ -164,7 +153,6 @@
 
     check-cast v8, Landroid/webkit/WebIconDatabase$IconListener;
 
-    .line 144
     .local v8, listener:Landroid/webkit/WebIconDatabase$IconListener;
     const-string v1, "contentResolver"
 
@@ -174,9 +162,8 @@
 
     check-cast v0, Landroid/content/ContentResolver;
 
-    .line 145
     .local v0, cr:Landroid/content/ContentResolver;
-    const-string/jumbo v1, "where"
+    const-string v1, "where"
 
     invoke-virtual {v9, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -184,11 +171,9 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 147
     .local v3, where:Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 149
     .local v6, c:Landroid/database/Cursor;
     :try_start_0
     sget-object v1, Landroid/provider/Browser;->BOOKMARKS_URI:Landroid/net/Uri;
@@ -199,7 +184,7 @@
 
     const/4 v4, 0x0
 
-    const-string/jumbo v5, "url"
+    const-string v5, "url"
 
     aput-object v5, v2, v4
 
@@ -211,14 +196,12 @@
 
     move-result-object v6
 
-    .line 153
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 155
     :cond_0
     const/4 v1, 0x0
 
@@ -226,11 +209,9 @@
 
     move-result-object v10
 
-    .line 156
     .local v10, url:Ljava/lang/String;
     invoke-direct {p0, v10, v8}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->requestIconAndSendResult(Ljava/lang/String;Landroid/webkit/WebIconDatabase$IconListener;)V
 
-    .line 157
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -240,7 +221,6 @@
 
     if-nez v1, :cond_0
 
-    .line 162
     .end local v10           #url:Ljava/lang/String;
     :cond_1
     if-eqz v6, :cond_2
@@ -248,15 +228,12 @@
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 164
     :cond_2
     return-void
 
-    .line 159
     :catch_0
     move-exception v7
 
-    .line 160
     .local v7, e:Ljava/lang/IllegalStateException;
     :try_start_1
     const-string v1, "WebIconDatabase"
@@ -267,7 +244,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 162
     if-eqz v6, :cond_2
 
     goto :goto_0
@@ -288,7 +264,6 @@
     .locals 4
 
     .prologue
-    .line 82
     monitor-enter p0
 
     :try_start_0
@@ -296,14 +271,12 @@
 
     if-nez v1, :cond_1
 
-    .line 83
     new-instance v1, Landroid/webkit/WebIconDatabaseClassic$EventHandler$1;
 
     invoke-direct {v1, p0}, Landroid/webkit/WebIconDatabaseClassic$EventHandler$1;-><init>(Landroid/webkit/WebIconDatabaseClassic$EventHandler;)V
 
     iput-object v1, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mHandler:Landroid/os/Handler;
 
-    .line 122
     iget-object v1, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mMessages:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->size()I
@@ -314,7 +287,6 @@
     :goto_0
     if-lez v0, :cond_0
 
-    .line 123
     iget-object v2, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mMessages:Ljava/util/Vector;
@@ -329,12 +301,10 @@
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 122
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 125
     :cond_0
     const/4 v1, 0x0
 
@@ -342,14 +312,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
     .end local v0           #size:I
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 82
     :catchall_0
     move-exception v1
 
@@ -362,7 +330,6 @@
     .locals 1
 
     .prologue
-    .line 130
     monitor-enter p0
 
     :try_start_0
@@ -397,7 +364,6 @@
     .parameter "msg"
 
     .prologue
-    .line 134
     monitor-enter p0
 
     :try_start_0
@@ -405,20 +371,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mMessages:Ljava/util/Vector;
 
     invoke-virtual {v0, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 139
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 137
     :cond_0
     :try_start_1
     iget-object v0, p0, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->mHandler:Landroid/os/Handler;
@@ -429,7 +392,6 @@
 
     goto :goto_0
 
-    .line 134
     :catchall_0
     move-exception v0
 
@@ -444,17 +406,14 @@
     .parameter "listener"
 
     .prologue
-    .line 167
     #calls: Landroid/webkit/WebIconDatabaseClassic;->nativeIconForPageUrl(Ljava/lang/String;)Landroid/graphics/Bitmap;
     invoke-static {p1}, Landroid/webkit/WebIconDatabaseClassic;->access$800(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 168
     .local v0, icon:Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 169
     const/16 v1, 0xa
 
     new-instance v2, Landroid/webkit/WebIconDatabaseClassic$EventHandler$IconResult;
@@ -467,7 +426,6 @@
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebIconDatabaseClassic$EventHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -479,16 +437,13 @@
     .parameter "msg"
 
     .prologue
-    .line 73
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 78
     :goto_0
     return-void
 
-    .line 75
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -498,7 +453,6 @@
 
     goto :goto_0
 
-    .line 73
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_0

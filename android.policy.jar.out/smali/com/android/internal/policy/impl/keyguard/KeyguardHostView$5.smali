@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 758
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardHostView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardHostView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "securityVerified"
 
     .prologue
-    .line 792
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 787
     const/4 v0, 0x0
 
     return v0
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 807
     const/4 v0, 0x0
 
     return v0
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 782
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 778
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 774
     return-void
 .end method
 
@@ -97,7 +90,6 @@
     .parameter "action"
 
     .prologue
-    .line 770
     return-void
 .end method
 
@@ -105,7 +97,6 @@
     .locals 0
 
     .prologue
-    .line 766
     return-void
 .end method
 
@@ -114,7 +105,6 @@
     .parameter "clipChildren"
 
     .prologue
-    .line 802
     return-void
 .end method
 
@@ -123,7 +113,6 @@
     .parameter "visible"
 
     .prologue
-    .line 797
     return-void
 .end method
 
@@ -132,6 +121,5 @@
     .parameter "timeout"
 
     .prologue
-    .line 762
     return-void
 .end method

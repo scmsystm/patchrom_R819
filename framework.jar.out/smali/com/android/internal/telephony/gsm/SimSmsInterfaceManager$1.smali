@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 130
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -43,23 +42,19 @@
 
     const/4 v7, 0x0
 
-    .line 135
     iget v9, p1, Landroid/os/Message;->what:I
 
     sparse-switch v9, :sswitch_data_0
 
-    .line 305
     :cond_0
     :goto_0
     return-void
 
-    .line 137
     :sswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 138
     .local v1, ar:Landroid/os/AsyncResult;
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -70,7 +65,6 @@
 
     monitor-enter v9
 
-    .line 139
     :try_start_0
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -82,7 +76,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSuccess:Z
     invoke-static {v10, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$102(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 140
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mDeleteLock:Ljava/lang/Object;
@@ -92,7 +85,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 141
     monitor-exit v9
 
     goto :goto_0
@@ -109,17 +101,14 @@
     :cond_1
     move v8, v7
 
-    .line 139
     goto :goto_1
 
-    .line 144
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_1
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 145
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -130,7 +119,6 @@
 
     monitor-enter v9
 
-    .line 146
     :try_start_1
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -144,7 +132,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSuccess:Z
     invoke-static {v10, v7}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$102(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 147
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSuccess:Z
@@ -156,7 +143,6 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 149
     :try_start_2
     iget-object v7, v1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -168,7 +154,6 @@
 
     aget v4, v7, v8
 
-    .line 150
     .local v4, index:I
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -203,7 +188,6 @@
 
     iput-object v7, v8, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
-    .line 151
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -230,7 +214,6 @@
     .catch Ljava/lang/ClassCastException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 161
     .end local v4           #index:I
     :goto_2
     :try_start_3
@@ -243,22 +226,18 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 162
     monitor-exit v9
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 165
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v7, :cond_0
 
-    .line 166
     iget-object v2, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     check-cast v2, Lcom/android/internal/telephony/CommandException;
 
-    .line 168
     .local v2, e:Lcom/android/internal/telephony/CommandException;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -286,7 +265,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 171
     invoke-virtual {v2}, Lcom/android/internal/telephony/CommandException;->getCommandError()Lcom/android/internal/telephony/CommandException$Error;
 
     move-result-object v7
@@ -295,7 +273,6 @@
 
     if-ne v7, v8, :cond_0
 
-    .line 172
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/IccSmsInterfaceManager;->mDispatcher:Lcom/android/internal/telephony/SMSDispatcher;
@@ -307,19 +284,16 @@
 
     goto/16 :goto_0
 
-    .line 152
     .end local v2           #e:Lcom/android/internal/telephony/CommandException;
     :catch_0
     move-exception v2
 
-    .line 153
     .local v2, e:Ljava/lang/ClassCastException;
     :try_start_4
     invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 162
     .end local v2           #e:Ljava/lang/ClassCastException;
     :catchall_1
     move-exception v7
@@ -330,18 +304,15 @@
 
     throw v7
 
-    .line 154
     :catch_1
     move-exception v3
 
-    .line 155
     .local v3, ex:Ljava/lang/Exception;
     :try_start_5
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 158
     .end local v3           #ex:Ljava/lang/Exception;
     :cond_3
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -350,7 +321,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 159
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -384,14 +354,12 @@
 
     goto :goto_2
 
-    .line 178
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_2
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 179
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -402,13 +370,11 @@
 
     monitor-enter v8
 
-    .line 180
     :try_start_6
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v7, :cond_5
 
-    .line 181
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -425,7 +391,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSms:Ljava/util/List;
     invoke-static {v9, v7}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$602(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Ljava/util/List;)Ljava/util/List;
 
-    .line 187
     :cond_4
     :goto_3
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -437,7 +402,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 188
     monitor-exit v8
 
     goto/16 :goto_0
@@ -451,7 +415,6 @@
 
     throw v7
 
-    .line 183
     :cond_5
     :try_start_7
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -460,7 +423,6 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 184
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSms:Ljava/util/List;
@@ -470,7 +432,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 185
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSms:Ljava/util/List;
@@ -484,14 +445,12 @@
 
     goto :goto_3
 
-    .line 193
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_3
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 194
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -502,7 +461,6 @@
 
     monitor-enter v9
 
-    .line 195
     :try_start_8
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -514,7 +472,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSuccess:Z
     invoke-static {v10, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$102(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 196
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mLock:Ljava/lang/Object;
@@ -524,7 +481,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 197
     monitor-exit v9
 
     goto/16 :goto_0
@@ -541,17 +497,14 @@
     :cond_6
     move v8, v7
 
-    .line 195
     goto :goto_4
 
-    .line 201
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_4
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 203
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -562,13 +515,11 @@
 
     monitor-enter v8
 
-    .line 204
     :try_start_9
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v7, :cond_8
 
-    .line 205
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x1
@@ -576,7 +527,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSuccess:Z
     invoke-static {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$102(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 207
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSimMemStatus:Landroid/telephony/SmsMemoryStatus;
@@ -586,7 +536,6 @@
 
     if-nez v7, :cond_7
 
-    .line 208
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     new-instance v9, Landroid/telephony/SmsMemoryStatus;
@@ -596,13 +545,11 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSimMemStatus:Landroid/telephony/SmsMemoryStatus;
     invoke-static {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$802(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Landroid/telephony/SmsMemoryStatus;)Landroid/telephony/SmsMemoryStatus;
 
-    .line 211
     :cond_7
     iget-object v6, v1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v6, Landroid/telephony/SmsMemoryStatus;
 
-    .line 213
     .local v6, tmpStatus:Landroid/telephony/SmsMemoryStatus;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -615,7 +562,6 @@
 
     iput v9, v7, Landroid/telephony/SmsMemoryStatus;->mUsed:I
 
-    .line 214
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSimMemStatus:Landroid/telephony/SmsMemoryStatus;
@@ -627,7 +573,6 @@
 
     iput v9, v7, Landroid/telephony/SmsMemoryStatus;->mTotal:I
 
-    .line 219
     .end local v6           #tmpStatus:Landroid/telephony/SmsMemoryStatus;
     :goto_5
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -639,7 +584,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 220
     monitor-exit v8
 
     goto/16 :goto_0
@@ -653,7 +597,6 @@
 
     throw v7
 
-    .line 217
     :cond_8
     :try_start_a
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -666,14 +609,12 @@
 
     goto :goto_5
 
-    .line 224
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_5
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 225
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -684,7 +625,6 @@
 
     monitor-enter v9
 
-    .line 226
     :try_start_b
     iget-object v10, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -698,7 +638,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mInsertMessageSuccess:Z
     invoke-static {v10, v7}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$1002(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 227
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     #getter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mInsertMessageSuccess:Z
@@ -710,7 +649,6 @@
 
     if-ne v7, v8, :cond_a
 
-    .line 229
     :try_start_c
     iget-object v7, v1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -722,7 +660,6 @@
 
     aget v4, v7, v8
 
-    .line 230
     .restart local v4       #index:I
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -757,7 +694,6 @@
 
     iput-object v7, v8, Landroid/telephony/SimSmsInsertStatus;->indexInIcc:Ljava/lang/String;
 
-    .line 231
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -784,7 +720,6 @@
     .catch Ljava/lang/ClassCastException; {:try_start_c .. :try_end_c} :catch_2
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_3
 
-    .line 242
     .end local v4           #index:I
     :goto_6
     :try_start_d
@@ -797,7 +732,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 243
     monitor-exit v9
 
     goto/16 :goto_0
@@ -811,29 +745,24 @@
 
     throw v7
 
-    .line 232
     :catch_2
     move-exception v2
 
-    .line 233
     .restart local v2       #e:Ljava/lang/ClassCastException;
     :try_start_e
     invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
 
     goto :goto_6
 
-    .line 234
     .end local v2           #e:Ljava/lang/ClassCastException;
     :catch_3
     move-exception v3
 
-    .line 235
     .restart local v3       #ex:Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_6
 
-    .line 238
     .end local v3           #ex:Ljava/lang/Exception;
     :cond_a
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -842,7 +771,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 239
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -876,14 +804,12 @@
 
     goto :goto_6
 
-    .line 246
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_6
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 247
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -894,7 +820,6 @@
 
     monitor-enter v8
 
-    .line 248
     :try_start_f
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
     :try_end_f
@@ -902,7 +827,6 @@
 
     if-nez v7, :cond_b
 
-    .line 250
     :try_start_10
     iget-object v9, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -917,7 +841,6 @@
     .catch Ljava/lang/ClassCastException; {:try_start_10 .. :try_end_10} :catch_4
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_5
 
-    .line 263
     :goto_7
     :try_start_11
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -929,7 +852,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 264
     monitor-exit v8
 
     goto/16 :goto_0
@@ -943,11 +865,9 @@
 
     throw v7
 
-    .line 251
     :catch_4
     move-exception v2
 
-    .line 252
     .restart local v2       #e:Ljava/lang/ClassCastException;
     :try_start_12
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -956,17 +876,14 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 253
     invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
 
     goto :goto_7
 
-    .line 254
     .end local v2           #e:Ljava/lang/ClassCastException;
     :catch_5
     move-exception v3
 
-    .line 255
     .restart local v3       #ex:Ljava/lang/Exception;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -974,12 +891,10 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 256
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_7
 
-    .line 259
     .end local v3           #ex:Ljava/lang/Exception;
     :cond_b
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -988,7 +903,6 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 260
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x0
@@ -1000,14 +914,12 @@
 
     goto :goto_7
 
-    .line 267
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_7
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 268
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -1018,13 +930,11 @@
 
     monitor-enter v8
 
-    .line 269
     :try_start_13
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v7, :cond_c
 
-    .line 270
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x1
@@ -1032,7 +942,6 @@
     #setter for: Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->mSmsParamsSuccess:Z
     invoke-static {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->access$1402(Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;Z)Z
 
-    .line 276
     :goto_8
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -1043,7 +952,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 277
     monitor-exit v8
 
     goto/16 :goto_0
@@ -1057,7 +965,6 @@
 
     throw v7
 
-    .line 272
     :cond_c
     :try_start_14
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -1066,7 +973,6 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 273
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x0
@@ -1078,14 +984,12 @@
 
     goto :goto_8
 
-    .line 280
     .end local v1           #ar:Landroid/os/AsyncResult;
     :sswitch_8
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/AsyncResult;
 
-    .line 281
     .restart local v1       #ar:Landroid/os/AsyncResult;
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
@@ -1096,7 +1000,6 @@
 
     monitor-enter v8
 
-    .line 282
     :try_start_15
     iget-object v7, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
     :try_end_15
@@ -1104,7 +1007,6 @@
 
     if-nez v7, :cond_e
 
-    .line 285
     :try_start_16
     iget-object v7, v1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -1116,7 +1018,6 @@
 
     move-object v5, v0
 
-    .line 286
     .local v5, rawData:[B
     const/4 v7, 0x0
 
@@ -1124,14 +1025,12 @@
 
     if-nez v7, :cond_d
 
-    .line 287
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
-    const-string/jumbo v9, "sms raw data status is FREE"
+    const-string v9, "sms raw data status is FREE"
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 288
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x0
@@ -1142,7 +1041,6 @@
     .catchall {:try_start_16 .. :try_end_16} :catchall_8
     .catch Ljava/lang/ClassCastException; {:try_start_16 .. :try_end_16} :catch_6
 
-    .line 301
     .end local v5           #rawData:[B
     :goto_9
     :try_start_17
@@ -1155,7 +1053,6 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->notifyAll()V
 
-    .line 302
     monitor-exit v8
 
     goto/16 :goto_0
@@ -1169,7 +1066,6 @@
 
     throw v7
 
-    .line 290
     .restart local v5       #rawData:[B
     :cond_d
     :try_start_18
@@ -1187,12 +1083,10 @@
 
     goto :goto_9
 
-    .line 292
     .end local v5           #rawData:[B
     :catch_6
     move-exception v2
 
-    .line 293
     .restart local v2       #e:Ljava/lang/ClassCastException;
     :try_start_19
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -1201,10 +1095,8 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 294
     invoke-virtual {v2}, Ljava/lang/ClassCastException;->printStackTrace()V
 
-    .line 295
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x0
@@ -1214,7 +1106,6 @@
 
     goto :goto_9
 
-    .line 298
     .end local v2           #e:Ljava/lang/ClassCastException;
     :cond_e
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
@@ -1223,7 +1114,6 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;->log(Ljava/lang/String;)V
 
-    .line 299
     iget-object v7, p0, Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager$1;->this$0:Lcom/android/internal/telephony/gsm/SimSmsInterfaceManager;
 
     const/4 v9, 0x0
@@ -1235,7 +1125,6 @@
 
     goto :goto_9
 
-    .line 135
     nop
 
     :sswitch_data_0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 70
     iput-object p1, p0, Lcom/android/server/AlarmShutdownActivity$1;->this$0:Lcom/android/server/AlarmShutdownActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 2
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->EnableAnimating(Z)V
 
-    .line 73
     iget-object v0, p0, Lcom/android/server/AlarmShutdownActivity$1;->this$0:Lcom/android/server/AlarmShutdownActivity;
 
     iget-object v1, p0, Lcom/android/server/AlarmShutdownActivity$1;->this$0:Lcom/android/server/AlarmShutdownActivity;
@@ -58,16 +55,13 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownThread;->shutdown(Landroid/content/Context;Z)V
 
-    .line 74
     const/4 v0, 0x1
 
     invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->EnableAnimating(Z)V
 
-    .line 75
     iget-object v0, p0, Lcom/android/server/AlarmShutdownActivity$1;->this$0:Lcom/android/server/AlarmShutdownActivity;
 
     invoke-virtual {v0}, Lcom/android/server/AlarmShutdownActivity;->finish()V
 
-    .line 76
     return-void
 .end method

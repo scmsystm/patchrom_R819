@@ -27,12 +27,10 @@
     .parameter
 
     .prologue
-    .line 305
     iput-object p1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$PbapServiceListener;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 306
     new-instance v0, Landroid/bluetooth/BluetoothPbap;
 
     #getter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mContext:Landroid/content/Context;
@@ -45,7 +43,6 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mPbapService:Landroid/bluetooth/BluetoothPbap;
     invoke-static {p1, v0}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1502(Landroid/bluetooth/BluetoothDeviceProfileState;Landroid/bluetooth/BluetoothPbap;)Landroid/bluetooth/BluetoothPbap;
 
-    .line 307
     return-void
 .end method
 
@@ -56,12 +53,10 @@
     .parameter "proxy"
 
     .prologue
-    .line 309
     iget-object v1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$PbapServiceListener;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     monitor-enter v1
 
-    .line 310
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$PbapServiceListener;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
@@ -70,13 +65,10 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mPbapServiceConnected:Z
     invoke-static {v0, v2}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1702(Landroid/bluetooth/BluetoothDeviceProfileState;Z)Z
 
-    .line 311
     monitor-exit v1
 
-    .line 312
     return-void
 
-    .line 311
     :catchall_0
     move-exception v0
 
@@ -91,12 +83,10 @@
     .locals 3
 
     .prologue
-    .line 314
     iget-object v1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$PbapServiceListener;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     monitor-enter v1
 
-    .line 315
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$PbapServiceListener;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
@@ -105,13 +95,10 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mPbapServiceConnected:Z
     invoke-static {v0, v2}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1702(Landroid/bluetooth/BluetoothDeviceProfileState;Z)Z
 
-    .line 316
     monitor-exit v1
 
-    .line 317
     return-void
 
-    .line 316
     :catchall_0
     move-exception v0
 

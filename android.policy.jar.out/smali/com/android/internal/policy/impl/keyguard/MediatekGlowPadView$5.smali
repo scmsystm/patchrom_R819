@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 247
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,12 +49,10 @@
     .parameter "oldBottom"
 
     .prologue
-    .line 251
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$5;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     #calls: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->refreshPositions()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->access$900(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;)V
 
-    .line 253
     return-void
 .end method

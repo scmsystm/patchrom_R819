@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "v"
 
     .prologue
-    .line 147
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;->mPasswordEntry:Landroid/widget/TextView;
@@ -51,12 +49,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 148
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView$3;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/keyguard/KeyguardSimPukView;->doHapticKeyClick()V
 
-    .line 149
     const/4 v0, 0x1
 
     return v0

@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 358
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
@@ -56,7 +54,6 @@
     #setter for: Lcom/android/server/WiredAccessoryManager;->illegal_state:I
     invoke-static {v0, v1}, Lcom/android/server/WiredAccessoryManager;->access$202(Lcom/android/server/WiredAccessoryManager;I)I
 
-    .line 359
     const/16 v0, 0x31
 
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
@@ -68,7 +65,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 360
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
     move-result-object v0
@@ -77,23 +73,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     #calls: Lcom/android/server/WiredAccessoryManager;->showheadsetToast()V
     invoke-static {v0}, Lcom/android/server/WiredAccessoryManager;->access$500(Lcom/android/server/WiredAccessoryManager;)V
 
-    .line 362
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     #setter for: Lcom/android/server/WiredAccessoryManager;->illegal_state:I
     invoke-static {v0, v2}, Lcom/android/server/WiredAccessoryManager;->access$202(Lcom/android/server/WiredAccessoryManager;I)I
 
-    .line 367
     :goto_0
     return-void
 
-    .line 364
     :cond_0
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
@@ -103,7 +95,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$5;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     #setter for: Lcom/android/server/WiredAccessoryManager;->illegal_state:I

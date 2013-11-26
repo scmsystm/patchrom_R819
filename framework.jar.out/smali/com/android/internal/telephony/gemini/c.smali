@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 719
     iput-object p1, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -46,19 +45,16 @@
 
     const/4 v5, 0x1
 
-    .line 721
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     const-string v1, "[BroadcastReceiver][onReceiver]+"
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 722
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 724
     iget-object v1, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -81,7 +77,6 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 725
     const-string v1, "ACTION_ON_SIM_DETECTED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -90,7 +85,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 726
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -135,10 +129,9 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 727
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
-    const-string/jumbo v1, "simCount"
+    const-string v1, "simCount"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -146,10 +139,9 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;I)I
 
-    .line 728
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
-    const-string/jumbo v1, "newSIMStatus"
+    const-string v1, "newSIMStatus"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -157,10 +149,9 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->b(Lcom/android/internal/telephony/gemini/GeminiPhone;I)I
 
-    .line 729
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
-    const-string/jumbo v1, "simDetectStatus"
+    const-string v1, "simDetectStatus"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
@@ -168,7 +159,6 @@
 
     iput-object v1, v0, Lcom/android/internal/telephony/gemini/GeminiPhone;->a:Ljava/lang/String;
 
-    .line 731
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->h(Lcom/android/internal/telephony/gemini/GeminiPhone;)Z
@@ -185,7 +175,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 732
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -212,7 +201,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 733
     const-string v0, "NEW"
 
     iget-object v1, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -225,7 +213,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 734
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->j(Lcom/android/internal/telephony/gemini/GeminiPhone;)I
@@ -240,7 +227,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/DefaultSIMSettings;->broadCastNewSIMDetected(II)V
 
-    .line 773
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -249,10 +235,8 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 774
     return-void
 
-    .line 735
     :cond_1
     const-string v0, "REMOVE"
 
@@ -266,7 +250,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 736
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->j(Lcom/android/internal/telephony/gemini/GeminiPhone;)I
@@ -277,7 +260,6 @@
 
     goto :goto_0
 
-    .line 737
     :cond_2
     const-string v0, "SWAP"
 
@@ -291,7 +273,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 738
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->j(Lcom/android/internal/telephony/gemini/GeminiPhone;)I
@@ -302,7 +283,6 @@
 
     goto :goto_0
 
-    .line 740
     :cond_3
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
@@ -310,7 +290,6 @@
 
     goto :goto_0
 
-    .line 742
     :cond_4
     const-string v1, "android.intent.action.ACTION_SHOW_NEW_SIM_DETECTED"
 
@@ -320,14 +299,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 743
-    const-string/jumbo v0, "simslot"
+    const-string v0, "simslot"
 
     invoke-virtual {p2, v0, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 744
     iget-object v1, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -350,15 +327,12 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 745
     if-nez v0, :cond_6
 
-    .line 746
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->c(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
-    .line 750
     :cond_5
     :goto_1
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -367,18 +341,15 @@
 
     goto :goto_0
 
-    .line 747
     :cond_6
     if-ne v0, v5, :cond_5
 
-    .line 748
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->d(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
     goto :goto_1
 
-    .line 751
     :cond_7
     const-string v1, "action_pin_dismiss"
 
@@ -388,14 +359,12 @@
 
     if-eqz v1, :cond_a
 
-    .line 752
-    const-string/jumbo v0, "simslot"
+    const-string v0, "simslot"
 
     invoke-virtual {p2, v0, v6}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 753
     iget-object v1, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -418,15 +387,12 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 754
     if-nez v0, :cond_9
 
-    .line 755
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->c(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
-    .line 759
     :cond_8
     :goto_2
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -435,18 +401,15 @@
 
     goto/16 :goto_0
 
-    .line 756
     :cond_9
     if-ne v0, v5, :cond_8
 
-    .line 757
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->d(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
     goto :goto_2
 
-    .line 760
     :cond_a
     const-string v1, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -456,21 +419,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 761
-    const-string/jumbo v0, "ss"
+    const-string v0, "ss"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 762
-    const-string/jumbo v1, "simId"
+    const-string v1, "simId"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 763
     iget-object v2, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -503,7 +463,6 @@
 
     invoke-static {v2, v3}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 764
     const-string v2, "READY"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -512,15 +471,12 @@
 
     if-eqz v0, :cond_b
 
-    .line 765
     if-nez v1, :cond_c
 
-    .line 766
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->c(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
-    .line 771
     :cond_b
     :goto_3
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
@@ -529,11 +485,9 @@
 
     goto/16 :goto_0
 
-    .line 767
     :cond_c
     if-ne v1, v5, :cond_b
 
-    .line 768
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/c;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0, v5}, Lcom/android/internal/telephony/gemini/GeminiPhone;->d(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z

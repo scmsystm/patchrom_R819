@@ -27,21 +27,18 @@
     .locals 1
 
     .prologue
-    .line 29
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$1;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$1;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic;->easeIn:Landroid/animation/TimeInterpolator;
 
-    .line 34
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$2;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$2;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic;->easeOut:Landroid/animation/TimeInterpolator;
 
-    .line 39
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$3;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/keyguard/Ease$Cubic$3;-><init>()V
@@ -55,7 +52,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

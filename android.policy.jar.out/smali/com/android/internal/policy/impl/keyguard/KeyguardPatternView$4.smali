@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 157
     invoke-static {}, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->values()[Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     move-result-object v0

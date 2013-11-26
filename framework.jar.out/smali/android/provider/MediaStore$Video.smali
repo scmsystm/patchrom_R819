@@ -31,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 1915
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2074
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1923
     const-string v5, "_display_name"
 
     move-object v0, p0

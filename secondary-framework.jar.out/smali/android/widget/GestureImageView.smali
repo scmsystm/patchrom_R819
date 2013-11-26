@@ -39,13 +39,10 @@
     .parameter "context"
 
     .prologue
-    .line 63
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    .line 64
     invoke-direct {p0, p1}, Landroid/widget/GestureImageView;->init(Landroid/content/Context;)V
 
-    .line 65
     return-void
 .end method
 
@@ -55,13 +52,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 68
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 69
     invoke-direct {p0, p1}, Landroid/widget/GestureImageView;->init(Landroid/content/Context;)V
 
-    .line 70
     return-void
 .end method
 
@@ -72,13 +66,10 @@
     .parameter "defStyle"
 
     .prologue
-    .line 73
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 74
     invoke-direct {p0, p1}, Landroid/widget/GestureImageView;->init(Landroid/content/Context;)V
 
-    .line 75
     return-void
 .end method
 
@@ -87,14 +78,12 @@
     .parameter "context"
 
     .prologue
-    .line 83
     new-instance v0, Landroid/view/GestureDetector;
 
     invoke-direct {v0, p1, p0}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v0, p0, Landroid/widget/GestureImageView;->gestureDetector:Landroid/view/GestureDetector;
 
-    .line 85
     return-void
 .end method
 
@@ -105,7 +94,6 @@
     .parameter "e"
 
     .prologue
-    .line 93
     const/4 v0, 0x1
 
     return v0
@@ -121,7 +109,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 98
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -136,11 +123,9 @@
 
     if-gez v1, :cond_0
 
-    .line 110
     :goto_0
     return v5
 
-    .line 101
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -148,7 +133,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 102
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "appWidgetId"
 
@@ -156,21 +140,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 103
     const/4 v1, 0x0
 
     cmpl-float v1, p4, v1
 
     if-lez v1, :cond_1
 
-    .line 104
     const-string v1, "Dircetion"
 
     const-string v2, "direction_next"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 108
     :goto_1
     invoke-virtual {p0}, Landroid/widget/GestureImageView;->getContext()Landroid/content/Context;
 
@@ -178,7 +159,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 109
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
@@ -187,7 +167,6 @@
 
     goto :goto_0
 
-    .line 106
     :cond_1
     const-string v1, "Dircetion"
 
@@ -203,7 +182,6 @@
     .parameter "e"
 
     .prologue
-    .line 115
     return-void
 .end method
 
@@ -217,7 +195,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 120
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -232,37 +209,31 @@
 
     if-gez v4, :cond_1
 
-    .line 141
     :cond_0
     :goto_0
     return v3
 
-    .line 123
     :cond_1
     invoke-static {p3}, Ljava/lang/Math;->abs(F)F
 
     move-result v1
 
-    .line 124
     .local v1, x:F
     invoke-static {p4}, Ljava/lang/Math;->abs(F)F
 
     move-result v2
 
-    .line 125
     .local v2, y:F
     cmpl-float v4, v1, v2
 
     if-gtz v4, :cond_0
 
-    .line 128
     invoke-virtual {p0}, Landroid/widget/GestureImageView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
 
     invoke-interface {v4, v3}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 129
     const/high16 v4, 0x40a0
 
     cmpl-float v4, v1, v4
@@ -275,14 +246,12 @@
 
     if-lez v4, :cond_3
 
-    .line 130
     new-instance v0, Landroid/content/Intent;
 
     const-string v4, "com.weather.action.SCROLL"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 131
     .local v0, intent:Landroid/content/Intent;
     const-string v4, "appWidgetId"
 
@@ -290,21 +259,18 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 132
     const/4 v4, 0x0
 
     cmpg-float v4, p4, v4
 
     if-gez v4, :cond_2
 
-    .line 133
     const-string v4, "Dircetion"
 
     const-string v5, "direction_next"
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 137
     :goto_1
     invoke-virtual {p0}, Landroid/widget/GestureImageView;->getContext()Landroid/content/Context;
 
@@ -312,7 +278,6 @@
 
     invoke-virtual {v4, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 138
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -321,7 +286,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_2
     const-string v4, "Dircetion"
 
@@ -331,7 +295,6 @@
 
     goto :goto_1
 
-    .line 141
     .end local v0           #intent:Landroid/content/Intent;
     :cond_3
     const/4 v3, 0x0
@@ -344,7 +307,6 @@
     .parameter "e"
 
     .prologue
-    .line 146
     return-void
 .end method
 
@@ -353,14 +315,12 @@
     .parameter "e"
 
     .prologue
-    .line 150
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.weather.action.ENTERSETTING"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 151
     .local v0, intent:Landroid/content/Intent;
     invoke-virtual {p0}, Landroid/widget/GestureImageView;->getContext()Landroid/content/Context;
 
@@ -368,7 +328,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 152
     const/4 v1, 0x0
 
     return v1
@@ -379,7 +338,6 @@
     .parameter "event"
 
     .prologue
-    .line 88
     iget-object v0, p0, Landroid/widget/GestureImageView;->gestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -396,9 +354,7 @@
     .end annotation
 
     .prologue
-    .line 79
     iput p1, p0, Landroid/widget/GestureImageView;->mAppWidgetId:I
 
-    .line 80
     return-void
 .end method

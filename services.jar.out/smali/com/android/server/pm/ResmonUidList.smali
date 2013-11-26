@@ -14,10 +14,8 @@
     .locals 3
 
     .prologue
-    .line 18
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getDataDirectory()Ljava/io/File;
@@ -30,7 +28,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/ResmonUidList;->mDataDir:Ljava/io/File;
 
-    .line 20
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/android/server/pm/ResmonUidList;->mDataDir:Ljava/io/File;
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lcom/android/server/pm/ResmonUidList;->mResmonUidListFile:Ljava/io/File;
 
-    .line 21
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 25
     .local p1, uidList:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :try_start_0
     new-instance v1, Ljava/io/FileWriter;
@@ -70,13 +65,11 @@
 
     invoke-direct {v1, v4}, Ljava/io/FileWriter;-><init>(Ljava/io/File;)V
 
-    .line 26
     .local v1, fw:Ljava/io/FileWriter;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 27
     .local v3, sb:Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -90,7 +83,6 @@
 
     if-lez v4, :cond_0
 
-    .line 28
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -101,7 +93,6 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 29
     invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -112,17 +103,14 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 30
     const-string v4, "\r\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 33
     .end local v2           #i:I
     :cond_0
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -131,13 +119,10 @@
 
     invoke-virtual {v1, v4}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
 
-    .line 34
     invoke-virtual {v1}, Ljava/io/FileWriter;->flush()V
 
-    .line 35
     invoke-virtual {v1}, Ljava/io/FileWriter;->close()V
 
-    .line 36
     iget-object v4, p0, Lcom/android/server/pm/ResmonUidList;->mResmonUidListFile:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -154,17 +139,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 45
     .end local v1           #fw:Ljava/io/FileWriter;
     .end local v3           #sb:Ljava/lang/StringBuilder;
     :goto_1
     return-void
 
-    .line 41
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, e:Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 

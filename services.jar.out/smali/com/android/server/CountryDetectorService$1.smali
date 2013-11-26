@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 178
     iput-object p1, p0, Lcom/android/server/CountryDetectorService$1;->this$0:Lcom/android/server/CountryDetectorService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "country"
 
     .prologue
-    .line 180
     iget-object v0, p0, Lcom/android/server/CountryDetectorService$1;->this$0:Lcom/android/server/CountryDetectorService;
 
     #getter for: Lcom/android/server/CountryDetectorService;->mHandler:Landroid/os/Handler;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 185
     return-void
 .end method

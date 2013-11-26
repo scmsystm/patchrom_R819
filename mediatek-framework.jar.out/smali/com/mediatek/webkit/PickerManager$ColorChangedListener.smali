@@ -30,15 +30,12 @@
     .parameter "listener"
 
     .prologue
-    .line 72
     iput-object p1, p0, Lcom/mediatek/webkit/PickerManager$ColorChangedListener;->this$0:Lcom/mediatek/webkit/PickerManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object p2, p0, Lcom/mediatek/webkit/PickerManager$ColorChangedListener;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
 
-    .line 74
     return-void
 .end method
 
@@ -49,12 +46,10 @@
     .parameter "color"
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/mediatek/webkit/PickerManager$ColorChangedListener;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 79
     iget-object v0, p0, Lcom/mediatek/webkit/PickerManager$ColorChangedListener;->mListener:Lcom/mediatek/common/webkit/IOnChangedListener;
 
     const-string v1, "colorPicker"
@@ -65,7 +60,6 @@
 
     invoke-interface {v0, v1, p1, v2, v3}, Lcom/mediatek/common/webkit/IOnChangedListener;->onChanged(Ljava/lang/String;IILjava/lang/Object;)V
 
-    .line 81
     :cond_0
     return-void
 .end method

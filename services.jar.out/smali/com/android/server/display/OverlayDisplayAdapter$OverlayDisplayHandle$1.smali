@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 322
     iput-object p1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 8
 
     .prologue
-    .line 325
     new-instance v0, Lcom/android/server/display/OverlayDisplayWindow;
 
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
@@ -91,11 +89,9 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/display/OverlayDisplayWindow;-><init>(Landroid/content/Context;Ljava/lang/String;IIIILcom/android/server/display/OverlayDisplayWindow$Listener;)V
 
-    .line 328
     .local v0, window:Lcom/android/server/display/OverlayDisplayWindow;
     invoke-virtual {v0}, Lcom/android/server/display/OverlayDisplayWindow;->show()V
 
-    .line 330
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     iget-object v1, v1, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->this$0:Lcom/android/server/display/OverlayDisplayAdapter;
@@ -106,20 +102,16 @@
 
     monitor-enter v2
 
-    .line 331
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle$1;->this$1:Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;
 
     #setter for: Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->mWindow:Lcom/android/server/display/OverlayDisplayWindow;
     invoke-static {v1, v0}, Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;->access$702(Lcom/android/server/display/OverlayDisplayAdapter$OverlayDisplayHandle;Lcom/android/server/display/OverlayDisplayWindow;)Lcom/android/server/display/OverlayDisplayWindow;
 
-    .line 332
     monitor-exit v2
 
-    .line 333
     return-void
 
-    .line 332
     :catchall_0
     move-exception v1
 

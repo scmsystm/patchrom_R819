@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 346
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -51,24 +50,17 @@
     .parameter "newMode"
 
     .prologue
-    .line 354
     iput p1, p0, Landroid/media/MediaCodec$CryptoInfo;->numSubSamples:I
 
-    .line 355
     iput-object p2, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfClearData:[I
 
-    .line 356
     iput-object p3, p0, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfEncryptedData:[I
 
-    .line 357
     iput-object p4, p0, Landroid/media/MediaCodec$CryptoInfo;->key:[B
 
-    .line 358
     iput-object p5, p0, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
 
-    .line 359
     iput p6, p0, Landroid/media/MediaCodec$CryptoInfo;->mode:I
 
-    .line 360
     return-void
 .end method

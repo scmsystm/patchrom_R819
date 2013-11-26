@@ -37,7 +37,6 @@
     .parameter
 
     .prologue
-    .line 281
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 284
     .local p1, future:Landroid/accounts/AccountManagerFuture;,"Landroid/accounts/AccountManagerFuture<Landroid/os/Bundle;>;"
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
@@ -78,7 +76,6 @@
 
     if-nez v3, :cond_0
 
-    .line 300
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;->mLogin:Landroid/widget/EditText;
@@ -92,11 +89,9 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->post(Ljava/lang/Runnable;)Z
 
-    .line 306
     :goto_0
     return-void
 
-    .line 288
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
@@ -110,14 +105,12 @@
 
     invoke-interface {v3, v4, v5}, Lcom/android/internal/policy/impl/keyguard/KeyguardSecurityCallback;->userActivity(J)V
 
-    .line 289
     invoke-interface {p1}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 290
     .local v1, result:Landroid/os/Bundle;
     const-string v3, "booleanResult"
 
@@ -125,7 +118,6 @@
 
     move-result v2
 
-    .line 291
     .local v2, verified:Z
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
@@ -137,7 +129,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Landroid/accounts/AuthenticatorException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 300
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;->mLogin:Landroid/widget/EditText;
@@ -153,13 +144,11 @@
 
     goto :goto_0
 
-    .line 293
     .end local v1           #result:Landroid/os/Bundle;
     .end local v2           #verified:Z
     :catch_0
     move-exception v0
 
-    .line 294
     .local v0, e:Landroid/accounts/OperationCanceledException;
     :try_start_2
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
@@ -171,7 +160,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 300
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;->mLogin:Landroid/widget/EditText;
@@ -187,12 +175,10 @@
 
     goto :goto_0
 
-    .line 295
     .end local v0           #e:Landroid/accounts/OperationCanceledException;
     :catch_1
     move-exception v0
 
-    .line 296
     .local v0, e:Ljava/io/IOException;
     :try_start_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
@@ -204,7 +190,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 300
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;->mLogin:Landroid/widget/EditText;
@@ -220,12 +205,10 @@
 
     goto :goto_0
 
-    .line 297
     .end local v0           #e:Ljava/io/IOException;
     :catch_2
     move-exception v0
 
-    .line 298
     .local v0, e:Landroid/accounts/AuthenticatorException;
     :try_start_4
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
@@ -237,7 +220,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 300
     iget-object v3, p0, Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView$2;->this$0:Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;
 
     #getter for: Lcom/android/internal/policy/impl/keyguard/KeyguardAccountView;->mLogin:Landroid/widget/EditText;

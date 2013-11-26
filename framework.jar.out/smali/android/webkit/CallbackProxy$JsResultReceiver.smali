@@ -33,12 +33,10 @@
     .parameter
 
     .prologue
-    .line 155
     iput-object p1, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->this$0:Landroid/webkit/CallbackProxy;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
     new-instance v0, Landroid/webkit/JsPromptResult;
 
     invoke-direct {v0, p0}, Landroid/webkit/JsPromptResult;-><init>(Landroid/webkit/JsResult$ResultReceiver;)V
@@ -54,7 +52,6 @@
     .parameter "x1"
 
     .prologue
-    .line 155
     invoke-direct {p0, p1}, Landroid/webkit/CallbackProxy$JsResultReceiver;-><init>(Landroid/webkit/CallbackProxy;)V
 
     return-void
@@ -64,24 +61,19 @@
     .locals 2
 
     .prologue
-    .line 183
     iget-object v1, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->this$0:Landroid/webkit/CallbackProxy;
 
     monitor-enter v1
 
-    .line 184
     :try_start_0
     iget-object v0, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->this$0:Landroid/webkit/CallbackProxy;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 185
     monitor-exit v1
 
-    .line 186
     return-void
 
-    .line 185
     :catchall_0
     move-exception v0
 
@@ -99,19 +91,15 @@
     .parameter "result"
 
     .prologue
-    .line 175
     iget-boolean v0, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->mReady:Z
 
     if-eqz v0, :cond_0
 
-    .line 176
     invoke-direct {p0}, Landroid/webkit/CallbackProxy$JsResultReceiver;->notifyCallbackProxy()V
 
-    .line 180
     :goto_0
     return-void
 
-    .line 178
     :cond_0
     const/4 v0, 0x1
 
@@ -124,20 +112,16 @@
     .locals 1
 
     .prologue
-    .line 166
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->mReady:Z
 
-    .line 167
     iget-boolean v0, p0, Landroid/webkit/CallbackProxy$JsResultReceiver;->mTriedToNotifyBeforeReady:Z
 
     if-eqz v0, :cond_0
 
-    .line 168
     invoke-direct {p0}, Landroid/webkit/CallbackProxy$JsResultReceiver;->notifyCallbackProxy()V
 
-    .line 170
     :cond_0
     return-void
 .end method

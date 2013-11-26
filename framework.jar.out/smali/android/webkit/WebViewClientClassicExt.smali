@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .parameter "error"
 
     .prologue
-    .line 34
     return-void
 .end method
 
@@ -33,9 +31,7 @@
     .parameter "host_and_port"
 
     .prologue
-    .line 51
     invoke-virtual {p2}, Landroid/webkit/ClientCertRequestHandler;->cancel()V
 
-    .line 52
     return-void
 .end method

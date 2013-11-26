@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 5212
     iput-object p1, p0, Landroid/webkit/WebViewClassic$10;->this$0:Landroid/webkit/WebViewClassic;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .parameter "obj"
 
     .prologue
-    .line 5214
     const-string v0, "colorPicker"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -54,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 5216
     iget-object v0, p0, Landroid/webkit/WebViewClassic$10;->this$0:Landroid/webkit/WebViewClassic;
 
     invoke-virtual {v0, p2}, Landroid/webkit/WebViewClassic;->selectColor(I)V
 
-    .line 5218
     :cond_0
     return-void
 .end method

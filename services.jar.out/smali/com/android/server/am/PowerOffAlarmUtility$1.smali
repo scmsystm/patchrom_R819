@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -46,21 +45,17 @@
 
     const/4 v3, 0x0
 
-    .line 154
     if-nez p2, :cond_1
 
-    .line 185
     :cond_0
     :goto_0
     return-void
 
-    .line 157
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 158
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.normal.boot"
 
@@ -70,14 +65,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 159
     const-string v1, "PowerOffAlarm"
 
     const-string v2, "DeskClock normally boots-up device"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 160
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mRollback:Z
@@ -87,13 +80,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 161
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #calls: Lcom/android/server/am/PowerOffAlarmUtility;->checkFlightMode(ZZ)V
     invoke-static {v1, v3, v3}, Lcom/android/server/am/PowerOffAlarmUtility;->access$100(Lcom/android/server/am/PowerOffAlarmUtility;ZZ)V
 
-    .line 163
     :cond_2
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
@@ -101,7 +92,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 165
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mAmPlus:Lcom/android/server/am/ActivityManagerPlus;
@@ -111,7 +101,6 @@
 
     invoke-virtual {v1, v4}, Lcom/android/server/am/ActivityManagerPlus;->setBootingVal(Z)V
 
-    .line 166
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mStack:Lcom/android/server/am/ActivityStack;
@@ -123,7 +112,6 @@
 
     goto :goto_0
 
-    .line 168
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
@@ -136,7 +124,6 @@
 
     goto :goto_0
 
-    .line 170
     :cond_4
     const-string v1, "android.intent.action.normal.shutdown"
 
@@ -146,14 +133,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 172
     const-string v1, "PowerOffAlarm"
 
     const-string v2, "DeskClock normally shutdowns device"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mStack:Lcom/android/server/am/ActivityStack;
@@ -172,7 +157,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/ActivityManagerService;->createIPOWin(Landroid/content/Context;)V
 
-    .line 174
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mRollback:Z
@@ -182,7 +166,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 175
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #calls: Lcom/android/server/am/PowerOffAlarmUtility;->checkFlightMode(ZZ)V
@@ -190,7 +173,6 @@
 
     goto :goto_0
 
-    .line 177
     :cond_5
     const-string v1, "android.intent.action.normal.boot.done"
 
@@ -200,14 +182,12 @@
 
     if-eqz v1, :cond_6
 
-    .line 178
     const-string v1, "PowerOffAlarm"
 
     const-string v2, "ALARM_BOOT_DONE normally shutdowns device"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mStack:Lcom/android/server/am/ActivityStack;
@@ -219,7 +199,6 @@
 
     goto/16 :goto_0
 
-    .line 182
     :cond_6
     const-string v1, "alarm.boot.remove.ipowin"
 
@@ -229,7 +208,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 183
     iget-object v1, p0, Lcom/android/server/am/PowerOffAlarmUtility$1;->this$0:Lcom/android/server/am/PowerOffAlarmUtility;
 
     #getter for: Lcom/android/server/am/PowerOffAlarmUtility;->mStack:Lcom/android/server/am/ActivityStack;

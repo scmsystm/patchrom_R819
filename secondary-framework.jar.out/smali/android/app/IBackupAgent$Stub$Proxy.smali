@@ -27,13 +27,10 @@
     .parameter "remote"
 
     .prologue
-    .line 162
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
     iput-object p1, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 164
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -65,64 +61,51 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 196
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 198
     .local v0, _data:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.app.IBackupAgent"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 199
     if-eqz p1, :cond_1
 
-    .line 200
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 201
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 206
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 207
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
     const/4 v2, 0x0
 
     invoke-virtual {p2, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 213
     :goto_1
     if-eqz p3, :cond_3
 
-    .line 214
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 215
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 220
     :goto_2
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 221
     if-eqz p5, :cond_0
 
     invoke-interface {p5}, Landroid/app/backup/IBackupManager;->asBinder()Landroid/os/IBinder;
@@ -132,7 +115,6 @@
     :cond_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 222
     iget-object v1, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x1
@@ -145,13 +127,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 225
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 227
     return-void
 
-    .line 204
     :cond_1
     const/4 v2, 0x0
 
@@ -162,7 +141,6 @@
 
     goto :goto_0
 
-    .line 225
     :catchall_0
     move-exception v1
 
@@ -170,7 +148,6 @@
 
     throw v1
 
-    .line 211
     :cond_2
     const/4 v2, 0x0
 
@@ -179,7 +156,6 @@
 
     goto :goto_1
 
-    .line 218
     :cond_3
     const/4 v2, 0x0
 
@@ -204,36 +180,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 298
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 300
     .local v0, _data:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.app.IBackupAgent"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 301
     if-eqz p1, :cond_1
 
-    .line 302
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 303
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 308
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 309
     if-eqz p3, :cond_0
 
     invoke-interface {p3}, Landroid/app/backup/IBackupManager;->asBinder()Landroid/os/IBinder;
@@ -243,7 +212,6 @@
     :cond_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 310
     iget-object v1, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x3
@@ -256,13 +224,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 313
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 315
     return-void
 
-    .line 306
     :cond_1
     const/4 v2, 0x0
 
@@ -273,7 +238,6 @@
 
     goto :goto_0
 
-    .line 313
     :catchall_0
     move-exception v1
 
@@ -298,53 +262,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 253
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 255
     .local v0, _data:Landroid/os/Parcel;
     :try_start_0
     const-string v2, "android.app.IBackupAgent"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 256
     if-eqz p1, :cond_1
 
-    .line 257
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     const/4 v2, 0x0
 
     invoke-virtual {p1, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 263
     :goto_0
     invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 264
     if-eqz p3, :cond_2
 
-    .line 265
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 266
     const/4 v2, 0x0
 
     invoke-virtual {p3, v0, v2}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 271
     :goto_1
     invoke-virtual {v0, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 272
     if-eqz p5, :cond_0
 
     invoke-interface {p5}, Landroid/app/backup/IBackupManager;->asBinder()Landroid/os/IBinder;
@@ -354,7 +307,6 @@
     :cond_0
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 273
     iget-object v1, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v2, 0x2
@@ -367,13 +319,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 276
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 278
     return-void
 
-    .line 261
     :cond_1
     const/4 v2, 0x0
 
@@ -384,7 +333,6 @@
 
     goto :goto_0
 
-    .line 276
     :catchall_0
     move-exception v1
 
@@ -392,7 +340,6 @@
 
     throw v1
 
-    .line 269
     :cond_2
     const/4 v2, 0x0
 
@@ -422,58 +369,45 @@
     .end annotation
 
     .prologue
-    .line 333
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 335
     .local v2, _data:Landroid/os/Parcel;
     :try_start_0
     const-string v3, "android.app.IBackupAgent"
 
     invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 336
     if-eqz p1, :cond_0
 
-    .line 337
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 338
     const/4 v3, 0x0
 
     invoke-virtual {p1, v2, v3}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 343
     :goto_0
     invoke-virtual {v2, p2, p3}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 344
     invoke-virtual {v2, p4}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 345
     invoke-virtual {v2, p5}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 346
     invoke-virtual {v2, p6}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 347
     invoke-virtual {v2, p7, p8}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 348
     move-wide/from16 v0, p9
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 349
     move/from16 v0, p11
 
     invoke-virtual {v2, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 350
     if-eqz p12, :cond_1
 
     invoke-interface/range {p12 .. p12}, Landroid/app/backup/IBackupManager;->asBinder()Landroid/os/IBinder;
@@ -483,7 +417,6 @@
     :goto_1
     invoke-virtual {v2, v3}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
-    .line 351
     iget-object v3, p0, Landroid/app/IBackupAgent$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     const/4 v4, 0x4
@@ -496,13 +429,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 354
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 356
     return-void
 
-    .line 341
     :cond_0
     const/4 v3, 0x0
 
@@ -513,7 +443,6 @@
 
     goto :goto_0
 
-    .line 354
     :catchall_0
     move-exception v3
 
@@ -521,7 +450,6 @@
 
     throw v3
 
-    .line 350
     :cond_1
     const/4 v3, 0x0
 
@@ -532,7 +460,6 @@
     .locals 1
 
     .prologue
-    .line 171
     const-string v0, "android.app.IBackupAgent"
 
     return-object v0

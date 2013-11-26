@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 94
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     const-string v1, "Normal"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->Normal:Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
-    .line 95
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     const-string v1, "ForgotLockPattern"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->ForgotLockPattern:Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
-    .line 96
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     const-string v1, "VerifyUnlocked"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->VerifyUnlocked:Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
-    .line 93
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
@@ -104,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 93
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +110,6 @@
     .parameter "name"
 
     .prologue
-    .line 93
     const-class v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -131,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 93
     sget-object v0, Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->$VALUES:[Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;
 
     invoke-virtual {v0}, [Lcom/android/internal/policy/impl/keyguard/KeyguardPatternView$FooterMode;->clone()Ljava/lang/Object;

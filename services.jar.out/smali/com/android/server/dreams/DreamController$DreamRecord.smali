@@ -46,24 +46,18 @@
     .parameter "userId"
 
     .prologue
-    .line 223
     iput-object p1, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 224
     iput-object p2, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mToken:Landroid/os/Binder;
 
-    .line 225
     iput-object p3, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mName:Landroid/content/ComponentName;
 
-    .line 226
     iput-boolean p4, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mIsTest:Z
 
-    .line 227
     iput p5, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->mUserId:I
 
-    .line 228
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .locals 2
 
     .prologue
-    .line 233
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     #getter for: Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
@@ -87,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 242
     return-void
 .end method
 
@@ -97,7 +89,6 @@
     .parameter "service"
 
     .prologue
-    .line 247
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     #getter for: Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
@@ -111,7 +102,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 255
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .parameter "name"
 
     .prologue
-    .line 260
     iget-object v0, p0, Lcom/android/server/dreams/DreamController$DreamRecord;->this$0:Lcom/android/server/dreams/DreamController;
 
     #getter for: Lcom/android/server/dreams/DreamController;->mHandler:Landroid/os/Handler;
@@ -134,6 +123,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 269
     return-void
 .end method

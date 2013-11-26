@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 196
     iput-object p1, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 199
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 200
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.USER_SWITCHED"
 
@@ -57,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 201
     iget-object v1, p0, Lcom/android/server/TelephonyRegistry$2;->this$0:Lcom/android/server/TelephonyRegistry;
 
     #getter for: Lcom/android/server/TelephonyRegistry;->mHandler:Landroid/os/Handler;
@@ -86,7 +82,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 204
     :cond_0
     return-void
 .end method

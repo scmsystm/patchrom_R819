@@ -30,15 +30,12 @@
     .parameter "s"
 
     .prologue
-    .line 194
     iput-object p1, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
     iput-object p2, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->udpSocket:Ljava/net/DatagramSocket;
 
-    .line 196
     return-void
 .end method
 
@@ -48,12 +45,10 @@
     .locals 12
 
     .prologue
-    .line 200
     const/16 v7, 0x578
 
     new-array v1, v7, [B
 
-    .line 202
     .local v1, localBuffer:[B
     const-string v7, "[BIP]"
 
@@ -61,14 +56,12 @@
 
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
     new-instance v5, Ljava/net/DatagramPacket;
 
     array-length v7, v1
 
     invoke-direct {v5, v1, v7}, Ljava/net/DatagramPacket;-><init>([BI)V
 
-    .line 205
     .local v5, recvPacket:Ljava/net/DatagramPacket;
     :goto_0
     :try_start_0
@@ -81,24 +74,20 @@
 
     if-nez v7, :cond_4
 
-    .line 206
     const-string v7, "[BIP]"
 
     const-string v8, "Before UdpReceiverThread: Receive data from network"
 
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->udpSocket:Ljava/net/DatagramSocket;
 
     invoke-virtual {v7, v5}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
 
-    .line 208
     invoke-virtual {v5}, Ljava/net/DatagramPacket;->getLength()I
 
     move-result v4
 
-    .line 209
     .local v4, recvLen:I
     const-string v7, "[BIP]"
 
@@ -122,10 +111,8 @@
 
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 210
     if-ltz v4, :cond_0
 
-    .line 211
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iget-object v8, v7, Lcom/android/internal/telephony/cat/Channel;->mLock:Ljava/lang/Object;
@@ -134,7 +121,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 213
     :try_start_1
     const-string v7, "[BIP]"
 
@@ -142,7 +128,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "mRxBufferOffset: "
+    const-string v10, "mRxBufferOffset: "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -162,14 +148,12 @@
 
     invoke-static {v7, v9}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iget v7, v7, Lcom/android/internal/telephony/cat/Channel;->mRxBufferOffset:I
 
     if-nez v7, :cond_2
 
-    .line 216
     const/4 v7, 0x0
 
     iget-object v9, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
@@ -180,19 +164,16 @@
 
     invoke-static {v1, v7, v9, v10, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 217
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iput v4, v7, Lcom/android/internal/telephony/cat/Channel;->mRxBufferCount:I
 
-    .line 218
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     const/4 v9, 0x0
 
     iput v9, v7, Lcom/android/internal/telephony/cat/Channel;->mRxBufferOffset:I
 
-    .line 219
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iget-object v9, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
@@ -201,13 +182,11 @@
 
     invoke-virtual {v7, v9}, Lcom/android/internal/telephony/cat/Channel;->dataAvailable(I)V
 
-    .line 233
     :goto_1
     monitor-exit v8
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 235
     :cond_0
     :try_start_2
     const-string v7, "[BIP]"
@@ -240,12 +219,10 @@
 
     goto/16 :goto_0
 
-    .line 241
     .end local v4           #recvLen:I
     :catch_0
     move-exception v0
 
-    .line 242
     .local v0, e:Ljava/lang/Exception;
     const-string v7, "[BIP]"
 
@@ -253,16 +230,13 @@
 
     invoke-static {v7, v8}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 245
     .end local v0           #e:Ljava/lang/Exception;
     :cond_1
     :goto_2
     return-void
 
-    .line 223
     .restart local v4       #recvLen:I
     :cond_2
     :try_start_3
@@ -272,7 +246,6 @@
 
     new-array v6, v7, [B
 
-    .line 224
     .local v6, tmpBuffer:[B
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
@@ -290,7 +263,6 @@
 
     invoke-static {v7, v9, v6, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 225
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iget v7, v7, Lcom/android/internal/telephony/cat/Channel;->mBufferSize:I
@@ -305,7 +277,6 @@
 
     move v3, v4
 
-    .line 226
     .local v3, rSize:I
     :goto_3
     const/4 v7, 0x0
@@ -316,14 +287,12 @@
 
     invoke-static {v1, v7, v6, v9, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 227
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iget v7, v7, Lcom/android/internal/telephony/cat/Channel;->mRxBufferCount:I
 
     add-int v2, v4, v7
 
-    .line 228
     .local v2, nSize:I
     const-string v7, "[BIP]"
 
@@ -331,7 +300,7 @@
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v10, "rSize: "
+    const-string v10, "rSize: "
 
     invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -357,7 +326,6 @@
 
     invoke-static {v7, v9}, Lcom/android/internal/telephony/cat/CatLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
     const/4 v7, 0x0
 
     iget-object v9, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
@@ -368,12 +336,10 @@
 
     invoke-static {v6, v7, v9, v10, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 230
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     iput v2, v7, Lcom/android/internal/telephony/cat/Channel;->mRxBufferCount:I
 
-    .line 231
     iget-object v7, p0, Lcom/android/internal/telephony/cat/Channel$UdpReceiverThread;->this$0:Lcom/android/internal/telephony/cat/Channel;
 
     const/4 v9, 0x0
@@ -382,7 +348,6 @@
 
     goto/16 :goto_1
 
-    .line 233
     .end local v2           #nSize:I
     .end local v3           #rSize:I
     .end local v6           #tmpBuffer:[B
@@ -398,7 +363,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 225
     .restart local v6       #tmpBuffer:[B
     :cond_3
     :try_start_5
@@ -416,7 +380,6 @@
 
     goto :goto_3
 
-    .line 237
     .end local v4           #recvLen:I
     .end local v6           #tmpBuffer:[B
     :cond_4
@@ -430,7 +393,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 239
     const-string v7, "[BIP]"
 
     const-string v8, "UdpReceiverThread: stop"

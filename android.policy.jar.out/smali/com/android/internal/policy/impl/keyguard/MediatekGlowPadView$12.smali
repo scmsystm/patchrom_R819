@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2187
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$12;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -43,14 +42,12 @@
 
     const/4 v4, 0x0
 
-    .line 2189
     const-string v0, "MediatekGlowPadView"
 
     const-string v1, "mIntersectAnimResetListener onAnimationEnd"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2190
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView$12;->this$0:Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;
 
     const/4 v1, 0x6
@@ -62,6 +59,5 @@
     #calls: Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->switchDragViewToState(IIIFF)V
     invoke-static/range {v0 .. v5}, Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;->access$1800(Lcom/android/internal/policy/impl/keyguard/MediatekGlowPadView;IIIFF)V
 
-    .line 2191
     return-void
 .end method

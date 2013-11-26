@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 34
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CarrierText;
 
     invoke-direct {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardUpdateMonitorCallback;-><init>()V
@@ -46,13 +45,10 @@
     .parameter "spn"
 
     .prologue
-    .line 41
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->mPlmn:Ljava/lang/CharSequence;
 
-    .line 42
     iput-object p2, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->mSpn:Ljava/lang/CharSequence;
 
-    .line 43
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CarrierText;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->mSimState:Lcom/android/internal/telephony/IccCardConstants$State;
@@ -63,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/policy/impl/keyguard/CarrierText;->updateCarrierText(Lcom/android/internal/telephony/IccCardConstants$State;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 44
     return-void
 .end method
 
@@ -72,10 +67,8 @@
     .parameter "simState"
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->mSimState:Lcom/android/internal/telephony/IccCardConstants$State;
 
-    .line 49
     iget-object v0, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->this$0:Lcom/android/internal/policy/impl/keyguard/CarrierText;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/keyguard/CarrierText$1;->mSimState:Lcom/android/internal/telephony/IccCardConstants$State;
@@ -86,6 +79,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/policy/impl/keyguard/CarrierText;->updateCarrierText(Lcom/android/internal/telephony/IccCardConstants$State;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 50
     return-void
 .end method

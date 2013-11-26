@@ -50,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 111
     new-instance v0, Lcom/android/internal/telephony/cat/BearerDesc$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/cat/BearerDesc$1;-><init>()V
@@ -66,46 +65,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 74
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerType:I
 
-    .line 60
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->precedence:I
 
-    .line 61
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->delay:I
 
-    .line 62
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->reliability:I
 
-    .line 63
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->peak:I
 
-    .line 64
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->mean:I
 
-    .line 65
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->pdpType:I
 
-    .line 67
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataCompression:I
 
-    .line 68
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->headerCompression:I
 
-    .line 70
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataRate:I
 
-    .line 71
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerService:I
 
-    .line 72
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->connectionElement:I
 
-    .line 75
     return-void
 .end method
 
@@ -116,130 +101,104 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 77
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerType:I
 
-    .line 60
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->precedence:I
 
-    .line 61
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->delay:I
 
-    .line 62
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->reliability:I
 
-    .line 63
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->peak:I
 
-    .line 64
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->mean:I
 
-    .line 65
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->pdpType:I
 
-    .line 67
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataCompression:I
 
-    .line 68
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->headerCompression:I
 
-    .line 70
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataRate:I
 
-    .line 71
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerService:I
 
-    .line 72
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->connectionElement:I
 
-    .line 78
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerType:I
 
-    .line 79
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->precedence:I
 
-    .line 80
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->delay:I
 
-    .line 81
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->reliability:I
 
-    .line 82
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->peak:I
 
-    .line 83
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->mean:I
 
-    .line 84
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->pdpType:I
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataCompression:I
 
-    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->headerCompression:I
 
-    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataRate:I
 
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerService:I
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->connectionElement:I
 
-    .line 90
     return-void
 .end method
 
@@ -249,7 +208,6 @@
     .parameter "x1"
 
     .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/cat/BearerDesc;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -261,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 93
     const/4 v0, 0x0
 
     return v0
@@ -273,66 +230,53 @@
     .parameter "flags"
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 98
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->precedence:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 99
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->delay:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 100
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->reliability:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 101
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->peak:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 102
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->mean:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->pdpType:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 104
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataCompression:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 105
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->headerCompression:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 106
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->dataRate:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->bearerService:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 108
     iget v0, p0, Lcom/android/internal/telephony/cat/BearerDesc;->connectionElement:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     return-void
 .end method

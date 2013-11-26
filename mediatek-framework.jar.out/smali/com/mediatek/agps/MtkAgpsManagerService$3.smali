@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 582
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,10 +39,8 @@
     .parameter "intent"
 
     .prologue
-    .line 585
     const/4 v4, 0x0
 
-    .line 592
     .local v4, niData:[B
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -54,7 +51,6 @@
 
     if-nez v11, :cond_0
 
-    .line 593
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v12, "GPS settings is disabled by user, reject this SMS!!"
@@ -62,11 +58,9 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->loge(Ljava/lang/String;)V
     invoke-static {v11, v12}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$900(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 647
     :goto_0
     return-void
 
-    .line 597
     :cond_0
     const-string v11, "android.intent.action.DATA_SMS_RECEIVED"
 
@@ -80,18 +74,15 @@
 
     if-eqz v11, :cond_8
 
-    .line 598
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v10
 
-    .line 599
     .local v10, uri:Landroid/net/Uri;
     invoke-virtual {v10}, Landroid/net/Uri;->getPort()I
 
     move-result v7
 
-    .line 600
     .local v7, port:I
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -135,12 +126,10 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v11, v12}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 601
     const/4 v11, -0x1
 
     if-ne v7, v11, :cond_1
 
-    .line 602
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v12, "ERR: Received SMS port number is undefined"
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 604
     :cond_1
     const/16 v11, 0x1c6b
 
@@ -167,18 +155,15 @@
 
     if-ne v7, v11, :cond_7
 
-    .line 606
     :cond_2
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 607
     .local v1, bundle:Landroid/os/Bundle;
     if-eqz v1, :cond_5
 
-    .line 609
     const-string v11, "pdus"
 
     invoke-virtual {v1, v11}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -193,16 +178,13 @@
 
     move-object v6, v0
 
-    .line 610
     .local v6, pdu_messages:[Ljava/lang/Object;
     if-eqz v6, :cond_4
 
-    .line 611
     array-length v11, v6
 
     new-array v8, v11, [Landroid/telephony/SmsMessage;
 
-    .line 612
     .local v8, smsMessage:[Landroid/telephony/SmsMessage;
     new-instance v5, Ljava/io/ByteArrayOutputStream;
 
@@ -210,7 +192,6 @@
 
     invoke-direct {v5, v11}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 614
     .local v5, output_buffer:Ljava/io/ByteArrayOutputStream;
     const/4 v3, 0x0
 
@@ -220,7 +201,6 @@
 
     if-ge v3, v11, :cond_3
 
-    .line 615
     aget-object v11, v6, v3
 
     check-cast v11, [B
@@ -233,14 +213,12 @@
 
     aput-object v11, v8, v3
 
-    .line 616
     aget-object v11, v8, v3
 
     invoke-virtual {v11}, Landroid/telephony/SmsMessage;->getUserData()[B
 
     move-result-object v9
 
-    .line 617
     .local v9, temp_data:[B
     const/4 v11, 0x0
 
@@ -248,19 +226,16 @@
 
     invoke-virtual {v5, v9, v11, v12}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
-    .line 614
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 619
     .end local v9           #temp_data:[B
     :cond_3
     invoke-virtual {v5}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v4
 
-    .line 627
     .end local v3           #n:I
     .end local v5           #output_buffer:Ljava/io/ByteArrayOutputStream;
     .end local v6           #pdu_messages:[Ljava/lang/Object;
@@ -268,7 +243,6 @@
     :goto_2
     if-eqz v4, :cond_6
 
-    .line 628
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v12, "received SMS message data"
@@ -276,7 +250,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v11, v12}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 632
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->niRequest([B)I
@@ -286,12 +259,10 @@
 
     goto/16 :goto_0
 
-    .line 638
     .end local v1           #bundle:Landroid/os/Bundle;
     :catch_0
     move-exception v2
 
-    .line 639
     .local v2, e:Ljava/lang/Exception;
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -318,7 +289,6 @@
 
     goto/16 :goto_0
 
-    .line 621
     .end local v2           #e:Ljava/lang/Exception;
     .restart local v1       #bundle:Landroid/os/Bundle;
     .restart local v6       #pdu_messages:[Ljava/lang/Object;
@@ -333,7 +303,6 @@
 
     goto :goto_2
 
-    .line 624
     .end local v6           #pdu_messages:[Ljava/lang/Object;
     :cond_5
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -345,7 +314,6 @@
 
     goto :goto_2
 
-    .line 635
     :cond_6
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -358,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 642
     .end local v1           #bundle:Landroid/os/Bundle;
     :cond_7
     iget-object v11, p0, Lcom/mediatek/agps/MtkAgpsManagerService$3;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
@@ -386,7 +353,6 @@
 
     goto/16 :goto_0
 
-    .line 645
     .end local v7           #port:I
     .end local v10           #uri:Landroid/net/Uri;
     :cond_8

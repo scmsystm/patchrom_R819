@@ -172,8 +172,7 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 29
-    const-string/jumbo v0, "persist.gemini.sim_num"
+    const-string v0, "persist.gemini.sim_num"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
@@ -181,20 +180,16 @@
 
     sput v0, Lcom/android/internal/telephony/PhoneConstants;->GEMINI_SIM_NUM:I
 
-    .line 78
     const/4 v0, 0x1
 
     sput v0, Lcom/android/internal/telephony/PhoneConstants;->PRESENTATION_ALLOWED:I
 
-    .line 79
     sput v1, Lcom/android/internal/telephony/PhoneConstants;->PRESENTATION_RESTRICTED:I
 
-    .line 80
     const/4 v0, 0x3
 
     sput v0, Lcom/android/internal/telephony/PhoneConstants;->PRESENTATION_UNKNOWN:I
 
-    .line 81
     const/4 v0, 0x4
 
     sput v0, Lcom/android/internal/telephony/PhoneConstants;->PRESENTATION_PAYPHONE:I
@@ -206,7 +201,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

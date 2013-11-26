@@ -50,12 +50,10 @@
     .parameter
 
     .prologue
-    .line 5330
     iput-object p1, p0, Landroid/app/ActivityThread$QueryHistory;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5331
     const-string v0, "Cursor_Leak_Detecter"
 
     const/4 v1, 0x2
@@ -66,14 +64,12 @@
 
     iput-boolean v0, p0, Landroid/app/ActivityThread$QueryHistory;->CURSOR_LEAK_DETECTER:Z
 
-    .line 5333
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
-    .line 5334
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -89,7 +85,6 @@
     .parameter "x1"
 
     .prologue
-    .line 5330
     invoke-direct {p0, p1}, Landroid/app/ActivityThread$QueryHistory;-><init>(Landroid/app/ActivityThread;)V
 
     return-void
@@ -106,12 +101,10 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 5344
     iget-object v3, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
     monitor-enter v3
 
-    .line 5345
     :try_start_0
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
@@ -121,7 +114,6 @@
 
     if-nez v2, :cond_5
 
-    .line 5346
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
     const/4 v4, 0x1
@@ -132,7 +124,6 @@
 
     invoke-interface {v2, p1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5351
     :goto_0
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
@@ -150,7 +141,6 @@
 
     if-lt v2, v4, :cond_0
 
-    .line 5352
     const-string v2, "CursorLeakDetecter"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -189,7 +179,6 @@
 
     invoke-static {v2, v4, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 5355
     :cond_0
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
@@ -203,14 +192,12 @@
 
     if-nez v2, :cond_1
 
-    .line 5356
     new-instance v1, Landroid/app/ActivityThread$QueryHistoryRecord;
 
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->this$0:Landroid/app/ActivityThread;
 
     invoke-direct {v1, v2, p1, p2}, Landroid/app/ActivityThread$QueryHistoryRecord;-><init>(Landroid/app/ActivityThread;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 5357
     .local v1, qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
@@ -220,14 +207,12 @@
 
     invoke-interface {v2, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5360
     .end local v1           #qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     :cond_1
     iget-boolean v2, p0, Landroid/app/ActivityThread$QueryHistory;->CURSOR_LEAK_DETECTER:Z
 
     if-eqz v2, :cond_2
 
-    .line 5361
     const-string v2, "CursorLeakDetecter"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -272,7 +257,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5364
     :cond_2
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
@@ -294,7 +278,6 @@
 
     if-ne v2, v4, :cond_4
 
-    .line 5365
     :cond_3
     const-string v2, "CursorLeakDetecter"
 
@@ -330,12 +313,10 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5366
     invoke-virtual {p0}, Landroid/app/ActivityThread$QueryHistory;->Dump()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5370
     :try_start_1
     const-class v2, Lcom/mediatek/common/aee/IExceptionLog;
 
@@ -349,11 +330,9 @@
 
     check-cast v0, Lcom/mediatek/common/aee/IExceptionLog;
 
-    .line 5371
     .local v0, exceptionLog:Lcom/mediatek/common/aee/IExceptionLog;
     if-eqz v0, :cond_4
 
-    .line 5373
     const/4 v2, 0x0
 
     const-string v4, "CursorLeakDetecter"
@@ -395,17 +374,14 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 5381
     .end local v0           #exceptionLog:Lcom/mediatek/common/aee/IExceptionLog;
     :cond_4
     :goto_1
     :try_start_2
     monitor-exit v3
 
-    .line 5382
     return v7
 
-    .line 5348
     :cond_5
     iget-object v4, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
@@ -431,7 +407,6 @@
 
     goto/16 :goto_0
 
-    .line 5381
     :catchall_0
     move-exception v2
 
@@ -441,7 +416,6 @@
 
     throw v2
 
-    .line 5376
     :catch_0
     move-exception v2
 
@@ -452,7 +426,6 @@
     .locals 6
 
     .prologue
-    .line 5415
     const-string v3, "CursorLeakDetecter"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -487,7 +460,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5416
     iget-object v3, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -498,7 +470,6 @@
 
     move-result-object v1
 
-    .line 5417
     .local v1, iterator:Ljava/util/Iterator;
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -507,14 +478,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 5418
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 5419
     .local v0, entry:Ljava/util/Map$Entry;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -522,7 +491,6 @@
 
     check-cast v2, Landroid/app/ActivityThread$QueryHistoryRecord;
 
-    .line 5420
     .local v2, qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     const-string v3, "CursorLeakDetecter"
 
@@ -552,7 +520,6 @@
 
     goto :goto_0
 
-    .line 5422
     .end local v0           #entry:Ljava/util/Map$Entry;
     .end local v2           #qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     :cond_0
@@ -566,12 +533,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 5391
     iget-object v2, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
     monitor-enter v2
 
-    .line 5392
     :try_start_0
     iget-object v1, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
@@ -585,7 +550,6 @@
 
     check-cast v0, Landroid/app/ActivityThread$QueryHistoryRecord;
 
-    .line 5393
     .local v0, qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     if-eqz v0, :cond_0
 
@@ -599,7 +563,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5394
     :cond_0
     const-string v1, "CursorLeakDetecter"
 
@@ -629,14 +592,11 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5395
     monitor-exit v2
 
-    .line 5408
     :goto_0
     return-void
 
-    .line 5396
     :cond_1
     iget-object v1, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
@@ -654,14 +614,12 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 5397
     iget-object v1, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
     iget-object v3, v0, Landroid/app/ActivityThread$QueryHistoryRecord;->mUri:Ljava/lang/String;
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5398
     iget-object v1, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -670,14 +628,12 @@
 
     invoke-interface {v1, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5404
     :cond_2
     :goto_1
     iget-boolean v1, p0, Landroid/app/ActivityThread$QueryHistory;->CURSOR_LEAK_DETECTER:Z
 
     if-eqz v1, :cond_3
 
-    .line 5405
     const-string v1, "CursorLeakDetecter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -722,7 +678,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5407
     :cond_3
     monitor-exit v2
 
@@ -738,7 +693,6 @@
 
     throw v1
 
-    .line 5399
     .restart local v0       #qhr:Landroid/app/ActivityThread$QueryHistoryRecord;
     :cond_4
     :try_start_1
@@ -758,7 +712,6 @@
 
     if-le v1, v4, :cond_2
 
-    .line 5400
     iget-object v3, p0, Landroid/app/ActivityThread$QueryHistory;->uriMap:Ljava/util/Map;
 
     iget-object v4, v0, Landroid/app/ActivityThread$QueryHistoryRecord;->mUri:Ljava/lang/String;
@@ -785,7 +738,6 @@
 
     invoke-interface {v3, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5401
     iget-object v1, p0, Landroid/app/ActivityThread$QueryHistory;->recordMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

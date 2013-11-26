@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 533
     invoke-direct {p0}, Landroid/app/ContextImpl$ServiceFetcher;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 535
     new-instance v0, Landroid/os/SystemVibrator;
 
     invoke-direct {v0}, Landroid/os/SystemVibrator;-><init>()V

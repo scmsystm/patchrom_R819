@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 145
     iput-object p1, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 148
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
     .local v0, action:Ljava/lang/String;
     const-string v9, "android.bluetooth.device.extra.DEVICE"
 
@@ -57,7 +54,6 @@
 
     check-cast v2, Landroid/bluetooth/BluetoothDevice;
 
-    .line 151
     .local v2, device:Landroid/bluetooth/BluetoothDevice;
     const-string v9, "android.bluetooth.adapter.action.STATE_CHANGED"
 
@@ -67,7 +63,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 152
     const-string v9, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v10, -0x8000
@@ -76,11 +71,9 @@
 
     move-result v7
 
-    .line 154
     .local v7, state:I
     packed-switch v7, :pswitch_data_0
 
-    .line 193
     .end local v7           #state:I
     :cond_0
     :goto_0
@@ -89,10 +82,8 @@
     #calls: Landroid/server/BluetoothA2dpService;->handleFMandWifiAction(Landroid/content/Intent;)V
     invoke-static {v9, p2}, Landroid/server/BluetoothA2dpService;->access$600(Landroid/server/BluetoothA2dpService;Landroid/content/Intent;)V
 
-    .line 194
     return-void
 
-    .line 156
     .restart local v7       #state:I
     :pswitch_0
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
@@ -102,7 +93,6 @@
 
     goto :goto_0
 
-    .line 159
     :pswitch_1
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -111,7 +101,6 @@
 
     goto :goto_0
 
-    .line 171
     .end local v7           #state:I
     :cond_1
     const-string v9, "android.media.VOLUME_CHANGED_ACTION"
@@ -122,7 +111,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 172
     const-string v9, "android.media.EXTRA_VOLUME_STREAM_TYPE"
 
     const/4 v10, -0x1
@@ -131,20 +119,17 @@
 
     move-result v8
 
-    .line 173
     .local v8, streamType:I
     const/4 v9, 0x3
 
     if-ne v8, v9, :cond_0
 
-    .line 174
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     invoke-virtual {v9}, Landroid/server/BluetoothA2dpService;->getConnectedDevices()Ljava/util/List;
 
     move-result-object v6
 
-    .line 176
     .local v6, sinks:Ljava/util/List;,"Ljava/util/List<Landroid/bluetooth/BluetoothDevice;>;"
     invoke-interface {v6}, Ljava/util/List;->size()I
 
@@ -167,7 +152,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 177
     invoke-interface {v6, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -178,7 +162,6 @@
 
     move-result-object v1
 
-    .line 178
     .local v1, address:Ljava/lang/String;
     const-string v9, "android.media.EXTRA_VOLUME_STREAM_VALUE"
 
@@ -186,7 +169,6 @@
 
     move-result v3
 
-    .line 180
     .local v3, newVolLevel:I
     const-string v9, "android.media.EXTRA_PREV_VOLUME_STREAM_VALUE"
 
@@ -194,7 +176,6 @@
 
     move-result v4
 
-    .line 182
     .local v4, oldVolLevel:I
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
@@ -207,11 +188,9 @@
 
     move-result-object v5
 
-    .line 183
     .local v5, path:Ljava/lang/String;
     if-le v3, v4, :cond_2
 
-    .line 184
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     #calls: Landroid/server/BluetoothA2dpService;->avrcpVolumeUpNative(Ljava/lang/String;)Z
@@ -219,11 +198,9 @@
 
     goto :goto_0
 
-    .line 185
     :cond_2
     if-ge v3, v4, :cond_0
 
-    .line 186
     iget-object v9, p0, Landroid/server/BluetoothA2dpService$1;->this$0:Landroid/server/BluetoothA2dpService;
 
     #calls: Landroid/server/BluetoothA2dpService;->avrcpVolumeDownNative(Ljava/lang/String;)Z
@@ -231,7 +208,6 @@
 
     goto :goto_0
 
-    .line 154
     :pswitch_data_0
     .packed-switch 0xc
         :pswitch_0

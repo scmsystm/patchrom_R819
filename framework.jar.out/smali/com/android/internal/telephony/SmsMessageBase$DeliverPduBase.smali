@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 126
     invoke-direct {p0}, Lcom/android/internal/telephony/SmsMessageBase$PduBase;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 2
 
     .prologue
-    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

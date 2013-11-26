@@ -39,24 +39,18 @@
     .parameter "_type"
 
     .prologue
-    .line 47
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lcom/android/server/pm/BasePermission;->name:Ljava/lang/String;
 
-    .line 49
     iput-object p2, p0, Lcom/android/server/pm/BasePermission;->sourcePackage:Ljava/lang/String;
 
-    .line 50
     iput p3, p0, Lcom/android/server/pm/BasePermission;->type:I
 
-    .line 52
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/pm/BasePermission;->protectionLevel:I
 
-    .line 53
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

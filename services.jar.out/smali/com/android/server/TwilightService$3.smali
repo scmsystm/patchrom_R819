@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 558
     iput-object p1, p0, Lcom/android/server/TwilightService$3;->this$0:Lcom/android/server/TwilightService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .parameter "location"
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/android/server/TwilightService$3;->this$0:Lcom/android/server/TwilightService;
 
     #getter for: Lcom/android/server/TwilightService;->mLocationHandler:Lcom/android/server/TwilightService$LocationHandler;
@@ -52,7 +50,6 @@
 
     invoke-virtual {v0, p1}, Lcom/android/server/TwilightService$LocationHandler;->processNewLocation(Landroid/location/Location;)V
 
-    .line 561
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .parameter "provider"
 
     .prologue
-    .line 564
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .parameter "provider"
 
     .prologue
-    .line 567
     return-void
 .end method
 
@@ -81,6 +76,5 @@
     .parameter "extras"
 
     .prologue
-    .line 570
     return-void
 .end method

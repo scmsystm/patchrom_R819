@@ -14,10 +14,8 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/AppErrorResult;->mHasResult:Z
@@ -31,10 +29,8 @@
     .locals 1
 
     .prologue
-    .line 30
     monitor-enter p0
 
-    .line 31
     :goto_0
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/AppErrorResult;->mHasResult:Z
@@ -43,7 +39,6 @@
 
     if-nez v0, :cond_0
 
-    .line 33
     :try_start_1
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_1
@@ -52,25 +47,21 @@
 
     goto :goto_0
 
-    .line 34
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 37
     :cond_0
     :try_start_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 38
     iget v0, p0, Lcom/android/server/am/AppErrorResult;->mResult:I
 
     return v0
 
-    .line 37
     :catchall_0
     move-exception v0
 
@@ -87,28 +78,21 @@
     .parameter "res"
 
     .prologue
-    .line 22
     monitor-enter p0
 
-    .line 23
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/am/AppErrorResult;->mHasResult:Z
 
-    .line 24
     iput p1, p0, Lcom/android/server/am/AppErrorResult;->mResult:I
 
-    .line 25
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 26
     monitor-exit p0
 
-    .line 27
     return-void
 
-    .line 26
     :catchall_0
     move-exception v0
 

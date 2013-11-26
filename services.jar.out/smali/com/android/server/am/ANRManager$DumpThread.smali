@@ -32,23 +32,18 @@
     .parameter "FilePath"
 
     .prologue
-    .line 545
     iput-object p1, p0, Lcom/android/server/am/ANRManager$DumpThread;->this$0:Lcom/android/server/am/ANRManager;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 543
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/am/ANRManager$DumpThread;->mResult:Z
 
-    .line 546
     iput-object p2, p0, Lcom/android/server/am/ANRManager$DumpThread;->mDumpPidList:[I
 
-    .line 547
     iput-object p3, p0, Lcom/android/server/am/ANRManager$DumpThread;->mFilePath:Ljava/lang/String;
 
-    .line 548
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .locals 7
 
     .prologue
-    .line 551
     iget-object v0, p0, Lcom/android/server/am/ANRManager$DumpThread;->mDumpPidList:[I
 
     .local v0, arr$:[I
@@ -73,7 +67,6 @@
 
     aget v3, v0, v1
 
-    .line 554
     .local v3, pid:I
     iget-object v4, p0, Lcom/android/server/am/ANRManager$DumpThread;->this$0:Lcom/android/server/am/ANRManager;
 
@@ -87,12 +80,10 @@
 
     if-nez v4, :cond_0
 
-    .line 556
     iget-object v4, p0, Lcom/android/server/am/ANRManager$DumpThread;->mFilePath:Ljava/lang/String;
 
     invoke-static {v3, v4}, Landroid/os/Debug;->dumpNativeBacktraceToFile(ILjava/lang/String;)V
 
-    .line 557
     const-string v4, "ANRManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -115,19 +106,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 561
     .end local v3           #pid:I
     :cond_1
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/am/ANRManager$DumpThread;->mResult:Z
 
-    .line 562
     return-void
 .end method

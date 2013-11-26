@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/android/server/CommonTimeManagementService$4;->this$0:Lcom/android/server/CommonTimeManagementService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/CommonTimeManagementService$4;->this$0:Lcom/android/server/CommonTimeManagementService;
 
     #calls: Lcom/android/server/CommonTimeManagementService;->connectToTimeConfig()V

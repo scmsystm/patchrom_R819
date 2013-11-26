@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 227
     iput-object p1, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "clientInfo"
 
     .prologue
-    .line 257
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mClientIds:Landroid/util/SparseArray;
     invoke-static {p3}, Lcom/android/server/NsdService$ClientInfo;->access$1200(Lcom/android/server/NsdService$ClientInfo;)Landroid/util/SparseArray;
 
@@ -47,7 +45,6 @@
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0, p2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 259
     return-void
 .end method
 
@@ -68,7 +64,6 @@
     .parameter "clientInfo"
 
     .prologue
-    .line 244
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mClientIds:Landroid/util/SparseArray;
     invoke-static {p1}, Lcom/android/server/NsdService$ClientInfo;->access$1200(Lcom/android/server/NsdService$ClientInfo;)Landroid/util/SparseArray;
 
@@ -82,7 +77,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 245
     const-string v0, "NsdService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -105,10 +99,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     const/4 v0, 0x1
 
-    .line 248
     :goto_0
     return v0
 
@@ -125,7 +117,6 @@
     .parameter "clientInfo"
 
     .prologue
-    .line 252
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mClientIds:Landroid/util/SparseArray;
     invoke-static {p3}, Lcom/android/server/NsdService$ClientInfo;->access$1200(Lcom/android/server/NsdService$ClientInfo;)Landroid/util/SparseArray;
 
@@ -137,7 +128,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 253
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -149,7 +139,6 @@
 
     invoke-virtual {v0, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 254
     return-void
 .end method
 
@@ -159,7 +148,6 @@
     .locals 2
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -169,7 +157,6 @@
     #calls: Lcom/android/server/NsdService;->sendNsdStateChangeBroadcast(Z)V
     invoke-static {v0, v1}, Lcom/android/server/NsdService;->access$700(Lcom/android/server/NsdService;Z)V
 
-    .line 231
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -185,7 +172,6 @@
 
     if-lez v0, :cond_0
 
-    .line 232
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -193,7 +179,6 @@
     #calls: Lcom/android/server/NsdService;->startMDnsDaemon()Z
     invoke-static {v0}, Lcom/android/server/NsdService;->access$1000(Lcom/android/server/NsdService;)Z
 
-    .line 234
     :cond_0
     return-void
 .end method
@@ -202,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -218,7 +202,6 @@
 
     if-lez v0, :cond_0
 
-    .line 239
     iget-object v0, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v0, v0, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -226,7 +209,6 @@
     #calls: Lcom/android/server/NsdService;->stopMDnsDaemon()Z
     invoke-static {v0}, Lcom/android/server/NsdService;->access$1100(Lcom/android/server/NsdService;)Z
 
-    .line 241
     :cond_0
     return-void
 .end method
@@ -246,23 +228,18 @@
 
     const/4 v8, 0x0
 
-    .line 265
     const/4 v4, 0x1
 
-    .line 267
     .local v4, result:Z
     iget v6, p1, Landroid/os/Message;->what:I
 
     sparse-switch v6, :sswitch_data_0
 
-    .line 396
     const/4 v4, 0x0
 
-    .line 399
     :goto_0
     return v4
 
-    .line 270
     :sswitch_0
     iget v6, p1, Landroid/os/Message;->arg1:I
 
@@ -283,7 +260,6 @@
 
     if-nez v6, :cond_0
 
-    .line 272
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -291,14 +267,11 @@
     #calls: Lcom/android/server/NsdService;->startMDnsDaemon()Z
     invoke-static {v6}, Lcom/android/server/NsdService;->access$1000(Lcom/android/server/NsdService;)Z
 
-    .line 274
     :cond_0
     const/4 v4, 0x0
 
-    .line 275
     goto :goto_0
 
-    .line 278
     :sswitch_1
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -317,7 +290,6 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 279
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -325,14 +297,11 @@
     #calls: Lcom/android/server/NsdService;->stopMDnsDaemon()Z
     invoke-static {v6}, Lcom/android/server/NsdService;->access$1100(Lcom/android/server/NsdService;)Z
 
-    .line 281
     :cond_1
     const/4 v4, 0x0
 
-    .line 282
     goto :goto_0
 
-    .line 285
     :sswitch_2
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -348,7 +317,6 @@
 
     goto :goto_0
 
-    .line 288
     :sswitch_3
     const-string v6, "NsdService"
 
@@ -356,12 +324,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/net/nsd/NsdServiceInfo;
 
-    .line 290
     .local v5, servInfo:Landroid/net/nsd/NsdServiceInfo;
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -380,7 +346,6 @@
 
     check-cast v0, Lcom/android/server/NsdService$ClientInfo;
 
-    .line 292
     .local v0, clientInfo:Lcom/android/server/NsdService$ClientInfo;
     invoke-direct {p0, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->requestLimitReached(Lcom/android/server/NsdService$ClientInfo;)Z
 
@@ -388,7 +353,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 293
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -398,7 +362,6 @@
 
     goto :goto_0
 
-    .line 298
     :cond_2
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -409,7 +372,6 @@
 
     move-result v3
 
-    .line 299
     .local v3, id:I
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -426,7 +388,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 301
     const-string v6, "NsdService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -469,12 +430,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v6, v3, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->storeRequestMap(IILcom/android/server/NsdService$ClientInfo;)V
 
-    .line 305
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -486,7 +445,6 @@
 
     goto/16 :goto_0
 
-    .line 307
     :cond_3
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -495,7 +453,6 @@
     #calls: Lcom/android/server/NsdService;->stopServiceDiscovery(I)Z
     invoke-static {v6, v3}, Lcom/android/server/NsdService;->access$1900(Lcom/android/server/NsdService;I)Z
 
-    .line 308
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -505,7 +462,6 @@
 
     goto/16 :goto_0
 
-    .line 313
     .end local v0           #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     .end local v3           #id:I
     .end local v5           #servInfo:Landroid/net/nsd/NsdServiceInfo;
@@ -516,7 +472,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -534,7 +489,6 @@
 
     check-cast v0, Lcom/android/server/NsdService$ClientInfo;
 
-    .line 317
     .restart local v0       #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     :try_start_0
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mClientIds:Landroid/util/SparseArray;
@@ -556,13 +510,11 @@
 
     move-result v3
 
-    .line 323
     .restart local v3       #id:I
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v6, v3, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->removeRequestMap(IILcom/android/server/NsdService$ClientInfo;)V
 
-    .line 324
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -574,7 +526,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 325
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -586,12 +537,10 @@
 
     goto/16 :goto_0
 
-    .line 318
     .end local v3           #id:I
     :catch_0
     move-exception v1
 
-    .line 319
     .local v1, e:Ljava/lang/NullPointerException;
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -602,7 +551,6 @@
 
     goto/16 :goto_0
 
-    .line 327
     .end local v1           #e:Ljava/lang/NullPointerException;
     .restart local v3       #id:I
     :cond_4
@@ -615,7 +563,6 @@
 
     goto/16 :goto_0
 
-    .line 332
     .end local v0           #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     .end local v3           #id:I
     :sswitch_5
@@ -625,7 +572,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -643,7 +589,6 @@
 
     check-cast v0, Lcom/android/server/NsdService$ClientInfo;
 
-    .line 334
     .restart local v0       #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     invoke-direct {p0, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->requestLimitReached(Lcom/android/server/NsdService$ClientInfo;)Z
 
@@ -651,7 +596,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 335
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -661,7 +605,6 @@
 
     goto/16 :goto_0
 
-    .line 340
     :cond_5
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -672,7 +615,6 @@
 
     move-result v3
 
-    .line 341
     .restart local v3       #id:I
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -689,7 +631,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 342
     const-string v6, "NsdService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -724,14 +665,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 343
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v6, v3, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->storeRequestMap(IILcom/android/server/NsdService$ClientInfo;)V
 
     goto/16 :goto_0
 
-    .line 346
     :cond_6
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -740,7 +679,6 @@
     #calls: Lcom/android/server/NsdService;->unregisterService(I)Z
     invoke-static {v6, v3}, Lcom/android/server/NsdService;->access$2200(Lcom/android/server/NsdService;I)Z
 
-    .line 347
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -750,7 +688,6 @@
 
     goto/16 :goto_0
 
-    .line 352
     .end local v0           #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     .end local v3           #id:I
     :sswitch_6
@@ -760,7 +697,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -778,7 +714,6 @@
 
     check-cast v0, Lcom/android/server/NsdService$ClientInfo;
 
-    .line 355
     .restart local v0       #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     :try_start_1
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mClientIds:Landroid/util/SparseArray;
@@ -800,13 +735,11 @@
 
     move-result v3
 
-    .line 361
     .restart local v3       #id:I
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v6, v3, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->removeRequestMap(IILcom/android/server/NsdService$ClientInfo;)V
 
-    .line 362
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -818,7 +751,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 363
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -830,12 +762,10 @@
 
     goto/16 :goto_0
 
-    .line 356
     .end local v3           #id:I
     :catch_1
     move-exception v1
 
-    .line 357
     .restart local v1       #e:Ljava/lang/NullPointerException;
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -848,7 +778,6 @@
 
     goto/16 :goto_0
 
-    .line 365
     .end local v1           #e:Ljava/lang/NullPointerException;
     .restart local v3       #id:I
     :cond_7
@@ -863,7 +792,6 @@
 
     goto/16 :goto_0
 
-    .line 370
     .end local v0           #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     .end local v3           #id:I
     :sswitch_7
@@ -873,12 +801,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     iget-object v5, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v5, Landroid/net/nsd/NsdServiceInfo;
 
-    .line 372
     .restart local v5       #servInfo:Landroid/net/nsd/NsdServiceInfo;
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -897,7 +823,6 @@
 
     check-cast v0, Lcom/android/server/NsdService$ClientInfo;
 
-    .line 375
     .restart local v0       #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     #getter for: Lcom/android/server/NsdService$ClientInfo;->mResolvedService:Landroid/net/nsd/NsdServiceInfo;
     invoke-static {v0}, Lcom/android/server/NsdService$ClientInfo;->access$2300(Lcom/android/server/NsdService$ClientInfo;)Landroid/net/nsd/NsdServiceInfo;
@@ -906,7 +831,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 376
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
     iget-object v6, v6, Lcom/android/server/NsdService$NsdStateMachine;->this$0:Lcom/android/server/NsdService;
@@ -920,7 +844,6 @@
 
     goto/16 :goto_0
 
-    .line 381
     :cond_8
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -931,7 +854,6 @@
 
     move-result v3
 
-    .line 382
     .restart local v3       #id:I
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -944,7 +866,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 383
     new-instance v6, Landroid/net/nsd/NsdServiceInfo;
 
     invoke-direct {v6}, Landroid/net/nsd/NsdServiceInfo;-><init>()V
@@ -952,14 +873,12 @@
     #setter for: Lcom/android/server/NsdService$ClientInfo;->mResolvedService:Landroid/net/nsd/NsdServiceInfo;
     invoke-static {v0, v6}, Lcom/android/server/NsdService$ClientInfo;->access$2302(Lcom/android/server/NsdService$ClientInfo;Landroid/net/nsd/NsdServiceInfo;)Landroid/net/nsd/NsdServiceInfo;
 
-    .line 384
     iget v6, p1, Landroid/os/Message;->arg2:I
 
     invoke-direct {p0, v6, v3, v0}, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->storeRequestMap(IILcom/android/server/NsdService$ClientInfo;)V
 
     goto/16 :goto_0
 
-    .line 386
     :cond_9
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -972,7 +891,6 @@
 
     goto/16 :goto_0
 
-    .line 391
     .end local v0           #clientInfo:Lcom/android/server/NsdService$ClientInfo;
     .end local v3           #id:I
     .end local v5           #servInfo:Landroid/net/nsd/NsdServiceInfo;
@@ -981,7 +899,6 @@
 
     check-cast v2, Lcom/android/server/NsdService$NativeEvent;
 
-    .line 392
     .local v2, event:Lcom/android/server/NsdService$NativeEvent;
     iget-object v6, p0, Lcom/android/server/NsdService$NsdStateMachine$EnabledState;->this$1:Lcom/android/server/NsdService$NsdStateMachine;
 
@@ -1002,7 +919,6 @@
 
     goto/16 :goto_0
 
-    .line 267
     nop
 
     :sswitch_data_0

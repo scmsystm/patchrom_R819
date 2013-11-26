@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 2803
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +41,10 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 2806
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2807
     .local v0, action:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;
 
@@ -55,7 +52,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "received broadcast "
+    const-string v4, "received broadcast "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -72,7 +69,6 @@
     #calls: Lcom/android/internal/telephony/gsm/GSMPhone;->LOGW(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/gsm/GSMPhone;->access$000(Lcom/android/internal/telephony/gsm/GSMPhone;Ljava/lang/String;)V
 
-    .line 2809
     const-string v2, "android.intent.action.ACTION_SIM_DETECTED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -81,14 +77,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 2810
-    const-string/jumbo v2, "simDetectStatus"
+    const-string v2, "simDetectStatus"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2812
     .local v1, simDetectStatus:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;
 
@@ -96,7 +90,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v4, "simDetectStatus : "
+    const-string v4, "simDetectStatus : "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,7 +124,6 @@
     #calls: Lcom/android/internal/telephony/gsm/GSMPhone;->LOGW(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/internal/telephony/gsm/GSMPhone;->access$000(Lcom/android/internal/telephony/gsm/GSMPhone;Ljava/lang/String;)V
 
-    .line 2813
     const-string v2, "NEW"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -147,26 +140,22 @@
 
     if-eqz v2, :cond_2
 
-    .line 2815
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     #setter for: Lcom/android/internal/telephony/gsm/GSMPhone;->mIsSimChanged:Z
     invoke-static {v2, v5}, Lcom/android/internal/telephony/gsm/GSMPhone;->access$202(Lcom/android/internal/telephony/gsm/GSMPhone;Z)Z
 
-    .line 2816
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     #setter for: Lcom/android/internal/telephony/gsm/GSMPhone;->needQueryCfu:Z
     invoke-static {v2, v5}, Lcom/android/internal/telephony/gsm/GSMPhone;->access$302(Lcom/android/internal/telephony/gsm/GSMPhone;Z)Z
 
-    .line 2821
     .end local v1           #simDetectStatus:Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
-    .line 2818
     .restart local v1       #simDetectStatus:Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone$2;->this$0:Lcom/android/internal/telephony/gsm/GSMPhone;

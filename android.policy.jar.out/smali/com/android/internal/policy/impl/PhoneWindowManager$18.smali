@@ -30,7 +30,6 @@
     .parameter
 
     .prologue
-    .line 4038
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
@@ -47,10 +46,8 @@
     .parameter "windowToken"
 
     .prologue
-    .line 4042
     if-nez p1, :cond_0
 
-    .line 4043
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
@@ -58,11 +55,9 @@
     #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->waitForTopFullscreenWindowDrawn(Landroid/view/WindowManagerPolicy$ScreenOnListener;)V
     invoke-static {v0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$600(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/view/WindowManagerPolicy$ScreenOnListener;)V
 
-    .line 4048
     :goto_0
     return-void
 
-    .line 4045
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 

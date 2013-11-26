@@ -41,19 +41,16 @@
     .parameter
 
     .prologue
-    .line 390
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
 
-    .line 391
     invoke-direct {p0}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->makeObservedUEventList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
-    .line 392
     return-void
 .end method
 
@@ -74,12 +71,10 @@
 
     const/4 v5, 0x0
 
-    .line 430
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 434
     .local v0, retVal:Ljava/util/List;,"Ljava/util/List<Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;>;"
     iget-object v2, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -90,7 +85,6 @@
 
     if-nez v2, :cond_0
 
-    .line 435
     new-instance v1, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
 
     const-string v2, "h2w"
@@ -101,7 +95,6 @@
 
     invoke-direct {v1, p0, v2, v3, v4}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;-><init>(Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;Ljava/lang/String;II)V
 
-    .line 436
     .local v1, uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->checkSwitchExists()Z
 
@@ -109,10 +102,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 437
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 444
     .end local v1           #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :cond_0
     :goto_0
@@ -126,7 +117,6 @@
 
     invoke-direct {v1, p0, v2, v3, v4}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;-><init>(Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;Ljava/lang/String;II)V
 
-    .line 445
     .restart local v1       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->checkSwitchExists()Z
 
@@ -134,10 +124,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 446
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 459
     :goto_1
     new-instance v1, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
 
@@ -146,7 +134,6 @@
 
     invoke-direct {v1, p0, v2, v6, v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;-><init>(Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;Ljava/lang/String;II)V
 
-    .line 460
     .restart local v1       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->checkSwitchExists()Z
 
@@ -154,14 +141,11 @@
 
     if-eqz v2, :cond_3
 
-    .line 461
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 471
     :goto_2
     return-object v0
 
-    .line 439
     :cond_1
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
@@ -173,7 +157,6 @@
 
     goto :goto_0
 
-    .line 448
     :cond_2
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
@@ -185,7 +168,6 @@
 
     goto :goto_1
 
-    .line 463
     :cond_3
     new-instance v1, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
 
@@ -194,7 +176,6 @@
 
     invoke-direct {v1, p0, v2, v6, v5}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;-><init>(Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;Ljava/lang/String;II)V
 
-    .line 464
     .restart local v1       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->checkSwitchExists()Z
 
@@ -202,12 +183,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 465
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 467
     :cond_4
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
@@ -227,7 +206,6 @@
     .parameter "state"
 
     .prologue
-    .line 491
     const/4 v0, 0x0
 
     .local v0, i:I
@@ -240,7 +218,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 492
     iget-object v2, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -249,7 +226,6 @@
 
     check-cast v1, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
 
-    .line 493
     .local v1, uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     invoke-virtual {v1}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevPath()Ljava/lang/String;
 
@@ -261,7 +237,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 494
     iget-object v2, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     iget-object v3, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
@@ -278,12 +253,10 @@
     #calls: Lcom/android/server/WiredAccessoryManager;->updateLocked(Ljava/lang/String;I)V
     invoke-static {v2, p2, v3}, Lcom/android/server/WiredAccessoryManager;->access$1100(Lcom/android/server/WiredAccessoryManager;Ljava/lang/String;I)V
 
-    .line 498
     .end local v1           #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :cond_0
     return-void
 
-    .line 491
     .restart local v1       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :cond_1
     add-int/lit8 v0, v0, 0x1
@@ -297,7 +270,6 @@
     .locals 11
 
     .prologue
-    .line 395
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     #getter for: Lcom/android/server/WiredAccessoryManager;->mLock:Ljava/lang/Object;
@@ -307,7 +279,6 @@
 
     monitor-enter v8
 
-    .line 396
     :try_start_0
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
@@ -317,12 +288,10 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     const/16 v7, 0x400
 
     new-array v0, v7, [C
 
-    .line 399
     .local v0, buffer:[C
     const/4 v4, 0x0
 
@@ -336,7 +305,6 @@
 
     if-ge v4, v7, :cond_1
 
-    .line 400
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
     invoke-interface {v7, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -347,7 +315,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 403
     .local v6, uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :try_start_1
     new-instance v3, Ljava/io/FileReader;
@@ -358,7 +325,6 @@
 
     invoke-direct {v3, v7}, Ljava/io/FileReader;-><init>(Ljava/lang/String;)V
 
-    .line 404
     .local v3, file:Ljava/io/FileReader;
     const/4 v7, 0x0
 
@@ -368,11 +334,9 @@
 
     move-result v5
 
-    .line 405
     .local v5, len:I
     invoke-virtual {v3}, Ljava/io/FileReader;->close()V
 
-    .line 406
     new-instance v7, Ljava/lang/String;
 
     const/4 v9, 0x0
@@ -391,11 +355,9 @@
 
     move-result v1
 
-    .line 408
     .local v1, curState:I
     if-lez v1, :cond_0
 
-    .line 409
     invoke-virtual {v6}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;->getDevPath()Ljava/lang/String;
 
     move-result-object v7
@@ -410,7 +372,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 399
     .end local v1           #curState:I
     .end local v3           #file:Ljava/io/FileReader;
     .end local v5           #len:I
@@ -420,11 +381,9 @@
 
     goto :goto_0
 
-    .line 411
     :catch_0
     move-exception v2
 
-    .line 412
     .local v2, e:Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
@@ -457,7 +416,6 @@
 
     goto :goto_1
 
-    .line 418
     .end local v0           #buffer:[C
     .end local v2           #e:Ljava/io/FileNotFoundException;
     .end local v4           #i:I
@@ -471,14 +429,12 @@
 
     throw v7
 
-    .line 414
     .restart local v0       #buffer:[C
     .restart local v4       #i:I
     .restart local v6       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :catch_1
     move-exception v2
 
-    .line 415
     .local v2, e:Ljava/lang/Exception;
     :try_start_3
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
@@ -491,7 +447,6 @@
 
     goto :goto_1
 
-    .line 418
     .end local v2           #e:Ljava/lang/Exception;
     .end local v6           #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :cond_1
@@ -499,7 +454,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 423
     const/4 v4, 0x0
 
     :goto_2
@@ -511,7 +465,6 @@
 
     if-ge v4, v7, :cond_2
 
-    .line 424
     iget-object v7, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->mUEventInfo:Ljava/util/List;
 
     invoke-interface {v7, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -520,7 +473,6 @@
 
     check-cast v6, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
 
-    .line 425
     .restart local v6       #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -546,12 +498,10 @@
 
     invoke-virtual {p0, v7}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 423
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 427
     .end local v6           #uei:Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver$UEventInfo;
     :cond_2
     return-void
@@ -562,7 +512,6 @@
     .parameter "event"
 
     .prologue
-    .line 476
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 
     move-result-object v4
@@ -591,7 +540,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     :try_start_0
     const-string v4, "DEVPATH"
 
@@ -599,7 +547,6 @@
 
     move-result-object v0
 
-    .line 480
     .local v0, devPath:Ljava/lang/String;
     const-string v4, "SWITCH_NAME"
 
@@ -607,7 +554,6 @@
 
     move-result-object v2
 
-    .line 481
     .local v2, name:Ljava/lang/String;
     const-string v4, "SWITCH_STATE"
 
@@ -619,7 +565,6 @@
 
     move-result v3
 
-    .line 482
     .local v3, state:I
     iget-object v4, p0, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -632,21 +577,17 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 483
     :try_start_1
     invoke-direct {p0, v0, v2, v3}, Lcom/android/server/WiredAccessoryManager$WiredAccessoryObserver;->updateStateLocked(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 484
     monitor-exit v5
 
-    .line 488
     .end local v0           #devPath:Ljava/lang/String;
     .end local v2           #name:Ljava/lang/String;
     .end local v3           #state:I
     :goto_0
     return-void
 
-    .line 484
     .restart local v0       #devPath:Ljava/lang/String;
     .restart local v2       #name:Ljava/lang/String;
     .restart local v3       #state:I
@@ -662,14 +603,12 @@
     :try_end_2
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 485
     .end local v0           #devPath:Ljava/lang/String;
     .end local v2           #name:Ljava/lang/String;
     .end local v3           #state:I
     :catch_0
     move-exception v1
 
-    .line 486
     .local v1, e:Ljava/lang/NumberFormatException;
     invoke-static {}, Lcom/android/server/WiredAccessoryManager;->access$400()Ljava/lang/String;
 

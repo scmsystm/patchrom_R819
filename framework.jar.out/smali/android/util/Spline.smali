@@ -19,19 +19,14 @@
     .parameter "m"
 
     .prologue
-    .line 28
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Landroid/util/Spline;->mX:[F
 
-    .line 30
     iput-object p2, p0, Landroid/util/Spline;->mY:[F
 
-    .line 31
     iput-object p3, p0, Landroid/util/Spline;->mM:[F
 
-    .line 32
     return-void
 .end method
 
@@ -45,7 +40,6 @@
 
     const/4 v11, 0x0
 
-    .line 53
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -62,7 +56,6 @@
 
     if-ge v8, v9, :cond_1
 
-    .line 54
     :cond_0
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -72,21 +65,17 @@
 
     throw v8
 
-    .line 58
     :cond_1
     array-length v6, p0
 
-    .line 59
     .local v6, n:I
     add-int/lit8 v8, v6, -0x1
 
     new-array v2, v8, [F
 
-    .line 60
     .local v2, d:[F
     new-array v5, v6, [F
 
-    .line 63
     .local v5, m:[F
     const/4 v4, 0x0
 
@@ -96,7 +85,6 @@
 
     if-ge v4, v8, :cond_3
 
-    .line 64
     add-int/lit8 v8, v4, 0x1
 
     aget v8, p0, v8
@@ -105,13 +93,11 @@
 
     sub-float v3, v8, v9
 
-    .line 65
     .local v3, h:F
     cmpg-float v8, v3, v11
 
     if-gtz v8, :cond_2
 
-    .line 66
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
     const-string v9, "The control points must all have strictly increasing X values."
@@ -120,7 +106,6 @@
 
     throw v8
 
-    .line 69
     :cond_2
     add-int/lit8 v8, v4, 0x1
 
@@ -134,19 +119,16 @@
 
     aput v8, v2, v4
 
-    .line 63
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 73
     .end local v3           #h:F
     :cond_3
     aget v8, v2, v10
 
     aput v8, v5, v10
 
-    .line 74
     const/4 v4, 0x1
 
     :goto_1
@@ -154,7 +136,6 @@
 
     if-ge v4, v8, :cond_4
 
-    .line 75
     add-int/lit8 v8, v4, -0x1
 
     aget v8, v2, v8
@@ -169,12 +150,10 @@
 
     aput v8, v5, v4
 
-    .line 74
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 77
     :cond_4
     add-int/lit8 v8, v6, -0x1
 
@@ -184,7 +163,6 @@
 
     aput v9, v5, v8
 
-    .line 80
     const/4 v4, 0x0
 
     :goto_2
@@ -192,29 +170,24 @@
 
     if-ge v4, v8, :cond_9
 
-    .line 81
     aget v8, v2, v4
 
     cmpl-float v8, v8, v11
 
     if-nez v8, :cond_6
 
-    .line 82
     aput v11, v5, v4
 
-    .line 83
     add-int/lit8 v8, v4, 0x1
 
     aput v11, v5, v8
 
-    .line 80
     :cond_5
     :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 85
     :cond_6
     aget v8, v5, v4
 
@@ -222,7 +195,6 @@
 
     div-float v0, v8, v9
 
-    .line 86
     .local v0, a:F
     add-int/lit8 v8, v4, 0x1
 
@@ -232,7 +204,6 @@
 
     div-float v1, v8, v9
 
-    .line 87
     .local v1, b:F
     cmpg-float v8, v0, v11
 
@@ -242,7 +213,6 @@
 
     if-gez v8, :cond_8
 
-    .line 88
     :cond_7
     new-instance v8, Ljava/lang/IllegalArgumentException;
 
@@ -252,13 +222,11 @@
 
     throw v8
 
-    .line 91
     :cond_8
     invoke-static {v0, v1}, Landroid/util/FloatMath;->hypot(FF)F
 
     move-result v3
 
-    .line 92
     .restart local v3       #h:F
     const/high16 v8, 0x4110
 
@@ -266,12 +234,10 @@
 
     if-lez v8, :cond_5
 
-    .line 93
     const/high16 v8, 0x4040
 
     div-float v7, v8, v3
 
-    .line 94
     .local v7, t:F
     mul-float v8, v7, v0
 
@@ -281,7 +247,6 @@
 
     aput v8, v5, v4
 
-    .line 95
     add-int/lit8 v8, v4, 0x1
 
     mul-float v9, v7, v1
@@ -294,7 +259,6 @@
 
     goto :goto_3
 
-    .line 99
     .end local v0           #a:F
     .end local v1           #b:F
     .end local v3           #h:F
@@ -320,12 +284,10 @@
 
     const/high16 v8, 0x3f80
 
-    .line 111
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
 
     array-length v2, v4
 
-    .line 112
     .local v2, n:I
     invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -333,12 +295,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 135
     .end local p1
     :goto_0
     return p1
 
-    .line 115
     .restart local p1
     :cond_0
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
@@ -349,14 +309,12 @@
 
     if-gtz v4, :cond_1
 
-    .line 116
     iget-object v4, p0, Landroid/util/Spline;->mY:[F
 
     aget p1, v4, v5
 
     goto :goto_0
 
-    .line 118
     :cond_1
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
 
@@ -368,7 +326,6 @@
 
     if-ltz v4, :cond_2
 
-    .line 119
     iget-object v4, p0, Landroid/util/Spline;->mY:[F
 
     add-int/lit8 v5, v2, -0x1
@@ -377,11 +334,9 @@
 
     goto :goto_0
 
-    .line 124
     :cond_2
     const/4 v1, 0x0
 
-    .line 125
     .local v1, i:I
     :cond_3
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
@@ -394,10 +349,8 @@
 
     if-ltz v4, :cond_4
 
-    .line 126
     add-int/lit8 v1, v1, 0x1
 
-    .line 127
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
 
     aget v4, v4, v1
@@ -406,14 +359,12 @@
 
     if-nez v4, :cond_3
 
-    .line 128
     iget-object v4, p0, Landroid/util/Spline;->mY:[F
 
     aget p1, v4, v1
 
     goto :goto_0
 
-    .line 133
     :cond_4
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
 
@@ -427,7 +378,6 @@
 
     sub-float v0, v4, v5
 
-    .line 134
     .local v0, h:F
     iget-object v4, p0, Landroid/util/Spline;->mX:[F
 
@@ -437,7 +387,6 @@
 
     div-float v3, v4, v0
 
-    .line 135
     .local v3, t:F
     iget-object v4, p0, Landroid/util/Spline;->mY:[F
 
@@ -508,39 +457,32 @@
     .locals 5
 
     .prologue
-    .line 142
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 143
     .local v2, str:Ljava/lang/StringBuilder;
     iget-object v3, p0, Landroid/util/Spline;->mX:[F
 
     array-length v1, v3
 
-    .line 144
     .local v1, n:I
     const-string v3, "["
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 145
     const/4 v0, 0x0
 
     .local v0, i:I
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 146
     if-eqz v0, :cond_0
 
-    .line 147
     const-string v3, ", "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 149
     :cond_0
     const-string v3, "("
 
@@ -554,7 +496,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 150
     const-string v3, ", "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -567,7 +508,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    .line 151
     const-string v3, ": "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -586,18 +526,15 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 145
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 153
     :cond_1
     const-string v3, "]"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 154
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3

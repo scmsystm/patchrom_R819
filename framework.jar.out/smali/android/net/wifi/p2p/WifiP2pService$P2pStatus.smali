@@ -68,7 +68,6 @@
 
     const/4 v3, 0x0
 
-    .line 270
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "SUCCESS"
@@ -77,7 +76,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->SUCCESS:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 273
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "INFORMATION_IS_CURRENTLY_UNAVAILABLE"
@@ -86,7 +84,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INFORMATION_IS_CURRENTLY_UNAVAILABLE:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 276
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "INCOMPATIBLE_PARAMETERS"
@@ -95,7 +92,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INCOMPATIBLE_PARAMETERS:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 280
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "LIMIT_REACHED"
@@ -104,7 +100,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->LIMIT_REACHED:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 283
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "INVALID_PARAMETER"
@@ -113,7 +108,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INVALID_PARAMETER:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 286
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "UNABLE_TO_ACCOMMODATE_REQUEST"
@@ -124,7 +118,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNABLE_TO_ACCOMMODATE_REQUEST:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 289
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "PREVIOUS_PROTOCOL_ERROR"
@@ -135,7 +128,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->PREVIOUS_PROTOCOL_ERROR:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 292
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "NO_COMMON_CHANNEL"
@@ -146,7 +138,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->NO_COMMON_CHANNEL:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 296
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "UNKNOWN_P2P_GROUP"
@@ -157,7 +148,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNKNOWN_P2P_GROUP:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 299
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "BOTH_GO_INTENT_15"
@@ -168,7 +158,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->BOTH_GO_INTENT_15:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 302
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "INCOMPATIBLE_PROVISIONING_METHOD"
@@ -179,7 +168,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INCOMPATIBLE_PROVISIONING_METHOD:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 305
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "REJECTED_BY_USER"
@@ -190,7 +178,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->REJECTED_BY_USER:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 308
     new-instance v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     const-string v1, "UNKNOWN"
@@ -201,7 +188,6 @@
 
     sput-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNKNOWN:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
-    .line 268
     const/16 v0, 0xd
 
     new-array v0, v0, [Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
@@ -290,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 268
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -301,88 +286,73 @@
     .parameter "error"
 
     .prologue
-    .line 311
     packed-switch p0, :pswitch_data_0
 
-    .line 337
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNKNOWN:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     :goto_0
     return-object v0
 
-    .line 313
     :pswitch_0
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->SUCCESS:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 315
     :pswitch_1
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INFORMATION_IS_CURRENTLY_UNAVAILABLE:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 317
     :pswitch_2
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INCOMPATIBLE_PARAMETERS:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 319
     :pswitch_3
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->LIMIT_REACHED:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 321
     :pswitch_4
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INVALID_PARAMETER:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 323
     :pswitch_5
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNABLE_TO_ACCOMMODATE_REQUEST:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 325
     :pswitch_6
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->PREVIOUS_PROTOCOL_ERROR:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 327
     :pswitch_7
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->NO_COMMON_CHANNEL:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 329
     :pswitch_8
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->UNKNOWN_P2P_GROUP:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 331
     :pswitch_9
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->BOTH_GO_INTENT_15:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 333
     :pswitch_a
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->INCOMPATIBLE_PROVISIONING_METHOD:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 335
     :pswitch_b
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->REJECTED_BY_USER:Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     goto :goto_0
 
-    .line 311
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -405,7 +375,6 @@
     .parameter "name"
 
     .prologue
-    .line 268
     const-class v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -421,7 +390,6 @@
     .locals 1
 
     .prologue
-    .line 268
     sget-object v0, Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->$VALUES:[Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;
 
     invoke-virtual {v0}, [Landroid/net/wifi/p2p/WifiP2pService$P2pStatus;->clone()Ljava/lang/Object;

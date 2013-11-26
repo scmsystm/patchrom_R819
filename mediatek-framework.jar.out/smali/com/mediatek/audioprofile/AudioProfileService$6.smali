@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 448
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .parameter "intent"
 
     .prologue
-    .line 452
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 453
     .local v0, action:Ljava/lang/String;
     const-string v4, "AudioProfileService"
 
@@ -69,7 +66,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     const-string v4, "android.intent.action.MEDIA_SCANNER_FINISHED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,7 +74,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 458
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mShouldGetDefaultRingtoneAfterScanFinish:Z
@@ -88,13 +83,11 @@
 
     if-eqz v4, :cond_4
 
-    .line 460
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #calls: Lcom/mediatek/audioprofile/AudioProfileService;->readDefaultRingtones()V
     invoke-static {v4}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1100(Lcom/mediatek/audioprofile/AudioProfileService;)V
 
-    .line 461
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mProfileStates:Ljava/util/HashMap;
@@ -104,7 +97,6 @@
 
     monitor-enter v5
 
-    .line 462
     :try_start_0
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
@@ -132,7 +124,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 463
     .local v2, profileKey:Ljava/lang/String;
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
@@ -147,13 +138,11 @@
 
     check-cast v3, Lcom/mediatek/audioprofile/AudioProfileState;
 
-    .line 465
     .local v3, profileState:Lcom/mediatek/audioprofile/AudioProfileState;
     iget-object v4, v3, Lcom/mediatek/audioprofile/AudioProfileState;->mRingerStream:Landroid/net/Uri;
 
     if-nez v4, :cond_1
 
-    .line 466
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mDefaultRingtone:Ljava/util/List;
@@ -173,13 +162,11 @@
 
     iput-object v4, v3, Lcom/mediatek/audioprofile/AudioProfileState;->mRingerStream:Landroid/net/Uri;
 
-    .line 469
     :cond_1
     iget-object v4, v3, Lcom/mediatek/audioprofile/AudioProfileState;->mNotificationStream:Landroid/net/Uri;
 
     if-nez v4, :cond_2
 
-    .line 470
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mDefaultRingtone:Ljava/util/List;
@@ -199,13 +186,11 @@
 
     iput-object v4, v3, Lcom/mediatek/audioprofile/AudioProfileState;->mNotificationStream:Landroid/net/Uri;
 
-    .line 474
     :cond_2
     iget-object v4, v3, Lcom/mediatek/audioprofile/AudioProfileState;->mVideoCallStream:Landroid/net/Uri;
 
     if-nez v4, :cond_0
 
-    .line 475
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mDefaultRingtone:Ljava/util/List;
@@ -227,7 +212,6 @@
 
     goto :goto_0
 
-    .line 479
     .end local v1           #i$:Ljava/util/Iterator;
     .end local v2           #profileKey:Ljava/lang/String;
     .end local v3           #profileState:Lcom/mediatek/audioprofile/AudioProfileState;
@@ -247,7 +231,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 482
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
@@ -273,7 +256,6 @@
     #setter for: Lcom/mediatek/audioprofile/AudioProfileService;->mShouldGetDefaultRingtoneAfterScanFinish:Z
     invoke-static {v5, v4}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1002(Lcom/mediatek/audioprofile/AudioProfileService;Z)Z
 
-    .line 561
     .end local v1           #i$:Ljava/util/Iterator;
     :cond_4
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
@@ -285,7 +267,6 @@
 
     if-nez v4, :cond_5
 
-    .line 562
     iget-object v4, p0, Lcom/mediatek/audioprofile/AudioProfileService$6;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mContext:Landroid/content/Context;
@@ -302,14 +283,12 @@
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 563
     const-string v4, "AudioProfileService"
 
     const-string v5, "unregister mUpgradeReceive!"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 565
     :cond_5
     const-string v4, "AudioProfileService"
 
@@ -317,10 +296,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     return-void
 
-    .line 482
     .restart local v1       #i$:Ljava/util/Iterator;
     :cond_6
     const/4 v4, 0x0

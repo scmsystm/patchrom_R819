@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 613
     iput-object p1, p0, Lcom/android/internal/telephony/gemini/a;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,25 +40,21 @@
     .locals 2
 
     .prologue
-    .line 615
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/a;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Z)Z
 
-    .line 616
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/a;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     const-string v1, "Time out"
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/gemini/GeminiPhone;->a(Lcom/android/internal/telephony/gemini/GeminiPhone;Ljava/lang/String;)V
 
-    .line 617
     iget-object v0, p0, Lcom/android/internal/telephony/gemini/a;->a:Lcom/android/internal/telephony/gemini/GeminiPhone;
 
     invoke-static {v0}, Lcom/android/internal/telephony/gemini/GeminiPhone;->c(Lcom/android/internal/telephony/gemini/GeminiPhone;)V
 
-    .line 618
     return-void
 .end method

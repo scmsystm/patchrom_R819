@@ -41,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 807
     .local p0, this:Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;,"Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access<TT;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,7 +53,6 @@
     .parameter "x1"
 
     .prologue
-    .line 807
     iput-object p1, p0, Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;->mData:Ljava/util/ArrayList;
 
     return-object p1
@@ -66,7 +64,6 @@
     .parameter "x1"
 
     .prologue
-    .line 807
     iput p1, p0, Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;->mSize:I
 
     return p1
@@ -84,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 812
     .local p0, this:Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;,"Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access<TT;>;"
     iget-object v0, p0, Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;->mData:Ljava/util/ArrayList;
 
@@ -99,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 816
     .local p0, this:Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;,"Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access<TT;>;"
     iget v0, p0, Landroid/view/ViewTreeObserver$CopyOnWriteArray$Access;->mSize:I
 

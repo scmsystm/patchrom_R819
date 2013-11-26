@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/mediatek/hardware/CameraEx$1;->val$cb:Lcom/mediatek/hardware/CameraEx$MavCallback;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,17 +40,14 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Lcom/mediatek/hardware/CameraEx$1;->val$cb:Lcom/mediatek/hardware/CameraEx$MavCallback;
 
     if-eqz v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lcom/mediatek/hardware/CameraEx$1;->val$cb:Lcom/mediatek/hardware/CameraEx$MavCallback;
 
     invoke-interface {v0}, Lcom/mediatek/hardware/CameraEx$MavCallback;->onFrame()V
 
-    .line 85
     :cond_0
     return-void
 .end method

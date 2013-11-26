@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 658
     iput-object p1, p0, Lcom/mediatek/banyan/widget/MTKImageView$GifThread;->this$0:Lcom/mediatek/banyan/widget/MTKImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 660
     iget-object v0, p0, Lcom/mediatek/banyan/widget/MTKImageView$GifThread;->this$0:Lcom/mediatek/banyan/widget/MTKImageView;
 
     #calls: Lcom/mediatek/banyan/widget/MTKImageView;->gifAnimation()V
     invoke-static {v0}, Lcom/mediatek/banyan/widget/MTKImageView;->access$400(Lcom/mediatek/banyan/widget/MTKImageView;)V
 
-    .line 661
     return-void
 .end method

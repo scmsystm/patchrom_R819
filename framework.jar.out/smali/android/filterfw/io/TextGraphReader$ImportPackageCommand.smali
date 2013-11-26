@@ -30,15 +30,12 @@
     .parameter "packageName"
 
     .prologue
-    .line 55
     iput-object p1, p0, Landroid/filterfw/io/TextGraphReader$ImportPackageCommand;->this$0:Landroid/filterfw/io/TextGraphReader;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     iput-object p2, p0, Landroid/filterfw/io/TextGraphReader$ImportPackageCommand;->mPackageName:Ljava/lang/String;
 
-    .line 57
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 62
     :try_start_0
     #getter for: Landroid/filterfw/io/TextGraphReader;->mFactory:Landroid/filterfw/core/FilterFactory;
     invoke-static {p1}, Landroid/filterfw/io/TextGraphReader;->access$000(Landroid/filterfw/io/TextGraphReader;)Landroid/filterfw/core/FilterFactory;
@@ -67,14 +63,11 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 66
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, e:Ljava/lang/IllegalArgumentException;
     new-instance v1, Landroid/filterfw/io/GraphIOException;
 

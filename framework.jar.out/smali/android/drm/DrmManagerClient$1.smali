@@ -33,7 +33,6 @@
     .parameter
 
     .prologue
-    .line 1452
     iput-object p1, p0, Landroid/drm/DrmManagerClient$1;->this$0:Landroid/drm/DrmManagerClient;
 
     iput-object p2, p0, Landroid/drm/DrmManagerClient$1;->val$rightsIssuerFinal:Ljava/lang/String;
@@ -53,7 +52,6 @@
     .parameter "which"
 
     .prologue
-    .line 1455
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
@@ -66,15 +64,12 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1456
     .local v0, it:Landroid/content/Intent;
     iget-object v1, p0, Landroid/drm/DrmManagerClient$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 1457
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 1458
     return-void
 .end method

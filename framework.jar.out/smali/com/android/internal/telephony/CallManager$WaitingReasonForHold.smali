@@ -48,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 341
     new-instance v0, Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
 
     const-string v1, "NONE"
@@ -81,7 +80,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;->MAKE_CALL:Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
 
-    .line 340
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
@@ -118,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 340
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,7 +126,6 @@
     .parameter "name"
 
     .prologue
-    .line 340
     const-class v0, Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -145,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 340
     sget-object v0, Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;->$VALUES:[Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;
 
     invoke-virtual {v0}, [Lcom/android/internal/telephony/CallManager$WaitingReasonForHold;->clone()Ljava/lang/Object;

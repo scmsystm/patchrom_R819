@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 54
     const-string v0, "DupSmsFilterExt"
 
     sput-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
@@ -54,56 +53,44 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 86
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object v1, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mContext:Landroid/content/Context;
 
-    .line 61
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSimId:I
 
-    .line 62
     iput-object v1, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSmsList:Ljava/util/ArrayList;
 
-    .line 64
     new-instance v0, Lcom/mediatek/op/sms/DupSmsFilterExt$1;
 
     invoke-direct {v0, p0}, Lcom/mediatek/op/sms/DupSmsFilterExt$1;-><init>(Lcom/mediatek/op/sms/DupSmsFilterExt;)V
 
     iput-object v0, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mHandler:Landroid/os/Handler;
 
-    .line 87
     sget-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v1, "call constructor"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     if-nez p1, :cond_0
 
-    .line 89
     sget-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v1, "FAIL! context is null"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     :goto_0
     return-void
 
-    .line 93
     :cond_0
     iput-object p1, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mContext:Landroid/content/Context;
 
-    .line 94
     iput p2, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSimId:I
 
-    .line 96
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x20
@@ -112,7 +99,6 @@
 
     iput-object v0, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSmsList:Ljava/util/ArrayList;
 
-    .line 98
     invoke-direct {p0}, Lcom/mediatek/op/sms/DupSmsFilterExt;->sendClearMessage()V
 
     goto :goto_0
@@ -122,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 52
     sget-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -133,7 +118,6 @@
     .parameter "x0"
 
     .prologue
-    .line 52
     invoke-direct {p0}, Lcom/mediatek/op/sms/DupSmsFilterExt;->sendClearMessage()V
 
     return-void
@@ -147,23 +131,19 @@
 
     const/4 v1, 0x1
 
-    .line 134
     const/4 v0, -0x1
 
-    .line 135
     .local v0, ret:I
     iget v2, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSimId:I
 
     if-nez v2, :cond_1
 
-    .line 136
     const-string v2, "gsm.sim.ril.testsim"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 140
     :cond_0
     :goto_0
     sget-object v2, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
@@ -200,19 +180,16 @@
 
     invoke-static {v2, v3}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 141
     if-ne v0, v1, :cond_2
 
     :goto_1
     return v1
 
-    .line 137
     :cond_1
     iget v2, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSimId:I
 
     if-ne v2, v1, :cond_0
 
-    .line 138
     const-string v2, "gsm.sim.ril.testsim.2"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -221,7 +198,6 @@
 
     goto :goto_0
 
-    .line 141
     :cond_2
     const/4 v1, 0x0
 
@@ -232,14 +208,12 @@
     .locals 5
 
     .prologue
-    .line 77
     sget-object v2, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v3, "call sendClearMessage"
 
     invoke-static {v2, v3}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
     const-string v2, "dev.dup_sms_keep_period"
 
     const-wide/32 v3, 0x493e0
@@ -248,7 +222,6 @@
 
     move-result-wide v0
 
-    .line 83
     .local v0, delayedPeriod:J
     iget-object v2, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mHandler:Landroid/os/Handler;
 
@@ -256,7 +229,6 @@
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 84
     return-void
 .end method
 
@@ -269,25 +241,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
     sget-object v3, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v4, "call containDupSms"
 
     invoke-static {v3, v4}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     invoke-direct {p0}, Lcom/mediatek/op/sms/DupSmsFilterExt;->isTestIccCard()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 119
     :goto_0
     return v2
 
-    .line 109
     :cond_0
     iget-object v3, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSmsList:Ljava/util/ArrayList;
 
@@ -309,7 +277,6 @@
 
     check-cast v1, [B
 
-    .line 110
     .local v1, oldPdu:[B
     invoke-virtual {p0, p1, v1}, Lcom/mediatek/op/sms/DupSmsFilterExt;->isDupSms([B[B)Z
 
@@ -317,25 +284,21 @@
 
     if-eqz v3, :cond_1
 
-    .line 111
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 115
     .end local v1           #oldPdu:[B
     :cond_2
     iget-object v3, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSmsList:Ljava/util/ArrayList;
 
     monitor-enter v3
 
-    .line 116
     :try_start_0
     iget-object v4, p0, Lcom/mediatek/op/sms/DupSmsFilterExt;->mSmsList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 117
     monitor-exit v3
 
     goto :goto_0
@@ -356,31 +319,26 @@
     .parameter "oldPdu"
 
     .prologue
-    .line 123
     sget-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v1, "call isDupSms"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     invoke-static {p1, p2}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 126
     sget-object v0, Lcom/mediatek/op/sms/DupSmsFilterExt;->TAG:Ljava/lang/String;
 
     const-string v1, "find a duplicated sms"
 
     invoke-static {v0, v1}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     const/4 v0, 0x1
 
-    .line 130
     :goto_0
     return v0
 

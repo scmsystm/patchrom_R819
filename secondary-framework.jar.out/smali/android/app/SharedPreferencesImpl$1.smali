@@ -25,7 +25,6 @@
     .parameter "x0"
 
     .prologue
-    .line 88
     iput-object p1, p0, Landroid/app/SharedPreferencesImpl$1;->this$0:Landroid/app/SharedPreferencesImpl;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -39,25 +38,20 @@
     .locals 2
 
     .prologue
-    .line 90
     iget-object v1, p0, Landroid/app/SharedPreferencesImpl$1;->this$0:Landroid/app/SharedPreferencesImpl;
 
     monitor-enter v1
 
-    .line 91
     :try_start_0
     iget-object v0, p0, Landroid/app/SharedPreferencesImpl$1;->this$0:Landroid/app/SharedPreferencesImpl;
 
     #calls: Landroid/app/SharedPreferencesImpl;->loadFromDiskLocked()V
     invoke-static {v0}, Landroid/app/SharedPreferencesImpl;->access$000(Landroid/app/SharedPreferencesImpl;)V
 
-    .line 92
     monitor-exit v1
 
-    .line 93
     return-void
 
-    .line 92
     :catchall_0
     move-exception v0
 

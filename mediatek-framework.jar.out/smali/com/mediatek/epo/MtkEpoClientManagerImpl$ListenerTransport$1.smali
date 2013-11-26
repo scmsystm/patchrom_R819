@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport$1;->this$1:Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport;
 
     iput-object p2, p0, Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport$1;->val$this$0:Lcom/mediatek/epo/MtkEpoClientManagerImpl;
@@ -44,12 +43,10 @@
     .parameter "msg"
 
     .prologue
-    .line 70
     iget-object v0, p0, Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport$1;->this$1:Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport;
 
     #calls: Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport;->handleMessageInt(Landroid/os/Message;)V
     invoke-static {v0, p1}, Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport;->access$000(Lcom/mediatek/epo/MtkEpoClientManagerImpl$ListenerTransport;Landroid/os/Message;)V
 
-    .line 71
     return-void
 .end method

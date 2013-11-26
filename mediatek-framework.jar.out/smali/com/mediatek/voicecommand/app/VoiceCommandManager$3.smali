@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 150
     iput-object p1, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$3;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +38,6 @@
     .parameter "msg"
 
     .prologue
-    .line 153
     iget-object v2, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$3;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mLock:[B
@@ -49,13 +47,11 @@
 
     monitor-enter v3
 
-    .line 154
     :try_start_0
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 159
     iget-object v2, p0, Lcom/mediatek/voicecommand/app/VoiceCommandManager$3;->this$0:Lcom/mediatek/voicecommand/app/VoiceCommandManager;
 
     #getter for: Lcom/mediatek/voicecommand/app/VoiceCommandManager;->mRegisterListeners:Ljava/util/ArrayList;
@@ -81,7 +77,6 @@
 
     check-cast v1, Lcom/mediatek/common/voicecommand/VoiceCommandListener;
 
-    .line 160
     .local v1, listener:Lcom/mediatek/common/voicecommand/VoiceCommandListener;
     iget v4, p1, Landroid/os/Message;->what:I
 
@@ -95,7 +90,6 @@
 
     goto :goto_0
 
-    .line 165
     .end local v0           #i$:Ljava/util/Iterator;
     .end local v1           #listener:Lcom/mediatek/common/voicecommand/VoiceCommandListener;
     :catchall_0
@@ -114,10 +108,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 166
     return-void
 
-    .line 154
     nop
 
     :pswitch_data_0

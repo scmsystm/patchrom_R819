@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 3927
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +37,6 @@
     .locals 3
 
     .prologue
-    .line 3930
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->CAPTIVE_PORTAL_CHECK:Landroid/net/NetworkInfo$DetailedState;
@@ -46,7 +44,6 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)V
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$10000(Landroid/net/wifi/WifiStateMachine;Landroid/net/NetworkInfo$DetailedState;)V
 
-    .line 3931
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mWifiConfigStore:Landroid/net/wifi/WifiConfigStore;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/wifi/WifiConfigStore;->updateStatus(ILandroid/net/NetworkInfo$DetailedState;)V
 
-    .line 3932
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -78,7 +74,6 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->sendNetworkStateChangeBroadcast(Ljava/lang/String;)V
     invoke-static {v0, v1}, Landroid/net/wifi/WifiStateMachine;->access$13600(Landroid/net/wifi/WifiStateMachine;Ljava/lang/String;)V
 
-    .line 3933
     return-void
 .end method
 
@@ -87,19 +82,15 @@
     .parameter "message"
 
     .prologue
-    .line 3936
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 3951
     const/4 v2, 0x0
 
-    .line 3953
     :goto_0
     return v2
 
-    .line 3939
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -121,7 +112,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3945
     :goto_1
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -130,7 +120,6 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)V
     invoke-static {v2, v3}, Landroid/net/wifi/WifiStateMachine;->access$10000(Landroid/net/wifi/WifiStateMachine;Landroid/net/NetworkInfo$DetailedState;)V
 
-    .line 3946
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #getter for: Landroid/net/wifi/WifiStateMachine;->mWifiConfigStore:Landroid/net/wifi/WifiConfigStore;
@@ -149,7 +138,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/net/wifi/WifiConfigStore;->updateStatus(ILandroid/net/NetworkInfo$DetailedState;)V
 
-    .line 3947
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v3, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -162,7 +150,6 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->sendNetworkStateChangeBroadcast(Ljava/lang/String;)V
     invoke-static {v2, v3}, Landroid/net/wifi/WifiStateMachine;->access$13600(Landroid/net/wifi/WifiStateMachine;Ljava/lang/String;)V
 
-    .line 3948
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     iget-object v3, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
@@ -175,16 +162,13 @@
     #calls: Landroid/net/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Landroid/net/wifi/WifiStateMachine;->access$16500(Landroid/net/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 3953
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 3940
     :catch_0
     move-exception v1
 
-    .line 3941
     .local v1, re:Landroid/os/RemoteException;
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -211,12 +195,10 @@
 
     goto :goto_1
 
-    .line 3942
     .end local v1           #re:Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 3943
     .local v0, e:Ljava/lang/IllegalStateException;
     iget-object v2, p0, Landroid/net/wifi/WifiStateMachine$CaptivePortalCheckState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -243,7 +225,6 @@
 
     goto :goto_1
 
-    .line 3936
     :pswitch_data_0
     .packed-switch 0x20014
         :pswitch_0

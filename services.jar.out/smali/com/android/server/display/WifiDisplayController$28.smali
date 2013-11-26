@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 1593
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$28;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +42,18 @@
     .parameter "which"
 
     .prologue
-    .line 1596
     invoke-static {}, Lcom/android/server/display/WifiDisplayController;->access$200()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1597
     const-string v0, "WifiDisplayController"
 
     const-string v1, "BT on, user DON\'T turn off WifiDisplay -> turn off BT"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1599
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$28;->this$0:Lcom/android/server/display/WifiDisplayController;
 
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1600
     iget-object v0, p0, Lcom/android/server/display/WifiDisplayController$28;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mBTAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -86,6 +81,5 @@
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->disable()Z
 
-    .line 1601
     return-void
 .end method

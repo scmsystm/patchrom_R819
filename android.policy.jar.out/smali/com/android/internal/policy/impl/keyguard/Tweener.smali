@@ -32,14 +32,12 @@
     .locals 1
 
     .prologue
-    .line 38
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
-    .line 141
     new-instance v0, Lcom/android/internal/policy/impl/keyguard/Tweener$1;
 
     invoke-direct {v0}, Lcom/android/internal/policy/impl/keyguard/Tweener$1;-><init>()V
@@ -54,13 +52,10 @@
     .parameter "anim"
 
     .prologue
-    .line 40
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-object p1, p0, Lcom/android/internal/policy/impl/keyguard/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
-    .line 42
     return-void
 .end method
 
@@ -69,7 +64,6 @@
     .parameter "x0"
 
     .prologue
-    .line 33
     invoke-static {p0}, Lcom/android/internal/policy/impl/keyguard/Tweener;->remove(Landroid/animation/Animator;)V
 
     return-void
@@ -80,7 +74,6 @@
     .parameter "animator"
 
     .prologue
-    .line 45
     sget-object v2, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -91,7 +84,6 @@
 
     move-result-object v1
 
-    .line 46
     .local v1, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/Object;Lcom/android/internal/policy/impl/keyguard/Tweener;>;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -100,14 +92,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 47
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 48
     .local v0, entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Object;Lcom/android/internal/policy/impl/keyguard/Tweener;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -119,10 +109,8 @@
 
     if-ne v2, p0, :cond_0
 
-    .line 51
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 55
     .end local v0           #entry:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Object;Lcom/android/internal/policy/impl/keyguard/Tweener;>;"
     :cond_1
     return-void
@@ -145,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 165
     .local p0, props:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/animation/PropertyValuesHolder;>;"
     move-object v0, p1
 
@@ -161,7 +148,6 @@
 
     aget-object v2, v0, v1
 
-    .line 166
     .local v2, killobject:Ljava/lang/Object;
     sget-object v5, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
@@ -171,19 +157,15 @@
 
     check-cast v4, Lcom/android/internal/policy/impl/keyguard/Tweener;
 
-    .line 167
     .local v4, tween:Lcom/android/internal/policy/impl/keyguard/Tweener;
     if-eqz v4, :cond_0
 
-    .line 168
     iget-object v5, v4, Lcom/android/internal/policy/impl/keyguard/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v5}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 169
     if-eqz p0, :cond_1
 
-    .line 170
     iget-object v6, v4, Lcom/android/internal/policy/impl/keyguard/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
@@ -200,14 +182,12 @@
 
     invoke-virtual {v6, v5}, Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
 
-    .line 165
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 173
     :cond_1
     sget-object v5, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
@@ -215,7 +195,6 @@
 
     goto :goto_1
 
-    .line 177
     .end local v2           #killobject:Ljava/lang/Object;
     .end local v4           #tween:Lcom/android/internal/policy/impl/keyguard/Tweener;
     :cond_2
@@ -226,12 +205,10 @@
     .locals 1
 
     .prologue
-    .line 161
     sget-object v0, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 162
     return-void
 .end method
 
@@ -242,22 +219,17 @@
     .parameter "vars"
 
     .prologue
-    .line 58
     const-wide/16 v3, 0x0
 
-    .line 59
     .local v3, delay:J
     const/4 v12, 0x0
 
-    .line 60
     .local v12, updateListener:Landroid/animation/ValueAnimator$AnimatorUpdateListener;
     const/4 v9, 0x0
 
-    .line 61
     .local v9, listener:Landroid/animation/Animator$AnimatorListener;
     const/4 v7, 0x0
 
-    .line 64
     .local v7, interpolator:Landroid/animation/TimeInterpolator;
     new-instance v10, Ljava/util/ArrayList;
 
@@ -269,7 +241,6 @@
 
     invoke-direct {v10, v14}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 65
     .local v10, props:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/animation/PropertyValuesHolder;>;"
     const/4 v6, 0x0
 
@@ -281,14 +252,12 @@
 
     if-ge v6, v14, :cond_c
 
-    .line 66
     aget-object v14, p3, v6
 
     instance-of v14, v14, Ljava/lang/String;
 
     if-nez v14, :cond_0
 
-    .line 67
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -315,19 +284,16 @@
 
     throw v14
 
-    .line 69
     :cond_0
     aget-object v8, p3, v6
 
     check-cast v8, Ljava/lang/String;
 
-    .line 70
     .local v8, key:Ljava/lang/String;
     add-int/lit8 v14, v6, 0x1
 
     aget-object v13, p3, v14
 
-    .line 72
     .local v13, value:Ljava/lang/Object;
     const-string v14, "simultaneousTween"
 
@@ -337,7 +303,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 65
     .end local v13           #value:Ljava/lang/Object;
     :cond_1
     :goto_1
@@ -345,7 +310,6 @@
 
     goto :goto_0
 
-    .line 74
     .restart local v13       #value:Ljava/lang/Object;
     :cond_2
     const-string v14, "ease"
@@ -358,12 +322,10 @@
 
     move-object v7, v13
 
-    .line 75
     check-cast v7, Landroid/animation/TimeInterpolator;
 
     goto :goto_1
 
-    .line 76
     :cond_3
     const-string v14, "onUpdate"
 
@@ -384,12 +346,10 @@
     :cond_4
     move-object v12, v13
 
-    .line 77
     check-cast v12, Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
     goto :goto_1
 
-    .line 78
     :cond_5
     const-string v14, "onComplete"
 
@@ -410,12 +370,10 @@
     :cond_6
     move-object v9, v13
 
-    .line 79
     check-cast v9, Landroid/animation/Animator$AnimatorListener;
 
     goto :goto_1
 
-    .line 80
     :cond_7
     const-string v14, "delay"
 
@@ -425,7 +383,6 @@
 
     if-eqz v14, :cond_8
 
-    .line 81
     check-cast v13, Ljava/lang/Number;
 
     .end local v13           #value:Ljava/lang/Object;
@@ -435,7 +392,6 @@
 
     goto :goto_1
 
-    .line 82
     .restart local v13       #value:Ljava/lang/Object;
     :cond_8
     const-string v14, "syncWith"
@@ -446,12 +402,10 @@
 
     if-nez v14, :cond_1
 
-    .line 84
     instance-of v14, v13, [F
 
     if-eqz v14, :cond_9
 
-    .line 85
     const/4 v14, 0x2
 
     new-array v15, v14, [F
@@ -491,14 +445,12 @@
 
     goto :goto_1
 
-    .line 87
     .restart local v13       #value:Ljava/lang/Object;
     :cond_9
     instance-of v14, v13, [I
 
     if-eqz v14, :cond_a
 
-    .line 88
     const/4 v14, 0x2
 
     new-array v15, v14, [I
@@ -538,14 +490,12 @@
 
     goto/16 :goto_1
 
-    .line 90
     .restart local v13       #value:Ljava/lang/Object;
     :cond_a
     instance-of v14, v13, Ljava/lang/Number;
 
     if-eqz v14, :cond_b
 
-    .line 91
     check-cast v13, Ljava/lang/Number;
 
     .end local v13           #value:Ljava/lang/Object;
@@ -553,7 +503,6 @@
 
     move-result v5
 
-    .line 92
     .local v5, floatValue:F
     const/4 v14, 0x1
 
@@ -571,7 +520,6 @@
 
     goto/16 :goto_1
 
-    .line 94
     .end local v5           #floatValue:F
     .restart local v13       #value:Ljava/lang/Object;
     :cond_b
@@ -613,7 +561,6 @@
 
     throw v14
 
-    .line 100
     .end local v8           #key:Ljava/lang/String;
     .end local v13           #value:Ljava/lang/Object;
     :cond_c
@@ -627,15 +574,12 @@
 
     check-cast v11, Lcom/android/internal/policy/impl/keyguard/Tweener;
 
-    .line 101
     .local v11, tween:Lcom/android/internal/policy/impl/keyguard/Tweener;
     const/4 v2, 0x0
 
-    .line 102
     .local v2, anim:Landroid/animation/ObjectAnimator;
     if-nez v11, :cond_10
 
-    .line 103
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v14
@@ -654,13 +598,11 @@
 
     move-result-object v2
 
-    .line 105
     new-instance v11, Lcom/android/internal/policy/impl/keyguard/Tweener;
 
     .end local v11           #tween:Lcom/android/internal/policy/impl/keyguard/Tweener;
     invoke-direct {v11, v2}, Lcom/android/internal/policy/impl/keyguard/Tweener;-><init>(Landroid/animation/ObjectAnimator;)V
 
-    .line 106
     .restart local v11       #tween:Lcom/android/internal/policy/impl/keyguard/Tweener;
     sget-object v14, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
@@ -668,51 +610,38 @@
 
     invoke-virtual {v14, v0, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     :goto_2
     if-eqz v7, :cond_d
 
-    .line 114
     invoke-virtual {v2, v7}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 118
     :cond_d
     invoke-virtual {v2, v3, v4}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 119
     move-wide/from16 v0, p1
 
     invoke-virtual {v2, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 120
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->removeAllUpdateListeners()V
 
-    .line 121
     if-eqz v12, :cond_e
 
-    .line 122
     invoke-virtual {v2, v12}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 124
     :cond_e
     invoke-virtual {v2}, Landroid/animation/ObjectAnimator;->removeAllListeners()V
 
-    .line 125
     sget-object v14, Lcom/android/internal/policy/impl/keyguard/Tweener;->mCleanupListener:Landroid/animation/Animator$AnimatorListener;
 
     invoke-virtual {v2, v14}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 126
     if-eqz v9, :cond_f
 
-    .line 127
     invoke-virtual {v2, v9}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 130
     :cond_f
     return-object v11
 
-    .line 109
     :cond_10
     sget-object v14, Lcom/android/internal/policy/impl/keyguard/Tweener;->sTweens:Ljava/util/HashMap;
 
@@ -726,7 +655,6 @@
 
     iget-object v2, v14, Lcom/android/internal/policy/impl/keyguard/Tweener;->animator:Landroid/animation/ObjectAnimator;
 
-    .line 110
     const/4 v14, 0x1
 
     new-array v14, v14, [Ljava/lang/Object;
@@ -749,7 +677,6 @@
     .parameter "vars"
 
     .prologue
-    .line 137
     invoke-static {p1, p2, p3, p4}, Lcom/android/internal/policy/impl/keyguard/Tweener;->to(Ljava/lang/Object;J[Ljava/lang/Object;)Lcom/android/internal/policy/impl/keyguard/Tweener;
 
     move-result-object v0

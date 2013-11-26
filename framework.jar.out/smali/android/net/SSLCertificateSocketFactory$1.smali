@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 76
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .parameter "authType"
 
     .prologue
-    .line 78
     return-void
 .end method
 
@@ -46,7 +44,6 @@
     .parameter "authType"
 
     .prologue
-    .line 79
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     return-object v0

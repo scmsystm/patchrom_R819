@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 343
     iput-object p1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +42,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 346
     iget-object v1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
 
     #setter for: Lcom/android/server/power/DisplayPowerState;->mScreenUpdatePending:Z
     invoke-static {v1, v0}, Lcom/android/server/power/DisplayPowerState;->access$402(Lcom/android/server/power/DisplayPowerState;Z)Z
 
-    .line 348
     iget-object v1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
 
     #getter for: Lcom/android/server/power/DisplayPowerState;->mScreenOn:Z
@@ -79,7 +76,6 @@
 
     move-result v0
 
-    .line 349
     .local v0, brightness:I
     :cond_0
     iget-object v1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
@@ -102,7 +98,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 350
     iget-object v1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
 
     const/4 v2, 0x1
@@ -110,13 +105,11 @@
     #setter for: Lcom/android/server/power/DisplayPowerState;->mScreenReady:Z
     invoke-static {v1, v2}, Lcom/android/server/power/DisplayPowerState;->access$902(Lcom/android/server/power/DisplayPowerState;Z)Z
 
-    .line 351
     iget-object v1, p0, Lcom/android/server/power/DisplayPowerState$4;->this$0:Lcom/android/server/power/DisplayPowerState;
 
     #calls: Lcom/android/server/power/DisplayPowerState;->invokeCleanListenerIfNeeded()V
     invoke-static {v1}, Lcom/android/server/power/DisplayPowerState;->access$1000(Lcom/android/server/power/DisplayPowerState;)V
 
-    .line 353
     :cond_1
     return-void
 .end method

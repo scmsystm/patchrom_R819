@@ -31,15 +31,12 @@
     .locals 1
 
     .prologue
-    .line 1750
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1751
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/os/StrictMode$Span;->mContainerState:Landroid/os/StrictMode$ThreadSpanState;
 
-    .line 1752
     return-void
 .end method
 
@@ -48,13 +45,10 @@
     .parameter "threadState"
 
     .prologue
-    .line 1745
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1746
     iput-object p1, p0, Landroid/os/StrictMode$Span;->mContainerState:Landroid/os/StrictMode$ThreadSpanState;
 
-    .line 1747
     return-void
 .end method
 
@@ -63,7 +57,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1738
     iget-object v0, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     return-object v0
@@ -75,7 +68,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1738
     iput-object p1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     return-object p1
@@ -86,7 +78,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1738
     iget-object v0, p0, Landroid/os/StrictMode$Span;->mName:Ljava/lang/String;
 
     return-object v0
@@ -98,7 +89,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1738
     iput-object p1, p0, Landroid/os/StrictMode$Span;->mName:Ljava/lang/String;
 
     return-object p1
@@ -110,7 +100,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1738
     iput-wide p1, p0, Landroid/os/StrictMode$Span;->mCreateMillis:J
 
     return-wide p1
@@ -122,7 +111,6 @@
     .parameter "x1"
 
     .prologue
-    .line 1738
     iput-object p1, p0, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
     return-object p1
@@ -134,64 +122,52 @@
     .locals 4
 
     .prologue
-    .line 1765
     iget-object v0, p0, Landroid/os/StrictMode$Span;->mContainerState:Landroid/os/StrictMode$ThreadSpanState;
 
-    .line 1766
     .local v0, state:Landroid/os/StrictMode$ThreadSpanState;
     monitor-enter v0
 
-    .line 1767
     :try_start_0
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mName:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 1769
     monitor-exit v0
 
-    .line 1800
     :goto_0
     return-void
 
-    .line 1773
     :cond_0
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
     if-eqz v1, :cond_1
 
-    .line 1774
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
     iget-object v2, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     iput-object v2, v1, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
-    .line 1776
     :cond_1
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     if-eqz v1, :cond_2
 
-    .line 1777
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     iget-object v2, p0, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
     iput-object v2, v1, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
-    .line 1779
     :cond_2
     iget-object v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mActiveHead:Landroid/os/StrictMode$Span;
 
     if-ne v1, p0, :cond_3
 
-    .line 1780
     iget-object v1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
     iput-object v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mActiveHead:Landroid/os/StrictMode$Span;
 
-    .line 1783
     :cond_3
     iget v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mActiveSize:I
 
@@ -199,7 +175,6 @@
 
     iput v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mActiveSize:I
 
-    .line 1785
     invoke-static {}, Landroid/os/StrictMode;->access$800()Z
 
     move-result v1
@@ -242,50 +217,41 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1787
     :cond_4
     const-wide/16 v1, -0x1
 
     iput-wide v1, p0, Landroid/os/StrictMode$Span;->mCreateMillis:J
 
-    .line 1788
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/os/StrictMode$Span;->mName:Ljava/lang/String;
 
-    .line 1789
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/os/StrictMode$Span;->mPrev:Landroid/os/StrictMode$Span;
 
-    .line 1790
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
-    .line 1794
     iget v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mFreeListSize:I
 
     const/4 v2, 0x5
 
     if-ge v1, v2, :cond_5
 
-    .line 1795
     iget-object v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mFreeListHead:Landroid/os/StrictMode$Span;
 
     iput-object v1, p0, Landroid/os/StrictMode$Span;->mNext:Landroid/os/StrictMode$Span;
 
-    .line 1796
     iput-object p0, v0, Landroid/os/StrictMode$ThreadSpanState;->mFreeListHead:Landroid/os/StrictMode$Span;
 
-    .line 1797
     iget v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mFreeListSize:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Landroid/os/StrictMode$ThreadSpanState;->mFreeListSize:I
 
-    .line 1799
     :cond_5
     monitor-exit v0
 

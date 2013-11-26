@@ -30,17 +30,13 @@
     .parameter "raw"
 
     .prologue
-    .line 489
     iput-object p1, p0, Lcom/android/server/NsdService$NativeEvent;->this$0:Lcom/android/server/NsdService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 490
     iput p2, p0, Lcom/android/server/NsdService$NativeEvent;->code:I
 
-    .line 491
     iput-object p3, p0, Lcom/android/server/NsdService$NativeEvent;->raw:Ljava/lang/String;
 
-    .line 492
     return-void
 .end method

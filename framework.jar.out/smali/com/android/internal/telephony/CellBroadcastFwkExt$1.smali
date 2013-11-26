@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -41,14 +40,13 @@
     .prologue
     const/16 v9, 0x65
 
-    .line 71
     const-string v5, "CellBroadcastFwkExt"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "receive message "
+    const-string v7, "receive message "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -73,19 +71,17 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     iget v5, p1, Landroid/os/Message;->what:I
 
     packed-switch v5, :pswitch_data_0
 
-    .line 129
     const-string v5, "CellBroadcastFwkExt"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "unknown CB event "
+    const-string v7, "unknown CB event "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -103,11 +99,9 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     :goto_0
     return-void
 
-    .line 76
     :pswitch_0
     const-string v5, "CellBroadcastFwkExt"
 
@@ -115,18 +109,15 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 78
     .local v0, ar:Landroid/os/AsyncResult;
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v5, :cond_0
 
-    .line 79
     const-string v5, "CellBroadcastFwkExt"
 
     const-string v6, "fail to query cb config"
@@ -135,27 +126,22 @@
 
     goto :goto_0
 
-    .line 82
     :cond_0
     iget-object v1, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/internal/telephony/CellBroadcastConfigInfo;
 
-    .line 83
     .local v1, cbConfigInfo:Lcom/android/internal/telephony/CellBroadcastConfigInfo;
     iget-object v4, v1, Lcom/android/internal/telephony/CellBroadcastConfigInfo;->channelConfigInfo:Ljava/lang/String;
 
-    .line 85
     .local v4, oldChannelConfig:Ljava/lang/String;
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 86
     .local v2, nextAction:I
     iget-object v3, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v3, Lcom/android/internal/telephony/EtwsNotification;
 
-    .line 87
     .local v3, noti:Lcom/android/internal/telephony/EtwsNotification;
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
@@ -164,7 +150,6 @@
 
     goto :goto_0
 
-    .line 92
     .end local v0           #ar:Landroid/os/AsyncResult;
     .end local v1           #cbConfigInfo:Lcom/android/internal/telephony/CellBroadcastConfigInfo;
     .end local v2           #nextAction:I
@@ -177,31 +162,27 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 94
     .restart local v0       #ar:Landroid/os/AsyncResult;
     iget-object v3, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v3, Lcom/android/internal/telephony/EtwsNotification;
 
-    .line 95
     .restart local v3       #noti:Lcom/android/internal/telephony/EtwsNotification;
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v5, :cond_3
 
-    .line 96
     const-string v5, "CellBroadcastFwkExt"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "success to open cb channel "
+    const-string v7, "success to open cb channel "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -219,20 +200,16 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 98
     .restart local v2       #nextAction:I
     if-ne v2, v9, :cond_1
 
-    .line 99
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
     #calls: Lcom/android/internal/telephony/CellBroadcastFwkExt;->addEtwsNoti(Lcom/android/internal/telephony/EtwsNotification;)V
     invoke-static {v5, v3}, Lcom/android/internal/telephony/CellBroadcastFwkExt;->access$200(Lcom/android/internal/telephony/CellBroadcastFwkExt;Lcom/android/internal/telephony/EtwsNotification;)V
 
-    .line 105
     :goto_1
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
@@ -243,13 +220,11 @@
 
     goto :goto_0
 
-    .line 100
     :cond_1
     const/16 v5, 0x66
 
     if-ne v2, v5, :cond_2
 
-    .line 101
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
     #calls: Lcom/android/internal/telephony/CellBroadcastFwkExt;->removeFirstEtwsNotiThenAdd(Lcom/android/internal/telephony/EtwsNotification;)V
@@ -257,7 +232,6 @@
 
     goto :goto_1
 
-    .line 103
     :cond_2
     const-string v5, "CellBroadcastFwkExt"
 
@@ -283,7 +257,6 @@
 
     goto :goto_1
 
-    .line 107
     .end local v2           #nextAction:I
     :cond_3
     const-string v5, "CellBroadcastFwkExt"
@@ -294,7 +267,6 @@
 
     goto/16 :goto_0
 
-    .line 112
     .end local v0           #ar:Landroid/os/AsyncResult;
     .end local v3           #noti:Lcom/android/internal/telephony/EtwsNotification;
     :pswitch_2
@@ -304,31 +276,27 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 113
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 114
     .restart local v0       #ar:Landroid/os/AsyncResult;
     iget-object v3, v0, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
     check-cast v3, Lcom/android/internal/telephony/EtwsNotification;
 
-    .line 115
     .restart local v3       #noti:Lcom/android/internal/telephony/EtwsNotification;
     iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-nez v5, :cond_5
 
-    .line 116
     const-string v5, "CellBroadcastFwkExt"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "success to close cb channel "
+    const-string v7, "success to close cb channel "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -346,20 +314,16 @@
 
     invoke-static {v5, v6}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     iget v2, p1, Landroid/os/Message;->arg1:I
 
-    .line 118
     .restart local v2       #nextAction:I
     if-ne v2, v9, :cond_4
 
-    .line 119
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
     #calls: Lcom/android/internal/telephony/CellBroadcastFwkExt;->removeEtwsNoti(Lcom/android/internal/telephony/EtwsNotification;)V
     invoke-static {v5, v3}, Lcom/android/internal/telephony/CellBroadcastFwkExt;->access$500(Lcom/android/internal/telephony/CellBroadcastFwkExt;Lcom/android/internal/telephony/EtwsNotification;)V
 
-    .line 123
     :goto_2
     iget-object v5, p0, Lcom/android/internal/telephony/CellBroadcastFwkExt$1;->this$0:Lcom/android/internal/telephony/CellBroadcastFwkExt;
 
@@ -370,7 +334,6 @@
 
     goto/16 :goto_0
 
-    .line 121
     :cond_4
     const-string v5, "CellBroadcastFwkExt"
 
@@ -396,7 +359,6 @@
 
     goto :goto_2
 
-    .line 125
     .end local v2           #nextAction:I
     :cond_5
     const-string v5, "CellBroadcastFwkExt"
@@ -407,7 +369,6 @@
 
     goto/16 :goto_0
 
-    .line 74
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

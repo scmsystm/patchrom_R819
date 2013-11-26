@@ -107,23 +107,20 @@
     .locals 3
 
     .prologue
-    .line 84
     const-string v1, "drmframework_jni"
 
     invoke-static {v1}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 87
     const-string v1, "drm.forwardlock.only"
 
-    const-string/jumbo v2, "no"
+    const-string v2, "no"
 
     invoke-static {v1, v2}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 88
     .local v0, drmFLOnly:Ljava/lang/String;
-    const-string/jumbo v1, "true"
+    const-string v1, "true"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -131,7 +128,7 @@
 
     if-nez v1, :cond_0
 
-    const-string/jumbo v1, "yes"
+    const-string v1, "yes"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -153,28 +150,24 @@
     :goto_0
     sput-boolean v1, Landroid/drm/DrmManagerClient;->OMA_DRM_FL_ONLY:Z
 
-    .line 153
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Landroid/drm/DrmManagerClient;->sSecureTimerDialogQueue:Ljava/util/ArrayList;
 
-    .line 155
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Landroid/drm/DrmManagerClient;->sConsumeDialogQueue:Ljava/util/ArrayList;
 
-    .line 157
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v1, Landroid/drm/DrmManagerClient;->sProtectionInfoDialogQueue:Ljava/util/ArrayList;
 
-    .line 159
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -183,7 +176,6 @@
 
     return-void
 
-    .line 88
     :cond_1
     const/4 v1, 0x0
 
@@ -195,35 +187,28 @@
     .parameter "context"
 
     .prologue
-    .line 321
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 322
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
 
-    .line 323
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/drm/DrmManagerClient;->mReleased:Z
 
-    .line 324
     const-string v0, "DrmManagerClient"
 
     const-string v1, "create DrmManagerClient instance & create event threads."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     invoke-direct {p0}, Landroid/drm/DrmManagerClient;->createEventThreads()V
 
-    .line 328
     invoke-direct {p0}, Landroid/drm/DrmManagerClient;->_initialize()I
 
     move-result v0
 
     iput v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
-    .line 329
     return-void
 .end method
 
@@ -295,7 +280,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     return v0
@@ -308,7 +292,6 @@
     .parameter "x2"
 
     .prologue
-    .line 66
     invoke-direct {p0, p1, p2}, Landroid/drm/DrmManagerClient;->_processDrmInfo(ILandroid/drm/DrmInfo;)Landroid/drm/DrmInfoStatus;
 
     move-result-object v0
@@ -322,7 +305,6 @@
     .parameter "x1"
 
     .prologue
-    .line 66
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->getEventType(I)I
 
     move-result v0
@@ -336,7 +318,6 @@
     .parameter "x1"
 
     .prologue
-    .line 66
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->getErrorType(I)I
 
     move-result v0
@@ -350,7 +331,6 @@
     .parameter "x1"
 
     .prologue
-    .line 66
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->_removeAllRights(I)I
 
     move-result v0
@@ -363,7 +343,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
 
     return-object v0
@@ -374,7 +353,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
 
     return-object v0
@@ -385,7 +363,6 @@
     .parameter "x0"
 
     .prologue
-    .line 66
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
 
     return-object v0
@@ -408,7 +385,6 @@
     .end annotation
 
     .prologue
-    .line 1123
     .local p0, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     const-string v2, "DrmManagerClient"
 
@@ -432,16 +408,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1124
     monitor-enter p0
 
-    .line 1125
     :try_start_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 1126
     .local v1, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -450,14 +423,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 1127
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
 
-    .line 1128
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     const-string v2, "DrmManagerClient"
 
@@ -485,7 +456,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1129
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->getCreatorContext()Landroid/content/Context;
 
     move-result-object v2
@@ -496,25 +466,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 1130
     const-string v2, "DrmManagerClient"
 
     const-string v3, "checkCustomAlertDialog(): context match, dismiss it"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1131
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->dismiss()V
 
-    .line 1135
     .end local v0           #dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     :cond_1
     monitor-exit p0
 
-    .line 1136
     return-void
 
-    .line 1135
     .end local v1           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     :catchall_0
     move-exception v2
@@ -531,19 +496,15 @@
     .parameter "uri"
 
     .prologue
-    .line 922
     const/4 v8, 0x0
 
-    .line 923
     .local v8, path:Ljava/lang/String;
     if-eqz p1, :cond_1
 
-    .line 924
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 925
     .local v10, scheme:Ljava/lang/String;
     if-eqz v10, :cond_0
 
@@ -563,19 +524,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 927
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 956
     .end local v10           #scheme:Ljava/lang/String;
     :cond_1
     :goto_0
     return-object v8
 
-    .line 929
     .restart local v10       #scheme:Ljava/lang/String;
     :cond_2
     const-string v0, "http"
@@ -586,14 +544,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 930
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v8
 
     goto :goto_0
 
-    .line 932
     :cond_3
     const-string v0, "content"
 
@@ -603,7 +559,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 933
     const/4 v0, 0x1
 
     new-array v2, v0, [Ljava/lang/String;
@@ -614,11 +569,9 @@
 
     aput-object v1, v2, v0
 
-    .line 934
     .local v2, projection:[Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 936
     .local v6, cursor:Landroid/database/Cursor;
     :try_start_0
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
@@ -639,7 +592,6 @@
 
     move-result-object v6
 
-    .line 938
     if-eqz v6, :cond_4
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -654,7 +606,6 @@
 
     if-nez v0, :cond_6
 
-    .line 939
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -667,11 +618,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 944
     :catch_0
     move-exception v7
 
-    .line 945
     .local v7, e:Landroid/database/sqlite/SQLiteException;
     :try_start_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -684,21 +633,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 948
     .end local v7           #e:Landroid/database/sqlite/SQLiteException;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_5
 
-    .line 949
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 948
     :cond_5
     throw v0
 
-    .line 942
     :cond_6
     :try_start_2
     const-string v0, "_data"
@@ -707,7 +652,6 @@
 
     move-result v9
 
-    .line 943
     .local v9, pathIndex:I
     invoke-interface {v6, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_2
@@ -716,15 +660,12 @@
 
     move-result-object v8
 
-    .line 948
     if-eqz v6, :cond_1
 
-    .line 949
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 953
     .end local v2           #projection:[Ljava/lang/String;
     .end local v6           #cursor:Landroid/database/Cursor;
     .end local v9           #pathIndex:I
@@ -742,7 +683,6 @@
     .locals 2
 
     .prologue
-    .line 1995
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-nez v0, :cond_0
@@ -751,14 +691,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1996
     const-string v0, "DrmManagerClient"
 
     const-string v1, "create info handler thread."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1997
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DrmManagerClient.InfoHandler"
@@ -767,12 +705,10 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
-    .line 1998
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 1999
     new-instance v0, Landroid/drm/DrmManagerClient$InfoHandler;
 
     iget-object v1, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
@@ -785,14 +721,12 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
-    .line 2001
     const-string v0, "DrmManagerClient"
 
     const-string v1, "create event handler thread."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2002
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "DrmManagerClient.EventHandler"
@@ -801,12 +735,10 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
-    .line 2003
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 2004
     new-instance v0, Landroid/drm/DrmManagerClient$EventHandler;
 
     iget-object v1, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
@@ -819,7 +751,6 @@
 
     iput-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
-    .line 2006
     :cond_0
     return-void
 .end method
@@ -828,7 +759,6 @@
     .locals 2
 
     .prologue
-    .line 2009
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -837,7 +767,6 @@
 
     invoke-direct {p0, v0, v1}, Landroid/drm/DrmManagerClient;->_setListeners(ILjava/lang/Object;)V
 
-    .line 2010
     return-void
 .end method
 
@@ -846,24 +775,19 @@
     .parameter "infoType"
 
     .prologue
-    .line 900
     const/4 v0, -0x1
 
-    .line 902
     .local v0, error:I
     packed-switch p1, :pswitch_data_0
 
-    .line 909
     :goto_0
     return v0
 
-    .line 906
     :pswitch_0
     const/16 v0, 0x7d6
 
     goto :goto_0
 
-    .line 902
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -877,24 +801,19 @@
     .parameter "infoType"
 
     .prologue
-    .line 887
     const/4 v0, -0x1
 
-    .line 889
     .local v0, eventType:I
     packed-switch p1, :pswitch_data_0
 
-    .line 896
     :goto_0
     return v0
 
-    .line 893
     :pswitch_0
     const/16 v0, 0x3ea
 
     goto :goto_0
 
-    .line 889
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -911,7 +830,6 @@
     .parameter "message"
 
     .prologue
-    .line 253
     check-cast p0, Ljava/lang/ref/WeakReference;
 
     .end local p0
@@ -921,7 +839,6 @@
 
     check-cast v0, Landroid/drm/DrmManagerClient;
 
-    .line 255
     .local v0, instance:Landroid/drm/DrmManagerClient;
     if-eqz v0, :cond_0
 
@@ -929,7 +846,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 256
     iget-object v2, v0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
     const/4 v3, 0x1
@@ -938,13 +854,11 @@
 
     move-result-object v1
 
-    .line 258
     .local v1, m:Landroid/os/Message;
     iget-object v2, v0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
     invoke-virtual {v2, v1}, Landroid/drm/DrmManagerClient$InfoHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 260
     .end local v1           #m:Landroid/os/Message;
     :cond_0
     return-void
@@ -956,14 +870,13 @@
     .parameter "listener"
 
     .prologue
-    .line 2018
     const-string v3, "DrmManagerClient"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showConsume() within context: "
+    const-string v5, "showConsume() within context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -979,35 +892,29 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2020
     sget-object v3, Landroid/drm/DrmManagerClient;->sLicenseDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->checkCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)V
 
-    .line 2021
     sget-object v3, Landroid/drm/DrmManagerClient;->sConsumeDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v2
 
-    .line 2022
     .local v2, result:Landroid/app/Dialog;
     if-eqz v2, :cond_0
 
-    .line 2023
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showConsume(): use the existing one"
+    const-string v4, "showConsume(): use the existing one"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2066
     .end local v2           #result:Landroid/app/Dialog;
     :goto_0
     return-object v2
 
-    .line 2027
     .restart local v2       #result:Landroid/app/Dialog;
     :cond_0
     new-instance v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
@@ -1016,13 +923,11 @@
 
     invoke-direct {v0, p0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 2028
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 2030
     .local v1, res:Landroid/content/res/Resources;
     const/4 v3, -0x1
 
@@ -1038,7 +943,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2041
     const/4 v3, -0x2
 
     const/high16 v4, 0x104
@@ -1053,17 +957,14 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2051
     const v3, 0x108009b
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 2052
     const v3, 0x20500c8
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 2053
     const v3, 0x20500c9
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1072,19 +973,16 @@
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 2055
     new-instance v3, Landroid/drm/DrmManagerClient$7;
 
     invoke-direct {v3, p1}, Landroid/drm/DrmManagerClient$7;-><init>(Landroid/drm/DrmManagerClient$DrmOperationListener;)V
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 2064
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v2, v0
 
-    .line 2066
     goto :goto_0
 .end method
 
@@ -1095,14 +993,13 @@
     .parameter "dismissListener"
 
     .prologue
-    .line 1288
     const-string v3, "DrmManagerClient"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showConsumeDialog() within context: "
+    const-string v5, "showConsumeDialog() within context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1118,35 +1015,29 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1290
     sget-object v3, Landroid/drm/DrmManagerClient;->sLicenseDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->checkCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)V
 
-    .line 1291
     sget-object v3, Landroid/drm/DrmManagerClient;->sConsumeDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v2
 
-    .line 1292
     .local v2, result:Landroid/app/Dialog;
     if-eqz v2, :cond_0
 
-    .line 1293
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showConsumeDialog(): use the existing one"
+    const-string v4, "showConsumeDialog(): use the existing one"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1311
     .end local v2           #result:Landroid/app/Dialog;
     :goto_0
     return-object v2
 
-    .line 1297
     .restart local v2       #result:Landroid/app/Dialog;
     :cond_0
     new-instance v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
@@ -1155,13 +1046,11 @@
 
     invoke-direct {v0, p0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 1298
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1299
     .local v1, res:Landroid/content/res/Resources;
     const/4 v3, -0x1
 
@@ -1173,7 +1062,6 @@
 
     invoke-virtual {v0, v3, v4, p1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1302
     const/4 v3, -0x2
 
     const/high16 v4, 0x104
@@ -1184,17 +1072,14 @@
 
     invoke-virtual {v0, v3, v4, p1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1305
     const v3, 0x108009b
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 1306
     const v3, 0x20500c8
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 1307
     const v3, 0x20500c9
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1203,15 +1088,12 @@
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 1308
     invoke-virtual {v0, p2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 1309
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v2, v0
 
-    .line 1311
     goto :goto_0
 .end method
 
@@ -1221,14 +1103,13 @@
     .parameter "listener"
 
     .prologue
-    .line 2075
     const-string v3, "DrmManagerClient"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showSecureTimerInvalid() within context: "
+    const-string v5, "showSecureTimerInvalid() within context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1244,30 +1125,25 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2077
     sget-object v3, Landroid/drm/DrmManagerClient;->sSecureTimerDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v2
 
-    .line 2078
     .local v2, result:Landroid/app/Dialog;
     if-eqz v2, :cond_0
 
-    .line 2079
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showSecureTimerInvalid(): use the existing one"
+    const-string v4, "showSecureTimerInvalid(): use the existing one"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2110
     .end local v2           #result:Landroid/app/Dialog;
     :goto_0
     return-object v2
 
-    .line 2083
     .restart local v2       #result:Landroid/app/Dialog;
     :cond_0
     new-instance v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
@@ -1276,13 +1152,11 @@
 
     invoke-direct {v0, p0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 2084
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 2086
     .local v1, res:Landroid/content/res/Resources;
     const/4 v3, -0x1
 
@@ -1298,17 +1172,14 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2094
     const v3, 0x108009b
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 2095
     const v3, 0x20500c6
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 2096
     const v3, 0x20500c7
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1317,19 +1188,16 @@
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 2098
     new-instance v3, Landroid/drm/DrmManagerClient$9;
 
     invoke-direct {v3, p1}, Landroid/drm/DrmManagerClient$9;-><init>(Landroid/drm/DrmManagerClient$DrmOperationListener;)V
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 2108
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v2, v0
 
-    .line 2110
     goto :goto_0
 .end method
 
@@ -1340,14 +1208,13 @@
     .parameter "dismissListener"
 
     .prologue
-    .line 1253
     const-string v3, "DrmManagerClient"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showSecureTimerInvalidDialog() within context: "
+    const-string v5, "showSecureTimerInvalidDialog() within context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1363,30 +1230,25 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     sget-object v3, Landroid/drm/DrmManagerClient;->sSecureTimerDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v3, p0}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v2
 
-    .line 1256
     .local v2, result:Landroid/app/Dialog;
     if-eqz v2, :cond_0
 
-    .line 1257
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showSecureTimerInvalidDialog(): use the existing one"
+    const-string v4, "showSecureTimerInvalidDialog(): use the existing one"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     .end local v2           #result:Landroid/app/Dialog;
     :goto_0
     return-object v2
 
-    .line 1261
     .restart local v2       #result:Landroid/app/Dialog;
     :cond_0
     new-instance v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
@@ -1395,13 +1257,11 @@
 
     invoke-direct {v0, p0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 1262
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 1263
     .local v1, res:Landroid/content/res/Resources;
     const/4 v3, -0x1
 
@@ -1413,17 +1273,14 @@
 
     invoke-virtual {v0, v3, v4, p1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1266
     const v3, 0x108009b
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 1267
     const v3, 0x20500c6
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 1268
     const v3, 0x20500c7
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
@@ -1432,15 +1289,12 @@
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 1269
     invoke-virtual {v0, p2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 1270
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v2, v0
 
-    .line 1272
     goto :goto_0
 .end method
 
@@ -1449,7 +1303,6 @@
     .parameter "sec"
 
     .prologue
-    .line 1988
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -1462,19 +1315,16 @@
 
     invoke-direct {v0, v3, v4}, Ljava/util/Date;-><init>(J)V
 
-    .line 1989
     .local v0, date:Ljava/util/Date;
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v1}, Ljava/text/SimpleDateFormat;-><init>()V
 
-    .line 1990
     .local v1, dateFormat:Ljava/text/SimpleDateFormat;
     invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1991
     .local v2, str:Ljava/lang/String;
     return-object v2
 .end method
@@ -1497,7 +1347,6 @@
     .end annotation
 
     .prologue
-    .line 1105
     .local p0, list:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     const-string v3, "DrmManagerClient"
 
@@ -1505,7 +1354,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "validateCustomAlertDialog(): validate within context: "
+    const-string v5, "validateCustomAlertDialog(): validate within context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1521,20 +1370,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     const/4 v2, 0x0
 
-    .line 1107
     .local v2, result:Landroid/app/Dialog;
     monitor-enter p0
 
-    .line 1108
     :try_start_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 1109
     .local v1, iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -1543,14 +1388,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 1110
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/drm/DrmManagerClient$CustomAlertDialog;
 
-    .line 1111
     .local v0, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     const-string v3, "DrmManagerClient"
 
@@ -1558,7 +1401,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "validateCustomAlertDialog(): stored dialog with creator context: "
+    const-string v5, "validateCustomAlertDialog(): stored dialog with creator context: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1578,7 +1421,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1112
     invoke-virtual {v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->getCreatorContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1589,25 +1431,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 1113
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "validateCustomAlertDialog(): context match"
+    const-string v4, "validateCustomAlertDialog(): context match"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1114
     move-object v2, v0
 
-    .line 1118
     .end local v0           #dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     :cond_1
     monitor-exit p0
 
-    .line 1119
     return-object v2
 
-    .line 1118
     .end local v1           #iter:Ljava/util/Iterator;,"Ljava/util/Iterator<Landroid/drm/DrmManagerClient$CustomAlertDialog;>;"
     :catchall_0
     move-exception v3
@@ -1626,7 +1463,6 @@
     .parameter "drmInfoRequest"
 
     .prologue
-    .line 589
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmInfoRequest;->isValid()Z
@@ -1635,7 +1471,6 @@
 
     if-nez v0, :cond_1
 
-    .line 590
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1645,7 +1480,6 @@
 
     throw v0
 
-    .line 592
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1661,19 +1495,15 @@
     .parameter "drmInfoRequest"
 
     .prologue
-    .line 610
     invoke-virtual {p0, p1}, Landroid/drm/DrmManagerClient;->acquireDrmInfo(Landroid/drm/DrmInfoRequest;)Landroid/drm/DrmInfo;
 
     move-result-object v0
 
-    .line 611
     .local v0, drmInfo:Landroid/drm/DrmInfo;
     if-nez v0, :cond_0
 
-    .line 612
     const/16 v1, -0x7d0
 
-    .line 614
     :goto_0
     return v1
 
@@ -1691,7 +1521,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 556
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
@@ -1709,7 +1538,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 557
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1719,7 +1547,6 @@
 
     throw v0
 
-    .line 559
     :cond_2
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1738,7 +1565,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 541
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -1760,7 +1586,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 542
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1770,7 +1595,6 @@
 
     throw v0
 
-    .line 544
     :cond_2
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1786,14 +1610,12 @@
     .parameter "uri"
 
     .prologue
-    .line 727
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 728
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1803,7 +1625,6 @@
 
     throw v0
 
-    .line 730
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1822,14 +1643,12 @@
     .parameter "action"
 
     .prologue
-    .line 766
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 767
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1839,7 +1658,6 @@
 
     throw v0
 
-    .line 769
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1857,7 +1675,6 @@
     .parameter "path"
 
     .prologue
-    .line 716
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Landroid/drm/DrmManagerClient;->checkRightsStatus(Ljava/lang/String;I)I
@@ -1873,7 +1690,6 @@
     .parameter "action"
 
     .prologue
-    .line 743
     if-eqz p1, :cond_0
 
     const-string v1, ""
@@ -1890,7 +1706,6 @@
 
     if-nez v1, :cond_1
 
-    .line 744
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1900,7 +1715,6 @@
 
     throw v1
 
-    .line 748
     :cond_1
     iget v1, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -1908,23 +1722,19 @@
 
     move-result v0
 
-    .line 749
     .local v0, result:I
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_2
 
-    .line 750
     const-string v1, "DrmManagerClient"
 
     const-string v2, "checkRightsStatus() : secure timer indicates invalid state"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 751
     const/4 v0, 0x1
 
-    .line 753
     :cond_2
     return v0
 .end method
@@ -1935,14 +1745,12 @@
     .parameter "action"
 
     .prologue
-    .line 1973
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 1974
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1952,7 +1760,6 @@
 
     throw v0
 
-    .line 1976
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -1971,7 +1778,6 @@
     .parameter "action"
 
     .prologue
-    .line 1947
     if-eqz p1, :cond_0
 
     const-string v1, ""
@@ -1988,7 +1794,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1948
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -1998,7 +1803,6 @@
 
     throw v1
 
-    .line 1950
     :cond_1
     const-string v1, "DrmManagerClient"
 
@@ -2044,14 +1848,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1952
     iget v1, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v1, p1, p2}, Landroid/drm/DrmManagerClient;->_checkRightsStatus(ILjava/lang/String;I)I
 
     move-result v0
 
-    .line 1953
     .local v0, result:I
     const-string v1, "DrmManagerClient"
 
@@ -2075,7 +1877,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1955
     return v0
 .end method
 
@@ -2084,7 +1885,6 @@
     .parameter "convertId"
 
     .prologue
-    .line 864
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0, p1}, Landroid/drm/DrmManagerClient;->_closeConvertSession(II)Landroid/drm/DrmConvertedStatus;
@@ -2102,7 +1902,6 @@
     .prologue
     const/16 v2, -0x7d0
 
-    .line 1211
     if-eqz p1, :cond_0
 
     sget-object v3, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
@@ -2115,7 +1914,6 @@
 
     if-nez v3, :cond_1
 
-    .line 1212
     :cond_0
     const-string v3, "DrmManagerClient"
 
@@ -2123,15 +1921,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1223
     :goto_0
     return v2
 
-    .line 1216
     :cond_1
     const/4 v1, 0x0
 
-    .line 1218
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -2140,18 +1935,15 @@
 
     move-result-object v1
 
-    .line 1223
     invoke-virtual {p0, v1, p2}, Landroid/drm/DrmManagerClient;->consume(Ljava/lang/String;I)I
 
     move-result v2
 
     goto :goto_0
 
-    .line 1219
     :catch_0
     move-exception v0
 
-    .line 1220
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v3, "DrmManagerClient"
 
@@ -2188,7 +1980,6 @@
     .parameter "action"
 
     .prologue
-    .line 1234
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -2205,7 +1996,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1235
     :cond_0
     const-string v0, "DrmManagerClient"
 
@@ -2213,10 +2003,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1236
     const/16 v0, -0x7d0
 
-    .line 1238
     :goto_0
     return v0
 
@@ -2236,14 +2024,12 @@
     .parameter "inputData"
 
     .prologue
-    .line 846
     if-eqz p2, :cond_0
 
     array-length v0, p2
 
     if-gtz v0, :cond_1
 
-    .line 847
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2253,7 +2039,6 @@
 
     throw v0
 
-    .line 849
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -2268,29 +2053,24 @@
     .locals 2
 
     .prologue
-    .line 332
     const-string v0, "DrmManagerClient"
 
     const-string v1, "finalize DrmManagerClient instance."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     iget-boolean v0, p0, Landroid/drm/DrmManagerClient;->mReleased:Z
 
     if-nez v0, :cond_0
 
-    .line 334
     const-string v0, "DrmManagerClient"
 
     const-string v1, "You should have called release()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     invoke-virtual {p0}, Landroid/drm/DrmManagerClient;->release()V
 
-    .line 337
     :cond_0
     return-void
 .end method
@@ -2299,20 +2079,17 @@
     .locals 5
 
     .prologue
-    .line 417
     iget v4, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v4}, Landroid/drm/DrmManagerClient;->_getAllSupportInfo(I)[Landroid/drm/DrmSupportInfo;
 
     move-result-object v3
 
-    .line 418
     .local v3, supportInfos:[Landroid/drm/DrmSupportInfo;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 420
     .local v0, descriptions:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -2322,7 +2099,6 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 421
     aget-object v4, v3, v2
 
     invoke-virtual {v4}, Landroid/drm/DrmSupportInfo;->getDescriprition()Ljava/lang/String;
@@ -2331,12 +2107,10 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 420
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 424
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -2344,7 +2118,6 @@
 
     new-array v1, v4, [Ljava/lang/String;
 
-    .line 425
     .local v1, drmEngines:[Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -2361,14 +2134,12 @@
     .parameter "action"
 
     .prologue
-    .line 470
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 471
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2378,7 +2149,6 @@
 
     throw v0
 
-    .line 473
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -2397,7 +2167,6 @@
     .parameter "action"
 
     .prologue
-    .line 439
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -2414,7 +2183,6 @@
 
     if-nez v0, :cond_1
 
-    .line 440
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2424,7 +2192,6 @@
 
     throw v0
 
-    .line 442
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -2445,7 +2212,6 @@
     .end annotation
 
     .prologue
-    .line 1151
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0, p1}, Landroid/drm/DrmManagerClient;->_getContentIdFromRights(ILandroid/drm/DrmRights;)Ljava/lang/String;
@@ -2461,7 +2227,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 645
     if-eqz p1, :cond_0
 
     sget-object v2, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
@@ -2479,7 +2244,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 646
     :cond_1
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -2489,11 +2253,9 @@
 
     throw v2
 
-    .line 648
     :cond_2
     const-string v1, ""
 
-    .line 650
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -2502,7 +2264,6 @@
 
     move-result-object v1
 
-    .line 655
     :goto_0
     invoke-virtual {p0, v1, p2}, Landroid/drm/DrmManagerClient;->getDrmObjectType(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2510,11 +2271,9 @@
 
     return v2
 
-    .line 651
     :catch_0
     move-exception v0
 
-    .line 653
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "DrmManagerClient"
 
@@ -2531,7 +2290,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 628
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -2553,7 +2311,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 629
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2563,7 +2320,6 @@
 
     throw v0
 
-    .line 631
     :cond_2
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -2579,14 +2335,12 @@
     .parameter "uri"
 
     .prologue
-    .line 485
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 486
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2596,7 +2350,6 @@
 
     throw v0
 
-    .line 488
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -2614,7 +2367,6 @@
     .parameter "path"
 
     .prologue
-    .line 454
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -2625,7 +2377,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 455
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2635,7 +2386,6 @@
 
     throw v0
 
-    .line 457
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -2651,14 +2401,12 @@
     .parameter "uri"
 
     .prologue
-    .line 1904
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 1905
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2668,7 +2416,6 @@
 
     throw v0
 
-    .line 1907
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -2686,7 +2433,6 @@
     .parameter "path"
 
     .prologue
-    .line 1918
     if-eqz p1, :cond_0
 
     const-string v2, ""
@@ -2697,7 +2443,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1919
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -2707,13 +2452,11 @@
 
     throw v2
 
-    .line 1922
     :cond_1
     invoke-virtual {p0, p1}, Landroid/drm/DrmManagerClient;->getMetadata(Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 1923
     .local v0, cv:Landroid/content/ContentValues;
     if-eqz v0, :cond_2
 
@@ -2725,23 +2468,19 @@
 
     if-eqz v2, :cond_2
 
-    .line 1924
     const-string v2, "drm_method"
 
     invoke-virtual {v0, v2}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 1925
     .local v1, m:Ljava/lang/Integer;
     if-eqz v1, :cond_2
 
-    .line 1926
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v2
 
-    .line 1929
     .end local v1           #m:Ljava/lang/Integer;
     :goto_0
     return v2
@@ -2757,14 +2496,12 @@
     .parameter "uri"
 
     .prologue
-    .line 702
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 703
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -2774,7 +2511,6 @@
 
     throw v0
 
-    .line 705
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -2792,7 +2528,6 @@
     .parameter "path"
 
     .prologue
-    .line 666
     if-eqz p1, :cond_0
 
     const-string v6, ""
@@ -2803,7 +2538,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 667
     :cond_0
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
@@ -2813,26 +2547,21 @@
 
     throw v6
 
-    .line 670
     :cond_1
     const/4 v5, 0x0
 
-    .line 672
     .local v5, mime:Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 674
     .local v3, is:Ljava/io/FileInputStream;
     const/4 v0, 0x0
 
-    .line 675
     .local v0, fd:Ljava/io/FileDescriptor;
     :try_start_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 676
     .local v1, file:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -2840,7 +2569,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 677
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -2848,7 +2576,6 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 678
     .end local v3           #is:Ljava/io/FileInputStream;
     .local v4, is:Ljava/io/FileInputStream;
     :try_start_1
@@ -2861,7 +2588,6 @@
 
     move-object v3, v4
 
-    .line 680
     .end local v4           #is:Ljava/io/FileInputStream;
     .restart local v3       #is:Ljava/io/FileInputStream;
     :cond_2
@@ -2875,26 +2601,21 @@
 
     move-result-object v5
 
-    .line 684
     if-eqz v3, :cond_3
 
-    .line 686
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 691
     .end local v1           #file:Ljava/io/File;
     :cond_3
     :goto_0
     return-object v5
 
-    .line 681
     :catch_0
     move-exception v2
 
-    .line 682
     .local v2, ioe:Ljava/io/IOException;
     :goto_1
     :try_start_4
@@ -2926,10 +2647,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 684
     if-eqz v3, :cond_3
 
-    .line 686
     :try_start_5
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -2937,38 +2656,32 @@
 
     goto :goto_0
 
-    .line 687
     .end local v2           #ioe:Ljava/io/IOException;
     :catch_1
     move-exception v6
 
     goto :goto_0
 
-    .line 684
     :catchall_0
     move-exception v6
 
     :goto_2
     if-eqz v3, :cond_4
 
-    .line 686
     :try_start_6
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 684
     :cond_4
     :goto_3
     throw v6
 
-    .line 687
     :catch_2
     move-exception v7
 
     goto :goto_3
 
-    .line 684
     .end local v3           #is:Ljava/io/FileInputStream;
     .restart local v1       #file:Ljava/io/File;
     .restart local v4       #is:Ljava/io/FileInputStream;
@@ -2981,7 +2694,6 @@
     .restart local v3       #is:Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 681
     .end local v3           #is:Ljava/io/FileInputStream;
     .restart local v4       #is:Ljava/io/FileInputStream;
     :catch_3
@@ -2999,7 +2711,6 @@
     .parameter "engineFilePath"
 
     .prologue
-    .line 525
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -3010,7 +2721,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 526
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3042,13 +2752,11 @@
 
     throw v0
 
-    .line 529
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0, p1}, Landroid/drm/DrmManagerClient;->_installDrmEngine(ILjava/lang/String;)V
 
-    .line 530
     return-void
 .end method
 
@@ -3059,14 +2767,12 @@
     .prologue
     const/16 v2, -0x7d0
 
-    .line 1162
     if-eqz p1, :cond_0
 
     sget-object v3, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v3, p1, :cond_1
 
-    .line 1163
     :cond_0
     const-string v3, "DrmManagerClient"
 
@@ -3074,15 +2780,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1174
     :goto_0
     return v2
 
-    .line 1167
     :cond_1
     const/4 v1, 0x0
 
-    .line 1169
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -3091,18 +2794,15 @@
 
     move-result-object v1
 
-    .line 1174
     invoke-virtual {p0, v1}, Landroid/drm/DrmManagerClient;->installDrmMsg(Ljava/lang/String;)I
 
     move-result v2
 
     goto :goto_0
 
-    .line 1170
     :catch_0
     move-exception v0
 
-    .line 1171
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v3, "DrmManagerClient"
 
@@ -3144,7 +2844,6 @@
 
     const/4 v3, 0x0
 
-    .line 1185
     if-eqz p1, :cond_0
 
     const-string v5, ""
@@ -3155,7 +2854,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1186
     :cond_0
     const-string v3, "DrmManagerClient"
 
@@ -3165,20 +2863,16 @@
 
     move v3, v4
 
-    .line 1200
     :cond_1
     :goto_0
     return v3
 
-    .line 1191
     :cond_2
     new-array v0, v7, [B
 
-    .line 1192
     .local v0, data:[B
     aput-byte v3, v0, v3
 
-    .line 1193
     new-instance v1, Landroid/drm/DrmInfo;
 
     const/16 v5, 0x7da
@@ -3187,20 +2881,17 @@
 
     invoke-direct {v1, v5, v0, v6}, Landroid/drm/DrmInfo;-><init>(I[BLjava/lang/String;)V
 
-    .line 1196
     .local v1, info:Landroid/drm/DrmInfo;
     const-string v5, "installDrmMsg"
 
     invoke-virtual {v1, v5, p1}, Landroid/drm/DrmInfo;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1199
     iget v5, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v5, v1}, Landroid/drm/DrmManagerClient;->_processDrmInfo(ILandroid/drm/DrmInfo;)Landroid/drm/DrmInfoStatus;
 
     move-result-object v2
 
-    .line 1200
     .local v2, status:Landroid/drm/DrmInfoStatus;
     iget v5, v2, Landroid/drm/DrmInfoStatus;->statusCode:I
 
@@ -3216,7 +2907,6 @@
     .parameter "mimeType"
 
     .prologue
-    .line 826
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -3227,7 +2917,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 827
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -3237,7 +2926,6 @@
 
     throw v0
 
-    .line 829
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -3255,24 +2943,20 @@
     .parameter "frontId"
 
     .prologue
-    .line 1780
     invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1781
     .local v0, bgdBmp:Landroid/graphics/Bitmap;
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 1782
     .local v2, front:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0, v0, v2}, Landroid/drm/DrmManagerClient;->overlayBitmap(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1783
     .local v1, bmp:Landroid/graphics/Bitmap;
     if-eq v0, v1, :cond_0
 
@@ -3284,13 +2968,10 @@
 
     if-nez v3, :cond_0
 
-    .line 1784
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1785
     const/4 v0, 0x0
 
-    .line 1787
     :cond_0
     return-object v1
 .end method
@@ -3305,26 +2986,22 @@
 
     const/4 v11, 0x0
 
-    .line 1748
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1749
     :cond_0
     const-string v8, "DrmManagerClient"
 
-    const-string/jumbo v9, "overlayBitmap() : Given background / front pic is null."
+    const-string v9, "overlayBitmap() : Given background / front pic is null."
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v0, v7
 
-    .line 1767
     :goto_0
     return-object v0
 
-    .line 1753
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -3342,13 +3019,11 @@
 
     move-result-object v0
 
-    .line 1756
     .local v0, bMutable:Landroid/graphics/Bitmap;
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1757
     .local v3, overlayCanvas:Landroid/graphics/Canvas;
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -3356,22 +3031,18 @@
 
     if-nez v8, :cond_2
 
-    .line 1758
     invoke-virtual {v3, p1, v11, v11, v7}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1760
     :cond_2
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v5
 
-    .line 1761
     .local v5, overlayWidth:I
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v4
 
-    .line 1762
     .local v4, overlayHeight:I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -3379,7 +3050,6 @@
 
     sub-int v1, v7, v5
 
-    .line 1763
     .local v1, left:I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -3387,7 +3057,6 @@
 
     sub-int v6, v7, v4
 
-    .line 1764
     .local v6, top:I
     new-instance v2, Landroid/graphics/Rect;
 
@@ -3397,11 +3066,9 @@
 
     invoke-direct {v2, v1, v6, v7, v8}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1765
     .local v2, newBounds:Landroid/graphics/Rect;
     invoke-virtual {p2, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1766
     invoke-virtual {p2, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -3414,24 +3081,20 @@
     .parameter "frontId"
 
     .prologue
-    .line 1729
     invoke-static {p1, p2}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1730
     .local v0, bgdBmp:Landroid/graphics/Bitmap;
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 1731
     .local v2, front:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0, v0, v2}, Landroid/drm/DrmManagerClient;->overlayBitmapSkew(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1732
     .local v1, bmp:Landroid/graphics/Bitmap;
     if-eq v0, v1, :cond_0
 
@@ -3443,13 +3106,10 @@
 
     if-nez v3, :cond_0
 
-    .line 1733
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1734
     const/4 v0, 0x0
 
-    .line 1736
     :cond_0
     return-object v1
 .end method
@@ -3460,31 +3120,25 @@
     .parameter "front"
 
     .prologue
-    .line 1686
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 1687
     :cond_0
     const-string v10, "DrmManagerClient"
 
-    const-string/jumbo v11, "overlayBitmapSkew() : Given background / front pic is null."
+    const-string v11, "overlayBitmapSkew() : Given background / front pic is null."
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1688
     const/4 v0, 0x0
 
-    .line 1716
     :goto_0
     return-object v0
 
-    .line 1692
     :cond_1
     const/4 v5, 0x0
 
-    .line 1693
     .local v5, offset:I
     iget-object v10, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
 
@@ -3492,12 +3146,10 @@
 
     if-eqz v10, :cond_3
 
-    .line 1694
     new-instance v3, Landroid/util/DisplayMetrics;
 
     invoke-direct {v3}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1695
     .local v3, metric:Landroid/util/DisplayMetrics;
     iget-object v10, p0, Landroid/drm/DrmManagerClient;->mContext:Landroid/content/Context;
 
@@ -3513,16 +3165,13 @@
 
     invoke-virtual {v10, v3}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1696
     iget v1, v3, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    .line 1697
     .local v1, densityDpi:I
     const/16 v10, 0x3c0
 
     div-int v5, v10, v1
 
-    .line 1702
     .end local v1           #densityDpi:I
     .end local v3           #metric:Landroid/util/DisplayMetrics;
     :goto_1
@@ -3544,13 +3193,11 @@
 
     move-result-object v0
 
-    .line 1705
     .local v0, bMutable:Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/Canvas;
 
     invoke-direct {v6, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 1706
     .local v6, overlayCanvas:Landroid/graphics/Canvas;
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -3558,7 +3205,6 @@
 
     if-nez v10, :cond_2
 
-    .line 1707
     const/4 v10, 0x0
 
     const/4 v11, 0x0
@@ -3567,19 +3213,16 @@
 
     invoke-virtual {v6, p1, v10, v11, v12}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 1709
     :cond_2
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v8
 
-    .line 1710
     .local v8, overlayWidth:I
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v7
 
-    .line 1711
     .local v7, overlayHeight:I
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -3587,7 +3230,6 @@
 
     sub-int v2, v10, v8
 
-    .line 1712
     .local v2, left:I
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -3595,7 +3237,6 @@
 
     sub-int v9, v10, v7
 
-    .line 1713
     .local v9, top:I
     new-instance v4, Landroid/graphics/Rect;
 
@@ -3605,16 +3246,13 @@
 
     invoke-direct {v4, v2, v9, v10, v11}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 1714
     .local v4, newBounds:Landroid/graphics/Rect;
     invoke-virtual {p2, v4}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1715
     invoke-virtual {p2, v6}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 1699
     .end local v0           #bMutable:Landroid/graphics/Bitmap;
     .end local v2           #left:I
     .end local v4           #newBounds:Landroid/graphics/Rect;
@@ -3629,7 +3267,7 @@
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v12, "overlayBitmapSkew() : Given mContext is not an Activity type: "
+    const-string v12, "overlayBitmapSkew() : Given mContext is not an Activity type: "
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3658,18 +3296,15 @@
     .parameter "bgdBmpId"
 
     .prologue
-    .line 1887
     invoke-static {p1, p4}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1888
     .local v0, bgdBmp:Landroid/graphics/Bitmap;
     invoke-virtual {p0, p1, p2, p3, v0}, Landroid/drm/DrmManagerClient;->overlayDrmIcon(Landroid/content/res/Resources;Ljava/lang/String;ILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1889
     .local v1, bmp:Landroid/graphics/Bitmap;
     if-eq v0, v1, :cond_0
 
@@ -3681,13 +3316,10 @@
 
     if-nez v2, :cond_0
 
-    .line 1890
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1891
     const/4 v0, 0x0
 
-    .line 1893
     :cond_0
     return-object v1
 .end method
@@ -3700,67 +3332,55 @@
     .parameter "bgdBmp"
 
     .prologue
-    .line 1854
     invoke-virtual {p0, p2}, Landroid/drm/DrmManagerClient;->getMethod(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1855
     .local v2, method:I
     if-nez v2, :cond_0
 
-    .line 1856
     const-string v4, "DrmManagerClient"
 
-    const-string/jumbo v5, "overlayDrmIcon() : not set drm icon because of invalid method"
+    const-string v5, "overlayDrmIcon() : not set drm icon because of invalid method"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1873
     .end local p4
     :goto_0
     return-object p4
 
-    .line 1860
     .restart local p4
     :cond_0
     const/4 v4, 0x1
 
     if-ne v2, v4, :cond_1
 
-    .line 1861
     const-string v4, "DrmManagerClient"
 
-    const-string/jumbo v5, "overlayDrmIcon() : not set drm icon because method is FL"
+    const-string v5, "overlayDrmIcon() : not set drm icon because method is FL"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1865
     :cond_1
     invoke-virtual {p0, p2, p3}, Landroid/drm/DrmManagerClient;->checkRightsStatus(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1866
     .local v3, rightsStatus:I
     const/4 v1, -0x1
 
-    .line 1867
     .local v1, lockId:I
     if-nez v3, :cond_2
 
-    .line 1868
     const v1, 0x2020040
 
-    .line 1872
     :goto_1
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 1873
     .local v0, front:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0, p4, v0}, Landroid/drm/DrmManagerClient;->overlayBitmap(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
@@ -3768,7 +3388,6 @@
 
     goto :goto_0
 
-    .line 1870
     .end local v0           #front:Landroid/graphics/drawable/Drawable;
     :cond_2
     const v1, 0x2020041
@@ -3784,18 +3403,15 @@
     .parameter "bgdBmpId"
 
     .prologue
-    .line 1834
     invoke-static {p1, p4}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1835
     .local v0, bgdBmp:Landroid/graphics/Bitmap;
     invoke-virtual {p0, p1, p2, p3, v0}, Landroid/drm/DrmManagerClient;->overlayDrmIconSkew(Landroid/content/res/Resources;Ljava/lang/String;ILandroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1836
     .local v1, bmp:Landroid/graphics/Bitmap;
     if-eq v0, v1, :cond_0
 
@@ -3807,13 +3423,10 @@
 
     if-nez v2, :cond_0
 
-    .line 1837
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1838
     const/4 v0, 0x0
 
-    .line 1840
     :cond_0
     return-object v1
 .end method
@@ -3826,67 +3439,55 @@
     .parameter "bgdBmp"
 
     .prologue
-    .line 1801
     invoke-virtual {p0, p2}, Landroid/drm/DrmManagerClient;->getMethod(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 1802
     .local v2, method:I
     if-nez v2, :cond_0
 
-    .line 1803
     const-string v4, "DrmManagerClient"
 
-    const-string/jumbo v5, "overlayDrmIconSkew() : not set drm icon because of invalid method"
+    const-string v5, "overlayDrmIconSkew() : not set drm icon because of invalid method"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1820
     .end local p4
     :goto_0
     return-object p4
 
-    .line 1807
     .restart local p4
     :cond_0
     const/4 v4, 0x1
 
     if-ne v2, v4, :cond_1
 
-    .line 1808
     const-string v4, "DrmManagerClient"
 
-    const-string/jumbo v5, "overlayDrmIconSkew() : not set drm icon because method is FL."
+    const-string v5, "overlayDrmIconSkew() : not set drm icon because method is FL."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1812
     :cond_1
     invoke-virtual {p0, p2, p3}, Landroid/drm/DrmManagerClient;->checkRightsStatus(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1813
     .local v3, rightsStatus:I
     const/4 v1, -0x1
 
-    .line 1814
     .local v1, lockId:I
     if-nez v3, :cond_2
 
-    .line 1815
     const v1, 0x2020040
 
-    .line 1819
     :goto_1
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 1820
     .local v0, front:Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0, p4, v0}, Landroid/drm/DrmManagerClient;->overlayBitmapSkew(Landroid/graphics/Bitmap;Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
@@ -3894,7 +3495,6 @@
 
     goto :goto_0
 
-    .line 1817
     .end local v0           #front:Landroid/graphics/drawable/Drawable;
     :cond_2
     const v1, 0x2020041
@@ -3907,7 +3507,6 @@
     .parameter "drmInfo"
 
     .prologue
-    .line 569
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmInfo;->isValid()Z
@@ -3916,7 +3515,6 @@
 
     if-nez v2, :cond_1
 
-    .line 570
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -3926,17 +3524,14 @@
 
     throw v2
 
-    .line 572
     :cond_1
     const/16 v1, -0x7d0
 
-    .line 573
     .local v1, result:I
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v2, :cond_2
 
-    .line 574
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     const/16 v3, 0x3ea
@@ -3945,7 +3540,6 @@
 
     move-result-object v0
 
-    .line 575
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
@@ -3957,7 +3551,6 @@
 
     const/4 v1, 0x0
 
-    .line 577
     .end local v0           #msg:Landroid/os/Message;
     :cond_2
     return v1
@@ -3968,7 +3561,6 @@
     .parameter "info"
 
     .prologue
-    .line 875
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmInfo;->isValid()Z
@@ -3977,7 +3569,6 @@
 
     if-nez v2, :cond_1
 
-    .line 876
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -3987,17 +3578,14 @@
 
     throw v2
 
-    .line 878
     :cond_1
     const/16 v1, -0x7d0
 
-    .line 879
     .local v1, result:I
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v2, :cond_2
 
-    .line 880
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     const/16 v3, 0x7d1
@@ -4006,7 +3594,6 @@
 
     move-result-object v0
 
-    .line 881
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
@@ -4018,7 +3605,6 @@
 
     const/4 v1, 0x0
 
-    .line 883
     .end local v0           #msg:Landroid/os/Message;
     :cond_2
     return v1
@@ -4030,93 +3616,74 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 347
     iget-boolean v0, p0, Landroid/drm/DrmManagerClient;->mReleased:Z
 
     if-eqz v0, :cond_0
 
-    .line 348
     const-string v0, "DrmManagerClient"
 
     const-string v1, "You have already called release()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     :goto_0
     return-void
 
-    .line 351
     :cond_0
     const-string v0, "DrmManagerClient"
 
-    const-string/jumbo v1, "release event threads."
+    const-string v1, "release event threads."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/drm/DrmManagerClient;->mReleased:Z
 
-    .line 353
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v0, :cond_1
 
-    .line 354
     const-string v0, "DrmManagerClient"
 
-    const-string/jumbo v1, "quit event handler thread."
+    const-string v1, "quit event handler thread."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 356
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mEventThread:Landroid/os/HandlerThread;
 
-    .line 358
     :cond_1
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
     if-eqz v0, :cond_2
 
-    .line 359
     const-string v0, "DrmManagerClient"
 
-    const-string/jumbo v1, "quit info handler thread."
+    const-string v1, "quit info handler thread."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     iget-object v0, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
 
-    .line 361
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mInfoThread:Landroid/os/HandlerThread;
 
-    .line 363
     :cond_2
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
-    .line 364
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mInfoHandler:Landroid/drm/DrmManagerClient$InfoHandler;
 
-    .line 365
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mOnEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
 
-    .line 366
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
 
-    .line 367
     iput-object v2, p0, Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
 
-    .line 368
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
     invoke-direct {p0, v0}, Landroid/drm/DrmManagerClient;->_release(I)V
@@ -4128,16 +3695,13 @@
     .locals 4
 
     .prologue
-    .line 807
     const/16 v1, -0x7d0
 
-    .line 808
     .local v1, result:I
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     if-eqz v2, :cond_0
 
-    .line 809
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
     const/16 v3, 0x3e9
@@ -4146,7 +3710,6 @@
 
     move-result-object v0
 
-    .line 810
     .local v0, msg:Landroid/os/Message;
     iget-object v2, p0, Landroid/drm/DrmManagerClient;->mEventHandler:Landroid/drm/DrmManagerClient$EventHandler;
 
@@ -4158,7 +3721,6 @@
 
     const/4 v1, 0x0
 
-    .line 812
     .end local v0           #msg:Landroid/os/Message;
     :cond_0
     return v1
@@ -4169,14 +3731,12 @@
     .parameter "uri"
 
     .prologue
-    .line 794
     if-eqz p1, :cond_0
 
     sget-object v0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v0, p1, :cond_1
 
-    .line 795
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -4186,7 +3746,6 @@
 
     throw v0
 
-    .line 797
     :cond_1
     invoke-direct {p0, p1}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
 
@@ -4204,7 +3763,6 @@
     .parameter "path"
 
     .prologue
-    .line 780
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -4215,7 +3773,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 781
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -4225,7 +3782,6 @@
 
     throw v0
 
-    .line 783
     :cond_1
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -4248,7 +3804,6 @@
     .end annotation
 
     .prologue
-    .line 508
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/drm/DrmRights;->isValid()Z
@@ -4257,7 +3812,6 @@
 
     if-nez v0, :cond_1
 
-    .line 509
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -4267,7 +3821,6 @@
 
     throw v0
 
-    .line 511
     :cond_1
     if-eqz p2, :cond_2
 
@@ -4279,14 +3832,12 @@
 
     if-nez v0, :cond_2
 
-    .line 512
     invoke-virtual {p1}, Landroid/drm/DrmRights;->getData()[B
 
     move-result-object v0
 
     invoke-static {p2, v0}, Landroid/drm/DrmUtils;->writeToFile(Ljava/lang/String;[B)V
 
-    .line 514
     :cond_2
     iget v0, p0, Landroid/drm/DrmManagerClient;->mUniqueId:I
 
@@ -4302,27 +3853,22 @@
     .parameter "errorListener"
 
     .prologue
-    .line 404
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnErrorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
 
-    .line 405
     if-eqz p1, :cond_0
 
-    .line 406
     invoke-direct {p0}, Landroid/drm/DrmManagerClient;->createListeners()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 408
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 404
     :catchall_0
     move-exception v0
 
@@ -4336,27 +3882,22 @@
     .parameter "eventListener"
 
     .prologue
-    .line 391
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
 
-    .line 392
     if-eqz p1, :cond_0
 
-    .line 393
     invoke-direct {p0}, Landroid/drm/DrmManagerClient;->createListeners()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 395
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 391
     :catchall_0
     move-exception v0
 
@@ -4370,27 +3911,22 @@
     .parameter "infoListener"
 
     .prologue
-    .line 378
     monitor-enter p0
 
     :try_start_0
     iput-object p1, p0, Landroid/drm/DrmManagerClient;->mOnInfoListener:Landroid/drm/DrmManagerClient$OnInfoListener;
 
-    .line 379
     if-eqz p1, :cond_0
 
-    .line 380
     invoke-direct {p0}, Landroid/drm/DrmManagerClient;->createListeners()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 382
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 378
     :catchall_0
     move-exception v0
 
@@ -4408,23 +3944,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2119
     sget-boolean v3, Landroid/drm/DrmManagerClient;->OMA_DRM_FL_ONLY:Z
 
     if-eqz v3, :cond_0
 
-    .line 2120
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisition() : Forward-lock-only is set."
+    const-string v4, "showLicenseAcquisition() : Forward-lock-only is set."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2139
     :goto_0
     return-object v2
 
-    .line 2123
     :cond_0
     if-eqz p2, :cond_1
 
@@ -4432,36 +3964,31 @@
 
     if-ne v3, p2, :cond_2
 
-    .line 2124
     :cond_1
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisition() : Given uri is not valid"
+    const-string v4, "showLicenseAcquisition() : Given uri is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2127
     :cond_2
     instance-of v3, p1, Landroid/app/Activity;
 
     if-nez v3, :cond_3
 
-    .line 2128
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisition() : not an Activity context, give up"
+    const-string v4, "showLicenseAcquisition() : not an Activity context, give up"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2132
     :cond_3
     const/4 v1, 0x0
 
-    .line 2134
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p2}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -4470,18 +3997,15 @@
 
     move-result-object v1
 
-    .line 2139
     invoke-virtual {p0, p1, v1, p3}, Landroid/drm/DrmManagerClient;->showLicenseAcquisition(Landroid/content/Context;Ljava/lang/String;Landroid/drm/DrmManagerClient$DrmOperationListener;)Landroid/app/Dialog;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 2135
     :catch_0
     move-exception v0
 
-    .line 2136
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v3, "DrmManagerClient"
 
@@ -4489,7 +4013,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showLicenseAcquisition() : "
+    const-string v5, "showLicenseAcquisition() : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4523,25 +4047,21 @@
 
     const/4 v1, 0x0
 
-    .line 2148
     sget-boolean v7, Landroid/drm/DrmManagerClient;->OMA_DRM_FL_ONLY:Z
 
     if-eqz v7, :cond_0
 
-    .line 2149
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisition() : Forward-lock-only is set."
+    const-string v8, "showLicenseAcquisition() : Forward-lock-only is set."
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 2232
     :goto_0
     return-object v4
 
-    .line 2152
     :cond_0
     const-string v7, "DrmManagerClient"
 
@@ -4549,7 +4069,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "showLicenseAcquisition() within context: "
+    const-string v9, "showLicenseAcquisition() within context: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4565,7 +4085,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2154
     if-eqz p2, :cond_1
 
     const-string v7, ""
@@ -4576,74 +4095,62 @@
 
     if-eqz v7, :cond_2
 
-    .line 2155
     :cond_1
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisition() : Given path should be non null"
+    const-string v8, "showLicenseAcquisition() : Given path should be non null"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 2156
     goto :goto_0
 
-    .line 2158
     :cond_2
     instance-of v7, p1, Landroid/app/Activity;
 
     if-nez v7, :cond_3
 
-    .line 2159
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisition() : not an Activity context, give up"
+    const-string v8, "showLicenseAcquisition() : not an Activity context, give up"
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 2160
     goto :goto_0
 
-    .line 2163
     :cond_3
     sget-object v7, Landroid/drm/DrmManagerClient;->sConsumeDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v7, p1}, Landroid/drm/DrmManagerClient;->checkCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)V
 
-    .line 2164
     sget-object v7, Landroid/drm/DrmManagerClient;->sLicenseDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v7, p1}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v4
 
-    .line 2165
     .local v4, result:Landroid/app/Dialog;
     if-eqz v4, :cond_4
 
-    .line 2166
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisition(): use the existing one"
+    const-string v8, "showLicenseAcquisition(): use the existing one"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 2171
     :cond_4
     invoke-virtual {p0, p2}, Landroid/drm/DrmManagerClient;->getMetadata(Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 2172
     .local v0, cv:Landroid/content/ContentValues;
     const/4 v5, 0x0
 
-    .line 2173
     .local v5, rightsIssuer:Ljava/lang/String;
     if-eqz v0, :cond_5
 
@@ -4655,14 +4162,12 @@
 
     if-eqz v7, :cond_5
 
-    .line 2174
     const-string v7, "drm_rights_issuer"
 
     invoke-virtual {v0, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 2178
     :cond_5
     if-eqz v5, :cond_6
 
@@ -4674,7 +4179,6 @@
 
     if-nez v7, :cond_8
 
-    .line 2179
     :cond_6
     const v7, 0x20500c1
 
@@ -4684,10 +4188,8 @@
 
     invoke-virtual {v7}, Landroid/widget/Toast;->show()V
 
-    .line 2182
     if-eqz p3, :cond_7
 
-    .line 2183
     const/4 v7, 0x2
 
     invoke-interface {p3, v7}, Landroid/drm/DrmManagerClient$DrmOperationListener;->onOperated(I)V
@@ -4695,16 +4197,13 @@
     :cond_7
     move-object v4, v1
 
-    .line 2185
     goto/16 :goto_0
 
-    .line 2189
     :cond_8
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 2190
     .local v3, res:Landroid/content/res/Resources;
     const v7, 0x20500c0
 
@@ -4722,11 +4221,9 @@
 
     move-result-object v2
 
-    .line 2193
     .local v2, message:Ljava/lang/String;
     move-object v6, v5
 
-    .line 2195
     .local v6, rightsIssuerFinal:Ljava/lang/String;
     new-instance v1, Landroid/drm/DrmManagerClient$CustomAlertDialog;
 
@@ -4734,7 +4231,6 @@
 
     invoke-direct {v1, p1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 2197
     .local v1, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     const/4 v7, -0x1
 
@@ -4750,7 +4246,6 @@
 
     invoke-virtual {v1, v7, v8, v9}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2208
     const/4 v7, -0x2
 
     const/high16 v8, 0x104
@@ -4765,32 +4260,26 @@
 
     invoke-virtual {v1, v7, v8, v9}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 2216
     const v7, 0x108009b
 
     invoke-virtual {v1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 2217
     const v7, 0x20500bf
 
     invoke-virtual {v1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 2218
     invoke-virtual {v1, v2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 2220
     new-instance v7, Landroid/drm/DrmManagerClient$12;
 
     invoke-direct {v7, p0, p3}, Landroid/drm/DrmManagerClient$12;-><init>(Landroid/drm/DrmManagerClient;Landroid/drm/DrmManagerClient$DrmOperationListener;)V
 
     invoke-virtual {v1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 2230
     invoke-virtual {v1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v4, v1
 
-    .line 2232
     goto/16 :goto_0
 .end method
 
@@ -4800,7 +4289,6 @@
     .parameter "uri"
 
     .prologue
-    .line 1543
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/drm/DrmManagerClient;->showLicenseAcquisitionDialog(Landroid/content/Context;Landroid/net/Uri;Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/Dialog;
@@ -4819,23 +4307,19 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1569
     sget-boolean v3, Landroid/drm/DrmManagerClient;->OMA_DRM_FL_ONLY:Z
 
     if-eqz v3, :cond_0
 
-    .line 1570
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisitionDialog() : Forward-lock-only is set."
+    const-string v4, "showLicenseAcquisitionDialog() : Forward-lock-only is set."
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1589
     :goto_0
     return-object v2
 
-    .line 1573
     :cond_0
     if-eqz p2, :cond_1
 
@@ -4843,36 +4327,31 @@
 
     if-ne v3, p2, :cond_2
 
-    .line 1574
     :cond_1
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisitionDialog() : Given uri is not valid"
+    const-string v4, "showLicenseAcquisitionDialog() : Given uri is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1577
     :cond_2
     instance-of v3, p1, Landroid/app/Activity;
 
     if-nez v3, :cond_3
 
-    .line 1578
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showLicenseAcquisitionDialog() : not an Activity context, give up"
+    const-string v4, "showLicenseAcquisitionDialog() : not an Activity context, give up"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1582
     :cond_3
     const/4 v1, 0x0
 
-    .line 1584
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p2}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -4881,18 +4360,15 @@
 
     move-result-object v1
 
-    .line 1589
     invoke-virtual {p0, p1, v1, p3}, Landroid/drm/DrmManagerClient;->showLicenseAcquisitionDialog(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/Dialog;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 1585
     :catch_0
     move-exception v0
 
-    .line 1586
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v3, "DrmManagerClient"
 
@@ -4900,7 +4376,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showLicenseAcquisitionDialog() : "
+    const-string v5, "showLicenseAcquisitionDialog() : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4929,7 +4405,6 @@
     .parameter "path"
 
     .prologue
-    .line 1555
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/drm/DrmManagerClient;->showLicenseAcquisitionDialog(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)Landroid/app/Dialog;
@@ -4950,25 +4425,21 @@
 
     const/4 v1, 0x0
 
-    .line 1603
     sget-boolean v7, Landroid/drm/DrmManagerClient;->OMA_DRM_FL_ONLY:Z
 
     if-eqz v7, :cond_0
 
-    .line 1604
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisitionDialog() : Forward-lock-only is set."
+    const-string v8, "showLicenseAcquisitionDialog() : Forward-lock-only is set."
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 1674
     :goto_0
     return-object v4
 
-    .line 1607
     :cond_0
     const-string v7, "DrmManagerClient"
 
@@ -4976,7 +4447,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v9, "showLicenseAcquisitionDialog() within context: "
+    const-string v9, "showLicenseAcquisitionDialog() within context: "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -4992,7 +4463,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1609
     if-eqz p2, :cond_1
 
     const-string v7, ""
@@ -5003,74 +4473,62 @@
 
     if-eqz v7, :cond_2
 
-    .line 1610
     :cond_1
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisitionDialog() : Given path should be non null"
+    const-string v8, "showLicenseAcquisitionDialog() : Given path should be non null"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 1611
     goto :goto_0
 
-    .line 1613
     :cond_2
     instance-of v7, p1, Landroid/app/Activity;
 
     if-nez v7, :cond_3
 
-    .line 1614
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisitionDialog() : not an Activity context, give up"
+    const-string v8, "showLicenseAcquisitionDialog() : not an Activity context, give up"
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v4, v1
 
-    .line 1615
     goto :goto_0
 
-    .line 1618
     :cond_3
     sget-object v7, Landroid/drm/DrmManagerClient;->sConsumeDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v7, p1}, Landroid/drm/DrmManagerClient;->checkCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)V
 
-    .line 1619
     sget-object v7, Landroid/drm/DrmManagerClient;->sLicenseDialogQueue:Ljava/util/ArrayList;
 
     invoke-static {v7, p1}, Landroid/drm/DrmManagerClient;->validateCustomAlertDialog(Ljava/util/ArrayList;Landroid/content/Context;)Landroid/app/Dialog;
 
     move-result-object v4
 
-    .line 1620
     .local v4, result:Landroid/app/Dialog;
     if-eqz v4, :cond_4
 
-    .line 1621
     const-string v7, "DrmManagerClient"
 
-    const-string/jumbo v8, "showLicenseAcquisitionDialog(): use the existing one"
+    const-string v8, "showLicenseAcquisitionDialog(): use the existing one"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1626
     :cond_4
     invoke-virtual {p0, p2}, Landroid/drm/DrmManagerClient;->getMetadata(Ljava/lang/String;)Landroid/content/ContentValues;
 
     move-result-object v0
 
-    .line 1627
     .local v0, cv:Landroid/content/ContentValues;
     const/4 v5, 0x0
 
-    .line 1628
     .local v5, rightsIssuer:Ljava/lang/String;
     if-eqz v0, :cond_5
 
@@ -5082,14 +4540,12 @@
 
     if-eqz v7, :cond_5
 
-    .line 1629
     const-string v7, "drm_rights_issuer"
 
     invoke-virtual {v0, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1633
     :cond_5
     if-eqz v5, :cond_6
 
@@ -5101,7 +4557,6 @@
 
     if-nez v7, :cond_7
 
-    .line 1634
     :cond_6
     const v7, 0x20500c1
 
@@ -5113,16 +4568,13 @@
 
     move-object v4, v1
 
-    .line 1637
     goto :goto_0
 
-    .line 1641
     :cond_7
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 1642
     .local v3, res:Landroid/content/res/Resources;
     const v7, 0x20500c0
 
@@ -5140,11 +4592,9 @@
 
     move-result-object v2
 
-    .line 1645
     .local v2, message:Ljava/lang/String;
     move-object v6, v5
 
-    .line 1647
     .local v6, rightsIssuerFinal:Ljava/lang/String;
     new-instance v1, Landroid/drm/DrmManagerClient$CustomAlertDialog;
 
@@ -5152,7 +4602,6 @@
 
     invoke-direct {v1, p1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 1649
     .local v1, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     const/4 v7, -0x1
 
@@ -5168,7 +4617,6 @@
 
     invoke-virtual {v1, v7, v8, v9}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1660
     const/4 v7, -0x2
 
     const/high16 v8, 0x104
@@ -5183,28 +4631,22 @@
 
     invoke-virtual {v1, v7, v8, v9}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1668
     const v7, 0x108009b
 
     invoke-virtual {v1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setIcon(I)V
 
-    .line 1669
     const v7, 0x20500bf
 
     invoke-virtual {v1, v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 1670
     invoke-virtual {v1, v2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 1671
     invoke-virtual {v1, p3}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 1672
     invoke-virtual {v1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object v4, v1
 
-    .line 1674
     goto/16 :goto_0
 .end method
 
@@ -5216,30 +4658,25 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1323
     if-eqz p2, :cond_0
 
     sget-object v3, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     if-ne v3, p2, :cond_1
 
-    .line 1324
     :cond_0
     const-string v3, "DrmManagerClient"
 
-    const-string/jumbo v4, "showProtectionInfoDialog() : Given uri is not valid"
+    const-string v4, "showProtectionInfoDialog() : Given uri is not valid"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1335
     :goto_0
     return-object v2
 
-    .line 1328
     :cond_1
     const/4 v1, 0x0
 
-    .line 1330
     .local v1, path:Ljava/lang/String;
     :try_start_0
     invoke-direct {p0, p2}, Landroid/drm/DrmManagerClient;->convertUriToPath(Landroid/net/Uri;)Ljava/lang/String;
@@ -5248,18 +4685,15 @@
 
     move-result-object v1
 
-    .line 1335
     invoke-virtual {p0, p1, v1}, Landroid/drm/DrmManagerClient;->showProtectionInfoDialog(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Dialog;
 
     move-result-object v2
 
     goto :goto_0
 
-    .line 1331
     :catch_0
     move-exception v0
 
-    .line 1332
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v3, "DrmManagerClient"
 
@@ -5267,7 +4701,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v5, "showProtectionInfoDialog() : "
+    const-string v5, "showProtectionInfoDialog() : "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5296,14 +4730,13 @@
     .parameter "path"
 
     .prologue
-    .line 1347
     const-string v29, "DrmManagerClient"
 
     new-instance v30, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v31, "showProtectionInfoDialog() withing context: "
+    const-string v31, "showProtectionInfoDialog() withing context: "
 
     invoke-virtual/range {v30 .. v31}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -5323,7 +4756,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1349
     if-eqz p2, :cond_0
 
     const-string v29, ""
@@ -5338,22 +4770,18 @@
 
     if-eqz v29, :cond_1
 
-    .line 1350
     :cond_0
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : Given path should be non null"
+    const-string v30, "showProtectionInfoDialog() : Given path should be non null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1351
     const/16 v19, 0x0
 
-    .line 1531
     :goto_0
     return-object v19
 
-    .line 1354
     :cond_1
     sget-object v29, Landroid/drm/DrmManagerClient;->sProtectionInfoDialogQueue:Ljava/util/ArrayList;
 
@@ -5365,20 +4793,17 @@
 
     move-result-object v19
 
-    .line 1355
     .local v19, result:Landroid/app/Dialog;
     if-eqz v19, :cond_2
 
-    .line 1356
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog(): use the existing one"
+    const-string v30, "showProtectionInfoDialog(): use the existing one"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1360
     :cond_2
     const v29, 0x2070007
 
@@ -5394,7 +4819,6 @@
 
     move-result-object v23
 
-    .line 1362
     .local v23, scrollView:Landroid/view/View;
     const v29, 0x20e0011
 
@@ -5408,23 +4832,19 @@
 
     check-cast v13, Landroid/widget/TextView;
 
-    .line 1364
     .local v13, fileNameView:Landroid/widget/TextView;
     if-nez v13, :cond_3
 
-    .line 1365
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: fileNameView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: fileNameView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1366
     const/16 v19, 0x0
 
     goto :goto_0
 
-    .line 1369
     :cond_3
     const-string v29, "/"
 
@@ -5436,7 +4856,6 @@
 
     move-result v24
 
-    .line 1370
     .local v24, start:I
     const-string v29, "."
 
@@ -5448,7 +4867,6 @@
 
     move-result v8
 
-    .line 1371
     .local v8, end:I
     add-int/lit8 v29, v24, 0x1
 
@@ -5460,11 +4878,9 @@
 
     move-result-object v12
 
-    .line 1372
     .local v12, fileNameStr:Ljava/lang/String;
     invoke-virtual {v13, v12}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1374
     const v29, 0x20e0012
 
     move-object/from16 v0, v23
@@ -5477,23 +4893,19 @@
 
     check-cast v16, Landroid/widget/TextView;
 
-    .line 1376
     .local v16, protectionInfoStatusView:Landroid/widget/TextView;
     if-nez v16, :cond_4
 
-    .line 1377
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: protectionInfoStatusView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: protectionInfoStatusView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1378
     const/16 v19, 0x0
 
     goto :goto_0
 
-    .line 1381
     :cond_4
     const/16 v29, 0x3
 
@@ -5507,11 +4919,9 @@
 
     move-result v22
 
-    .line 1382
     .local v22, rightsStatus:I
     if-nez v22, :cond_6
 
-    .line 1383
     const v29, 0x20500b7
 
     move-object/from16 v0, v16
@@ -5520,7 +4930,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1388
     :cond_5
     :goto_1
     const v29, 0x20e0013
@@ -5535,23 +4944,19 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 1390
     .local v5, beginView:Landroid/widget/TextView;
     if-nez v5, :cond_7
 
-    .line 1391
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: beginView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: beginView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1392
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1384
     .end local v5           #beginView:Landroid/widget/TextView;
     :cond_6
     const/16 v29, 0x1
@@ -5562,7 +4967,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 1385
     const v29, 0x20500b8
 
     move-object/from16 v0, v16
@@ -5573,7 +4977,6 @@
 
     goto :goto_1
 
-    .line 1394
     .restart local v5       #beginView:Landroid/widget/TextView;
     :cond_7
     const v29, 0x20e0015
@@ -5588,23 +4991,19 @@
 
     check-cast v11, Landroid/widget/TextView;
 
-    .line 1396
     .local v11, endView:Landroid/widget/TextView;
     if-nez v11, :cond_8
 
-    .line 1397
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: endView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: endView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1398
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1400
     :cond_8
     const v29, 0x20e0017
 
@@ -5618,23 +5017,19 @@
 
     check-cast v27, Landroid/widget/TextView;
 
-    .line 1402
     .local v27, useLeftView:Landroid/widget/TextView;
     if-nez v27, :cond_9
 
-    .line 1403
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: useLeftView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: useLeftView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1404
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1406
     :cond_9
     const v29, 0x20e0014
 
@@ -5648,23 +5043,19 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 1408
     .local v4, beginValueView:Landroid/widget/TextView;
     if-nez v4, :cond_a
 
-    .line 1409
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: beginValueView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: beginValueView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1410
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1412
     :cond_a
     const v29, 0x20e0016
 
@@ -5678,23 +5069,19 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    .line 1414
     .local v10, endValueView:Landroid/widget/TextView;
     if-nez v10, :cond_b
 
-    .line 1415
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: endValueView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: endValueView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1416
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1418
     :cond_b
     const v29, 0x20e0018
 
@@ -5708,23 +5095,19 @@
 
     check-cast v26, Landroid/widget/TextView;
 
-    .line 1420
     .local v26, useLeftValueView:Landroid/widget/TextView;
     if-nez v26, :cond_c
 
-    .line 1421
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : the TextView: useLeftValueView is null"
+    const-string v30, "showProtectionInfoDialog() : the TextView: useLeftValueView is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1422
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1425
     :cond_c
     move-object/from16 v0, p0
 
@@ -5734,23 +5117,19 @@
 
     move-result-object v15
 
-    .line 1426
     .local v15, mime:Ljava/lang/String;
     if-nez v15, :cond_d
 
-    .line 1427
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : failed to get the original mime type"
+    const-string v30, "showProtectionInfoDialog() : failed to get the original mime type"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1428
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1432
     :cond_d
     new-instance v7, Landroid/drm/DrmManagerClient$CustomAlertDialog;
 
@@ -5762,13 +5141,11 @@
 
     invoke-direct {v7, v0, v1}, Landroid/drm/DrmManagerClient$CustomAlertDialog;-><init>(Landroid/content/Context;Ljava/util/ArrayList;)V
 
-    .line 1433
     .local v7, dialog:Landroid/drm/DrmManagerClient$CustomAlertDialog;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v18
 
-    .line 1435
     .local v18, res:Landroid/content/res/Resources;
     invoke-static {v15}, Landroid/drm/DrmUtils;->getAction(Ljava/lang/String;)I
 
@@ -5784,7 +5161,6 @@
 
     move-result-object v28
 
-    .line 1436
     .local v28, values:Landroid/content/ContentValues;
     if-eqz v28, :cond_e
 
@@ -5794,7 +5170,6 @@
 
     if-nez v29, :cond_11
 
-    .line 1437
     :cond_e
     const v29, 0x20500ba
 
@@ -5802,14 +5177,12 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1438
     const-string v29, ""
 
     move-object/from16 v0, v29
 
     invoke-virtual {v11, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1439
     const-string v29, ""
 
     move-object/from16 v0, v27
@@ -5818,7 +5191,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1441
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -5827,11 +5199,9 @@
 
     move-result-object v6
 
-    .line 1442
     .local v6, cv:Landroid/content/ContentValues;
     const/16 v20, 0x0
 
-    .line 1443
     .local v20, rightsIssuer:Ljava/lang/String;
     if-eqz v6, :cond_f
 
@@ -5845,7 +5215,6 @@
 
     if-eqz v29, :cond_f
 
-    .line 1444
     const-string v29, "drm_rights_issuer"
 
     move-object/from16 v0, v29
@@ -5854,11 +5223,9 @@
 
     move-result-object v20
 
-    .line 1448
     :cond_f
     move-object/from16 v21, v20
 
-    .line 1449
     .local v21, rightsIssuerFinal:Ljava/lang/String;
     if-eqz v21, :cond_10
 
@@ -5868,7 +5235,6 @@
 
     if-nez v29, :cond_10
 
-    .line 1450
     const/16 v29, -0x1
 
     const v30, 0x20500be
@@ -5901,7 +5267,6 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1519
     .end local v6           #cv:Landroid/content/ContentValues;
     .end local v20           #rightsIssuer:Ljava/lang/String;
     .end local v21           #rightsIssuerFinal:Ljava/lang/String;
@@ -5935,27 +5300,22 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 1527
     const v29, 0x2050062
 
     move/from16 v0, v29
 
     invoke-virtual {v7, v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setTitle(I)V
 
-    .line 1528
     move-object/from16 v0, v23
 
     invoke-virtual {v7, v0}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->setView(Landroid/view/View;)V
 
-    .line 1529
     invoke-virtual {v7}, Landroid/drm/DrmManagerClient$CustomAlertDialog;->show()V
 
     move-object/from16 v19, v7
 
-    .line 1531
     goto/16 :goto_0
 
-    .line 1463
     :cond_11
     const-string v29, "license_start_time"
 
@@ -5965,30 +5325,25 @@
 
     if-eqz v29, :cond_14
 
-    .line 1464
     const-string v29, "license_start_time"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v25
 
-    .line 1465
     .local v25, startL:Ljava/lang/Long;
     if-nez v25, :cond_12
 
-    .line 1466
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : startL is null"
+    const-string v30, "showProtectionInfoDialog() : startL is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1467
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1469
     :cond_12
     invoke-virtual/range {v25 .. v25}, Ljava/lang/Long;->longValue()J
 
@@ -6000,14 +5355,12 @@
 
     if-nez v29, :cond_13
 
-    .line 1470
     const v29, 0x20500b9
 
     move/from16 v0, v29
 
     invoke-virtual {v4, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1478
     .end local v25           #startL:Ljava/lang/Long;
     :goto_3
     const-string v29, "license_expiry_time"
@@ -6018,30 +5371,25 @@
 
     if-eqz v29, :cond_17
 
-    .line 1479
     const-string v29, "license_expiry_time"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v9
 
-    .line 1480
     .local v9, endL:Ljava/lang/Long;
     if-nez v9, :cond_15
 
-    .line 1481
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : endL is null"
+    const-string v30, "showProtectionInfoDialog() : endL is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1482
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1472
     .end local v9           #endL:Ljava/lang/Long;
     .restart local v25       #startL:Ljava/lang/Long;
     :cond_13
@@ -6059,7 +5407,6 @@
 
     goto :goto_3
 
-    .line 1475
     .end local v25           #startL:Ljava/lang/Long;
     :cond_14
     const v29, 0x20500b9
@@ -6070,7 +5417,6 @@
 
     goto :goto_3
 
-    .line 1484
     .restart local v9       #endL:Ljava/lang/Long;
     :cond_15
     invoke-virtual {v9}, Ljava/lang/Long;->longValue()J
@@ -6083,17 +5429,15 @@
 
     if-nez v29, :cond_16
 
-    .line 1485
     const v29, 0x20500b9
 
     move/from16 v0, v29
 
     invoke-virtual {v10, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 1493
     .end local v9           #endL:Ljava/lang/Long;
     :goto_4
-    const-string/jumbo v29, "remaining_repeat_count"
+    const-string v29, "remaining_repeat_count"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
 
@@ -6101,7 +5445,7 @@
 
     if-eqz v29, :cond_1c
 
-    const-string/jumbo v29, "max_repeat_count"
+    const-string v29, "max_repeat_count"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->containsKey(Ljava/lang/String;)Z
 
@@ -6109,30 +5453,25 @@
 
     if-eqz v29, :cond_1c
 
-    .line 1495
-    const-string/jumbo v29, "remaining_repeat_count"
+    const-string v29, "remaining_repeat_count"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v17
 
-    .line 1496
     .local v17, remainCount:Ljava/lang/Long;
     if-nez v17, :cond_18
 
-    .line 1497
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : remainCount is null"
+    const-string v30, "showProtectionInfoDialog() : remainCount is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1498
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1487
     .end local v17           #remainCount:Ljava/lang/Long;
     .restart local v9       #endL:Ljava/lang/Long;
     :cond_16
@@ -6148,7 +5487,6 @@
 
     goto :goto_4
 
-    .line 1490
     .end local v9           #endL:Ljava/lang/Long;
     :cond_17
     const v29, 0x20500b9
@@ -6159,32 +5497,27 @@
 
     goto :goto_4
 
-    .line 1501
     .restart local v17       #remainCount:Ljava/lang/Long;
     :cond_18
-    const-string/jumbo v29, "max_repeat_count"
+    const-string v29, "max_repeat_count"
 
     invoke-virtual/range {v28 .. v29}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v14
 
-    .line 1502
     .local v14, maxCount:Ljava/lang/Long;
     if-nez v14, :cond_19
 
-    .line 1503
     const-string v29, "DrmManagerClient"
 
-    const-string/jumbo v30, "showProtectionInfoDialog() : maxCount is null"
+    const-string v30, "showProtectionInfoDialog() : maxCount is null"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1504
     const/16 v19, 0x0
 
     goto/16 :goto_0
 
-    .line 1507
     :cond_19
     const-string v29, "DrmManagerClient"
 
@@ -6192,7 +5525,7 @@
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v31, "showProtectionInfoDialog() : remainCount="
+    const-string v31, "showProtectionInfoDialog() : remainCount="
 
     invoke-virtual/range {v30 .. v31}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -6224,7 +5557,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1508
     invoke-virtual/range {v17 .. v17}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v29
@@ -6245,7 +5577,6 @@
 
     if-nez v29, :cond_1b
 
-    .line 1509
     :cond_1a
     const v29, 0x20500b9
 
@@ -6257,7 +5588,6 @@
 
     goto/16 :goto_2
 
-    .line 1511
     :cond_1b
     new-instance v29, Ljava/lang/StringBuilder;
 
@@ -6297,7 +5627,6 @@
 
     goto/16 :goto_2
 
-    .line 1514
     .end local v14           #maxCount:Ljava/lang/Long;
     .end local v17           #remainCount:Ljava/lang/Long;
     :cond_1c

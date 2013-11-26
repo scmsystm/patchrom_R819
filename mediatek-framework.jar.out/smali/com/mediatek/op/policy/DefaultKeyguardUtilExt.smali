@@ -17,10 +17,8 @@
     .locals 0
 
     .prologue
-    .line 57
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const/4 v0, 0x0
 
     return v0
@@ -42,6 +39,5 @@
     .parameter "newEventViewId"
 
     .prologue
-    .line 68
     return-void
 .end method

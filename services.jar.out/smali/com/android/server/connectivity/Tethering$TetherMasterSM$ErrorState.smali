@@ -26,7 +26,6 @@
     .parameter
 
     .prologue
-    .line 2458
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -41,10 +40,8 @@
     .parameter "msgType"
 
     .prologue
-    .line 2475
     iput p1, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;->mErrorNotification:I
 
-    .line 2476
     iget-object v3, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;->this$1:Lcom/android/server/connectivity/Tethering$TetherMasterSM;
 
     #getter for: Lcom/android/server/connectivity/Tethering$TetherMasterSM;->mNotifyList:Ljava/util/ArrayList;
@@ -73,16 +70,13 @@
     .local v1, o:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     move-object v2, v1
 
-    .line 2477
     check-cast v2, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 2478
     .local v2, sm:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     invoke-virtual {v2, p1}, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;->sendMessage(I)V
 
     goto :goto_0
 
-    .line 2480
     .end local v1           #o:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     .end local v2           #sm:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     :cond_0
@@ -94,7 +88,6 @@
     .parameter "message"
 
     .prologue
-    .line 2462
     const-string v2, "Tethering"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -136,29 +129,23 @@
 
     invoke-static {v2, v3}, Lcom/mediatek/xlog/Xlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2463
     const/4 v0, 0x1
 
-    .line 2464
     .local v0, retValue:Z
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 2470
     const/4 v0, 0x0
 
-    .line 2472
     :goto_0
     return v0
 
-    .line 2466
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
 
-    .line 2467
     .local v1, who:Lcom/android/server/connectivity/Tethering$TetherInterfaceSM;
     iget v2, p0, Lcom/android/server/connectivity/Tethering$TetherMasterSM$ErrorState;->mErrorNotification:I
 
@@ -166,7 +153,6 @@
 
     goto :goto_0
 
-    .line 2464
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

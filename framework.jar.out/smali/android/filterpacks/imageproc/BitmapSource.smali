@@ -41,20 +41,16 @@
     .parameter "name"
 
     .prologue
-    .line 55
     invoke-direct {p0, p1}, Landroid/filterfw/core/Filter;-><init>(Ljava/lang/String;)V
 
-    .line 45
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mRecycleBitmap:Z
 
-    .line 48
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mRepeatFrame:Z
 
-    .line 56
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .parameter "context"
 
     .prologue
-    .line 90
     const-string v0, "bitmap"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -75,7 +70,7 @@
 
     if-nez v0, :cond_0
 
-    const-string/jumbo v0, "target"
+    const-string v0, "target"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -83,23 +78,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 91
     :cond_0
     iget-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 93
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
-    .line 96
     :cond_1
     return-void
 .end method
@@ -109,7 +100,6 @@
     .parameter "filterContext"
 
     .prologue
-    .line 71
     iget-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mTargetString:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/filterfw/core/FrameFormat;->readTargetString(Ljava/lang/String;)I
@@ -118,7 +108,6 @@
 
     iput v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mTarget:I
 
-    .line 72
     iget-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -139,7 +128,6 @@
 
     move-result-object v0
 
-    .line 76
     .local v0, outputFormat:Landroid/filterfw/core/FrameFormat;
     invoke-virtual {p1}, Landroid/filterfw/core/FilterContext;->getFrameManager()Landroid/filterfw/core/FrameManager;
 
@@ -151,37 +139,31 @@
 
     iput-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
-    .line 77
     iget-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     iget-object v2, p0, Landroid/filterpacks/imageproc/BitmapSource;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1, v2}, Landroid/filterfw/core/Frame;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 78
     iget-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     const-wide/16 v2, -0x1
 
     invoke-virtual {v1, v2, v3}, Landroid/filterfw/core/Frame;->setTimestamp(J)V
 
-    .line 81
     iget-boolean v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mRecycleBitmap:Z
 
     if-eqz v1, :cond_0
 
-    .line 82
     iget-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 84
     :cond_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/filterpacks/imageproc/BitmapSource;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 85
     return-void
 .end method
 
@@ -190,15 +172,12 @@
     .parameter "context"
 
     .prologue
-    .line 100
     iget-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     if-nez v0, :cond_0
 
-    .line 101
     invoke-virtual {p0, p1}, Landroid/filterpacks/imageproc/BitmapSource;->loadImage(Landroid/filterfw/core/FilterContext;)V
 
-    .line 104
     :cond_0
     const-string v0, "image"
 
@@ -206,17 +185,14 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/filterpacks/imageproc/BitmapSource;->pushOutput(Ljava/lang/String;Landroid/filterfw/core/Frame;)V
 
-    .line 106
     iget-boolean v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mRepeatFrame:Z
 
     if-nez v0, :cond_1
 
-    .line 107
     const-string v0, "image"
 
     invoke-virtual {p0, v0}, Landroid/filterpacks/imageproc/BitmapSource;->closeOutputPort(Ljava/lang/String;)V
 
-    .line 109
     :cond_1
     return-void
 .end method
@@ -225,7 +201,6 @@
     .locals 3
 
     .prologue
-    .line 62
     const/4 v1, 0x3
 
     const/4 v2, 0x0
@@ -234,13 +209,11 @@
 
     move-result-object v0
 
-    .line 66
     .local v0, outputFormat:Landroid/filterfw/core/FrameFormat;
     const-string v1, "image"
 
     invoke-virtual {p0, v1, v0}, Landroid/filterpacks/imageproc/BitmapSource;->addOutputPort(Ljava/lang/String;Landroid/filterfw/core/FrameFormat;)V
 
-    .line 67
     return-void
 .end method
 
@@ -249,22 +222,18 @@
     .parameter "env"
 
     .prologue
-    .line 113
     iget-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     if-eqz v0, :cond_0
 
-    .line 114
     iget-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
     invoke-virtual {v0}, Landroid/filterfw/core/Frame;->release()Landroid/filterfw/core/Frame;
 
-    .line 115
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/filterpacks/imageproc/BitmapSource;->mImageFrame:Landroid/filterfw/core/Frame;
 
-    .line 117
     :cond_0
     return-void
 .end method

@@ -24,7 +24,6 @@
     .parameter
 
     .prologue
-    .line 650
     iput-object p1, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,10 +39,8 @@
     .parameter "intent"
 
     .prologue
-    .line 653
     const/4 v3, 0x0
 
-    .line 660
     .local v3, niData:[B
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -54,7 +51,6 @@
 
     if-nez v4, :cond_0
 
-    .line 661
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v5, "GPS settings is disabled by user, reject this WAP Push!!"
@@ -62,11 +58,9 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->loge(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$900(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 696
     :goto_0
     return-void
 
-    .line 665
     :cond_0
     const-string v4, "android.provider.Telephony.WAP_PUSH_RECEIVED"
 
@@ -80,23 +74,19 @@
 
     if-eqz v4, :cond_4
 
-    .line 666
     const-string v4, "data"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
 
     move-result-object v3
 
-    .line 668
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 669
     .local v1, bundle:Landroid/os/Bundle;
     if-eqz v1, :cond_2
 
-    .line 670
     const-string v4, "wspHeaders"
 
     invoke-virtual {v1, v4}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -105,11 +95,9 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 671
     .local v2, mHeaders:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-nez v2, :cond_1
 
-    .line 672
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v5, "NI request(WapPush message) is rejected because wspHeaders are not found!"
@@ -119,7 +107,6 @@
 
     goto :goto_0
 
-    .line 675
     :cond_1
     const-string v4, "X-Wap-Application-Id"
 
@@ -129,11 +116,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 676
     .local v0, app_id:Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 677
     const-string v4, "x-oma-application:ulp.ua"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -142,7 +127,6 @@
 
     if-nez v4, :cond_2
 
-    .line 678
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v5, "NI request(WapPush message) is rejected, because X-Wap-Application-Id is wrong !"
@@ -150,7 +134,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->loge(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$900(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 679
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -188,13 +171,11 @@
 
     goto :goto_0
 
-    .line 684
     .end local v0           #app_id:Ljava/lang/String;
     .end local v2           #mHeaders:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_2
     if-eqz v3, :cond_3
 
-    .line 685
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     const-string v5, "received WapPush message data"
@@ -202,7 +183,6 @@
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->log(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/mediatek/agps/MtkAgpsManagerService;->access$100(Lcom/mediatek/agps/MtkAgpsManagerService;Ljava/lang/String;)V
 
-    .line 689
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
     #calls: Lcom/mediatek/agps/MtkAgpsManagerService;->niRequest([B)I
@@ -210,7 +190,6 @@
 
     goto :goto_0
 
-    .line 691
     :cond_3
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;
 
@@ -221,7 +200,6 @@
 
     goto :goto_0
 
-    .line 694
     .end local v1           #bundle:Landroid/os/Bundle;
     :cond_4
     iget-object v4, p0, Lcom/mediatek/agps/MtkAgpsManagerService$4;->this$0:Lcom/mediatek/agps/MtkAgpsManagerService;

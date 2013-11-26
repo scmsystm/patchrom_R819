@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayController$12;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +42,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 636
     invoke-static {}, Lcom/android/server/display/WifiDisplayController;->access$200()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 637
     const-string v1, "WifiDisplayController"
 
     const-string v2, "start RemoteDisplay.dispose() on a seperate thread"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$12;->this$0:Lcom/android/server/display/WifiDisplayController;
@@ -69,7 +65,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 642
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$12;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #getter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplay:Landroid/media/RemoteDisplay;
@@ -82,18 +77,15 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 649
     :goto_0
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$12;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #setter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplay:Landroid/media/RemoteDisplay;
     invoke-static {v1, v4}, Lcom/android/server/display/WifiDisplayController;->access$1902(Lcom/android/server/display/WifiDisplayController;Landroid/media/RemoteDisplay;)Landroid/media/RemoteDisplay;
 
-    .line 651
     :goto_1
     return-void
 
-    .line 644
     :cond_1
     :try_start_1
     const-string v1, "WifiDisplayController"
@@ -107,11 +99,9 @@
 
     goto :goto_0
 
-    .line 646
     :catch_0
     move-exception v0
 
-    .line 647
     .local v0, e:Ljava/lang/Exception;
     :try_start_2
     const-string v1, "WifiDisplayController"
@@ -138,7 +128,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 649
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayController$12;->this$0:Lcom/android/server/display/WifiDisplayController;
 
     #setter for: Lcom/android/server/display/WifiDisplayController;->mRemoteDisplay:Landroid/media/RemoteDisplay;

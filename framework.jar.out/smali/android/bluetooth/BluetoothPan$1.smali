@@ -27,7 +27,6 @@
     .parameter
 
     .prologue
-    .line 186
     iput-object p1, p0, Landroid/bluetooth/BluetoothPan$1;->this$0:Landroid/bluetooth/BluetoothPan;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,21 +42,19 @@
     .parameter "service"
 
     .prologue
-    .line 188
     invoke-static {p2}, Landroid/bluetooth/IBluetoothPan$Stub;->asInterface(Landroid/os/IBinder;)Landroid/bluetooth/IBluetoothPan;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothPan;->access$002(Landroid/bluetooth/IBluetoothPan;)Landroid/bluetooth/IBluetoothPan;
 
-    .line 189
     const-string v0, "BluetoothPan"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "onServiceConnected, mService: "
+    const-string v2, "onServiceConnected, mService: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -77,21 +74,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     invoke-static {}, Landroid/bluetooth/BluetoothPan;->access$000()Landroid/bluetooth/IBluetoothPan;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 191
     const-string v0, "BluetoothPan"
 
     const-string v1, "Service connect failed!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :cond_0
     return-void
 .end method
@@ -101,18 +95,15 @@
     .parameter "className"
 
     .prologue
-    .line 197
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/bluetooth/BluetoothPan;->access$002(Landroid/bluetooth/IBluetoothPan;)Landroid/bluetooth/IBluetoothPan;
 
-    .line 198
     const-string v0, "BluetoothPan"
 
-    const-string/jumbo v1, "onServiceDisconnected"
+    const-string v1, "onServiceDisconnected"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 199
     return-void
 .end method

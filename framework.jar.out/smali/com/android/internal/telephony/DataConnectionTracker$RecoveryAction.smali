@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 1583
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .parameter "x0"
 
     .prologue
-    .line 1583
     invoke-static {p0}, Lcom/android/internal/telephony/DataConnectionTracker$RecoveryAction;->isAggressiveRecovery(I)Z
 
     move-result v0
@@ -57,7 +55,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1591
     if-eq p0, v0, :cond_0
 
     const/4 v1, 0x2

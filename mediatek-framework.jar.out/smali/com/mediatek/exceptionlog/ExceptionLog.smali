@@ -19,19 +19,16 @@
     .locals 2
 
     .prologue
-    .line 69
     const-string v0, "AES"
 
     const-string v1, "load Exception Log jni"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     const-string v0, "mediatek_exceptionlog"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 71
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,18 +45,15 @@
     .locals 15
 
     .prologue
-    .line 148
     invoke-static {}, Ljava/lang/Thread;->getAllStackTraces()Ljava/util/Map;
 
     move-result-object v9
 
-    .line 149
     .local v9, st:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;"
     new-instance v11, Ljava/io/StringWriter;
 
     invoke-direct {v11}, Ljava/io/StringWriter;-><init>()V
 
-    .line 152
     .local v11, traces:Ljava/io/Writer;
     :try_start_0
     invoke-interface {v9}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -84,7 +77,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 153
     .local v2, e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -92,7 +84,6 @@
 
     check-cast v3, [Ljava/lang/StackTraceElement;
 
-    .line 154
     .local v3, el:[Ljava/lang/StackTraceElement;
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -100,7 +91,6 @@
 
     check-cast v10, Ljava/lang/Thread;
 
-    .line 156
     .local v10, th:Ljava/lang/Thread;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -199,7 +189,6 @@
 
     invoke-virtual {v11, v12}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 161
     move-object v0, v3
 
     .local v0, arr$:[Ljava/lang/StackTraceElement;
@@ -214,7 +203,6 @@
 
     aget-object v8, v0, v6
 
-    .line 162
     .local v8, line:Ljava/lang/StackTraceElement;
     new-instance v12, Ljava/lang/StringBuilder;
 
@@ -242,12 +230,10 @@
 
     invoke-virtual {v11, v12}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 161
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 156
     .end local v0           #arr$:[Ljava/lang/StackTraceElement;
     .end local v6           #i$:I
     .end local v7           #len$:I
@@ -257,7 +243,6 @@
 
     goto :goto_1
 
-    .line 164
     .restart local v0       #arr$:[Ljava/lang/StackTraceElement;
     .restart local v6       #i$:I
     .restart local v7       #len$:I
@@ -271,7 +256,6 @@
 
     goto/16 :goto_0
 
-    .line 166
     .end local v0           #arr$:[Ljava/lang/StackTraceElement;
     .end local v2           #e:Ljava/util/Map$Entry;,"Ljava/util/Map$Entry<Ljava/lang/Thread;[Ljava/lang/StackTraceElement;>;"
     .end local v3           #el:[Ljava/lang/StackTraceElement;
@@ -281,26 +265,21 @@
     :catch_0
     move-exception v1
 
-    .line 167
     .local v1, e:Ljava/io/IOException;
     const-string v12, ""
 
-    .line 172
     .end local v1           #e:Ljava/io/IOException;
     :goto_3
     return-object v12
 
-    .line 168
     :catch_1
     move-exception v4
 
-    .line 169
     .local v4, err:Ljava/lang/OutOfMemoryError;
     const-string v12, ""
 
     goto :goto_3
 
-    .line 172
     .end local v4           #err:Ljava/lang/OutOfMemoryError;
     :cond_2
     invoke-virtual {v11}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -317,25 +296,21 @@
     .locals 12
 
     .prologue
-    .line 120
     new-instance v8, Ljava/io/StringWriter;
 
     invoke-direct {v8}, Ljava/io/StringWriter;-><init>()V
 
-    .line 123
     .local v8, traces:Ljava/io/Writer;
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v7
 
-    .line 124
     .local v7, th:Ljava/lang/Thread;
     invoke-virtual {v7}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
 
     move-result-object v6
 
-    .line 126
     .local v6, st:[Ljava/lang/StackTraceElement;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -434,7 +409,6 @@
 
     invoke-virtual {v8, v9}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 130
     move-object v0, v6
 
     .local v0, arr$:[Ljava/lang/StackTraceElement;
@@ -449,7 +423,6 @@
 
     aget-object v5, v0, v3
 
-    .line 131
     .local v5, line:Ljava/lang/StackTraceElement;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -477,12 +450,10 @@
 
     invoke-virtual {v8, v9}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 130
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 126
     .end local v0           #arr$:[Ljava/lang/StackTraceElement;
     .end local v3           #i$:I
     .end local v4           #len$:I
@@ -492,7 +463,6 @@
 
     goto :goto_0
 
-    .line 133
     .restart local v0       #arr$:[Ljava/lang/StackTraceElement;
     .restart local v3       #i$:I
     .restart local v4       #len$:I
@@ -504,7 +474,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 140
     invoke-virtual {v8}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -517,22 +486,18 @@
     :goto_2
     return-object v9
 
-    .line 134
     :catch_0
     move-exception v1
 
-    .line 135
     .local v1, e:Ljava/io/IOException;
     const-string v9, ""
 
     goto :goto_2
 
-    .line 136
     .end local v1           #e:Ljava/io/IOException;
     :catch_1
     move-exception v2
 
-    .line 137
     .local v2, err:Ljava/lang/OutOfMemoryError;
     const-string v9, ""
 
@@ -552,7 +517,6 @@
     .parameter "pidList"
 
     .prologue
-    .line 111
     invoke-static {p1}, Lcom/mediatek/exceptionlog/ExceptionLog;->getNativeExceptionPidListImpl([I)Z
 
     move-result v0
@@ -567,37 +531,29 @@
     .parameter "pid"
 
     .prologue
-    .line 74
     const-string v3, "AES"
 
     const-string v5, "Exception Log handling..."
 
     invoke-static {v3, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const-string v1, ""
 
-    .line 77
     .local v1, proc:Ljava/lang/String;
     const-string v2, ""
 
-    .line 78
     .local v2, pkgs:Ljava/lang/String;
     const-string v19, ""
 
-    .line 79
     .local v19, traceback:Ljava/lang/String;
     const-string v11, ""
 
-    .line 80
     .local v11, cause:Ljava/lang/String;
     const-string v4, ""
 
-    .line 81
     .local v4, detail:Ljava/lang/String;
     const-wide/16 v6, 0x0
 
-    .line 83
     .local v6, lpid:J
     const-string v3, "\n+"
 
@@ -607,15 +563,12 @@
 
     move-result-object v18
 
-    .line 84
     .local v18, splitInfo:[Ljava/lang/String;
     const-string v9, "^Process:\\s+(.*)"
 
-    .line 85
     .local v9, PROC_REGEX:Ljava/lang/String;
     const-string v8, "^Package:\\s+(.*)"
 
-    .line 86
     .local v8, PKG_REGEX:Ljava/lang/String;
     const-string v3, "^Process:\\s+(.*)"
 
@@ -623,7 +576,6 @@
 
     move-result-object v16
 
-    .line 87
     .local v16, procMatcher:Ljava/util/regex/Pattern;
     const-string v3, "^Package:\\s+(.*)"
 
@@ -631,7 +583,6 @@
 
     move-result-object v15
 
-    .line 90
     .local v15, pkgMatcher:Ljava/util/regex/Pattern;
     move-object/from16 v10, v18
 
@@ -647,13 +598,11 @@
 
     aget-object v17, v10, v12
 
-    .line 91
     .local v17, s:Ljava/lang/String;
     invoke-virtual/range {v16 .. v17}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v14
 
-    .line 92
     .local v14, m:Ljava/util/regex/Matcher;
     invoke-virtual {v14}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -667,7 +616,6 @@
 
     move-result-object v1
 
-    .line 93
     :cond_0
     move-object/from16 v0, v17
 
@@ -675,7 +623,6 @@
 
     move-result-object v14
 
-    .line 94
     invoke-virtual {v14}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v3
@@ -710,13 +657,11 @@
 
     move-result-object v2
 
-    .line 90
     :cond_1
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_0
 
-    .line 97
     .end local v14           #m:Ljava/util/regex/Matcher;
     .end local v17           #s:Ljava/lang/String;
     :cond_2
@@ -742,7 +687,6 @@
 
     move-result-object v4
 
-    .line 98
     const-string v3, ""
 
     move-object/from16 v0, p3
@@ -753,7 +697,6 @@
 
     if-nez v3, :cond_3
 
-    .line 99
     invoke-static/range {p3 .. p3}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v6
@@ -763,10 +706,8 @@
 
     move-object/from16 v5, p1
 
-    .line 101
     invoke-static/range {v1 .. v7}, Lcom/mediatek/exceptionlog/ExceptionLog;->report(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
 
-    .line 102
     return-void
 .end method
 
@@ -778,15 +719,12 @@
     .parameter "Path"
 
     .prologue
-    .line 105
     invoke-static {}, Lcom/mediatek/exceptionlog/ExceptionLog;->getThreadStackTrace()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 106
     .local v0, Backtrace:Ljava/lang/String;
     invoke-static {p1, p2, v0, p3, p4}, Lcom/mediatek/exceptionlog/ExceptionLog;->systemreportImpl(BLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
     return-void
 .end method
