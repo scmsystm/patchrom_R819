@@ -702,6 +702,40 @@
     return-void
 .end method
 
+.method public static isAlarmBoot()Z
+    .locals 3
+
+    .prologue
+    const-string v2, "sys.boot.reason"
+
+    invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, bootReason:Ljava/lang/String;
+    if-eqz v0, :cond_0
+
+    const-string v2, "1"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v1, 0x1
+
+    .local v1, ret:Z
+    :goto_0
+    return v1
+
+    .end local v1           #ret:Z
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
 .method private static isBatteryUpdateInteresting(Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor$BatteryStatus;)Z
     .locals 7
     .parameter "old"
