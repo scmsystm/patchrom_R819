@@ -1158,6 +1158,17 @@
     const/4 v1, 0x1
 
     :goto_0
+    if-nez v0, :cond_miui_0
+
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/keyguard/KeyguardWidgetPager;->startReordering()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_miui_0
+
+    const/4 v1, 0x1
+    
+    :cond_miui_0
     return v1
 
     :cond_0

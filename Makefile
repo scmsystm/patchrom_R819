@@ -35,6 +35,9 @@ local-remove-apps   := \
 # All apks from MIUI execept MIUISystemUI and framework-miui-res.apk
 local-miui-apps     := 
 
+# To define any local-target
+updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
+
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should: 
 # (1) be defined after including porting.mk if using any global variable(see porting.mk)

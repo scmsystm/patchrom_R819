@@ -3,6 +3,14 @@
 .source "StaticLayout.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/text/StaticLayout$Injector;
+    }
+.end annotation
+
+
 # static fields
 .field private static final CHAR_FIRST_CJK:C = '\u2e80'
 
@@ -49,6 +57,8 @@
 .field static final TAG:Ljava/lang/String; = "StaticLayout"
 
 .field private static final TOP:I = 0x1
+
+.field static sOptimizeLineBreakStrategy:Z
 
 
 # instance fields
@@ -326,6 +336,12 @@
     invoke-direct {v1}, Landroid/graphics/Paint$FontMetricsInt;-><init>()V
 
     iput-object v1, p0, Landroid/text/StaticLayout;->mFontMetricsInt:Landroid/graphics/Paint$FontMetricsInt;
+
+    invoke-static {}, Lmiui/provider/ExtraSettings$System;->isLinebreakingEnabled()Z
+
+    move-result v1
+
+    sput-boolean v1, Landroid/text/StaticLayout;->sOptimizeLineBreakStrategy:Z
 
     if-eqz p11, :cond_2
 
@@ -1001,6 +1017,19 @@
     goto/16 :goto_3
 .end method
 
+.method static callIsIdeographic(CZ)Z
+    .locals 1
+    .parameter "c"
+    .parameter "includeNonStarters"
+
+    .prologue
+    invoke-static {p0, p1}, Landroid/text/StaticLayout;->isIdeographic(CZ)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method private static final isIdeographic(CZ)Z
     .locals 3
     .parameter "c"
@@ -1131,7 +1160,9 @@
     if-le p0, v2, :cond_0
 
     :cond_a
-    move v0, v1
+    invoke-static {p0, p1, v1}, Landroid/text/StaticLayout$Injector;->isIdeographic(CZZ)Z
+
+    move-result v0
 
     goto :goto_0
 

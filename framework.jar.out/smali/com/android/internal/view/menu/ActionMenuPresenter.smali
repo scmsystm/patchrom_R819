@@ -15,7 +15,8 @@
         Lcom/android/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu;,
         Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowPopup;,
         Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;,
-        Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;
+        Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;,
+        Lcom/android/internal/view/menu/ActionMenuPresenter$Injector;
     }
 .end annotation
 

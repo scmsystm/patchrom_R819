@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$5;
+        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$5;,
+        Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$Injector;
     }
 .end annotation
 
@@ -9885,6 +9886,15 @@
     return v0
 .end method
 
+.method getIccRecords()Lcom/android/internal/telephony/IccRecords;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mIccRecords:Lcom/android/internal/telephony/IccRecords;
+
+    return-object v0
+.end method
+
 .method protected getPhone()Lcom/android/internal/telephony/Phone;
     .locals 1
 
@@ -9892,6 +9902,15 @@
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->phone:Lcom/android/internal/telephony/gsm/GSMPhone;
 
     return-object v0
+.end method
+
+.method getRilRadioTechnology()I
+    .locals 1
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRilRadioTechnology:I
+
+    return v0
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
@@ -14375,9 +14394,15 @@
     invoke-virtual {v11}, Lcom/android/internal/telephony/gsm/SIMRecords;->getServiceProviderName()Ljava/lang/String;
 
     move-result-object v12
-
+    
     .local v12, spn:Ljava/lang/String;
     :goto_1
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v12}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$Injector;->getSpn(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+    
     const/4 v8, 0x0
 
     .local v8, sEons:Ljava/lang/String;
@@ -14995,13 +15020,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v14, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mServiceStateExt:Lcom/mediatek/common/telephony/IServiceStateExt;
-
-    move-object/from16 v0, p0
-
-    iget v15, v0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRilRadioTechnology:I
-
-    invoke-interface {v14, v5, v15}, Lcom/mediatek/common/telephony/IServiceStateExt;->onUpdateSpnDisplay(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v0, v5}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$Injector;->getPlmn(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 

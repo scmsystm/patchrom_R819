@@ -67,9 +67,7 @@
 
     iput-object v0, p0, Landroid/provider/Telephony$SIMInfo;->mNumber:Ljava/lang/String;
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Landroid/provider/Telephony$SIMInfo;->mDispalyNumberFormat:I
+    iput v1, p0, Landroid/provider/Telephony$SIMInfo;->mDispalyNumberFormat:I
 
     iput v1, p0, Landroid/provider/Telephony$SIMInfo;->mDataRoaming:I
 
@@ -99,174 +97,224 @@
 .end method
 
 .method private static fromCursor(Landroid/database/Cursor;)Landroid/provider/Telephony$SIMInfo;
-    .locals 4
+    .locals 6
     .parameter "cursor"
 
     .prologue
+    const/4 v5, 0x1
+
     new-instance v0, Landroid/provider/Telephony$SIMInfo;
 
     invoke-direct {v0}, Landroid/provider/Telephony$SIMInfo;-><init>()V
 
     .local v0, info:Landroid/provider/Telephony$SIMInfo;
-    const-string v2, "_id"
+    const-string v3, "_id"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    iput-wide v2, v0, Landroid/provider/Telephony$SIMInfo;->mSimId:J
+    iput-wide v3, v0, Landroid/provider/Telephony$SIMInfo;->mSimId:J
 
-    const-string v2, "icc_id"
+    const-string v3, "icc_id"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    iput-object v2, v0, Landroid/provider/Telephony$SIMInfo;->mICCId:Ljava/lang/String;
+    iput-object v3, v0, Landroid/provider/Telephony$SIMInfo;->mICCId:Ljava/lang/String;
 
-    const-string v2, "display_name"
+    const-string v3, "display_name"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    iput-object v2, v0, Landroid/provider/Telephony$SIMInfo;->mDisplayName:Ljava/lang/String;
+    iput-object v3, v0, Landroid/provider/Telephony$SIMInfo;->mDisplayName:Ljava/lang/String;
 
-    const-string v2, "name_source"
+    const-string v3, "name_source"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mNameSource:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mNameSource:I
 
-    const-string v2, "number"
+    const-string v3, "number"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    iput-object v2, v0, Landroid/provider/Telephony$SIMInfo;->mNumber:Ljava/lang/String;
+    iput-object v3, v0, Landroid/provider/Telephony$SIMInfo;->mNumber:Ljava/lang/String;
 
-    const-string v2, "display_number_format"
+    const-string v3, "display_number_format"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mDispalyNumberFormat:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mDispalyNumberFormat:I
 
-    const-string v2, "color"
+    const-string v3, "color"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
 
-    const-string v2, "data_roaming"
+    const-string v3, "data_roaming"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mDataRoaming:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mDataRoaming:I
 
-    const-string v2, "slot"
+    const-string v3, "slot"
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-result v2
+    move-result v3
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v2
+    move-result v3
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mSlot:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mSlot:I
 
-    sget-object v2, Landroid/provider/Telephony;->SIMBackgroundRes:[I
+    const-string v3, "ro.operator.optr"
 
-    array-length v1, v2
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
-    .local v1, size:I
-    iget v2, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+    move-result-object v1
 
-    if-ltz v2, :cond_0
+    .local v1, optr:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    iget v2, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+    const-string v3, "OP01"
 
-    if-ge v2, v1, :cond_0
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sget-object v2, Landroid/provider/Telephony;->SIMBackgroundRes:[I
+    move-result v3
 
-    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+    if-eqz v3, :cond_0
 
-    aget v2, v2, v3
+    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mSlot:I
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundRes:I
+    if-nez v3, :cond_2
 
-    sget-object v2, Landroid/provider/Telephony;->SIMBackgroundDarkRes:[I
+    const/4 v3, 0x0
 
-    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
-
-    aget v2, v2, v3
-
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundDarkRes:I
-
-    sget-object v2, Landroid/provider/Telephony;->SIMBackgroundLightRes:[I
-
-    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
-
-    aget v2, v2, v3
-
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundLightRes:I
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
 
     :cond_0
-    const-string v2, "wap_push"
+    :goto_0
+    iget v4, v0, Landroid/provider/Telephony$SIMInfo;->mSlot:I
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+    const/4 v3, 0x0
+    
+    if-nez v4, :cond_miui_0
 
-    move-result v2
+    const/4 v3, 0x2
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    :cond_miui_0
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
 
-    move-result v2
+    sget-object v3, Landroid/provider/Telephony;->SIMBackgroundRes:[I
 
-    iput v2, v0, Landroid/provider/Telephony$SIMInfo;->mWapPush:I
+    array-length v2, v3
+
+    .local v2, size:I
+    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    if-ltz v3, :cond_1
+
+    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    if-ge v3, v2, :cond_1
+
+    sget-object v3, Landroid/provider/Telephony;->SIMBackgroundRes:[I
+
+    iget v4, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    aget v3, v3, v4
+
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundRes:I
+
+    sget-object v3, Landroid/provider/Telephony;->SIMBackgroundDarkRes:[I
+
+    iget v4, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    aget v3, v3, v4
+
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundDarkRes:I
+
+    sget-object v3, Landroid/provider/Telephony;->SIMBackgroundLightRes:[I
+
+    iget v4, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    aget v3, v3, v4
+
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mSimBackgroundLightRes:I
+
+    :cond_1
+    const-string v3, "wap_push"
+
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, v0, Landroid/provider/Telephony$SIMInfo;->mWapPush:I
 
     return-object v0
+
+    .end local v2           #size:I
+    :cond_2
+    iget v3, v0, Landroid/provider/Telephony$SIMInfo;->mSlot:I
+
+    if-ne v3, v5, :cond_0
+
+    iput v5, v0, Landroid/provider/Telephony$SIMInfo;->mColor:I
+
+    goto :goto_0
 .end method
 
 .method public static getAllSIMCount(Landroid/content/Context;)I
@@ -1667,6 +1715,10 @@
     .parameter "name"
 
     .prologue
+    const/4 v0, 0x0
+
+    return v0
+
     const-wide/16 v2, 0x0
 
     cmp-long v2, p1, v2
@@ -1856,6 +1908,10 @@
     .parameter "nameSource"
 
     .prologue
+    const/4 v0, 0x0
+
+    return v0
+
     const-wide/16 v2, 0x0
 
     cmp-long v2, p1, v2
