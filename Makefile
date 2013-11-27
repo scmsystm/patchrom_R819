@@ -19,24 +19,13 @@ local-remove-apps   := \
 	PhaseBeam \
 	Superuser \
 	SystemUpdate \
-	SystemUpdateAssistant \
-	YouTube \
-	PlusOne \
-	Velvet \
-	Phonesky \
-	CalendarGoogle \
-	ChromeWithBrowser \
-	Gmail2 \
-	GmsCore \
-	GoogleTTS \
-	talkback \
-	GMS_Maps
+	SystemUpdateAssistant
 
 # All apks from MIUI execept MIUISystemUI and framework-miui-res.apk
 local-miui-apps     := 
 
 # To define any local-target
-updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
+updater := misc/META-INF/com/google/android/updater-script
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should: 
@@ -49,7 +38,7 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 local-zip-misc:
-	cp misc/updater-script $(ZIP_DIR)/META-INF/com/google/android
+	cp ../miui/XHDPI/system/lib/liblbesec.so $(ZIP_DIR)/system/lib
 	rm $(ZIP_DIR)/system/framework/theme-res-mint.apk
 	rm $(ZIP_DIR)/system/framework/theme-res-mocha.apk
 	rm $(ZIP_DIR)/system/framework/theme-res-raspberry.apk
