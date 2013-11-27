@@ -1,0 +1,13 @@
+key 231   CALL
+key 122   ENDCALL           WAKE
+key 166   MEDIA_STOP
+key 163   MEDIA_NEXT
+key 164   MEDIA_PLAY_PAUSE
+key 165   MEDIA_PREVIOUS
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+
+#ifdef VENDOR_EDIT
+#xiang.fei@MutimediaDrv.audio, 2012/06/29, Add for handset
+key 249   HEADSETHOOK
+#endif VENDOR_EDIT

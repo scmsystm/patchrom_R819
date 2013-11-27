@@ -1,0 +1,5 @@
+ota-id=R819OR_11.1.01_INT_001_130909
+post-build=OPPO/OPPO89W_13025/R819:4.2.1/JOP40D/1378691877:user/release-keys
+post-timestamp=1378692088
+pre-device=R819
+wipe-data=1
