@@ -24,8 +24,12 @@ local-remove-apps   := \
 # All apks from MIUI execept MIUISystemUI and framework-miui-res.apk
 local-miui-apps     := 
 
+local-miui-modified-apps := Phone
+
+local-density := XHDPI
+
 # To define any local-target
-updater := misc/META-INF/com/google/android/updater-script
+updater := misc/updater-script
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should: 
@@ -39,6 +43,7 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 local-zip-misc:
 	cp ../miui/XHDPI/system/lib/liblbesec.so $(ZIP_DIR)/system/lib
+	cp misc/build.prop $(ZIP_DIR)/system/build.prop
 	rm $(ZIP_DIR)/system/framework/theme-res-mint.apk
 	rm $(ZIP_DIR)/system/framework/theme-res-mocha.apk
 	rm $(ZIP_DIR)/system/framework/theme-res-raspberry.apk
