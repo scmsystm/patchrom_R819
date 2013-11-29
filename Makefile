@@ -24,7 +24,7 @@ local-remove-apps   := \
 # All apks from MIUI execept MIUISystemUI and framework-miui-res.apk
 local-miui-apps     := 
 
-local-miui-modified-apps := Phone
+local-miui-modified-apps := Phone Settings
 
 local-density := XHDPI
 
