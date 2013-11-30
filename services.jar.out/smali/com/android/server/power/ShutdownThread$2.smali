@@ -48,7 +48,7 @@
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$2;->val$context:Landroid/content/Context;
 
     #calls: Lcom/android/server/power/ShutdownThread;->beginShutdownSequence(Landroid/content/Context;)V
-    invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$300(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/android/server/power/ShutdownThread;->access$500(Landroid/content/Context;)V
 
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$200()Landroid/app/AlertDialog;
 
