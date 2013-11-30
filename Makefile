@@ -9,6 +9,7 @@ local-out-zip-file	:= MIUI_R819.zip
 # All apps need to be removed from original ZIP file
 local-remove-apps   := \
 	BasicDreams \
+	GenieWidget \
 	HoloSpiralWallpaper \
 	LiveWallpapers \
 	LiveWallpapersPicker \
