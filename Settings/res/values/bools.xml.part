@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="has_led">false</bool>
-    <bool name="dolby_enable">true</bool>
 </resources>

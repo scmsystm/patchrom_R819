@@ -16,10 +16,8 @@ function appendPart() {
     done
 }
 
-
 if [ $1 = "Settings" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
-	appendPart $1
 fi
 
 if [ $1 = "Mms" ];then
