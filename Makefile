@@ -29,9 +29,6 @@ local-miui-modified-apps := Phone Settings
 
 local-density := XHDPI
 
-# To define any local-target
-updater := misc/updater-script
-
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should: 
 # (1) be defined after including porting.mk if using any global variable(see porting.mk)
