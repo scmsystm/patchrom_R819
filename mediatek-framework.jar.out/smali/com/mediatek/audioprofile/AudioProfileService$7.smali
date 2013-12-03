@@ -153,15 +153,6 @@
 
     .end local v1           #activeScenario:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
     :cond_0
-    iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
-
-    #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2000(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/content/BroadcastReceiver;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
-
     const-string v2, "AudioProfileService"
 
     const-string v3, "unregister mBootCompleteReceiver!"
